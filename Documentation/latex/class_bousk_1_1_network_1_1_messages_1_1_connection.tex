@@ -1,0 +1,66 @@
+\doxysection{Référence de la classe Bousk\+::Network\+::Messages\+::Connection}
+\hypertarget{class_bousk_1_1_network_1_1_messages_1_1_connection}{}\label{class_bousk_1_1_network_1_1_messages_1_1_connection}\index{Bousk::Network::Messages::Connection@{Bousk::Network::Messages::Connection}}
+Graphe d\textquotesingle{}héritage de Bousk\+::Network\+::Messages\+::Connection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bousk_1_1_network_1_1_messages_1_1_connection}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_messages_1_1_connection_a397044cbd2c3929677159d15fa71b198}\label{class_bousk_1_1_network_1_1_messages_1_1_connection_a397044cbd2c3929677159d15fa71b198} 
+enum class {\bfseries Result} \{ {\bfseries Success}
+, {\bfseries Failed}
+, {\bfseries Refused}
+, {\bfseries Timed\+Out}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_messages_1_1_connection_aea79503f17aca97d3dd6dd147ef4c94e}\label{class_bousk_1_1_network_1_1_messages_1_1_connection_aea79503f17aca97d3dd6dd147ef4c94e} 
+{\bfseries Connection} (const \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} \&emitter, uint64\+\_\+t emitterid, Result r)
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques hérités de \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Bousk\+::\+Network\+::\+Messages\+::\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class M $>$ }\\bool {\bfseries is} () const
+\item 
+{\footnotesize template$<$class M $>$ }\\const M \texorpdfstring{$\ast$}{*} {\bfseries as} () const
+\item 
+const \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} \& {\bfseries emitter} () const
+\item 
+uint64\+\_\+t {\bfseries emmiter\+Id} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_messages_1_1_connection_a82891145d023c5b583ce08dd776f37fa}\label{class_bousk_1_1_network_1_1_messages_1_1_connection_a82891145d023c5b583ce08dd776f37fa} 
+Result {\bfseries result}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Membres hérités additionnels}
+\doxysubsection*{Types protégés hérités de \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Bousk\+::\+Network\+::\+Messages\+::\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_messages_1_1_base_aef0dce657011b0e338b91bdae04dd951}\label{class_bousk_1_1_network_1_1_messages_1_1_base_aef0dce657011b0e338b91bdae04dd951} 
+enum class {\bfseries Type} \{ \newline
+{\bfseries Incoming\+Connection}
+, {\bfseries Connection}
+, {\bfseries Connection\+Interrupted}
+, {\bfseries Connection\+Resumed}
+, \newline
+{\bfseries Disconnection}
+, {\bfseries User\+Data}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres protégées hérités de \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Bousk\+::\+Network\+::\+Messages\+::\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Base} (Type type, const \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} \&emitter, uint64\+\_\+t emitterid)
+\end{DoxyCompactItemize}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+UDP/Messages.\+h\end{DoxyCompactItemize}

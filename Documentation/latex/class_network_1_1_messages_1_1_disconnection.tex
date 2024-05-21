@@ -1,0 +1,126 @@
+\doxysection{Référence de la classe Network\+::Messages\+::Disconnection}
+\hypertarget{class_network_1_1_messages_1_1_disconnection}{}\label{class_network_1_1_messages_1_1_disconnection}\index{Network::Messages::Disconnection@{Network::Messages::Disconnection}}
+
+
+Message de d{\ucr}connexion.  
+
+
+
+
+{\ttfamily \#include $<$Messages.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Network\+::Messages\+::Disconnection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_network_1_1_messages_1_1_disconnection}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21}{Reason}} \{ \mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21aef70e46fd3bbc21e3e1f0b6815e750c0}{Disconnected}}
+, \mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21ab578b733cbb788fc6ad208314d2c4c2b}{Lost}}
+ \}
+\begin{DoxyCompactList}\small\item\em Raison de la d{\ucr}connexion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a36af05a34ca6caf93bc68f2562a08166}{Disconnection}} (\mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21}{Reason}} r)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{class_network_1_1_messages_1_1_disconnection}{Disconnection}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques hérités de \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Network\+::\+Messages\+::\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class M $>$ }\\bool \mbox{\hyperlink{class_network_1_1_messages_1_1_base_ad1147d97f230c6be6276fdf3668b1d0a}{is}} () const
+\begin{DoxyCompactList}\small\item\em V{\ucr}rifie si le message est de type M. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class M $>$ }\\const M \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a06b16a57d0fb98dc0bacf5ff2a90f283}{as}} () const
+\begin{DoxyCompactList}\small\item\em Convertit le message en type M. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21}{Reason}} \mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a48eb1be4be59d3e75de7bf203f092899}{reason}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs publics hérités de \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Network\+::\+Messages\+::\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+sockaddr\+\_\+in \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a69cd114b95f2b08d2c1cc7e9e8b3e0d1}{from}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a8774bdd6b0cdd35e14379b903617643d}{id\+From}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_network_1_1_messages_1_1_disconnection_a90aa5b342fe070a58857a221d500488c}\label{class_network_1_1_messages_1_1_disconnection_a90aa5b342fe070a58857a221d500488c} 
+class {\bfseries Base}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Membres hérités additionnels}
+\doxysubsection*{Types protégés hérités de \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Network\+::\+Messages\+::\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Type}} \{ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ac2cc7082a89c1ad6631a2f66af5f00c0}{Connection}}
+, \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a522d5fadad05effceba392f6e8f70b64}{Disconnection}}
+, \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a12b4595813f48775b089bc59c0f97152}{User\+Data}}
+ \}
+\begin{DoxyCompactList}\small\item\em Type de message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres protégées hérités de \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Network\+::\+Messages\+::\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_network_1_1_messages_1_1_base_a3bb3c9f2296d822d9fe4467060e02f52}{Base}} (\mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Type}} type)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{class_network_1_1_messages_1_1_base}{Base}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Message de d{\ucr}connexion. 
+
+\doxysubsection{Documentation des énumérations membres}
+\Hypertarget{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21}\label{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21} 
+\index{Network::Messages::Disconnection@{Network::Messages::Disconnection}!Reason@{Reason}}
+\index{Reason@{Reason}!Network::Messages::Disconnection@{Network::Messages::Disconnection}}
+\doxysubsubsection{\texorpdfstring{Reason}{Reason}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21}{Network\+::\+Messages\+::\+Disconnection\+::\+Reason}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Raison de la d{\ucr}connexion. 
+
+\begin{DoxyEnumFields}{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Disconnected@{Disconnected}!Network::Messages::Disconnection@{Network::Messages::Disconnection}}\index{Network::Messages::Disconnection@{Network::Messages::Disconnection}!Disconnected@{Disconnected}}}\Hypertarget{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21aef70e46fd3bbc21e3e1f0b6815e750c0}\label{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21aef70e46fd3bbc21e3e1f0b6815e750c0} 
+Disconnected&D{\ucr}connexion. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Lost@{Lost}!Network::Messages::Disconnection@{Network::Messages::Disconnection}}\index{Network::Messages::Disconnection@{Network::Messages::Disconnection}!Lost@{Lost}}}\Hypertarget{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21ab578b733cbb788fc6ad208314d2c4c2b}\label{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21ab578b733cbb788fc6ad208314d2c4c2b} 
+Lost&Connexion perdue. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_network_1_1_messages_1_1_disconnection_a36af05a34ca6caf93bc68f2562a08166}\label{class_network_1_1_messages_1_1_disconnection_a36af05a34ca6caf93bc68f2562a08166} 
+\index{Network::Messages::Disconnection@{Network::Messages::Disconnection}!Disconnection@{Disconnection}}
+\index{Disconnection@{Disconnection}!Network::Messages::Disconnection@{Network::Messages::Disconnection}}
+\doxysubsubsection{\texorpdfstring{Disconnection()}{Disconnection()}}
+{\footnotesize\ttfamily Network\+::\+Messages\+::\+Disconnection\+::\+Disconnection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21}{Reason}}}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur de la classe \doxylink{class_network_1_1_messages_1_1_disconnection}{Disconnection}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em r} & Raison de la d{\ucr}connexion. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des données membres}
+\Hypertarget{class_network_1_1_messages_1_1_disconnection_a48eb1be4be59d3e75de7bf203f092899}\label{class_network_1_1_messages_1_1_disconnection_a48eb1be4be59d3e75de7bf203f092899} 
+\index{Network::Messages::Disconnection@{Network::Messages::Disconnection}!reason@{reason}}
+\index{reason@{reason}!Network::Messages::Disconnection@{Network::Messages::Disconnection}}
+\doxysubsubsection{\texorpdfstring{reason}{reason}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21}{Reason}} Network\+::\+Messages\+::\+Disconnection\+::reason}
+
+Raison de la d{\ucr}connexion. 
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+TCP/Messages.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,31 @@
+\doxysection{Errors.\+h}
+\hypertarget{_errors_8h_source}{}\label{_errors_8h_source}\index{includes/TCP/Errors.h@{includes/TCP/Errors.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <winSock2.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <cerrno>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ SOCKET\ int}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ INVALID\_SOCKET\ ((int)-\/1)}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SOCKET\_ERROR\ (int(-\/1))}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }Network}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{namespace\ }Errors}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ Get();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ AGAIN\ =\ WSATRY\_AGAIN,\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ WOULDBLOCK\ =\ WSAEWOULDBLOCK,\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ INPROGRESS\ =\ WSAEINPROGRESS,\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ INTR\ =\ WSAEINTR,\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,19 @@
+\doxysection{File\+Manager.\+h}
+\hypertarget{_file_manager_8h_source}{}\label{_file_manager_8h_source}\index{includes/Modules/FileManager.h@{includes/Modules/FileManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_file_manager}{FileManager}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_file_manager_a3a675853a8fdb5484035ed6dab994058}{FileExists}}(\textcolor{keyword}{const}\ std::string\&\ \_filePath)}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::ifstream\ file(\_filePath);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ file.good();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+
+\end{DoxyCode}

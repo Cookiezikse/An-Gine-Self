@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/GameObject/Components/RigidBody.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_b5568337a7efd7b38bac1af67081c77f.html">GameObject</a></li><li class="navelem"><a class="el" href="dir_f916b7d0f8ae679a7b3a88c73e95d673.html">Components</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">RigidBody.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;Component.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;glm.hpp&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;btBulletDynamicsCommon.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_rigid_body.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="class_rigid_body.html">RigidBody</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_component.html">Component</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <a class="code hl_function" href="class_rigid_body.html#afea489d3431d1afc575ea020b66b3b7a">RigidBody</a>(btDiscreteDynamicsWorld* _dynamicsWorld, btCollisionShape* _shape, <span class="keywordtype">float</span> _mass, glm::vec3&amp; _position);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordtype">void</span> Update() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_rigid_body.html#a35ec23a27c51ea7c32e806cf19c8d33b">AddForce</a>(<span class="keyword">const</span> glm::vec3&amp; _force) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_rigid_body.html#a9095194b70efcb7179f536224f8f1399">SetGravity</a>(<span class="keyword">const</span> glm::vec3&amp; _gravity) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_rigid_body.html#a6250dfb9b003f4a7874300c8aa133ba1">SetVelocity</a>(<span class="keyword">const</span> glm::vec3&amp; _velocity) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        btVector3 <a class="code hl_function" href="class_rigid_body.html#a6d2f894b24e58f43b758354446207bc0">GetVelocity</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_rigid_body.html#a07be9fa1a03fec00a24f6ac78263e951">SetKinematic</a>(<span class="keywordtype">bool</span> _isKinematic) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_rigid_body.html#a999a34096b5a2f69be008ccc20077bbc">SetRotationLocked</a>(<span class="keywordtype">bool</span> _lockRotationX, <span class="keywordtype">bool</span> _lockRotationY, <span class="keywordtype">bool</span> _lockRotationZ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_rigid_body.html#afdf9e3d4cadca9514542361e7e82e90d">SetPosition</a>(<span class="keyword">const</span> glm::vec3&amp; _position, <span class="keywordtype">bool</span> _lockX, <span class="keywordtype">bool</span> _lockY, <span class="keywordtype">bool</span> _lockZ) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_function" href="class_rigid_body.html#a6c1a19d6f3c0ec2a56eff7d3723db282">~RigidBody</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        btDiscreteDynamicsWorld* dynamicsWorld;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        btRigidBody*             rigidBody;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
+</div>
+<div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdoc">Classe de base pour tous les composants attachés à un GameObject.</div><div class="ttdef"><b>Definition</b> Component.h:21</div></div>
+<div class="ttc" id="aclass_rigid_body_html"><div class="ttname"><a href="class_rigid_body.html">RigidBody</a></div><div class="ttdef"><b>Definition</b> RigidBody.h:10</div></div>
+<div class="ttc" id="aclass_rigid_body_html_a07be9fa1a03fec00a24f6ac78263e951"><div class="ttname"><a href="class_rigid_body.html#a07be9fa1a03fec00a24f6ac78263e951">RigidBody::SetKinematic</a></div><div class="ttdeci">void SetKinematic(bool _isKinematic) const</div><div class="ttdoc">Définit si le corps rigide est cinématique.</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:52</div></div>
+<div class="ttc" id="aclass_rigid_body_html_a35ec23a27c51ea7c32e806cf19c8d33b"><div class="ttname"><a href="class_rigid_body.html#a35ec23a27c51ea7c32e806cf19c8d33b">RigidBody::AddForce</a></div><div class="ttdeci">void AddForce(const glm::vec3 &amp;_force) const</div><div class="ttdoc">Ajoute une force au corps rigide.</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:28</div></div>
+<div class="ttc" id="aclass_rigid_body_html_a6250dfb9b003f4a7874300c8aa133ba1"><div class="ttname"><a href="class_rigid_body.html#a6250dfb9b003f4a7874300c8aa133ba1">RigidBody::SetVelocity</a></div><div class="ttdeci">void SetVelocity(const glm::vec3 &amp;_velocity) const</div><div class="ttdoc">Récupère la vélocité du corps rigide.</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:37</div></div>
+<div class="ttc" id="aclass_rigid_body_html_a6c1a19d6f3c0ec2a56eff7d3723db282"><div class="ttname"><a href="class_rigid_body.html#a6c1a19d6f3c0ec2a56eff7d3723db282">RigidBody::~RigidBody</a></div><div class="ttdeci">~RigidBody() override</div><div class="ttdoc">Destructeur de l'objet RigidBody, libérant les ressources associées.</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:96</div></div>
+<div class="ttc" id="aclass_rigid_body_html_a6d2f894b24e58f43b758354446207bc0"><div class="ttname"><a href="class_rigid_body.html#a6d2f894b24e58f43b758354446207bc0">RigidBody::GetVelocity</a></div><div class="ttdeci">btVector3 GetVelocity() const</div><div class="ttdoc">Définit la gravité agissant sur le corps rigide.</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:42</div></div>
+<div class="ttc" id="aclass_rigid_body_html_a9095194b70efcb7179f536224f8f1399"><div class="ttname"><a href="class_rigid_body.html#a9095194b70efcb7179f536224f8f1399">RigidBody::SetGravity</a></div><div class="ttdeci">void SetGravity(const glm::vec3 &amp;_gravity) const</div><div class="ttdoc">Définit la vélocité du corps rigide.</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:47</div></div>
+<div class="ttc" id="aclass_rigid_body_html_a999a34096b5a2f69be008ccc20077bbc"><div class="ttname"><a href="class_rigid_body.html#a999a34096b5a2f69be008ccc20077bbc">RigidBody::SetRotationLocked</a></div><div class="ttdeci">void SetRotationLocked(bool _lockRotationX, bool _lockRotationY, bool _lockRotationZ) const</div><div class="ttdoc">Verrouille ou déverrouille la rotation du corps rigide sur les axes spécifiés.</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:65</div></div>
+<div class="ttc" id="aclass_rigid_body_html_afdf9e3d4cadca9514542361e7e82e90d"><div class="ttname"><a href="class_rigid_body.html#afdf9e3d4cadca9514542361e7e82e90d">RigidBody::SetPosition</a></div><div class="ttdeci">void SetPosition(const glm::vec3 &amp;_position, bool _lockX, bool _lockY, bool _lockZ) const</div><div class="ttdoc">Définit la position du corps rigide avec des options de verrouillage d'axes.</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:70</div></div>
+<div class="ttc" id="aclass_rigid_body_html_afea489d3431d1afc575ea020b66b3b7a"><div class="ttname"><a href="class_rigid_body.html#afea489d3431d1afc575ea020b66b3b7a">RigidBody::RigidBody</a></div><div class="ttdeci">RigidBody(btDiscreteDynamicsWorld *_dynamicsWorld, btCollisionShape *_shape, float _mass, glm::vec3 &amp;_position)</div><div class="ttdoc">Constructeur de la classe RigidBody.</div><div class="ttdef"><b>Definition</b> RigidBody.cpp:6</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

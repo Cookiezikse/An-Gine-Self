@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/LveEngine/lve_model.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_d17dbbfb40e9127a51f93ba39cbbb546.html">LveEngine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">lve_model.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vulkan/vulkan.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;LveEngine/lve_buffer.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;LveEngine/lve_device.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//libs</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define GLM_FORCE_RADIANS</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define GLM_FORCE_DEPTH_ZERO_TO_ONE</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;glm.hpp&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//std</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span>lve</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_model.html">   22</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classlve_1_1_lve_model.html">LveModel</a></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structlve_1_1_lve_model_1_1_vertex.html">   29</a></span>            <span class="keyword">struct </span><a class="code hl_struct" href="structlve_1_1_lve_model_1_1_vertex.html">Vertex</a></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structlve_1_1_lve_model_1_1_vertex.html#a33a8126b05b90330db3d8c72fb77881d">   31</a></span>                glm::vec3 <a class="code hl_variable" href="structlve_1_1_lve_model_1_1_vertex.html#a33a8126b05b90330db3d8c72fb77881d">position</a>{}; </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structlve_1_1_lve_model_1_1_vertex.html#a84d72954fc8a587a987fecf3e9072929">   32</a></span>                glm::vec3 <a class="code hl_variable" href="structlve_1_1_lve_model_1_1_vertex.html#a84d72954fc8a587a987fecf3e9072929">color</a>{};    </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structlve_1_1_lve_model_1_1_vertex.html#aafaaa8427b700590fa4a7bbbfb1a1202">   33</a></span>                glm::vec3 <a class="code hl_variable" href="structlve_1_1_lve_model_1_1_vertex.html#aafaaa8427b700590fa4a7bbbfb1a1202">normal</a>{};   </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structlve_1_1_lve_model_1_1_vertex.html#a38ad66bd6a187703c1590dd6d3465664">   34</a></span>                glm::vec2 <a class="code hl_variable" href="structlve_1_1_lve_model_1_1_vertex.html#a38ad66bd6a187703c1590dd6d3465664">uv</a>{};       </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> texMultiplier = 1;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                <span class="keyword">static</span> std::vector&lt;vk::VertexInputBindingDescription&gt; <a class="code hl_function" href="structlve_1_1_lve_model_1_1_vertex.html#a4d82dfd81c2710e7b388ec8e245dcd06">GetBindingDescriptions</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                <span class="keyword">static</span> std::vector&lt;vk::VertexInputAttributeDescription&gt; <a class="code hl_function" href="structlve_1_1_lve_model_1_1_vertex.html#a36bf601a47123b950dac5b3adb7ea98e">GetAttributeDescriptions</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structlve_1_1_lve_model_1_1_vertex.html#a9a9ec41d8d9383074092d3336edeaff7">   57</a></span>                <span class="keywordtype">bool</span> <a class="code hl_function" href="structlve_1_1_lve_model_1_1_vertex.html#a9a9ec41d8d9383074092d3336edeaff7">operator==</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structlve_1_1_lve_model_1_1_vertex.html">Vertex</a>&amp; _other)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">                </span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    <span class="keywordflow">return</span> <a class="code hl_variable" href="structlve_1_1_lve_model_1_1_vertex.html#a33a8126b05b90330db3d8c72fb77881d">position</a> == _other.<a class="code hl_variable" href="structlve_1_1_lve_model_1_1_vertex.html#a33a8126b05b90330db3d8c72fb77881d">position</a> &amp;&amp; <a class="code hl_variable" href="structlve_1_1_lve_model_1_1_vertex.html#a84d72954fc8a587a987fecf3e9072929">color</a> == _other.<a class="code hl_variable" href="structlve_1_1_lve_model_1_1_vertex.html#a84d72954fc8a587a987fecf3e9072929">color</a> &amp;&amp; <a class="code hl_variable" href="structlve_1_1_lve_model_1_1_vertex.html#aafaaa8427b700590fa4a7bbbfb1a1202">normal</a> == _other.<a class="code hl_variable" href="structlve_1_1_lve_model_1_1_vertex.html#aafaaa8427b700590fa4a7bbbfb1a1202">normal</a> &amp;&amp; <a class="code hl_variable" href="structlve_1_1_lve_model_1_1_vertex.html#a38ad66bd6a187703c1590dd6d3465664">uv</a> ==</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                           _other.<a class="code hl_variable" href="structlve_1_1_lve_model_1_1_vertex.html#a38ad66bd6a187703c1590dd6d3465664">uv</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                }</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            };</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="};">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="structlve_1_1_lve_model_1_1_builder.html">   68</a></span>            <span class="keyword">struct </span><a class="code hl_struct" href="structlve_1_1_lve_model_1_1_builder.html">Builder</a></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structlve_1_1_lve_model_1_1_builder.html#af72b4b9d5bfaaf3563ebc7a6500736c2">   70</a></span>                std::vector&lt;Vertex&gt;   <a class="code hl_variable" href="structlve_1_1_lve_model_1_1_builder.html#af72b4b9d5bfaaf3563ebc7a6500736c2">vertices</a>{}; </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structlve_1_1_lve_model_1_1_builder.html#a989a68f0ba54b256046b838dc0f22c44">   71</a></span>                std::vector&lt;uint32_t&gt; <a class="code hl_variable" href="structlve_1_1_lve_model_1_1_builder.html#a989a68f0ba54b256046b838dc0f22c44">indices</a>{};  </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                <span class="keywordtype">void</span> <a class="code hl_function" href="structlve_1_1_lve_model_1_1_builder.html#ac000c41acbf7d74eaeb882281e9dac36">LoadModel</a>(<span class="keyword">const</span> std::string&amp; _filepath, <span class="keywordtype">float</span> _texMultiplier);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            };</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <a class="code hl_function" href="classlve_1_1_lve_model.html#ad9283bbc18ab72000c95d207354ecf11">LveModel</a>(<a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp; _lveDevice, <span class="keyword">const</span> Builder&amp; _builder);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <a class="code hl_function" href="classlve_1_1_lve_model.html#a852343b2ca38189c22fbfa6cf5211469">~LveModel</a>();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_model.html#a0834e5e372c0b0913ab20340dfaa4ca3">  108</a></span>            <a class="code hl_function" href="classlve_1_1_lve_model.html#a0834e5e372c0b0913ab20340dfaa4ca3">LveModel</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlve_1_1_lve_model.html">LveModel</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_model.html#a13aa08d1d1d30fe823cb213375a49805">  115</a></span>            <a class="code hl_class" href="classlve_1_1_lve_model.html">LveModel</a> <a class="code hl_function" href="classlve_1_1_lve_model.html#a13aa08d1d1d30fe823cb213375a49805">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlve_1_1_lve_model.html">LveModel</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <span class="keyword">static</span> std::unique_ptr&lt;LveModel&gt; <a class="code hl_function" href="classlve_1_1_lve_model.html#a5c40908ba797a01e5d1062c979cd2d02">CreateModelFromFile</a>(<a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp; _device, <span class="keyword">const</span> std::string&amp; _filepath, <span class="keywordtype">float</span> _texMultiplier = 1);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_lve_model.html#a5deb00a44944083e51b89208d5d5b9ec">Bind</a>(vk::CommandBuffer _commandBuffer) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_lve_model.html#aff2d97c4db13944d0318ca161ed5539f">Draw</a>(vk::CommandBuffer _commandBuffer) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            <span class="keywordtype">void</span> CreateVertexBuffer(<span class="keyword">const</span> std::vector&lt;Vertex&gt;&amp; _vertices);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            <span class="keywordtype">void</span> CreateIndexBuffer(<span class="keyword">const</span> std::vector&lt;uint32_t&gt;&amp; _indices);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            <a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp; lveDevice; </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            std::unique_ptr&lt;LveBuffer&gt; vertexBuffer; </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            uint32_t                   vertexCount;  </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            <span class="keywordtype">bool</span>                       hasIndexBuffer = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            std::unique_ptr&lt;LveBuffer&gt; indexBuffer; </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            uint32_t                   indexCount; </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    };</div>
+</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>} <span class="comment">//lve</span></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html"><div class="ttname"><a href="classlve_1_1_lve_device.html">lve::LveDevice</a></div><div class="ttdoc">Classe représentant un périphérique Vulkan.</div><div class="ttdef"><b>Definition</b> lve_device.h:41</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_model_html"><div class="ttname"><a href="classlve_1_1_lve_model.html">lve::LveModel</a></div><div class="ttdoc">Classe représentant un modèle Vulkan.</div><div class="ttdef"><b>Definition</b> lve_model.h:23</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_model_html_a0834e5e372c0b0913ab20340dfaa4ca3"><div class="ttname"><a href="classlve_1_1_lve_model.html#a0834e5e372c0b0913ab20340dfaa4ca3">lve::LveModel::LveModel</a></div><div class="ttdeci">LveModel(const LveModel &amp;)=delete</div><div class="ttdoc">Constructeur de copie supprimé.</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_model_html_a13aa08d1d1d30fe823cb213375a49805"><div class="ttname"><a href="classlve_1_1_lve_model.html#a13aa08d1d1d30fe823cb213375a49805">lve::LveModel::operator=</a></div><div class="ttdeci">LveModel operator=(const LveModel &amp;)=delete</div><div class="ttdoc">Opérateur d'affectation supprimé.</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_model_html_a5c40908ba797a01e5d1062c979cd2d02"><div class="ttname"><a href="classlve_1_1_lve_model.html#a5c40908ba797a01e5d1062c979cd2d02">lve::LveModel::CreateModelFromFile</a></div><div class="ttdeci">static std::unique_ptr&lt; LveModel &gt; CreateModelFromFile(LveDevice &amp;_device, const std::string &amp;_filepath, float _texMultiplier=1)</div><div class="ttdoc">Crée un modèle à partir d'un fichier.</div><div class="ttdef"><b>Definition</b> lve_model.cpp:56</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_model_html_a5deb00a44944083e51b89208d5d5b9ec"><div class="ttname"><a href="classlve_1_1_lve_model.html#a5deb00a44944083e51b89208d5d5b9ec">lve::LveModel::Bind</a></div><div class="ttdeci">void Bind(vk::CommandBuffer _commandBuffer) const</div><div class="ttdoc">Lie les tampons de vertex et d'index au tampon de commande spécifié.</div><div class="ttdef"><b>Definition</b> lve_model.cpp:66</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_model_html_a852343b2ca38189c22fbfa6cf5211469"><div class="ttname"><a href="classlve_1_1_lve_model.html#a852343b2ca38189c22fbfa6cf5211469">lve::LveModel::~LveModel</a></div><div class="ttdeci">~LveModel()</div><div class="ttdoc">Destructeur de la classe LveModel.</div><div class="ttdef"><b>Definition</b> lve_model.cpp:51</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_model_html_ad9283bbc18ab72000c95d207354ecf11"><div class="ttname"><a href="classlve_1_1_lve_model.html#ad9283bbc18ab72000c95d207354ecf11">lve::LveModel::LveModel</a></div><div class="ttdeci">LveModel(LveDevice &amp;_lveDevice, const Builder &amp;_builder)</div><div class="ttdoc">Constructeur de la classe LveModel.</div><div class="ttdef"><b>Definition</b> lve_model.cpp:45</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_model_html_aff2d97c4db13944d0318ca161ed5539f"><div class="ttname"><a href="classlve_1_1_lve_model.html#aff2d97c4db13944d0318ca161ed5539f">lve::LveModel::Draw</a></div><div class="ttdeci">void Draw(vk::CommandBuffer _commandBuffer) const</div><div class="ttdoc">Dessine les primitives géométriques à l'aide du tampon de commande spécifié.</div><div class="ttdef"><b>Definition</b> lve_model.cpp:76</div></div>
+<div class="ttc" id="astructlve_1_1_lve_model_1_1_builder_html"><div class="ttname"><a href="structlve_1_1_lve_model_1_1_builder.html">lve::LveModel::Builder</a></div><div class="ttdoc">Structure responsable de la construction d'un modèle 3D.</div><div class="ttdef"><b>Definition</b> lve_model.h:69</div></div>
+<div class="ttc" id="astructlve_1_1_lve_model_1_1_builder_html_a989a68f0ba54b256046b838dc0f22c44"><div class="ttname"><a href="structlve_1_1_lve_model_1_1_builder.html#a989a68f0ba54b256046b838dc0f22c44">lve::LveModel::Builder::indices</a></div><div class="ttdeci">std::vector&lt; uint32_t &gt; indices</div><div class="ttdef"><b>Definition</b> lve_model.h:71</div></div>
+<div class="ttc" id="astructlve_1_1_lve_model_1_1_builder_html_ac000c41acbf7d74eaeb882281e9dac36"><div class="ttname"><a href="structlve_1_1_lve_model_1_1_builder.html#ac000c41acbf7d74eaeb882281e9dac36">lve::LveModel::Builder::LoadModel</a></div><div class="ttdeci">void LoadModel(const std::string &amp;_filepath, float _texMultiplier)</div><div class="ttdoc">Charge un modèle à partir d'un fichier au format OBJ.</div><div class="ttdef"><b>Definition</b> lve_model.cpp:221</div></div>
+<div class="ttc" id="astructlve_1_1_lve_model_1_1_builder_html_af72b4b9d5bfaaf3563ebc7a6500736c2"><div class="ttname"><a href="structlve_1_1_lve_model_1_1_builder.html#af72b4b9d5bfaaf3563ebc7a6500736c2">lve::LveModel::Builder::vertices</a></div><div class="ttdeci">std::vector&lt; Vertex &gt; vertices</div><div class="ttdef"><b>Definition</b> lve_model.h:70</div></div>
+<div class="ttc" id="astructlve_1_1_lve_model_1_1_vertex_html"><div class="ttname"><a href="structlve_1_1_lve_model_1_1_vertex.html">lve::LveModel::Vertex</a></div><div class="ttdoc">Structure représentant un vertex dans l'espace 3D.</div><div class="ttdef"><b>Definition</b> lve_model.h:30</div></div>
+<div class="ttc" id="astructlve_1_1_lve_model_1_1_vertex_html_a33a8126b05b90330db3d8c72fb77881d"><div class="ttname"><a href="structlve_1_1_lve_model_1_1_vertex.html#a33a8126b05b90330db3d8c72fb77881d">lve::LveModel::Vertex::position</a></div><div class="ttdeci">glm::vec3 position</div><div class="ttdef"><b>Definition</b> lve_model.h:31</div></div>
+<div class="ttc" id="astructlve_1_1_lve_model_1_1_vertex_html_a36bf601a47123b950dac5b3adb7ea98e"><div class="ttname"><a href="structlve_1_1_lve_model_1_1_vertex.html#a36bf601a47123b950dac5b3adb7ea98e">lve::LveModel::Vertex::GetAttributeDescriptions</a></div><div class="ttdeci">static std::vector&lt; vk::VertexInputAttributeDescription &gt; GetAttributeDescriptions()</div><div class="ttdoc">Obtient les descriptions d'attribut des entrées de vertex.</div><div class="ttdef"><b>Definition</b> lve_model.cpp:201</div></div>
+<div class="ttc" id="astructlve_1_1_lve_model_1_1_vertex_html_a38ad66bd6a187703c1590dd6d3465664"><div class="ttname"><a href="structlve_1_1_lve_model_1_1_vertex.html#a38ad66bd6a187703c1590dd6d3465664">lve::LveModel::Vertex::uv</a></div><div class="ttdeci">glm::vec2 uv</div><div class="ttdef"><b>Definition</b> lve_model.h:34</div></div>
+<div class="ttc" id="astructlve_1_1_lve_model_1_1_vertex_html_a4d82dfd81c2710e7b388ec8e245dcd06"><div class="ttname"><a href="structlve_1_1_lve_model_1_1_vertex.html#a4d82dfd81c2710e7b388ec8e245dcd06">lve::LveModel::Vertex::GetBindingDescriptions</a></div><div class="ttdeci">static std::vector&lt; vk::VertexInputBindingDescription &gt; GetBindingDescriptions()</div><div class="ttdoc">Obtient les descriptions de liaison des entrées de vertex.</div><div class="ttdef"><b>Definition</b> lve_model.cpp:192</div></div>
+<div class="ttc" id="astructlve_1_1_lve_model_1_1_vertex_html_a84d72954fc8a587a987fecf3e9072929"><div class="ttname"><a href="structlve_1_1_lve_model_1_1_vertex.html#a84d72954fc8a587a987fecf3e9072929">lve::LveModel::Vertex::color</a></div><div class="ttdeci">glm::vec3 color</div><div class="ttdef"><b>Definition</b> lve_model.h:32</div></div>
+<div class="ttc" id="astructlve_1_1_lve_model_1_1_vertex_html_a9a9ec41d8d9383074092d3336edeaff7"><div class="ttname"><a href="structlve_1_1_lve_model_1_1_vertex.html#a9a9ec41d8d9383074092d3336edeaff7">lve::LveModel::Vertex::operator==</a></div><div class="ttdeci">bool operator==(const Vertex &amp;_other) const</div><div class="ttdoc">Opérateur de comparaison d'égalité.</div><div class="ttdef"><b>Definition</b> lve_model.h:57</div></div>
+<div class="ttc" id="astructlve_1_1_lve_model_1_1_vertex_html_aafaaa8427b700590fa4a7bbbfb1a1202"><div class="ttname"><a href="structlve_1_1_lve_model_1_1_vertex.html#aafaaa8427b700590fa4a7bbbfb1a1202">lve::LveModel::Vertex::normal</a></div><div class="ttdeci">glm::vec3 normal</div><div class="ttdef"><b>Definition</b> lve_model.h:33</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

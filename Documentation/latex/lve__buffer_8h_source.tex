@@ -1,0 +1,88 @@
+\doxysection{lve\+\_\+buffer.\+h}
+\hypertarget{lve__buffer_8h_source}{}\label{lve__buffer_8h_source}\index{includes/LveEngine/lve\_buffer.h@{includes/LveEngine/lve\_buffer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_device.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }lve}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlve_1_1_lve_buffer}{LveBuffer}}}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_buffer_ade3763325c66ecf858b7fe9f3460eece}{LveBuffer}}(}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_device,}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::DeviceSize\ \ \ \ \ \ \ \ \ \ \_instanceSize,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_instanceCount,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::BufferUsageFlags\ \ \ \ \_usageFlags,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::MemoryPropertyFlags\ \_memoryPropertyFlags,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::DeviceSize\ \ \ \ \ \ \ \ \ \ \_minOffsetAlignment\ =\ 1);\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_buffer_aa6c331ab69d4aa643adf4064f6d0b0a6}{\string~LveBuffer}}();\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_buffer_a3d89ad819978a1b70af40eedffe52e84}{LveBuffer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_buffer}{LveBuffer}}\&)\ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{delete};\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_buffer}{LveBuffer}}\&\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a8dfe52fd4f156fa70c72c15da717ad51}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_buffer}{LveBuffer}}\&)\ =\ \textcolor{keyword}{delete};\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Result\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a058b9e955091430382eabb82a92d6e14}{Map}}(vk::DeviceSize\ \_size\ =\ VK\_WHOLE\_SIZE,\ vk::DeviceSize\ \_offset\ =\ 0);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a3737439d5df0a6924df04243cea435c6}{Unmap}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a0418ba23f49723e99673394eddd51379}{WriteToBuffer}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}*\ \ \ \ \_data,\ vk::DeviceSize\ \_size\ =\ VK\_WHOLE\_SIZE,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::DeviceSize\ \_offset\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Result\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a469fde4476081eb91e2fdfe5f3228cd5}{Flush}}(vk::DeviceSize\ \_size\ =\ VK\_WHOLE\_SIZE,\ vk::DeviceSize\ \_offset\ =\ 0)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ vk::DescriptorBufferInfo\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a1d4c7fa6311f80d62c12a3a639c8f8dd}{DescriptorInfo}}(vk::DeviceSize\ \_size\ \ \ =\ VK\_WHOLE\_SIZE,}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::DeviceSize\ \_offset\ =\ 0)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Result\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a9c4726a7691ff98b61d244833825cee4}{Invalidate}}(vk::DeviceSize\ \_size\ =\ VK\_WHOLE\_SIZE,\ vk::DeviceSize\ \_offset\ =\ 0)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_buffer_ac1263a1e75b0266d516446e56325a241}{WriteToIndex}}(\textcolor{keywordtype}{void}*\ \_data,\ \textcolor{keywordtype}{int}\ \_index);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Result\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a3d8eebf70f870470496e9f06cf68170f}{FlushIndex}}(\textcolor{keywordtype}{int}\ \_index);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ vk::DescriptorBufferInfo\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a7c01c935c41e31c205c20d7bc53f1339}{DescriptorInfoForIndex}}(\textcolor{keywordtype}{int}\ \_index);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Result\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a5f2aa2a10a5c6eb70d267ece1d174377}{InvalidateIndex}}(\textcolor{keywordtype}{int}\ \_index);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Buffer\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a123c3a8b7d2a889b2c33177830a6455b}{GetBuffer}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ buffer;\ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a97d181347b813107739e2b4911470b89}{GetMappedMemory}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mapped;\ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a544b877cb8d2db1d8fd8e2e68637c95a}{GetInstanceCount}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ instanceCount;\ \}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ vk::DeviceSize\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a4cf00afb05543c9a4095f022dcd97b97}{GetInstanceSize}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ instanceSize;\ \}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ vk::DeviceSize\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a5ab64933278c2ba4dabb593f19b0d1d5}{GetAlignmentSize}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ instanceSize;\ \}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ vk::BufferUsageFlags\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a66004c65f1a48e5f0ca9ac588230ae4f}{GetUsageFlags}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ usageFlags;\ \}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ vk::MemoryPropertyFlags\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a8eedbdd757e9d0a72099d8463dcd171b}{GetMemoryPropertyFlags}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ memoryPropertyFlags;\ \}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ vk::DeviceSize\ \mbox{\hyperlink{classlve_1_1_lve_buffer_a4f5e91163936df8b5d11f9d24ce1172e}{GetBufferSize}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ bufferSize;\ \}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ vk::DeviceSize\ GetAlignment(vk::DeviceSize\ \_instanceSize,\ vk::DeviceSize\ \_minOffsetAlignment);}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ lveDevice;}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ mapped\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Buffer\ buffer\ =\ VK\_NULL\_HANDLE;}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ vk::DeviceMemory\ memory\ =\ VK\_NULL\_HANDLE;}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ vk::DeviceSize\ bufferSize;}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ instanceCount;}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ vk::DeviceSize\ instanceSize;}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ vk::DeviceSize\ alignmentSize;}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ vk::BufferUsageFlags\ usageFlags;}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ vk::MemoryPropertyFlags\ memoryPropertyFlags;}
+\DoxyCodeLine{00214\ \ \ \ \ \};}
+\DoxyCodeLine{00215\ \}\ \textcolor{comment}{//\ namespace\ lve}}
+
+\end{DoxyCode}

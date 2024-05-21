@@ -1,0 +1,52 @@
+\doxysection{simple\+\_\+render\+\_\+system.\+h}
+\hypertarget{simple__render__system_8h_source}{}\label{simple__render__system_8h_source}\index{includes/Systems/simple\_render\_system.h@{includes/Systems/simple\_render\_system.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan.hpp>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_device.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_pipeline.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Camera/lve\_camera.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//std}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_object}{GameObject}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }lve}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlve_1_1_simple_push_constant_data}{SimplePushConstantData}}}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ glm::mat4\ modelMatrix\{1.f\};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ glm::mat4\ normalMatrix\{1.f\};}
+\DoxyCodeLine{00021\ \ \ \ \ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlve_1_1_simple_render_system}{SimpleRenderSystem}}}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_simple_render_system}{SimpleRenderSystem}}(\mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_device,\ vk::RenderPass\ \_renderPass,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::DescriptorSetLayout\ \_globalSetLayout);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_simple_render_system}{\string~SimpleRenderSystem}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_simple_render_system}{SimpleRenderSystem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_simple_render_system}{SimpleRenderSystem}}\&)\ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_simple_render_system}{SimpleRenderSystem}}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_simple_render_system}{SimpleRenderSystem}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_simple_render_system_a89c94cf10ed36158f77c69bcf7a279b1}{RenderGameObjects}}(\textcolor{keyword}{const}\ std::vector<GameObject*>\&\ \_gameObjects,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_camera}{LveCamera}}\&\ \_camera,\ \textcolor{keyword}{const}\ vk::CommandBuffer\ \_commandBuffer,\ std::vector<std::vector<vk::DescriptorSet>*>*\ \_DescriptorSetsAll,\ \textcolor{keywordtype}{int}\ \_frameIndex)\ \ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreatePipelineLayout(vk::DescriptorSetLayout\ \_globalSetLayout);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreatePipeline(vk::RenderPass\ \_renderPass);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ lveDevice;}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<LvePipeline>\ lvePipeline;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ vk::PipelineLayout\ \ \ \ \ \ \ \ \ \ \ pipelineLayout;}
+\DoxyCodeLine{00079\ \ \ \ \ \};}
+\DoxyCodeLine{00080\ \}\ \textcolor{comment}{//\ namespace\ lve}}
+
+\end{DoxyCode}

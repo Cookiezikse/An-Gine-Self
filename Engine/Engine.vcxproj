@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="ClientTCP|Win32">
+      <Configuration>ClientTCP</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ClientTCP|x64">
+      <Configuration>ClientTCP</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ClientUDP|Win32">
+      <Configuration>ClientUDP</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ClientUDP|x64">
+      <Configuration>ClientUDP</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ENGINECORE_EXPORTS|Win32">
+      <Configuration>ENGINECORE_EXPORTS</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ENGINECORE_EXPORTS|x64">
+      <Configuration>ENGINECORE_EXPORTS</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ServerTCP|Win32">
+      <Configuration>ServerTCP</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ServerTCP|x64">
+      <Configuration>ServerTCP</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ServerUDP|Win32">
+      <Configuration>ServerUDP</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ServerUDP|x64">
+      <Configuration>ServerUDP</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{3f6b355b-73be-4b94-8850-041f0da72704}</ProjectGuid>
+    <RootNamespace>Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ServerUDP|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ClientUDP|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ServerTCP|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ClientTCP|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ServerUDP|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ClientUDP|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ServerTCP|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ClientTCP|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='ENGINECORE_EXPORTS|x64'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='ENGINECORE_EXPORTS|Win32'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ServerUDP|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ClientUDP|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ServerTCP|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ClientTCP|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ServerUDP|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ClientUDP|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ServerTCP|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ClientTCP|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>;$(SolutionDir)Librairies/imgui</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ServerUDP|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>;$(SolutionDir)Librairies/imgui</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ClientUDP|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>;$(SolutionDir)Librairies/imgui</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ServerTCP|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>;$(SolutionDir)Librairies/imgui</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ClientTCP|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>;$(SolutionDir)Librairies/imgui</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>;$(SolutionDir)Librairies/imgui</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Librairies\stb_lib;$(SolutionDir)Librairies\glm;$(SolutionDir)Librairies\tinyObjLoader;$(SolutionDir)Librairies\glfw-3.4.bin.WIN64\include;$(SolutionDir)Librairies\VulkanSDK\Include;$(SolutionDir)Librairies\FMOD\inc;$(SolutionDir)\Engine;$(SolutionDir)\Engine\includes;$(SolutionDir)Librairies\bullet3_x64-windows\include\bullet;$(SolutionDir)Librairies\Json\include;%(AdditionalIncludeDirectories);$(SolutionDir)Librairies/imgui</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Librairies\glfw-3.4.bin.WIN64\lib-vc2022;$(SolutionDir)Librairies\FMOD\lib;$(SolutionDir)Librairies\VulkanSDK\Lib;$(SolutionDir)Librairies\bullet3_x64-windows\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmod_vc.lib;vulkan-1.lib;glfw3.lib;Ws2_32.lib;BulletCollision_Debug.lib;BulletDynamics_Debug.lib;LinearMath_Debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>call "$(ProjectDir)compile.bat"
+xcopy /E /I /Y "$(ProjectDir)Shaders" "$(TargetDir)Shaders"
+xcopy /E /I /Y "$(ProjectDir)Models" "$(TargetDir)Models"
+xcopy /E /I /Y "$(ProjectDir)Textures" "$(TargetDir)Textures"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ServerUDP|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Librairies\stb_lib;$(SolutionDir)Librairies\glm;$(SolutionDir)Librairies\tinyObjLoader;$(SolutionDir)Librairies\glfw-3.4.bin.WIN64\include;$(SolutionDir)Librairies\VulkanSDK\Include;$(SolutionDir)Librairies\FMOD\inc;$(SolutionDir)\Engine;$(SolutionDir)\Engine\includes;$(SolutionDir)Librairies\bullet3_x64-windows\include\bullet;$(SolutionDir)\Engine;$(SolutionDir)\Engine\includes;$(SolutionDir)Librairies\stb_lib;$(SolutionDir)Librairies\Json/include;%(AdditionalIncludeDirectories);$(SolutionDir)Librairies/imgui</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Librairies\glfw-3.4.bin.WIN64\lib-vc2022;$(SolutionDir)Librairies\FMOD\lib;$(SolutionDir)Librairies\VulkanSDK\Lib;$(SolutionDir)Librairies\bullet3_x64-windows\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmod_vc.lib;vulkan-1.lib;glfw3.lib;Ws2_32.lib;BulletCollision_Debug.lib;BulletDynamics_Debug.lib;LinearMath_Debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>call "$(ProjectDir)compile.bat"
+xcopy /E /I /Y "$(ProjectDir)Shaders" "$(TargetDir)Shaders"
+xcopy /E /I /Y "$(ProjectDir)Models" "$(TargetDir)Models"
+xcopy /E /I /Y "$(ProjectDir)Textures" "$(TargetDir)Textures"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ClientUDP|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Librairies\stb_lib;$(SolutionDir)Librairies\glm;$(SolutionDir)Librairies\tinyObjLoader;$(SolutionDir)Librairies\glfw-3.4.bin.WIN64\include;$(SolutionDir)Librairies\VulkanSDK\Include;$(SolutionDir)Librairies\FMOD\inc;$(SolutionDir)\Engine;$(SolutionDir)\Engine\includes;$(SolutionDir)Librairies\bullet3_x64-windows\include\bullet;$(SolutionDir)\Engine;$(SolutionDir)\Engine\includes;$(SolutionDir)Librairies\stb_lib;$(SolutionDir)Librairies\Json/include;%(AdditionalIncludeDirectories);$(SolutionDir)Librairies/imgui</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Librairies\glfw-3.4.bin.WIN64\lib-vc2022;$(SolutionDir)Librairies\FMOD\lib;$(SolutionDir)Librairies\VulkanSDK\Lib;$(SolutionDir)Librairies\bullet3_x64-windows\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmod_vc.lib;vulkan-1.lib;glfw3.lib;Ws2_32.lib;BulletCollision_Debug.lib;BulletDynamics_Debug.lib;LinearMath_Debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>call "$(ProjectDir)compile.bat"
+xcopy /E /I /Y "$(ProjectDir)Shaders" "$(TargetDir)Shaders"
+xcopy /E /I /Y "$(ProjectDir)Models" "$(TargetDir)Models"
+xcopy /E /I /Y "$(ProjectDir)Textures" "$(TargetDir)Textures"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ServerTCP|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Librairies\stb_lib;$(SolutionDir)Librairies\glm;$(SolutionDir)Librairies\tinyObjLoader;$(SolutionDir)Librairies\glfw-3.4.bin.WIN64\include;$(SolutionDir)Librairies\VulkanSDK\Include;$(SolutionDir)Librairies\FMOD\inc;$(SolutionDir)\Engine;$(SolutionDir)\Engine\includes;$(SolutionDir)Librairies\bullet3_x64-windows\include\bullet;$(SolutionDir)\Engine;$(SolutionDir)\Engine\includes;$(SolutionDir)Librairies\stb_lib;$(SolutionDir)Librairies\Json/include;%(AdditionalIncludeDirectories);$(SolutionDir)Librairies/imgui</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Librairies\glfw-3.4.bin.WIN64\lib-vc2022;$(SolutionDir)Librairies\FMOD\lib;$(SolutionDir)Librairies\VulkanSDK\Lib;$(SolutionDir)Librairies\bullet3_x64-windows\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmod_vc.lib;vulkan-1.lib;glfw3.lib;Ws2_32.lib;BulletCollision_Debug.lib;BulletDynamics_Debug.lib;LinearMath_Debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>call "$(ProjectDir)compile.bat"
+xcopy /E /I /Y "$(ProjectDir)Shaders" "$(TargetDir)Shaders"
+xcopy /E /I /Y "$(ProjectDir)Models" "$(TargetDir)Models"
+xcopy /E /I /Y "$(ProjectDir)Textures" "$(TargetDir)Textures"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ClientTCP|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Librairies\stb_lib;$(SolutionDir)Librairies\glm;$(SolutionDir)Librairies\tinyObjLoader;$(SolutionDir)Librairies\glfw-3.4.bin.WIN64\include;$(SolutionDir)Librairies\VulkanSDK\Include;$(SolutionDir)Librairies\FMOD\inc;$(SolutionDir)\Engine;$(SolutionDir)\Engine\includes;$(SolutionDir)Librairies\bullet3_x64-windows\include\bullet;$(SolutionDir)\Engine;$(SolutionDir)\Engine\includes;$(SolutionDir)Librairies\stb_lib;$(SolutionDir)Librairies\Json/include;%(AdditionalIncludeDirectories);$(SolutionDir)Librairies/imgui</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UndefinePreprocessorDefinitions>%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Librairies\glfw-3.4.bin.WIN64\lib-vc2022;$(SolutionDir)Librairies\FMOD\lib;$(SolutionDir)Librairies\VulkanSDK\Lib;$(SolutionDir)Librairies\bullet3_x64-windows\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmod_vc.lib;vulkan-1.lib;glfw3.lib;Ws2_32.lib;BulletCollision_Debug.lib;BulletDynamics_Debug.lib;LinearMath_Debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>call "$(ProjectDir)compile.bat"
+xcopy /E /I /Y "$(ProjectDir)Shaders" "$(TargetDir)Shaders"
+xcopy /E /I /Y "$(ProjectDir)Models" "$(TargetDir)Models"
+xcopy /E /I /Y "$(ProjectDir)Textures" "$(TargetDir)Textures"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;WIN32_LEAN_AND_MEAN;ENGINECORE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Librairies\Stb_image;$(SolutionDir)Librairies\FMOD\inc;$(SolutionDir)Librairies\glm;$(SolutionDir)Librairies\tinyObjLoader;$(SolutionDir)Librairies\glfw-3.4.bin.WIN64\include;$(SolutionDir)Librairies\VulkanSDK\Include;%(AdditionalIncludeDirectories);$(SolutionDir)Librairies/imgui;$(SolutionDir)Librairies\bullet3_x64-windows\include\bullet;$(SolutionDir)\Engine;$(SolutionDir)\Engine\includes;$(SolutionDir)Librairies\stb_lib;$(SolutionDir)Librairies\Json\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Librairies\glfw-3.4.bin.WIN64\lib-vc2022;$(SolutionDir)Librairies\FMOD\lib;$(SolutionDir)Librairies\VulkanSDK\Lib;$(SolutionDir)Librairies\bullet3_x64-windows\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmod_vc.lib;vulkan-1.lib;glfw3.lib;Ws2_32.lib;BulletCollision.lib;BulletDynamics.lib;LinearMath.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>call "$(ProjectDir)compile.bat"
+xcopy /E /I /Y "$(ProjectDir)Shaders" "$(TargetDir)Shaders"
+xcopy /E /I /Y "$(ProjectDir)Models" "$(TargetDir)Models"
+xcopy /E /I /Y "$(ProjectDir)Textures" "$(TargetDir)Textures"
+
+xcopy /E /I /Y "$(ProjectDir)Saves" "$(TargetDir)Saves"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ENGINECORE_EXPORTS|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Librairies\Stb_image;$(SolutionDir)Librairies\FMOD\inc;$(SolutionDir)Librairies\glm;$(SolutionDir)Librairies\tinyObjLoader;$(SolutionDir)Librairies\glfw-3.4.bin.WIN64\include;$(SolutionDir)Librairies\VulkanSDK\Include;%(AdditionalIncludeDirectories);$(SolutionDir)Librairies/imgui;$(SolutionDir)Librairies\bullet3_x64-windows\include\bullet;$(SolutionDir)Engine;$(SolutionDir)Engine\includes;$(SolutionDir)Librairies\stb_lib;$(SolutionDir)Librairies\Json\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;ENGINECORE_EXPORTS;</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)Librairies\glfw-3.4.bin.WIN64\lib-vc2022;$(SolutionDir)\Librairies\FMOD\lib;$(SolutionDir)Librairies\VulkanSDK\Lib;$(SolutionDir)Librairies\bullet3_x64-windows\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fmod_vc.lib;vulkan-1.lib;glfw3.lib;Ws2_32.lib;BulletCollision.lib;BulletDynamics.lib;LinearMath.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Librairies\imgui\imgui.cpp" />
+    <ClCompile Include="..\Librairies\imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\Librairies\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\Librairies\imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="..\Librairies\imgui\imgui_impl_vulkan.cpp" />
+    <ClCompile Include="..\Librairies\imgui\imgui_tables.cpp" />
+    <ClCompile Include="..\Librairies\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Console.cpp" />
+    <ClCompile Include="includes\Script\Script.h" />
+    <ClCompile Include="sources\FilesDirs.cpp" />
+    <ClCompile Include="sources\GameObject\PreGameObject\GirlGameObject.cpp" />
+    <ClCompile Include="sources\GameObject\PreGameObject\MultipleGameObject.cpp" />
+    <ClCompile Include="sources\GameObject\PreGameObject\NoobGameObject.cpp" />
+    <ClCompile Include="sources\GameObject\PreGameObject\SphereGameObject.cpp" />
+    <ClCompile Include="sources\GameObject\PreGameObject\VaseGameObject.cpp" />
+    <ClCompile Include="sources\Script\GameObjectScript.cpp" />
+    <ClCompile Include="sources\Modules\ScriptModule.cpp" />
+    <ClCompile Include="sources\Script\Script.cpp" />
+    <ClCompile Include="sources\TCP\StatusMessage.cpp" />
+    <ClCompile Include="ImGUIAudio.cpp" />
+    <ClCompile Include="sources\UDP\ErrorsUDP.cpp" />
+    <ClCompile Include="sources\UDP\Network\ConnexionTimeout\ConnexionTiemout.cpp" />
+    <ClCompile Include="sources\UDP\Network\Connextion\Connexion.cpp" />
+    <ClCompile Include="sources\UDP\Network\ServerUDP\ServerUDPStart.cpp" />
+    <ClCompile Include="sources\UDP\Network\ClientUDP\ClientUDPStart.cpp" />
+    <ClCompile Include="sources\UDP\Network\Timeout\Timeout.cpp" />
+    <ClCompile Include="sources\UDP\Test\Serialization_Test.cpp" />
+    <ClCompile Include="sources\UDP\Protocol\Simulator.cpp" />
+    <ClCompile Include="sources\UDP\SocketsUDP.cpp" />
+    <ClCompile Include="sources\UDP\Serialization\Deserializer.cpp" />
+    <ClCompile Include="sources\UDP\Serialization\Serialization.cpp" />
+    <ClCompile Include="sources\UDP\Serialization\Serializer.cpp" />
+    <ClCompile Include="sources\UDP\Serialization\Convert.cpp" />
+    <ClCompile Include="sources\UDP\ChannelsHandler.cpp" />
+    <ClCompile Include="sources\UDP\Datagram.cpp" />
+    <ClCompile Include="sources\UDP\Test\PacketHandling_Test.cpp" />
+    <ClCompile Include="sources\UDP\Protocol\ReliableOrdered.cpp" />
+    <ClCompile Include="sources\UDP\Packet.cpp" />
+    <ClCompile Include="sources\UDP\Test\DistanceClient_Test.cpp" />
+    <ClCompile Include="sources\UDP\Address.cpp" />
+    <ClCompile Include="sources\UDP\DistantClient.cpp" />
+    <ClCompile Include="sources\UDP\ClientUDP.cpp" />
+    <ClCompile Include="sources\UDP\Test\AckHandler_Test.cpp" />
+    <ClCompile Include="sources\GameObject\Components\BoxCollider.cpp" />
+    <ClCompile Include="sources\Modules\FileManager.cpp" />
+    <ClCompile Include="sources\Inputs\InputKeyCode.cpp" />
+    <ClCompile Include="ImGUIInterface.cpp" />
+    <ClCompile Include="sources\TCP\Client\Client.cpp" />
+    <ClCompile Include="sources\Tools\Convertisseur.cpp" />
+    <ClCompile Include="sources\LveEngine\lve_texture.cpp" />
+    <ClCompile Include="sources\GameObject\Components\Mesh.cpp" />
+    <ClCompile Include="sources\Modules\DisplayModule.cpp" />
+    <ClCompile Include="sources\GameObject\Components\Light.cpp" />
+    <ClCompile Include="sources\TCP\Errors.cpp" />
+    <ClCompile Include="sources\Modules\rhi.cpp" />
+    <ClCompile Include="sources\TCP\Server\Server.cpp" />
+    <ClCompile Include="sources\TCP\Sockets.cpp" />
+    <ClCompile Include="sources\Modules\RHIVulkanModule.cpp" />
+    <ClCompile Include="sources\GameObject\Components\RigidBody.cpp" />
+    <ClCompile Include="sources\GameObject\PreGameObject\LightGameObject.cpp" />
+    <ClCompile Include="sources\GameObject\PreGameObject\PlaneGameObject.cpp" />
+    <ClCompile Include="sources\GameObject\PreGameObject\CubeGameObject.cpp" />
+    <ClCompile Include="sources\Camera\CameraManager.cpp" />
+    <ClCompile Include="sources\Tools\functionHelpers.cpp" />
+    <ClCompile Include="sources\LveEngine\lve_constants.cpp" />
+    <ClCompile Include="sources\Camera\BaseCamera.cpp" />
+    <ClCompile Include="sources\Engine\CoreEngine.cpp" />
+    <ClCompile Include="sources\Modules\HUDModule.cpp" />
+    <ClCompile Include="sources\Modules\ImGUIModule.cpp" />
+    <ClCompile Include="sources\Modules\WindowModule.cpp" />
+    <ClCompile Include="sources\Modules\ModuleManager.cpp" />
+    <ClCompile Include="sources\Scene\BaseScene.cpp" />
+    <ClCompile Include="sources\GameObject\Components\Component.cpp" />
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="sources\Engine\EngineTestCode.cpp" />
+    <ClCompile Include="sources\Modules\SoundSystemModule.cpp" />
+    <ClCompile Include="sources\UDP\AckHandler.cpp" />
+    <ClCompile Include="sources\GameObject\Components\SphereCollider.cpp" />
+    <ClCompile Include="sources\Modules\TimeModule.cpp" />
+    <ClCompile Include="sources\TCP\Client\TCPClientStart.cpp" />
+    <ClCompile Include="sources\TCP\Server\TCPServerStart.cpp" />
+    <ClCompile Include="sources\UDP\Tester.cpp" />
+    <ClCompile Include="sources\GameObject\Components\Transform.cpp" />
+    <ClCompile Include="sources\UDP\Utils\Utils.cpp" />
+    <ClCompile Include="sources\UDP\Test\Utils_Test.cpp" />
+    <ClCompile Include="sources\UDP\Protocol\UnreliableOrdered.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Console.h" />
+    <ClInclude Include="includes\FilesDirs.h" />
+    <ClInclude Include="includes\GameObject\PreGameObject\GirlGameObject.h" />
+    <ClInclude Include="includes\GameObject\PreGameObject\MultipleGameObject.h" />
+    <ClInclude Include="includes\GameObject\PreGameObject\NoobGameObject.h" />
+    <ClInclude Include="includes\GameObject\PreGameObject\SphereGameObject.h" />
+    <ClInclude Include="includes\GameObject\PreGameObject\VaseGameObject.h" />
+    <ClInclude Include="includes\Script\GameObjectScript.h" />
+    <ClInclude Include="includes\Script\IScript.h" />
+    <ClInclude Include="includes\Modules\ScriptModule.h" />
+    <ClInclude Include="ImGUIAudio.h" />
+    <ClInclude Include="includes\TCP\StatusMessage.h" />
+    <ClInclude Include="includes\UDP\ErrorsUDP.h" />
+    <ClInclude Include="includes\UDP\Float.h" />
+    <ClInclude Include="includes\UDP\Network\ServerUDP\ServerUDPStart.h" />
+    <ClInclude Include="includes\UDP\Network\ClientUDP\ClientUDPStart.h" />
+    <ClInclude Include="includes\UDP\RangedInteger.h" />
+    <ClInclude Include="includes\UDP\Serialization\Deserializer.h" />
+    <ClInclude Include="includes\UDP\Serialization\Convert.h" />
+    <ClInclude Include="includes\UDP\ChannelHeader.h" />
+    <ClInclude Include="includes\UDP\ChannelsHandler.h" />
+    <ClInclude Include="includes\UDP\Test\DistantClient_Test.h" />
+    <ClInclude Include="includes\UDP\Address.h" />
+    <ClInclude Include="includes\UDP\DistantClient.h" />
+    <ClInclude Include="includes\UDP\ClientUDP.h" />
+    <ClInclude Include="includes\UDP\Test\AckHandler_Test.h" />
+    <ClInclude Include="includes\GameObject\Components\BoxCollider.h" />
+    <ClInclude Include="includes\Modules\FileManager.h" />
+    <ClInclude Include="includes\TCP\Client\Client.h" />
+    <ClInclude Include="includes\Tools\Convertisseur.h" />
+    <ClInclude Include="includes\Modules\DisplayModule.h" />
+    <ClInclude Include="includes\TCP\Errors.h" />
+    <ClInclude Include="includes\GameObject\PreGameObject\CubeGameObject.h" />
+    <ClInclude Include="includes\Camera\CameraManager.h" />
+    <ClInclude Include="includes\Tools\functionHelpers.h" />
+    <ClInclude Include="includes\Camera\BaseCamera.h" />
+    <ClInclude Include="includes\Engine\CoreEngine.h" />
+    <ClInclude Include="includes\Modules\HUDModule.h" />
+    <ClInclude Include="includes\Modules\ImGUIModule.h" />
+    <ClInclude Include="includes\Modules\WindowModule.h" />
+    <ClInclude Include="includes\Modules\Module.h" />
+    <ClInclude Include="includes\Modules\ModuleManager.h" />
+    <ClInclude Include="includes\Scene\BaseScene.h" />
+    <ClInclude Include="includes\GameObject\Components\Component.h" />
+    <ClInclude Include="includes\Engine\EngineTestCode.h" />
+    <ClInclude Include="includes\Modules\SoundSystemModule.h" />
+    <ClCompile Include="sources\GameObject\GameObject.cpp" />
+    <ClCompile Include="sources\Inputs\keyboard_movement_controller.cpp" />
+    <ClCompile Include="sources\LveEngine\lve_buffer.cpp" />
+    <ClCompile Include="sources\Camera\lve_camera.cpp" />
+    <ClCompile Include="sources\LveEngine\lve_descriptors.cpp" />
+    <ClCompile Include="sources\LveEngine\lve_device.cpp" />
+    <ClCompile Include="sources\LveEngine\lve_frame_info.cpp" />
+    <ClCompile Include="sources\LveEngine\lve_model.cpp" />
+    <ClCompile Include="sources\LveEngine\lve_pipeline.cpp" />
+    <ClCompile Include="sources\LveEngine\lve_renderer.cpp" />
+    <ClCompile Include="sources\LveEngine\lve_swap_chain.cpp" />
+    <ClCompile Include="sources\LveEngine\lve_utils.cpp" />
+    <ClCompile Include="sources\LveEngine\lve_window.cpp" />
+    <ClCompile Include="sources\Modules\DebugModule.cpp" />
+    <ClCompile Include="sources\Modules\InputModule.cpp" />
+    <ClCompile Include="sources\Scene\SceneManager.cpp" />
+    <ClCompile Include="sources\Systems\point_light_system.cpp" />
+    <ClCompile Include="sources\Systems\simple_render_system.cpp" />
+    <ClInclude Include="includes\GameObject\PreGameObject\LightGameObject.h" />
+    <ClInclude Include="includes\Inputs\InputKeyCode.h" />
+    <ClInclude Include="ImGUIInterface.h" />
+    <ClInclude Include="includes\GameObject\Components\Light.h" />
+    <ClInclude Include="includes\TCP\Messages.h" />
+    <ClInclude Include="includes\TCP\Utils.h" />
+    <ClInclude Include="includes\UDP\AckHandler.h" />
+    <ClInclude Include="includes\UDP\Datagram.h" />
+    <ClInclude Include="includes\UDP\Messages.h" />
+    <ClInclude Include="includes\UDP\Protocol\ProtocolInterface.h" />
+    <ClInclude Include="includes\UDP\Settings.h" />
+    <ClInclude Include="includes\UDP\Types.h" />
+    <ClInclude Include="includes\LveEngine\lve_constants.h" />
+    <ClInclude Include="includes\GameObject\PreGameObject\PlaneGameObject.h" />
+    <ClInclude Include="includes\UDP\Packet.h" />
+    <ClInclude Include="includes\UDP\Protocol\ReliableOrdered.h" />
+    <ClInclude Include="includes\UDP\Test\PacketHandling_Test.h" />
+    <ClInclude Include="includes\LveEngine\lve_texture.h" />
+    <ClInclude Include="includes\GameObject\Components\Mesh.h" />
+    <ClInclude Include="includes\Modules\rhi.h" />
+    <ClInclude Include="includes\Modules\RHIVulkanModule.h" />
+    <ClInclude Include="includes\GameObject\Components\RigidBody.h" />
+    <ClInclude Include="includes\TCP\Server\Server.h" />
+    <ClInclude Include="includes\TCP\Sockets.h" />
+    <ClInclude Include="includes\UDP\Serialization\Serializer.h" />
+    <ClInclude Include="includes\UDP\Serialization\Serialization.h" />
+    <ClInclude Include="includes\UDP\SocketsUDP.h" />
+    <ClInclude Include="includes\UDP\Protocol\Simulator.h" />
+    <ClInclude Include="includes\UDP\Test\Serialization_Test.h" />
+    <ClInclude Include="includes\GameObject\Components\SphereCollider.h" />
+    <ClInclude Include="includes\Modules\TimeModule.h" />
+    <ClInclude Include="includes\TCP\Client\TCPClientStart.h" />
+    <ClInclude Include="includes\TCP\Server\TCPServerStart.h" />
+    <ClInclude Include="includes\UDP\Tester.h" />
+    <ClInclude Include="includes\GameObject\Components\Transform.h" />
+    <ClInclude Include="includes\UDP\Utils\Utils.h" />
+    <ClInclude Include="includes\UDP\Test\Utils_Test.h" />
+    <ClInclude Include="includes\UDP\Protocol\UnreliableOrdered.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="includes\GameObject\GameObject.h" />
+    <ClInclude Include="includes\Inputs\keyboard_movement_controller.h" />
+    <ClInclude Include="includes\LveEngine\lve_buffer.h" />
+    <ClInclude Include="includes\Camera\lve_camera.h" />
+    <ClInclude Include="includes\LveEngine\lve_descriptors.h" />
+    <ClInclude Include="includes\LveEngine\lve_device.h" />
+    <ClInclude Include="includes\LveEngine\lve_frame_info.h" />
+    <ClInclude Include="includes\LveEngine\lve_model.h" />
+    <ClInclude Include="includes\LveEngine\lve_pipeline.h" />
+    <ClInclude Include="includes\LveEngine\lve_renderer.h" />
+    <ClInclude Include="includes\LveEngine\lve_swap_chain.h" />
+    <ClInclude Include="includes\LveEngine\lve_utils.h" />
+    <ClInclude Include="includes\LveEngine\lve_window.h" />
+    <ClInclude Include="includes\Modules\DebugModule.h" />
+    <ClInclude Include="includes\Modules\InputModule.h" />
+    <ClInclude Include="includes\Scene\SceneManager.h" />
+    <ClInclude Include="includes\Systems\point_light_system.h" />
+    <ClInclude Include="includes\Systems\simple_render_system.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="..\Librairies\FMOD\lib\fmod.dll">
+      <FileType>Document</FileType>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="..\Librairies\FMOD\lib\fmodL.dll">
+      <FileType>Document</FileType>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="compile.bat" />
+    <None Include="imgui.ini" />
+    <None Include="Shaders\point_light.frag" />
+    <None Include="Shaders\point_light.frag.spv" />
+    <None Include="Shaders\point_light.spv" />
+    <None Include="Shaders\point_light.vert" />
+    <None Include="Shaders\point_light.vert.spv" />
+    <None Include="Shaders\simple_shader.frag" />
+    <None Include="Shaders\simple_shader.frag.spv" />
+    <None Include="Shaders\simple_shader.spv" />
+    <None Include="Shaders\simple_shader.vert" />
+    <None Include="Shaders\simple_shader.vert.spv" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\colored_cube.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="Models\cube.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="Models\flat_vase.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="Models\quad.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="Models\smooth_vase.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="Models\viking_room.obj">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="includes\UDP\Serialization\Deserializer.inl" />
+    <None Include="includes\UDP\Serialization\Serializer.inl" />
+    <None Include="includes\UDP\Utils\Utils.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

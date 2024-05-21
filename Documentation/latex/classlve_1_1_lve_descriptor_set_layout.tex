@@ -1,0 +1,91 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Lve\+Descriptor\+Set\+Layout}
+\hypertarget{classlve_1_1_lve_descriptor_set_layout}{}\label{classlve_1_1_lve_descriptor_set_layout}\index{lve::LveDescriptorSetLayout@{lve::LveDescriptorSetLayout}}
+
+
+Classe représentant un agencement de jeu de descripteurs Vulkan.  
+
+
+
+
+{\ttfamily \#include $<$lve\+\_\+descriptors.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_1_1_builder}{Builder}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_a35feeecc25a760260c10809002454128}{Lve\+Descriptor\+Set\+Layout}} (\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&\+\_\+lve\+Device, std\+::unordered\+\_\+map$<$ uint32\+\_\+t, vk\+::\+Descriptor\+Set\+Layout\+Binding $>$ \+\_\+bindings)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classlve_1_1_lve_descriptor_set_layout}{Lve\+Descriptor\+Set\+Layout}. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_lve_descriptor_set_layout_a04241fd21414683fa27a478580b567c1}\label{classlve_1_1_lve_descriptor_set_layout_a04241fd21414683fa27a478580b567c1} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Lve\+Descriptor\+Set\+Layout} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \doxylink{classlve_1_1_lve_descriptor_set_layout}{Lve\+Descriptor\+Set\+Layout}. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_lve_descriptor_set_layout_a2f5e3b96120e8b04a4b092db5f297ed7}\label{classlve_1_1_lve_descriptor_set_layout_a2f5e3b96120e8b04a4b092db5f297ed7} 
+{\bfseries Lve\+Descriptor\+Set\+Layout} (const \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout}{Lve\+Descriptor\+Set\+Layout}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Constructeur de copie supprimé. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_lve_descriptor_set_layout_a43fde8b41fdee7da7c75712fdbc65049}\label{classlve_1_1_lve_descriptor_set_layout_a43fde8b41fdee7da7c75712fdbc65049} 
+\mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout}{Lve\+Descriptor\+Set\+Layout}} \& {\bfseries operator=} (const \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout}{Lve\+Descriptor\+Set\+Layout}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}affectation supprimé. \end{DoxyCompactList}\item 
+vk\+::\+Descriptor\+Set\+Layout \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_a9feee64b71e9fe5310ac50fc8923b1af}{Get\+Descriptor\+Set\+Layout}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la mise en page de l\textquotesingle{}ensemble de descripteurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_a2851feef02cfcddf960ef4052101ee6e}{Lve\+Descriptor\+Writer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Classe représentant un agencement de jeu de descripteurs Vulkan. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classlve_1_1_lve_descriptor_set_layout_a35feeecc25a760260c10809002454128}\label{classlve_1_1_lve_descriptor_set_layout_a35feeecc25a760260c10809002454128} 
+\index{lve::LveDescriptorSetLayout@{lve::LveDescriptorSetLayout}!LveDescriptorSetLayout@{LveDescriptorSetLayout}}
+\index{LveDescriptorSetLayout@{LveDescriptorSetLayout}!lve::LveDescriptorSetLayout@{lve::LveDescriptorSetLayout}}
+\doxysubsubsection{\texorpdfstring{LveDescriptorSetLayout()}{LveDescriptorSetLayout()}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Descriptor\+Set\+Layout\+::\+Lve\+Descriptor\+Set\+Layout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&}]{\+\_\+lve\+Device,  }\item[{std\+::unordered\+\_\+map$<$ uint32\+\_\+t, vk\+::\+Descriptor\+Set\+Layout\+Binding $>$}]{\+\_\+bindings }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{classlve_1_1_lve_descriptor_set_layout}{Lve\+Descriptor\+Set\+Layout}. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+lve\+Device} & Une référence vers l\textquotesingle{}objet \doxylink{classlve_1_1_lve_device}{Lve\+Device} utilisé pour la création de l\textquotesingle{}ensemble de descripteurs. \\
+\hline
+{\em \+\_\+bindings} & Les bindings de la mise en page de l\textquotesingle{}ensemble de descripteurs. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_lve_descriptor_set_layout_a9feee64b71e9fe5310ac50fc8923b1af}\label{classlve_1_1_lve_descriptor_set_layout_a9feee64b71e9fe5310ac50fc8923b1af} 
+\index{lve::LveDescriptorSetLayout@{lve::LveDescriptorSetLayout}!GetDescriptorSetLayout@{GetDescriptorSetLayout}}
+\index{GetDescriptorSetLayout@{GetDescriptorSetLayout}!lve::LveDescriptorSetLayout@{lve::LveDescriptorSetLayout}}
+\doxysubsubsection{\texorpdfstring{GetDescriptorSetLayout()}{GetDescriptorSetLayout()}}
+{\footnotesize\ttfamily vk\+::\+Descriptor\+Set\+Layout lve\+::\+Lve\+Descriptor\+Set\+Layout\+::\+Get\+Descriptor\+Set\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la mise en page de l\textquotesingle{}ensemble de descripteurs. 
+
+\begin{DoxyReturn}{Renvoie}
+La mise en page de l\textquotesingle{}ensemble de descripteurs. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentation des fonctions amies et associÃ©es}
+\Hypertarget{classlve_1_1_lve_descriptor_set_layout_a2851feef02cfcddf960ef4052101ee6e}\label{classlve_1_1_lve_descriptor_set_layout_a2851feef02cfcddf960ef4052101ee6e} 
+\index{lve::LveDescriptorSetLayout@{lve::LveDescriptorSetLayout}!LveDescriptorWriter@{LveDescriptorWriter}}
+\index{LveDescriptorWriter@{LveDescriptorWriter}!lve::LveDescriptorSetLayout@{lve::LveDescriptorSetLayout}}
+\doxysubsubsection{\texorpdfstring{LveDescriptorWriter}{LveDescriptorWriter}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classlve_1_1_lve_descriptor_writer}{Lve\+Descriptor\+Writer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+Déclaration d\textquotesingle{}amitié avec la classe \doxylink{classlve_1_1_lve_descriptor_writer}{Lve\+Descriptor\+Writer}. 
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Lve\+Engine/lve\+\_\+descriptors.\+h\item 
+sources/\+Lve\+Engine/lve\+\_\+descriptors.\+cpp\end{DoxyCompactItemize}

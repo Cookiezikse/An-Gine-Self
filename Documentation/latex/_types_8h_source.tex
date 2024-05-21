@@ -1,0 +1,129 @@
+\doxysection{Types.\+h}
+\hypertarget{_types_8h_source}{}\label{_types_8h_source}\index{includes/UDP/Types.h@{includes/UDP/Types.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifndef\ NOMINMAX}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ NOMINMAX}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <limits>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifdef\ min}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#undef\ min}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifdef\ max}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#undef\ max}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }Bousk}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{using\ }int8\ =\ int8\_t;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{using\ }int16\ =\ int16\_t;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{using\ }int32\ =\ int32\_t;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{using\ }int64\ =\ int64\_t;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{using\ }uint8\ =\ uint8\_t;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{using\ }uint16\ =\ uint16\_t;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{using\ }uint32\ =\ uint32\_t;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{using\ }uint64\ =\ uint64\_t;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{using\ }float32\ =\ float;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{using\ }float64\ =\ double;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ INTEGER>}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_bit}{Bit}}\ \{\};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_bit}{Bit}}<uint8>}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint8\ Left\ =\ 0b10000000;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint8\ Right\ =\ 0b00000001;}
+\DoxyCodeLine{00041\ \ \ \ \ \};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{constexpr}\ uint8\ BoolTrue\ =\ \mbox{\hyperlink{struct_bousk_1_1_bit}{Bit<uint8>::Right}};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{constexpr}\ uint8\ BoolFalse\ =\ 0;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_bit}{Bit}}<uint64>}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint64\ Right\ =\ 0b0000000000000000000000000000000000000000000000000000000000000001;}
+\DoxyCodeLine{00049\ \ \ \ \ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ TYPE,\ TYPE\ V>}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_return}{Return}}}
+\DoxyCodeLine{00053\ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ TYPE\ Value\ =\ V;}
+\DoxyCodeLine{00055\ \ \ \ \ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{template}<u\textcolor{keywordtype}{int}64\ VALUE>}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_nb_bits}{NbBits}}}
+\DoxyCodeLine{00059\ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<u\textcolor{keywordtype}{int}8\ BIT>}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_nb_bits_1_1_internal_nb_bits}{InternalNbBits}}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint8\ Value\ =\ std::conditional\_t\ <\ VALUE\ <\ (\mbox{\hyperlink{struct_bousk_1_1_bit}{Bit<uint64>::Right}}\ <<\ BIT),\ \mbox{\hyperlink{struct_bousk_1_1_return}{Return<uint8,\ BIT>}},\ \mbox{\hyperlink{struct_bousk_1_1_nb_bits_1_1_internal_nb_bits}{InternalNbBits<BIT\ +\ 1>}}>::Value;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint8\ Value\ =\ std::conditional\_t<VALUE\ >=\ (std::numeric\_limits<uint64>::max()\ /\ 2\ +\ 1),\ \mbox{\hyperlink{struct_bousk_1_1_return}{Return<uint8,\ 64>}},\ \mbox{\hyperlink{struct_bousk_1_1_nb_bits_1_1_internal_nb_bits}{InternalNbBits<1>}}>::Value;}
+\DoxyCodeLine{00066\ \ \ \ \ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{template}<u\textcolor{keywordtype}{int}8\ BASE,\ u\textcolor{keywordtype}{int}8\ EXPONENT>}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_internal_pow}{InternalPow}}}
+\DoxyCodeLine{00070\ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint32\ Value\ =\ \mbox{\hyperlink{struct_bousk_1_1_return}{Return}}<uint32,\ BASE*\ \mbox{\hyperlink{struct_bousk_1_1_internal_pow}{InternalPow}}<BASE,\ EXPONENT\ -\/\ 1>::Value>::Value;}
+\DoxyCodeLine{00072\ \ \ \ \ \};}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{template}<u\textcolor{keywordtype}{int}8\ BASE>}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_internal_pow}{InternalPow}}<BASE,\ 1>}
+\DoxyCodeLine{00075\ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint32\ Value\ =\ BASE;}
+\DoxyCodeLine{00077\ \ \ \ \ \};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{template}<u\textcolor{keywordtype}{int}8\ BASE>}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_internal_pow}{InternalPow}}<BASE,\ 0>}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint32\ Value\ =\ 1;}
+\DoxyCodeLine{00082\ \ \ \ \ \};}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{template}<u\textcolor{keywordtype}{int}8\ BASE,\ u\textcolor{keywordtype}{int}8\ EXPONENT>}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_pow}{Pow}}}
+\DoxyCodeLine{00085\ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint32\ Value\ =\ \mbox{\hyperlink{struct_bousk_1_1_internal_pow}{InternalPow<BASE,\ EXPONENT>::Value}};}
+\DoxyCodeLine{00087\ \ \ \ \ \};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{char}...>\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_to_int}{ToInt}};}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{template}<>}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_to_int_3_4}{ToInt<>}}}
+\DoxyCodeLine{00092\ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ Value\ =\ 0;}
+\DoxyCodeLine{00094\ \ \ \ \ \};}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{char}\ C>}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_to_int}{ToInt<C>}}}
+\DoxyCodeLine{00097\ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(C\ ==\ \textcolor{charliteral}{'0'}\ ||\ C\ ==\ \textcolor{charliteral}{'1'}\ ||\ C\ ==\ \textcolor{charliteral}{'2'}\ ||\ C\ ==\ \textcolor{charliteral}{'3'}\ ||\ C\ ==\ \textcolor{charliteral}{'4'}\ ||\ C\ ==\ \textcolor{charliteral}{'5'}\ ||\ C\ ==\ \textcolor{charliteral}{'6'}\ ||\ C\ ==\ \textcolor{charliteral}{'7'}\ ||\ C\ ==\ \textcolor{charliteral}{'8'}\ ||\ C\ ==\ \textcolor{charliteral}{'9'},\ \textcolor{stringliteral}{"{}Unexpected\ value"{}});}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ Value\ =\ C\ -\/\ \textcolor{charliteral}{'0'};}
+\DoxyCodeLine{00100\ \ \ \ \ \};}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{char}\ C,\ \textcolor{keywordtype}{char}...\ VALUES>}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_to_int}{ToInt}}<C,\ VALUES...>}
+\DoxyCodeLine{00103\ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ Value\ =\ \mbox{\hyperlink{struct_bousk_1_1_to_int}{ToInt<C>::Value}}\ *\ \mbox{\hyperlink{struct_bousk_1_1_pow}{Pow}}<10,\ \textcolor{keyword}{sizeof}...(VALUES)>::Value\ +\ \mbox{\hyperlink{struct_bousk_1_1_to_int}{ToInt<VALUES...>::Value}};}
+\DoxyCodeLine{00105\ \ \ \ \ \};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ DEFINE\_INTEGER\_LITERAL(SUFFIX,\ INTERNALTYPE)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\ \ \ \ template<char...\ VALUES>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\ \ \ \ constexpr\ INTERNALTYPE\ operator\ "{}"{}\ SUFFIX()\ \{\ static\_assert(ToInt<VALUES...>::Value\ >=\ std::numeric\_limits<INTERNALTYPE>::min()\ \&\&\ ToInt<VALUES...>::Value\ <=\ std::numeric\_limits<INTERNALTYPE>::max(),\ "{}"{});\ return\ static\_cast<INTERNALTYPE>(ToInt<VALUES...>::Value);\ \}}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{namespace\ }Literals}
+\DoxyCodeLine{00112\ \ \ \ \ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ DEFINE\_INTEGER\_LITERAL(\_i8,\ int8);}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ DEFINE\_INTEGER\_LITERAL(\_i16,\ int16);}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ DEFINE\_INTEGER\_LITERAL(\_i32,\ int32);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ DEFINE\_INTEGER\_LITERAL(\_u8,\ uint8);}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ DEFINE\_INTEGER\_LITERAL(\_u16,\ uint16);}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ DEFINE\_INTEGER\_LITERAL(\_u32,\ uint32);}
+\DoxyCodeLine{00120\ \ \ \ \ \}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#undef\ DEFINE\_INTEGER\_LITERAL}}
+\DoxyCodeLine{00123\ \}}
+
+\end{DoxyCode}

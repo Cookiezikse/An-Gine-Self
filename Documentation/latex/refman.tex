@@ -1,0 +1,468 @@
+  % Handle batch mode
+  % to overcome problems with too many open files
+  \let\mypdfximage\pdfximage\def\pdfximage{\immediate\mypdfximage}
+  \pdfminorversion=7
+  % Set document class depending on configuration
+  \documentclass[twoside]{book}
+  %% moved from doxygen.sty due to workaround for LaTex 2019 version and unmaintained tabu package
+  \usepackage{ifthen}
+  \ifx\requestedLaTeXdate\undefined
+    \usepackage{array}
+  \else
+    \usepackage{array}[=2016-10-06]
+  \fi
+  %%
+  % Packages required by doxygen
+  \makeatletter
+  \providecommand\IfFormatAtLeastTF{\@ifl@t@r\fmtversion}
+  % suppress package identification of infwarerr as it contains the word "warning"
+  \let\@@protected@wlog\protected@wlog
+  \def\protected@wlog#1{\wlog{package info suppressed}}
+  \RequirePackage{infwarerr}
+  \let\protected@wlog\@@protected@wlog
+  \makeatother
+  \IfFormatAtLeastTF{2016/01/01}{}{\usepackage{fixltx2e}} % for \textsubscript
+  \IfFormatAtLeastTF{2015/01/01}{\pdfsuppresswarningpagegroup=1}{}
+  \usepackage{doxygen}
+  \usepackage{graphicx}
+  \usepackage[utf8]{inputenc}
+  \usepackage{makeidx}
+  \PassOptionsToPackage{warn}{textcomp}
+  \usepackage{textcomp}
+  \usepackage[nointegrals]{wasysym}
+  \usepackage{ifxetex}
+  % NLS support packages
+  \usepackage[french]{babel}
+\NoAutoSpaceBeforeFDP
+  % Define default fonts
+  % Font selection
+  \usepackage[T1]{fontenc}
+  % set main and monospaced font
+  \usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\renewcommand{\familydefault}{\sfdefault}
+  \doxyallsectionsfont{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \renewcommand{\DoxyLabelFont}{%
+    \fontseries{bc}\selectfont%
+    \color{darkgray}%
+  }
+  \newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+   % Arguments of doxygenemoji:
+   % 1) ':<text>:' form of the emoji, already LaTeX-escaped
+   % 2) file with the name of the emoji without the .png extension
+   % in case image exist use this otherwise use the ':<text>:' form
+   \newcommand{\doxygenemoji}[2]{%
+     \IfFileExists{./#2.png}{\raisebox{-0.1em}{\includegraphics[height=0.9em]{./#2.png}}}{#1}%
+   }
+  % Page & text layout
+  \usepackage{geometry}
+  \geometry{%
+    a4paper,%
+    top=2.5cm,%
+    bottom=2.5cm,%
+    left=2.5cm,%
+    right=2.5cm%
+  }
+  \usepackage{changepage}
+  % Allow a bit of overflow to go unnoticed by other means
+  \tolerance=750
+  \hfuzz=15pt
+  \hbadness=750
+  \setlength{\emergencystretch}{15pt}
+  \setlength{\parindent}{0cm}
+  \newcommand{\doxynormalparskip}{\setlength{\parskip}{3ex plus 2ex minus 2ex}}
+  \newcommand{\doxytocparskip}{\setlength{\parskip}{1ex plus 0ex minus 0ex}}
+  \doxynormalparskip
+  % Redefine paragraph/subparagraph environments, using sectsty fonts
+  \makeatletter
+  \renewcommand{\paragraph}{%
+    \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@parafont%
+    }%
+  }
+  \renewcommand{\subparagraph}{%
+    \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+      \normalfont\normalsize\bfseries\SS@subparafont%
+    }%
+  }
+  \makeatother
+  \makeatletter
+  \newcommand\hrulefilll{\leavevmode\leaders\hrule\hskip 0pt plus 1filll\kern\z@}
+  \makeatother
+  % Headers & footers
+  \usepackage{fancyhdr}
+  \pagestyle{fancyplain}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \fancypagestyle{fancyplain}{
+    \fancyhf{}
+    \fancyhead[LE, RO]{\bfseries\thepage}
+    \fancyhead[LO]{\bfseries\rightmark}
+    \fancyhead[RE]{\bfseries\leftmark}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize Généré par Doxygen }
+  }
+  \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[LO, RE]{\bfseries\scriptsize Généré par Doxygen }
+    \renewcommand{\headrulewidth}{0pt}
+  }
+  \pagestyle{fancyplain}
+  \renewcommand{\chaptermark}[1]{%
+    \markboth{#1}{}%
+  }
+  \renewcommand{\sectionmark}[1]{%
+    \markright{\thesection\ #1}%
+  }
+  % ToC, LoF, LoT, bibliography, and index
+  % Indices & bibliography
+  \usepackage{natbib}
+  \usepackage[titles]{tocloft}
+  \setcounter{tocdepth}{3}
+  \setcounter{secnumdepth}{5}
+  % creating indexes
+  \makeindex
+  \usepackage{newunicodechar}
+  \makeatletter
+    \def\doxynewunicodechar#1#2{%
+    \@tempswafalse
+    \edef\nuc@tempa{\detokenize{#1}}%
+    \if\relax\nuc@tempa\relax
+      \nuc@emptyargerr
+    \else
+      \edef\@tempb{\expandafter\@car\nuc@tempa\@nil}%
+      \nuc@check
+      \if@tempswa
+        \@namedef{u8:\nuc@tempa}{#2}%
+      \fi
+    \fi
+  }
+  \makeatother
+  \doxynewunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \doxynewunicodechar{²}{${}^{2}$}% Superscript two
+  \doxynewunicodechar{³}{${}^{3}$}% Superscript three
+  % Hyperlinks
+    % Hyperlinks (required, but should be loaded last)
+    \ifpdf
+      \usepackage[pdftex,pagebackref=true]{hyperref}
+    \else
+      \ifxetex
+        \usepackage[pagebackref=true]{hyperref}
+      \else
+        \usepackage[ps2pdf,pagebackref=true]{hyperref}
+      \fi
+    \fi
+    \hypersetup{%
+      colorlinks=true,%
+      linkcolor=blue,%
+      citecolor=blue,%
+      unicode,%
+      pdftitle={An-\/\+Gine},%
+      pdfsubject={}%
+    }
+  % Custom commands used by the header
+  % Custom commands
+  \newcommand{\clearemptydoublepage}{%
+    \newpage{\pagestyle{empty}\cleardoublepage}%
+  }
+  % caption style definition
+  \usepackage{caption}
+  \captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+  % in page table of contents
+  \IfFormatAtLeastTF{2023/05/01}{\usepackage[deeplevels]{etoc}}{\usepackage[deeplevels]{etoc_doxygen}}
+  \etocsettocstyle{\doxytocparskip}{\doxynormalparskip}
+  \etocsetlevel{subsubsubsection}{4}
+  \etocsetlevel{subsubsubsubsection}{5}
+  \etocsetlevel{subsubsubsubsubsection}{6}
+  \etocsetlevel{subsubsubsubsubsubsection}{7}
+  \etocsetlevel{paragraph}{8}
+  \etocsetlevel{subparagraph}{9}
+  % prevent numbers overlap the titles in toc
+  \renewcommand{\numberline}[1]{#1~}
+% End of preamble, now comes the document contents
+%===== C O N T E N T S =====
+\begin{document}
+  \raggedbottom
+  % Titlepage & ToC
+    % To avoid duplicate page anchors due to reuse of same numbers for
+    % the index (be it as roman numbers)
+    \hypersetup{pageanchor=false,
+                bookmarksnumbered=true,
+                pdfencoding=unicode
+               }
+  \pagenumbering{alph}
+  \begin{titlepage}
+  \vspace*{7cm}
+  \begin{center}%
+  {\Large An-\/\+Gine}\\
+  [1ex]\large 0.\+1 \\
+  \vspace*{1cm}
+  {\large Généré par Doxygen 1.10.0}\\
+  \end{center}
+  \end{titlepage}
+  \clearemptydoublepage
+  \pagenumbering{roman}
+  \tableofcontents
+  \clearemptydoublepage
+  \pagenumbering{arabic}
+  % re-enable anchors again
+  \hypersetup{pageanchor=true}
+%--- Begin generated contents ---
+\chapter{Index hiérarchique}
+\input{hierarchy}
+\chapter{Index des classes}
+\input{annotated}
+\chapter{Index des fichiers}
+\input{files}
+\chapter{Documentation des classes}
+\input{class_bousk_1_1_u_d_p_1_1_ack_handler}
+\input{class_ack_handler___test}
+\input{class_bousk_1_1_network_1_1_address}
+\input{class_bousk_1_1_network_1_1_messages_1_1_base}
+\input{class_network_1_1_messages_1_1_base}
+\input{classlve_1_1_base_camera}
+\input{class_base_scene}
+\input{struct_bousk_1_1_biggest}
+\input{struct_bousk_1_1_bit}
+\input{struct_bousk_1_1_bit_3_01uint64_01_4}
+\input{struct_bousk_1_1_bit_3_01uint8_01_4}
+\input{class_box_collider}
+\input{classlve_1_1_lve_descriptor_pool_1_1_builder}
+\input{classlve_1_1_lve_descriptor_set_layout_1_1_builder}
+\input{structlve_1_1_lve_model_1_1_builder}
+\input{classlve_1_1_camera_manager}
+\input{struct_bousk_1_1_network_1_1_u_d_p_1_1_channel_header}
+\input{class_bousk_1_1_network_1_1_u_d_p_1_1_channels_handler}
+\input{class_network_1_1_t_c_p_1_1_client}
+\input{class_network_1_1_t_c_p_1_1_client_impl}
+\input{class_bousk_1_1_network_1_1_u_d_p_1_1_client_u_d_p}
+\input{class_client_u_d_p_start}
+\input{class_component}
+\input{class_bousk_1_1_network_1_1_messages_1_1_connection}
+\input{class_network_1_1_messages_1_1_connection}
+\input{class_network_1_1_t_c_p_1_1_connection_handler}
+\input{class_bousk_1_1_network_1_1_messages_1_1_connection_interrupted}
+\input{class_bousk_1_1_network_1_1_messages_1_1_connection_resumed}
+\input{class_convertisseur}
+\input{classlve_1_1_cube_game_object}
+\input{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram}
+\input{class_debug_module}
+\input{class_demultiplexer___test}
+\input{class_bousk_1_1_serialization_1_1_deserializer}
+\input{class_bousk_1_1_network_1_1_messages_1_1_disconnection}
+\input{class_network_1_1_messages_1_1_disconnection}
+\input{class_display_module}
+\input{class_bousk_1_1_network_1_1_u_d_p_1_1_distant_client}
+\input{class_distant_client___test}
+\input{class_engine}
+\input{class_engine_test_code}
+\input{struct_bousk_1_1_extract_type}
+\input{class_file_manager}
+\input{struct_bousk_1_1_fitting_type}
+\input{class_bousk_1_1_float}
+\input{union_bousk_1_1_serialization_1_1_conversion_1_1_float_conversion_helper}
+\input{structlve_1_1_frame_info}
+\input{class_game_object}
+\input{class_game_object_script}
+\input{structlve_1_1_global_ubo}
+\input{structstd_1_1hash_3_01lve_1_1_lve_model_1_1_vertex_01_4}
+\input{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_1_1_header}
+\input{struct_bousk_1_1_network_1_1_u_d_p_1_1_packet_1_1_header}
+\input{struct_bousk_1_1_holding_type}
+\input{struct_h_u_d_component}
+\input{class_h_u_d_module}
+\input{class_im_g_u_i_interface}
+\input{class_im_gui_module}
+\input{class_bousk_1_1_network_1_1_messages_1_1_incoming_connection}
+\input{class_input_module}
+\input{struct_bousk_1_1_nb_bits_1_1_internal_nb_bits}
+\input{struct_bousk_1_1_internal_pow}
+\input{struct_bousk_1_1_internal_pow_3_01_b_a_s_e_00_010_01_4}
+\input{struct_bousk_1_1_internal_pow_3_01_b_a_s_e_00_011_01_4}
+\input{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol}
+\input{class_i_script}
+\input{classlve_1_1_keyboard_movement_controller}
+\input{structlve_1_1_keyboard_movement_controller_1_1_key_mappings}
+\input{class_light}
+\input{classlve_1_1_light_game_object}
+\input{classlve_1_1_lve_buffer}
+\input{classlve_1_1_lve_camera}
+\input{classlve_1_1_lve_descriptor_pool}
+\input{classlve_1_1_lve_descriptor_set_layout}
+\input{classlve_1_1_lve_descriptor_writer}
+\input{classlve_1_1_lve_device}
+\input{classlve_1_1_lve_model}
+\input{classlve_1_1_lve_pipeline}
+\input{classlve_1_1_lve_renderer}
+\input{classlve_1_1_lve_swap_chain}
+\input{classlve_1_1_lve_texture}
+\input{classlve_1_1_lve_window}
+\input{class_mesh}
+\input{class_module}
+\input{class_module_manager}
+\input{class_multiplexer___test}
+\input{struct_bousk_1_1_nb_bits}
+\input{struct_bousk_1_1_network_1_1_u_d_p_1_1_packet}
+\input{class_packet_handling___test}
+\input{structlve_1_1_pipeline_config_info}
+\input{classlve_1_1_plane_game_object}
+\input{structlve_1_1_point_light}
+\input{structlve_1_1_point_light_push_constants}
+\input{classlve_1_1_point_light_system}
+\input{struct_bousk_1_1_pow}
+\input{struct_bousk_1_1_promote}
+\input{struct_bousk_1_1_promote_3_01int16_01_4}
+\input{struct_bousk_1_1_promote_3_01int32_01_4}
+\input{struct_bousk_1_1_promote_3_01int8_01_4}
+\input{struct_bousk_1_1_promote_3_01uint16_01_4}
+\input{struct_bousk_1_1_promote_3_01uint32_01_4}
+\input{struct_bousk_1_1_promote_3_01uint8_01_4}
+\input{structlve_1_1_queue_family_indices}
+\input{class_bousk_1_1_ranged_integer}
+\input{class_network_1_1_t_c_p_1_1_reception_handler}
+\input{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_reliable_ordered}
+\input{struct_bousk_1_1_return}
+\input{class_r_h_i_module}
+\input{class_r_h_i_vulkan_module}
+\input{class_rigid_body}
+\input{class_scene_manager}
+\input{class_script}
+\input{class_script_module}
+\input{class_network_1_1_t_c_p_1_1_sending_handler}
+\input{class_bousk_1_1_serialization_1_1_serializable}
+\input{class_serialization___test}
+\input{class_bousk_1_1_serialization_1_1_serializer}
+\input{class_network_1_1_t_c_p_1_1_server}
+\input{class_network_1_1_t_c_p_1_1_server_impl}
+\input{class_server_u_d_p_start}
+\input{structlve_1_1_simple_push_constant_data}
+\input{classlve_1_1_simple_render_system}
+\input{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator}
+\input{class_sound_system_module}
+\input{class_sphere_collider}
+\input{structlve_1_1_swap_chain_support_details}
+\input{class_t_c_p_client_start}
+\input{class_t_c_p_server_start}
+\input{class_time_module}
+\input{struct_bousk_1_1_to_int}
+\input{struct_bousk_1_1_to_int_3_01_c_01_4}
+\input{struct_bousk_1_1_to_int_3_01_c_00_01_v_a_l_u_e_s_8_8_8_01_4}
+\input{struct_bousk_1_1_to_int_3_4}
+\input{class_transform}
+\input{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered}
+\input{class_bousk_1_1_network_1_1_messages_1_1_user_data}
+\input{class_network_1_1_messages_1_1_user_data}
+\input{class_utils___test}
+\input{classlve_1_1_vase_game_object}
+\input{structlve_1_1_lve_model_1_1_vertex}
+\input{class_window_module}
+\chapter{Documentation des fichiers}
+\input{_im_g_u_i_interface_8h_source}
+\input{_base_camera_8h_source}
+\input{_camera_manager_8h_source}
+\input{lve__camera_8h_source}
+\input{_core_engine_8h_source}
+\input{_engine_test_code_8h_source}
+\input{_box_collider_8h_source}
+\input{_component_8h_source}
+\input{_light_8h_source}
+\input{_mesh_8h_source}
+\input{_rigid_body_8h_source}
+\input{_sphere_collider_8h_source}
+\input{_transform_8h_source}
+\input{_game_object_8h_source}
+\input{_cube_game_object_8h_source}
+\input{_light_game_object_8h_source}
+\input{_plane_game_object_8h_source}
+\input{_vase_game_object_8h_source}
+\input{_input_key_code_8h_source}
+\input{keyboard__movement__controller_8h_source}
+\input{lve__buffer_8h_source}
+\input{lve__constants_8h_source}
+\input{lve__descriptors_8h_source}
+\input{lve__device_8h_source}
+\input{lve__frame__info_8h_source}
+\input{lve__model_8h_source}
+\input{lve__pipeline_8h_source}
+\input{lve__renderer_8h_source}
+\input{lve__swap__chain_8h_source}
+\input{lve__texture_8h_source}
+\input{lve__utils_8h_source}
+\input{lve__window_8h_source}
+\input{_debug_module_8h_source}
+\input{_display_module_8h_source}
+\input{_file_manager_8h_source}
+\input{_h_u_d_module_8h_source}
+\input{_im_g_u_i_module_8h_source}
+\input{_input_module_8h_source}
+\input{_module_8h_source}
+\input{_module_manager_8h_source}
+\input{rhi_8h_source}
+\input{_r_h_i_vulkan_module_8h_source}
+\input{_script_module_8h_source}
+\input{_sound_system_module_8h_source}
+\input{_time_module_8h_source}
+\input{_window_module_8h_source}
+\input{_base_scene_8h_source}
+\input{_scene_manager_8h_source}
+\input{_game_object_script_8h_source}
+\input{_i_script_8h_source}
+\input{_script_8h_source}
+\input{point__light__system_8h_source}
+\input{simple__render__system_8h_source}
+\input{_client_8h_source}
+\input{_t_c_p_client_start_8h_source}
+\input{_errors_8h_source}
+\input{_t_c_p_2_messages_8h_source}
+\input{_u_d_p_2_messages_8h_source}
+\input{_server_8h_source}
+\input{_t_c_p_server_start_8h_source}
+\input{_sockets_8h_source}
+\input{_t_c_p_2_utils_8h_source}
+\input{_u_d_p_2_utils_2_utils_8h_source}
+\input{_convertisseur_8h_source}
+\input{function_helpers_8h_source}
+\input{_ack_handler_8h_source}
+\input{_address_8h_source}
+\input{_channel_header_8h_source}
+\input{_channels_handler_8h_source}
+\input{_client_u_d_p_8h_source}
+\input{_datagram_8h_source}
+\input{_distant_client_8h_source}
+\input{_errors_u_d_p_8h_source}
+\input{_float_8h_source}
+\input{_client_u_d_p_start_8h_source}
+\input{_server_u_d_p_start_8h_source}
+\input{_packet_8h_source}
+\input{_protocol_interface_8h_source}
+\input{_reliable_ordered_8h_source}
+\input{_simulator_8h_source}
+\input{_unreliable_ordered_8h_source}
+\input{_ranged_integer_8h_source}
+\input{_convert_8h_source}
+\input{_deserializer_8h_source}
+\input{_deserializer_8inl_source}
+\input{_serialization_8h_source}
+\input{_serializer_8h_source}
+\input{_serializer_8inl_source}
+\input{_settings_8h_source}
+\input{_sockets_u_d_p_8h_source}
+\input{_ack_handler___test_8h_source}
+\input{_distant_client___test_8h_source}
+\input{_packet_handling___test_8h_source}
+\input{_serialization___test_8h_source}
+\input{_utils___test_8h_source}
+\input{_tester_8h_source}
+\input{_types_8h_source}
+\input{_utils_8inl_source}
+%--- End generated contents ---
+% Index
+  \backmatter
+  \newpage
+  \phantomsection
+  \clearemptydoublepage
+  \addcontentsline{toc}{chapter}{\indexname}
+  \printindex
+% Required for some languages (in combination with latexdocumentpre from the header)
+\end{document}

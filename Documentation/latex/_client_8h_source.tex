@@ -1,0 +1,188 @@
+\doxysection{Client.\+h}
+\hypertarget{_client_8h_source}{}\label{_client_8h_source}\index{includes/TCP/Client/Client.h@{includes/TCP/Client/Client.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TCP/Sockets.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TCP/Messages.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}TCP/Errors.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <numeric>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }Network}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{namespace\ }Messages\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }Base;}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{namespace\ }TCP}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }HeaderType\ =\ uint16\_t;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ HeaderSize\ =\ \textcolor{keyword}{sizeof}(HeaderType);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }ClientImpl;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client}}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_a99343e530fa07f67ecc375337870ffc9}{Client}}()\ \{\}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_ae60fb67a8cf8547b4ac0bab6a7d7f9d1}{Client}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client}}\&\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_acfb3e7a41bf2a03b0a5d540a5a789c0e}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_a99343e530fa07f67ecc375337870ffc9}{Client}}(\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client}}\&\&);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client}}\&\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_acfb3e7a41bf2a03b0a5d540a5a789c0e}{operator=}}(\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client}}\&\&);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_a149dfc62245dfedcc53bd60b463058ad}{\string~Client}}()\ \{\}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_a3163413dc374bd5483eae9000a54ccfd}{init}}(SOCKET\&\&\ sckt,\ \textcolor{keyword}{const}\ sockaddr\_in\&\ addr);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_a43d4da1617070a9ce3e7833c2ee7b4a0}{connect}}(\textcolor{keyword}{const}\ std::string\&\ ipaddress,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ port);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_a5cc4376052a6c472e6ff3f42d28f8b5c}{disconnect}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_aace9752c2eebba46ed246c3f36509348}{send}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}*\ data,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ len);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<Messages::Base>\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_af12a7cc81c93af23e55e1eceeb4a1b38}{poll}}();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ uint64\_t\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_a16807160db05b04f8a12d744c5954023}{id}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ sockaddr\_in\&\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_a45c5f7987a2238d1eb00079c75e8351a}{destinationAddress}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<ClientImpl>\ mImpl;\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_connection_handler}{ConnectionHandler}}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_connection_handler}{ConnectionHandler}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_connection_handler_ab2a6934f68bb7b9ca6c279130d5bfa25}{connect}}(SOCKET\ sckt,\ \textcolor{keyword}{const}\ std::string\&\ address,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ port);}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<Messages::Connection>\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_connection_handler_acada6e8c41b8391d31649393fda5fac2}{poll}}();}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ sockaddr\_in\&\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_connection_handler_a6e5e03b415959394cbea574c1b29b224}{connectedAddress}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mConnectedAddress;\ \}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ pollfd\ mFd\ =\ \{\ 0\ \};\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ sockaddr\_in\ mConnectedAddress;\ }
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ mAddress;\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ mPort;\ }
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_reception_handler}{ReceptionHandler}}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ State\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Header,\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Data,\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_reception_handler}{ReceptionHandler}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_reception_handler_a2c14a1b0489719aaa194daf67f2bf47f}{init}}(SOCKET\ sckt);}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<Messages::Base>\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_reception_handler_a2b872cdd7bd5ac78f8b7a6d2c3380289}{recv}}();}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{char}*\ missingDataStartBuffer()\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(mBuffer.data()\ +\ mReceived);\ \}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ missingDataLength()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(mBuffer.size()\ -\/\ mReceived);\ \}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ startHeaderReception();}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ startDataReception();}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ startReception(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ expectedDataLength,\ State\ newState);}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<unsigned\ char>\ mBuffer;\ }
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ mReceived;\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ SOCKET\ mSckt\{\ INVALID\_SOCKET\ \};\ }
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ State\ mState;\ }
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_sending_handler}{SendingHandler}}}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ State\ \{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Idle,\ }
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Header,\ }
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Data,\ }
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_sending_handler}{SendingHandler}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_sending_handler_a9d46cbd0e3bb87998de28f7afc494174}{init}}(SOCKET\ sckt);}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_sending_handler_afd82361ce8f24ae48ba9c586fec85b6c}{send}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}*\ data,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ datalen);}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_sending_handler_a234c0bee61f02cbc6210bdf339c45a62}{update}}();}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_sending_handler_a0ee93a4a671c89ca30ea191fdcacc745}{queueSize}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ sendPendingBuffer();}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ prepareNextHeader();}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ prepareNextData();}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ std::list<std::vector<unsigned\ char>>\ mQueueingBuffers;\ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<unsigned\ char>\ mSendingBuffer;\ }
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ SOCKET\ mSocket\{\ INVALID\_SOCKET\ \};\ }
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ State\ mState\{\ State::Idle\ \};\ }
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_impl}{ClientImpl}}}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ State\ \{}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Connecting,}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Connected,}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Disconnected,}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_impl}{ClientImpl}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_impl}{\string~ClientImpl}}();}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_impl_ac2284b2ba25fc0aec5a62813c68a267b}{init}}(SOCKET\&\&\ sckt,\ \textcolor{keyword}{const}\ sockaddr\_in\&\ addr);}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_impl_a9d5de8ece0a7cc8ebdb497a15ee7c340}{connect}}(\textcolor{keyword}{const}\ std::string\&\ ipaddress,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ port);}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_impl_a4ea190e2b029095330f6bead31921767}{disconnect}}();}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_impl_aba6d19f77b5b9550acb5b3a37862d584}{send}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}*\ data,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ len);}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<Messages::Base>\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_impl_a648c471983de01e2a86a280ff73dee7d}{poll}}();}
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ uint64\_t\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_impl_acde19485b353bd1224cd8ea9a209d797}{id}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}uint64\_t\textcolor{keyword}{>}(mSocket);\ \}}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ sockaddr\_in\&\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_impl_a11316ae4730e491f8e9471a9ea1a1ba4}{destinationAddress}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mAddress;\ \}}
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ onConnected(\textcolor{keyword}{const}\ sockaddr\_in\&\ addr);}
+\DoxyCodeLine{00341\ }
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_connection_handler}{ConnectionHandler}}\ mConnectionHandler;}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_sending_handler}{SendingHandler}}\ mSendingHandler;}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_reception_handler}{ReceptionHandler}}\ mReceivingHandler;}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ sockaddr\_in\ mAddress\{\ 0\ \};\ }
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ SOCKET\ mSocket\{\ INVALID\_SOCKET\ \};\ }
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ State\ mState\{\ State::Disconnected\ \};\ }
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00350\ \ \ \ \ \}}
+\DoxyCodeLine{00351\ \}}
+
+\end{DoxyCode}

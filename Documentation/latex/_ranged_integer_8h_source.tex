@@ -1,0 +1,180 @@
+\doxysection{Ranged\+Integer.\+h}
+\hypertarget{_ranged_integer_8h_source}{}\label{_ranged_integer_8h_source}\index{includes/UDP/RangedInteger.h@{includes/UDP/RangedInteger.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Types.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Serialization/Serialization.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Serialization/Serializer.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Serialization/Deserializer.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Utils/Utils.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }Bousk}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{template}<auto\ V,\ \textcolor{keywordtype}{bool}\ ForceUn\textcolor{keywordtype}{signed}>}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_extract_type}{ExtractType}}}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(std::numeric\_limits<\textcolor{keyword}{decltype}(V)>::is\_integer,\ \textcolor{stringliteral}{"{}ExtractType\ doit\ être\ utilisé avec\ des\ entiers"{}});}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(!std::is\_same\_v<\textcolor{keyword}{decltype}(V),\ \textcolor{keywordtype}{bool}>,\ \textcolor{stringliteral}{"{}ExtractType\ ne\ doit\ pas\ être\ utilisé avec\ bool"{}});}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }Type\ =\ std::conditional\_t\ <\ V\ <\ 0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t\ <\ V\ <\ std::numeric\_limits<int32>::min(),\ int64}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ V\ <\ std::numeric\_limits<int16>::min(),\ int32}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ V\ <\ std::numeric\_limits<int8>::min(),\ int16}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ int8}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ >>>}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ >\ 0\ :\ doit-\/on\ forcer\ un\ type\ non\ signé ?}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ (V\ >\ std::numeric\_limits<int64>::max()),\ uint64}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ (V\ >\ std::numeric\_limits<uint32>::max()),\ std::conditional\_t<ForceUnsigned,\ uint64,\ int64>}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ (V\ >\ std::numeric\_limits<int32>::max()),\ std::conditional\_t<ForceUnsigned,\ uint32,\ int64>}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ (V\ >\ std::numeric\_limits<uint16>::max()),\ std::conditional\_t<ForceUnsigned,\ uint32,\ int32>}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ (V\ >\ std::numeric\_limits<int16>::max()),\ std::conditional\_t<ForceUnsigned,\ uint16,\ int32>}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ (V\ >\ std::numeric\_limits<uint8>::max()),\ std::conditional\_t<ForceUnsigned,\ uint16,\ int16>}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ (V\ >\ std::numeric\_limits<int8>::max()),\ std::conditional\_t<ForceUnsigned,\ uint8,\ int16>}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<ForceUnsigned,\ uint8,\ int8>}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ >>>>>>>}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ >;}
+\DoxyCodeLine{00033\ \ \ \ \ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Promeut\ un\ type\ vers\ un\ type\ plus\ large\ (int32\ =>\ int64,\ uint8\ =>\ uint16...)}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_promote}{Promote}}\ \{\ \textcolor{keyword}{using\ }Type\ =\ std::conditional\_t<std::is\_signed\_v<T>,\ int64,\ uint64>;\ \};\textcolor{comment}{//\ Par\ défaut,\ utiliser\ le\ type\ le\ plus\ large\ possible.\ Ne\ devrait\ pas\ être\ utilisé mais\ nécessaire\ pour\ compiler.}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_promote}{Promote}}<int32>\ \{\ \textcolor{keyword}{using\ }Type\ =\ int64;\ \};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_promote}{Promote}}<uint32>\ \{\ \textcolor{keyword}{using\ }Type\ =\ uint64;\ \};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_promote}{Promote}}<int16>\ \{\ \textcolor{keyword}{using\ }Type\ =\ int32;\ \};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_promote}{Promote}}<uint16>\ \{\ \textcolor{keyword}{using\ }Type\ =\ uint32;\ \};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_promote}{Promote}}<int8>\ \{\ \textcolor{keyword}{using\ }Type\ =\ int16;\ \};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{template}<>\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_promote}{Promote}}<uint8>\ \{\ \textcolor{keyword}{using\ }Type\ =\ uint16;\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ Retourne\ le\ type\ le\ plus\ large}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ A,\ \textcolor{keyword}{class}\ B>}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_biggest}{Biggest}}}
+\DoxyCodeLine{00048\ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }Type\ =\ std::conditional\_t<(\textcolor{keyword}{sizeof}(A)\ >\ \textcolor{keyword}{sizeof}(B)),\ A,\ B>;}
+\DoxyCodeLine{00050\ \ \ \ \ \};}
+\DoxyCodeLine{00051\ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ A,\ \textcolor{keyword}{class}\ B>}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_holding_type}{HoldingType}}}
+\DoxyCodeLine{00054\ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Est-\/ce\ qu’un\ tel\ type\ existe\ ?}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Un\ cas\ est\ impossible\ :\ si\ l’un\ est\ uint64\ alors\ que\ l’autre\ est\ signé}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ IsPossible\ =\ !((std::is\_same\_v<A,\ uint64>\ \&\&\ std::is\_signed\_v<B>)\ ||\ (std::is\_same\_v<B,\ uint64>\ \&\&\ std::is\_signed\_v<A>));}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }Type\ =\ \textcolor{keyword}{typename}\ std::conditional\_t<!IsPossible,\ \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ce\ sont\ les\ mêmes\ types\ :\ utilisons-\/le}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<std::is\_same\_v<A,\ B>,\ A}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tous\ deux\ signés ou\ non\ :\ utiliser\ le\ plus\ large\ type}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<std::is\_signed\_v<A>\ ==\ std::is\_signed\_v<B>,\ \textcolor{keyword}{typename}\ Biggest<A,\ B>::Type}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Le\ plus\ large\ est\ signé, utilisons-\/le}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<std::is\_signed\_v<typename\ Biggest<A,\ B>::Type>,\ \textcolor{keyword}{typename}\ Biggest<A,\ B>::Type}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sinon,\ utiliser\ le\ type\ signé plus\ large\ que\ le\ plus\ large\ des\ deux}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ ,\ std::make\_signed\_t<typename\ Promote<typename\ Biggest<A,\ B>::Type>::Type>}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ >>>>;}
+\DoxyCodeLine{00069\ \ \ \ \ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{template}<auto\ MIN,\ auto\ MAX>}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_bousk_1_1_fitting_type}{FittingType}}}
+\DoxyCodeLine{00073\ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(MIN\ <\ MAX);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }MinType\ =\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{struct_bousk_1_1_extract_type}{ExtractType}}<MIN,\ (MIN\ >=\ 0)>::Type;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }MaxType\ =\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{struct_bousk_1_1_extract_type}{ExtractType}}<MAX,\ (MIN\ >=\ 0)>::Type;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Si\ nous\ avons\ une\ valeur\ <\ 0\ et\ l’autre\ >\ int64\ max,\ impossible\ de\ trouver\ un\ type\ pouvant\ les\ accueillir}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ IsPossible\ =\ !(MIN\ <\ 0\ \&\&\ MAX\ >\ std::numeric\_limits<int64>::max())\ ||\ \mbox{\hyperlink{struct_bousk_1_1_holding_type}{HoldingType<MinType,\ MaxType>::IsPossible}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }Type\ =}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ std::conditional\_t<!IsPossible,\ void,}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Can\ MAX\ be\ hold\ by\ MinType\ ?}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ std::conditional\_t<(MAX\ <=\ std::numeric\_limits<MinType>::max()),\ MinType,}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Can\ MIN\ be\ hold\ by\ MaxType\ ?}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ std::conditional\_t<(MIN\ >=\ std::numeric\_limits<MaxType>::min()),\ MaxType,}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ not,\ find\ a\ type\ big\ enough\ to\ accomodate\ both\ values}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ HoldingType<MinType,\ MaxType>::Type}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ >>>;}
+\DoxyCodeLine{00090\ \ \ \ \ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{template}<auto\ MIN,\ auto\ MAX>}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{constexpr}\ uint64\ Range()}
+\DoxyCodeLine{00094\ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(MIN\ <\ MAX);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (MAX\ <\ 0)}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ MIN\ \&\ MAX\ <\ 0}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}uint64\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}int64\textcolor{keyword}{>}(-\/1)\ *\ MIN)\ -\/\ \textcolor{keyword}{static\_cast<}uint64\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}int64\textcolor{keyword}{>}(-\/1)\ *\ MAX);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (MIN\ <\ 0)}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#pragma\ warning(push)}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#pragma\ warning(disable:\ 4307)\ }\textcolor{comment}{//\ '*':\ signed\ integral\ constant\ overflow}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}uint64\textcolor{keyword}{>}(MAX)\ +\ \textcolor{keyword}{static\_cast<}uint64\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}int64\textcolor{keyword}{>}(-\/1)\ *\ MIN);}
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#pragma\ warning(pop)}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}uint64\textcolor{keyword}{>}(MAX)\ -\/\ \textcolor{keyword}{static\_cast<}uint64\textcolor{keyword}{>}(MIN);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keyword}{template}<auto\ MIN,\ auto\ MAX>}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_bousk_1_1_serialization_1_1_serializable}{Serialization::Serializable}}}
+\DoxyCodeLine{00116\ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(MIN\ <\ MAX,\ \textcolor{stringliteral}{"{}MIN\ et\ MAX\ doivent\ être\ strictement\ ordonnées"{}});}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(\mbox{\hyperlink{struct_bousk_1_1_fitting_type}{FittingType<MIN,\ MAX>::IsPossible}},\ \textcolor{stringliteral}{"{}Impossible\ avec\ ces\ valeurs\ de\ Min\ \&\ Max"{}});}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }Type\ =\ \textcolor{keyword}{typename}\ FittingType<MIN,\ MAX>::Type;}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ Type\ Min()\ \{\ \textcolor{keywordflow}{return}\ MIN;\ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ Type\ Max()\ \{\ \textcolor{keywordflow}{return}\ MAX;\ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint64\ Range\ =\ Range<MIN,\ MAX>();}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint8\ \mbox{\hyperlink{struct_bousk_1_1_nb_bits}{NbBits}}\ =\ \mbox{\hyperlink{struct_bousk_1_1_nb_bits}{NbBits<Range>::Value}};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger}}(Type\ v)\ :\ mValue(v)\ \{\ checkValue();\ \}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger}}\&\ operator=(Type\ v)\ \{\ CheckValue(v);\ mValue\ =\ v;\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};\ \}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ OtherType>}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger}}(OtherType\ v)\ \{\ CheckValue(v);\ mValue\ =\ \textcolor{keyword}{static\_cast<}Type\textcolor{keyword}{>}(v);\ \}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ OtherType>}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger}}\&\ operator=(OtherType\ v)\ \{\ CheckValue(v);\ mValue\ =\ \textcolor{keyword}{static\_cast<}Type\textcolor{keyword}{>}(v);\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};\ \}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ IsWithinRange(Type\ v)\ \{\ \textcolor{keywordflow}{return}\ (v\ >=\ Min()\ \&\&\ v\ <=\ Max());\ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ OtherType>}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ IsWithinRange(OtherType\ v)}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (!\mbox{\hyperlink{struct_bousk_1_1_holding_type}{HoldingType<Type,\ OtherType>::IsPossible}})}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }CastType\ =\ \textcolor{keyword}{typename}\ HoldingType<Type,\ OtherType>::Type;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keyword}{static\_cast<}CastType\textcolor{keyword}{>}(v)\ >=\ \textcolor{keyword}{static\_cast<}CastType\textcolor{keyword}{>}(Min())\ \&\&\ \textcolor{keyword}{static\_cast<}CastType\textcolor{keyword}{>}(v)\ <=\ \textcolor{keyword}{static\_cast<}CastType\textcolor{keyword}{>}(Max()));}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ Type\ get()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mValue;\ \}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{operator}\ Type()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mValue;\ \}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ write(\mbox{\hyperlink{class_bousk_1_1_serialization_1_1_serializer}{Serialization::Serializer}}\&\ serializer)\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ serializer.write(get(),\ Min(),\ Max());\ \}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ read(\mbox{\hyperlink{class_bousk_1_1_serialization_1_1_deserializer}{Serialization::Deserializer}}\&\ deserializer)\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ deserializer.read(mValue,\ Min(),\ Max());\ \}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ checkValue()\ \{\ assert(IsWithinRange(mValue));\ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ CheckValue(Type\ v)\ \{\ assert(IsWithinRange(v));\ \}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ OtherType>}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ CheckValue(OtherType\ v)\ \{\ assert(IsWithinRange(v));\ \}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ Type\ mValue\{\ Min()\ \};}
+\DoxyCodeLine{00163\ \ \ \ \ \};}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_bousk_1_1_ranged_integer}{UInt8}}\ =\ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<std::numeric\_limits<uint8>::min}}(),\ std::numeric\_limits<uint8>::max()>;}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_bousk_1_1_ranged_integer}{UInt16}}\ =\ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<std::numeric\_limits<uint16>::min}}(),\ std::numeric\_limits<uint16>::max()>;}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_bousk_1_1_ranged_integer}{UInt32}}\ =\ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<std::numeric\_limits<uint32>::min}}(),\ std::numeric\_limits<uint32>::max()>;}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_bousk_1_1_ranged_integer}{UInt64}}\ =\ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<std::numeric\_limits<uint64>::min}}(),\ std::numeric\_limits<uint64>::max()>;}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_bousk_1_1_ranged_integer}{Int8}}\ =\ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<std::numeric\_limits<int8>::min}}(),\ std::numeric\_limits<int8>::max()>;}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_bousk_1_1_ranged_integer}{Int16}}\ =\ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<std::numeric\_limits<int16>::min}}(),\ std::numeric\_limits<int16>::max()>;}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_bousk_1_1_ranged_integer}{Int32}}\ =\ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<std::numeric\_limits<int32>::min}}(),\ std::numeric\_limits<int32>::max()>;}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_bousk_1_1_ranged_integer}{Int64}}\ =\ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<std::numeric\_limits<int64>::min}}(),\ std::numeric\_limits<int64>::max()>;}
+\DoxyCodeLine{00174\ \}}
+
+\end{DoxyCode}

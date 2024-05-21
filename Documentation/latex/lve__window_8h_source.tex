@@ -1,0 +1,83 @@
+\doxysection{lve\+\_\+window.\+h}
+\hypertarget{lve__window_8h_source}{}\label{lve__window_8h_source}\index{includes/LveEngine/lve\_window.h@{includes/LveEngine/lve\_window.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan.hpp>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ GLFW\_INCLUDE\_VULKAN}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <GLFW/glfw3.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }lve}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlve_1_1_lve_window}{LveWindow}}}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aef}{GlfwCursorType}}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefab0d2450c79ed70edf5a71a887a6740dc}{ARROW}},}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefaba0f487fa9f9ec1b6ea3d188e51a4458}{IBEAM}},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefad6e02d2576dd6e365ad34514e0dade5d}{CROSSHAIR}},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa95b11f98c2c077aa6f9e3fe6d2162bd3}{POINTING\_HAND}},}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa7361c79b81519895cd7315e2426c64b9}{RESIZE\_EW}},}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa9a10132a282506865dc16796b16eaf07}{RESIZE\_NS}},}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa6b0f43099e87d6deba4e000731434c75}{RESIZE\_NWSE}},}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa35fc4c7763fc038f40a9fb804822867e}{RESIZE\_NESW}},}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa57c579f6e08915a56d917a1b9b7750c3}{RESIZE\_ALL}},}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa84267bbabe52429af142d0ecd425d9eb}{NOT\_ALLOWED}}\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956}{GlfwCursorMode}}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956a38fd674f568cb264fc26e88c67c5707a}{DISABLED}},}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956afc73d2af1804154c5040bb22bd1a2cdf}{HIDDEN}},}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956a8a5774c7757801114c00583a94ee9cda}{NORMAL}},}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956a062dda27351abd7b1c9cf24a2748e7d4}{CAPTURED}}\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window_abf6eca68d3ca6f0cc2dc0aa487a61118}{LveWindow}}(\textcolor{keywordtype}{int}\ \_width,\ \textcolor{keywordtype}{int}\ \_height,\ \textcolor{keyword}{const}\ std::string\&\ \_name);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window_acb6b104ed2d4bda2fb110c84c0707d00}{\string~LveWindow}}();}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window_ae55914f7a76712bbbf278941e285fb72}{LveWindow}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_window}{LveWindow}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_window}{LveWindow}}\&\ \mbox{\hyperlink{classlve_1_1_lve_window_a219c97ccdf34dc7bde8e35e75fdce79f}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_window}{LveWindow}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classlve_1_1_lve_window_a9cda11e7e983cf0ab9b282f6b01eb14e}{ShouldClose}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ glfwWindowShouldClose(window);\ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Extent2D\ \mbox{\hyperlink{classlve_1_1_lve_window_a6d4174a836807f6aac22c98a93b9f732}{GetExtent}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \{\textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(width),\ \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(height)\};\ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classlve_1_1_lve_window_a3eb0f92138a81162bcdc23b948679766}{WasWindowResized}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ frameBufferResize;\ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_window_a05b76d2ea4d73ea9d3385d294ae291c5}{ResetWindowResizedFlag}}()\ \{\ frameBufferResize\ =\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_window_a7a4fe86a56aed0cf0cbb239f6d375f1c}{CreateWindowSurface}}(vk::Instance\ \_instance,\ vk::SurfaceKHR*\ \_surface)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ [[nodiscard]]\ GLFWwindow*\ \mbox{\hyperlink{classlve_1_1_lve_window_a4bfd2b8aa1312f13eea732f0ca9aee48}{GetGlfwWindow}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ window;\ \}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_window_ade46b53757c6ce6f5735d6013e88a1ac}{ResetCursorWindow}}()\textcolor{keyword}{\ const\ }\{\ glfwSetCursor(window,\ \textcolor{keyword}{nullptr});\ \}}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_window_a8a099e180758e4bd8f461228ba7d18ee}{CubeCursorWindow}}(\textcolor{keywordtype}{int}\ \_color\ =\ 255)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_window_a7e3657c2c2521f5153ebd4837510e4bd}{StandardCursorWindow}}(GlfwCursorType\ \_cursorType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_window_abf26788840fc2e3f662bf21325303c7b}{SetInputCursorMode}}(GlfwCursorMode\ \_mode)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ FrameBufferResizeCallBack(GLFWwindow*\ \_window,\ \textcolor{keywordtype}{int}\ \_width,\ \textcolor{keywordtype}{int}\ \_height);}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ InitWindow();}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ width;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Largeur\ de\ la\ fenêtre}}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ height;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Hauteur\ de\ la\ fenêtre}}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ frameBufferResize\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Booléen\ indiquant\ si\ le\ framebuffer\ a\ été\ redimensionné.}}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ windowName;\ \textcolor{comment}{//\ Nom\ de\ la\ fenêtre}}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ GLFWwindow*\ window;\ \ \ \ \ \textcolor{comment}{//\ Fenêtre\ GLFW}}
+\DoxyCodeLine{00215\ \ \ \ \ \};}
+\DoxyCodeLine{00216\ \}\ \textcolor{comment}{//\ namespace\ lve}}
+
+\end{DoxyCode}

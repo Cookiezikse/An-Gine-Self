@@ -1,0 +1,684 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/Modules/WindowModule.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_8ba5de94bce70429844b810000c4522a.html">Modules</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">WindowModule.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;Modules/Module.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;LveEngine/lve_descriptors.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;LveEngine/lve_window.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//std</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;stb_image.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;GameObject/GameObject.h&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define WINDOW_CONFIG_LOCATION &quot;Saves\\window_config.json&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span>Inputs</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">enum class</span> KeyAction;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">enum class</span> MouseButton;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">enum class</span> KeyCode;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">class </span><a class="code hl_class" href="class_scene_manager.html">SceneManager</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">enum</span> GlfwCursorType</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    ARROW,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    IBEAM,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    CROSSHAIR,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    POINTING_HAND,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    RESIZE_EW,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    RESIZE_NS,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    RESIZE_NWSE,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    RESIZE_NESW,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    RESIZE_ALL,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    NOT_ALLOWED </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>};</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">enum</span> GlfwCursorMode</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>{</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    DISABLED,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    HIDDEN,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    NORMAL,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    CAPTURED,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    _NONE</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">enum class</span> WindowMode</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>{</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    WINDOWED,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    WINDOWED_FULLSCREEN,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// (aka &quot;Borderless windowed&quot;)</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    FULLSCREEN,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    _NONE</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* WindowModeStrings[] =</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>{</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="stringliteral">&quot;Windowed&quot;</span>,</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="stringliteral">&quot;Windowed Fullscreen&quot;</span>,</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="stringliteral">&quot;Fullscreen&quot;</span>,</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="stringliteral">&quot;NONE&quot;</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>};</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="foldopen" id="foldopen00112" data-start="{" data-end="};">
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_window_module.html">  112</a></span><span class="keyword">class </span><a class="code hl_class" href="class_window_module.html">WindowModule</a> final : <span class="keyword">public</span> <a class="code hl_class" href="class_module.html">Module</a></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>{</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_window_module.html#aacc29598aa3fd3cc3776699be6444938">  115</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_window_module.html#aacc29598aa3fd3cc3776699be6444938">WIDTH</a>  = 800; </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_window_module.html#aa99037e333459e4ad122ef19b16ba9cf">  116</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_window_module.html#aa99037e333459e4ad122ef19b16ba9cf">HEIGHT</a> = 600; </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <a class="code hl_function" href="class_window_module.html#aaf6702928e44fde93d7e4fa34ecf846f">WindowModule</a>();</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <a class="code hl_function" href="class_window_module.html#a476d0a74501e1b4d341bd84bf419acff">~WindowModule</a>();</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="class_window_module.html#a23a9ce9b82f5ef985e15e1879a6b483e">  138</a></span>        <a class="code hl_function" href="class_window_module.html#a23a9ce9b82f5ef985e15e1879a6b483e">WindowModule</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_window_module.html">WindowModule</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="class_window_module.html#a81d3bfa14e4aaf47ddaf06417bb376bc">  145</a></span>        <a class="code hl_class" href="class_window_module.html">WindowModule</a>&amp; <a class="code hl_function" href="class_window_module.html#a81d3bfa14e4aaf47ddaf06417bb376bc">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_window_module.html">WindowModule</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="foldopen" id="foldopen00154" data-start="{" data-end="}">
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="class_window_module.html#a566c6d99bf03f2861296bccc84a68373">  154</a></span>        [[nodiscard]] vk::Extent2D <a class="code hl_function" href="class_window_module.html#a566c6d99bf03f2861296bccc84a68373">GetExtent</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            <span class="keywordflow">return</span> {<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(size.x), <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(size.y)};</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        }</div>
+</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="class_window_module.html#a98af15f4cd803986d3c6e7058baee79a">  166</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_window_module.html#a98af15f4cd803986d3c6e7058baee79a">WasWindowResized</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> bFrameBufferResize; }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordtype">void</span> ResetWindowResizedFlag() { bFrameBufferResize = <span class="keyword">false</span>; }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a5ef3efe1bd31257e18fd58b3d155cff8">CreateWindowSurface</a>(vk::Instance _instance, vk::SurfaceKHR* _surface) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="class_window_module.html#a8b735e722c56c2d3ef0b8aacc2bb46e4">  189</a></span>        [[nodiscard]] GLFWwindow* <a class="code hl_function" href="class_window_module.html#a8b735e722c56c2d3ef0b8aacc2bb46e4">GetGlfwWindow</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> window; }</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="class_window_module.html#a435cc3b3030d8c79a8f12da6f8f0439f">  196</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a435cc3b3030d8c79a8f12da6f8f0439f">ResetCursorWindow</a>()<span class="keyword"> const </span>{ glfwSetCursor(window, <span class="keyword">nullptr</span>); }</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a4d16e75236562fb95cccf5c4b8cae98d">CubeCursorWindow</a>(<span class="keywordtype">int</span> _color = 255) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a8fbe3ff773262dbd98389434d69e42ec">StandardCursorWindow</a>(GlfwCursorType _cursorType) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a7ef61b4a58aa4275faf9b66bf223f822">SetInputCursorMode</a>(GlfwCursorMode _mode);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno"><a class="line" href="class_window_module.html#a62d9d4a89382ee08811fb054c5b6d8c5">  232</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_window_module.html#a62d9d4a89382ee08811fb054c5b6d8c5">ShouldClose</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> glfwWindowShouldClose(window); }</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno"><a class="line" href="class_window_module.html#abe09899b92e659ba71b811044254191d">  240</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#abe09899b92e659ba71b811044254191d">PollEvents</a>() { glfwPollEvents(); }</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="preprocessor">        #pragma region Getter</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="preprocessor">        #pragma region Size</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno"><a class="line" href="class_window_module.html#aa99155593941ff3b293313e7abd979e1">  253</a></span>        [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="class_window_module.html#aa99155593941ff3b293313e7abd979e1">GetWidth</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> size.x; }</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="class_window_module.html#a6d5d162194f8054fc1549cf0fd8902c5">  262</a></span>        [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="class_window_module.html#a6d5d162194f8054fc1549cf0fd8902c5">GetHeight</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> size.y; }</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno"><a class="line" href="class_window_module.html#afc1508e4f04a44d0cb8b4602fe7e602a">  271</a></span>        [[nodiscard]] glm::vec2 <a class="code hl_function" href="class_window_module.html#afc1508e4f04a44d0cb8b4602fe7e602a">GetSize</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> size; }</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno"><a class="line" href="class_window_module.html#a6180f26987e5e41622639310ce8efa3b">  280</a></span>        [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="class_window_module.html#a6180f26987e5e41622639310ce8efa3b">GetFrameBufferWidth</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> frameBufferSize.x; }</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno"><a class="line" href="class_window_module.html#af03714ddee79357df5b85301c6780263">  289</a></span>        [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="class_window_module.html#af03714ddee79357df5b85301c6780263">GetFrameBufferHeight</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> frameBufferSize.y; }</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno"><a class="line" href="class_window_module.html#a21dff78e184314c952a4365a4f9be7f8">  298</a></span>        [[nodiscard]] glm::vec2 <a class="code hl_function" href="class_window_module.html#a21dff78e184314c952a4365a4f9be7f8">GetFrameBufferSize</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> frameBufferSize; }</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="preprocessor">        #pragma region Position</span></div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno"><a class="line" href="class_window_module.html#a3180eff4eff2e05f8e50f4ec5cf3ae08">  311</a></span>        [[nodiscard]] glm::ivec2 <a class="code hl_function" href="class_window_module.html#a3180eff4eff2e05f8e50f4ec5cf3ae08">GetPosition</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> position; }</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno"><a class="line" href="class_window_module.html#a16d14e148c06942fad859d8a15b278f9">  320</a></span>        [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="class_window_module.html#a16d14e148c06942fad859d8a15b278f9">GetPositionX</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> position.x; }</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno"><a class="line" href="class_window_module.html#a2a0c6938d30cab6a298c060490575b54">  329</a></span>        [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="class_window_module.html#a2a0c6938d30cab6a298c060490575b54">GetPositionY</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> position.y; }</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno"><a class="line" href="class_window_module.html#a2785d52498ba2c113fbb9257190d0268">  338</a></span>        [[nodiscard]] glm::ivec2 <a class="code hl_function" href="class_window_module.html#a2785d52498ba2c113fbb9257190d0268">GetStartingPosition</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> startingPosition; }</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno"><a class="line" href="class_window_module.html#abdd6a93fb152e08d41e4956026335452">  347</a></span>        [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="class_window_module.html#abdd6a93fb152e08d41e4956026335452">GetStartingPositionX</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> startingPosition.x; }</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno"><a class="line" href="class_window_module.html#a2c90fdfaf700784d1f5f975cad71bb95">  356</a></span>        [[nodiscard]] <span class="keywordtype">int</span> <a class="code hl_function" href="class_window_module.html#a2c90fdfaf700784d1f5f975cad71bb95">GetStartingPositionY</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> startingPosition.y; }</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span> </div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno"><a class="line" href="class_window_module.html#a8c0e41d5945be08dad704169ec1348ac">  367</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_window_module.html#a8c0e41d5945be08dad704169ec1348ac">GetFrameBufferResize</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> bFrameBufferResize; }</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno"><a class="line" href="class_window_module.html#a0095592593df42ac6c15f499d2e3406d">  376</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_window_module.html#a0095592593df42ac6c15f499d2e3406d">HasFocus</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> bHasFocus; }</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span><span class="preprocessor">        #pragma region Name&amp;Title</span></div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span> </div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno"><a class="line" href="class_window_module.html#a59edec1d68a526a7985083a61721be04">  387</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="class_window_module.html#a59edec1d68a526a7985083a61721be04">GetName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> windowName; }</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span> </div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno"><a class="line" href="class_window_module.html#a331c03f6b7a2d740257714974a465a27">  396</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="class_window_module.html#a331c03f6b7a2d740257714974a465a27">GetWindowTitle</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> windowTitle; }</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span> </div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span> </div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno"><a class="line" href="class_window_module.html#a95897491d08071deef4328ed5bb9f66a">  407</a></span>        [[nodiscard]] <span class="keywordtype">float</span> <a class="code hl_function" href="class_window_module.html#a95897491d08071deef4328ed5bb9f66a">GetAspectRatio</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(size.x) / <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(size.y); }</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span> </div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span> </div>
+<div class="foldopen" id="foldopen00417" data-start="{" data-end="}">
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno"><a class="line" href="class_window_module.html#a60c250fa29d151430ab2c6b85a8d45f2">  417</a></span>        [[nodiscard]] <span class="keywordtype">float</span> <a class="code hl_function" href="class_window_module.html#a60c250fa29d151430ab2c6b85a8d45f2">GetInvAspectRatio</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(size.y) / <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(size.x);</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        }</div>
+</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span> </div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno"><a class="line" href="class_window_module.html#a294fb6e5828f34b5e1d42418522c582d">  429</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_window_module.html#a294fb6e5828f34b5e1d42418522c582d">GetVSyncEnabled</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> bVSyncEnabled; }</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span> </div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span><span class="preprocessor">        #pragma region Mode</span></div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span> </div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno"><a class="line" href="class_window_module.html#a52aabce0e6b21c6de21fa1df31f379aa">  440</a></span>        [[nodiscard]] GlfwCursorMode <a class="code hl_function" href="class_window_module.html#a52aabce0e6b21c6de21fa1df31f379aa">GetCursorMode</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> cursorMode; }</div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span> </div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno"><a class="line" href="class_window_module.html#a5913b6a97b753f0b56593ff21d690aa8">  449</a></span>        [[nodiscard]] WindowMode <a class="code hl_function" href="class_window_module.html#a5913b6a97b753f0b56593ff21d690aa8">GetWindowMode</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> currentWindowMode; }</div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span> </div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span> </div>
+<div class="line"><a id="l00460" name="l00460"></a><span class="lineno"><a class="line" href="class_window_module.html#a1a642d9a91a41deaf371e622fddefdd9">  460</a></span>        [[nodiscard]] <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="class_window_module.html#a1a642d9a91a41deaf371e622fddefdd9">GetClipboardText</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> glfwGetClipboardString(window); }</div>
+<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span> </div>
+<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span> </div>
+<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span><span class="preprocessor">        #pragma region Setter</span></div>
+<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span> </div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span><span class="preprocessor">        #pragma region Size</span></div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span> </div>
+<div class="line"><a id="l00475" name="l00475"></a><span class="lineno"><a class="line" href="class_window_module.html#a69cc51bd13582ecb98890230639d8909">  475</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a69cc51bd13582ecb98890230639d8909">SetSize</a>(<span class="keyword">const</span> glm::ivec2&amp; _newSize) { size = _newSize; }</div>
+<div class="line"><a id="l00476" name="l00476"></a><span class="lineno">  476</span> </div>
+<div class="line"><a id="l00485" name="l00485"></a><span class="lineno"><a class="line" href="class_window_module.html#a3c077bfcd307c5099ee61ca3ef3e4cb5">  485</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a3c077bfcd307c5099ee61ca3ef3e4cb5">SetSize</a>(<span class="keyword">const</span> int32_t&amp; _newWidth, <span class="keyword">const</span> int32_t&amp; _newHeight) { size = glm::ivec2(_newWidth, _newHeight); }</div>
+<div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span> </div>
+<div class="line"><a id="l00494" name="l00494"></a><span class="lineno"><a class="line" href="class_window_module.html#ab7268e7f7a290117f4dcfec0b1cccd6e">  494</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#ab7268e7f7a290117f4dcfec0b1cccd6e">SetWidth</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; _newWidth) { size.x = _newWidth; }</div>
+<div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span> </div>
+<div class="line"><a id="l00503" name="l00503"></a><span class="lineno"><a class="line" href="class_window_module.html#a23f5555e63d5e7e9bb4ef1ef048758b2">  503</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a23f5555e63d5e7e9bb4ef1ef048758b2">SetHeight</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; _newHeight) { size.y = _newHeight; }</div>
+<div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span> </div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno"><a class="line" href="class_window_module.html#a1fe8a551c74af1d24536439d26582220">  512</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a1fe8a551c74af1d24536439d26582220">SetFrameBufferSize</a>(<span class="keyword">const</span> glm::vec2&amp; _newSize) { frameBufferSize = _newSize; }</div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span> </div>
+<div class="foldopen" id="foldopen00522" data-start="{" data-end="}">
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno"><a class="line" href="class_window_module.html#ac090dbc2c5d2582a7334877ad5d80a15">  522</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#ac090dbc2c5d2582a7334877ad5d80a15">SetFrameBufferSize</a>(<span class="keyword">const</span> int32_t&amp; _newWidth, <span class="keyword">const</span> int32_t&amp; _newHeight)</div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>        {</div>
+<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>            frameBufferSize = glm::vec2(_newWidth, _newHeight);</div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>        }</div>
+</div>
+<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span> </div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno"><a class="line" href="class_window_module.html#a3321619a849aa828e52c6b68d717754a">  535</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a3321619a849aa828e52c6b68d717754a">SetFrameBufferWidth</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; _newWidth) { frameBufferSize.x = _newWidth; }</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno"><a class="line" href="class_window_module.html#af75c79b5219f96caa255846f80d30ade">  543</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#af75c79b5219f96caa255846f80d30ade">SetFrameBufferHeight</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; _newHeight) { frameBufferSize.y = _newHeight; }</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span> </div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span> </div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span> </div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span><span class="preprocessor">        #pragma region Position</span></div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span> </div>
+<div class="foldopen" id="foldopen00557" data-start="{" data-end="}">
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno"><a class="line" href="class_window_module.html#ab6f598156600dbe20c95f4471a296b57">  557</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#ab6f598156600dbe20c95f4471a296b57">SetPosition</a>(<span class="keyword">const</span> glm::ivec2&amp; _position)</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>        {</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>            <span class="keywordflow">if</span> (window) glfwSetWindowPos(window, _position.x, _position.y);</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>            <span class="keywordflow">else</span> startingPosition = _position;</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>            <a class="code hl_function" href="class_window_module.html#a7553cb108331ebe70314e0663af31f69">OnPositionChanged</a>(_position);</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>        }</div>
+</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span> </div>
+<div class="foldopen" id="foldopen00572" data-start="{" data-end="}">
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno"><a class="line" href="class_window_module.html#aefd6685c1a7e4ce9db403e30f8e79a3b">  572</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#aefd6685c1a7e4ce9db403e30f8e79a3b">SetPosition</a>(<span class="keyword">const</span> int32_t&amp; _newPositionX, <span class="keyword">const</span> int32_t&amp; _newPositionY)</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>        {</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>            <span class="keywordflow">if</span> (window) glfwSetWindowPos(window, _newPositionX, _newPositionY);</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>            <span class="keywordflow">else</span> startingPosition = {_newPositionX, _newPositionY};</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>            <a class="code hl_function" href="class_window_module.html#a7553cb108331ebe70314e0663af31f69">OnPositionChanged</a>(_newPositionX, _newPositionY);</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>        }</div>
+</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span> </div>
+<div class="foldopen" id="foldopen00586" data-start="{" data-end="}">
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno"><a class="line" href="class_window_module.html#a8a7fa284d8a85bbb085e99c2c694b7e2">  586</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a8a7fa284d8a85bbb085e99c2c694b7e2">SetPositionX</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; _positionX)</div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>        {</div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>            <span class="keywordflow">if</span> (window) glfwSetWindowPos(window, _positionX, position.y);</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>            <span class="keywordflow">else</span> startingPosition = {_positionX, position.y};</div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>            <a class="code hl_function" href="class_window_module.html#a7553cb108331ebe70314e0663af31f69">OnPositionChanged</a>(_positionX, position.y);</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>        }</div>
+</div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span> </div>
+<div class="foldopen" id="foldopen00600" data-start="{" data-end="}">
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno"><a class="line" href="class_window_module.html#a3711dc6e1b2cfa78717ccd6c8b8073a9">  600</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a3711dc6e1b2cfa78717ccd6c8b8073a9">SetPositionY</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; _positionY)</div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>        {</div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>            <span class="keywordflow">if</span> (window) glfwSetWindowPos(window, position.x, _positionY);</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>            <span class="keywordflow">else</span> startingPosition = {position.x, _positionY};</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>            <a class="code hl_function" href="class_window_module.html#a7553cb108331ebe70314e0663af31f69">OnPositionChanged</a>(position.x, _positionY);</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>        }</div>
+</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span> </div>
+<div class="foldopen" id="foldopen00614" data-start="{" data-end="}">
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno"><a class="line" href="class_window_module.html#ace2d5b839b89a84714b47daffe6772e9">  614</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#ace2d5b839b89a84714b47daffe6772e9">SetMousePosition</a>(<span class="keyword">const</span> glm::ivec2 _mousePosition)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>            glfwSetCursorPos(window, _mousePosition.x, _mousePosition.y);</div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>        }</div>
+</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span> </div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span> </div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span> </div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span><span class="preprocessor">        #pragma region Name&amp;Title</span></div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span> </div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno"><a class="line" href="class_window_module.html#aef59173c5c253544cf2de5e1710d1ffc">  631</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#aef59173c5c253544cf2de5e1710d1ffc">SetName</a>(<span class="keyword">const</span> std::string&amp; _newName) { windowName = _newName; }</div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span> </div>
+<div class="foldopen" id="foldopen00640" data-start="{" data-end="}">
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno"><a class="line" href="class_window_module.html#aab373232babdfb9a4d9734a7cbbb85bb">  640</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#aab373232babdfb9a4d9734a7cbbb85bb">SetWindowTitle</a>(<span class="keyword">const</span> std::string&amp; _windowTitle)</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>        {</div>
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>            windowTitle = _windowTitle;</div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>            glfwSetWindowTitle(window, windowTitle.c_str());</div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>        }</div>
+</div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span> </div>
+<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno"><a class="line" href="class_window_module.html#abbea4d8a57fbcdbaf4763735dace03d6">  654</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#abbea4d8a57fbcdbaf4763735dace03d6">SetFrameBufferResize</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span>&amp; _state) { bFrameBufferResize = _state; }</div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span> </div>
+<div class="foldopen" id="foldopen00664" data-start="{" data-end="}">
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno"><a class="line" href="class_window_module.html#aa3d9d940b5d53daff2fc277c38bf4d31">  664</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#aa3d9d940b5d53daff2fc277c38bf4d31">SetUpdateWindowTitleFrequency</a>(<span class="keyword">const</span> <span class="keywordtype">float</span>&amp; _updateFrequencyInSeconds)</div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>        {</div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>            updateWindowTitleFrequency = _updateFrequencyInSeconds;</div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>        }</div>
+</div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span> </div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno"><a class="line" href="class_window_module.html#a02bba3410cdc3c3660b69735cfe6513c">  676</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a02bba3410cdc3c3660b69735cfe6513c">SetVSyncEnabled</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span>&amp; _bEnabled) { bVSyncEnabled = _bEnabled; }</div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span> </div>
+<div class="foldopen" id="foldopen00685" data-start="{" data-end="}">
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno"><a class="line" href="class_window_module.html#a8adc66b68fcb8d01008f99578513bf58">  685</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a8adc66b68fcb8d01008f99578513bf58">SetCursorMode</a>(<span class="keyword">const</span> GlfwCursorMode&amp; _mode)</div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>        {</div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>            <span class="keywordflow">if</span> (cursorMode != _mode) cursorMode = _mode;</div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>            <span class="comment">//g_InputManager-&gt;OnCursorModeChanged(_mode);</span></div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>        }</div>
+</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span> </div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno"><a class="line" href="class_window_module.html#a44a32c0251d6cba741f9a31175c18860">  698</a></span>        <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="class_window_module.html#a44a32c0251d6cba741f9a31175c18860">WindowModeToStr</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> WindowModeStrings[<span class="keyword">static_cast&lt;</span>int32_t<span class="keyword">&gt;</span>(<a class="code hl_function" href="class_window_module.html#a52aabce0e6b21c6de21fa1df31f379aa">GetCursorMode</a>())]; }</div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span> </div>
+<div class="foldopen" id="foldopen00708" data-start="{" data-end="}">
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno"><a class="line" href="class_window_module.html#a59c3513015182ff5b126be4b02255b87">  708</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a59c3513015182ff5b126be4b02255b87">SetWindowMode</a>(<span class="keyword">const</span> WindowMode&amp; _mode, <span class="keyword">const</span> <span class="keywordtype">bool</span> _bForce = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>        {</div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>            <span class="keywordflow">if</span> (_bForce || currentWindowMode != _mode)</div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>            {</div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>                currentWindowMode = _mode;</div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span> </div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>                GLFWmonitor* monitor = glfwGetPrimaryMonitor();</div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>                <span class="keywordflow">if</span> (!monitor)</div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>                {</div>
+<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>                    std::cout &lt;&lt; (<span class="stringliteral">&quot;Failed to find primary monitor! Can&#39;t set window mode\n&quot;</span>);</div>
+<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>                }</div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span> </div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>                <span class="keyword">const</span> GLFWvidmode* video_mode = glfwGetVideoMode(monitor);</div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>                <span class="keywordflow">if</span> (!video_mode)</div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>                {</div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>                    std::cout &lt;&lt; (<span class="stringliteral">&quot;Failed to get monitor&#39;s video mode! Can&#39;t set window mode\n&quot;</span>);</div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>                }</div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span> </div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>                <span class="keywordflow">switch</span> (_mode)</div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>                {</div>
+<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>                    <span class="keywordflow">case</span> WindowMode::FULLSCREEN:</div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>                        {</div>
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>                            glfwSetWindowMonitor(window, monitor, 0, 0, video_mode-&gt;width, video_mode-&gt;height,</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>                                                 video_mode-&gt;refreshRate);</div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>                        }</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>                    <span class="keywordflow">case</span> WindowMode::WINDOWED_FULLSCREEN:</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>                        {</div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>                            glfwSetWindowMonitor(window, monitor, 0, 0, video_mode-&gt;width, video_mode-&gt;height,</div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>                                                 video_mode-&gt;refreshRate);</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>                            lastNonFullscreenWindowMode = WindowMode::WINDOWED_FULLSCREEN;</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>                        }</div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>                    <span class="keywordflow">case</span> WindowMode::WINDOWED:</div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>                        {</div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>                            <span class="comment">//CHECK(lastWindowedSize.x != 0 &amp;&amp; lastWindowedSize.y != 0);</span></div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span> </div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>                            <span class="keywordflow">if</span> (lastWindowedPos.y == 0)</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>                                <span class="comment">// When in windowed mode a y position of 0 means the title bar isn&#39;t</span></div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>                                <span class="comment">// visible. This will occur if the app launched in fullscreen since</span></div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>                                <span class="comment">// the last y position to never have been set to a valid value.</span></div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>                                lastWindowedPos.y = 40;</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span> </div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>                            glfwSetWindowMonitor(window, <span class="keyword">nullptr</span>, lastWindowedPos.x, lastWindowedPos.y,</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>                                                 lastWindowedSize.x, lastWindowedSize.y, video_mode-&gt;refreshRate);</div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>                            lastNonFullscreenWindowMode = WindowMode::WINDOWED;</div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>                        }</div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>                    <span class="keywordflow">case</span> WindowMode::_NONE:</div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>                    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>                        {</div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>                            std::cout &lt;&lt; (<span class="stringliteral">&quot;Unhandled window mode: %u\n&quot;</span>, <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(_mode));</div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>                        }</div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>                }</div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>            }</div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>        }</div>
+</div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span> </div>
+<div class="foldopen" id="foldopen00775" data-start="{" data-end="}">
+<div class="line"><a id="l00775" name="l00775"></a><span class="lineno"><a class="line" href="class_window_module.html#ada524e4571b2b589c16945adee5ca42e">  775</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#ada524e4571b2b589c16945adee5ca42e">SetClipboardText</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* _text)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>            glfwSetClipboardString(window, _text);</div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>        }</div>
+</div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span> </div>
+<div class="foldopen" id="foldopen00787" data-start="{" data-end="}">
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno"><a class="line" href="class_window_module.html#ac53776af8d5a05223d465e39a55a4a68">  787</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#ac53776af8d5a05223d465e39a55a4a68">SetWindowIcon</a>(<span class="keyword">const</span> std::string&amp; _fileName)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>            <span class="keywordtype">int</span> width, height, nr_channels;</div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>            <span class="keywordflow">if</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* data = stbi_load(_fileName.c_str(), &amp;width, &amp;height, &amp;nr_channels, 0))</div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>            {</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>                GLFWimage icon;</div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>                icon.width  = width;</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>                icon.height = height;</div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>                icon.pixels = data;</div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>                glfwSetWindowIcon(window, 1, &amp;icon);</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>            }</div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>        }</div>
+</div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span> </div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span> </div>
+<div class="foldopen" id="foldopen00810" data-start="{" data-end="}">
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno"><a class="line" href="class_window_module.html#ae14b497a2f7f416b3261b00d67fb6db9">  810</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#ae14b497a2f7f416b3261b00d67fb6db9">OnSizeChanged</a>(<span class="keyword">const</span> int32_t _width, <span class="keyword">const</span> int32_t _height)</div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>        {</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>            size            = glm::ivec2(_width, _height);</div>
+<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>            frameBufferSize = size;</div>
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>            <span class="keywordflow">if</span> (currentWindowMode == WindowMode::WINDOWED) lastWindowedSize = size;</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span> </div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>            <span class="comment">/*if (g_Renderer)</span></div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span><span class="comment">            {</span></div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span><span class="comment">                g_Renderer-&gt;OnWindowSizeChanged(_width, _height);</span></div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span><span class="comment">            }*/</span></div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>        }</div>
+</div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span> </div>
+<div class="foldopen" id="foldopen00829" data-start="{" data-end="}">
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno"><a class="line" href="class_window_module.html#a3e15554dfed0d609c36e8b9c6a28051e">  829</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a3e15554dfed0d609c36e8b9c6a28051e">OnSizeChanged</a>(<span class="keyword">const</span> glm::ivec2&amp; _newPosition)</div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>        {</div>
+<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>            size            = _newPosition;</div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>            frameBufferSize = size;</div>
+<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>            <span class="keywordflow">if</span> (currentWindowMode == WindowMode::WINDOWED) lastWindowedSize = size;</div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span> </div>
+<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>            <span class="comment">/*if (g_Renderer)</span></div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span><span class="comment">            {</span></div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span><span class="comment">                g_Renderer-&gt;OnWindowSizeChanged(_width, _height);</span></div>
+<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span><span class="comment">            }*/</span></div>
+<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>        }</div>
+</div>
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span> </div>
+<div class="foldopen" id="foldopen00849" data-start="{" data-end="}">
+<div class="line"><a id="l00849" name="l00849"></a><span class="lineno"><a class="line" href="class_window_module.html#a7553cb108331ebe70314e0663af31f69">  849</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a7553cb108331ebe70314e0663af31f69">OnPositionChanged</a>(<span class="keyword">const</span> int32_t _newPositionX, <span class="keyword">const</span> int32_t _newPositionY)</div>
+<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>        {</div>
+<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>            position = glm::ivec2{_newPositionX, _newPositionY};</div>
+<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span> </div>
+<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>            <span class="keywordflow">if</span> (currentWindowMode == WindowMode::WINDOWED) lastWindowedPos = position;</div>
+<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>        }</div>
+</div>
+<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span> </div>
+<div class="foldopen" id="foldopen00863" data-start="{" data-end="}">
+<div class="line"><a id="l00863" name="l00863"></a><span class="lineno"><a class="line" href="class_window_module.html#aab6379ef6c0fe63cfe29f7f1c3bee0a3">  863</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#aab6379ef6c0fe63cfe29f7f1c3bee0a3">OnPositionChanged</a>(<span class="keyword">const</span> glm::ivec2&amp; _newPosition)</div>
+<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>        {</div>
+<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>            position = _newPosition;</div>
+<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span> </div>
+<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>            <span class="keywordflow">if</span> (currentWindowMode == WindowMode::WINDOWED) lastWindowedPos = position;</div>
+<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>        }</div>
+</div>
+<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span> </div>
+<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>        <span class="comment">//TODO : faire les fonctions de callback</span></div>
+<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>        <span class="comment">/*void KeyCallback(Inputs::KeyCode keycode, Inputs::KeyAction action, int32_t mods){}</span></div>
+<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span><span class="comment">        void CharCallback(uint32_t character){}</span></div>
+<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span><span class="comment">        void MouseButtonCallback(Inputs::MouseButton mouseButton, Inputs::KeyAction action, int32_t mods){}</span></div>
+<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span><span class="comment">        void WindowFocusCallback(int32_t focused){}</span></div>
+<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span><span class="comment">        void CursorPosCallback(double x, double y){}</span></div>
+<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span><span class="comment">        void ScrollCallback(double xoffset, double yoffset){}</span></div>
+<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span><span class="comment">        void WindowSizeCallback(int32_t width, int32_t height, bool bMaximized, bool bIconified){}</span></div>
+<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span><span class="comment">        void WindowPosCallback(int32_t newX, int32_t newY){}</span></div>
+<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span><span class="comment">        void FrameBufferSizeCallback(int32_t width, int32_t height){}*/</span></div>
+<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span> </div>
+<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>        WindowMode <a class="code hl_function" href="class_window_module.html#a7730e5e58c94b77e3eb5e58f5576fbf5">StrToWindowMode</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* _modeStr);</div>
+<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span> </div>
+<div class="foldopen" id="foldopen00898" data-start="{" data-end="}">
+<div class="line"><a id="l00898" name="l00898"></a><span class="lineno"><a class="line" href="class_window_module.html#a555996e3e28179fbb5ec2125a90b0bb4">  898</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a555996e3e28179fbb5ec2125a90b0bb4">ToggleFullscreen</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> _bForce = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>        {</div>
+<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>            <span class="keywordflow">if</span> (currentWindowMode == WindowMode::FULLSCREEN)</div>
+<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>                <span class="comment">//CHECK(lastNonFullscreenWindowMode == WindowMode::WINDOWED || lastNonFullscreenWindowMode == WindowMode::WINDOWED_FULLSCREEN);</span></div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span> </div>
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>                <a class="code hl_function" href="class_window_module.html#a59c3513015182ff5b126be4b02255b87">SetWindowMode</a>(lastNonFullscreenWindowMode, _bForce);</div>
+<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>            <span class="keywordflow">else</span> <a class="code hl_function" href="class_window_module.html#a59c3513015182ff5b126be4b02255b87">SetWindowMode</a>(WindowMode::FULLSCREEN, _bForce);</div>
+<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>        }</div>
+</div>
+<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span> </div>
+<div class="line"><a id="l00912" name="l00912"></a><span class="lineno"><a class="line" href="class_window_module.html#ace948d4af563849cf88e973a157c27f5">  912</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#ace948d4af563849cf88e973a157c27f5">Maximize</a>()<span class="keyword"> const </span>{ glfwMaximizeWindow(window); }</div>
+<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span> </div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno"><a class="line" href="class_window_module.html#ab63e2f86c82f1b2a8898788c8997d2c7">  919</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#ab63e2f86c82f1b2a8898788c8997d2c7">Iconify</a>()<span class="keyword"> const </span>{ glfwIconifyWindow(window); }</div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span> </div>
+<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span><span class="preprocessor">        #pragma region Event</span></div>
+<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span> </div>
+<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#afaa58a06178289492ce7aecf41606ecc">Init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span> </div>
+<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a72eec720cfe887e876ed4622c74f84c9">Start</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span> </div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a76ef4f261f536f2a8060817708d7e1e9">FixedUpdate</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span> </div>
+<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#aa10199f2b56f4e0275d3de3c90627b29">Update</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span> </div>
+<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a3be50f59f440ae61adb8c8f276cdac93">PreRender</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span> </div>
+<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a2624ecb83c3b24e02fe3c1534e992f20">Render</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span> </div>
+<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#af8a0593bd7384f1644e9d1051d0f11d2">RenderGui</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span> </div>
+<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a135a0d38ee3a34e0863c49e175fb6f92">PostRender</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span> </div>
+<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#ac79d598b44c2675c799f35965c045bf8">Release</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span> </div>
+<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_window_module.html#a7934ced6f9107b52b4647258adecfa7f">Finalize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span> </div>
+<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span> </div>
+<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> FrameBufferResizeCallBack(GLFWwindow* _window, <span class="keywordtype">int</span> _width, <span class="keywordtype">int</span> _height);</div>
+<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>        std::string GenerateWindowTitle() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span> </div>
+<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>        <span class="keywordtype">bool</span> InitFromConfig();</div>
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span> </div>
+<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>        <span class="keywordtype">void</span> SaveToConfig();</div>
+<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span> </div>
+<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>        <span class="keywordtype">bool</span> bFrameBufferResize = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>        <a class="code hl_class" href="class_scene_manager.html">SceneManager</a>* sceneManager = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>        std::string windowName; </div>
+<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>        std::string windowTitle; </div>
+<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>        GLFWwindow* window; </div>
+<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>        glm::ivec2 size = {0, 0}; </div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>        glm::ivec2 startingPosition = {0, 0}; </div>
+<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>        glm::ivec2 position = {0, 0}; </div>
+<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>        glm::ivec2 frameBufferSize = {0, 0}; </div>
+<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>        <span class="keywordtype">bool</span> bHasFocus = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>        <span class="keywordtype">bool</span> bMoveConsoleToOtherMonitor = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>        <span class="keywordtype">bool</span> bAutoRestoreStateOnBootup = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>        WindowMode currentWindowMode = WindowMode::_NONE; </div>
+<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>        glm::ivec2 lastWindowedSize; </div>
+<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>        glm::ivec2 lastWindowedPos; </div>
+<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>        WindowMode lastNonFullscreenWindowMode = WindowMode::_NONE;</div>
+<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>        <span class="keywordtype">bool</span> bShowFPSInWindowTitle = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span>        <span class="keywordtype">bool</span> bShowMSInWindowTitle = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>        <span class="keywordtype">bool</span> bMaximized = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>        <span class="keywordtype">bool</span> bIconified = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>        <span class="keywordtype">bool</span> bVSyncEnabled = <span class="keyword">true</span>; </div>
+<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>        <span class="keywordtype">float</span> updateWindowTitleFrequency = 0.0f; </div>
+<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>        <span class="keywordtype">float</span> secondsSinceTitleUpdate = 0.0f;</div>
+<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>        GlfwCursorMode cursorMode = NORMAL; </div>
+<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>};</div>
+</div>
+<div class="ttc" id="aclass_module_html"><div class="ttname"><a href="class_module.html">Module</a></div><div class="ttdoc">Classe Module.</div><div class="ttdef"><b>Definition</b> Module.h:19</div></div>
+<div class="ttc" id="aclass_scene_manager_html"><div class="ttname"><a href="class_scene_manager.html">SceneManager</a></div><div class="ttdoc">Gestionnaire de sc�ne.</div><div class="ttdef"><b>Definition</b> SceneManager.h:16</div></div>
+<div class="ttc" id="aclass_window_module_html"><div class="ttname"><a href="class_window_module.html">WindowModule</a></div><div class="ttdoc">Classe WindowModule.</div><div class="ttdef"><b>Definition</b> WindowModule.h:113</div></div>
+<div class="ttc" id="aclass_window_module_html_a0095592593df42ac6c15f499d2e3406d"><div class="ttname"><a href="class_window_module.html#a0095592593df42ac6c15f499d2e3406d">WindowModule::HasFocus</a></div><div class="ttdeci">bool HasFocus() const</div><div class="ttdoc">Vérifie si la fenêtre a le focus.</div><div class="ttdef"><b>Definition</b> WindowModule.h:376</div></div>
+<div class="ttc" id="aclass_window_module_html_a02bba3410cdc3c3660b69735cfe6513c"><div class="ttname"><a href="class_window_module.html#a02bba3410cdc3c3660b69735cfe6513c">WindowModule::SetVSyncEnabled</a></div><div class="ttdeci">void SetVSyncEnabled(const bool &amp;_bEnabled)</div><div class="ttdoc">Active ou désactive la synchronisation verticale (VSync) de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:676</div></div>
+<div class="ttc" id="aclass_window_module_html_a135a0d38ee3a34e0863c49e175fb6f92"><div class="ttname"><a href="class_window_module.html#a135a0d38ee3a34e0863c49e175fb6f92">WindowModule::PostRender</a></div><div class="ttdeci">void PostRender() override</div><div class="ttdoc">Fonction post-rendu du module.</div><div class="ttdef"><b>Definition</b> WindowModule.cpp:234</div></div>
+<div class="ttc" id="aclass_window_module_html_a16d14e148c06942fad859d8a15b278f9"><div class="ttname"><a href="class_window_module.html#a16d14e148c06942fad859d8a15b278f9">WindowModule::GetPositionX</a></div><div class="ttdeci">int GetPositionX() const</div><div class="ttdoc">Obtient la position horizontale de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:320</div></div>
+<div class="ttc" id="aclass_window_module_html_a1a642d9a91a41deaf371e622fddefdd9"><div class="ttname"><a href="class_window_module.html#a1a642d9a91a41deaf371e622fddefdd9">WindowModule::GetClipboardText</a></div><div class="ttdeci">const char * GetClipboardText() const</div><div class="ttdoc">Obtient le texte actuellement copié dans le presse-papiers de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:460</div></div>
+<div class="ttc" id="aclass_window_module_html_a1fe8a551c74af1d24536439d26582220"><div class="ttname"><a href="class_window_module.html#a1fe8a551c74af1d24536439d26582220">WindowModule::SetFrameBufferSize</a></div><div class="ttdeci">void SetFrameBufferSize(const glm::vec2 &amp;_newSize)</div><div class="ttdoc">Définit la taille du framebuffer de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:512</div></div>
+<div class="ttc" id="aclass_window_module_html_a21dff78e184314c952a4365a4f9be7f8"><div class="ttname"><a href="class_window_module.html#a21dff78e184314c952a4365a4f9be7f8">WindowModule::GetFrameBufferSize</a></div><div class="ttdeci">glm::vec2 GetFrameBufferSize() const</div><div class="ttdoc">Obtient la taille du framebuffer.</div><div class="ttdef"><b>Definition</b> WindowModule.h:298</div></div>
+<div class="ttc" id="aclass_window_module_html_a23a9ce9b82f5ef985e15e1879a6b483e"><div class="ttname"><a href="class_window_module.html#a23a9ce9b82f5ef985e15e1879a6b483e">WindowModule::WindowModule</a></div><div class="ttdeci">WindowModule(const WindowModule &amp;)=delete</div><div class="ttdoc">Constructeur de copie supprimé.</div></div>
+<div class="ttc" id="aclass_window_module_html_a23f5555e63d5e7e9bb4ef1ef048758b2"><div class="ttname"><a href="class_window_module.html#a23f5555e63d5e7e9bb4ef1ef048758b2">WindowModule::SetHeight</a></div><div class="ttdeci">void SetHeight(const int &amp;_newHeight)</div><div class="ttdoc">Définit la hauteur de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:503</div></div>
+<div class="ttc" id="aclass_window_module_html_a2624ecb83c3b24e02fe3c1534e992f20"><div class="ttname"><a href="class_window_module.html#a2624ecb83c3b24e02fe3c1534e992f20">WindowModule::Render</a></div><div class="ttdeci">void Render() override</div><div class="ttdoc">Rendu du module.</div><div class="ttdef"><b>Definition</b> WindowModule.cpp:224</div></div>
+<div class="ttc" id="aclass_window_module_html_a2785d52498ba2c113fbb9257190d0268"><div class="ttname"><a href="class_window_module.html#a2785d52498ba2c113fbb9257190d0268">WindowModule::GetStartingPosition</a></div><div class="ttdeci">glm::ivec2 GetStartingPosition() const</div><div class="ttdoc">Obtient la position initiale de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:338</div></div>
+<div class="ttc" id="aclass_window_module_html_a294fb6e5828f34b5e1d42418522c582d"><div class="ttname"><a href="class_window_module.html#a294fb6e5828f34b5e1d42418522c582d">WindowModule::GetVSyncEnabled</a></div><div class="ttdeci">bool GetVSyncEnabled() const</div><div class="ttdoc">Vérifie si la synchronisation verticale est activée.</div><div class="ttdef"><b>Definition</b> WindowModule.h:429</div></div>
+<div class="ttc" id="aclass_window_module_html_a2a0c6938d30cab6a298c060490575b54"><div class="ttname"><a href="class_window_module.html#a2a0c6938d30cab6a298c060490575b54">WindowModule::GetPositionY</a></div><div class="ttdeci">int GetPositionY() const</div><div class="ttdoc">Obtient la position verticale de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:329</div></div>
+<div class="ttc" id="aclass_window_module_html_a2c90fdfaf700784d1f5f975cad71bb95"><div class="ttname"><a href="class_window_module.html#a2c90fdfaf700784d1f5f975cad71bb95">WindowModule::GetStartingPositionY</a></div><div class="ttdeci">int GetStartingPositionY() const</div><div class="ttdoc">Obtient la position verticale initiale de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:356</div></div>
+<div class="ttc" id="aclass_window_module_html_a3180eff4eff2e05f8e50f4ec5cf3ae08"><div class="ttname"><a href="class_window_module.html#a3180eff4eff2e05f8e50f4ec5cf3ae08">WindowModule::GetPosition</a></div><div class="ttdeci">glm::ivec2 GetPosition() const</div><div class="ttdoc">Obtient la position de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:311</div></div>
+<div class="ttc" id="aclass_window_module_html_a331c03f6b7a2d740257714974a465a27"><div class="ttname"><a href="class_window_module.html#a331c03f6b7a2d740257714974a465a27">WindowModule::GetWindowTitle</a></div><div class="ttdeci">std::string GetWindowTitle() const</div><div class="ttdoc">Obtient le titre de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:396</div></div>
+<div class="ttc" id="aclass_window_module_html_a3321619a849aa828e52c6b68d717754a"><div class="ttname"><a href="class_window_module.html#a3321619a849aa828e52c6b68d717754a">WindowModule::SetFrameBufferWidth</a></div><div class="ttdeci">void SetFrameBufferWidth(const int &amp;_newWidth)</div><div class="ttdoc">Définit la largeur du framebuffer de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:535</div></div>
+<div class="ttc" id="aclass_window_module_html_a3711dc6e1b2cfa78717ccd6c8b8073a9"><div class="ttname"><a href="class_window_module.html#a3711dc6e1b2cfa78717ccd6c8b8073a9">WindowModule::SetPositionY</a></div><div class="ttdeci">void SetPositionY(const int &amp;_positionY)</div><div class="ttdoc">Définit la coordonnée y de la position de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:600</div></div>
+<div class="ttc" id="aclass_window_module_html_a3be50f59f440ae61adb8c8f276cdac93"><div class="ttname"><a href="class_window_module.html#a3be50f59f440ae61adb8c8f276cdac93">WindowModule::PreRender</a></div><div class="ttdeci">void PreRender() override</div><div class="ttdoc">Fonction pré-rendu du module.</div><div class="ttdef"><b>Definition</b> WindowModule.cpp:219</div></div>
+<div class="ttc" id="aclass_window_module_html_a3c077bfcd307c5099ee61ca3ef3e4cb5"><div class="ttname"><a href="class_window_module.html#a3c077bfcd307c5099ee61ca3ef3e4cb5">WindowModule::SetSize</a></div><div class="ttdeci">void SetSize(const int32_t &amp;_newWidth, const int32_t &amp;_newHeight)</div><div class="ttdoc">Définit la taille de la fenêtre en spécifiant la largeur et la hauteur.</div><div class="ttdef"><b>Definition</b> WindowModule.h:485</div></div>
+<div class="ttc" id="aclass_window_module_html_a3e15554dfed0d609c36e8b9c6a28051e"><div class="ttname"><a href="class_window_module.html#a3e15554dfed0d609c36e8b9c6a28051e">WindowModule::OnSizeChanged</a></div><div class="ttdeci">void OnSizeChanged(const glm::ivec2 &amp;_newPosition)</div><div class="ttdoc">Appelé lorsque la taille de la fenêtre est modifiée.</div><div class="ttdef"><b>Definition</b> WindowModule.h:829</div></div>
+<div class="ttc" id="aclass_window_module_html_a435cc3b3030d8c79a8f12da6f8f0439f"><div class="ttname"><a href="class_window_module.html#a435cc3b3030d8c79a8f12da6f8f0439f">WindowModule::ResetCursorWindow</a></div><div class="ttdeci">void ResetCursorWindow() const</div><div class="ttdoc">Réinitialise le curseur de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:196</div></div>
+<div class="ttc" id="aclass_window_module_html_a44a32c0251d6cba741f9a31175c18860"><div class="ttname"><a href="class_window_module.html#a44a32c0251d6cba741f9a31175c18860">WindowModule::WindowModeToStr</a></div><div class="ttdeci">const char * WindowModeToStr() const</div><div class="ttdoc">Convertit le mode de curseur actuel en une chaîne de caractères.</div><div class="ttdef"><b>Definition</b> WindowModule.h:698</div></div>
+<div class="ttc" id="aclass_window_module_html_a476d0a74501e1b4d341bd84bf419acff"><div class="ttname"><a href="class_window_module.html#a476d0a74501e1b4d341bd84bf419acff">WindowModule::~WindowModule</a></div><div class="ttdeci">~WindowModule()</div><div class="ttdoc">Destructeur de la classe WindowModule.</div><div class="ttdef"><b>Definition</b> WindowModule.cpp:33</div></div>
+<div class="ttc" id="aclass_window_module_html_a4d16e75236562fb95cccf5c4b8cae98d"><div class="ttname"><a href="class_window_module.html#a4d16e75236562fb95cccf5c4b8cae98d">WindowModule::CubeCursorWindow</a></div><div class="ttdeci">void CubeCursorWindow(int _color=255) const</div><div class="ttdoc">Change la forme du curseur de la fenêtre en un cube coloré.</div><div class="ttdef"><b>Definition</b> WindowModule.cpp:55</div></div>
+<div class="ttc" id="aclass_window_module_html_a52aabce0e6b21c6de21fa1df31f379aa"><div class="ttname"><a href="class_window_module.html#a52aabce0e6b21c6de21fa1df31f379aa">WindowModule::GetCursorMode</a></div><div class="ttdeci">GlfwCursorMode GetCursorMode() const</div><div class="ttdoc">Obtient le mode de curseur de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:440</div></div>
+<div class="ttc" id="aclass_window_module_html_a555996e3e28179fbb5ec2125a90b0bb4"><div class="ttname"><a href="class_window_module.html#a555996e3e28179fbb5ec2125a90b0bb4">WindowModule::ToggleFullscreen</a></div><div class="ttdeci">void ToggleFullscreen(const bool _bForce=false)</div><div class="ttdoc">Bascule entre le mode plein écran et le mode fenêtré.</div><div class="ttdef"><b>Definition</b> WindowModule.h:898</div></div>
+<div class="ttc" id="aclass_window_module_html_a566c6d99bf03f2861296bccc84a68373"><div class="ttname"><a href="class_window_module.html#a566c6d99bf03f2861296bccc84a68373">WindowModule::GetExtent</a></div><div class="ttdeci">vk::Extent2D GetExtent() const</div><div class="ttdoc">Obtient les dimensions de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:154</div></div>
+<div class="ttc" id="aclass_window_module_html_a5913b6a97b753f0b56593ff21d690aa8"><div class="ttname"><a href="class_window_module.html#a5913b6a97b753f0b56593ff21d690aa8">WindowModule::GetWindowMode</a></div><div class="ttdeci">WindowMode GetWindowMode() const</div><div class="ttdoc">Obtient le mode de fenêtre actuel.</div><div class="ttdef"><b>Definition</b> WindowModule.h:449</div></div>
+<div class="ttc" id="aclass_window_module_html_a59c3513015182ff5b126be4b02255b87"><div class="ttname"><a href="class_window_module.html#a59c3513015182ff5b126be4b02255b87">WindowModule::SetWindowMode</a></div><div class="ttdeci">void SetWindowMode(const WindowMode &amp;_mode, const bool _bForce=false)</div><div class="ttdoc">Définit le mode de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:708</div></div>
+<div class="ttc" id="aclass_window_module_html_a59edec1d68a526a7985083a61721be04"><div class="ttname"><a href="class_window_module.html#a59edec1d68a526a7985083a61721be04">WindowModule::GetName</a></div><div class="ttdeci">std::string GetName() const</div><div class="ttdoc">Obtient le nom de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:387</div></div>
+<div class="ttc" id="aclass_window_module_html_a5ef3efe1bd31257e18fd58b3d155cff8"><div class="ttname"><a href="class_window_module.html#a5ef3efe1bd31257e18fd58b3d155cff8">WindowModule::CreateWindowSurface</a></div><div class="ttdeci">void CreateWindowSurface(vk::Instance _instance, vk::SurfaceKHR *_surface) const</div><div class="ttdoc">Crée une surface Vulkan associée à une fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.cpp:41</div></div>
+<div class="ttc" id="aclass_window_module_html_a60c250fa29d151430ab2c6b85a8d45f2"><div class="ttname"><a href="class_window_module.html#a60c250fa29d151430ab2c6b85a8d45f2">WindowModule::GetInvAspectRatio</a></div><div class="ttdeci">float GetInvAspectRatio() const</div><div class="ttdoc">Obtient l'inverse du rapport largeur-hauteur de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:417</div></div>
+<div class="ttc" id="aclass_window_module_html_a6180f26987e5e41622639310ce8efa3b"><div class="ttname"><a href="class_window_module.html#a6180f26987e5e41622639310ce8efa3b">WindowModule::GetFrameBufferWidth</a></div><div class="ttdeci">int GetFrameBufferWidth() const</div><div class="ttdoc">Obtient la largeur du framebuffer.</div><div class="ttdef"><b>Definition</b> WindowModule.h:280</div></div>
+<div class="ttc" id="aclass_window_module_html_a62d9d4a89382ee08811fb054c5b6d8c5"><div class="ttname"><a href="class_window_module.html#a62d9d4a89382ee08811fb054c5b6d8c5">WindowModule::ShouldClose</a></div><div class="ttdeci">bool ShouldClose() const</div><div class="ttdoc">Vérifie si la fenêtre doit être fermée.</div><div class="ttdef"><b>Definition</b> WindowModule.h:232</div></div>
+<div class="ttc" id="aclass_window_module_html_a69cc51bd13582ecb98890230639d8909"><div class="ttname"><a href="class_window_module.html#a69cc51bd13582ecb98890230639d8909">WindowModule::SetSize</a></div><div class="ttdeci">void SetSize(const glm::ivec2 &amp;_newSize)</div><div class="ttdoc">Définit la taille de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:475</div></div>
+<div class="ttc" id="aclass_window_module_html_a6d5d162194f8054fc1549cf0fd8902c5"><div class="ttname"><a href="class_window_module.html#a6d5d162194f8054fc1549cf0fd8902c5">WindowModule::GetHeight</a></div><div class="ttdeci">int GetHeight() const</div><div class="ttdoc">Obtient la hauteur de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:262</div></div>
+<div class="ttc" id="aclass_window_module_html_a72eec720cfe887e876ed4622c74f84c9"><div class="ttname"><a href="class_window_module.html#a72eec720cfe887e876ed4622c74f84c9">WindowModule::Start</a></div><div class="ttdeci">void Start() override</div><div class="ttdoc">Démarre le module.</div><div class="ttdef"><b>Definition</b> WindowModule.cpp:187</div></div>
+<div class="ttc" id="aclass_window_module_html_a7553cb108331ebe70314e0663af31f69"><div class="ttname"><a href="class_window_module.html#a7553cb108331ebe70314e0663af31f69">WindowModule::OnPositionChanged</a></div><div class="ttdeci">void OnPositionChanged(const int32_t _newPositionX, const int32_t _newPositionY)</div><div class="ttdoc">Appelé lorsque la position de la fenêtre est modifiée.</div><div class="ttdef"><b>Definition</b> WindowModule.h:849</div></div>
+<div class="ttc" id="aclass_window_module_html_a76ef4f261f536f2a8060817708d7e1e9"><div class="ttname"><a href="class_window_module.html#a76ef4f261f536f2a8060817708d7e1e9">WindowModule::FixedUpdate</a></div><div class="ttdeci">void FixedUpdate() override</div><div class="ttdoc">Effectue une mise à jour fixe du module.</div><div class="ttdef"><b>Definition</b> WindowModule.cpp:193</div></div>
+<div class="ttc" id="aclass_window_module_html_a7730e5e58c94b77e3eb5e58f5576fbf5"><div class="ttname"><a href="class_window_module.html#a7730e5e58c94b77e3eb5e58f5576fbf5">WindowModule::StrToWindowMode</a></div><div class="ttdeci">WindowMode StrToWindowMode(const char *_modeStr)</div><div class="ttdoc">Convertit une chaîne de caractères en mode de fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.cpp:147</div></div>
+<div class="ttc" id="aclass_window_module_html_a7934ced6f9107b52b4647258adecfa7f"><div class="ttname"><a href="class_window_module.html#a7934ced6f9107b52b4647258adecfa7f">WindowModule::Finalize</a></div><div class="ttdeci">void Finalize() override</div><div class="ttdoc">Finalise le module.</div><div class="ttdef"><b>Definition</b> WindowModule.cpp:248</div></div>
+<div class="ttc" id="aclass_window_module_html_a7ef61b4a58aa4275faf9b66bf223f822"><div class="ttname"><a href="class_window_module.html#a7ef61b4a58aa4275faf9b66bf223f822">WindowModule::SetInputCursorMode</a></div><div class="ttdeci">void SetInputCursorMode(GlfwCursorMode _mode)</div><div class="ttdoc">Définit le mode de curseur d'entrée pour la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.cpp:109</div></div>
+<div class="ttc" id="aclass_window_module_html_a81d3bfa14e4aaf47ddaf06417bb376bc"><div class="ttname"><a href="class_window_module.html#a81d3bfa14e4aaf47ddaf06417bb376bc">WindowModule::operator=</a></div><div class="ttdeci">WindowModule &amp; operator=(const WindowModule &amp;)=delete</div><div class="ttdoc">Opérateur d'affectation de copie supprimé.</div></div>
+<div class="ttc" id="aclass_window_module_html_a8a7fa284d8a85bbb085e99c2c694b7e2"><div class="ttname"><a href="class_window_module.html#a8a7fa284d8a85bbb085e99c2c694b7e2">WindowModule::SetPositionX</a></div><div class="ttdeci">void SetPositionX(const int &amp;_positionX)</div><div class="ttdoc">Définit la coordonnée x de la position de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:586</div></div>
+<div class="ttc" id="aclass_window_module_html_a8adc66b68fcb8d01008f99578513bf58"><div class="ttname"><a href="class_window_module.html#a8adc66b68fcb8d01008f99578513bf58">WindowModule::SetCursorMode</a></div><div class="ttdeci">void SetCursorMode(const GlfwCursorMode &amp;_mode)</div><div class="ttdoc">Définit le mode du curseur de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:685</div></div>
+<div class="ttc" id="aclass_window_module_html_a8b735e722c56c2d3ef0b8aacc2bb46e4"><div class="ttname"><a href="class_window_module.html#a8b735e722c56c2d3ef0b8aacc2bb46e4">WindowModule::GetGlfwWindow</a></div><div class="ttdeci">GLFWwindow * GetGlfwWindow() const</div><div class="ttdoc">Obtient un pointeur vers la fenêtre GLFW.</div><div class="ttdef"><b>Definition</b> WindowModule.h:189</div></div>
+<div class="ttc" id="aclass_window_module_html_a8c0e41d5945be08dad704169ec1348ac"><div class="ttname"><a href="class_window_module.html#a8c0e41d5945be08dad704169ec1348ac">WindowModule::GetFrameBufferResize</a></div><div class="ttdeci">bool GetFrameBufferResize() const</div><div class="ttdoc">Vérifie si un redimensionnement du framebuffer de la fenêtre est en cours.</div><div class="ttdef"><b>Definition</b> WindowModule.h:367</div></div>
+<div class="ttc" id="aclass_window_module_html_a8fbe3ff773262dbd98389434d69e42ec"><div class="ttname"><a href="class_window_module.html#a8fbe3ff773262dbd98389434d69e42ec">WindowModule::StandardCursorWindow</a></div><div class="ttdeci">void StandardCursorWindow(GlfwCursorType _cursorType) const</div><div class="ttdoc">Définit le curseur standard de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.cpp:69</div></div>
+<div class="ttc" id="aclass_window_module_html_a95897491d08071deef4328ed5bb9f66a"><div class="ttname"><a href="class_window_module.html#a95897491d08071deef4328ed5bb9f66a">WindowModule::GetAspectRatio</a></div><div class="ttdeci">float GetAspectRatio() const</div><div class="ttdoc">Obtient le rapport largeur-hauteur de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:407</div></div>
+<div class="ttc" id="aclass_window_module_html_a98af15f4cd803986d3c6e7058baee79a"><div class="ttname"><a href="class_window_module.html#a98af15f4cd803986d3c6e7058baee79a">WindowModule::WasWindowResized</a></div><div class="ttdeci">bool WasWindowResized() const</div><div class="ttdoc">Indique si la fenêtre a été redimensionnée depuis la dernière vérification.</div><div class="ttdef"><b>Definition</b> WindowModule.h:166</div></div>
+<div class="ttc" id="aclass_window_module_html_aa10199f2b56f4e0275d3de3c90627b29"><div class="ttname"><a href="class_window_module.html#aa10199f2b56f4e0275d3de3c90627b29">WindowModule::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">Met à jour le temps écoulé depuis la dernière frame.</div><div class="ttdef"><b>Definition</b> WindowModule.cpp:198</div></div>
+<div class="ttc" id="aclass_window_module_html_aa3d9d940b5d53daff2fc277c38bf4d31"><div class="ttname"><a href="class_window_module.html#aa3d9d940b5d53daff2fc277c38bf4d31">WindowModule::SetUpdateWindowTitleFrequency</a></div><div class="ttdeci">void SetUpdateWindowTitleFrequency(const float &amp;_updateFrequencyInSeconds)</div><div class="ttdoc">Définit la fréquence de mise à jour du titre de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:664</div></div>
+<div class="ttc" id="aclass_window_module_html_aa99037e333459e4ad122ef19b16ba9cf"><div class="ttname"><a href="class_window_module.html#aa99037e333459e4ad122ef19b16ba9cf">WindowModule::HEIGHT</a></div><div class="ttdeci">static constexpr int HEIGHT</div><div class="ttdoc">Hauteur de la fen�tre par d�faut.</div><div class="ttdef"><b>Definition</b> WindowModule.h:116</div></div>
+<div class="ttc" id="aclass_window_module_html_aa99155593941ff3b293313e7abd979e1"><div class="ttname"><a href="class_window_module.html#aa99155593941ff3b293313e7abd979e1">WindowModule::GetWidth</a></div><div class="ttdeci">int GetWidth() const</div><div class="ttdoc">Obtient la largeur de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:253</div></div>
+<div class="ttc" id="aclass_window_module_html_aab373232babdfb9a4d9734a7cbbb85bb"><div class="ttname"><a href="class_window_module.html#aab373232babdfb9a4d9734a7cbbb85bb">WindowModule::SetWindowTitle</a></div><div class="ttdeci">void SetWindowTitle(const std::string &amp;_windowTitle)</div><div class="ttdoc">Définit le titre de la fenêtre affiché dans la barre de titre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:640</div></div>
+<div class="ttc" id="aclass_window_module_html_aab6379ef6c0fe63cfe29f7f1c3bee0a3"><div class="ttname"><a href="class_window_module.html#aab6379ef6c0fe63cfe29f7f1c3bee0a3">WindowModule::OnPositionChanged</a></div><div class="ttdeci">void OnPositionChanged(const glm::ivec2 &amp;_newPosition)</div><div class="ttdoc">Appelé lorsque la position de la fenêtre est modifiée.</div><div class="ttdef"><b>Definition</b> WindowModule.h:863</div></div>
+<div class="ttc" id="aclass_window_module_html_aacc29598aa3fd3cc3776699be6444938"><div class="ttname"><a href="class_window_module.html#aacc29598aa3fd3cc3776699be6444938">WindowModule::WIDTH</a></div><div class="ttdeci">static constexpr int WIDTH</div><div class="ttdoc">Largeur de la fen�tre par d�faut.</div><div class="ttdef"><b>Definition</b> WindowModule.h:115</div></div>
+<div class="ttc" id="aclass_window_module_html_aaf6702928e44fde93d7e4fa34ecf846f"><div class="ttname"><a href="class_window_module.html#aaf6702928e44fde93d7e4fa34ecf846f">WindowModule::WindowModule</a></div><div class="ttdeci">WindowModule()</div><div class="ttdoc">Constructeur de la classe WindowModule.</div><div class="ttdef"><b>Definition</b> WindowModule.cpp:25</div></div>
+<div class="ttc" id="aclass_window_module_html_ab63e2f86c82f1b2a8898788c8997d2c7"><div class="ttname"><a href="class_window_module.html#ab63e2f86c82f1b2a8898788c8997d2c7">WindowModule::Iconify</a></div><div class="ttdeci">void Iconify() const</div><div class="ttdoc">Minimise la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:919</div></div>
+<div class="ttc" id="aclass_window_module_html_ab6f598156600dbe20c95f4471a296b57"><div class="ttname"><a href="class_window_module.html#ab6f598156600dbe20c95f4471a296b57">WindowModule::SetPosition</a></div><div class="ttdeci">void SetPosition(const glm::ivec2 &amp;_position)</div><div class="ttdoc">Définit la position de la fenêtre en spécifiant les coordonnées x et y.</div><div class="ttdef"><b>Definition</b> WindowModule.h:557</div></div>
+<div class="ttc" id="aclass_window_module_html_ab7268e7f7a290117f4dcfec0b1cccd6e"><div class="ttname"><a href="class_window_module.html#ab7268e7f7a290117f4dcfec0b1cccd6e">WindowModule::SetWidth</a></div><div class="ttdeci">void SetWidth(const int &amp;_newWidth)</div><div class="ttdoc">Définit la largeur de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:494</div></div>
+<div class="ttc" id="aclass_window_module_html_abbea4d8a57fbcdbaf4763735dace03d6"><div class="ttname"><a href="class_window_module.html#abbea4d8a57fbcdbaf4763735dace03d6">WindowModule::SetFrameBufferResize</a></div><div class="ttdeci">void SetFrameBufferResize(const bool &amp;_state)</div><div class="ttdoc">Définit l'état de redimensionnement du framebuffer de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:654</div></div>
+<div class="ttc" id="aclass_window_module_html_abdd6a93fb152e08d41e4956026335452"><div class="ttname"><a href="class_window_module.html#abdd6a93fb152e08d41e4956026335452">WindowModule::GetStartingPositionX</a></div><div class="ttdeci">int GetStartingPositionX() const</div><div class="ttdoc">Obtient la position horizontale initiale de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:347</div></div>
+<div class="ttc" id="aclass_window_module_html_abe09899b92e659ba71b811044254191d"><div class="ttname"><a href="class_window_module.html#abe09899b92e659ba71b811044254191d">WindowModule::PollEvents</a></div><div class="ttdeci">void PollEvents()</div><div class="ttdoc">Traite tous les événements de la fenêtre en attente.</div><div class="ttdef"><b>Definition</b> WindowModule.h:240</div></div>
+<div class="ttc" id="aclass_window_module_html_ac090dbc2c5d2582a7334877ad5d80a15"><div class="ttname"><a href="class_window_module.html#ac090dbc2c5d2582a7334877ad5d80a15">WindowModule::SetFrameBufferSize</a></div><div class="ttdeci">void SetFrameBufferSize(const int32_t &amp;_newWidth, const int32_t &amp;_newHeight)</div><div class="ttdoc">Définit la taille du framebuffer de la fenêtre en spécifiant la largeur et la hauteur.</div><div class="ttdef"><b>Definition</b> WindowModule.h:522</div></div>
+<div class="ttc" id="aclass_window_module_html_ac53776af8d5a05223d465e39a55a4a68"><div class="ttname"><a href="class_window_module.html#ac53776af8d5a05223d465e39a55a4a68">WindowModule::SetWindowIcon</a></div><div class="ttdeci">void SetWindowIcon(const std::string &amp;_fileName) const</div><div class="ttdoc">Définit l'icône de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:787</div></div>
+<div class="ttc" id="aclass_window_module_html_ac79d598b44c2675c799f35965c045bf8"><div class="ttname"><a href="class_window_module.html#ac79d598b44c2675c799f35965c045bf8">WindowModule::Release</a></div><div class="ttdeci">void Release() override</div><div class="ttdoc">Libère les ressources utilisées par le module.</div><div class="ttdef"><b>Definition</b> WindowModule.cpp:241</div></div>
+<div class="ttc" id="aclass_window_module_html_ace2d5b839b89a84714b47daffe6772e9"><div class="ttname"><a href="class_window_module.html#ace2d5b839b89a84714b47daffe6772e9">WindowModule::SetMousePosition</a></div><div class="ttdeci">void SetMousePosition(const glm::ivec2 _mousePosition) const</div><div class="ttdoc">Définit la position du curseur de la souris.</div><div class="ttdef"><b>Definition</b> WindowModule.h:614</div></div>
+<div class="ttc" id="aclass_window_module_html_ace948d4af563849cf88e973a157c27f5"><div class="ttname"><a href="class_window_module.html#ace948d4af563849cf88e973a157c27f5">WindowModule::Maximize</a></div><div class="ttdeci">void Maximize() const</div><div class="ttdoc">Maximise la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:912</div></div>
+<div class="ttc" id="aclass_window_module_html_ada524e4571b2b589c16945adee5ca42e"><div class="ttname"><a href="class_window_module.html#ada524e4571b2b589c16945adee5ca42e">WindowModule::SetClipboardText</a></div><div class="ttdeci">void SetClipboardText(const char *_text) const</div><div class="ttdoc">Définit le texte du presse-papiers.</div><div class="ttdef"><b>Definition</b> WindowModule.h:775</div></div>
+<div class="ttc" id="aclass_window_module_html_ae14b497a2f7f416b3261b00d67fb6db9"><div class="ttname"><a href="class_window_module.html#ae14b497a2f7f416b3261b00d67fb6db9">WindowModule::OnSizeChanged</a></div><div class="ttdeci">void OnSizeChanged(const int32_t _width, const int32_t _height)</div><div class="ttdoc">Appelé lorsque la taille de la fenêtre est modifiée.</div><div class="ttdef"><b>Definition</b> WindowModule.h:810</div></div>
+<div class="ttc" id="aclass_window_module_html_aef59173c5c253544cf2de5e1710d1ffc"><div class="ttname"><a href="class_window_module.html#aef59173c5c253544cf2de5e1710d1ffc">WindowModule::SetName</a></div><div class="ttdeci">void SetName(const std::string &amp;_newName)</div><div class="ttdoc">Définit le nom de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:631</div></div>
+<div class="ttc" id="aclass_window_module_html_aefd6685c1a7e4ce9db403e30f8e79a3b"><div class="ttname"><a href="class_window_module.html#aefd6685c1a7e4ce9db403e30f8e79a3b">WindowModule::SetPosition</a></div><div class="ttdeci">void SetPosition(const int32_t &amp;_newPositionX, const int32_t &amp;_newPositionY)</div><div class="ttdoc">Définit la position de la fenêtre en spécifiant la coordonnée x et y.</div><div class="ttdef"><b>Definition</b> WindowModule.h:572</div></div>
+<div class="ttc" id="aclass_window_module_html_af03714ddee79357df5b85301c6780263"><div class="ttname"><a href="class_window_module.html#af03714ddee79357df5b85301c6780263">WindowModule::GetFrameBufferHeight</a></div><div class="ttdeci">int GetFrameBufferHeight() const</div><div class="ttdoc">Obtient la hauteur du framebuffer.</div><div class="ttdef"><b>Definition</b> WindowModule.h:289</div></div>
+<div class="ttc" id="aclass_window_module_html_af75c79b5219f96caa255846f80d30ade"><div class="ttname"><a href="class_window_module.html#af75c79b5219f96caa255846f80d30ade">WindowModule::SetFrameBufferHeight</a></div><div class="ttdeci">void SetFrameBufferHeight(const int &amp;_newHeight)</div><div class="ttdoc">Définit la hauteur du framebuffer de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:543</div></div>
+<div class="ttc" id="aclass_window_module_html_af8a0593bd7384f1644e9d1051d0f11d2"><div class="ttname"><a href="class_window_module.html#af8a0593bd7384f1644e9d1051d0f11d2">WindowModule::RenderGui</a></div><div class="ttdeci">void RenderGui() override</div><div class="ttdoc">Rendu de l'interface graphique du module.</div><div class="ttdef"><b>Definition</b> WindowModule.cpp:229</div></div>
+<div class="ttc" id="aclass_window_module_html_afaa58a06178289492ce7aecf41606ecc"><div class="ttname"><a href="class_window_module.html#afaa58a06178289492ce7aecf41606ecc">WindowModule::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdoc">Initialise le module.</div><div class="ttdef"><b>Definition</b> WindowModule.cpp:160</div></div>
+<div class="ttc" id="aclass_window_module_html_afc1508e4f04a44d0cb8b4602fe7e602a"><div class="ttname"><a href="class_window_module.html#afc1508e4f04a44d0cb8b4602fe7e602a">WindowModule::GetSize</a></div><div class="ttdeci">glm::vec2 GetSize() const</div><div class="ttdoc">Obtient la taille de la fenêtre.</div><div class="ttdef"><b>Definition</b> WindowModule.h:271</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

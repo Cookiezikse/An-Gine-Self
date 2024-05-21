@@ -1,0 +1,86 @@
+\doxysection{Référence de la classe Bousk\+::Network\+::Address}
+\hypertarget{class_bousk_1_1_network_1_1_address}{}\label{class_bousk_1_1_network_1_1_address}\index{Bousk::Network::Address@{Bousk::Network::Address}}
+\doxysubsubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_aeaf498e40e42a34365ba58c2bdd56b7b}\label{class_bousk_1_1_network_1_1_address_aeaf498e40e42a34365ba58c2bdd56b7b} 
+enum class {\bfseries Type} \{ {\bfseries None}
+, {\bfseries IPv4}
+, {\bfseries IPv6}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_af050de9ade2b0e31ffcca707ad0825fa}\label{class_bousk_1_1_network_1_1_address_af050de9ade2b0e31ffcca707ad0825fa} 
+{\bfseries Address} (const \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} \&) noexcept
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_a535be31280396d2f0ec9ad870dd9216e}\label{class_bousk_1_1_network_1_1_address_a535be31280396d2f0ec9ad870dd9216e} 
+{\bfseries Address} (\mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} \&\&) noexcept
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_a7fb84064f4c5f0725b1482c498aabd7b}\label{class_bousk_1_1_network_1_1_address_a7fb84064f4c5f0725b1482c498aabd7b} 
+\mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} \&) noexcept
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_aca2105100041ee072956162226267f77}\label{class_bousk_1_1_network_1_1_address_aca2105100041ee072956162226267f77} 
+\mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} \& {\bfseries operator=} (\mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} \&\&) noexcept
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_a0004d93aadb3b193c11d887d4ba4cd34}\label{class_bousk_1_1_network_1_1_address_a0004d93aadb3b193c11d887d4ba4cd34} 
+{\bfseries Address} (const std\+::string \&ip, uint16 port) noexcept
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_a9b389b41368037606df4e1a2ed6fa28e}\label{class_bousk_1_1_network_1_1_address_a9b389b41368037606df4e1a2ed6fa28e} 
+{\bfseries Address} (const sockaddr\+\_\+storage \&addr) noexcept
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_ab90c546e5ca75e86ae4e5be043054756}\label{class_bousk_1_1_network_1_1_address_ab90c546e5ca75e86ae4e5be043054756} 
+bool {\bfseries is\+Valid} () const
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_acd4278c1f67b08c5e6c90438c60e0eaa}\label{class_bousk_1_1_network_1_1_address_acd4278c1f67b08c5e6c90438c60e0eaa} 
+Type {\bfseries type} () const
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_a60609650ac35d5647e0b1b91d2fca5d0}\label{class_bousk_1_1_network_1_1_address_a60609650ac35d5647e0b1b91d2fca5d0} 
+std\+::string {\bfseries address} () const
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_aef55317d112959c3effb22b1cca385d2}\label{class_bousk_1_1_network_1_1_address_aef55317d112959c3effb22b1cca385d2} 
+uint16 {\bfseries port} () const
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_aba4a29bcc571b96fa3cc07bdfb3ad6fe}\label{class_bousk_1_1_network_1_1_address_aba4a29bcc571b96fa3cc07bdfb3ad6fe} 
+std\+::string {\bfseries to\+String} () const
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_a15e87ccf0ed79e15116eb36f1ecc5044}\label{class_bousk_1_1_network_1_1_address_a15e87ccf0ed79e15116eb36f1ecc5044} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} \&other) const
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_a263d9c402ae3a0510d1a43fab3a47523}\label{class_bousk_1_1_network_1_1_address_a263d9c402ae3a0510d1a43fab3a47523} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} \&other) const
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_af82742d486880612b2680d0f21eb6136}\label{class_bousk_1_1_network_1_1_address_af82742d486880612b2680d0f21eb6136} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} \&other) const
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_aa0cc78f0e6ea1a780c38e9acaea79158}\label{class_bousk_1_1_network_1_1_address_aa0cc78f0e6ea1a780c38e9acaea79158} 
+bool {\bfseries connect} (SOCKET sckt) const
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_a7c6b7d55a9945e9e9380068e800fa9ef}\label{class_bousk_1_1_network_1_1_address_a7c6b7d55a9945e9e9380068e800fa9ef} 
+bool {\bfseries accept} (SOCKET sckt, SOCKET \&new\+Client)
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_a6351d1c830da38a3a63ce7d46c13d2b2}\label{class_bousk_1_1_network_1_1_address_a6351d1c830da38a3a63ce7d46c13d2b2} 
+bool {\bfseries bind} (SOCKET sckt) const
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_a7d1f78cb5d621883a8dfaeda143415c3}\label{class_bousk_1_1_network_1_1_address_a7d1f78cb5d621883a8dfaeda143415c3} 
+int {\bfseries send\+To} (SOCKET sckt, const char \texorpdfstring{$\ast$}{*}data, size\+\_\+t datalen) const
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_ad0bbf516239164c30990e69c8e49fe93}\label{class_bousk_1_1_network_1_1_address_ad0bbf516239164c30990e69c8e49fe93} 
+int {\bfseries recv\+From} (SOCKET sckt, uint8 \texorpdfstring{$\ast$}{*}buffer, size\+\_\+t buffer\+Size)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_a3947ccddebfd9a89b34a5f282ee93049}\label{class_bousk_1_1_network_1_1_address_a3947ccddebfd9a89b34a5f282ee93049} 
+static \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} {\bfseries Any} (Type type, uint16 port)
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_address_a7fd14bf0adbfc6090023067b76b3e8d3}\label{class_bousk_1_1_network_1_1_address_a7fd14bf0adbfc6090023067b76b3e8d3} 
+static \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} {\bfseries Loopback} (Type type, uint16 port)
+\end{DoxyCompactItemize}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+UDP/Address.\+h\item 
+sources/\+UDP/Address.\+cpp\end{DoxyCompactItemize}

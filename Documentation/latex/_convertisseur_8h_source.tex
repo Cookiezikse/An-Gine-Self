@@ -1,0 +1,18 @@
+\doxysection{Convertisseur.\+h}
+\hypertarget{_convertisseur_8h_source}{}\label{_convertisseur_8h_source}\index{includes/Tools/Convertisseur.h@{includes/Tools/Convertisseur.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <glm.hpp>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <BulletCollision/CollisionShapes/btBoxShape.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_convertisseur}{Convertisseur}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ btVector3\ \mbox{\hyperlink{class_convertisseur_ab02138b4f9d1ff714c8f4b6b14e04bf4}{GlmVec3ToBtVector3}}(\textcolor{keyword}{const}\ glm::vec3\&\ \_glmVec)}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ btVector3(\_glmVec.x,\ \_glmVec.y,\ \_glmVec.z);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,66 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Simple\+Render\+System}
+\hypertarget{classlve_1_1_simple_render_system}{}\label{classlve_1_1_simple_render_system}\index{lve::SimpleRenderSystem@{lve::SimpleRenderSystem}}
+
+
+Classe représentant la première application utilisant Vulkan.  
+
+
+
+
+{\ttfamily \#include $<$simple\+\_\+render\+\_\+system.\+h$>$}
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classlve_1_1_simple_render_system_a78077405c83ab5668f94d256e522b503}\label{classlve_1_1_simple_render_system_a78077405c83ab5668f94d256e522b503} 
+{\bfseries Simple\+Render\+System} (\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&\+\_\+device, vk\+::\+Render\+Pass \+\_\+render\+Pass, vk\+::\+Descriptor\+Set\+Layout \+\_\+global\+Set\+Layout)
+\item 
+\Hypertarget{classlve_1_1_simple_render_system_aff00780fef483cd224a4bcf99f47e778}\label{classlve_1_1_simple_render_system_aff00780fef483cd224a4bcf99f47e778} 
+{\bfseries Simple\+Render\+System} (const \mbox{\hyperlink{classlve_1_1_simple_render_system}{Simple\+Render\+System}} \&)=delete
+\item 
+\Hypertarget{classlve_1_1_simple_render_system_adf4bcfc982f9cfb6397d24c2d263ecf6}\label{classlve_1_1_simple_render_system_adf4bcfc982f9cfb6397d24c2d263ecf6} 
+\mbox{\hyperlink{classlve_1_1_simple_render_system}{Simple\+Render\+System}} {\bfseries operator=} (const \mbox{\hyperlink{classlve_1_1_simple_render_system}{Simple\+Render\+System}} \&)=delete
+\item 
+void \mbox{\hyperlink{classlve_1_1_simple_render_system_a89c94cf10ed36158f77c69bcf7a279b1}{Render\+Game\+Objects}} (const std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&\+\_\+game\+Objects, const \mbox{\hyperlink{classlve_1_1_lve_camera}{Lve\+Camera}} \&\+\_\+camera, const vk\+::\+Command\+Buffer \+\_\+command\+Buffer, std\+::vector$<$ std\+::vector$<$ vk\+::\+Descriptor\+Set $>$ \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}\+\_\+\+Descriptor\+Sets\+All, int \+\_\+frame\+Index) const
+\begin{DoxyCompactList}\small\item\em Rend les objets de jeu avec le système de rendu simple. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Classe représentant la première application utilisant Vulkan. 
+
+Cette classe gère l\textquotesingle{}exécution de la première application Vulkan, incluant la création de la fenêtre. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_simple_render_system_a89c94cf10ed36158f77c69bcf7a279b1}\label{classlve_1_1_simple_render_system_a89c94cf10ed36158f77c69bcf7a279b1} 
+\index{lve::SimpleRenderSystem@{lve::SimpleRenderSystem}!RenderGameObjects@{RenderGameObjects}}
+\index{RenderGameObjects@{RenderGameObjects}!lve::SimpleRenderSystem@{lve::SimpleRenderSystem}}
+\doxysubsubsection{\texorpdfstring{RenderGameObjects()}{RenderGameObjects()}}
+{\footnotesize\ttfamily void lve\+::\+Simple\+Render\+System\+::\+Render\+Game\+Objects (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&}]{\+\_\+game\+Objects,  }\item[{const \mbox{\hyperlink{classlve_1_1_lve_camera}{Lve\+Camera}} \&}]{\+\_\+camera,  }\item[{const vk\+::\+Command\+Buffer}]{\+\_\+command\+Buffer,  }\item[{std\+::vector$<$ std\+::vector$<$ vk\+::\+Descriptor\+Set $>$ \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}}]{\+\_\+\+Descriptor\+Sets\+All,  }\item[{int}]{\+\_\+frame\+Index }\end{DoxyParamCaption}) const}
+
+
+
+Rend les objets de jeu avec le système de rendu simple. 
+
+Cette méthode rend les objets de jeu avec le système de rendu simple en utilisant le pipeline graphique et le layout du pipeline spécifiés dans le cadre d\textquotesingle{}une Frame.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+game\+Objects} & \\
+\hline
+{\em \+\_\+camera} & \\
+\hline
+{\em \+\_\+command\+Buffer} & \\
+\hline
+{\em \+\_\+global\+Descriptor\+Set} & \\
+\hline
+{\em \+\_\+tex1\+Descriptor\+Set} & \\
+\hline
+{\em \+\_\+tex2\+Descriptor\+Set} & \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Systems/simple\+\_\+render\+\_\+system.\+h\item 
+sources/\+Systems/simple\+\_\+render\+\_\+system.\+cpp\end{DoxyCompactItemize}

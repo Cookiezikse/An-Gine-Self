@@ -1,0 +1,574 @@
+\doxysection{RÃ©fÃ©rence de la classe Scene\+Manager}
+\hypertarget{class_scene_manager}{}\label{class_scene_manager}\index{SceneManager@{SceneManager}}
+
+
+Gestionnaire de scène.  
+
+
+
+
+{\ttfamily \#include $<$Scene\+Manager.\+h$>$}
+
+Graphe d\textquotesingle{}hÃ©ritage de Scene\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_scene_manager_a0ed1dde5e2e695e1a044b294d656b817}\label{class_scene_manager_a0ed1dde5e2e695e1a044b294d656b817} 
+{\bfseries Scene\+Manager} (const \mbox{\hyperlink{class_scene_manager}{Scene\+Manager}} \&\&)=delete
+\item 
+\Hypertarget{class_scene_manager_a453ab6cc351aa4a8a2dd5d44bcf929f3}\label{class_scene_manager_a453ab6cc351aa4a8a2dd5d44bcf929f3} 
+{\bfseries Scene\+Manager} (const \mbox{\hyperlink{class_scene_manager}{Scene\+Manager}} \&)=delete
+\item 
+\Hypertarget{class_scene_manager_ae4d56292a6f987ba6168b7d529679c3b}\label{class_scene_manager_ae4d56292a6f987ba6168b7d529679c3b} 
+\mbox{\hyperlink{class_scene_manager}{Scene\+Manager}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_scene_manager}{Scene\+Manager}} \&\&)=delete
+\item 
+\Hypertarget{class_scene_manager_a7be3f88ace1f3a7f57714d8a4ac5c633}\label{class_scene_manager_a7be3f88ace1f3a7f57714d8a4ac5c633} 
+\mbox{\hyperlink{class_scene_manager}{Scene\+Manager}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_scene_manager}{Scene\+Manager}} \&)=delete
+\item 
+\mbox{\hyperlink{class_base_scene}{Base\+Scene}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_scene_manager_aba8b1be9b5a289b33520a80658771d2a}{Get\+Main\+Scene}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la scène principale. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_base_scene}{Base\+Scene}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_scene_manager_a04b9dd56a64a6599cca2cece16e276b5}{Get\+Scene}} (const std\+::string \&\+\_\+scene\+Name)
+\begin{DoxyCompactList}\small\item\em Obtient une scène spécifiée par son nom. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_scene_manager_a81fec03997f16114a340474975727ffe}{Get\+Active\+Scene}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le nom de la scène active. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_scene_manager_a2d86b498b0074f803d4e97f86214a2a3}{Get\+List\+Scenes}} () const
+\begin{DoxyCompactList}\small\item\em Obtient une liste des noms de toutes les scènes disponibles. \end{DoxyCompactList}\item 
+std\+::pair$<$ std\+::string, bool $>$ \mbox{\hyperlink{class_scene_manager_af21b4b6724d70807d69a6ce40a65449b}{Get\+Scene\+At}} (int \+\_\+index)
+\begin{DoxyCompactList}\small\item\em Obtient la scène à l\textquotesingle{}index spécifié. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_base_scene}{Base\+Scene}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_scene_manager_a31377f7bcfc9bdd10419fa4c03a00de8}{Get\+Current\+Scene}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la scène actuellement active. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_base_scene}{Base\+Scene}} $>$ $>$ \& \mbox{\hyperlink{class_scene_manager_a4556cee9c03d7c631229ca9426a026c8}{Get\+Scenes}} ()
+\begin{DoxyCompactList}\small\item\em Obtient une référence à la liste des scènes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_af722ab55b440e93fbe069960d890bcc0}{Set\+Main\+Scene}} (const std\+::string \&\+\_\+scene\+Name)
+\begin{DoxyCompactList}\small\item\em Définit la scène principale. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_acd136763a551c25bcdb03fc17c44d883}{Set\+Current\+Scene}} (int \+\_\+scene\+Index)
+\begin{DoxyCompactList}\small\item\em Définit la scène à activer en fonction de son index dans la liste des scènes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_ae265bdb684aa562a21b51cae02e6dd52}{Set\+Next\+Scene\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Active la scène suivante dans la liste des scènes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_ae109186c3605a7689f645910974ee4cd}{Set\+Previous\+Scene\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Active la scène précédente dans la liste des scènes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_a51e249e4b38867d50f919d34f61ac370}{Run\+Scene}} (const std\+::string \&\+\_\+scene\+Name)
+\begin{DoxyCompactList}\small\item\em Exécute une scène spécifiée. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_a581b0ebf82f265a44290ba9d6d4e785c}{Rename\+Scene}} (const std\+::string \&\+\_\+old\+Name, const std\+::string \&\+\_\+new\+Name)
+\begin{DoxyCompactList}\small\item\em Renomme une scène. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_a2184d43df8adef0858ce24ac1548635e}{Create\+Scene}} (std\+::string \+\_\+name, bool \+\_\+is\+Active)
+\begin{DoxyCompactList}\small\item\em Crée une nouvelle scène avec le nom spécifié. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_aacdacb552ef3d9d524b3c7371db3e4a7}{Destroy\+Scene}} (const std\+::string \&\+\_\+scene\+Name)
+\begin{DoxyCompactList}\small\item\em Détruit une scène spécifiée par son nom. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_scene_manager_a23797d4db5d0bb51e341eddb72e03126}{Load\+Scene\+From\+File}} (const std\+::string \&\+\_\+file\+Name)
+\begin{DoxyCompactList}\small\item\em Charge une scène à partir d\textquotesingle{}un fichier avec le nom spécifié. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_scene_manager_a6b04b1947f424db019d5e72cc4f6cbe4}{Scene\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le nombre total de scènes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_a815fe64990319f865c49509e9c47af10}{Init}} () override
+\begin{DoxyCompactList}\small\item\em Initialise le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_a5ce2f53c90d5962f9fd9fec9b3ba3cb9}{Start}} () override
+\begin{DoxyCompactList}\small\item\em Démarre le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_ad807cee6363834065124fc3947ab4dba}{Fixed\+Update}} () override
+\begin{DoxyCompactList}\small\item\em Effectue une mise à jour fixe du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_a2bf803ee00bc2ad61ed5e59e40031a0b}{Update}} () override
+\begin{DoxyCompactList}\small\item\em Met à jour le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_ac2053b2a0a6706b6a4c7f289dcf83bb3}{Pre\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction pré-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_a4109a47aea9931ea1e633bfbf3d5a8c1}{Render}} () override
+\begin{DoxyCompactList}\small\item\em Rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_a6441c5d068e171fb206fed11df7f31d8}{Render\+Gui}} () override
+\begin{DoxyCompactList}\small\item\em Rendu de l\textquotesingle{}interface graphique du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_a566053d09985b3a500e18252a75e16b6}{Post\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction post-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_a38751b46a6e7d069366bb3030de6e99f}{Release}} () override
+\begin{DoxyCompactList}\small\item\em Libère les ressources utilisées par le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_manager_a89dcfdecfa27c69d5f5eacbe8ba998c2}{Finalize}} () override
+\begin{DoxyCompactList}\small\item\em Finalise le module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membres hÃ©ritÃ©s additionnels}
+\doxysubsection*{Fonctions membres protÃ©gÃ©es hÃ©ritÃ©s de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_af09dc286b704160d8f0f273e1fe8576b}{\texorpdfstring{$\sim$}{\string~}\+Module}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur protégé. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protÃ©gÃ©s hÃ©ritÃ©s de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_manager}{Module\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_module_a8d9f92fc1216d933c961bfa685b0ad6f}{module\+Manager}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Gestionnaire de scène. 
+
+Gère les opérations liées aux scènes, telles que la création, la destruction et la manipulation des objets de la scène. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_scene_manager_a2184d43df8adef0858ce24ac1548635e}\label{class_scene_manager_a2184d43df8adef0858ce24ac1548635e} 
+\index{SceneManager@{SceneManager}!CreateScene@{CreateScene}}
+\index{CreateScene@{CreateScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{CreateScene()}{CreateScene()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Create\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+name,  }\item[{bool}]{\+\_\+is\+Active }\end{DoxyParamCaption})}
+
+
+
+Crée une nouvelle scène avec le nom spécifié. 
+
+Crée une nouvelle scène.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+name} & Le nom de la nouvelle scène. \\
+\hline
+{\em \+\_\+is\+Active} & Indique si la nouvelle scène doit être active ou non.\\
+\hline
+{\em \+\_\+name} & Nom de la nouvelle scène. \\
+\hline
+{\em \+\_\+is\+Active} & Indique si la nouvelle scène est active. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scene_manager_aacdacb552ef3d9d524b3c7371db3e4a7}\label{class_scene_manager_aacdacb552ef3d9d524b3c7371db3e4a7} 
+\index{SceneManager@{SceneManager}!DestroyScene@{DestroyScene}}
+\index{DestroyScene@{DestroyScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{DestroyScene()}{DestroyScene()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Destroy\+Scene (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+scene\+Name }\end{DoxyParamCaption})}
+
+
+
+Détruit une scène spécifiée par son nom. 
+
+Supprime une scène de la liste des scènes.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+scene\+Name} & Le nom de la scène à détruire.\\
+\hline
+{\em \+\_\+scene\+Name} & Nom de la scène à supprimer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scene_manager_a89dcfdecfa27c69d5f5eacbe8ba998c2}\label{class_scene_manager_a89dcfdecfa27c69d5f5eacbe8ba998c2} 
+\index{SceneManager@{SceneManager}!Finalize@{Finalize}}
+\index{Finalize@{Finalize}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{Finalize()}{Finalize()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finalise le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a4ed07ee636825b626c8f5021c34e408c}{Module}}.
+
+\Hypertarget{class_scene_manager_ad807cee6363834065124fc3947ab4dba}\label{class_scene_manager_ad807cee6363834065124fc3947ab4dba} 
+\index{SceneManager@{SceneManager}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Effectue une mise à jour fixe du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a4bbf5f6e563f86794d7ae718371f1ca4}{Module}}.
+
+\Hypertarget{class_scene_manager_a81fec03997f16114a340474975727ffe}\label{class_scene_manager_a81fec03997f16114a340474975727ffe} 
+\index{SceneManager@{SceneManager}!GetActiveScene@{GetActiveScene}}
+\index{GetActiveScene@{GetActiveScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{GetActiveScene()}{GetActiveScene()}}
+{\footnotesize\ttfamily std\+::string Scene\+Manager\+::\+Get\+Active\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtient le nom de la scène active. 
+
+Récupère le nom de la scène active.
+
+\begin{DoxyReturn}{Renvoie}
+Le nom de la scène active.
+
+Le nom de la scène active, ou "{}\+None"{} si aucune scène n\textquotesingle{}est active. 
+\end{DoxyReturn}
+\Hypertarget{class_scene_manager_a31377f7bcfc9bdd10419fa4c03a00de8}\label{class_scene_manager_a31377f7bcfc9bdd10419fa4c03a00de8} 
+\index{SceneManager@{SceneManager}!GetCurrentScene@{GetCurrentScene}}
+\index{GetCurrentScene@{GetCurrentScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{GetCurrentScene()}{GetCurrentScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_base_scene}{Base\+Scene}} \texorpdfstring{$\ast$}{*} Scene\+Manager\+::\+Get\+Current\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtient la scène actuellement active. 
+
+Récupère la scène courante.
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers la scène actuellement active.
+
+Un pointeur vers la scène courante si l\textquotesingle{}index de la scène courante est valide, sinon nullptr. 
+\end{DoxyReturn}
+\Hypertarget{class_scene_manager_a2d86b498b0074f803d4e97f86214a2a3}\label{class_scene_manager_a2d86b498b0074f803d4e97f86214a2a3} 
+\index{SceneManager@{SceneManager}!GetListScenes@{GetListScenes}}
+\index{GetListScenes@{GetListScenes}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{GetListScenes()}{GetListScenes()}}
+{\footnotesize\ttfamily std\+::string Scene\+Manager\+::\+Get\+List\+Scenes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtient une liste des noms de toutes les scènes disponibles. 
+
+Récupère le nom de la première scène dans la liste des scènes.
+
+\begin{DoxyReturn}{Renvoie}
+Une chaîne contenant les noms de toutes les scènes disponibles.
+
+Le nom de la première scène, ou "{}\+None"{} si la liste des scènes est vide. 
+\end{DoxyReturn}
+\Hypertarget{class_scene_manager_aba8b1be9b5a289b33520a80658771d2a}\label{class_scene_manager_aba8b1be9b5a289b33520a80658771d2a} 
+\index{SceneManager@{SceneManager}!GetMainScene@{GetMainScene}}
+\index{GetMainScene@{GetMainScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{GetMainScene()}{GetMainScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_base_scene}{Base\+Scene}} \texorpdfstring{$\ast$}{*} Scene\+Manager\+::\+Get\+Main\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la scène principale. 
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers la scène principale. 
+\end{DoxyReturn}
+\Hypertarget{class_scene_manager_a04b9dd56a64a6599cca2cece16e276b5}\label{class_scene_manager_a04b9dd56a64a6599cca2cece16e276b5} 
+\index{SceneManager@{SceneManager}!GetScene@{GetScene}}
+\index{GetScene@{GetScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{GetScene()}{GetScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_base_scene}{Base\+Scene}} \texorpdfstring{$\ast$}{*} Scene\+Manager\+::\+Get\+Scene (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+scene\+Name }\end{DoxyParamCaption})}
+
+
+
+Obtient une scène spécifiée par son nom. 
+
+Récupère une scène par son nom.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+scene\+Name} & Le nom de la scène à récupérer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers la scène demandée, ou nullptr si elle n\textquotesingle{}est pas trouvée.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+scene\+Name} & Nom de la scène à récupérer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers la scène si elle existe, sinon nullptr. 
+\end{DoxyReturn}
+\Hypertarget{class_scene_manager_af21b4b6724d70807d69a6ce40a65449b}\label{class_scene_manager_af21b4b6724d70807d69a6ce40a65449b} 
+\index{SceneManager@{SceneManager}!GetSceneAt@{GetSceneAt}}
+\index{GetSceneAt@{GetSceneAt}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{GetSceneAt()}{GetSceneAt()}}
+{\footnotesize\ttfamily std\+::pair$<$ std\+::string, bool $>$ Scene\+Manager\+::\+Get\+Scene\+At (\begin{DoxyParamCaption}\item[{int}]{\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Obtient la scène à l\textquotesingle{}index spécifié. 
+
+Récupère la scène à un index donné dans la liste des scènes.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+index} & L\textquotesingle{}index de la scène à récupérer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Une paire contenant le nom de la scène et un booléen indiquant si elle est active.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+index} & Index de la scène à récupérer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Une paire contenant le nom de la scène et son état d\textquotesingle{}activité, ou une paire "{}\+None"{} si l\textquotesingle{}index est invalide. 
+\end{DoxyReturn}
+\Hypertarget{class_scene_manager_a4556cee9c03d7c631229ca9426a026c8}\label{class_scene_manager_a4556cee9c03d7c631229ca9426a026c8} 
+\index{SceneManager@{SceneManager}!GetScenes@{GetScenes}}
+\index{GetScenes@{GetScenes}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{GetScenes()}{GetScenes()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_base_scene}{Base\+Scene}} $>$ $>$ \& Scene\+Manager\+::\+Get\+Scenes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient une référence à la liste des scènes. 
+
+\begin{DoxyReturn}{Renvoie}
+Une référence à la liste des scènes. 
+\end{DoxyReturn}
+\Hypertarget{class_scene_manager_a815fe64990319f865c49509e9c47af10}\label{class_scene_manager_a815fe64990319f865c49509e9c47af10} 
+\index{SceneManager@{SceneManager}!Init@{Init}}
+\index{Init@{Init}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialise le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a0151ba4ab62f6e91251b0a20b168985e}{Module}}.
+
+\Hypertarget{class_scene_manager_a23797d4db5d0bb51e341eddb72e03126}\label{class_scene_manager_a23797d4db5d0bb51e341eddb72e03126} 
+\index{SceneManager@{SceneManager}!LoadSceneFromFile@{LoadSceneFromFile}}
+\index{LoadSceneFromFile@{LoadSceneFromFile}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{LoadSceneFromFile()}{LoadSceneFromFile()}}
+{\footnotesize\ttfamily bool Scene\+Manager\+::\+Load\+Scene\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+file\+Name }\end{DoxyParamCaption})}
+
+
+
+Charge une scène à partir d\textquotesingle{}un fichier avec le nom spécifié. 
+
+Charge une scène à partir d\textquotesingle{}un fichier.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+file\+Name} & Le nom du fichier de la scène à charger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si la scène a été chargée avec succès, sinon false.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+file\+Name} & Nom du fichier de scène à charger. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si la scène a été chargée avec succès, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_scene_manager_a566053d09985b3a500e18252a75e16b6}\label{class_scene_manager_a566053d09985b3a500e18252a75e16b6} 
+\index{SceneManager@{SceneManager}!PostRender@{PostRender}}
+\index{PostRender@{PostRender}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{PostRender()}{PostRender()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Post\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction post-\/rendu du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a0bb23668b2717e4bb3b4e1f6350a7e87}{Module}}.
+
+\Hypertarget{class_scene_manager_ac2053b2a0a6706b6a4c7f289dcf83bb3}\label{class_scene_manager_ac2053b2a0a6706b6a4c7f289dcf83bb3} 
+\index{SceneManager@{SceneManager}!PreRender@{PreRender}}
+\index{PreRender@{PreRender}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{PreRender()}{PreRender()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Pre\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction pré-\/rendu du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a7a88e7aaddd55bf9f15beb8d297afd1e}{Module}}.
+
+\Hypertarget{class_scene_manager_a38751b46a6e7d069366bb3030de6e99f}\label{class_scene_manager_a38751b46a6e7d069366bb3030de6e99f} 
+\index{SceneManager@{SceneManager}!Release@{Release}}
+\index{Release@{Release}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Libère les ressources utilisées par le module. 
+
+Détruit toutes les scènes et vide la liste des scènes. L\textquotesingle{}index de la scène courante est réinitialisé à -\/1. 
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a7e2e4615b80a57040eccf9794bee1007}{Module}}.
+
+\Hypertarget{class_scene_manager_a581b0ebf82f265a44290ba9d6d4e785c}\label{class_scene_manager_a581b0ebf82f265a44290ba9d6d4e785c} 
+\index{SceneManager@{SceneManager}!RenameScene@{RenameScene}}
+\index{RenameScene@{RenameScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{RenameScene()}{RenameScene()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Rename\+Scene (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+old\+Name,  }\item[{const std\+::string \&}]{\+\_\+new\+Name }\end{DoxyParamCaption})}
+
+
+
+Renomme une scène. 
+
+Renomme une scène dans la liste des scènes.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+old\+Name} & Le nom actuel de la scène. \\
+\hline
+{\em \+\_\+new\+Name} & Le nouveau nom de la scène.\\
+\hline
+{\em \+\_\+old\+Name} & Ancien nom de la scène à renommer. \\
+\hline
+{\em \+\_\+new\+Name} & Nouveau nom de la scène. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scene_manager_a4109a47aea9931ea1e633bfbf3d5a8c1}\label{class_scene_manager_a4109a47aea9931ea1e633bfbf3d5a8c1} 
+\index{SceneManager@{SceneManager}!Render@{Render}}
+\index{Render@{Render}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_ab6ec60e3eced3faa0217348cfca2785f}{Module}}.
+
+\Hypertarget{class_scene_manager_a6441c5d068e171fb206fed11df7f31d8}\label{class_scene_manager_a6441c5d068e171fb206fed11df7f31d8} 
+\index{SceneManager@{SceneManager}!RenderGui@{RenderGui}}
+\index{RenderGui@{RenderGui}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{RenderGui()}{RenderGui()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Render\+Gui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu de l\textquotesingle{}interface graphique du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_aadc90c55712eba976e6bf87318713d11}{Module}}.
+
+\Hypertarget{class_scene_manager_a51e249e4b38867d50f919d34f61ac370}\label{class_scene_manager_a51e249e4b38867d50f919d34f61ac370} 
+\index{SceneManager@{SceneManager}!RunScene@{RunScene}}
+\index{RunScene@{RunScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{RunScene()}{RunScene()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Run\+Scene (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+scene\+Name }\end{DoxyParamCaption})}
+
+
+
+Exécute une scène spécifiée. 
+
+Sauvegarde une scène dans un fichier.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+scene\+Name} & Le nom de la scène à exécuter.\\
+\hline
+{\em \+\_\+file\+Name} & Nom du fichier de scène à sauvegarder. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si la scène a été sauvegardée avec succès, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_scene_manager_a6b04b1947f424db019d5e72cc4f6cbe4}\label{class_scene_manager_a6b04b1947f424db019d5e72cc4f6cbe4} 
+\index{SceneManager@{SceneManager}!SceneCount@{SceneCount}}
+\index{SceneCount@{SceneCount}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{SceneCount()}{SceneCount()}}
+{\footnotesize\ttfamily int Scene\+Manager\+::\+Scene\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtient le nombre total de scènes. 
+
+Récupère le nombre de scènes.
+
+\begin{DoxyReturn}{Renvoie}
+Le nombre total de scènes.
+
+Le nombre de scènes. 
+\end{DoxyReturn}
+\Hypertarget{class_scene_manager_acd136763a551c25bcdb03fc17c44d883}\label{class_scene_manager_acd136763a551c25bcdb03fc17c44d883} 
+\index{SceneManager@{SceneManager}!SetCurrentScene@{SetCurrentScene}}
+\index{SetCurrentScene@{SetCurrentScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{SetCurrentScene()}{SetCurrentScene()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Set\+Current\+Scene (\begin{DoxyParamCaption}\item[{int}]{\+\_\+scene\+Index }\end{DoxyParamCaption})}
+
+
+
+Définit la scène à activer en fonction de son index dans la liste des scènes. 
+
+Définit la scène courante par son index dans la liste des scènes.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+scene\+Index} & L\textquotesingle{}index de la scène à activer.\\
+\hline
+{\em \+\_\+scene\+Index} & Index de la scène à définir comme scène courante. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scene_manager_af722ab55b440e93fbe069960d890bcc0}\label{class_scene_manager_af722ab55b440e93fbe069960d890bcc0} 
+\index{SceneManager@{SceneManager}!SetMainScene@{SetMainScene}}
+\index{SetMainScene@{SetMainScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{SetMainScene()}{SetMainScene()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Set\+Main\+Scene (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+scene\+Name }\end{DoxyParamCaption})}
+
+
+
+Définit la scène principale. 
+
+Définit la scène principale à utiliser.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+scene\+Name} & Le nom de la scène principale.\\
+\hline
+{\em \+\_\+scene\+Name} & Nom de la scène à définir comme scène principale. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scene_manager_ae265bdb684aa562a21b51cae02e6dd52}\label{class_scene_manager_ae265bdb684aa562a21b51cae02e6dd52} 
+\index{SceneManager@{SceneManager}!SetNextSceneActive@{SetNextSceneActive}}
+\index{SetNextSceneActive@{SetNextSceneActive}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{SetNextSceneActive()}{SetNextSceneActive()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Set\+Next\+Scene\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Active la scène suivante dans la liste des scènes. 
+
+Active la scène suivante dans la liste des scènes. Si la liste des scènes n\textquotesingle{}est pas vide, l\textquotesingle{}index de la scène courante est mis à jour pour passer à la scène suivante circulairement. \Hypertarget{class_scene_manager_ae109186c3605a7689f645910974ee4cd}\label{class_scene_manager_ae109186c3605a7689f645910974ee4cd} 
+\index{SceneManager@{SceneManager}!SetPreviousSceneActive@{SetPreviousSceneActive}}
+\index{SetPreviousSceneActive@{SetPreviousSceneActive}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{SetPreviousSceneActive()}{SetPreviousSceneActive()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Set\+Previous\+Scene\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Active la scène précédente dans la liste des scènes. 
+
+Active la scène précédente dans la liste des scènes. Si la liste des scènes n\textquotesingle{}est pas vide, l\textquotesingle{}index de la scène courante est mis à jour pour passer à la scène précédente circulairement. \Hypertarget{class_scene_manager_a5ce2f53c90d5962f9fd9fec9b3ba3cb9}\label{class_scene_manager_a5ce2f53c90d5962f9fd9fec9b3ba3cb9} 
+\index{SceneManager@{SceneManager}!Start@{Start}}
+\index{Start@{Start}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Démarre le module. 
+
+Démarre le gestionnaire de scènes. Initialise le gestionnaire de fenêtres. 
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_aed9229993dada6ed800f73036aade722}{Module}}.
+
+\Hypertarget{class_scene_manager_a2bf803ee00bc2ad61ed5e59e40031a0b}\label{class_scene_manager_a2bf803ee00bc2ad61ed5e59e40031a0b} 
+\index{SceneManager@{SceneManager}!Update@{Update}}
+\index{Update@{Update}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Met à jour le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_abf63d5bb322a751fbf95f2da0978817b}{Module}}.
+
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Scene/Scene\+Manager.\+h\item 
+sources/\+Scene/Scene\+Manager.\+cpp\end{DoxyCompactItemize}

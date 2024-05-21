@@ -1,0 +1,86 @@
+\doxysection{Time\+Module.\+h}
+\hypertarget{_time_module_8h_source}{}\label{_time_module_8h_source}\index{includes/Modules/TimeModule.h@{includes/Modules/TimeModule.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Modules/Module.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_time_module}{TimeModule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_module}{Module}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_time_module_a6993b5d4f7722fbbcb4bc7024016e198}{TimeModule}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_time_module_adc5340bbb04dd931c6a69130e5d5429c}{GetDeltaTime}}()}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ deltaTime;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_time_module_a01cf79097a8152c883e24adef5191584}{GetElapsedTime}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00032\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ current\_time\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::chrono::duration<float>\ duration\ \ \ \ \ =\ current\_time\ -\/\ currentTime;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ duration.count();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_time_module_a047203509e03c85a4bfaba186625f317}{GetDeltaTimeMilliseconds}}()}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ deltaTime\ *\ 1000.0f;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_time_module_a2410bbc0ea2d5ec90d7823a4b5ab040d}{GetDeltaTimeSeconds}}()}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ deltaTime;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_time_module_a837007db2eddf0a55044d80b251df857}{GetDeltaTimeMinutes}}()}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ deltaTime\ /\ 60.0f;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_time_module_a24435d6caddad5a0c82c9803c51d4bf6}{GetDeltaTimeHours}}()}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ deltaTime\ /\ 3600.0f;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_module_acc23355369a316893d25082c80c34c57}{Reset}}()}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ currentTime\ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ beginTime\ \ \ =\ std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ deltaTime\ \ \ =\ 0.0f;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#pragma\ region\ Event}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_module_a7c899a7587a3e21e509f4c1634ca927d}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_module_a74f9d64849e112aeddc97551ed5a048f}{Start}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_module_ae87a5a47b9b219ecdb9a887cf5d92bae}{FixedUpdate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_module_a7e9d8ea203c2476ba0669c6fb4dee9d5}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_module_a20b4981ab2cdd594b50d3e5434d54135}{PreRender}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_module_acab405e93416340762114ae8bba5c957}{Render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_module_afc5afd0dd2d955e6f93f008de1f0d9eb}{RenderGui}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_module_a70449925f5ea4db4e44abe77988a0018}{PostRender}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_module_a05198d257438a41a2125811fb86880a6}{Release}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_time_module_ae726537b2b50d9ad443be1586b883de6}{Finalize}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ deltaTime;}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ std::chrono::high\_resolution\_clock::time\_point\ beginTime;}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ std::chrono::high\_resolution\_clock::time\_point\ currentTime;}
+\DoxyCodeLine{00143\ \};}
+
+\end{DoxyCode}

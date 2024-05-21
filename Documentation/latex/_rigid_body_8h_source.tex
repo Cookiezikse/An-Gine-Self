@@ -1,0 +1,33 @@
+\doxysection{Rigid\+Body.\+h}
+\hypertarget{_rigid_body_8h_source}{}\label{_rigid_body_8h_source}\index{includes/GameObject/Components/RigidBody.h@{includes/GameObject/Components/RigidBody.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Component.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <glm.hpp>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <btBulletDynamicsCommon.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_rigid_body}{RigidBody}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_component}{Component}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rigid_body_afea489d3431d1afc575ea020b66b3b7a}{RigidBody}}(btDiscreteDynamicsWorld*\ \_dynamicsWorld,\ btCollisionShape*\ \_shape,\ \textcolor{keywordtype}{float}\ \_mass,\ glm::vec3\&\ \_position);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Update()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rigid_body_a35ec23a27c51ea7c32e806cf19c8d33b}{AddForce}}(\textcolor{keyword}{const}\ glm::vec3\&\ \_force)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rigid_body_a9095194b70efcb7179f536224f8f1399}{SetGravity}}(\textcolor{keyword}{const}\ glm::vec3\&\ \_gravity)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rigid_body_a6250dfb9b003f4a7874300c8aa133ba1}{SetVelocity}}(\textcolor{keyword}{const}\ glm::vec3\&\ \_velocity)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ btVector3\ \mbox{\hyperlink{class_rigid_body_a6d2f894b24e58f43b758354446207bc0}{GetVelocity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rigid_body_a07be9fa1a03fec00a24f6ac78263e951}{SetKinematic}}(\textcolor{keywordtype}{bool}\ \_isKinematic)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rigid_body_a999a34096b5a2f69be008ccc20077bbc}{SetRotationLocked}}(\textcolor{keywordtype}{bool}\ \_lockRotationX,\ \textcolor{keywordtype}{bool}\ \_lockRotationY,\ \textcolor{keywordtype}{bool}\ \_lockRotationZ)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rigid_body_afdf9e3d4cadca9514542361e7e82e90d}{SetPosition}}(\textcolor{keyword}{const}\ glm::vec3\&\ \_position,\ \textcolor{keywordtype}{bool}\ \_lockX,\ \textcolor{keywordtype}{bool}\ \_lockY,\ \textcolor{keywordtype}{bool}\ \_lockZ)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rigid_body_a6c1a19d6f3c0ec2a56eff7d3723db282}{\string~RigidBody}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ btDiscreteDynamicsWorld*\ dynamicsWorld;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ btRigidBody*\ \ \ \ \ \ \ \ \ \ \ \ \ rigidBody;}
+\DoxyCodeLine{00079\ \};}
+
+\end{DoxyCode}

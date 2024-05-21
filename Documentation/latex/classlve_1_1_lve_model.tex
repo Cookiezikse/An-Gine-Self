@@ -1,0 +1,149 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Lve\+Model}
+\hypertarget{classlve_1_1_lve_model}{}\label{classlve_1_1_lve_model}\index{lve::LveModel@{lve::LveModel}}
+
+
+Classe représentant un modèle Vulkan.  
+
+
+
+
+{\ttfamily \#include $<$lve\+\_\+model.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlve_1_1_lve_model_1_1_builder}{Builder}}
+\begin{DoxyCompactList}\small\item\em Structure responsable de la construction d\textquotesingle{}un modèle 3D. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex}{Vertex}}
+\begin{DoxyCompactList}\small\item\em Structure représentant un vertex dans l\textquotesingle{}espace 3D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_model_ad9283bbc18ab72000c95d207354ecf11}{Lve\+Model}} (\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&\+\_\+lve\+Device, const \mbox{\hyperlink{structlve_1_1_lve_model_1_1_builder}{Builder}} \&\+\_\+builder)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classlve_1_1_lve_model}{Lve\+Model}. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_lve_model_a852343b2ca38189c22fbfa6cf5211469}\label{classlve_1_1_lve_model_a852343b2ca38189c22fbfa6cf5211469} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Lve\+Model} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \doxylink{classlve_1_1_lve_model}{Lve\+Model}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_model_a0834e5e372c0b0913ab20340dfaa4ca3}{Lve\+Model}} (const \mbox{\hyperlink{classlve_1_1_lve_model}{Lve\+Model}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Constructeur de copie supprimé. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_model}{Lve\+Model}} \mbox{\hyperlink{classlve_1_1_lve_model_a13aa08d1d1d30fe823cb213375a49805}{operator=}} (const \mbox{\hyperlink{classlve_1_1_lve_model}{Lve\+Model}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}affectation supprimé. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_model_a5deb00a44944083e51b89208d5d5b9ec}{Bind}} (vk\+::\+Command\+Buffer \+\_\+command\+Buffer) const
+\begin{DoxyCompactList}\small\item\em Lie les tampons de vertex et d\textquotesingle{}index au tampon de commande spécifié. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_model_aff2d97c4db13944d0318ca161ed5539f}{Draw}} (vk\+::\+Command\+Buffer \+\_\+command\+Buffer) const
+\begin{DoxyCompactList}\small\item\em Dessine les primitives géométriques à l\textquotesingle{}aide du tampon de commande spécifié. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlve_1_1_lve_model}{Lve\+Model}} $>$ \mbox{\hyperlink{classlve_1_1_lve_model_a5c40908ba797a01e5d1062c979cd2d02}{Create\+Model\+From\+File}} (\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&\+\_\+device, const std\+::string \&\+\_\+filepath, float \+\_\+tex\+Multiplier=1)
+\begin{DoxyCompactList}\small\item\em Crée un modèle à partir d\textquotesingle{}un fichier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Classe représentant un modèle Vulkan. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classlve_1_1_lve_model_ad9283bbc18ab72000c95d207354ecf11}\label{classlve_1_1_lve_model_ad9283bbc18ab72000c95d207354ecf11} 
+\index{lve::LveModel@{lve::LveModel}!LveModel@{LveModel}}
+\index{LveModel@{LveModel}!lve::LveModel@{lve::LveModel}}
+\doxysubsubsection{\texorpdfstring{LveModel()}{LveModel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Model\+::\+Lve\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&}]{\+\_\+lve\+Device,  }\item[{const \mbox{\hyperlink{structlve_1_1_lve_model_1_1_builder}{Builder}} \&}]{\+\_\+builder }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{classlve_1_1_lve_model}{Lve\+Model}. 
+
+Construit un modèle 3D à partir des données fournies par le builder.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+lve\+Device} & Référence vers l\textquotesingle{}objet \doxylink{classlve_1_1_lve_device}{Lve\+Device} utilisé pour la création du modèle. \\
+\hline
+{\em \+\_\+builder} & Référence vers l\textquotesingle{}objet \doxylink{structlve_1_1_lve_model_1_1_builder}{Builder} contenant les données du modèle. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_model_a0834e5e372c0b0913ab20340dfaa4ca3}\label{classlve_1_1_lve_model_a0834e5e372c0b0913ab20340dfaa4ca3} 
+\index{lve::LveModel@{lve::LveModel}!LveModel@{LveModel}}
+\index{LveModel@{LveModel}!lve::LveModel@{lve::LveModel}}
+\doxysubsubsection{\texorpdfstring{LveModel()}{LveModel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Model\+::\+Lve\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlve_1_1_lve_model}{Lve\+Model}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Constructeur de copie supprimé. 
+
+Le constructeur de copie de la classe \doxylink{classlve_1_1_lve_model}{Lve\+Model} est supprimé pour empêcher la duplication d\textquotesingle{}instances de modèle. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_lve_model_a5deb00a44944083e51b89208d5d5b9ec}\label{classlve_1_1_lve_model_a5deb00a44944083e51b89208d5d5b9ec} 
+\index{lve::LveModel@{lve::LveModel}!Bind@{Bind}}
+\index{Bind@{Bind}!lve::LveModel@{lve::LveModel}}
+\doxysubsubsection{\texorpdfstring{Bind()}{Bind()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Model\+::\+Bind (\begin{DoxyParamCaption}\item[{vk\+::\+Command\+Buffer}]{\+\_\+command\+Buffer }\end{DoxyParamCaption}) const}
+
+
+
+Lie les tampons de vertex et d\textquotesingle{}index au tampon de commande spécifié. 
+
+Cette fonction lie les tampons de vertex et d\textquotesingle{}index au tampon de commande spécifié pour le rendu ultérieur. Si un tampon d\textquotesingle{}index est présent, il est également lié au tampon de commande avec le type d\textquotesingle{}index spécifié.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+command\+Buffer} & Le tampon de commande auquel lier les tampons de vertex et d\textquotesingle{}index. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_model_a5c40908ba797a01e5d1062c979cd2d02}\label{classlve_1_1_lve_model_a5c40908ba797a01e5d1062c979cd2d02} 
+\index{lve::LveModel@{lve::LveModel}!CreateModelFromFile@{CreateModelFromFile}}
+\index{CreateModelFromFile@{CreateModelFromFile}!lve::LveModel@{lve::LveModel}}
+\doxysubsubsection{\texorpdfstring{CreateModelFromFile()}{CreateModelFromFile()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlve_1_1_lve_model}{Lve\+Model}} $>$ lve\+::\+Lve\+Model\+::\+Create\+Model\+From\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&}]{\+\_\+device,  }\item[{const std\+::string \&}]{\+\_\+filepath,  }\item[{float}]{\+\_\+tex\+Multiplier = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Crée un modèle à partir d\textquotesingle{}un fichier. 
+
+Cette fonction statique crée un modèle à partir d\textquotesingle{}un fichier en utilisant un objet \doxylink{classlve_1_1_lve_device}{Lve\+Device} et un chemin de fichier donnés. Elle charge d\textquotesingle{}abord le modèle à l\textquotesingle{}aide du constructeur \doxylink{structlve_1_1_lve_model_1_1_builder}{Builder}, puis affiche le nombre de vertices chargés. Enfin, elle crée un modèle unique à partir de l\textquotesingle{}objet \doxylink{classlve_1_1_lve_device}{Lve\+Device} et du constructeur \doxylink{structlve_1_1_lve_model_1_1_builder}{Builder}, puis le retourne.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+device} & L\textquotesingle{}objet \doxylink{classlve_1_1_lve_device}{Lve\+Device} utilisé pour créer le modèle. \\
+\hline
+{\em \+\_\+filepath} & Le chemin du fichier à partir duquel charger le modèle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur unique vers le modèle créé. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_model_aff2d97c4db13944d0318ca161ed5539f}\label{classlve_1_1_lve_model_aff2d97c4db13944d0318ca161ed5539f} 
+\index{lve::LveModel@{lve::LveModel}!Draw@{Draw}}
+\index{Draw@{Draw}!lve::LveModel@{lve::LveModel}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Model\+::\+Draw (\begin{DoxyParamCaption}\item[{vk\+::\+Command\+Buffer}]{\+\_\+command\+Buffer }\end{DoxyParamCaption}) const}
+
+
+
+Dessine les primitives géométriques à l\textquotesingle{}aide du tampon de commande spécifié. 
+
+Cette fonction dessine les primitives géométriques à l\textquotesingle{}aide du tampon de commande spécifié. Si un tampon d\textquotesingle{}index est présent, la fonction utilise vk\+Cmd\+Draw\+Indexed pour dessiner les primitives indexées. Sinon, elle utilise vk\+Cmd\+Draw pour dessiner les primitives non indexées.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+command\+Buffer} & Le tampon de commande utilisé pour dessiner les primitives géométriques. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_model_a13aa08d1d1d30fe823cb213375a49805}\label{classlve_1_1_lve_model_a13aa08d1d1d30fe823cb213375a49805} 
+\index{lve::LveModel@{lve::LveModel}!operator=@{operator=}}
+\index{operator=@{operator=}!lve::LveModel@{lve::LveModel}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_lve_model}{Lve\+Model}} lve\+::\+Lve\+Model\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlve_1_1_lve_model}{Lve\+Model}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Opérateur d\textquotesingle{}affectation supprimé. 
+
+L\textquotesingle{}opérateur d\textquotesingle{}affectation de la classe \doxylink{classlve_1_1_lve_model}{Lve\+Model} est supprimé pour empêcher l\textquotesingle{}affectation d\textquotesingle{}une instance de modèle à une autre. 
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Lve\+Engine/lve\+\_\+model.\+h\item 
+sources/\+Lve\+Engine/lve\+\_\+model.\+cpp\end{DoxyCompactItemize}

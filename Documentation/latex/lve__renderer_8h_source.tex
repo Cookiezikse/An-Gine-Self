@@ -1,0 +1,75 @@
+\doxysection{lve\+\_\+renderer.\+h}
+\hypertarget{lve__renderer_8h_source}{}\label{lve__renderer_8h_source}\index{includes/LveEngine/lve\_renderer.h@{includes/LveEngine/lve\_renderer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan.hpp>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_device.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_swap\_chain.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Modules/WindowModule.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ std}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }lve}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlve_1_1_lve_renderer}{LveRenderer}}}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_renderer_a2ce761a8137a6116d6f399cb52706dc7}{LveRenderer}}(\mbox{\hyperlink{class_window_module}{WindowModule}}*\ \_windowModule,\ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ \_device);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_renderer_a03406ee68a4ab1d92f5603890b7cc2a3}{\string~LveRenderer}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_renderer_a4a40f6f226cd4e941004c559a26f4924}{LveRenderer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_renderer}{LveRenderer}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_renderer}{LveRenderer}}\&\ \mbox{\hyperlink{classlve_1_1_lve_renderer_a527f7982ffd643b6b835eca0822a95a4}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_renderer}{LveRenderer}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ [[nodiscard]]\ vk::RenderPass\ \mbox{\hyperlink{classlve_1_1_lve_renderer_aab41312c75fffa6db139badab1e26b64}{GetSwapChainRenderPass}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ lveSwapChain-\/>GetRenderPass();\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classlve_1_1_lve_renderer_a229889ea61e3cb489aab9e0cac743322}{GetAspectRatio}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ lveSwapChain-\/>ExtentAspectRatio();\ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classlve_1_1_lve_renderer_a34582e340a8f38f7995ab3d734c22995}{IsFrameInProgress}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ isFrameStarted;\ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ [[nodiscard]]\ vk::CommandBuffer\ \mbox{\hyperlink{classlve_1_1_lve_renderer_a5e411afe2f7ebae4f27fa5206f57112c}{GetCurrentCommandBuffer}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00075\ \textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ assert(isFrameStarted\ \&\&\ \textcolor{stringliteral}{"{}Cannot\ get\ command\ buffer\ when\ frame\ not\ in\ progress"{}});}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ commandBuffers[currentFrameIndex];}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classlve_1_1_lve_renderer_af95057a276837ad1adfe2e9d8407982c}{GetFrameIndex}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00089\ \textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ assert(isFrameStarted\ \&\&\ \textcolor{stringliteral}{"{}Cannot\ get\ frame\ index\ when\ frame\ not\ in\ progress"{}});}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ currentFrameIndex;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ vk::CommandBuffer\ \mbox{\hyperlink{classlve_1_1_lve_renderer_abae742fba75a75b4d7647b09445ed365}{BeginFrame}}();}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_renderer_af9e79706c43bba815588ebeae37570d0}{EndFrame}}();}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_renderer_af9e79706c43bba815588ebeae37570d0}{EndFrame}}(\textcolor{keyword}{const}\ vk::CommandBuffer*\ \_commandBuffer);}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_renderer_afc7bc79d9da28ea54249c8fe443a7eef}{BeginSwapChainRenderPass}}(vk::CommandBuffer\ \_commandBuffer)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_renderer_ac22e39c541f15eb11e7c0918068ed057}{EndSwapChainRenderPass}}(vk::CommandBuffer\ \_commandBuffer)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateCommandBuffers();}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ FreeCommandBuffers();}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ RecreateSwapChain();}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_window_module}{WindowModule}}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ windowModule;\ \ \ \ \ \ }
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lveDevice;\ \ \ \ \ \ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<LveSwapChain>\ \ lveSwapChain;\ \ \ }
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<vk::CommandBuffer>\ commandBuffers;\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ currentImageIndex\ =\ 0;\ \ \ \ \ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ currentFrameIndex\ =\ 0;\ \ \ \ \ }
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ isFrameStarted\ \ \ \ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00176\ \ \ \ \ \};}
+\DoxyCodeLine{00177\ \}\ \textcolor{comment}{//\ namespace\ lve}}
+
+\end{DoxyCode}

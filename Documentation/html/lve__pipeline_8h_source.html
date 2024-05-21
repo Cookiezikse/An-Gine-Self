@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/LveEngine/lve_pipeline.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_d17dbbfb40e9127a51f93ba39cbbb546.html">LveEngine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">lve_pipeline.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;LveEngine/lve_device.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vulkan/vulkan.hpp&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span>lve</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html">   15</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structlve_1_1_pipeline_config_info.html">PipelineConfigInfo</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html#ae1f9b727fa4b672eb2fa43e76574d123">   17</a></span>        <a class="code hl_function" href="structlve_1_1_pipeline_config_info.html#ae1f9b727fa4b672eb2fa43e76574d123">PipelineConfigInfo</a>()                                     = <span class="keywordflow">default</span>; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html#a7d67d337a64b3b5be6f1167bf9c52eb9">   18</a></span>        <a class="code hl_function" href="structlve_1_1_pipeline_config_info.html#a7d67d337a64b3b5be6f1167bf9c52eb9">PipelineConfigInfo</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structlve_1_1_pipeline_config_info.html">PipelineConfigInfo</a>&amp;)            = <span class="keyword">delete</span>;  </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html#aaad9655178cd8e806c2f319d437fc65f">   19</a></span>        <a class="code hl_struct" href="structlve_1_1_pipeline_config_info.html">PipelineConfigInfo</a>&amp; <a class="code hl_function" href="structlve_1_1_pipeline_config_info.html#aaad9655178cd8e806c2f319d437fc65f">operator=</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structlve_1_1_pipeline_config_info.html">PipelineConfigInfo</a>&amp;) = <span class="keyword">delete</span>;  </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html#a7481d780692c39134ffb4a1e0596e3cd">   21</a></span>        std::vector&lt;vk::VertexInputAttributeDescription&gt; <a class="code hl_variable" href="structlve_1_1_pipeline_config_info.html#a7481d780692c39134ffb4a1e0596e3cd">attributeDescriptions</a>{};</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html#aded1676226606e68e189db7ed44a11f3">   23</a></span>        std::vector&lt;vk::VertexInputBindingDescription&gt; <a class="code hl_variable" href="structlve_1_1_pipeline_config_info.html#aded1676226606e68e189db7ed44a11f3">bindingDescriptions</a>{};</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html#a22c7a38ed1b1392d4441d06e6d734d31">   25</a></span>        vk::PipelineViewportStateCreateInfo      <a class="code hl_variable" href="structlve_1_1_pipeline_config_info.html#a22c7a38ed1b1392d4441d06e6d734d31">viewportInfo</a>; </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html#ad01ce5921f883eeaac7d39711bda9270">   26</a></span>        vk::PipelineInputAssemblyStateCreateInfo <a class="code hl_variable" href="structlve_1_1_pipeline_config_info.html#ad01ce5921f883eeaac7d39711bda9270">inputAssemblyInfo</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html#a66e27d9096cb66723aca6bc379848e3f">   28</a></span>        vk::PipelineRasterizationStateCreateInfo <a class="code hl_variable" href="structlve_1_1_pipeline_config_info.html#a66e27d9096cb66723aca6bc379848e3f">rasterizationInfo</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html#ad3b3266178e6c9841950f988135bd88e">   30</a></span>        vk::PipelineMultisampleStateCreateInfo <a class="code hl_variable" href="structlve_1_1_pipeline_config_info.html#ad3b3266178e6c9841950f988135bd88e">multisampleInfo</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html#ae082230ad8893c2bf5ef2272f7a0c704">   32</a></span>        vk::PipelineColorBlendAttachmentState <a class="code hl_variable" href="structlve_1_1_pipeline_config_info.html#ae082230ad8893c2bf5ef2272f7a0c704">colorBlendAttachment</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html#a2490d9f71c93a654d778151235c8d358">   34</a></span>        vk::PipelineColorBlendStateCreateInfo <a class="code hl_variable" href="structlve_1_1_pipeline_config_info.html#a2490d9f71c93a654d778151235c8d358">colorBlendInfo</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html#aab5f07a499efb89eff5e6ddb1907daed">   36</a></span>        vk::PipelineDepthStencilStateCreateInfo <a class="code hl_variable" href="structlve_1_1_pipeline_config_info.html#aab5f07a499efb89eff5e6ddb1907daed">depthStencilInfo</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html#a0ac7d9a26c0c8e15578564e4f0f9d1d8">   38</a></span>        std::vector&lt;vk::DynamicState&gt;      <a class="code hl_variable" href="structlve_1_1_pipeline_config_info.html#a0ac7d9a26c0c8e15578564e4f0f9d1d8">dynamicStateEnables</a>; </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html#add2163ac59974d31b9d828566114db3a">   39</a></span>        vk::PipelineDynamicStateCreateInfo <a class="code hl_variable" href="structlve_1_1_pipeline_config_info.html#add2163ac59974d31b9d828566114db3a">dynamicStateInfo</a>; </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html#a7d223d02ba9f2b0211575e70d7900d4b">   40</a></span>        vk::PipelineLayout                 <a class="code hl_variable" href="structlve_1_1_pipeline_config_info.html#a7d223d02ba9f2b0211575e70d7900d4b">pipelineLayout</a> = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html#a681dc36dfb945d2f9a7f4ec4c3c4c955">   41</a></span>        vk::RenderPass                     <a class="code hl_variable" href="structlve_1_1_pipeline_config_info.html#a681dc36dfb945d2f9a7f4ec4c3c4c955">renderPass</a>     = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structlve_1_1_pipeline_config_info.html#a5f3504cbefbaafa6fab603bb2001025b">   42</a></span>        uint32_t                           <a class="code hl_variable" href="structlve_1_1_pipeline_config_info.html#a5f3504cbefbaafa6fab603bb2001025b">subpass</a>        = 0; </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    };</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="};">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_pipeline.html">   48</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classlve_1_1_lve_pipeline.html">LvePipeline</a></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <a class="code hl_function" href="classlve_1_1_lve_pipeline.html#a7022072e515c4372b484881969593dad">LvePipeline</a>(<a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp; _device, <span class="keyword">const</span> std::string&amp; _vertFilepath, <span class="keyword">const</span> std::string&amp; _fragFilepath,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                        <span class="keyword">const</span> <a class="code hl_struct" href="structlve_1_1_pipeline_config_info.html">PipelineConfigInfo</a>&amp; _configInfo);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <a class="code hl_function" href="classlve_1_1_lve_pipeline.html#aef30f3a0e1d55cdb51a212aa48d5fb7f">~LvePipeline</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_pipeline.html#ac72818765c3c328346fe955b92895283">   70</a></span>            <a class="code hl_function" href="classlve_1_1_lve_pipeline.html#ac72818765c3c328346fe955b92895283">LvePipeline</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlve_1_1_lve_pipeline.html">LvePipeline</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_pipeline.html#a90100f03b393c0873368f08541debdff">   75</a></span>            <a class="code hl_class" href="classlve_1_1_lve_pipeline.html">LvePipeline</a>&amp; <a class="code hl_function" href="classlve_1_1_lve_pipeline.html#a90100f03b393c0873368f08541debdff">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlve_1_1_lve_pipeline.html">LvePipeline</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_lve_pipeline.html#af7f5fcdbb3b754c2f82fac5be4bd0fe0">Bind</a>(vk::CommandBuffer _commandBuffer) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_lve_pipeline.html#a5e056e96a183f1afd033350395234b34">DefaultPipelineConfigInfo</a>(<a class="code hl_struct" href="structlve_1_1_pipeline_config_info.html">PipelineConfigInfo</a>&amp; _configInfo);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_lve_pipeline.html#a80e232d47ded91f535a26dac1725af8a">EnableAlphaBlending</a>(<a class="code hl_struct" href="structlve_1_1_pipeline_config_info.html">PipelineConfigInfo</a>&amp; _configInfo);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="keyword">static</span> std::vector&lt;char&gt; ReadFile(<span class="keyword">const</span> std::string&amp; _filepath);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <span class="keywordtype">void</span> CreateGraphicsPipeline(<span class="keyword">const</span> std::string&amp;        _vertFilepath, <span class="keyword">const</span> std::string&amp; _fragFilepath,</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                                        <span class="keyword">const</span> <a class="code hl_struct" href="structlve_1_1_pipeline_config_info.html">PipelineConfigInfo</a>&amp; _configInfo);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            <span class="keywordtype">void</span> CreateShaderModule(<span class="keyword">const</span> std::vector&lt;char&gt;&amp; _code, vk::ShaderModule* _shaderModule) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            <a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp; lveDevice;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            vk::Pipeline graphicsPipeline;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            vk::ShaderModule vertShaderModule;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            vk::ShaderModule fragShaderModule;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    };</div>
+</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>} <span class="comment">//namespace lve</span></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html"><div class="ttname"><a href="classlve_1_1_lve_device.html">lve::LveDevice</a></div><div class="ttdoc">Classe représentant un périphérique Vulkan.</div><div class="ttdef"><b>Definition</b> lve_device.h:41</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_pipeline_html"><div class="ttname"><a href="classlve_1_1_lve_pipeline.html">lve::LvePipeline</a></div><div class="ttdoc">Classe représentant un pipeline Vulkan.</div><div class="ttdef"><b>Definition</b> lve_pipeline.h:49</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_pipeline_html_a5e056e96a183f1afd033350395234b34"><div class="ttname"><a href="classlve_1_1_lve_pipeline.html#a5e056e96a183f1afd033350395234b34">lve::LvePipeline::DefaultPipelineConfigInfo</a></div><div class="ttdeci">static void DefaultPipelineConfigInfo(PipelineConfigInfo &amp;_configInfo)</div><div class="ttdoc">Configure les paramètres par défaut du pipeline.</div><div class="ttdef"><b>Definition</b> lve_pipeline.cpp:155</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_pipeline_html_a7022072e515c4372b484881969593dad"><div class="ttname"><a href="classlve_1_1_lve_pipeline.html#a7022072e515c4372b484881969593dad">lve::LvePipeline::LvePipeline</a></div><div class="ttdeci">LvePipeline(LveDevice &amp;_device, const std::string &amp;_vertFilepath, const std::string &amp;_fragFilepath, const PipelineConfigInfo &amp;_configInfo)</div><div class="ttdoc">Constructeur de la classe LvePipeline.</div><div class="ttdef"><b>Definition</b> lve_pipeline.cpp:17</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_pipeline_html_a80e232d47ded91f535a26dac1725af8a"><div class="ttname"><a href="classlve_1_1_lve_pipeline.html#a80e232d47ded91f535a26dac1725af8a">lve::LvePipeline::EnableAlphaBlending</a></div><div class="ttdeci">static void EnableAlphaBlending(PipelineConfigInfo &amp;_configInfo)</div><div class="ttdoc">Active le mélange alpha dans la configuration de pipeline spécifiée.</div><div class="ttdef"><b>Definition</b> lve_pipeline.cpp:326</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_pipeline_html_a90100f03b393c0873368f08541debdff"><div class="ttname"><a href="classlve_1_1_lve_pipeline.html#a90100f03b393c0873368f08541debdff">lve::LvePipeline::operator=</a></div><div class="ttdeci">LvePipeline &amp; operator=(const LvePipeline &amp;)=delete</div><div class="ttdoc">Opérateur d'affectation supprimé.</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_pipeline_html_ac72818765c3c328346fe955b92895283"><div class="ttname"><a href="classlve_1_1_lve_pipeline.html#ac72818765c3c328346fe955b92895283">lve::LvePipeline::LvePipeline</a></div><div class="ttdeci">LvePipeline(const LvePipeline &amp;)=delete</div><div class="ttdoc">Constructeur de copie supprimé.</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_pipeline_html_aef30f3a0e1d55cdb51a212aa48d5fb7f"><div class="ttname"><a href="classlve_1_1_lve_pipeline.html#aef30f3a0e1d55cdb51a212aa48d5fb7f">lve::LvePipeline::~LvePipeline</a></div><div class="ttdeci">~LvePipeline()</div><div class="ttdoc">Destructeur de la classe LvePipeline.</div><div class="ttdef"><b>Definition</b> lve_pipeline.cpp:26</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_pipeline_html_af7f5fcdbb3b754c2f82fac5be4bd0fe0"><div class="ttname"><a href="classlve_1_1_lve_pipeline.html#af7f5fcdbb3b754c2f82fac5be4bd0fe0">lve::LvePipeline::Bind</a></div><div class="ttdeci">void Bind(vk::CommandBuffer _commandBuffer) const</div><div class="ttdoc">Lie le pipeline graphique au tampon de commandes spécifié.</div><div class="ttdef"><b>Definition</b> lve_pipeline.cpp:150</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html">lve::PipelineConfigInfo</a></div><div class="ttdoc">Structure contenant les informations de configuration pour la création d'un pipeline.</div><div class="ttdef"><b>Definition</b> lve_pipeline.h:16</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html_a0ac7d9a26c0c8e15578564e4f0f9d1d8"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html#a0ac7d9a26c0c8e15578564e4f0f9d1d8">lve::PipelineConfigInfo::dynamicStateEnables</a></div><div class="ttdeci">std::vector&lt; vk::DynamicState &gt; dynamicStateEnables</div><div class="ttdef"><b>Definition</b> lve_pipeline.h:38</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html_a22c7a38ed1b1392d4441d06e6d734d31"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html#a22c7a38ed1b1392d4441d06e6d734d31">lve::PipelineConfigInfo::viewportInfo</a></div><div class="ttdeci">vk::PipelineViewportStateCreateInfo viewportInfo</div><div class="ttdef"><b>Definition</b> lve_pipeline.h:25</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html_a2490d9f71c93a654d778151235c8d358"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html#a2490d9f71c93a654d778151235c8d358">lve::PipelineConfigInfo::colorBlendInfo</a></div><div class="ttdeci">vk::PipelineColorBlendStateCreateInfo colorBlendInfo</div><div class="ttdef"><b>Definition</b> lve_pipeline.h:34</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html_a5f3504cbefbaafa6fab603bb2001025b"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html#a5f3504cbefbaafa6fab603bb2001025b">lve::PipelineConfigInfo::subpass</a></div><div class="ttdeci">uint32_t subpass</div><div class="ttdef"><b>Definition</b> lve_pipeline.h:42</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html_a66e27d9096cb66723aca6bc379848e3f"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html#a66e27d9096cb66723aca6bc379848e3f">lve::PipelineConfigInfo::rasterizationInfo</a></div><div class="ttdeci">vk::PipelineRasterizationStateCreateInfo rasterizationInfo</div><div class="ttdef"><b>Definition</b> lve_pipeline.h:28</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html_a681dc36dfb945d2f9a7f4ec4c3c4c955"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html#a681dc36dfb945d2f9a7f4ec4c3c4c955">lve::PipelineConfigInfo::renderPass</a></div><div class="ttdeci">vk::RenderPass renderPass</div><div class="ttdef"><b>Definition</b> lve_pipeline.h:41</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html_a7481d780692c39134ffb4a1e0596e3cd"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html#a7481d780692c39134ffb4a1e0596e3cd">lve::PipelineConfigInfo::attributeDescriptions</a></div><div class="ttdeci">std::vector&lt; vk::VertexInputAttributeDescription &gt; attributeDescriptions</div><div class="ttdef"><b>Definition</b> lve_pipeline.h:21</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html_a7d223d02ba9f2b0211575e70d7900d4b"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html#a7d223d02ba9f2b0211575e70d7900d4b">lve::PipelineConfigInfo::pipelineLayout</a></div><div class="ttdeci">vk::PipelineLayout pipelineLayout</div><div class="ttdef"><b>Definition</b> lve_pipeline.h:40</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html_a7d67d337a64b3b5be6f1167bf9c52eb9"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html#a7d67d337a64b3b5be6f1167bf9c52eb9">lve::PipelineConfigInfo::PipelineConfigInfo</a></div><div class="ttdeci">PipelineConfigInfo(const PipelineConfigInfo &amp;)=delete</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html_aaad9655178cd8e806c2f319d437fc65f"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html#aaad9655178cd8e806c2f319d437fc65f">lve::PipelineConfigInfo::operator=</a></div><div class="ttdeci">PipelineConfigInfo &amp; operator=(const PipelineConfigInfo &amp;)=delete</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html_aab5f07a499efb89eff5e6ddb1907daed"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html#aab5f07a499efb89eff5e6ddb1907daed">lve::PipelineConfigInfo::depthStencilInfo</a></div><div class="ttdeci">vk::PipelineDepthStencilStateCreateInfo depthStencilInfo</div><div class="ttdef"><b>Definition</b> lve_pipeline.h:36</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html_ad01ce5921f883eeaac7d39711bda9270"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html#ad01ce5921f883eeaac7d39711bda9270">lve::PipelineConfigInfo::inputAssemblyInfo</a></div><div class="ttdeci">vk::PipelineInputAssemblyStateCreateInfo inputAssemblyInfo</div><div class="ttdef"><b>Definition</b> lve_pipeline.h:26</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html_ad3b3266178e6c9841950f988135bd88e"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html#ad3b3266178e6c9841950f988135bd88e">lve::PipelineConfigInfo::multisampleInfo</a></div><div class="ttdeci">vk::PipelineMultisampleStateCreateInfo multisampleInfo</div><div class="ttdef"><b>Definition</b> lve_pipeline.h:30</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html_add2163ac59974d31b9d828566114db3a"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html#add2163ac59974d31b9d828566114db3a">lve::PipelineConfigInfo::dynamicStateInfo</a></div><div class="ttdeci">vk::PipelineDynamicStateCreateInfo dynamicStateInfo</div><div class="ttdef"><b>Definition</b> lve_pipeline.h:39</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html_aded1676226606e68e189db7ed44a11f3"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html#aded1676226606e68e189db7ed44a11f3">lve::PipelineConfigInfo::bindingDescriptions</a></div><div class="ttdeci">std::vector&lt; vk::VertexInputBindingDescription &gt; bindingDescriptions</div><div class="ttdef"><b>Definition</b> lve_pipeline.h:23</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html_ae082230ad8893c2bf5ef2272f7a0c704"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html#ae082230ad8893c2bf5ef2272f7a0c704">lve::PipelineConfigInfo::colorBlendAttachment</a></div><div class="ttdeci">vk::PipelineColorBlendAttachmentState colorBlendAttachment</div><div class="ttdef"><b>Definition</b> lve_pipeline.h:32</div></div>
+<div class="ttc" id="astructlve_1_1_pipeline_config_info_html_ae1f9b727fa4b672eb2fa43e76574d123"><div class="ttname"><a href="structlve_1_1_pipeline_config_info.html#ae1f9b727fa4b672eb2fa43e76574d123">lve::PipelineConfigInfo::PipelineConfigInfo</a></div><div class="ttdeci">PipelineConfigInfo()=default</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

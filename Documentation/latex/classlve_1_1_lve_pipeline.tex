@@ -1,0 +1,117 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Lve\+Pipeline}
+\hypertarget{classlve_1_1_lve_pipeline}{}\label{classlve_1_1_lve_pipeline}\index{lve::LvePipeline@{lve::LvePipeline}}
+
+
+Classe représentant un pipeline Vulkan.  
+
+
+
+
+{\ttfamily \#include $<$lve\+\_\+pipeline.\+h$>$}
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_pipeline_a7022072e515c4372b484881969593dad}{Lve\+Pipeline}} (\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&\+\_\+device, const std\+::string \&\+\_\+vert\+Filepath, const std\+::string \&\+\_\+frag\+Filepath, const \mbox{\hyperlink{structlve_1_1_pipeline_config_info}{Pipeline\+Config\+Info}} \&\+\_\+config\+Info)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classlve_1_1_lve_pipeline}{Lve\+Pipeline}. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_lve_pipeline_aef30f3a0e1d55cdb51a212aa48d5fb7f}\label{classlve_1_1_lve_pipeline_aef30f3a0e1d55cdb51a212aa48d5fb7f} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Lve\+Pipeline} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \doxylink{classlve_1_1_lve_pipeline}{Lve\+Pipeline}. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_lve_pipeline_ac72818765c3c328346fe955b92895283}\label{classlve_1_1_lve_pipeline_ac72818765c3c328346fe955b92895283} 
+{\bfseries Lve\+Pipeline} (const \mbox{\hyperlink{classlve_1_1_lve_pipeline}{Lve\+Pipeline}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Constructeur de copie supprimé. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_lve_pipeline_a90100f03b393c0873368f08541debdff}\label{classlve_1_1_lve_pipeline_a90100f03b393c0873368f08541debdff} 
+\mbox{\hyperlink{classlve_1_1_lve_pipeline}{Lve\+Pipeline}} \& {\bfseries operator=} (const \mbox{\hyperlink{classlve_1_1_lve_pipeline}{Lve\+Pipeline}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}affectation supprimé. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_pipeline_af7f5fcdbb3b754c2f82fac5be4bd0fe0}{Bind}} (vk\+::\+Command\+Buffer \+\_\+command\+Buffer) const
+\begin{DoxyCompactList}\small\item\em Lie le pipeline graphique au tampon de commandes spécifié. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classlve_1_1_lve_pipeline_a5e056e96a183f1afd033350395234b34}{Default\+Pipeline\+Config\+Info}} (\mbox{\hyperlink{structlve_1_1_pipeline_config_info}{Pipeline\+Config\+Info}} \&\+\_\+config\+Info)
+\begin{DoxyCompactList}\small\item\em Configure les paramètres par défaut du pipeline. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classlve_1_1_lve_pipeline_a80e232d47ded91f535a26dac1725af8a}{Enable\+Alpha\+Blending}} (\mbox{\hyperlink{structlve_1_1_pipeline_config_info}{Pipeline\+Config\+Info}} \&\+\_\+config\+Info)
+\begin{DoxyCompactList}\small\item\em Active le mélange alpha dans la configuration de pipeline spécifiée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Classe représentant un pipeline Vulkan. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classlve_1_1_lve_pipeline_a7022072e515c4372b484881969593dad}\label{classlve_1_1_lve_pipeline_a7022072e515c4372b484881969593dad} 
+\index{lve::LvePipeline@{lve::LvePipeline}!LvePipeline@{LvePipeline}}
+\index{LvePipeline@{LvePipeline}!lve::LvePipeline@{lve::LvePipeline}}
+\doxysubsubsection{\texorpdfstring{LvePipeline()}{LvePipeline()}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Pipeline\+::\+Lve\+Pipeline (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&}]{\+\_\+device,  }\item[{const std\+::string \&}]{\+\_\+vert\+Filepath,  }\item[{const std\+::string \&}]{\+\_\+frag\+Filepath,  }\item[{const \mbox{\hyperlink{structlve_1_1_pipeline_config_info}{Pipeline\+Config\+Info}} \&}]{\+\_\+config\+Info }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{classlve_1_1_lve_pipeline}{Lve\+Pipeline}. 
+
+Initialise un pipeline graphique en créant les shaders à partir des fichiers spécifiés.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+vert\+Filepath} & Le chemin d\textquotesingle{}accès au fichier contenant le code source du shader de vertex. \\
+\hline
+{\em \+\_\+frag\+Filepath} & Le chemin d\textquotesingle{}accès au fichier contenant le code source du shader de fragment. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_lve_pipeline_af7f5fcdbb3b754c2f82fac5be4bd0fe0}\label{classlve_1_1_lve_pipeline_af7f5fcdbb3b754c2f82fac5be4bd0fe0} 
+\index{lve::LvePipeline@{lve::LvePipeline}!Bind@{Bind}}
+\index{Bind@{Bind}!lve::LvePipeline@{lve::LvePipeline}}
+\doxysubsubsection{\texorpdfstring{Bind()}{Bind()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Pipeline\+::\+Bind (\begin{DoxyParamCaption}\item[{vk\+::\+Command\+Buffer}]{\+\_\+command\+Buffer }\end{DoxyParamCaption}) const}
+
+
+
+Lie le pipeline graphique au tampon de commandes spécifié. 
+
+Cette méthode lie le pipeline graphique associé à ce \doxylink{classlve_1_1_lve_pipeline}{Lve\+Pipeline} à un tampon de commandes spécifié.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+command\+Buffer} & Le tampon de commandes auquel le pipeline graphique doit être lié. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_pipeline_a5e056e96a183f1afd033350395234b34}\label{classlve_1_1_lve_pipeline_a5e056e96a183f1afd033350395234b34} 
+\index{lve::LvePipeline@{lve::LvePipeline}!DefaultPipelineConfigInfo@{DefaultPipelineConfigInfo}}
+\index{DefaultPipelineConfigInfo@{DefaultPipelineConfigInfo}!lve::LvePipeline@{lve::LvePipeline}}
+\doxysubsubsection{\texorpdfstring{DefaultPipelineConfigInfo()}{DefaultPipelineConfigInfo()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Pipeline\+::\+Default\+Pipeline\+Config\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlve_1_1_pipeline_config_info}{Pipeline\+Config\+Info}} \&}]{\+\_\+config\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Configure les paramètres par défaut du pipeline. 
+
+Cette méthode configure les paramètres par défaut du pipeline en remplissant la structure \doxylink{structlve_1_1_pipeline_config_info}{Pipeline\+Config\+Info} fournie.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+config\+Info} & Une référence vers la structure \doxylink{structlve_1_1_pipeline_config_info}{Pipeline\+Config\+Info} à remplir avec les paramètres par défaut du pipeline. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_pipeline_a80e232d47ded91f535a26dac1725af8a}\label{classlve_1_1_lve_pipeline_a80e232d47ded91f535a26dac1725af8a} 
+\index{lve::LvePipeline@{lve::LvePipeline}!EnableAlphaBlending@{EnableAlphaBlending}}
+\index{EnableAlphaBlending@{EnableAlphaBlending}!lve::LvePipeline@{lve::LvePipeline}}
+\doxysubsubsection{\texorpdfstring{EnableAlphaBlending()}{EnableAlphaBlending()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Pipeline\+::\+Enable\+Alpha\+Blending (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlve_1_1_pipeline_config_info}{Pipeline\+Config\+Info}} \&}]{\+\_\+config\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Active le mélange alpha dans la configuration de pipeline spécifiée. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+config\+Info} & Les informations de configuration de pipeline. \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Lve\+Engine/lve\+\_\+pipeline.\+h\item 
+sources/\+Lve\+Engine/lve\+\_\+pipeline.\+cpp\end{DoxyCompactItemize}

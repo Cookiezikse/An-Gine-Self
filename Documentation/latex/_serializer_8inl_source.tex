@@ -1,0 +1,29 @@
+\doxysection{Serializer.\+inl}
+\hypertarget{_serializer_8inl_source}{}\label{_serializer_8inl_source}\index{includes/UDP/Serialization/Serializer.inl@{includes/UDP/Serialization/Serializer.inl}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <numeric>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }Bousk}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{namespace\ }Serialization}
+\DoxyCodeLine{00007\ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ CONTAINER>}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ Serializer::writeContainer(\textcolor{keyword}{const}\ CONTAINER\&\ container)}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ assert(container.size()\ <=\ std::numeric\_limits<uint8>::max());}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ mBuffer.reserve(mBuffer.size()\ +\ container.size()\ +\ 1);}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!write(\textcolor{keyword}{static\_cast<}uint8\textcolor{keyword}{>}(container.size())))}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\&\ data\ :\ container)}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!write(data))}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}

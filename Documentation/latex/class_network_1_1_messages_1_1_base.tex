@@ -1,0 +1,153 @@
+\doxysection{Référence de la classe Network\+::Messages\+::Base}
+\hypertarget{class_network_1_1_messages_1_1_base}{}\label{class_network_1_1_messages_1_1_base}\index{Network::Messages::Base@{Network::Messages::Base}}
+
+
+Classe de base pour les messages r{\ucr}seau.  
+
+
+
+
+{\ttfamily \#include $<$Messages.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Network\+::Messages\+::Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.736434cm]{class_network_1_1_messages_1_1_base}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class M $>$ }\\bool \mbox{\hyperlink{class_network_1_1_messages_1_1_base_ad1147d97f230c6be6276fdf3668b1d0a}{is}} () const
+\begin{DoxyCompactList}\small\item\em V{\ucr}rifie si le message est de type M. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class M $>$ }\\const M \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a06b16a57d0fb98dc0bacf5ff2a90f283}{as}} () const
+\begin{DoxyCompactList}\small\item\em Convertit le message en type M. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+sockaddr\+\_\+in \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a69cd114b95f2b08d2c1cc7e9e8b3e0d1}{from}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a8774bdd6b0cdd35e14379b903617643d}{id\+From}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Types protégés}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Type}} \{ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ac2cc7082a89c1ad6631a2f66af5f00c0}{Connection}}
+, \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a522d5fadad05effceba392f6e8f70b64}{Disconnection}}
+, \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a12b4595813f48775b089bc59c0f97152}{User\+Data}}
+ \}
+\begin{DoxyCompactList}\small\item\em Type de message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_network_1_1_messages_1_1_base_a3bb3c9f2296d822d9fe4467060e02f52}{Base}} (\mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Type}} type)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{class_network_1_1_messages_1_1_base}{Base}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Classe de base pour les messages r{\ucr}seau. 
+
+\doxysubsection{Documentation des énumérations membres}
+\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4} 
+\index{Network::Messages::Base@{Network::Messages::Base}!Type@{Type}}
+\index{Type@{Type}!Network::Messages::Base@{Network::Messages::Base}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Network\+::\+Messages\+::\+Base\+::\+Type}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [protected]}}
+
+
+
+Type de message. 
+
+\begin{DoxyEnumFields}{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Connection@{Connection}!Network::Messages::Base@{Network::Messages::Base}}\index{Network::Messages::Base@{Network::Messages::Base}!Connection@{Connection}}}\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ac2cc7082a89c1ad6631a2f66af5f00c0}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ac2cc7082a89c1ad6631a2f66af5f00c0} 
+Connection&Message de connexion. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Disconnection@{Disconnection}!Network::Messages::Base@{Network::Messages::Base}}\index{Network::Messages::Base@{Network::Messages::Base}!Disconnection@{Disconnection}}}\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a522d5fadad05effceba392f6e8f70b64}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a522d5fadad05effceba392f6e8f70b64} 
+Disconnection&Message de d{\ucr}connexion. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UserData@{UserData}!Network::Messages::Base@{Network::Messages::Base}}\index{Network::Messages::Base@{Network::Messages::Base}!UserData@{UserData}}}\Hypertarget{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a12b4595813f48775b089bc59c0f97152}\label{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a12b4595813f48775b089bc59c0f97152} 
+User\+Data&Message de donn{\ucr}es utilisateur. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_network_1_1_messages_1_1_base_a3bb3c9f2296d822d9fe4467060e02f52}\label{class_network_1_1_messages_1_1_base_a3bb3c9f2296d822d9fe4467060e02f52} 
+\index{Network::Messages::Base@{Network::Messages::Base}!Base@{Base}}
+\index{Base@{Base}!Network::Messages::Base@{Network::Messages::Base}}
+\doxysubsubsection{\texorpdfstring{Base()}{Base()}}
+{\footnotesize\ttfamily Network\+::\+Messages\+::\+Base\+::\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Constructeur de la classe \doxylink{class_network_1_1_messages_1_1_base}{Base}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em type} & Type du message. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_network_1_1_messages_1_1_base_a06b16a57d0fb98dc0bacf5ff2a90f283}\label{class_network_1_1_messages_1_1_base_a06b16a57d0fb98dc0bacf5ff2a90f283} 
+\index{Network::Messages::Base@{Network::Messages::Base}!as@{as}}
+\index{as@{as}!Network::Messages::Base@{Network::Messages::Base}}
+\doxysubsubsection{\texorpdfstring{as()}{as()}}
+{\footnotesize\ttfamily template$<$class M $>$ \\
+const M \texorpdfstring{$\ast$}{*} Network\+::\+Messages\+::\+Base\+::as (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convertit le message en type M. 
+
+
+\begin{DoxyTemplParams}{Paramètres du template}
+{\em M} & Type de message {\ucr} convertir. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Renvoie}
+Pointeur vers le message converti en type M. 
+\end{DoxyReturn}
+\Hypertarget{class_network_1_1_messages_1_1_base_ad1147d97f230c6be6276fdf3668b1d0a}\label{class_network_1_1_messages_1_1_base_ad1147d97f230c6be6276fdf3668b1d0a} 
+\index{Network::Messages::Base@{Network::Messages::Base}!is@{is}}
+\index{is@{is}!Network::Messages::Base@{Network::Messages::Base}}
+\doxysubsubsection{\texorpdfstring{is()}{is()}}
+{\footnotesize\ttfamily template$<$class M $>$ \\
+bool Network\+::\+Messages\+::\+Base\+::is (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+V{\ucr}rifie si le message est de type M. 
+
+
+\begin{DoxyTemplParams}{Paramètres du template}
+{\em M} & Type de message {\ucr} v{\ucr}rifier. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Renvoie}
+true si le message est de type M, sinon false. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentation des données membres}
+\Hypertarget{class_network_1_1_messages_1_1_base_a69cd114b95f2b08d2c1cc7e9e8b3e0d1}\label{class_network_1_1_messages_1_1_base_a69cd114b95f2b08d2c1cc7e9e8b3e0d1} 
+\index{Network::Messages::Base@{Network::Messages::Base}!from@{from}}
+\index{from@{from}!Network::Messages::Base@{Network::Messages::Base}}
+\doxysubsubsection{\texorpdfstring{from}{from}}
+{\footnotesize\ttfamily sockaddr\+\_\+in Network\+::\+Messages\+::\+Base\+::from}
+
+Adresse du destinataire du message. \Hypertarget{class_network_1_1_messages_1_1_base_a8774bdd6b0cdd35e14379b903617643d}\label{class_network_1_1_messages_1_1_base_a8774bdd6b0cdd35e14379b903617643d} 
+\index{Network::Messages::Base@{Network::Messages::Base}!idFrom@{idFrom}}
+\index{idFrom@{idFrom}!Network::Messages::Base@{Network::Messages::Base}}
+\doxysubsubsection{\texorpdfstring{idFrom}{idFrom}}
+{\footnotesize\ttfamily uint64\+\_\+t Network\+::\+Messages\+::\+Base\+::id\+From}
+
+Identifiant du destinataire du message. 
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+TCP/Messages.\+h\end{DoxyCompactItemize}

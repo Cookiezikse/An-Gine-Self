@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/TCP/Server/Server.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_91a95676654bc0b13c3d019926ab4d98.html">TCP</a></li><li class="navelem"><a class="el" href="dir_6995f66767acdf48ac047eb6acf72658.html">Server</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Server.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;TCP/Sockets.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;TCP/Client/Client.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;TCP/Messages.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span>Network</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">namespace </span>Messages {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">class </span>Base;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">namespace </span>TCP</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">class </span>ServerImpl;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_network_1_1_t_c_p_1_1_server.html">   27</a></span>        <span class="keyword">class </span><a class="code hl_class" href="class_network_1_1_t_c_p_1_1_server.html">Server</a></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_network_1_1_t_c_p_1_1_server.html#a7f8a321ebc3a99959eef876e652efcfe">   33</a></span>            <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server.html#a7f8a321ebc3a99959eef876e652efcfe">Server</a>() {}</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_network_1_1_t_c_p_1_1_server.html#a1f739954830843ba193781f846736209">   38</a></span>            <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server.html#a1f739954830843ba193781f846736209">Server</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_network_1_1_t_c_p_1_1_server.html">Server</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_network_1_1_t_c_p_1_1_server.html#a72d89f79a2f3b29940af39932dde8176">   43</a></span>            <a class="code hl_class" href="class_network_1_1_t_c_p_1_1_server.html">Server</a>&amp; <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server.html#a72d89f79a2f3b29940af39932dde8176">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_network_1_1_t_c_p_1_1_server.html">Server</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server.html#a7f8a321ebc3a99959eef876e652efcfe">Server</a>(<a class="code hl_class" href="class_network_1_1_t_c_p_1_1_server.html">Server</a>&amp;&amp;);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <a class="code hl_class" href="class_network_1_1_t_c_p_1_1_server.html">Server</a>&amp; <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server.html#a72d89f79a2f3b29940af39932dde8176">operator=</a>(<a class="code hl_class" href="class_network_1_1_t_c_p_1_1_server.html">Server</a>&amp;&amp;);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_network_1_1_t_c_p_1_1_server.html#a09366c69fe651156d9a4131175e4a217">   58</a></span>            <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server.html#a09366c69fe651156d9a4131175e4a217">~Server</a>() {}</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server.html#a229a8fb6cd5cf4278f5a578661dc094d">start</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> _port);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server.html#a01fae34f54a929d8aa03cbc3c2cb1e1d">stop</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server.html#a6a8fdc8571bbbd999c7c2767fc5b34bf">update</a>();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server.html#af7896a328c27db52fd99e0c5888754f1">sendTo</a>(uint64_t clientid, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* data, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> len);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server.html#af017b5f9caa9147cf4502750ccc3639a">sendToAll</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* data, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> len);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            std::unique_ptr&lt;Messages::Base&gt; <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server.html#ac4cc0dc0661e293f522a0bb7089bbfbe">poll</a>();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            std::unique_ptr&lt;ServerImpl&gt; mImpl; </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        };</div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="};">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_network_1_1_t_c_p_1_1_server_impl.html">  104</a></span>        <span class="keyword">class </span><a class="code hl_class" href="class_network_1_1_t_c_p_1_1_server_impl.html">ServerImpl</a></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <a class="code hl_class" href="class_network_1_1_t_c_p_1_1_server_impl.html">ServerImpl</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <a class="code hl_class" href="class_network_1_1_t_c_p_1_1_server_impl.html">~ServerImpl</a>();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server_impl.html#af5bb3160db4da70211389a63294432da">start</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> _port);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server_impl.html#ae8f77df483436b7ff6eef716e90ac3ee">stop</a>();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server_impl.html#a7396997a25ce53506c8f8a69cec72774">update</a>();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server_impl.html#a0517ef8600539522385b82cf0460cbd3">sendTo</a>(uint64_t clientid, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* data, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> len);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server_impl.html#aebf3e7ba43f65222e14142f3bdaf10f0">sendToAll</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* data, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> len);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            std::unique_ptr&lt;Messages::Base&gt; <a class="code hl_function" href="class_network_1_1_t_c_p_1_1_server_impl.html#acd01852df26c13a59887a9043e339ca1">poll</a>();</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            std::map&lt;uint64_t, Client&gt; mClients; </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            std::list&lt;std::unique_ptr&lt;Messages::Base&gt;&gt; mMessages; </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            SOCKET mSocket{ INVALID_SOCKET }; </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        };</div>
+</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>}</div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_html"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server.html">Network::TCP::Server</a></div><div class="ttdoc">La classe Server repr�sente un serveur TCP.</div><div class="ttdef"><b>Definition</b> Server.h:28</div></div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_html_a01fae34f54a929d8aa03cbc3c2cb1e1d"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server.html#a01fae34f54a929d8aa03cbc3c2cb1e1d">Network::TCP::Server::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Arr�te le serveur.</div><div class="ttdef"><b>Definition</b> Server.cpp:144</div></div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_html_a09366c69fe651156d9a4131175e4a217"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server.html#a09366c69fe651156d9a4131175e4a217">Network::TCP::Server::~Server</a></div><div class="ttdeci">~Server()</div><div class="ttdoc">Destructeur de la classe Server.</div><div class="ttdef"><b>Definition</b> Server.h:58</div></div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_html_a1f739954830843ba193781f846736209"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server.html#a1f739954830843ba193781f846736209">Network::TCP::Server::Server</a></div><div class="ttdeci">Server(const Server &amp;)=delete</div><div class="ttdoc">Constructeur de copie supprim�.</div></div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_html_a229a8fb6cd5cf4278f5a578661dc094d"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server.html#a229a8fb6cd5cf4278f5a578661dc094d">Network::TCP::Server::start</a></div><div class="ttdeci">bool start(unsigned short _port)</div><div class="ttdoc">D�marre le serveur sur le port sp�cifi�.</div><div class="ttdef"><b>Definition</b> Server.cpp:136</div></div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_html_a6a8fdc8571bbbd999c7c2767fc5b34bf"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server.html#a6a8fdc8571bbbd999c7c2767fc5b34bf">Network::TCP::Server::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Met � jour le serveur pour traiter les �v�nements en attente.</div><div class="ttdef"><b>Definition</b> Server.cpp:150</div></div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_html_a72d89f79a2f3b29940af39932dde8176"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server.html#a72d89f79a2f3b29940af39932dde8176">Network::TCP::Server::operator=</a></div><div class="ttdeci">Server &amp; operator=(const Server &amp;)=delete</div><div class="ttdoc">Op�rateur d'assignation de copie supprim�.</div></div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_html_a7f8a321ebc3a99959eef876e652efcfe"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server.html#a7f8a321ebc3a99959eef876e652efcfe">Network::TCP::Server::Server</a></div><div class="ttdeci">Server()</div><div class="ttdoc">Constructeur par d�faut de la classe Server.</div><div class="ttdef"><b>Definition</b> Server.h:33</div></div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_html_ac4cc0dc0661e293f522a0bb7089bbfbe"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server.html#ac4cc0dc0661e293f522a0bb7089bbfbe">Network::TCP::Server::poll</a></div><div class="ttdeci">std::unique_ptr&lt; Messages::Base &gt; poll()</div><div class="ttdoc">R�cup�re les messages entrants du serveur.</div><div class="ttdef"><b>Definition</b> Server.cpp:168</div></div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_html_af017b5f9caa9147cf4502750ccc3639a"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server.html#af017b5f9caa9147cf4502750ccc3639a">Network::TCP::Server::sendToAll</a></div><div class="ttdeci">bool sendToAll(const unsigned char *data, unsigned int len)</div><div class="ttdoc">Envoie des donn�es � tous les clients connect�s.</div><div class="ttdef"><b>Definition</b> Server.cpp:162</div></div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_html_af7896a328c27db52fd99e0c5888754f1"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server.html#af7896a328c27db52fd99e0c5888754f1">Network::TCP::Server::sendTo</a></div><div class="ttdeci">bool sendTo(uint64_t clientid, const unsigned char *data, unsigned int len)</div><div class="ttdoc">Envoie des donn�es � un client sp�cifi�.</div><div class="ttdef"><b>Definition</b> Server.cpp:156</div></div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_impl_html"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server_impl.html">Network::TCP::ServerImpl</a></div><div class="ttdef"><b>Definition</b> Server.h:105</div></div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_impl_html_a0517ef8600539522385b82cf0460cbd3"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server_impl.html#a0517ef8600539522385b82cf0460cbd3">Network::TCP::ServerImpl::sendTo</a></div><div class="ttdeci">bool sendTo(uint64_t clientid, const unsigned char *data, unsigned int len)</div><div class="ttdoc">Envoie des donn�es � un client sp�cifique.</div><div class="ttdef"><b>Definition</b> Server.cpp:99</div></div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_impl_html_a7396997a25ce53506c8f8a69cec72774"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server_impl.html#a7396997a25ce53506c8f8a69cec72774">Network::TCP::ServerImpl::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Met � jour le serveur.</div><div class="ttdef"><b>Definition</b> Server.cpp:52</div></div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_impl_html_acd01852df26c13a59887a9043e339ca1"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server_impl.html#acd01852df26c13a59887a9043e339ca1">Network::TCP::ServerImpl::poll</a></div><div class="ttdeci">std::unique_ptr&lt; Messages::Base &gt; poll()</div><div class="ttdoc">R�cup�re les messages entrants.</div><div class="ttdef"><b>Definition</b> Server.cpp:113</div></div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_impl_html_ae8f77df483436b7ff6eef716e90ac3ee"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server_impl.html#ae8f77df483436b7ff6eef716e90ac3ee">Network::TCP::ServerImpl::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Arr�te le serveur.</div><div class="ttdef"><b>Definition</b> Server.cpp:43</div></div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_impl_html_aebf3e7ba43f65222e14142f3bdaf10f0"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server_impl.html#aebf3e7ba43f65222e14142f3bdaf10f0">Network::TCP::ServerImpl::sendToAll</a></div><div class="ttdeci">bool sendToAll(const unsigned char *data, unsigned int len)</div><div class="ttdoc">Envoie des donn�es � tous les clients connect�s.</div><div class="ttdef"><b>Definition</b> Server.cpp:105</div></div>
+<div class="ttc" id="aclass_network_1_1_t_c_p_1_1_server_impl_html_af5bb3160db4da70211389a63294432da"><div class="ttname"><a href="class_network_1_1_t_c_p_1_1_server_impl.html#af5bb3160db4da70211389a63294432da">Network::TCP::ServerImpl::start</a></div><div class="ttdeci">bool start(unsigned short _port)</div><div class="ttdoc">D�marre le serveur sur le port sp�cifi�.</div><div class="ttdef"><b>Definition</b> Server.cpp:12</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

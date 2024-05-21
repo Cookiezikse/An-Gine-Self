@@ -1,0 +1,71 @@
+\doxysection{Référence de la classe Network\+::TCP\+::Sending\+Handler}
+\hypertarget{class_network_1_1_t_c_p_1_1_sending_handler}{}\label{class_network_1_1_t_c_p_1_1_sending_handler}\index{Network::TCP::SendingHandler@{Network::TCP::SendingHandler}}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_sending_handler_a9d46cbd0e3bb87998de28f7afc494174}{init}} (SOCKET sckt)
+\begin{DoxyCompactList}\small\item\em Initialise le gestionnaire d\textquotesingle{}envoi avec le socket sp{\ucr}cifi{\ucr}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_sending_handler_afd82361ce8f24ae48ba9c586fec85b6c}{send}} (const unsigned char \texorpdfstring{$\ast$}{*}data, unsigned int datalen)
+\begin{DoxyCompactList}\small\item\em Envoie des donn{\ucr}es au serveur. \end{DoxyCompactList}\item 
+\Hypertarget{class_network_1_1_t_c_p_1_1_sending_handler_a234c0bee61f02cbc6210bdf339c45a62}\label{class_network_1_1_t_c_p_1_1_sending_handler_a234c0bee61f02cbc6210bdf339c45a62} 
+void {\bfseries update} ()
+\begin{DoxyCompactList}\small\item\em Met {\ucr} jour le gestionnaire d\textquotesingle{}envoi. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_sending_handler_a0ee93a4a671c89ca30ea191fdcacc745}{queue\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Renvoie la taille de la file d\textquotesingle{}attente d\textquotesingle{}envoi. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_network_1_1_t_c_p_1_1_sending_handler_a9d46cbd0e3bb87998de28f7afc494174}\label{class_network_1_1_t_c_p_1_1_sending_handler_a9d46cbd0e3bb87998de28f7afc494174} 
+\index{Network::TCP::SendingHandler@{Network::TCP::SendingHandler}!init@{init}}
+\index{init@{init}!Network::TCP::SendingHandler@{Network::TCP::SendingHandler}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Network\+::\+TCP\+::\+Sending\+Handler\+::init (\begin{DoxyParamCaption}\item[{SOCKET}]{sckt }\end{DoxyParamCaption})}
+
+
+
+Initialise le gestionnaire d\textquotesingle{}envoi avec le socket sp{\ucr}cifi{\ucr}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em sckt} & Socket {\ucr} utiliser pour l\textquotesingle{}envoi. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_network_1_1_t_c_p_1_1_sending_handler_a0ee93a4a671c89ca30ea191fdcacc745}\label{class_network_1_1_t_c_p_1_1_sending_handler_a0ee93a4a671c89ca30ea191fdcacc745} 
+\index{Network::TCP::SendingHandler@{Network::TCP::SendingHandler}!queueSize@{queueSize}}
+\index{queueSize@{queueSize}!Network::TCP::SendingHandler@{Network::TCP::SendingHandler}}
+\doxysubsubsection{\texorpdfstring{queueSize()}{queueSize()}}
+{\footnotesize\ttfamily size\+\_\+t Network\+::\+TCP\+::\+Sending\+Handler\+::queue\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Renvoie la taille de la file d\textquotesingle{}attente d\textquotesingle{}envoi. 
+
+\begin{DoxyReturn}{Renvoie}
+Taille de la file d\textquotesingle{}attente. 
+\end{DoxyReturn}
+\Hypertarget{class_network_1_1_t_c_p_1_1_sending_handler_afd82361ce8f24ae48ba9c586fec85b6c}\label{class_network_1_1_t_c_p_1_1_sending_handler_afd82361ce8f24ae48ba9c586fec85b6c} 
+\index{Network::TCP::SendingHandler@{Network::TCP::SendingHandler}!send@{send}}
+\index{send@{send}!Network::TCP::SendingHandler@{Network::TCP::SendingHandler}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily bool Network\+::\+TCP\+::\+Sending\+Handler\+::send (\begin{DoxyParamCaption}\item[{const unsigned char \texorpdfstring{$\ast$}{*}}]{data,  }\item[{unsigned int}]{datalen }\end{DoxyParamCaption})}
+
+
+
+Envoie des donn{\ucr}es au serveur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em data} & Pointeur vers les donn{\ucr}es {\ucr} envoyer. \\
+\hline
+{\em datalen} & Longueur des donn{\ucr}es {\ucr} envoyer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si l\textquotesingle{}envoi r{\ucr}ussit, sinon false. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+TCP/\+Client/Client.\+h\item 
+sources/\+TCP/\+Client/Client.\+cpp\end{DoxyCompactItemize}

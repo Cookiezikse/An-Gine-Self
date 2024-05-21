@@ -1,0 +1,418 @@
+\doxysection{RÃ©fÃ©rence de la classe Im\+Gui\+Module}
+\hypertarget{class_im_gui_module}{}\label{class_im_gui_module}\index{ImGuiModule@{ImGuiModule}}
+
+
+Classe dédiée à la gestion de l\textquotesingle{}interface utilisateur avec Im\+Gui dans le contexte du module de rendu.  
+
+
+
+
+{\ttfamily \#include $<$Im\+GUIModule.\+h$>$}
+
+Graphe d\textquotesingle{}hÃ©ritage de Im\+Gui\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_im_gui_module}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_im_gui_module_a789d564bb784deb1a76bc9785f221d5e}{Init}} () override
+\begin{DoxyCompactList}\small\item\em Initialise le module Im\+Gui, préparant les ressources nécessaires pour son fonctionnement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_module_a0aef3322c112235bc038cfc0b9c62fa7}{Start}} () override
+\begin{DoxyCompactList}\small\item\em Démarre le module Im\+Gui et prépare l\textquotesingle{}interface utilisateur pour l\textquotesingle{}interaction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_module_ac34fdc8c2c2e6338c68ba68bed5798e7}{Fixed\+Update}} () override
+\begin{DoxyCompactList}\small\item\em Exécute des mises à jour régulières à intervalles fixes, typiquement pour la logique de jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_module_a09392d7282f2cb9f120db4ca5776385a}{Update}} () override
+\begin{DoxyCompactList}\small\item\em Met à jour l\textquotesingle{}état du module Im\+Gui avant le rendu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_module_aac4b06dfc1dbbad552e820af1f605d35}{Pre\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Prépare le module Im\+Gui pour le rendu, mais avant que le rendu ne soit effectué. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_module_a28d1ef88461b218dcd358dd047c06674}{Render}} () override
+\begin{DoxyCompactList}\small\item\em Exécute le rendu de l\textquotesingle{}interface utilisateur Im\+Gui. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_module_a337f2c65bd158e39d89f7769fc4d9920}{Render\+Gui}} () override
+\begin{DoxyCompactList}\small\item\em Dessine l\textquotesingle{}interface graphique spécifique au module, comme les menus et les fenêtres. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_module_a962739d0cb1769792363df53802a6925}{Post\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Opérations à effectuer après le rendu principal, souvent utilisées pour les nettoyages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_module_ae45e29b9025b130e030e54dfc045f3e0}{Release}} () override
+\begin{DoxyCompactList}\small\item\em Libère les ressources utilisées par le module Im\+Gui. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_module_ae51921c37415c169fd0551aef5b669de}{Finalize}} () override
+\begin{DoxyCompactList}\small\item\em Nettoie l\textquotesingle{}état du module Im\+Gui et ferme l\textquotesingle{}interface utilisateur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_module_a799d9c6842fb765029b73555c506779e}{Immediate\+Submit}} (std\+::function$<$ void(vk\+::\+Command\+Buffer \+\_\+cmd)$>$ \&\&\+\_\+function) const
+\begin{DoxyCompactList}\small\item\em Soumet une commande graphique immédiate à exécuter. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_a7f33c566fbe081b75dca96bcb6707dbb}\label{class_im_gui_module_a7f33c566fbe081b75dca96bcb6707dbb} 
+void {\bfseries Get\+Gui} ()
+\begin{DoxyCompactList}\small\item\em Construit les éléments de l\textquotesingle{}interface utilisateur à afficher, incluant les fenêtres "{}\+Hierarchy"{} et "{}\+Inspector"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_module_a5e0b8717004df555bd7c7e95f6668224}{Anchor\+Window}} (const std\+::string \&\+\_\+window\+Name)
+\begin{DoxyCompactList}\small\item\em Fixe la fenêtre de l\textquotesingle{}interface utilisateur à une position spécifique. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_a946258a533c49e5ea282f86afcb898d8}\label{class_im_gui_module_a946258a533c49e5ea282f86afcb898d8} 
+void {\bfseries Draw\+Hierarchy\+Window} ()
+\begin{DoxyCompactList}\small\item\em Dessine la hiérarchie des objets de la scène dans l\textquotesingle{}interface utilisateur. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_aab36080f4bfca6384b2cebce05984df2}\label{class_im_gui_module_aab36080f4bfca6384b2cebce05984df2} 
+void {\bfseries Draw\+Inspector\+Window} ()
+\begin{DoxyCompactList}\small\item\em Dessine l\textquotesingle{}inspecteur des propriétés pour l\textquotesingle{}objet sélectionné. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_module_aff9dc1bf288561b8063c5ab5b6a60963}{Display\+Transform}} (\mbox{\hyperlink{class_transform}{Transform}} \texorpdfstring{$\ast$}{*}\+\_\+transform)
+\begin{DoxyCompactList}\small\item\em Affiche et permet l\textquotesingle{}édition des propriétés de transformation d\textquotesingle{}un objet. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_acf5aad77e1beb6ba0025619217240a83}\label{class_im_gui_module_acf5aad77e1beb6ba0025619217240a83} 
+void {\bfseries Draw\+Modes\+Window} ()
+\item 
+\Hypertarget{class_im_gui_module_ac9ff75b10b3a3ec853348cc752c09951}\label{class_im_gui_module_ac9ff75b10b3a3ec853348cc752c09951} 
+void {\bfseries Draw\+Settings\+Window} ()
+\begin{DoxyCompactList}\small\item\em Dessine les paramètres de l\textquotesingle{}interface utilisateur du moteur de jeu. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_a1fe0c0297d80d15141c6d593a37214d3}\label{class_im_gui_module_a1fe0c0297d80d15141c6d593a37214d3} 
+void {\bfseries Show\+Rename\+Popup} ()
+\begin{DoxyCompactList}\small\item\em Affiche la popup de renommage pour l\textquotesingle{}entité sélectionnée. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_module_aaf05ac68949491eb8606e0de6f69d47f}{Rename\+Game\+Object}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+game\+Object, const std\+::string \&\+\_\+new\+Name)
+\begin{DoxyCompactList}\small\item\em Renomme l\textquotesingle{}objet de jeu sélectionné. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_module_ab5315e1896eadd7b3b0fa6952cca8fa9}{Delete\+Game\+Object}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+game\+Object)
+\begin{DoxyCompactList}\small\item\em Supprime l\textquotesingle{}objet de jeu sélectionné de la scène. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_module_a58ffcbfd47af624c2699b34a32a05af9}{Duplicate\+Game\+Object}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+game\+Object)
+\begin{DoxyCompactList}\small\item\em Duplique l\textquotesingle{}objet de jeu situé à l\textquotesingle{}index spécifié. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_im_gui_module_adde47c76109469e0ad3cf56e4edb64b7}{Create\+Specific\+Game\+Object}} (Game\+Object\+Type \+\_\+type, int \+\_\+other\+Type=0)
+\begin{DoxyCompactList}\small\item\em Crée un nouveau \doxylink{class_game_object}{Game\+Object} du type spécifié et l\textquotesingle{}ajoute à la scène active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_im_gui_module_a6060707528a193f1edb76e6dcb4a2dd8}\label{class_im_gui_module_a6060707528a193f1edb76e6dcb4a2dd8} 
+vk\+::\+Fence {\bfseries imm\+Fence}
+\item 
+\Hypertarget{class_im_gui_module_a01445a17a6f8d83eaa79708e04333433}\label{class_im_gui_module_a01445a17a6f8d83eaa79708e04333433} 
+vk\+::\+Command\+Buffer {\bfseries imm\+Command\+Buffer}
+\item 
+\Hypertarget{class_im_gui_module_ae57758399f4939a2663c344329636093}\label{class_im_gui_module_ae57758399f4939a2663c344329636093} 
+vk\+::\+Command\+Pool {\bfseries imm\+Command\+Pool}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres protÃ©gÃ©es}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_im_gui_module_ac0b66194c865917ef2ed79457fda1944}\label{class_im_gui_module_ac0b66194c865917ef2ed79457fda1944} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Im\+Gui\+Module} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur par défaut. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres protÃ©gÃ©es hÃ©ritÃ©s de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_af09dc286b704160d8f0f273e1fe8576b}{\texorpdfstring{$\sim$}{\string~}\+Module}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur protégé. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs protÃ©gÃ©s}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_im_gui_module_ae121d0441870a164991d36493dae734d}\label{class_im_gui_module_ae121d0441870a164991d36493dae734d} 
+vk\+::\+Device {\bfseries device}
+\begin{DoxyCompactList}\small\item\em Périphérique utilisé pour le rendu avec Vulkan. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_a2427c08a4d3e3fdaa1dd033e7fd36201}\label{class_im_gui_module_a2427c08a4d3e3fdaa1dd033e7fd36201} 
+vk\+::\+Queue {\bfseries graphics\+Queue}
+\begin{DoxyCompactList}\small\item\em File d\textquotesingle{}attente graphique pour la soumission des commandes Vulkan. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_a18cb0bdc0ed883a8c26be006778a29f0}\label{class_im_gui_module_a18cb0bdc0ed883a8c26be006778a29f0} 
+\mbox{\hyperlink{class_window_module}{Window\+Module}} \texorpdfstring{$\ast$}{*} {\bfseries window\+Module} = nullptr
+\begin{DoxyCompactList}\small\item\em \doxylink{class_module}{Module} de gestion de la fenêtre de l\textquotesingle{}application. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_a0d8a1509473acbda71dcc19408be3d02}\label{class_im_gui_module_a0d8a1509473acbda71dcc19408be3d02} 
+\mbox{\hyperlink{class_r_h_i_module}{RHIModule}} \texorpdfstring{$\ast$}{*} {\bfseries rhi\+Module} = nullptr
+\begin{DoxyCompactList}\small\item\em \doxylink{class_module}{Module} de gestion du rendu bas-\/niveau (RHI). \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_af06f65844fce295b22a0eb050ea0f459}\label{class_im_gui_module_af06f65844fce295b22a0eb050ea0f459} 
+\mbox{\hyperlink{class_scene_manager}{Scene\+Manager}} \texorpdfstring{$\ast$}{*} {\bfseries scene\+Manager} = nullptr
+\begin{DoxyCompactList}\small\item\em Gestionnaire de scènes de l\textquotesingle{}application. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_a194cfe4f52ea64be8c9b81cfc421d641}\label{class_im_gui_module_a194cfe4f52ea64be8c9b81cfc421d641} 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries selected\+Game\+Object} = nullptr
+\begin{DoxyCompactList}\small\item\em Pointeur vers l\textquotesingle{}objet de jeu actuellement sélectionné. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_a6082dd9fd4ee78af1c9100bec2d5717e}\label{class_im_gui_module_a6082dd9fd4ee78af1c9100bec2d5717e} 
+bool {\bfseries is\+Rename\+Popup\+Open} = false
+\begin{DoxyCompactList}\small\item\em Indique si la popup de renommage est ouverte ou non. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_aa2d13a31e1e9ff6349f4440bd877e52f}\label{class_im_gui_module_aa2d13a31e1e9ff6349f4440bd877e52f} 
+int {\bfseries entity\+To\+Rename} = -\/1
+\begin{DoxyCompactList}\small\item\em Index de l\textquotesingle{}entité à renommer. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_a61f5f1cd5b5e44a771673fd347cc469f}\label{class_im_gui_module_a61f5f1cd5b5e44a771673fd347cc469f} 
+char {\bfseries rename\+Buffer} \mbox{[}256\mbox{]}
+\begin{DoxyCompactList}\small\item\em Buffer pour le nouveau nom de l\textquotesingle{}entité à renommer. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_a7117c6b5a499546e7841ec28e0e2da3e}\label{class_im_gui_module_a7117c6b5a499546e7841ec28e0e2da3e} 
+int {\bfseries scene\+To\+Rename} = -\/1
+\begin{DoxyCompactList}\small\item\em Index de la scène à renommer. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_ad20e3d26263ff8bacb123591db57a67f}\label{class_im_gui_module_ad20e3d26263ff8bacb123591db57a67f} 
+char {\bfseries rename\+Scene\+Buffer} \mbox{[}100\mbox{]}
+\begin{DoxyCompactList}\small\item\em Buffer pour le nouveau nom de la scène à renommer. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_a4f3f8f985582efff218a469f5c640e55}\label{class_im_gui_module_a4f3f8f985582efff218a469f5c640e55} 
+bool {\bfseries open\+Position\+Edit} = false
+\begin{DoxyCompactList}\small\item\em Indique si l\textquotesingle{}édition de la position est ouverte ou non. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_a781acf4bad8e9457bb32d44b9a53e37f}\label{class_im_gui_module_a781acf4bad8e9457bb32d44b9a53e37f} 
+bool {\bfseries open\+Scale\+Edit} = false
+\begin{DoxyCompactList}\small\item\em Indique si l\textquotesingle{}édition de l\textquotesingle{}échelle est ouverte ou non. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_ac26a29296d687741384bacf0dbed7d7e}\label{class_im_gui_module_ac26a29296d687741384bacf0dbed7d7e} 
+glm\+::vec3 {\bfseries position\+Edit}
+\begin{DoxyCompactList}\small\item\em Stocke la position actuelle pour l\textquotesingle{}édition. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_a4b08888aba7c9db25825f6ea7527c02c}\label{class_im_gui_module_a4b08888aba7c9db25825f6ea7527c02c} 
+float {\bfseries rotation\+Edit}
+\begin{DoxyCompactList}\small\item\em Stocke la rotation actuelle pour l\textquotesingle{}édition. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_aa55e63dd6b57116829e2abe2f4283db4}\label{class_im_gui_module_aa55e63dd6b57116829e2abe2f4283db4} 
+glm\+::vec3 {\bfseries scale\+Edit}
+\begin{DoxyCompactList}\small\item\em Stocke l\textquotesingle{}échelle actuelle pour l\textquotesingle{}édition. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_ac2cd62364dc11e4b5a76d0f2036d8992}\label{class_im_gui_module_ac2cd62364dc11e4b5a76d0f2036d8992} 
+std\+::vector$<$ bool $>$ {\bfseries is\+Open}
+\begin{DoxyCompactList}\small\item\em Vecteur pour suivre l\textquotesingle{}état ouvert/fermé des différents panneaux de l\textquotesingle{}interface utilisateur. \end{DoxyCompactList}\item 
+\Hypertarget{class_im_gui_module_ac1494fb6c09fe696d1bda1bc20c806dd}\label{class_im_gui_module_ac1494fb6c09fe696d1bda1bc20c806dd} 
+bool {\bfseries texture\+View} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protÃ©gÃ©s hÃ©ritÃ©s de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_manager}{Module\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_module_a8d9f92fc1216d933c961bfa685b0ad6f}{module\+Manager}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Classe dédiée à la gestion de l\textquotesingle{}interface utilisateur avec Im\+Gui dans le contexte du module de rendu. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_im_gui_module_a5e0b8717004df555bd7c7e95f6668224}\label{class_im_gui_module_a5e0b8717004df555bd7c7e95f6668224} 
+\index{ImGuiModule@{ImGuiModule}!AnchorWindow@{AnchorWindow}}
+\index{AnchorWindow@{AnchorWindow}!ImGuiModule@{ImGuiModule}}
+\doxysubsubsection{\texorpdfstring{AnchorWindow()}{AnchorWindow()}}
+{\footnotesize\ttfamily void Im\+Gui\+Module\+::\+Anchor\+Window (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+window\+Name }\end{DoxyParamCaption})}
+
+
+
+Fixe la fenêtre de l\textquotesingle{}interface utilisateur à une position spécifique. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+window\+Name} & Nom de la fenêtre à ancrer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_im_gui_module_adde47c76109469e0ad3cf56e4edb64b7}\label{class_im_gui_module_adde47c76109469e0ad3cf56e4edb64b7} 
+\index{ImGuiModule@{ImGuiModule}!CreateSpecificGameObject@{CreateSpecificGameObject}}
+\index{CreateSpecificGameObject@{CreateSpecificGameObject}!ImGuiModule@{ImGuiModule}}
+\doxysubsubsection{\texorpdfstring{CreateSpecificGameObject()}{CreateSpecificGameObject()}}
+{\footnotesize\ttfamily void Im\+Gui\+Module\+::\+Create\+Specific\+Game\+Object (\begin{DoxyParamCaption}\item[{Game\+Object\+Type}]{\+\_\+type,  }\item[{int}]{\+\_\+other\+Type = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Crée un nouveau \doxylink{class_game_object}{Game\+Object} du type spécifié et l\textquotesingle{}ajoute à la scène active. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+type} & Type de \doxylink{class_game_object}{Game\+Object} à créer, comme Cube, \doxylink{class_light}{Light} ou Plane. \\
+\hline
+{\em \+\_\+other\+Type} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_im_gui_module_ab5315e1896eadd7b3b0fa6952cca8fa9}\label{class_im_gui_module_ab5315e1896eadd7b3b0fa6952cca8fa9} 
+\index{ImGuiModule@{ImGuiModule}!DeleteGameObject@{DeleteGameObject}}
+\index{DeleteGameObject@{DeleteGameObject}!ImGuiModule@{ImGuiModule}}
+\doxysubsubsection{\texorpdfstring{DeleteGameObject()}{DeleteGameObject()}}
+{\footnotesize\ttfamily void Im\+Gui\+Module\+::\+Delete\+Game\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{\+\_\+game\+Object }\end{DoxyParamCaption})}
+
+
+
+Supprime l\textquotesingle{}objet de jeu sélectionné de la scène. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+game\+Object} & Pointeur vers l\textquotesingle{}objet de jeu à supprimer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_im_gui_module_aff9dc1bf288561b8063c5ab5b6a60963}\label{class_im_gui_module_aff9dc1bf288561b8063c5ab5b6a60963} 
+\index{ImGuiModule@{ImGuiModule}!DisplayTransform@{DisplayTransform}}
+\index{DisplayTransform@{DisplayTransform}!ImGuiModule@{ImGuiModule}}
+\doxysubsubsection{\texorpdfstring{DisplayTransform()}{DisplayTransform()}}
+{\footnotesize\ttfamily void Im\+Gui\+Module\+::\+Display\+Transform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_transform}{Transform}} \texorpdfstring{$\ast$}{*}}]{\+\_\+transform }\end{DoxyParamCaption})}
+
+
+
+Affiche et permet l\textquotesingle{}édition des propriétés de transformation d\textquotesingle{}un objet. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+transform} & Pointeur vers l\textquotesingle{}objet \doxylink{class_transform}{Transform} à afficher et éditer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_im_gui_module_a58ffcbfd47af624c2699b34a32a05af9}\label{class_im_gui_module_a58ffcbfd47af624c2699b34a32a05af9} 
+\index{ImGuiModule@{ImGuiModule}!DuplicateGameObject@{DuplicateGameObject}}
+\index{DuplicateGameObject@{DuplicateGameObject}!ImGuiModule@{ImGuiModule}}
+\doxysubsubsection{\texorpdfstring{DuplicateGameObject()}{DuplicateGameObject()}}
+{\footnotesize\ttfamily void Im\+Gui\+Module\+::\+Duplicate\+Game\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{\+\_\+game\+Object }\end{DoxyParamCaption})}
+
+
+
+Duplique l\textquotesingle{}objet de jeu situé à l\textquotesingle{}index spécifié. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+game\+Object} & Pointeur vers l\textquotesingle{}objet de jeu à à dupliquer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_im_gui_module_ae51921c37415c169fd0551aef5b669de}\label{class_im_gui_module_ae51921c37415c169fd0551aef5b669de} 
+\index{ImGuiModule@{ImGuiModule}!Finalize@{Finalize}}
+\index{Finalize@{Finalize}!ImGuiModule@{ImGuiModule}}
+\doxysubsubsection{\texorpdfstring{Finalize()}{Finalize()}}
+{\footnotesize\ttfamily void Im\+Gui\+Module\+::\+Finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Nettoie l\textquotesingle{}état du module Im\+Gui et ferme l\textquotesingle{}interface utilisateur. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a4ed07ee636825b626c8f5021c34e408c}{Module}}.
+
+\Hypertarget{class_im_gui_module_ac34fdc8c2c2e6338c68ba68bed5798e7}\label{class_im_gui_module_ac34fdc8c2c2e6338c68ba68bed5798e7} 
+\index{ImGuiModule@{ImGuiModule}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!ImGuiModule@{ImGuiModule}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Im\+Gui\+Module\+::\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Exécute des mises à jour régulières à intervalles fixes, typiquement pour la logique de jeu. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a4bbf5f6e563f86794d7ae718371f1ca4}{Module}}.
+
+\Hypertarget{class_im_gui_module_a799d9c6842fb765029b73555c506779e}\label{class_im_gui_module_a799d9c6842fb765029b73555c506779e} 
+\index{ImGuiModule@{ImGuiModule}!ImmediateSubmit@{ImmediateSubmit}}
+\index{ImmediateSubmit@{ImmediateSubmit}!ImGuiModule@{ImGuiModule}}
+\doxysubsubsection{\texorpdfstring{ImmediateSubmit()}{ImmediateSubmit()}}
+{\footnotesize\ttfamily void Im\+Gui\+Module\+::\+Immediate\+Submit (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(vk\+::\+Command\+Buffer \+\_\+cmd)$>$ \&\&}]{\+\_\+function }\end{DoxyParamCaption}) const}
+
+
+
+Soumet une commande graphique immédiate à exécuter. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+function} & La fonction qui contient les commandes graphiques à exécuter. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_im_gui_module_a789d564bb784deb1a76bc9785f221d5e}\label{class_im_gui_module_a789d564bb784deb1a76bc9785f221d5e} 
+\index{ImGuiModule@{ImGuiModule}!Init@{Init}}
+\index{Init@{Init}!ImGuiModule@{ImGuiModule}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Im\+Gui\+Module\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialise le module Im\+Gui, préparant les ressources nécessaires pour son fonctionnement. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a0151ba4ab62f6e91251b0a20b168985e}{Module}}.
+
+\Hypertarget{class_im_gui_module_a962739d0cb1769792363df53802a6925}\label{class_im_gui_module_a962739d0cb1769792363df53802a6925} 
+\index{ImGuiModule@{ImGuiModule}!PostRender@{PostRender}}
+\index{PostRender@{PostRender}!ImGuiModule@{ImGuiModule}}
+\doxysubsubsection{\texorpdfstring{PostRender()}{PostRender()}}
+{\footnotesize\ttfamily void Im\+Gui\+Module\+::\+Post\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Opérations à effectuer après le rendu principal, souvent utilisées pour les nettoyages. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a0bb23668b2717e4bb3b4e1f6350a7e87}{Module}}.
+
+\Hypertarget{class_im_gui_module_aac4b06dfc1dbbad552e820af1f605d35}\label{class_im_gui_module_aac4b06dfc1dbbad552e820af1f605d35} 
+\index{ImGuiModule@{ImGuiModule}!PreRender@{PreRender}}
+\index{PreRender@{PreRender}!ImGuiModule@{ImGuiModule}}
+\doxysubsubsection{\texorpdfstring{PreRender()}{PreRender()}}
+{\footnotesize\ttfamily void Im\+Gui\+Module\+::\+Pre\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Prépare le module Im\+Gui pour le rendu, mais avant que le rendu ne soit effectué. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a7a88e7aaddd55bf9f15beb8d297afd1e}{Module}}.
+
+\Hypertarget{class_im_gui_module_ae45e29b9025b130e030e54dfc045f3e0}\label{class_im_gui_module_ae45e29b9025b130e030e54dfc045f3e0} 
+\index{ImGuiModule@{ImGuiModule}!Release@{Release}}
+\index{Release@{Release}!ImGuiModule@{ImGuiModule}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Im\+Gui\+Module\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Libère les ressources utilisées par le module Im\+Gui. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a7e2e4615b80a57040eccf9794bee1007}{Module}}.
+
+\Hypertarget{class_im_gui_module_aaf05ac68949491eb8606e0de6f69d47f}\label{class_im_gui_module_aaf05ac68949491eb8606e0de6f69d47f} 
+\index{ImGuiModule@{ImGuiModule}!RenameGameObject@{RenameGameObject}}
+\index{RenameGameObject@{RenameGameObject}!ImGuiModule@{ImGuiModule}}
+\doxysubsubsection{\texorpdfstring{RenameGameObject()}{RenameGameObject()}}
+{\footnotesize\ttfamily void Im\+Gui\+Module\+::\+Rename\+Game\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{\+\_\+game\+Object,  }\item[{const std\+::string \&}]{\+\_\+new\+Name }\end{DoxyParamCaption})}
+
+
+
+Renomme l\textquotesingle{}objet de jeu sélectionné. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+game\+Object} & Pointeur vers l\textquotesingle{}objet de jeu à renommer. \\
+\hline
+{\em \+\_\+new\+Name} & Nouveau nom à attribuer à l\textquotesingle{}objet de jeu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_im_gui_module_a28d1ef88461b218dcd358dd047c06674}\label{class_im_gui_module_a28d1ef88461b218dcd358dd047c06674} 
+\index{ImGuiModule@{ImGuiModule}!Render@{Render}}
+\index{Render@{Render}!ImGuiModule@{ImGuiModule}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Im\+Gui\+Module\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Exécute le rendu de l\textquotesingle{}interface utilisateur Im\+Gui. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_ab6ec60e3eced3faa0217348cfca2785f}{Module}}.
+
+\Hypertarget{class_im_gui_module_a337f2c65bd158e39d89f7769fc4d9920}\label{class_im_gui_module_a337f2c65bd158e39d89f7769fc4d9920} 
+\index{ImGuiModule@{ImGuiModule}!RenderGui@{RenderGui}}
+\index{RenderGui@{RenderGui}!ImGuiModule@{ImGuiModule}}
+\doxysubsubsection{\texorpdfstring{RenderGui()}{RenderGui()}}
+{\footnotesize\ttfamily void Im\+Gui\+Module\+::\+Render\+Gui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Dessine l\textquotesingle{}interface graphique spécifique au module, comme les menus et les fenêtres. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_aadc90c55712eba976e6bf87318713d11}{Module}}.
+
+\Hypertarget{class_im_gui_module_a0aef3322c112235bc038cfc0b9c62fa7}\label{class_im_gui_module_a0aef3322c112235bc038cfc0b9c62fa7} 
+\index{ImGuiModule@{ImGuiModule}!Start@{Start}}
+\index{Start@{Start}!ImGuiModule@{ImGuiModule}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Im\+Gui\+Module\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Démarre le module Im\+Gui et prépare l\textquotesingle{}interface utilisateur pour l\textquotesingle{}interaction. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_aed9229993dada6ed800f73036aade722}{Module}}.
+
+\Hypertarget{class_im_gui_module_a09392d7282f2cb9f120db4ca5776385a}\label{class_im_gui_module_a09392d7282f2cb9f120db4ca5776385a} 
+\index{ImGuiModule@{ImGuiModule}!Update@{Update}}
+\index{Update@{Update}!ImGuiModule@{ImGuiModule}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Im\+Gui\+Module\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Met à jour l\textquotesingle{}état du module Im\+Gui avant le rendu. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_abf63d5bb322a751fbf95f2da0978817b}{Module}}.
+
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Modules/Im\+GUIModule.\+h\item 
+sources/\+Modules/Im\+GUIModule.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,273 @@
+\doxysection{Référence de la classe RHIVulkan\+Module}
+\hypertarget{class_r_h_i_vulkan_module}{}\label{class_r_h_i_vulkan_module}\index{RHIVulkanModule@{RHIVulkanModule}}
+
+
+Classe représentant un module RHI (Render Hardware Interface) utilisant Vulkan.  
+
+
+
+
+{\ttfamily \#include $<$RHIVulkan\+Module.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de RHIVulkan\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_r_h_i_vulkan_module}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_r_h_i_vulkan_module_a780927ef728624b1684f7ecd98f08e3a}{RHIVulkan\+Module}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{class_r_h_i_vulkan_module}{RHIVulkan\+Module}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_r_h_i_vulkan_module_a12f67c51b354ad3765d82466150f3a9f}{\texorpdfstring{$\sim$}{\string~}\+RHIVulkan\+Module}} () override
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \doxylink{class_r_h_i_vulkan_module}{RHIVulkan\+Module}. \end{DoxyCompactList}\item 
+vk\+::\+Command\+Buffer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_r_h_i_vulkan_module_a3e37cbd49997904d920783a8b29626ad}{Get\+Current\+Command\+Buffer}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le tampon de commandes actuel. \end{DoxyCompactList}\item 
+\Hypertarget{class_r_h_i_vulkan_module_adc5b2a5ab399c2eab8f385d928190814}\label{class_r_h_i_vulkan_module_adc5b2a5ab399c2eab8f385d928190814} 
+void {\bfseries Add\+Texture\+To\+Pool} (const std\+::string \&\+\_\+filepath)
+\item 
+void \mbox{\hyperlink{class_r_h_i_vulkan_module_a84ec324405137ab1291050359bae1015}{Init}} () override
+\begin{DoxyCompactList}\small\item\em Initialise le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_h_i_vulkan_module_a017be784da303749cc0f5e96fa102975}{Start}} () override
+\begin{DoxyCompactList}\small\item\em D{\ucr}marre le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_h_i_vulkan_module_a241fbcebd4504666aac742fffbd90f28}{Fixed\+Update}} () override
+\begin{DoxyCompactList}\small\item\em Effectue une mise {\ucr} jour fixe du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_h_i_vulkan_module_a634b6c099e689915fbb01eb143c0f533}{Update}} () override
+\begin{DoxyCompactList}\small\item\em Met {\ucr} jour le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_h_i_vulkan_module_aaa28ab516591b4ad2dc5921b4534d1e5}{Pre\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction pr{\ucr}-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_h_i_vulkan_module_ae08b5392cbecf9db3db3b3b097dcbff9}{Render}} () override
+\begin{DoxyCompactList}\small\item\em Rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_h_i_vulkan_module_a25259d38f82d55b8d80149f5a876e704}{Render\+Gui}} () override
+\begin{DoxyCompactList}\small\item\em Rendu de l\textquotesingle{}interface graphique du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_h_i_vulkan_module_ad948de878fff547fb78ff5916717f3b1}{Post\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction post-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_h_i_vulkan_module_aff9bce6dc752ac27fb9ae989bbf61a35}{Release}} () override
+\begin{DoxyCompactList}\small\item\em Lib{\ucr}re les ressources utilis{\ucr}es par le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_h_i_vulkan_module_abaefd22dc051f0db2060fc309b8a9e4d}{Finalize}} () override
+\begin{DoxyCompactList}\small\item\em Finalise le module. \end{DoxyCompactList}\item 
+\Hypertarget{class_r_h_i_vulkan_module_a1dd5e3ca0ed65a1138478b6bfb10b7fa}\label{class_r_h_i_vulkan_module_a1dd5e3ca0ed65a1138478b6bfb10b7fa} 
+std\+::vector$<$ std\+::vector$<$ vk\+::\+Descriptor\+Set $>$ \texorpdfstring{$\ast$}{*} $>$ {\bfseries Get\+List\+Descriptors} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques hérités de \mbox{\hyperlink{class_r_h_i_module}{RHIModule}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_device}{lve\+::\+Lve\+Device}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Device} () const
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_renderer}{lve\+::\+Lve\+Renderer}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Renderer} () const
+\item 
+void {\bfseries Set\+Device} (\mbox{\hyperlink{classlve_1_1_lve_device}{lve\+::\+Lve\+Device}} \texorpdfstring{$\ast$}{*}\+\_\+p\+Device)
+\item 
+void {\bfseries Set\+Renderer} (\mbox{\hyperlink{classlve_1_1_lve_renderer}{lve\+::\+Lve\+Renderer}} \texorpdfstring{$\ast$}{*}\+\_\+p\+Renderer)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Membres hérités additionnels}
+\doxysubsection*{Fonctions membres protégées hérités de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_af09dc286b704160d8f0f273e1fe8576b}{\texorpdfstring{$\sim$}{\string~}\+Module}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur prot�g�. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protégés hérités de \mbox{\hyperlink{class_r_h_i_module}{RHIModule}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_device}{lve\+::\+Lve\+Device}} \texorpdfstring{$\ast$}{*} {\bfseries p\+\_\+lve\+Device}
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_renderer}{lve\+::\+Lve\+Renderer}} \texorpdfstring{$\ast$}{*} {\bfseries p\+\_\+lve\+Renderer}
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protégés hérités de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_manager}{Module\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_module_a8d9f92fc1216d933c961bfa685b0ad6f}{module\+Manager}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Classe représentant un module RHI (Render Hardware Interface) utilisant Vulkan. 
+
+Cette classe hérite de la classe \doxylink{class_r_h_i_module}{RHIModule} et implémente les fonctionnalités spécifiques à Vulkan pour le rendu graphique. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_r_h_i_vulkan_module_a780927ef728624b1684f7ecd98f08e3a}\label{class_r_h_i_vulkan_module_a780927ef728624b1684f7ecd98f08e3a} 
+\index{RHIVulkanModule@{RHIVulkanModule}!RHIVulkanModule@{RHIVulkanModule}}
+\index{RHIVulkanModule@{RHIVulkanModule}!RHIVulkanModule@{RHIVulkanModule}}
+\doxysubsubsection{\texorpdfstring{RHIVulkanModule()}{RHIVulkanModule()}}
+{\footnotesize\ttfamily RHIVulkan\+Module\+::\+RHIVulkan\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{class_r_h_i_vulkan_module}{RHIVulkan\+Module}. 
+
+Ce constructeur initialise un nouvel objet \doxylink{class_r_h_i_vulkan_module}{RHIVulkan\+Module}. \Hypertarget{class_r_h_i_vulkan_module_a12f67c51b354ad3765d82466150f3a9f}\label{class_r_h_i_vulkan_module_a12f67c51b354ad3765d82466150f3a9f} 
+\index{RHIVulkanModule@{RHIVulkanModule}!````~RHIVulkanModule@{\texorpdfstring{$\sim$}{\string~}RHIVulkanModule}}
+\index{````~RHIVulkanModule@{\texorpdfstring{$\sim$}{\string~}RHIVulkanModule}!RHIVulkanModule@{RHIVulkanModule}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RHIVulkanModule()}{\string~RHIVulkanModule()}}
+{\footnotesize\ttfamily RHIVulkan\+Module\+::\texorpdfstring{$\sim$}{\string~}\+RHIVulkan\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Destructeur de la classe \doxylink{class_r_h_i_vulkan_module}{RHIVulkan\+Module}. 
+
+Ce destructeur libère les ressources associées à l\textquotesingle{}objet \doxylink{class_r_h_i_vulkan_module}{RHIVulkan\+Module}. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_r_h_i_vulkan_module_abaefd22dc051f0db2060fc309b8a9e4d}\label{class_r_h_i_vulkan_module_abaefd22dc051f0db2060fc309b8a9e4d} 
+\index{RHIVulkanModule@{RHIVulkanModule}!Finalize@{Finalize}}
+\index{Finalize@{Finalize}!RHIVulkanModule@{RHIVulkanModule}}
+\doxysubsubsection{\texorpdfstring{Finalize()}{Finalize()}}
+{\footnotesize\ttfamily void RHIVulkan\+Module\+::\+Finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finalise le module. 
+
+
+
+Implémente \mbox{\hyperlink{class_r_h_i_module_ae1be00337339504244884f90bb56635e}{RHIModule}}.
+
+\Hypertarget{class_r_h_i_vulkan_module_a241fbcebd4504666aac742fffbd90f28}\label{class_r_h_i_vulkan_module_a241fbcebd4504666aac742fffbd90f28} 
+\index{RHIVulkanModule@{RHIVulkanModule}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!RHIVulkanModule@{RHIVulkanModule}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void RHIVulkan\+Module\+::\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Effectue une mise {\ucr} jour fixe du module. 
+
+
+
+Implémente \mbox{\hyperlink{class_r_h_i_module_add6e00d97d65ff756e41ac7bd3caf5a4}{RHIModule}}.
+
+\Hypertarget{class_r_h_i_vulkan_module_a3e37cbd49997904d920783a8b29626ad}\label{class_r_h_i_vulkan_module_a3e37cbd49997904d920783a8b29626ad} 
+\index{RHIVulkanModule@{RHIVulkanModule}!GetCurrentCommandBuffer@{GetCurrentCommandBuffer}}
+\index{GetCurrentCommandBuffer@{GetCurrentCommandBuffer}!RHIVulkanModule@{RHIVulkanModule}}
+\doxysubsubsection{\texorpdfstring{GetCurrentCommandBuffer()}{GetCurrentCommandBuffer()}}
+{\footnotesize\ttfamily vk\+::\+Command\+Buffer \texorpdfstring{$\ast$}{*} RHIVulkan\+Module\+::\+Get\+Current\+Command\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le tampon de commandes actuel. 
+
+Cette méthode retourne le tampon de commandes Vulkan actuellement utilisé par le module RHI.
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le tampon de commandes Vulkan actuellement utilisé. 
+\end{DoxyReturn}
+\Hypertarget{class_r_h_i_vulkan_module_a84ec324405137ab1291050359bae1015}\label{class_r_h_i_vulkan_module_a84ec324405137ab1291050359bae1015} 
+\index{RHIVulkanModule@{RHIVulkanModule}!Init@{Init}}
+\index{Init@{Init}!RHIVulkanModule@{RHIVulkanModule}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void RHIVulkan\+Module\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialise le module. 
+
+
+
+Implémente \mbox{\hyperlink{class_r_h_i_module_a9a54d711c0680a7b24f8f07b2cdf9359}{RHIModule}}.
+
+\Hypertarget{class_r_h_i_vulkan_module_ad948de878fff547fb78ff5916717f3b1}\label{class_r_h_i_vulkan_module_ad948de878fff547fb78ff5916717f3b1} 
+\index{RHIVulkanModule@{RHIVulkanModule}!PostRender@{PostRender}}
+\index{PostRender@{PostRender}!RHIVulkanModule@{RHIVulkanModule}}
+\doxysubsubsection{\texorpdfstring{PostRender()}{PostRender()}}
+{\footnotesize\ttfamily void RHIVulkan\+Module\+::\+Post\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction post-\/rendu du module. 
+
+
+
+Implémente \mbox{\hyperlink{class_r_h_i_module_aecf0e65f319e2dbe9e7f68307d7a8201}{RHIModule}}.
+
+\Hypertarget{class_r_h_i_vulkan_module_aaa28ab516591b4ad2dc5921b4534d1e5}\label{class_r_h_i_vulkan_module_aaa28ab516591b4ad2dc5921b4534d1e5} 
+\index{RHIVulkanModule@{RHIVulkanModule}!PreRender@{PreRender}}
+\index{PreRender@{PreRender}!RHIVulkanModule@{RHIVulkanModule}}
+\doxysubsubsection{\texorpdfstring{PreRender()}{PreRender()}}
+{\footnotesize\ttfamily void RHIVulkan\+Module\+::\+Pre\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction pr{\ucr}-\/rendu du module. 
+
+
+
+Implémente \mbox{\hyperlink{class_r_h_i_module_a114bbce2f9a86930ea863e3ec88a6c3c}{RHIModule}}.
+
+\Hypertarget{class_r_h_i_vulkan_module_aff9bce6dc752ac27fb9ae989bbf61a35}\label{class_r_h_i_vulkan_module_aff9bce6dc752ac27fb9ae989bbf61a35} 
+\index{RHIVulkanModule@{RHIVulkanModule}!Release@{Release}}
+\index{Release@{Release}!RHIVulkanModule@{RHIVulkanModule}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void RHIVulkan\+Module\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Lib{\ucr}re les ressources utilis{\ucr}es par le module. 
+
+
+
+Implémente \mbox{\hyperlink{class_r_h_i_module_a1fb43694d5fa08e1afb50aa5218e2462}{RHIModule}}.
+
+\Hypertarget{class_r_h_i_vulkan_module_ae08b5392cbecf9db3db3b3b097dcbff9}\label{class_r_h_i_vulkan_module_ae08b5392cbecf9db3db3b3b097dcbff9} 
+\index{RHIVulkanModule@{RHIVulkanModule}!Render@{Render}}
+\index{Render@{Render}!RHIVulkanModule@{RHIVulkanModule}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void RHIVulkan\+Module\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu du module. 
+
+
+
+Implémente \mbox{\hyperlink{class_r_h_i_module_a850e870b90ead2a75b96b3469e7c26f7}{RHIModule}}.
+
+\Hypertarget{class_r_h_i_vulkan_module_a25259d38f82d55b8d80149f5a876e704}\label{class_r_h_i_vulkan_module_a25259d38f82d55b8d80149f5a876e704} 
+\index{RHIVulkanModule@{RHIVulkanModule}!RenderGui@{RenderGui}}
+\index{RenderGui@{RenderGui}!RHIVulkanModule@{RHIVulkanModule}}
+\doxysubsubsection{\texorpdfstring{RenderGui()}{RenderGui()}}
+{\footnotesize\ttfamily void RHIVulkan\+Module\+::\+Render\+Gui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu de l\textquotesingle{}interface graphique du module. 
+
+
+
+Implémente \mbox{\hyperlink{class_r_h_i_module_a6e39546aceb3b7aa0ea49e99a254e58e}{RHIModule}}.
+
+\Hypertarget{class_r_h_i_vulkan_module_a017be784da303749cc0f5e96fa102975}\label{class_r_h_i_vulkan_module_a017be784da303749cc0f5e96fa102975} 
+\index{RHIVulkanModule@{RHIVulkanModule}!Start@{Start}}
+\index{Start@{Start}!RHIVulkanModule@{RHIVulkanModule}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void RHIVulkan\+Module\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+D{\ucr}marre le module. 
+
+
+
+Implémente \mbox{\hyperlink{class_r_h_i_module_a07601a54856c616d07e2de82b8331b86}{RHIModule}}.
+
+\Hypertarget{class_r_h_i_vulkan_module_a634b6c099e689915fbb01eb143c0f533}\label{class_r_h_i_vulkan_module_a634b6c099e689915fbb01eb143c0f533} 
+\index{RHIVulkanModule@{RHIVulkanModule}!Update@{Update}}
+\index{Update@{Update}!RHIVulkanModule@{RHIVulkanModule}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void RHIVulkan\+Module\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Met {\ucr} jour le module. 
+
+
+
+Implémente \mbox{\hyperlink{class_r_h_i_module_a4de93bc8b34fd9208760e2a1c8af3e7d}{RHIModule}}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Modules/RHIVulkan\+Module.\+h\item 
+sources/\+Modules/RHIVulkan\+Module.\+cpp\end{DoxyCompactItemize}

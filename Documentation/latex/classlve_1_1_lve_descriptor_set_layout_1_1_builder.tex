@@ -1,0 +1,75 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Lve\+Descriptor\+Set\+Layout\+::Builder}
+\hypertarget{classlve_1_1_lve_descriptor_set_layout_1_1_builder}{}\label{classlve_1_1_lve_descriptor_set_layout_1_1_builder}\index{lve::LveDescriptorSetLayout::Builder@{lve::LveDescriptorSetLayout::Builder}}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_1_1_builder_a21c312aca9c1a221c09fd3738cacf6fc}{Builder}} (\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&\+\_\+lve\+Device)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classlve_1_1_lve_descriptor_set_layout_1_1_builder}{Builder}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_1_1_builder}{Builder}} \& \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_1_1_builder_a3484a7a2994c351709284c56eaf3c830}{Add\+Binding}} (uint32\+\_\+t \+\_\+binding, vk\+::\+Descriptor\+Type \+\_\+descriptor\+Type, vk\+::\+Shader\+Stage\+Flags \+\_\+stage\+Flags, uint32\+\_\+t \+\_\+count=1)
+\begin{DoxyCompactList}\small\item\em Ajoute un binding à la mise en page de l\textquotesingle{}ensemble de descripteurs. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout}{Lve\+Descriptor\+Set\+Layout}} $>$ \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_1_1_builder_a10d3811bb46f1a7e3833a579a654281a}{Build}} () const
+\begin{DoxyCompactList}\small\item\em Construit et retourne un ensemble de descripteurs avec la mise en page spécifiée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classlve_1_1_lve_descriptor_set_layout_1_1_builder_a21c312aca9c1a221c09fd3738cacf6fc}\label{classlve_1_1_lve_descriptor_set_layout_1_1_builder_a21c312aca9c1a221c09fd3738cacf6fc} 
+\index{lve::LveDescriptorSetLayout::Builder@{lve::LveDescriptorSetLayout::Builder}!Builder@{Builder}}
+\index{Builder@{Builder}!lve::LveDescriptorSetLayout::Builder@{lve::LveDescriptorSetLayout::Builder}}
+\doxysubsubsection{\texorpdfstring{Builder()}{Builder()}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Descriptor\+Set\+Layout\+::\+Builder\+::\+Builder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&}]{\+\_\+lve\+Device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructeur de la classe \doxylink{classlve_1_1_lve_descriptor_set_layout_1_1_builder}{Builder}. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+lve\+Device} & Une référence vers l\textquotesingle{}objet \doxylink{classlve_1_1_lve_device}{Lve\+Device} utilisé pour la création de la mise en page de l\textquotesingle{}ensemble de descripteurs. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_lve_descriptor_set_layout_1_1_builder_a3484a7a2994c351709284c56eaf3c830}\label{classlve_1_1_lve_descriptor_set_layout_1_1_builder_a3484a7a2994c351709284c56eaf3c830} 
+\index{lve::LveDescriptorSetLayout::Builder@{lve::LveDescriptorSetLayout::Builder}!AddBinding@{AddBinding}}
+\index{AddBinding@{AddBinding}!lve::LveDescriptorSetLayout::Builder@{lve::LveDescriptorSetLayout::Builder}}
+\doxysubsubsection{\texorpdfstring{AddBinding()}{AddBinding()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_1_1_builder}{Lve\+Descriptor\+Set\+Layout\+::\+Builder}} \& lve\+::\+Lve\+Descriptor\+Set\+Layout\+::\+Builder\+::\+Add\+Binding (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{\+\_\+binding,  }\item[{vk\+::\+Descriptor\+Type}]{\+\_\+descriptor\+Type,  }\item[{vk\+::\+Shader\+Stage\+Flags}]{\+\_\+stage\+Flags,  }\item[{uint32\+\_\+t}]{\+\_\+count = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Ajoute un binding à la mise en page de l\textquotesingle{}ensemble de descripteurs. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+binding} & L\textquotesingle{}index du binding. \\
+\hline
+{\em \+\_\+descriptor\+Type} & Le type de descripteur. \\
+\hline
+{\em \+\_\+stage\+Flags} & Les indicateurs d\textquotesingle{}étape de shader. \\
+\hline
+{\em \+\_\+count} & Le nombre d\textquotesingle{}éléments dans le binding. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Une référence vers l\textquotesingle{}objet \doxylink{classlve_1_1_lve_descriptor_set_layout_1_1_builder}{Builder} actuel. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_descriptor_set_layout_1_1_builder_a10d3811bb46f1a7e3833a579a654281a}\label{classlve_1_1_lve_descriptor_set_layout_1_1_builder_a10d3811bb46f1a7e3833a579a654281a} 
+\index{lve::LveDescriptorSetLayout::Builder@{lve::LveDescriptorSetLayout::Builder}!Build@{Build}}
+\index{Build@{Build}!lve::LveDescriptorSetLayout::Builder@{lve::LveDescriptorSetLayout::Builder}}
+\doxysubsubsection{\texorpdfstring{Build()}{Build()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout}{Lve\+Descriptor\+Set\+Layout}} $>$ lve\+::\+Lve\+Descriptor\+Set\+Layout\+::\+Builder\+::\+Build (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Construit et retourne un ensemble de descripteurs avec la mise en page spécifiée. 
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur unique vers l\textquotesingle{}objet \doxylink{classlve_1_1_lve_descriptor_set_layout}{Lve\+Descriptor\+Set\+Layout} nouvellement créé. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Lve\+Engine/lve\+\_\+descriptors.\+h\item 
+sources/\+Lve\+Engine/lve\+\_\+descriptors.\+cpp\end{DoxyCompactItemize}

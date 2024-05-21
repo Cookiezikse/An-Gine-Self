@@ -1,0 +1,86 @@
+\doxysection{HUDModule.\+h}
+\hypertarget{_h_u_d_module_8h_source}{}\label{_h_u_d_module_8h_source}\index{includes/Modules/HUDModule.h@{includes/Modules/HUDModule.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ HUD\_MANAGER\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ HUD\_MANAGER\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Modules/Module.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ TODO\ :\ Vérifier\ si\ c\ pertinent}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_h_u_d_component}{HUDComponent}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ x,\ \ \ \ \ y;\ \ \ \ \ \ \textcolor{comment}{//\ Position\ de\ l'élément\ HUD}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ width,\ height;\ \textcolor{comment}{//\ Largeur\ et\ hauteur\ de\ l'élément\ HUD}}
+\DoxyCodeLine{00016\ \ \ \ \ VkImage\ \ \ \ \ texture;\ \ \ \ \ \ \ \textcolor{comment}{//\ Image\ Vulkan\ de\ l'élément\ HUD}}
+\DoxyCodeLine{00017\ \ \ \ \ VkImageView\ imageView;\ \ \ \ \ \textcolor{comment}{//\ Vue\ de\ l'image\ Vulkan}}
+\DoxyCodeLine{00018\ \ \ \ \ VkSampler\ \ \ sampler;\ \ \ \ \ \ \ \textcolor{comment}{//\ Échantillonneur\ Vulkan}}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_h_u_d_module}{HUDModule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_module}{Module}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_h_u_d_module}{HUDModule}}(VkDevice\ \_device,\ VkRenderPass\ \_renderPass,\ VkQueue\ \_graphicsQueue,\ VkCommandPool\ \_commandPool);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_h_u_d_module}{\string~HUDModule}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ AddComponent(\textcolor{keywordtype}{float}\ \_x,\ \textcolor{keywordtype}{float}\ \_y,\ \textcolor{keywordtype}{float}\ \_width,\ \textcolor{keywordtype}{float}\ \_height,\ \textcolor{keyword}{const}\ std::string\&\ \_texturePath);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ RemoveComponent();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ CleanupComponents();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_h_u_d_module_a40d383abb7cc742eadffadb84fddd822}{Render}}(VkCommandBuffer\ \_commandBuffer);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_h_u_d_module_a73da317df970d3235d36ef26a3e307e7}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_h_u_d_module_a7ee2836aa24659854edc1ba677f4b609}{Start}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_h_u_d_module_ac45f954940b62fdea3f18aa13002bd05}{FixedUpdate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_h_u_d_module_a205e4135c7dae8ee289b20af66c2eb85}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_h_u_d_module_a1e2ea09ef7c83bfd1f78cba518f97bff}{PreRender}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_h_u_d_module_a40d383abb7cc742eadffadb84fddd822}{Render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_h_u_d_module_af46395911516a0fedc6e683135d8c9ea}{RenderGui}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_h_u_d_module_a2066c395246c1a679c99ca8bf93233b6}{PostRender}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_h_u_d_module_a70ff001d7b0ebd6b6d179b5ea28101b5}{Release}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_h_u_d_module_a3713f85d4b721969735fd829d6a8b3c3}{Finalize}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ HEIGHT\ =\ 600;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ WIDTH\ \ =\ 800;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ VkDevice\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ device;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ VkRenderPass\ \ \ \ \ \ \ \ \ \ \ \ \ \ renderPass;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ VkQueue\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ graphicsQueue;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ VkCommandPool\ \ \ \ \ \ \ \ \ \ \ \ \ commandPool;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ std::vector<HUDComponent>\ components;}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ std::vector<char>\ ReadFile(\textcolor{keyword}{const}\ std::string\&\ \_filename);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Méthodes\ pour\ créer\ et\ gérer\ les\ ressources\ Vulkan}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*VkImage\ createTextureImage(const\ std::string\&\ texturePath);*/}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ VkImageView\ \ \ \ \ \ \ \ \ \ \ \ \ CreateTextureImageView(VkImage\ \_image);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ [[nodiscard]]\ VkSampler\ CreateTextureSampler()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TransitionImageLayout(VkImage\ \ \ \ \ \ \ \_image,\ VkFormat\ \_format,\ VkImageLayout\ \_oldLayout,}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkImageLayout\ \_newLayout);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateBuffer(VkDeviceSize\ \_size,\ VkBufferUsageFlags\ \_usage,\ VkMemoryPropertyFlags\ \_properties,}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkBuffer\&\ \_buffer,\ VkDeviceMemory\&\ \_bufferMemory)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateImage(VkDeviceSize\ \ \ \ \ \ \ \ \ \ \_size,\ VkFormat\ \_format,\ VkImageTiling\ \_tiling,\ VkImageUsageFlags\ \_usage,}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VkMemoryPropertyFlags\ \_properties,\ VkImage\&\ \_image,\ VkDeviceMemory\&\ \_imageMemory)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CopyBufferToImage(VkBuffer\ \_buffer,\ VkImage\ \_image,\ uint32\_t\ \_width,\ uint32\_t\ \_height)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ VkImageView\ CreateImageView(VkImage\ \_image,\ VkFormat\ \_format,\ VkImageAspectFlags\ \_aspectFlags);}
+\DoxyCodeLine{00108\ \};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ HUD\_MANAGER\_H}}
+
+\end{DoxyCode}

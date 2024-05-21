@@ -1,0 +1,64 @@
+\doxysection{Référence de la classe Bousk\+::Network\+::Messages\+::Disconnection}
+\hypertarget{class_bousk_1_1_network_1_1_messages_1_1_disconnection}{}\label{class_bousk_1_1_network_1_1_messages_1_1_disconnection}\index{Bousk::Network::Messages::Disconnection@{Bousk::Network::Messages::Disconnection}}
+Graphe d\textquotesingle{}héritage de Bousk\+::Network\+::Messages\+::Disconnection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bousk_1_1_network_1_1_messages_1_1_disconnection}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_messages_1_1_disconnection_a488ff2e880de91b2bf0cf71e339926ec}\label{class_bousk_1_1_network_1_1_messages_1_1_disconnection_a488ff2e880de91b2bf0cf71e339926ec} 
+enum class {\bfseries Reason} \{ {\bfseries Disconnected}
+, {\bfseries Lost}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_messages_1_1_disconnection_a6ca4f8ff38e92737635b6d765ef09621}\label{class_bousk_1_1_network_1_1_messages_1_1_disconnection_a6ca4f8ff38e92737635b6d765ef09621} 
+{\bfseries Disconnection} (const \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} \&emitter, uint64\+\_\+t emitterid, Reason r)
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques hérités de \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Bousk\+::\+Network\+::\+Messages\+::\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class M $>$ }\\bool {\bfseries is} () const
+\item 
+{\footnotesize template$<$class M $>$ }\\const M \texorpdfstring{$\ast$}{*} {\bfseries as} () const
+\item 
+const \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} \& {\bfseries emitter} () const
+\item 
+uint64\+\_\+t {\bfseries emmiter\+Id} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_messages_1_1_disconnection_a2b19a4493abbd1a0c50e9f6771815bf8}\label{class_bousk_1_1_network_1_1_messages_1_1_disconnection_a2b19a4493abbd1a0c50e9f6771815bf8} 
+Reason {\bfseries reason}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Membres hérités additionnels}
+\doxysubsection*{Types protégés hérités de \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Bousk\+::\+Network\+::\+Messages\+::\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_messages_1_1_base_aef0dce657011b0e338b91bdae04dd951}\label{class_bousk_1_1_network_1_1_messages_1_1_base_aef0dce657011b0e338b91bdae04dd951} 
+enum class {\bfseries Type} \{ \newline
+{\bfseries Incoming\+Connection}
+, {\bfseries Connection}
+, {\bfseries Connection\+Interrupted}
+, {\bfseries Connection\+Resumed}
+, \newline
+{\bfseries Disconnection}
+, {\bfseries User\+Data}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres protégées hérités de \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Bousk\+::\+Network\+::\+Messages\+::\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Base} (Type type, const \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} \&emitter, uint64\+\_\+t emitterid)
+\end{DoxyCompactItemize}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+UDP/Messages.\+h\end{DoxyCompactItemize}

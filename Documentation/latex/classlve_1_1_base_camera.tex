@@ -1,0 +1,712 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Base\+Camera}
+\hypertarget{classlve_1_1_base_camera}{}\label{classlve_1_1_base_camera}\index{lve::BaseCamera@{lve::BaseCamera}}
+
+
+Classe de base pour une caméra dans un moteur de jeu.  
+
+
+
+
+{\ttfamily \#include $<$Base\+Camera.\+h$>$}
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlve_1_1_base_camera_acbe8e2ff81d99529a996be46c9ffe3f1}{Base\+Camera}} (std\+::string \+\_\+camera\+Name, Camera\+Type \+\_\+type, bool \+\_\+b\+Is\+Gameplay\+Cam, float \+\_\+fov=glm\+::radians(45.\+0f), float \+\_\+z\+Near=0.\+5f, float \+\_\+z\+Far=1000.\+0f)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classlve_1_1_base_camera}{Base\+Camera}. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_base_camera_aed8797d17aace8fc9aa26392722bdab0}\label{classlve_1_1_base_camera_aed8797d17aace8fc9aa26392722bdab0} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Base\+Camera} ()
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel de la classe \doxylink{classlve_1_1_base_camera}{Base\+Camera}. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_base_camera_ae4682b965d43e28df85fa85d513a3d80}\label{classlve_1_1_base_camera_ae4682b965d43e28df85fa85d513a3d80} 
+virtual void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em Initialise le module. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_base_camera_a4aa7175e0b290bcf7e73baf5dfcc4594}\label{classlve_1_1_base_camera_a4aa7175e0b290bcf7e73baf5dfcc4594} 
+virtual void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Démarre le module. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_base_camera_aad231583ecbb05a0d9eee617adbfc09f}\label{classlve_1_1_base_camera_aad231583ecbb05a0d9eee617adbfc09f} 
+virtual void {\bfseries Fixed\+Update} (const float \&\+\_\+delta\+Time)
+\begin{DoxyCompactList}\small\item\em Effectue une mise à jour fixe du module. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_base_camera_aa2f612ac3c1173e67f16697a39f42725}\label{classlve_1_1_base_camera_aa2f612ac3c1173e67f16697a39f42725} 
+virtual void {\bfseries Update} (const float \&\+\_\+delta\+Time)
+\begin{DoxyCompactList}\small\item\em Met à jour le module. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_base_camera_ac82e4486a0d5ceddd7a4f0035a181eba}\label{classlve_1_1_base_camera_ac82e4486a0d5ceddd7a4f0035a181eba} 
+virtual void {\bfseries Pre\+Render} ()
+\begin{DoxyCompactList}\small\item\em Fonction pré-\/rendu du module. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_base_camera_a953446d629686915c1f4613c5a0d1bde}\label{classlve_1_1_base_camera_a953446d629686915c1f4613c5a0d1bde} 
+virtual void {\bfseries Render} ()
+\begin{DoxyCompactList}\small\item\em Rendu du module. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_base_camera_a7c049cff496856715ebaad040606b9a1}\label{classlve_1_1_base_camera_a7c049cff496856715ebaad040606b9a1} 
+virtual void {\bfseries Render\+Gui} ()
+\begin{DoxyCompactList}\small\item\em Rendu de l\textquotesingle{}interface graphique du module. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_base_camera_a83dbb5b6777fa693d158e8e69ebb039e}\label{classlve_1_1_base_camera_a83dbb5b6777fa693d158e8e69ebb039e} 
+virtual void {\bfseries Post\+Render} ()
+\begin{DoxyCompactList}\small\item\em Fonction post-\/rendu du module. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_base_camera_a1ab4a2e9a33cd58e4813046fb2fbd8b8}\label{classlve_1_1_base_camera_a1ab4a2e9a33cd58e4813046fb2fbd8b8} 
+virtual void {\bfseries Release} ()
+\begin{DoxyCompactList}\small\item\em Libère les ressources utilisées par le module. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_base_camera_a7c78507ceadc917da03f6f8e63ab4f7c}\label{classlve_1_1_base_camera_a7c78507ceadc917da03f6f8e63ab4f7c} 
+virtual void {\bfseries Finalize} ()
+\begin{DoxyCompactList}\small\item\em Finalise le module. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlve_1_1_base_camera_a20474809db146ae80c24cd4b68f3f2bf}{On\+Post\+Scene\+Change}} ()
+\begin{DoxyCompactList}\small\item\em Appelée après un changement de scène. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlve_1_1_base_camera_a74e332f92a114b8194b48f30ec479bd7}{On\+Possess}} ()
+\begin{DoxyCompactList}\small\item\em Appelée lorsqu\textquotesingle{}un objet est possédé par cette caméra. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classlve_1_1_base_camera_ab3692e71fa1e5ebef18a04038dfbaa9f}{On\+Depossess}} ()
+\begin{DoxyCompactList}\small\item\em Appelée lorsqu\textquotesingle{}un objet est dépossédé par cette caméra. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{classlve_1_1_base_camera_a290a7c3446dec4b57003ebd61fcbc37c}{Get\+View\+Projection}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la matrice de vue-\/projection. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{classlve_1_1_base_camera_a336b476b00a2558aa022824721c9950a}{Get\+View}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la matrice de vue. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{classlve_1_1_base_camera_ae1da4a17e789d55966ec63a59ac20674}{Get\+Projection}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la matrice de projection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_base_camera_a1951479da98dc18141c8ccb69a476d77}{Look\+At}} (glm\+::vec3 \+\_\+point, float \+\_\+speed=1.\+0f)
+\begin{DoxyCompactList}\small\item\em Oriente la caméra vers un point donné. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_base_camera_a3244a997c5b5425b6691bafe90664023}{Translate}} (glm\+::vec3 \+\_\+translation)
+\begin{DoxyCompactList}\small\item\em Translate la caméra selon un vecteur de translation donné. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_base_camera_a9f0ff3cb7da31272773c8254d82f71fb}{Set\+View\+Direction}} (float \+\_\+yaw\+Rad, float \+\_\+pitch\+Rad)
+\begin{DoxyCompactList}\small\item\em Définit la direction de vue de la caméra en utilisant des angles de tangage et de lacet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_base_camera_a27cf6717b4b40096ca5cb67b308163b8}{Reset\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Réinitialise la position de la caméra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_base_camera_a997394a5770f5ffe700bf9e5e735e101}{Reset\+Orientation}} ()
+\begin{DoxyCompactList}\small\item\em Réinitialise l\textquotesingle{}orientation de la caméra. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classlve_1_1_base_camera_a240f10da580d8bdf5045ebd5355ab2c1}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le nom de la caméra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_base_camera_a48a0e496b7744295eec6fe80558a5425}{Calculate\+Exposure}} ()
+\begin{DoxyCompactList}\small\item\em Calcule l\textquotesingle{}exposition de la caméra. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_a037b54eb2fce12fe1f2660e4a37be187}{aperture}} = 1.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_a3f6b3543cc935007bd0c60a08c187916}{shutter\+Speed}} = 1.\+0f / 8.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_a1c6f33f4997e995aea1f3896542253ce}{light\+Sensitivity}} = 800.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_a4cebda0bbe67dc62666b0216a6036011}{exposure}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_a6fe7ac6b30a47eb880bf755a66e223f2}{fov}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_a8c132827d7e6325d6d1fd1c8be499be4}{z\+Near}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_aaaf4948d508911e54179ff874721a9c5}{z\+Far}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_a404d2f687f2c064b6c506196e9d663b3}{move\+Speed}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_aec780dc4d91e64b91e65cd8783596ae8}{pan\+Speed}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_a055d9cae76d77b33ea5a8e7118e2460f}{drag\+Dolly\+Speed}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_af17a1575e93f234a291743b64b628a64}{scroll\+Dolly\+Speed}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_a4a4bdff1633ad7ed76d388d5de0d1063}{orbiting\+Speed}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_a08e9756d48dba3b048060965c9dffccb}{mouse\+Rotation\+Speed}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_a1f930aa784f1f5fdbd2b413416254422}{gamepad\+Rotation\+Speed}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_a9a2629799db0590246a48bb75a57e653}{move\+Speed\+Fast\+Multiplier}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_a6e3f4dd75df9cc5dbb207a6746b7aa84}{move\+Speed\+Slow\+Multiplier}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_ae8a904fea5d26cc703f77348a4391e9f}{turn\+Speed\+Fast\+Multiplier}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_aca4e7239d3a6db5f754913ac35de8b2c}{turn\+Speed\+Slow\+Multiplier}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_ac1cbb31712833db76a9fe3874e5b075a}{pan\+Speed\+Fast\+Multiplier}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_a3469be08001b4e495f57f76c311dc0f9}{pan\+Speed\+Slow\+Multiplier}} = 0.\+0f
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_a47209fce89bd8c36a6273abf8d03a90b}{roll\+Restoration\+Speed}} = 0.\+0f
+\item 
+glm\+::vec3 \mbox{\hyperlink{classlve_1_1_base_camera_a5b739a91f288758373d5aae25a5d60a1}{position}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{classlve_1_1_base_camera_ac631afdbc8d8c800cd43c3fc8632faab}{prev\+Position}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{classlve_1_1_base_camera_a16e7900b9f2d2cd719ccf0e30143ef55}{velocity}}
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_a687aeb59c615847ec9f8d338ea9ecbf5}{yaw}}
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_a2323da6bfc8a3d12c8187c72e83230a5}{pitch}}
+\item 
+float \mbox{\hyperlink{classlve_1_1_base_camera_ab4726bc0b1e41e65a0004cedd37d05af}{roll}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{classlve_1_1_base_camera_a87dd0b26cb053507a5b0a346790e6b84}{forward}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{classlve_1_1_base_camera_a382a9b1304855eaee1b59f5cae2ff1cb}{up}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{classlve_1_1_base_camera_aee1d8216c4c83c36f8ba1e98ee2ea3f6}{right}}
+\item 
+bool \mbox{\hyperlink{classlve_1_1_base_camera_af78f8b5be0ca1f3bb82122fff495fe28}{b\+Is\+Gameplay\+Cam}} = true
+\item 
+bool \mbox{\hyperlink{classlve_1_1_base_camera_a190041795b97fe2f6dafce1f55c053b8}{b\+Is\+First\+Person}} = false
+\item 
+bool \mbox{\hyperlink{classlve_1_1_base_camera_a5b7986403e6a3c1ea6fd4ce8ad5885b9}{b\+Debug\+Cyclable}} = true
+\item 
+bool \mbox{\hyperlink{classlve_1_1_base_camera_a3829107102f4e82778a88347a9c08657}{b\+Possess\+Player}} = false
+\item 
+\Hypertarget{classlve_1_1_base_camera_a3fd5f912259e2d30d1912056bdc197d2}\label{classlve_1_1_base_camera_a3fd5f912259e2d30d1912056bdc197d2} 
+Camera\+Type {\bfseries type}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres protÃ©gÃ©es}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlve_1_1_base_camera_ad13fceef9972778cd80500faed0313ae}{Calculate\+Axis\+Vectors\+From\+Pitch\+And\+Yaw}} ()
+\begin{DoxyCompactList}\small\item\em Calcule les vecteurs d\textquotesingle{}axe à partir des angles de tangage et de lacet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_base_camera_afa457f7037c3901d393ba472aff58cfa}{Calculate\+Yaw\+And\+Pitch\+From\+Forward}} ()
+\begin{DoxyCompactList}\small\item\em Calcule les angles de tangage et de lacet à partir de la direction avant de la caméra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_base_camera_a416ee98d9194e632593c611e77191e72}{Recalculate\+View\+Projection}} ()
+\begin{DoxyCompactList}\small\item\em Recalcule la matrice de vue-\/projection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_base_camera_ad2ca1011a04fab06a41551480a01419d}{Jitter\+Matrix}} (glm\+::mat4 \&\+\_\+matrix)
+\begin{DoxyCompactList}\small\item\em Applique un jitter à une matrice donnée. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_base_camera_a9b388668e6d561aa5dd6b639fad3d550}{Clamp\+Pitch}} ()
+\begin{DoxyCompactList}\small\item\em Limite l\textquotesingle{}angle de tangage de la caméra. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres protÃ©gÃ©es statiques}
+\begin{DoxyCompactItemize}
+\item 
+static float \mbox{\hyperlink{classlve_1_1_base_camera_a6d34caa3c30e583649ffd1325aec9736}{Calculate\+Ev100}} (float \+\_\+aperture, float \+\_\+shutter\+Speed, float \+\_\+sensitivity)
+\begin{DoxyCompactList}\small\item\em Calcule la valeur EV100 à partir des paramètres de l\textquotesingle{}appareil photo. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{classlve_1_1_base_camera_ab15edb5577b9dba99c7d75e176a95c86}{Compute\+Exposure\+Norm\+Factor}} (float \+\_\+ev100)
+\begin{DoxyCompactList}\small\item\em Calcule le facteur de normalisation d\textquotesingle{}exposition à partir de la valeur EV100 de la caméra. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs protÃ©gÃ©s}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classlve_1_1_base_camera_a13b7c8c7a76138c953c662e431539a8b}\label{classlve_1_1_base_camera_a13b7c8c7a76138c953c662e431539a8b} 
+bool {\bfseries m\+BInitialized} = false
+\begin{DoxyCompactList}\small\item\em Booléen indiquant si la caméra a été initialisée ou non. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_base_camera_a2d07b635172c2d6d51121f9e403cc307}\label{classlve_1_1_base_camera_a2d07b635172c2d6d51121f9e403cc307} 
+std\+::string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Nom de la caméra. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_base_camera_a4dd7e0ecbd207d87e7ef0bd14555dbb9}\label{classlve_1_1_base_camera_a4dd7e0ecbd207d87e7ef0bd14555dbb9} 
+glm\+::mat4 {\bfseries view}
+\begin{DoxyCompactList}\small\item\em Matrice de vue de la caméra. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_base_camera_a71b2c15403d46c1e3ab72224282814d3}\label{classlve_1_1_base_camera_a71b2c15403d46c1e3ab72224282814d3} 
+glm\+::mat4 {\bfseries projection}
+\begin{DoxyCompactList}\small\item\em Matrice de projection de la caméra. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_base_camera_a15854ad9430970433b0f69204562c5a2}\label{classlve_1_1_base_camera_a15854ad9430970433b0f69204562c5a2} 
+glm\+::mat4 {\bfseries view\+Projection}
+\begin{DoxyCompactList}\small\item\em Matrice de vue-\/projection combinant la vue et la projection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Classe de base pour une caméra dans un moteur de jeu. 
+
+Cette classe définit les fonctionnalités de base d\textquotesingle{}une caméra dans un moteur de jeu. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classlve_1_1_base_camera_acbe8e2ff81d99529a996be46c9ffe3f1}\label{classlve_1_1_base_camera_acbe8e2ff81d99529a996be46c9ffe3f1} 
+\index{lve::BaseCamera@{lve::BaseCamera}!BaseCamera@{BaseCamera}}
+\index{BaseCamera@{BaseCamera}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{BaseCamera()}{BaseCamera()}}
+{\footnotesize\ttfamily lve\+::\+Base\+Camera\+::\+Base\+Camera (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+camera\+Name,  }\item[{Camera\+Type}]{\+\_\+type,  }\item[{bool}]{\+\_\+b\+Is\+Gameplay\+Cam,  }\item[{float}]{\+\_\+fov = {\ttfamily glm\+:\+:radians(45.0f)},  }\item[{float}]{\+\_\+z\+Near = {\ttfamily 0.5f},  }\item[{float}]{\+\_\+z\+Far = {\ttfamily 1000.0f} }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{classlve_1_1_base_camera}{Base\+Camera}. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+camera\+Name} & Nom de la caméra. \\
+\hline
+{\em \+\_\+type} & Type de la caméra. \\
+\hline
+{\em \+\_\+b\+Is\+Gameplay\+Cam} & Booléen indiquant si c\textquotesingle{}est une caméra de gameplay. \\
+\hline
+{\em \+\_\+fov} & Champ de vision de la caméra en radians (par défaut \+: 45 degrés). \\
+\hline
+{\em \+\_\+z\+Near} & Distance du plan de coupe avant (par défaut \+: 0.\+5 unités). \\
+\hline
+{\em \+\_\+z\+Far} & Distance du plan de coupe arrière (par défaut \+: 1000.\+0 unités). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_base_camera_ad13fceef9972778cd80500faed0313ae}\label{classlve_1_1_base_camera_ad13fceef9972778cd80500faed0313ae} 
+\index{lve::BaseCamera@{lve::BaseCamera}!CalculateAxisVectorsFromPitchAndYaw@{CalculateAxisVectorsFromPitchAndYaw}}
+\index{CalculateAxisVectorsFromPitchAndYaw@{CalculateAxisVectorsFromPitchAndYaw}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{CalculateAxisVectorsFromPitchAndYaw()}{CalculateAxisVectorsFromPitchAndYaw()}}
+{\footnotesize\ttfamily void lve\+::\+Base\+Camera\+::\+Calculate\+Axis\+Vectors\+From\+Pitch\+And\+Yaw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Calcule les vecteurs d\textquotesingle{}axe à partir des angles de tangage et de lacet. 
+
+Cette fonction calcule les vecteurs d\textquotesingle{}axe (avant, haut et droite) à partir des angles de tangage (pitch) et de lacet (yaw) actuellement définis pour la caméra. \Hypertarget{classlve_1_1_base_camera_a6d34caa3c30e583649ffd1325aec9736}\label{classlve_1_1_base_camera_a6d34caa3c30e583649ffd1325aec9736} 
+\index{lve::BaseCamera@{lve::BaseCamera}!CalculateEv100@{CalculateEv100}}
+\index{CalculateEv100@{CalculateEv100}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{CalculateEv100()}{CalculateEv100()}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::\+Calculate\+Ev100 (\begin{DoxyParamCaption}\item[{float}]{\+\_\+aperture,  }\item[{float}]{\+\_\+shutter\+Speed,  }\item[{float}]{\+\_\+sensitivity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Calcule la valeur EV100 à partir des paramètres de l\textquotesingle{}appareil photo. 
+
+Cette fonction calcule la valeur EV100 (exposition relative à 100 ISO et une seconde de temps d\textquotesingle{}exposition) à partir des paramètres de l\textquotesingle{}appareil photo \+: l\textquotesingle{}ouverture de l\textquotesingle{}objectif, la vitesse d\textquotesingle{}obturation et la sensibilité ISO.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+aperture} & L\textquotesingle{}ouverture de l\textquotesingle{}objectif de l\textquotesingle{}appareil photo. \\
+\hline
+{\em \+\_\+shutter\+Speed} & La vitesse d\textquotesingle{}obturation de l\textquotesingle{}appareil photo. \\
+\hline
+{\em \+\_\+sensitivity} & La sensibilité ISO de l\textquotesingle{}appareil photo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+La valeur EV100 calculée. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_base_camera_a48a0e496b7744295eec6fe80558a5425}\label{classlve_1_1_base_camera_a48a0e496b7744295eec6fe80558a5425} 
+\index{lve::BaseCamera@{lve::BaseCamera}!CalculateExposure@{CalculateExposure}}
+\index{CalculateExposure@{CalculateExposure}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{CalculateExposure()}{CalculateExposure()}}
+{\footnotesize\ttfamily void lve\+::\+Base\+Camera\+::\+Calculate\+Exposure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calcule l\textquotesingle{}exposition de la caméra. 
+
+Cette fonction calcule l\textquotesingle{}exposition de la caméra en fonction de son environnement ou de ses paramètres internes. Elle peut être utilisée pour ajuster automatiquement les paramètres de la caméra en fonction de la luminosité ambiante ou d\textquotesingle{}autres facteurs. \Hypertarget{classlve_1_1_base_camera_afa457f7037c3901d393ba472aff58cfa}\label{classlve_1_1_base_camera_afa457f7037c3901d393ba472aff58cfa} 
+\index{lve::BaseCamera@{lve::BaseCamera}!CalculateYawAndPitchFromForward@{CalculateYawAndPitchFromForward}}
+\index{CalculateYawAndPitchFromForward@{CalculateYawAndPitchFromForward}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{CalculateYawAndPitchFromForward()}{CalculateYawAndPitchFromForward()}}
+{\footnotesize\ttfamily void lve\+::\+Base\+Camera\+::\+Calculate\+Yaw\+And\+Pitch\+From\+Forward (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Calcule les angles de tangage et de lacet à partir de la direction avant de la caméra. 
+
+Cette fonction calcule les angles de tangage (pitch) et de lacet (yaw) à partir de la direction avant actuelle de la caméra. \Hypertarget{classlve_1_1_base_camera_a9b388668e6d561aa5dd6b639fad3d550}\label{classlve_1_1_base_camera_a9b388668e6d561aa5dd6b639fad3d550} 
+\index{lve::BaseCamera@{lve::BaseCamera}!ClampPitch@{ClampPitch}}
+\index{ClampPitch@{ClampPitch}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{ClampPitch()}{ClampPitch()}}
+{\footnotesize\ttfamily void lve\+::\+Base\+Camera\+::\+Clamp\+Pitch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Limite l\textquotesingle{}angle de tangage de la caméra. 
+
+Cette fonction limite l\textquotesingle{}angle de tangage (pitch) de la caméra dans une plage acceptable. Elle est utilisée pour s\textquotesingle{}assurer que la caméra ne dépasse pas des limites définies par l\textquotesingle{}utilisateur ou par le moteur de jeu. \Hypertarget{classlve_1_1_base_camera_ab15edb5577b9dba99c7d75e176a95c86}\label{classlve_1_1_base_camera_ab15edb5577b9dba99c7d75e176a95c86} 
+\index{lve::BaseCamera@{lve::BaseCamera}!ComputeExposureNormFactor@{ComputeExposureNormFactor}}
+\index{ComputeExposureNormFactor@{ComputeExposureNormFactor}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{ComputeExposureNormFactor()}{ComputeExposureNormFactor()}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::\+Compute\+Exposure\+Norm\+Factor (\begin{DoxyParamCaption}\item[{float}]{\+\_\+ev100 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Calcule le facteur de normalisation d\textquotesingle{}exposition à partir de la valeur EV100 de la caméra. 
+
+Cette fonction calcule le facteur de normalisation de l\textquotesingle{}exposition à partir de la valeur EV100 de la caméra. Le facteur de normalisation est utilisé pour ajuster automatiquement les paramètres d\textquotesingle{}exposition de la caméra en fonction de la luminosité ambiante ou d\textquotesingle{}autres facteurs.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+ev100} & La valeur EV100 de la caméra. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le facteur de normalisation de l\textquotesingle{}exposition calculé. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_base_camera_a240f10da580d8bdf5045ebd5355ab2c1}\label{classlve_1_1_base_camera_a240f10da580d8bdf5045ebd5355ab2c1} 
+\index{lve::BaseCamera@{lve::BaseCamera}!GetName@{GetName}}
+\index{GetName@{GetName}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily std\+::string lve\+::\+Base\+Camera\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le nom de la caméra. 
+
+Cette fonction retourne le nom de la caméra.
+
+\begin{DoxyReturn}{Renvoie}
+Le nom de la caméra. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_base_camera_ae1da4a17e789d55966ec63a59ac20674}\label{classlve_1_1_base_camera_ae1da4a17e789d55966ec63a59ac20674} 
+\index{lve::BaseCamera@{lve::BaseCamera}!GetProjection@{GetProjection}}
+\index{GetProjection@{GetProjection}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{GetProjection()}{GetProjection()}}
+{\footnotesize\ttfamily glm\+::mat4 lve\+::\+Base\+Camera\+::\+Get\+Projection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la matrice de projection. 
+
+Cette fonction retourne la matrice de projection associée à cette caméra.
+
+\begin{DoxyReturn}{Renvoie}
+La matrice de projection. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_base_camera_a336b476b00a2558aa022824721c9950a}\label{classlve_1_1_base_camera_a336b476b00a2558aa022824721c9950a} 
+\index{lve::BaseCamera@{lve::BaseCamera}!GetView@{GetView}}
+\index{GetView@{GetView}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{GetView()}{GetView()}}
+{\footnotesize\ttfamily glm\+::mat4 lve\+::\+Base\+Camera\+::\+Get\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la matrice de vue. 
+
+Cette fonction retourne la matrice de vue associée à cette caméra.
+
+\begin{DoxyReturn}{Renvoie}
+La matrice de vue. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_base_camera_a290a7c3446dec4b57003ebd61fcbc37c}\label{classlve_1_1_base_camera_a290a7c3446dec4b57003ebd61fcbc37c} 
+\index{lve::BaseCamera@{lve::BaseCamera}!GetViewProjection@{GetViewProjection}}
+\index{GetViewProjection@{GetViewProjection}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{GetViewProjection()}{GetViewProjection()}}
+{\footnotesize\ttfamily glm\+::mat4 lve\+::\+Base\+Camera\+::\+Get\+View\+Projection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la matrice de vue-\/projection. 
+
+Cette fonction retourne la matrice de vue-\/projection associée à cette caméra.
+
+\begin{DoxyReturn}{Renvoie}
+La matrice de vue-\/projection. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_base_camera_ad2ca1011a04fab06a41551480a01419d}\label{classlve_1_1_base_camera_ad2ca1011a04fab06a41551480a01419d} 
+\index{lve::BaseCamera@{lve::BaseCamera}!JitterMatrix@{JitterMatrix}}
+\index{JitterMatrix@{JitterMatrix}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{JitterMatrix()}{JitterMatrix()}}
+{\footnotesize\ttfamily void lve\+::\+Base\+Camera\+::\+Jitter\+Matrix (\begin{DoxyParamCaption}\item[{glm\+::mat4 \&}]{\+\_\+matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Applique un jitter à une matrice donnée. 
+
+Cette fonction applique un jitter à une matrice de transformation donnée. Le jitter peut être utilisé pour ajouter un léger décalage à la matrice, souvent utilisé pour créer un effet de tremblement ou de mouvement aléatoire.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+matrix} & La matrice à laquelle appliquer le jitter. La matrice est modifiée directement. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_base_camera_a1951479da98dc18141c8ccb69a476d77}\label{classlve_1_1_base_camera_a1951479da98dc18141c8ccb69a476d77} 
+\index{lve::BaseCamera@{lve::BaseCamera}!LookAt@{LookAt}}
+\index{LookAt@{LookAt}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{LookAt()}{LookAt()}}
+{\footnotesize\ttfamily void lve\+::\+Base\+Camera\+::\+Look\+At (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{\+\_\+point,  }\item[{float}]{\+\_\+speed = {\ttfamily 1.0f} }\end{DoxyParamCaption})}
+
+
+
+Oriente la caméra vers un point donné. 
+
+Cette fonction oriente la caméra vers un point donné dans l\textquotesingle{}espace.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+point} & Le point vers lequel orienter la caméra. \\
+\hline
+{\em \+\_\+speed} & La vitesse à laquelle effectuer l\textquotesingle{}orientation (par défaut \+: 1.\+0). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_base_camera_ab3692e71fa1e5ebef18a04038dfbaa9f}\label{classlve_1_1_base_camera_ab3692e71fa1e5ebef18a04038dfbaa9f} 
+\index{lve::BaseCamera@{lve::BaseCamera}!OnDepossess@{OnDepossess}}
+\index{OnDepossess@{OnDepossess}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{OnDepossess()}{OnDepossess()}}
+{\footnotesize\ttfamily void lve\+::\+Base\+Camera\+::\+On\+Depossess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Appelée lorsqu\textquotesingle{}un objet est dépossédé par cette caméra. 
+
+Cette fonction est appelée lorsqu\textquotesingle{}un objet est dépossédé par cette caméra dans le moteur de jeu. Elle peut être utilisée pour effectuer des actions spécifiques lors de la dépossession d\textquotesingle{}un objet par la caméra. Par défaut, cette fonction ne fait rien et doit être redéfinie dans les classes dérivées selon les besoins. \Hypertarget{classlve_1_1_base_camera_a74e332f92a114b8194b48f30ec479bd7}\label{classlve_1_1_base_camera_a74e332f92a114b8194b48f30ec479bd7} 
+\index{lve::BaseCamera@{lve::BaseCamera}!OnPossess@{OnPossess}}
+\index{OnPossess@{OnPossess}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{OnPossess()}{OnPossess()}}
+{\footnotesize\ttfamily void lve\+::\+Base\+Camera\+::\+On\+Possess (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Appelée lorsqu\textquotesingle{}un objet est possédé par cette caméra. 
+
+Cette fonction est appelée lorsqu\textquotesingle{}un objet est possédé par cette caméra dans le moteur de jeu. Elle peut être utilisée pour effectuer des actions spécifiques lors de la possession d\textquotesingle{}un objet par la caméra. Par défaut, cette fonction ne fait rien et doit être redéfinie dans les classes dérivées selon les besoins. \Hypertarget{classlve_1_1_base_camera_a20474809db146ae80c24cd4b68f3f2bf}\label{classlve_1_1_base_camera_a20474809db146ae80c24cd4b68f3f2bf} 
+\index{lve::BaseCamera@{lve::BaseCamera}!OnPostSceneChange@{OnPostSceneChange}}
+\index{OnPostSceneChange@{OnPostSceneChange}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{OnPostSceneChange()}{OnPostSceneChange()}}
+{\footnotesize\ttfamily void lve\+::\+Base\+Camera\+::\+On\+Post\+Scene\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Appelée après un changement de scène. 
+
+Cette fonction est appelée après qu\textquotesingle{}une scène a été changée dans le moteur de jeu. Elle peut être utilisée pour effectuer des actions spécifiques liées au changement de scène. Par défaut, cette fonction ne fait rien et doit être redéfinie dans les classes dérivées selon les besoins. \Hypertarget{classlve_1_1_base_camera_a416ee98d9194e632593c611e77191e72}\label{classlve_1_1_base_camera_a416ee98d9194e632593c611e77191e72} 
+\index{lve::BaseCamera@{lve::BaseCamera}!RecalculateViewProjection@{RecalculateViewProjection}}
+\index{RecalculateViewProjection@{RecalculateViewProjection}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{RecalculateViewProjection()}{RecalculateViewProjection()}}
+{\footnotesize\ttfamily void lve\+::\+Base\+Camera\+::\+Recalculate\+View\+Projection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Recalcule la matrice de vue-\/projection. 
+
+Cette fonction recalcule la matrice de vue-\/projection de la caméra en fonction de ses paramètres internes, tels que la position et l\textquotesingle{}orientation. Elle est généralement appelée après avoir modifié la position ou l\textquotesingle{}orientation de la caméra pour mettre à jour la vue et la projection. \Hypertarget{classlve_1_1_base_camera_a997394a5770f5ffe700bf9e5e735e101}\label{classlve_1_1_base_camera_a997394a5770f5ffe700bf9e5e735e101} 
+\index{lve::BaseCamera@{lve::BaseCamera}!ResetOrientation@{ResetOrientation}}
+\index{ResetOrientation@{ResetOrientation}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{ResetOrientation()}{ResetOrientation()}}
+{\footnotesize\ttfamily void lve\+::\+Base\+Camera\+::\+Reset\+Orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Réinitialise l\textquotesingle{}orientation de la caméra. 
+
+Cette fonction réinitialise l\textquotesingle{}orientation de la caméra à son orientation par défaut. \Hypertarget{classlve_1_1_base_camera_a27cf6717b4b40096ca5cb67b308163b8}\label{classlve_1_1_base_camera_a27cf6717b4b40096ca5cb67b308163b8} 
+\index{lve::BaseCamera@{lve::BaseCamera}!ResetPosition@{ResetPosition}}
+\index{ResetPosition@{ResetPosition}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{ResetPosition()}{ResetPosition()}}
+{\footnotesize\ttfamily void lve\+::\+Base\+Camera\+::\+Reset\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Réinitialise la position de la caméra. 
+
+Cette fonction réinitialise la position de la caméra à sa position par défaut. \Hypertarget{classlve_1_1_base_camera_a9f0ff3cb7da31272773c8254d82f71fb}\label{classlve_1_1_base_camera_a9f0ff3cb7da31272773c8254d82f71fb} 
+\index{lve::BaseCamera@{lve::BaseCamera}!SetViewDirection@{SetViewDirection}}
+\index{SetViewDirection@{SetViewDirection}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{SetViewDirection()}{SetViewDirection()}}
+{\footnotesize\ttfamily void lve\+::\+Base\+Camera\+::\+Set\+View\+Direction (\begin{DoxyParamCaption}\item[{float}]{\+\_\+yaw\+Rad,  }\item[{float}]{\+\_\+pitch\+Rad }\end{DoxyParamCaption})}
+
+
+
+Définit la direction de vue de la caméra en utilisant des angles de tangage et de lacet. 
+
+Cette fonction définit la direction de vue de la caméra en utilisant des angles de tangage (yaw) et de lacet (pitch) spécifiés en radians.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+yaw\+Rad} & L\textquotesingle{}angle de lacet en radians. \\
+\hline
+{\em \+\_\+pitch\+Rad} & L\textquotesingle{}angle de tangage en radians. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_base_camera_a3244a997c5b5425b6691bafe90664023}\label{classlve_1_1_base_camera_a3244a997c5b5425b6691bafe90664023} 
+\index{lve::BaseCamera@{lve::BaseCamera}!Translate@{Translate}}
+\index{Translate@{Translate}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}}
+{\footnotesize\ttfamily void lve\+::\+Base\+Camera\+::\+Translate (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{\+\_\+translation }\end{DoxyParamCaption})}
+
+
+
+Translate la caméra selon un vecteur de translation donné. 
+
+Cette fonction translate la position de la caméra selon un vecteur de translation donné.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+translation} & Le vecteur de translation à appliquer à la position de la caméra. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des donnÃ©es membres}
+\Hypertarget{classlve_1_1_base_camera_a037b54eb2fce12fe1f2660e4a37be187}\label{classlve_1_1_base_camera_a037b54eb2fce12fe1f2660e4a37be187} 
+\index{lve::BaseCamera@{lve::BaseCamera}!aperture@{aperture}}
+\index{aperture@{aperture}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{aperture}{aperture}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::aperture = 1.\+0f}
+
+Ouverture du diaphragme en f-\/stops. \Hypertarget{classlve_1_1_base_camera_a5b7986403e6a3c1ea6fd4ce8ad5885b9}\label{classlve_1_1_base_camera_a5b7986403e6a3c1ea6fd4ce8ad5885b9} 
+\index{lve::BaseCamera@{lve::BaseCamera}!bDebugCyclable@{bDebugCyclable}}
+\index{bDebugCyclable@{bDebugCyclable}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{bDebugCyclable}{bDebugCyclable}}
+{\footnotesize\ttfamily bool lve\+::\+Base\+Camera\+::b\+Debug\+Cyclable = true}
+
+Indique si le mode de débogage est cyclable. \Hypertarget{classlve_1_1_base_camera_a190041795b97fe2f6dafce1f55c053b8}\label{classlve_1_1_base_camera_a190041795b97fe2f6dafce1f55c053b8} 
+\index{lve::BaseCamera@{lve::BaseCamera}!bIsFirstPerson@{bIsFirstPerson}}
+\index{bIsFirstPerson@{bIsFirstPerson}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{bIsFirstPerson}{bIsFirstPerson}}
+{\footnotesize\ttfamily bool lve\+::\+Base\+Camera\+::b\+Is\+First\+Person = false}
+
+Indique si la caméra est en mode première personne. \Hypertarget{classlve_1_1_base_camera_af78f8b5be0ca1f3bb82122fff495fe28}\label{classlve_1_1_base_camera_af78f8b5be0ca1f3bb82122fff495fe28} 
+\index{lve::BaseCamera@{lve::BaseCamera}!bIsGameplayCam@{bIsGameplayCam}}
+\index{bIsGameplayCam@{bIsGameplayCam}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{bIsGameplayCam}{bIsGameplayCam}}
+{\footnotesize\ttfamily bool lve\+::\+Base\+Camera\+::b\+Is\+Gameplay\+Cam = true}
+
+Indique si la caméra est en mode gameplay. \Hypertarget{classlve_1_1_base_camera_a3829107102f4e82778a88347a9c08657}\label{classlve_1_1_base_camera_a3829107102f4e82778a88347a9c08657} 
+\index{lve::BaseCamera@{lve::BaseCamera}!bPossessPlayer@{bPossessPlayer}}
+\index{bPossessPlayer@{bPossessPlayer}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{bPossessPlayer}{bPossessPlayer}}
+{\footnotesize\ttfamily bool lve\+::\+Base\+Camera\+::b\+Possess\+Player = false}
+
+Indique si le joueur est possédé par la caméra. \Hypertarget{classlve_1_1_base_camera_a055d9cae76d77b33ea5a8e7118e2460f}\label{classlve_1_1_base_camera_a055d9cae76d77b33ea5a8e7118e2460f} 
+\index{lve::BaseCamera@{lve::BaseCamera}!dragDollySpeed@{dragDollySpeed}}
+\index{dragDollySpeed@{dragDollySpeed}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{dragDollySpeed}{dragDollySpeed}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::drag\+Dolly\+Speed = 0.\+0f}
+
+Vitesse de déplacement par glisser (bouton droit de la souris). \Hypertarget{classlve_1_1_base_camera_a4cebda0bbe67dc62666b0216a6036011}\label{classlve_1_1_base_camera_a4cebda0bbe67dc62666b0216a6036011} 
+\index{lve::BaseCamera@{lve::BaseCamera}!exposure@{exposure}}
+\index{exposure@{exposure}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{exposure}{exposure}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::exposure = 0.\+0f}
+
+Exposition. \Hypertarget{classlve_1_1_base_camera_a87dd0b26cb053507a5b0a346790e6b84}\label{classlve_1_1_base_camera_a87dd0b26cb053507a5b0a346790e6b84} 
+\index{lve::BaseCamera@{lve::BaseCamera}!forward@{forward}}
+\index{forward@{forward}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{forward}{forward}}
+{\footnotesize\ttfamily glm\+::vec3 lve\+::\+Base\+Camera\+::forward}
+
+Vecteur de direction avant de la caméra. \Hypertarget{classlve_1_1_base_camera_a6fe7ac6b30a47eb880bf755a66e223f2}\label{classlve_1_1_base_camera_a6fe7ac6b30a47eb880bf755a66e223f2} 
+\index{lve::BaseCamera@{lve::BaseCamera}!fov@{fov}}
+\index{fov@{fov}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{fov}{fov}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::fov = 0.\+0f}
+
+Champ de vision (Field of View). \Hypertarget{classlve_1_1_base_camera_a1f930aa784f1f5fdbd2b413416254422}\label{classlve_1_1_base_camera_a1f930aa784f1f5fdbd2b413416254422} 
+\index{lve::BaseCamera@{lve::BaseCamera}!gamepadRotationSpeed@{gamepadRotationSpeed}}
+\index{gamepadRotationSpeed@{gamepadRotationSpeed}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{gamepadRotationSpeed}{gamepadRotationSpeed}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::gamepad\+Rotation\+Speed = 0.\+0f}
+
+Vitesse de rotation du stick droit de la manette de jeu. \Hypertarget{classlve_1_1_base_camera_a1c6f33f4997e995aea1f3896542253ce}\label{classlve_1_1_base_camera_a1c6f33f4997e995aea1f3896542253ce} 
+\index{lve::BaseCamera@{lve::BaseCamera}!lightSensitivity@{lightSensitivity}}
+\index{lightSensitivity@{lightSensitivity}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{lightSensitivity}{lightSensitivity}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::light\+Sensitivity = 800.\+0f}
+
+Sensibilité ISO. \Hypertarget{classlve_1_1_base_camera_a08e9756d48dba3b048060965c9dffccb}\label{classlve_1_1_base_camera_a08e9756d48dba3b048060965c9dffccb} 
+\index{lve::BaseCamera@{lve::BaseCamera}!mouseRotationSpeed@{mouseRotationSpeed}}
+\index{mouseRotationSpeed@{mouseRotationSpeed}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{mouseRotationSpeed}{mouseRotationSpeed}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::mouse\+Rotation\+Speed = 0.\+0f}
+
+Vitesse de rotation de la souris (glisser bouton gauche de la souris). \Hypertarget{classlve_1_1_base_camera_a404d2f687f2c064b6c506196e9d663b3}\label{classlve_1_1_base_camera_a404d2f687f2c064b6c506196e9d663b3} 
+\index{lve::BaseCamera@{lve::BaseCamera}!moveSpeed@{moveSpeed}}
+\index{moveSpeed@{moveSpeed}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{moveSpeed}{moveSpeed}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::move\+Speed = 0.\+0f}
+
+Vitesse de déplacement (WASD ou stick analogique gauche de la manette de jeu). \Hypertarget{classlve_1_1_base_camera_a9a2629799db0590246a48bb75a57e653}\label{classlve_1_1_base_camera_a9a2629799db0590246a48bb75a57e653} 
+\index{lve::BaseCamera@{lve::BaseCamera}!moveSpeedFastMultiplier@{moveSpeedFastMultiplier}}
+\index{moveSpeedFastMultiplier@{moveSpeedFastMultiplier}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{moveSpeedFastMultiplier}{moveSpeedFastMultiplier}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::move\+Speed\+Fast\+Multiplier = 0.\+0f}
+
+Multiplicateur de vitesse de déplacement rapide. \Hypertarget{classlve_1_1_base_camera_a6e3f4dd75df9cc5dbb207a6746b7aa84}\label{classlve_1_1_base_camera_a6e3f4dd75df9cc5dbb207a6746b7aa84} 
+\index{lve::BaseCamera@{lve::BaseCamera}!moveSpeedSlowMultiplier@{moveSpeedSlowMultiplier}}
+\index{moveSpeedSlowMultiplier@{moveSpeedSlowMultiplier}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{moveSpeedSlowMultiplier}{moveSpeedSlowMultiplier}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::move\+Speed\+Slow\+Multiplier = 0.\+0f}
+
+Multiplicateur de vitesse de déplacement lente. \Hypertarget{classlve_1_1_base_camera_a4a4bdff1633ad7ed76d388d5de0d1063}\label{classlve_1_1_base_camera_a4a4bdff1633ad7ed76d388d5de0d1063} 
+\index{lve::BaseCamera@{lve::BaseCamera}!orbitingSpeed@{orbitingSpeed}}
+\index{orbitingSpeed@{orbitingSpeed}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{orbitingSpeed}{orbitingSpeed}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::orbiting\+Speed = 0.\+0f}
+
+Vitesse de rotation orbitale (Alt + glisser bouton gauche de la souris). \Hypertarget{classlve_1_1_base_camera_aec780dc4d91e64b91e65cd8783596ae8}\label{classlve_1_1_base_camera_aec780dc4d91e64b91e65cd8783596ae8} 
+\index{lve::BaseCamera@{lve::BaseCamera}!panSpeed@{panSpeed}}
+\index{panSpeed@{panSpeed}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{panSpeed}{panSpeed}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::pan\+Speed = 0.\+0f}
+
+Vitesse de panoramique (bouton du milieu de la souris). \Hypertarget{classlve_1_1_base_camera_ac1cbb31712833db76a9fe3874e5b075a}\label{classlve_1_1_base_camera_ac1cbb31712833db76a9fe3874e5b075a} 
+\index{lve::BaseCamera@{lve::BaseCamera}!panSpeedFastMultiplier@{panSpeedFastMultiplier}}
+\index{panSpeedFastMultiplier@{panSpeedFastMultiplier}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{panSpeedFastMultiplier}{panSpeedFastMultiplier}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::pan\+Speed\+Fast\+Multiplier = 0.\+0f}
+
+Multiplicateur de vitesse de panoramique rapide. \Hypertarget{classlve_1_1_base_camera_a3469be08001b4e495f57f76c311dc0f9}\label{classlve_1_1_base_camera_a3469be08001b4e495f57f76c311dc0f9} 
+\index{lve::BaseCamera@{lve::BaseCamera}!panSpeedSlowMultiplier@{panSpeedSlowMultiplier}}
+\index{panSpeedSlowMultiplier@{panSpeedSlowMultiplier}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{panSpeedSlowMultiplier}{panSpeedSlowMultiplier}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::pan\+Speed\+Slow\+Multiplier = 0.\+0f}
+
+Multiplicateur de vitesse de panoramique lente. \Hypertarget{classlve_1_1_base_camera_a2323da6bfc8a3d12c8187c72e83230a5}\label{classlve_1_1_base_camera_a2323da6bfc8a3d12c8187c72e83230a5} 
+\index{lve::BaseCamera@{lve::BaseCamera}!pitch@{pitch}}
+\index{pitch@{pitch}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{pitch}{pitch}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::pitch}
+
+Angle de tangage (pitch). \Hypertarget{classlve_1_1_base_camera_a5b739a91f288758373d5aae25a5d60a1}\label{classlve_1_1_base_camera_a5b739a91f288758373d5aae25a5d60a1} 
+\index{lve::BaseCamera@{lve::BaseCamera}!position@{position}}
+\index{position@{position}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily glm\+::vec3 lve\+::\+Base\+Camera\+::position}
+
+Position de la caméra. \Hypertarget{classlve_1_1_base_camera_ac631afdbc8d8c800cd43c3fc8632faab}\label{classlve_1_1_base_camera_ac631afdbc8d8c800cd43c3fc8632faab} 
+\index{lve::BaseCamera@{lve::BaseCamera}!prevPosition@{prevPosition}}
+\index{prevPosition@{prevPosition}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{prevPosition}{prevPosition}}
+{\footnotesize\ttfamily glm\+::vec3 lve\+::\+Base\+Camera\+::prev\+Position}
+
+Position précédente de la caméra. \Hypertarget{classlve_1_1_base_camera_aee1d8216c4c83c36f8ba1e98ee2ea3f6}\label{classlve_1_1_base_camera_aee1d8216c4c83c36f8ba1e98ee2ea3f6} 
+\index{lve::BaseCamera@{lve::BaseCamera}!right@{right}}
+\index{right@{right}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily glm\+::vec3 lve\+::\+Base\+Camera\+::right}
+
+Vecteur de direction droite de la caméra. \Hypertarget{classlve_1_1_base_camera_ab4726bc0b1e41e65a0004cedd37d05af}\label{classlve_1_1_base_camera_ab4726bc0b1e41e65a0004cedd37d05af} 
+\index{lve::BaseCamera@{lve::BaseCamera}!roll@{roll}}
+\index{roll@{roll}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{roll}{roll}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::roll}
+
+Angle de roulis (roll). \Hypertarget{classlve_1_1_base_camera_a47209fce89bd8c36a6273abf8d03a90b}\label{classlve_1_1_base_camera_a47209fce89bd8c36a6273abf8d03a90b} 
+\index{lve::BaseCamera@{lve::BaseCamera}!rollRestorationSpeed@{rollRestorationSpeed}}
+\index{rollRestorationSpeed@{rollRestorationSpeed}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{rollRestorationSpeed}{rollRestorationSpeed}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::roll\+Restoration\+Speed = 0.\+0f}
+
+Vitesse de restauration du roulis. \Hypertarget{classlve_1_1_base_camera_af17a1575e93f234a291743b64b628a64}\label{classlve_1_1_base_camera_af17a1575e93f234a291743b64b628a64} 
+\index{lve::BaseCamera@{lve::BaseCamera}!scrollDollySpeed@{scrollDollySpeed}}
+\index{scrollDollySpeed@{scrollDollySpeed}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{scrollDollySpeed}{scrollDollySpeed}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::scroll\+Dolly\+Speed = 0.\+0f}
+
+Vitesse de déplacement par défilement (molette de la souris). \Hypertarget{classlve_1_1_base_camera_a3f6b3543cc935007bd0c60a08c187916}\label{classlve_1_1_base_camera_a3f6b3543cc935007bd0c60a08c187916} 
+\index{lve::BaseCamera@{lve::BaseCamera}!shutterSpeed@{shutterSpeed}}
+\index{shutterSpeed@{shutterSpeed}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{shutterSpeed}{shutterSpeed}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::shutter\+Speed = 1.\+0f / 8.\+0f}
+
+Vitesse d\textquotesingle{}obturation en secondes. \Hypertarget{classlve_1_1_base_camera_ae8a904fea5d26cc703f77348a4391e9f}\label{classlve_1_1_base_camera_ae8a904fea5d26cc703f77348a4391e9f} 
+\index{lve::BaseCamera@{lve::BaseCamera}!turnSpeedFastMultiplier@{turnSpeedFastMultiplier}}
+\index{turnSpeedFastMultiplier@{turnSpeedFastMultiplier}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{turnSpeedFastMultiplier}{turnSpeedFastMultiplier}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::turn\+Speed\+Fast\+Multiplier = 0.\+0f}
+
+Multiplicateur de vitesse de rotation rapide. \Hypertarget{classlve_1_1_base_camera_aca4e7239d3a6db5f754913ac35de8b2c}\label{classlve_1_1_base_camera_aca4e7239d3a6db5f754913ac35de8b2c} 
+\index{lve::BaseCamera@{lve::BaseCamera}!turnSpeedSlowMultiplier@{turnSpeedSlowMultiplier}}
+\index{turnSpeedSlowMultiplier@{turnSpeedSlowMultiplier}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{turnSpeedSlowMultiplier}{turnSpeedSlowMultiplier}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::turn\+Speed\+Slow\+Multiplier = 0.\+0f}
+
+Multiplicateur de vitesse de rotation lente. \Hypertarget{classlve_1_1_base_camera_a382a9b1304855eaee1b59f5cae2ff1cb}\label{classlve_1_1_base_camera_a382a9b1304855eaee1b59f5cae2ff1cb} 
+\index{lve::BaseCamera@{lve::BaseCamera}!up@{up}}
+\index{up@{up}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{up}{up}}
+{\footnotesize\ttfamily glm\+::vec3 lve\+::\+Base\+Camera\+::up}
+
+Vecteur de direction vers le haut de la caméra. \Hypertarget{classlve_1_1_base_camera_a16e7900b9f2d2cd719ccf0e30143ef55}\label{classlve_1_1_base_camera_a16e7900b9f2d2cd719ccf0e30143ef55} 
+\index{lve::BaseCamera@{lve::BaseCamera}!velocity@{velocity}}
+\index{velocity@{velocity}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily glm\+::vec3 lve\+::\+Base\+Camera\+::velocity}
+
+Vélocité de la caméra. \Hypertarget{classlve_1_1_base_camera_a687aeb59c615847ec9f8d338ea9ecbf5}\label{classlve_1_1_base_camera_a687aeb59c615847ec9f8d338ea9ecbf5} 
+\index{lve::BaseCamera@{lve::BaseCamera}!yaw@{yaw}}
+\index{yaw@{yaw}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{yaw}{yaw}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::yaw}
+
+Angle de lacet (yaw). \Hypertarget{classlve_1_1_base_camera_aaaf4948d508911e54179ff874721a9c5}\label{classlve_1_1_base_camera_aaaf4948d508911e54179ff874721a9c5} 
+\index{lve::BaseCamera@{lve::BaseCamera}!zFar@{zFar}}
+\index{zFar@{zFar}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{zFar}{zFar}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::z\+Far = 0.\+0f}
+
+Plan éloigné du volume de vue. \Hypertarget{classlve_1_1_base_camera_a8c132827d7e6325d6d1fd1c8be499be4}\label{classlve_1_1_base_camera_a8c132827d7e6325d6d1fd1c8be499be4} 
+\index{lve::BaseCamera@{lve::BaseCamera}!zNear@{zNear}}
+\index{zNear@{zNear}!lve::BaseCamera@{lve::BaseCamera}}
+\doxysubsubsection{\texorpdfstring{zNear}{zNear}}
+{\footnotesize\ttfamily float lve\+::\+Base\+Camera\+::z\+Near = 0.\+0f}
+
+Plan rapproché du volume de vue. 
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Camera/Base\+Camera.\+h\item 
+sources/\+Camera/Base\+Camera.\+cpp\end{DoxyCompactItemize}

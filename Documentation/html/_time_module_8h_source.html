@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/Modules/TimeModule.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_8ba5de94bce70429844b810000c4522a.html">Modules</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">TimeModule.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;Modules/Module.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_time_module.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="class_time_module.html">TimeModule</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_module.html">Module</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_time_module.html#a6993b5d4f7722fbbcb4bc7024016e198">   16</a></span>        <a class="code hl_function" href="class_time_module.html#a6993b5d4f7722fbbcb4bc7024016e198">TimeModule</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_time_module.html#adc5340bbb04dd931c6a69130e5d5429c">   22</a></span>        [[nodiscard]] <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_time_module.html#adc5340bbb04dd931c6a69130e5d5429c">GetDeltaTime</a>()</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">return</span> deltaTime;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        }</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_time_module.html#a01cf79097a8152c883e24adef5191584">   31</a></span>        [[nodiscard]] <span class="keywordtype">float</span> <a class="code hl_function" href="class_time_module.html#a01cf79097a8152c883e24adef5191584">GetElapsedTime</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keyword">const</span> <span class="keyword">auto</span>                         current_time = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keyword">const</span> std::chrono::duration&lt;float&gt; duration     = current_time - currentTime;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">return</span> duration.count();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_time_module.html#a047203509e03c85a4bfaba186625f317">   42</a></span>        [[nodiscard]] <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_time_module.html#a047203509e03c85a4bfaba186625f317">GetDeltaTimeMilliseconds</a>()</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">return</span> deltaTime * 1000.0f;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_time_module.html#a2410bbc0ea2d5ec90d7823a4b5ab040d">   51</a></span>        [[nodiscard]] <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_time_module.html#a2410bbc0ea2d5ec90d7823a4b5ab040d">GetDeltaTimeSeconds</a>()</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">return</span> deltaTime;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_time_module.html#a837007db2eddf0a55044d80b251df857">   60</a></span>        [[nodiscard]] <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_time_module.html#a837007db2eddf0a55044d80b251df857">GetDeltaTimeMinutes</a>()</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">return</span> deltaTime / 60.0f;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
+</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_time_module.html#a24435d6caddad5a0c82c9803c51d4bf6">   69</a></span>        [[nodiscard]] <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_time_module.html#a24435d6caddad5a0c82c9803c51d4bf6">GetDeltaTimeHours</a>()</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">return</span> deltaTime / 3600.0f;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_time_module.html#acc23355369a316893d25082c80c34c57">   77</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_time_module.html#acc23355369a316893d25082c80c34c57">Reset</a>()</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            currentTime = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            beginTime   = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            deltaTime   = 0.0f;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#pragma region Event</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_time_module.html#a7c899a7587a3e21e509f4c1634ca927d">Init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_time_module.html#a74f9d64849e112aeddc97551ed5a048f">Start</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_time_module.html#ae87a5a47b9b219ecdb9a887cf5d92bae">FixedUpdate</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_time_module.html#a7e9d8ea203c2476ba0669c6fb4dee9d5">Update</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_time_module.html#a20b4981ab2cdd594b50d3e5434d54135">PreRender</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_time_module.html#acab405e93416340762114ae8bba5c957">Render</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_time_module.html#afc5afd0dd2d955e6f93f008de1f0d9eb">RenderGui</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_time_module.html#a70449925f5ea4db4e44abe77988a0018">PostRender</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_time_module.html#a05198d257438a41a2125811fb86880a6">Release</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_time_module.html#ae726537b2b50d9ad443be1586b883de6">Finalize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keyword">static</span> <span class="keywordtype">float</span> deltaTime;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        std::chrono::high_resolution_clock::time_point beginTime;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        std::chrono::high_resolution_clock::time_point currentTime;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>};</div>
+</div>
+<div class="ttc" id="aclass_module_html"><div class="ttname"><a href="class_module.html">Module</a></div><div class="ttdoc">Classe Module.</div><div class="ttdef"><b>Definition</b> Module.h:19</div></div>
+<div class="ttc" id="aclass_time_module_html"><div class="ttname"><a href="class_time_module.html">TimeModule</a></div><div class="ttdoc">Module de gestion du temps pour le moteur de jeu.</div><div class="ttdef"><b>Definition</b> TimeModule.h:10</div></div>
+<div class="ttc" id="aclass_time_module_html_a01cf79097a8152c883e24adef5191584"><div class="ttname"><a href="class_time_module.html#a01cf79097a8152c883e24adef5191584">TimeModule::GetElapsedTime</a></div><div class="ttdeci">float GetElapsedTime() const</div><div class="ttdoc">Récupère le temps écoulé depuis la dernière frame en secondes.</div><div class="ttdef"><b>Definition</b> TimeModule.h:31</div></div>
+<div class="ttc" id="aclass_time_module_html_a047203509e03c85a4bfaba186625f317"><div class="ttname"><a href="class_time_module.html#a047203509e03c85a4bfaba186625f317">TimeModule::GetDeltaTimeMilliseconds</a></div><div class="ttdeci">static float GetDeltaTimeMilliseconds()</div><div class="ttdoc">Récupère le delta time en millisecondes.</div><div class="ttdef"><b>Definition</b> TimeModule.h:42</div></div>
+<div class="ttc" id="aclass_time_module_html_a05198d257438a41a2125811fb86880a6"><div class="ttname"><a href="class_time_module.html#a05198d257438a41a2125811fb86880a6">TimeModule::Release</a></div><div class="ttdeci">void Release() override</div><div class="ttdoc">Libère les ressources utilisées par le module.</div><div class="ttdef"><b>Definition</b> TimeModule.cpp:54</div></div>
+<div class="ttc" id="aclass_time_module_html_a20b4981ab2cdd594b50d3e5434d54135"><div class="ttname"><a href="class_time_module.html#a20b4981ab2cdd594b50d3e5434d54135">TimeModule::PreRender</a></div><div class="ttdeci">void PreRender() override</div><div class="ttdoc">Fonction pré-rendu du module.</div><div class="ttdef"><b>Definition</b> TimeModule.cpp:34</div></div>
+<div class="ttc" id="aclass_time_module_html_a2410bbc0ea2d5ec90d7823a4b5ab040d"><div class="ttname"><a href="class_time_module.html#a2410bbc0ea2d5ec90d7823a4b5ab040d">TimeModule::GetDeltaTimeSeconds</a></div><div class="ttdeci">static float GetDeltaTimeSeconds()</div><div class="ttdoc">Récupère le delta time en secondes.</div><div class="ttdef"><b>Definition</b> TimeModule.h:51</div></div>
+<div class="ttc" id="aclass_time_module_html_a24435d6caddad5a0c82c9803c51d4bf6"><div class="ttname"><a href="class_time_module.html#a24435d6caddad5a0c82c9803c51d4bf6">TimeModule::GetDeltaTimeHours</a></div><div class="ttdeci">static float GetDeltaTimeHours()</div><div class="ttdoc">Récupère le delta time en heures.</div><div class="ttdef"><b>Definition</b> TimeModule.h:69</div></div>
+<div class="ttc" id="aclass_time_module_html_a6993b5d4f7722fbbcb4bc7024016e198"><div class="ttname"><a href="class_time_module.html#a6993b5d4f7722fbbcb4bc7024016e198">TimeModule::TimeModule</a></div><div class="ttdeci">TimeModule()=default</div><div class="ttdoc">Constructeur par défaut de la classe TimeModule.</div></div>
+<div class="ttc" id="aclass_time_module_html_a70449925f5ea4db4e44abe77988a0018"><div class="ttname"><a href="class_time_module.html#a70449925f5ea4db4e44abe77988a0018">TimeModule::PostRender</a></div><div class="ttdeci">void PostRender() override</div><div class="ttdoc">Fonction post-rendu du module.</div><div class="ttdef"><b>Definition</b> TimeModule.cpp:49</div></div>
+<div class="ttc" id="aclass_time_module_html_a74f9d64849e112aeddc97551ed5a048f"><div class="ttname"><a href="class_time_module.html#a74f9d64849e112aeddc97551ed5a048f">TimeModule::Start</a></div><div class="ttdeci">void Start() override</div><div class="ttdoc">Démarre le module.</div><div class="ttdef"><b>Definition</b> TimeModule.cpp:13</div></div>
+<div class="ttc" id="aclass_time_module_html_a7c899a7587a3e21e509f4c1634ca927d"><div class="ttname"><a href="class_time_module.html#a7c899a7587a3e21e509f4c1634ca927d">TimeModule::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdoc">Initialise le module.</div><div class="ttdef"><b>Definition</b> TimeModule.cpp:5</div></div>
+<div class="ttc" id="aclass_time_module_html_a7e9d8ea203c2476ba0669c6fb4dee9d5"><div class="ttname"><a href="class_time_module.html#a7e9d8ea203c2476ba0669c6fb4dee9d5">TimeModule::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">Met à jour le temps écoulé depuis la dernière frame.</div><div class="ttdef"><b>Definition</b> TimeModule.cpp:23</div></div>
+<div class="ttc" id="aclass_time_module_html_a837007db2eddf0a55044d80b251df857"><div class="ttname"><a href="class_time_module.html#a837007db2eddf0a55044d80b251df857">TimeModule::GetDeltaTimeMinutes</a></div><div class="ttdeci">static float GetDeltaTimeMinutes()</div><div class="ttdoc">Récupère le delta time en minutes.</div><div class="ttdef"><b>Definition</b> TimeModule.h:60</div></div>
+<div class="ttc" id="aclass_time_module_html_acab405e93416340762114ae8bba5c957"><div class="ttname"><a href="class_time_module.html#acab405e93416340762114ae8bba5c957">TimeModule::Render</a></div><div class="ttdeci">void Render() override</div><div class="ttdoc">Rendu du module.</div><div class="ttdef"><b>Definition</b> TimeModule.cpp:39</div></div>
+<div class="ttc" id="aclass_time_module_html_acc23355369a316893d25082c80c34c57"><div class="ttname"><a href="class_time_module.html#acc23355369a316893d25082c80c34c57">TimeModule::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">Réinitialise le temps.</div><div class="ttdef"><b>Definition</b> TimeModule.h:77</div></div>
+<div class="ttc" id="aclass_time_module_html_adc5340bbb04dd931c6a69130e5d5429c"><div class="ttname"><a href="class_time_module.html#adc5340bbb04dd931c6a69130e5d5429c">TimeModule::GetDeltaTime</a></div><div class="ttdeci">static float GetDeltaTime()</div><div class="ttdoc">Récupère le delta time en secondes.</div><div class="ttdef"><b>Definition</b> TimeModule.h:22</div></div>
+<div class="ttc" id="aclass_time_module_html_ae726537b2b50d9ad443be1586b883de6"><div class="ttname"><a href="class_time_module.html#ae726537b2b50d9ad443be1586b883de6">TimeModule::Finalize</a></div><div class="ttdeci">void Finalize() override</div><div class="ttdoc">Finalise le module.</div><div class="ttdef"><b>Definition</b> TimeModule.cpp:59</div></div>
+<div class="ttc" id="aclass_time_module_html_ae87a5a47b9b219ecdb9a887cf5d92bae"><div class="ttname"><a href="class_time_module.html#ae87a5a47b9b219ecdb9a887cf5d92bae">TimeModule::FixedUpdate</a></div><div class="ttdeci">void FixedUpdate() override</div><div class="ttdoc">Effectue une mise à jour fixe du module.</div><div class="ttdef"><b>Definition</b> TimeModule.cpp:18</div></div>
+<div class="ttc" id="aclass_time_module_html_afc5afd0dd2d955e6f93f008de1f0d9eb"><div class="ttname"><a href="class_time_module.html#afc5afd0dd2d955e6f93f008de1f0d9eb">TimeModule::RenderGui</a></div><div class="ttdeci">void RenderGui() override</div><div class="ttdoc">Rendu de l'interface graphique du module.</div><div class="ttdef"><b>Definition</b> TimeModule.cpp:44</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

@@ -1,0 +1,80 @@
+\doxysection{Component.\+h}
+\hypertarget{_component_8h_source}{}\label{_component_8h_source}\index{includes/GameObject/Components/Component.h@{includes/GameObject/Components/Component.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}GameObject/GameObject.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifdef\ ENGINECORE\_EXPORTS}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ ENGINEDLL\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ ENGINEDLL\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_object}{GameObject}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//class\ ENGINEDLL\_API\ Component}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ \ }\mbox{\hyperlink{class_component}{Component}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component}{Component}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_component}{Component}}(\mbox{\hyperlink{class_game_object}{GameObject}}*\ \_owner);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \ \mbox{\hyperlink{class_component}{\string~Component}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#pragma\ region\ Event}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Init();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Start();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ FixedUpdate();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Update()\ ;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ UpdateEditor()\ ;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ PreRender();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Render();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ RenderGui();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ PostRender();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Release();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Finalize();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#pragma\ region\ Getter}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \mbox{\hyperlink{class_component_a92f94b02f4591895bb96392581c9ccd9}{GetOwner}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_component_a715fc40771d21d6d43d8209dd5c9810a}{owner}};\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_component_a9af52e1878212622948ab2189f4f29dd}{GetName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_component_a46343549452bda5ee9752f7a9bc15efb}{name}};\ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_component_a9ad91aa536dc0b237bac510ef2981ff1}{GetActive}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_component_a6dad4f819c0814eee8219e9b391cf583}{isActive}};\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_component_ae26f71032d146b80daeadb3eb9c9f772}{GetVisible}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_component_a49f5a53967d8fa26917ccbb03312233b}{isVisible}};\ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#pragma\ region\ Setter}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_a404b9d2dd75d68fc0b3f4d83b096b083}{SetOwner}}(\mbox{\hyperlink{class_game_object}{GameObject}}*\ \_owner)\ \{\ \mbox{\hyperlink{class_component_a715fc40771d21d6d43d8209dd5c9810a}{owner}}\ =\ \_owner;\ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_a95c88d74e0604f8d883fb722eda085db}{SetName}}(\textcolor{keyword}{const}\ std::string\&\ \_name)\ \{\ \mbox{\hyperlink{class_component_a46343549452bda5ee9752f7a9bc15efb}{name}}\ =\ \_name;\ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_a0a38ce3912f2363e7ea6aff6276c07a7}{SetName}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \_name)\ \{\ \mbox{\hyperlink{class_component_a46343549452bda5ee9752f7a9bc15efb}{name}}\ =\ \_name;\ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_a9be7df4eee8904fa8c7e5ef6f72064f4}{SetActive}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\&\ \_state)\ \{\ \mbox{\hyperlink{class_component_a6dad4f819c0814eee8219e9b391cf583}{isActive}}\ =\ \_state;\ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_abc5545dc4ccecfe31a6fb551b4c4f514}{SetVisible}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\&\ \_state)\ \{\ \mbox{\hyperlink{class_component_a49f5a53967d8fa26917ccbb03312233b}{isVisible}}\ =\ \_state;\ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_a10db7b8781e80b3f502463868345dac7}{SetActiveAndVisible}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\&\ \_state)}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_a49f5a53967d8fa26917ccbb03312233b}{isVisible}}\ =\ \_state;}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_a6dad4f819c0814eee8219e9b391cf583}{isActive}}\ \ =\ \_state;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \mbox{\hyperlink{class_component_a715fc40771d21d6d43d8209dd5c9810a}{owner}}\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_component_a46343549452bda5ee9752f7a9bc15efb}{name}}\ =\ \textcolor{stringliteral}{"{}Component"{}};\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_component_a6dad4f819c0814eee8219e9b391cf583}{isActive}}\ =\ \textcolor{keyword}{true};\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_component_a49f5a53967d8fa26917ccbb03312233b}{isVisible}}\ =\ \textcolor{keyword}{true};\ }
+\DoxyCodeLine{00132\ \};}
+
+\end{DoxyCode}

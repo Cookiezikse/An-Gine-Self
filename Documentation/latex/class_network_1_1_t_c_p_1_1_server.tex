@@ -1,0 +1,131 @@
+\doxysection{Référence de la classe Network\+::TCP\+::Server}
+\hypertarget{class_network_1_1_t_c_p_1_1_server}{}\label{class_network_1_1_t_c_p_1_1_server}\index{Network::TCP::Server@{Network::TCP::Server}}
+
+
+La classe \doxylink{class_network_1_1_t_c_p_1_1_server}{Server} repr{\ucr}sente un serveur TCP.  
+
+
+
+
+{\ttfamily \#include $<$Server.\+h$>$}
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_a7f8a321ebc3a99959eef876e652efcfe}\label{class_network_1_1_t_c_p_1_1_server_a7f8a321ebc3a99959eef876e652efcfe} 
+{\bfseries Server} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par d{\ucr}faut de la classe \doxylink{class_network_1_1_t_c_p_1_1_server}{Server}. \end{DoxyCompactList}\item 
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_a1f739954830843ba193781f846736209}\label{class_network_1_1_t_c_p_1_1_server_a1f739954830843ba193781f846736209} 
+{\bfseries Server} (const \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server}{Server}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Constructeur de copie supprim{\ucr}. \end{DoxyCompactList}\item 
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_a72d89f79a2f3b29940af39932dde8176}\label{class_network_1_1_t_c_p_1_1_server_a72d89f79a2f3b29940af39932dde8176} 
+\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server}{Server}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server}{Server}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Op{\ucr}rateur d\textquotesingle{}assignation de copie supprim{\ucr}. \end{DoxyCompactList}\item 
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_ad83aed70dc67246d83b1958776a12d15}\label{class_network_1_1_t_c_p_1_1_server_ad83aed70dc67246d83b1958776a12d15} 
+{\bfseries Server} (\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server}{Server}} \&\&)
+\begin{DoxyCompactList}\small\item\em Constructeur de d{\ucr}placement de la classe \doxylink{class_network_1_1_t_c_p_1_1_server}{Server}. \end{DoxyCompactList}\item 
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_ade4306b4d601af188e4b94879d5c2791}\label{class_network_1_1_t_c_p_1_1_server_ade4306b4d601af188e4b94879d5c2791} 
+\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server}{Server}} \& {\bfseries operator=} (\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server}{Server}} \&\&)
+\begin{DoxyCompactList}\small\item\em Op{\ucr}rateur d\textquotesingle{}assignation par d{\ucr}placement de la classe \doxylink{class_network_1_1_t_c_p_1_1_server}{Server}. \end{DoxyCompactList}\item 
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_a09366c69fe651156d9a4131175e4a217}\label{class_network_1_1_t_c_p_1_1_server_a09366c69fe651156d9a4131175e4a217} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Server} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \doxylink{class_network_1_1_t_c_p_1_1_server}{Server}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_a229a8fb6cd5cf4278f5a578661dc094d}{start}} (unsigned short \+\_\+port)
+\begin{DoxyCompactList}\small\item\em D{\ucr}marre le serveur sur le port sp{\ucr}cifi{\ucr}. \end{DoxyCompactList}\item 
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_a01fae34f54a929d8aa03cbc3c2cb1e1d}\label{class_network_1_1_t_c_p_1_1_server_a01fae34f54a929d8aa03cbc3c2cb1e1d} 
+void {\bfseries stop} ()
+\begin{DoxyCompactList}\small\item\em Arr{\ucr}te le serveur. \end{DoxyCompactList}\item 
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_a6a8fdc8571bbbd999c7c2767fc5b34bf}\label{class_network_1_1_t_c_p_1_1_server_a6a8fdc8571bbbd999c7c2767fc5b34bf} 
+void {\bfseries update} ()
+\begin{DoxyCompactList}\small\item\em Met {\ucr} jour le serveur pour traiter les {\ucr}v{\ucr}nements en attente. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_af7896a328c27db52fd99e0c5888754f1}{send\+To}} (uint64\+\_\+t clientid, const unsigned char \texorpdfstring{$\ast$}{*}data, unsigned int len)
+\begin{DoxyCompactList}\small\item\em Envoie des donn{\ucr}es {\ucr} un client sp{\ucr}cifi{\ucr}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_af017b5f9caa9147cf4502750ccc3639a}{send\+To\+All}} (const unsigned char \texorpdfstring{$\ast$}{*}data, unsigned int len)
+\begin{DoxyCompactList}\small\item\em Envoie des donn{\ucr}es {\ucr} tous les clients connect{\ucr}s. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Messages\+::\+Base}} $>$ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_ac4cc0dc0661e293f522a0bb7089bbfbe}{poll}} ()
+\begin{DoxyCompactList}\small\item\em R{\ucr}cup{\ucr}re les messages entrants du serveur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+La classe \doxylink{class_network_1_1_t_c_p_1_1_server}{Server} repr{\ucr}sente un serveur TCP. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_ac4cc0dc0661e293f522a0bb7089bbfbe}\label{class_network_1_1_t_c_p_1_1_server_ac4cc0dc0661e293f522a0bb7089bbfbe} 
+\index{Network::TCP::Server@{Network::TCP::Server}!poll@{poll}}
+\index{poll@{poll}!Network::TCP::Server@{Network::TCP::Server}}
+\doxysubsubsection{\texorpdfstring{poll()}{poll()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Messages\+::\+Base}} $>$ Network\+::\+TCP\+::\+Server\+::poll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+R{\ucr}cup{\ucr}re les messages entrants du serveur. 
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur unique vers le message re{\ucr}u. 
+\end{DoxyReturn}
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_af7896a328c27db52fd99e0c5888754f1}\label{class_network_1_1_t_c_p_1_1_server_af7896a328c27db52fd99e0c5888754f1} 
+\index{Network::TCP::Server@{Network::TCP::Server}!sendTo@{sendTo}}
+\index{sendTo@{sendTo}!Network::TCP::Server@{Network::TCP::Server}}
+\doxysubsubsection{\texorpdfstring{sendTo()}{sendTo()}}
+{\footnotesize\ttfamily bool Network\+::\+TCP\+::\+Server\+::send\+To (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{clientid,  }\item[{const unsigned char \texorpdfstring{$\ast$}{*}}]{data,  }\item[{unsigned int}]{len }\end{DoxyParamCaption})}
+
+
+
+Envoie des donn{\ucr}es {\ucr} un client sp{\ucr}cifi{\ucr}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em clientid} & Identifiant du client. \\
+\hline
+{\em data} & Pointeur vers les donn{\ucr}es {\ucr} envoyer. \\
+\hline
+{\em len} & Longueur des donn{\ucr}es {\ucr} envoyer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si l\textquotesingle{}envoi r{\ucr}ussit, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_af017b5f9caa9147cf4502750ccc3639a}\label{class_network_1_1_t_c_p_1_1_server_af017b5f9caa9147cf4502750ccc3639a} 
+\index{Network::TCP::Server@{Network::TCP::Server}!sendToAll@{sendToAll}}
+\index{sendToAll@{sendToAll}!Network::TCP::Server@{Network::TCP::Server}}
+\doxysubsubsection{\texorpdfstring{sendToAll()}{sendToAll()}}
+{\footnotesize\ttfamily bool Network\+::\+TCP\+::\+Server\+::send\+To\+All (\begin{DoxyParamCaption}\item[{const unsigned char \texorpdfstring{$\ast$}{*}}]{data,  }\item[{unsigned int}]{len }\end{DoxyParamCaption})}
+
+
+
+Envoie des donn{\ucr}es {\ucr} tous les clients connect{\ucr}s. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em data} & Pointeur vers les donn{\ucr}es {\ucr} envoyer. \\
+\hline
+{\em len} & Longueur des donn{\ucr}es {\ucr} envoyer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si l\textquotesingle{}envoi r{\ucr}ussit, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_a229a8fb6cd5cf4278f5a578661dc094d}\label{class_network_1_1_t_c_p_1_1_server_a229a8fb6cd5cf4278f5a578661dc094d} 
+\index{Network::TCP::Server@{Network::TCP::Server}!start@{start}}
+\index{start@{start}!Network::TCP::Server@{Network::TCP::Server}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily bool Network\+::\+TCP\+::\+Server\+::start (\begin{DoxyParamCaption}\item[{unsigned short}]{\+\_\+port }\end{DoxyParamCaption})}
+
+
+
+D{\ucr}marre le serveur sur le port sp{\ucr}cifi{\ucr}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+port} & Port sur lequel d{\ucr}marrer le serveur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si le d{\ucr}marrage r{\ucr}ussit, sinon false. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+TCP/\+Server/Server.\+h\item 
+sources/\+TCP/\+Server/Server.\+cpp\end{DoxyCompactItemize}

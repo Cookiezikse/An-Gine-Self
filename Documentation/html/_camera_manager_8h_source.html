@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/Camera/CameraManager.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_fef1d599e90491c2e43f1d76067cfca5.html">Camera</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">CameraManager.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// std</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stack&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// Camera</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;Camera/BaseCamera.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;Modules/Module.h&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>lve</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">class </span>BaseCamera;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">// TODO: Make inherit from System</span></div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classlve_1_1_camera_manager.html">   25</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classlve_1_1_camera_manager.html">CameraManager</a> final : <span class="keyword">public</span> <a class="code hl_class" href="class_module.html">Module</a></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <a class="code hl_function" href="classlve_1_1_camera_manager.html#abb0a3b2b3ba147a82859f76621bcf719">CameraManager</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <a class="code hl_function" href="classlve_1_1_camera_manager.html#ab43e4c4467c11bfa90b16c8324ac8df9">~CameraManager</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_camera_manager.html#aa70b6eae079acb080fdcf6d1829f069f">OnPostSceneChange</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_camera_manager.html#aa5fd44f2794c8de7fbe5dbd460b34615">AddCamera</a>(<a class="code hl_class" href="classlve_1_1_base_camera.html">BaseCamera</a>* _camera, <span class="keywordtype">bool</span> _bSwitchTo = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="comment">// Clears stack and pushes the given camera onto it, then returns a pointer to it</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <a class="code hl_class" href="classlve_1_1_base_camera.html">BaseCamera</a>* <a class="code hl_function" href="classlve_1_1_camera_manager.html#a06d062546e8d3335bf8bb5df93294217">CycleCamera</a>(uint32_t _deltaIndex, <span class="keywordtype">bool</span> _bAlignWithPrevious = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <a class="code hl_class" href="classlve_1_1_base_camera.html">BaseCamera</a>* <a class="code hl_function" href="classlve_1_1_camera_manager.html#a9f1107dba75de18fa58ab0adc64cd351">PushCamera</a>(<a class="code hl_class" href="classlve_1_1_base_camera.html">BaseCamera</a>* _camera, <span class="keywordtype">bool</span> _bAlignWithPrevious, <span class="keywordtype">bool</span> _bInitialize);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <a class="code hl_class" href="classlve_1_1_base_camera.html">BaseCamera</a>* <a class="code hl_function" href="classlve_1_1_camera_manager.html#a4279ff3beb1a41337747648fd81bb188">PushCameraByName</a>(<span class="keyword">const</span> std::string&amp; _name, <span class="keywordtype">bool</span> _bAlignWithPrevious, <span class="keywordtype">bool</span> _bInitialize);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_camera_manager.html#ac62024485d7bda8cbe19192d6d1c1118">PopCamera</a>(<span class="keywordtype">bool</span> _bAlignWithCurrent = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">            #pragma region Getter</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            [[nodiscard]] <a class="code hl_class" href="classlve_1_1_base_camera.html">BaseCamera</a>* <a class="code hl_function" href="classlve_1_1_camera_manager.html#a3e7274417894fe6bd513d2e4eeea2ecf">GetCurrentCamera</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            [[nodiscard]] <a class="code hl_class" href="classlve_1_1_base_camera.html">BaseCamera</a>* <a class="code hl_function" href="classlve_1_1_camera_manager.html#a50e8df6872ef731f12d3a127049c8727">GetCameraByName</a>(<span class="keyword">const</span> std::string&amp; _name) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">            #pragma endregion</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">            #pragma region Setter</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            <a class="code hl_class" href="classlve_1_1_base_camera.html">BaseCamera</a>* <a class="code hl_function" href="classlve_1_1_camera_manager.html#a7045027b41d266b91d007e2ceaaaf0f6">SetCamera</a>(<a class="code hl_class" href="classlve_1_1_base_camera.html">BaseCamera</a>* _camera, <span class="keywordtype">bool</span> _bAlignWithPrevious);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            <a class="code hl_class" href="classlve_1_1_base_camera.html">BaseCamera</a>* <a class="code hl_function" href="classlve_1_1_camera_manager.html#ac8e0e786fe08bf3496cc8d2e6ee6f101">SetCameraByName</a>(<span class="keyword">const</span> std::string&amp; _name, <span class="keywordtype">bool</span> _bAlignWithPrevious);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="preprocessor">            #pragma endregion</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_camera_manager.html#a1b1d319c94914d1ca5f664a5a364db2d">DrawImGuiObjects</a>();</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_camera_manager.html#ad6b29551b7cceaebb4c52298b740cd1c">AlignCameras</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlve_1_1_base_camera.html">BaseCamera</a>* _from, <a class="code hl_class" href="classlve_1_1_base_camera.html">BaseCamera</a>* _to);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="preprocessor">            #pragma region Event</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_camera_manager.html#aa5a34d8688524f4c9aa19b6c39fd666e">Init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_camera_manager.html#aec01cb4461c34667ec1fd0e29e52e5c4">Start</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_camera_manager.html#ad10b9d64802b6138440542b063a6dc3f">FixedUpdate</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_camera_manager.html#a0f78f04e89c740917534cfb281ef638d">Update</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_camera_manager.html#a2d0fd46b41c1d8268d04be02130fcf2d">PreRender</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_camera_manager.html#aa87a8b6743c4dc934249a9aed7be4c25">Render</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_camera_manager.html#a28606a0bc5d2d24070708181eb81635d">RenderGui</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_camera_manager.html#aa9197459d1795ea81b84f301a9e59984">PostRender</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_camera_manager.html#a4f2bcf387d73f5ba54845a6232f5028a">Release</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_camera_manager.html#a613105627c3a7c59236af821c91b685e">Finalize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="preprocessor">            #pragma endregion</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            <span class="comment">/*EventReply OnActionEvent(Action action, ActionEvent actionEvent);</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="comment">            ActionCallback&lt;CameraManager&gt; m_ActionCallback;*/</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            uint32_t GetCameraIndex(<span class="keyword">const</span> <a class="code hl_class" href="classlve_1_1_base_camera.html">BaseCamera</a>* _camera) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            <span class="comment">// TODO: Roll custom stack class</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            <span class="comment">// Stack containing temporary cameras, the topmost of which is the current camera</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <span class="comment">// Always contains at least one element</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            std::stack&lt;BaseCamera*&gt; cameraStack; </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            <span class="comment">// All cameras, unordered</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            std::vector&lt;BaseCamera*&gt; cameras;    </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            <span class="keywordtype">bool</span> bInitialized = <span class="keyword">false</span>;            </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    };</div>
+</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>};</div>
+<div class="ttc" id="aclass_module_html"><div class="ttname"><a href="class_module.html">Module</a></div><div class="ttdoc">Classe Module.</div><div class="ttdef"><b>Definition</b> Module.h:19</div></div>
+<div class="ttc" id="aclasslve_1_1_base_camera_html"><div class="ttname"><a href="classlve_1_1_base_camera.html">lve::BaseCamera</a></div><div class="ttdoc">Classe de base pour une caméra dans un moteur de jeu.</div><div class="ttdef"><b>Definition</b> BaseCamera.h:40</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html"><div class="ttname"><a href="classlve_1_1_camera_manager.html">lve::CameraManager</a></div><div class="ttdoc">Gère les caméras dans le moteur de jeu.</div><div class="ttdef"><b>Definition</b> CameraManager.h:26</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_a06d062546e8d3335bf8bb5df93294217"><div class="ttname"><a href="classlve_1_1_camera_manager.html#a06d062546e8d3335bf8bb5df93294217">lve::CameraManager::CycleCamera</a></div><div class="ttdeci">BaseCamera * CycleCamera(uint32_t _deltaIndex, bool _bAlignWithPrevious=true)</div><div class="ttdoc">Fait passer la caméra actuelle à la suivante ou à la précédente dans la liste des caméras gérées.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:146</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_a0f78f04e89c740917534cfb281ef638d"><div class="ttname"><a href="classlve_1_1_camera_manager.html#a0f78f04e89c740917534cfb281ef638d">lve::CameraManager::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">Met à jour le module.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:55</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_a1b1d319c94914d1ca5f664a5a364db2d"><div class="ttname"><a href="classlve_1_1_camera_manager.html#a1b1d319c94914d1ca5f664a5a364db2d">lve::CameraManager::DrawImGuiObjects</a></div><div class="ttdeci">void DrawImGuiObjects()</div><div class="ttdoc">Affiche les objets ImGui associés au gestionnaire de caméras.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:258</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_a28606a0bc5d2d24070708181eb81635d"><div class="ttname"><a href="classlve_1_1_camera_manager.html#a28606a0bc5d2d24070708181eb81635d">lve::CameraManager::RenderGui</a></div><div class="ttdeci">void RenderGui() override</div><div class="ttdoc">Rendu de l'interface graphique du module.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:70</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_a2d0fd46b41c1d8268d04be02130fcf2d"><div class="ttname"><a href="classlve_1_1_camera_manager.html#a2d0fd46b41c1d8268d04be02130fcf2d">lve::CameraManager::PreRender</a></div><div class="ttdeci">void PreRender() override</div><div class="ttdoc">Fonction pré-rendu du module.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:60</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_a3e7274417894fe6bd513d2e4eeea2ecf"><div class="ttname"><a href="classlve_1_1_camera_manager.html#a3e7274417894fe6bd513d2e4eeea2ecf">lve::CameraManager::GetCurrentCamera</a></div><div class="ttdeci">BaseCamera * GetCurrentCamera() const</div><div class="ttdoc">Obtient un pointeur vers la caméra actuelle.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:114</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_a4279ff3beb1a41337747648fd81bb188"><div class="ttname"><a href="classlve_1_1_camera_manager.html#a4279ff3beb1a41337747648fd81bb188">lve::CameraManager::PushCameraByName</a></div><div class="ttdeci">BaseCamera * PushCameraByName(const std::string &amp;_name, bool _bAlignWithPrevious, bool _bInitialize)</div><div class="ttdoc">Ajoute une nouvelle caméra par son nom à la pile et la définit comme caméra actuelle.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:211</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_a4f2bcf387d73f5ba54845a6232f5028a"><div class="ttname"><a href="classlve_1_1_camera_manager.html#a4f2bcf387d73f5ba54845a6232f5028a">lve::CameraManager::Release</a></div><div class="ttdeci">void Release() override</div><div class="ttdoc">Libère les ressources utilisées par le module.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:80</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_a50e8df6872ef731f12d3a127049c8727"><div class="ttname"><a href="classlve_1_1_camera_manager.html#a50e8df6872ef731f12d3a127049c8727">lve::CameraManager::GetCameraByName</a></div><div class="ttdeci">BaseCamera * GetCameraByName(const std::string &amp;_name) const</div><div class="ttdoc">Obtient un pointeur vers une caméra par son nom.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:248</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_a613105627c3a7c59236af821c91b685e"><div class="ttname"><a href="classlve_1_1_camera_manager.html#a613105627c3a7c59236af821c91b685e">lve::CameraManager::Finalize</a></div><div class="ttdeci">void Finalize() override</div><div class="ttdoc">Finalise le module.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:85</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_a7045027b41d266b91d007e2ceaaaf0f6"><div class="ttname"><a href="classlve_1_1_camera_manager.html#a7045027b41d266b91d007e2ceaaaf0f6">lve::CameraManager::SetCamera</a></div><div class="ttdeci">BaseCamera * SetCamera(BaseCamera *_camera, bool _bAlignWithPrevious)</div><div class="ttdoc">Définit une caméra spécifique comme caméra actuelle.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:132</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_a9f1107dba75de18fa58ab0adc64cd351"><div class="ttname"><a href="classlve_1_1_camera_manager.html#a9f1107dba75de18fa58ab0adc64cd351">lve::CameraManager::PushCamera</a></div><div class="ttdeci">BaseCamera * PushCamera(BaseCamera *_camera, bool _bAlignWithPrevious, bool _bInitialize)</div><div class="ttdoc">Ajoute une nouvelle caméra à la pile et la définit comme caméra actuelle.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:179</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_aa5a34d8688524f4c9aa19b6c39fd666e"><div class="ttname"><a href="classlve_1_1_camera_manager.html#aa5a34d8688524f4c9aa19b6c39fd666e">lve::CameraManager::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdoc">Initialise le module.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:31</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_aa5fd44f2794c8de7fbe5dbd460b34615"><div class="ttname"><a href="classlve_1_1_camera_manager.html#aa5fd44f2794c8de7fbe5dbd460b34615">lve::CameraManager::AddCamera</a></div><div class="ttdeci">void AddCamera(BaseCamera *_camera, bool _bSwitchTo=false)</div><div class="ttdoc">Ajoute une nouvelle caméra au gestionnaire de caméras.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:119</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_aa70b6eae079acb080fdcf6d1829f069f"><div class="ttname"><a href="classlve_1_1_camera_manager.html#aa70b6eae079acb080fdcf6d1829f069f">lve::CameraManager::OnPostSceneChange</a></div><div class="ttdeci">void OnPostSceneChange() const</div><div class="ttdoc">Appelée après un changement de scène.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:106</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_aa87a8b6743c4dc934249a9aed7be4c25"><div class="ttname"><a href="classlve_1_1_camera_manager.html#aa87a8b6743c4dc934249a9aed7be4c25">lve::CameraManager::Render</a></div><div class="ttdeci">void Render() override</div><div class="ttdoc">Rendu du module.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:65</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_aa9197459d1795ea81b84f301a9e59984"><div class="ttname"><a href="classlve_1_1_camera_manager.html#aa9197459d1795ea81b84f301a9e59984">lve::CameraManager::PostRender</a></div><div class="ttdeci">void PostRender() override</div><div class="ttdoc">Fonction post-rendu du module.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:75</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_ab43e4c4467c11bfa90b16c8324ac8df9"><div class="ttname"><a href="classlve_1_1_camera_manager.html#ab43e4c4467c11bfa90b16c8324ac8df9">lve::CameraManager::~CameraManager</a></div><div class="ttdeci">~CameraManager()</div><div class="ttdoc">Destructeur de la classe CameraManager.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:16</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_abb0a3b2b3ba147a82859f76621bcf719"><div class="ttname"><a href="classlve_1_1_camera_manager.html#abb0a3b2b3ba147a82859f76621bcf719">lve::CameraManager::CameraManager</a></div><div class="ttdeci">CameraManager()</div><div class="ttdoc">Constructeur de la classe CameraManager.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:11</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_ac62024485d7bda8cbe19192d6d1c1118"><div class="ttname"><a href="classlve_1_1_camera_manager.html#ac62024485d7bda8cbe19192d6d1c1118">lve::CameraManager::PopCamera</a></div><div class="ttdeci">void PopCamera(bool _bAlignWithCurrent=false)</div><div class="ttdoc">Supprime la caméra actuelle de la pile et restaure la caméra précédente.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:224</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_ac8e0e786fe08bf3496cc8d2e6ee6f101"><div class="ttname"><a href="classlve_1_1_camera_manager.html#ac8e0e786fe08bf3496cc8d2e6ee6f101">lve::CameraManager::SetCameraByName</a></div><div class="ttdeci">BaseCamera * SetCameraByName(const std::string &amp;_name, bool _bAlignWithPrevious)</div><div class="ttdoc">Définit une caméra spécifique par son nom comme caméra actuelle.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:167</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_ad10b9d64802b6138440542b063a6dc3f"><div class="ttname"><a href="classlve_1_1_camera_manager.html#ad10b9d64802b6138440542b063a6dc3f">lve::CameraManager::FixedUpdate</a></div><div class="ttdeci">void FixedUpdate() override</div><div class="ttdoc">Effectue une mise à jour fixe du module.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:50</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_ad6b29551b7cceaebb4c52298b740cd1c"><div class="ttname"><a href="classlve_1_1_camera_manager.html#ad6b29551b7cceaebb4c52298b740cd1c">lve::CameraManager::AlignCameras</a></div><div class="ttdeci">void AlignCameras(const BaseCamera *_from, BaseCamera *_to)</div><div class="ttdoc">Aligne les paramètres de position, de rotation et de champ de vision d'une caméra source avec une caméra ci...</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:362</div></div>
+<div class="ttc" id="aclasslve_1_1_camera_manager_html_aec01cb4461c34667ec1fd0e29e52e5c4"><div class="ttname"><a href="classlve_1_1_camera_manager.html#aec01cb4461c34667ec1fd0e29e52e5c4">lve::CameraManager::Start</a></div><div class="ttdeci">void Start() override</div><div class="ttdoc">Démarre le module.</div><div class="ttdef"><b>Definition</b> CameraManager.cpp:44</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

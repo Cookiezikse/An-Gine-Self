@@ -1,0 +1,615 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Lve\+Device}
+\hypertarget{classlve_1_1_lve_device}{}\label{classlve_1_1_lve_device}\index{lve::LveDevice@{lve::LveDevice}}
+
+
+Classe représentant un périphérique Vulkan.  
+
+
+
+
+{\ttfamily \#include $<$lve\+\_\+device.\+h$>$}
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_device_a5dbf67e8518005fdcd3de7113272f6cc}{Lve\+Device}} (\mbox{\hyperlink{class_window_module}{Window\+Module}} \texorpdfstring{$\ast$}{*}\+\_\+window\+Module)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classlve_1_1_lve_device}{Lve\+Device}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_device_a3928e5409dc9c8e054d06270a56c9d93}{\texorpdfstring{$\sim$}{\string~}\+Lve\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \doxylink{classlve_1_1_lve_device}{Lve\+Device}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_device_acd0d35625590c8930b8045383c06a495}{Lve\+Device}} (const \mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Constructeur de copie supprimé. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \& \mbox{\hyperlink{classlve_1_1_lve_device_aab611df790f3cc5fc5719d2d90578ecf}{operator=}} (const \mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}affectation de copie supprimé. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_device_a2ec8815791e048ac42a73fcbfe1b154a}{Lve\+Device}} (\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&\&)=delete
+\begin{DoxyCompactList}\small\item\em Constructeur de déplacement supprimé. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \& \mbox{\hyperlink{classlve_1_1_lve_device_a0a7c2ce480c9381910528bb05ef68f70}{operator=}} (\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&\&)=delete
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}affectation de déplacement supprimé. \end{DoxyCompactList}\item 
+vk\+::\+Command\+Pool \mbox{\hyperlink{classlve_1_1_lve_device_a34aae465d220806aacc3322242696d1d}{Get\+Command\+Pool}} () const
+\begin{DoxyCompactList}\small\item\em Récupère le pool de commandes Vulkan associé au périphérique. \end{DoxyCompactList}\item 
+vk\+::\+Device \mbox{\hyperlink{classlve_1_1_lve_device_ab4755528cbaa93add122a7edbf464845}{Device}} () const
+\begin{DoxyCompactList}\small\item\em Récupère l\textquotesingle{}objet de périphérique Vulkan. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_lve_device_a7efae05c0dda3dcd86e7bcd3eec740c8}\label{classlve_1_1_lve_device_a7efae05c0dda3dcd86e7bcd3eec740c8} 
+vk\+::\+Instance {\bfseries Get\+Instance} () const
+\item 
+\Hypertarget{classlve_1_1_lve_device_aa748de1ca493fac23099635dcb5a6b19}\label{classlve_1_1_lve_device_aa748de1ca493fac23099635dcb5a6b19} 
+vk\+::\+Physical\+Device {\bfseries Get\+Physical\+Device} () const
+\item 
+vk\+::\+Surface\+KHR \mbox{\hyperlink{classlve_1_1_lve_device_a4e39fcb2417fc88244a2bd7b47fda216}{Surface}} () const
+\begin{DoxyCompactList}\small\item\em Récupère la surface Vulkan associée au périphérique. \end{DoxyCompactList}\item 
+vk\+::\+Queue \mbox{\hyperlink{classlve_1_1_lve_device_a3db7cac38a972c8794d8cb209a784231}{Graphics\+Queue}} () const
+\begin{DoxyCompactList}\small\item\em Récupère la file de commandes graphiques du périphérique. \end{DoxyCompactList}\item 
+vk\+::\+Queue \mbox{\hyperlink{classlve_1_1_lve_device_a880570c94a1582853d2301af3c88e104}{Present\+Queue}} () const
+\begin{DoxyCompactList}\small\item\em Récupère la file de commandes de présentation du périphérique. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlve_1_1_swap_chain_support_details}{Swap\+Chain\+Support\+Details}} \mbox{\hyperlink{classlve_1_1_lve_device_a705e5ae87f7a4885b8f4a115694076a5}{Get\+Swap\+Chain\+Support}} ()
+\begin{DoxyCompactList}\small\item\em Récupère les détails de prise en charge de la chaîne de balisage pour le périphérique. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classlve_1_1_lve_device_a84495cbcca8e67db53fc15d6ab5a6847}{Find\+Memory\+Type}} (uint32\+\_\+t \+\_\+type\+Filter, vk\+::\+Memory\+Property\+Flags \+\_\+properties) const
+\begin{DoxyCompactList}\small\item\em Trouve un type de mémoire approprié pour une utilisation spécifiée. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlve_1_1_queue_family_indices}{Queue\+Family\+Indices}} \mbox{\hyperlink{classlve_1_1_lve_device_aa1b015567e250ee4f37aac78a940620a}{Find\+Physical\+Queue\+Families}} () const
+\begin{DoxyCompactList}\small\item\em Trouve les familles de files de commandes physiques disponibles sur le périphérique. \end{DoxyCompactList}\item 
+vk\+::\+Format \mbox{\hyperlink{classlve_1_1_lve_device_a20a393668b4b4c5aa202ea41168dc16e}{Find\+Supported\+Format}} (const std\+::vector$<$ vk\+::\+Format $>$ \&\+\_\+candidates, vk\+::\+Image\+Tiling \+\_\+tiling, vk\+::\+Format\+Feature\+Flags \+\_\+features) const
+\begin{DoxyCompactList}\small\item\em Trouve un format d\textquotesingle{}image supporté par le périphérique. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_device_a170e75725fcef0f1c461651a139bb8ce}{Create\+Buffer}} (vk\+::\+Device\+Size \+\_\+size, vk\+::\+Buffer\+Usage\+Flags \+\_\+usage, vk\+::\+Memory\+Property\+Flags \+\_\+properties, vk\+::\+Buffer \&\+\_\+buffer, vk\+::\+Device\+Memory \&\+\_\+buffer\+Memory) const
+\begin{DoxyCompactList}\small\item\em Crée un tampon Vulkan avec les paramètres spécifiés. \end{DoxyCompactList}\item 
+vk\+::\+Command\+Buffer \mbox{\hyperlink{classlve_1_1_lve_device_a70cb21509496085180d25539f12c6e0f}{Begin\+Single\+Time\+Commands}} () const
+\begin{DoxyCompactList}\small\item\em Démarre une séquence de commandes Vulkan temporaires. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_device_a1e3f80b67ef6cbd66e48490e5396fd13}{End\+Single\+Time\+Commands}} (vk\+::\+Command\+Buffer \+\_\+command\+Buffer) const
+\begin{DoxyCompactList}\small\item\em Termine une séquence de commandes Vulkan temporaires. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_device_a15e53a2d80e60f69d69882e65429924b}{Copy\+Buffer}} (vk\+::\+Buffer \+\_\+src\+Buffer, vk\+::\+Buffer \+\_\+dst\+Buffer, vk\+::\+Device\+Size \+\_\+size) const
+\begin{DoxyCompactList}\small\item\em Copie les données d\textquotesingle{}un tampon source vers un tampon de destination. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_device_ada99e3ebd5a9f7b3df3840e97fa91f78}{Copy\+Buffer\+To\+Image}} (vk\+::\+Buffer \+\_\+buffer, vk\+::\+Image \+\_\+image, uint32\+\_\+t \+\_\+width, uint32\+\_\+t \+\_\+height, uint32\+\_\+t \+\_\+layer\+Count) const
+\begin{DoxyCompactList}\small\item\em Copie les données d\textquotesingle{}un tampon vers une image Vulkan. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_device_af0556bd5de6d7e04cd817ce000c64f1d}{Create\+Image\+With\+Info}} (const vk\+::\+Image\+Create\+Info \&\+\_\+image\+Info, vk\+::\+Memory\+Property\+Flags \+\_\+properties, vk\+::\+Image \&\+\_\+image, vk\+::\+Device\+Memory \&\+\_\+image\+Memory) const
+\begin{DoxyCompactList}\small\item\em Crée une image Vulkan avec les informations fournies. \end{DoxyCompactList}\item 
+vk\+::\+Instance \mbox{\hyperlink{classlve_1_1_lve_device_a11d82b4686e1e0ca2e3ca7143fd56865}{Create\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Crée une instance Vulkan. \end{DoxyCompactList}\item 
+vk\+::\+Debug\+Utils\+Messenger\+EXT \mbox{\hyperlink{classlve_1_1_lve_device_a5c8aa1272efa148228a786f43eee2605}{Setup\+Debug\+Messenger}} ()
+\begin{DoxyCompactList}\small\item\em Configure le gestionnaire de débogage. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_lve_device_ae5ab9abde3ae4c6ed01a8723e6695251}\label{classlve_1_1_lve_device_ae5ab9abde3ae4c6ed01a8723e6695251} 
+vk\+::\+Debug\+Utils\+Messenger\+EXT {\bfseries Get\+Debug\+Messenger} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classlve_1_1_lve_device_a3c4169c2199d569b4e16f57b7a898db8}\label{classlve_1_1_lve_device_a3c4169c2199d569b4e16f57b7a898db8} 
+const bool {\bfseries enable\+Validation\+Layers} = true
+\item 
+vk\+::\+Physical\+Device\+Properties \mbox{\hyperlink{classlve_1_1_lve_device_a1ee7068dc3c270e771cf87b14da36bff}{properties}}
+\begin{DoxyCompactList}\small\item\em Propriétés du périphérique physique Vulkan associé. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Classe représentant un périphérique Vulkan. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classlve_1_1_lve_device_a5dbf67e8518005fdcd3de7113272f6cc}\label{classlve_1_1_lve_device_a5dbf67e8518005fdcd3de7113272f6cc} 
+\index{lve::LveDevice@{lve::LveDevice}!LveDevice@{LveDevice}}
+\index{LveDevice@{LveDevice}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{LveDevice()}{LveDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Device\+::\+Lve\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_window_module}{Window\+Module}} \texorpdfstring{$\ast$}{*}}]{\+\_\+window\+Module }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructeur de la classe \doxylink{classlve_1_1_lve_device}{Lve\+Device}. 
+
+Initialise un périphérique Vulkan en prenant une référence à une fenêtre Vulkan \doxylink{classlve_1_1_lve_window}{Lve\+Window} en tant que paramètre.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+window\+Module} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_device_a3928e5409dc9c8e054d06270a56c9d93}\label{classlve_1_1_lve_device_a3928e5409dc9c8e054d06270a56c9d93} 
+\index{lve::LveDevice@{lve::LveDevice}!````~LveDevice@{\texorpdfstring{$\sim$}{\string~}LveDevice}}
+\index{````~LveDevice@{\texorpdfstring{$\sim$}{\string~}LveDevice}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LveDevice()}{\string~LveDevice()}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Device\+::\texorpdfstring{$\sim$}{\string~}\+Lve\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur de la classe \doxylink{classlve_1_1_lve_device}{Lve\+Device}. 
+
+Nettoie les ressources associées au périphérique Vulkan lorsqu\textquotesingle{}il est détruit. \Hypertarget{classlve_1_1_lve_device_acd0d35625590c8930b8045383c06a495}\label{classlve_1_1_lve_device_acd0d35625590c8930b8045383c06a495} 
+\index{lve::LveDevice@{lve::LveDevice}!LveDevice@{LveDevice}}
+\index{LveDevice@{LveDevice}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{LveDevice()}{LveDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Device\+::\+Lve\+Device (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Constructeur de copie supprimé. 
+
+Empêche la création d\textquotesingle{}une nouvelle instance de \doxylink{classlve_1_1_lve_device}{Lve\+Device} en copiant une instance existante. \Hypertarget{classlve_1_1_lve_device_a2ec8815791e048ac42a73fcbfe1b154a}\label{classlve_1_1_lve_device_a2ec8815791e048ac42a73fcbfe1b154a} 
+\index{lve::LveDevice@{lve::LveDevice}!LveDevice@{LveDevice}}
+\index{LveDevice@{LveDevice}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{LveDevice()}{LveDevice()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Device\+::\+Lve\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Constructeur de déplacement supprimé. 
+
+Empêche la création d\textquotesingle{}une nouvelle instance de \doxylink{classlve_1_1_lve_device}{Lve\+Device} en déplaçant une instance existante. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_lve_device_a70cb21509496085180d25539f12c6e0f}\label{classlve_1_1_lve_device_a70cb21509496085180d25539f12c6e0f} 
+\index{lve::LveDevice@{lve::LveDevice}!BeginSingleTimeCommands@{BeginSingleTimeCommands}}
+\index{BeginSingleTimeCommands@{BeginSingleTimeCommands}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{BeginSingleTimeCommands()}{BeginSingleTimeCommands()}}
+{\footnotesize\ttfamily vk\+::\+Command\+Buffer lve\+::\+Lve\+Device\+::\+Begin\+Single\+Time\+Commands (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Démarre une séquence de commandes Vulkan temporaires. 
+
+Démarre une série de commandes Vulkan pour une utilisation unique.
+
+Cette fonction alloue un tampon de commandes Vulkan et le démarre pour une utilisation unique.
+
+\begin{DoxyReturn}{Renvoie}
+Le tampon de commandes Vulkan alloué.
+\end{DoxyReturn}
+Cette fonction alloue et démarre un tampon de commandes Vulkan pour une utilisation unique. Le tampon de commandes retourné peut être utilisé pour exécuter des commandes Vulkan qui doivent être exécutées une seule fois.
+
+\begin{DoxyReturn}{Renvoie}
+Le tampon de commandes Vulkan alloué et démarré. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & en cas d\textquotesingle{}échec de l\textquotesingle{}allocation du tampon de commandes. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classlve_1_1_lve_device_a15e53a2d80e60f69d69882e65429924b}\label{classlve_1_1_lve_device_a15e53a2d80e60f69d69882e65429924b} 
+\index{lve::LveDevice@{lve::LveDevice}!CopyBuffer@{CopyBuffer}}
+\index{CopyBuffer@{CopyBuffer}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{CopyBuffer()}{CopyBuffer()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Device\+::\+Copy\+Buffer (\begin{DoxyParamCaption}\item[{vk\+::\+Buffer}]{\+\_\+src\+Buffer,  }\item[{vk\+::\+Buffer}]{\+\_\+dst\+Buffer,  }\item[{vk\+::\+Device\+Size}]{\+\_\+size }\end{DoxyParamCaption}) const}
+
+
+
+Copie les données d\textquotesingle{}un tampon source vers un tampon de destination. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+src\+Buffer} & Le tampon source à partir duquel copier les données. \\
+\hline
+{\em \+\_\+dst\+Buffer} & Le tampon de destination où copier les données. \\
+\hline
+{\em \+\_\+size} & La taille des données à copier.\\
+\hline
+\end{DoxyParams}
+Cette fonction utilise un tampon de commandes temporaire pour copier les données du tampon source vers le tampon de destination. Elle garantit que l\textquotesingle{}opération de copie se produit de manière synchrone, c\textquotesingle{}est-\/à-\/dire que le tampon de commandes temporaire est soumis à la file de commandes graphiques, attend que toutes les opérations en cours sur cette file soient terminées, puis est libéré.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+src\+Buffer} & Le tampon source à partir duquel copier les données. \\
+\hline
+{\em \+\_\+dst\+Buffer} & Le tampon de destination vers lequel copier les données. \\
+\hline
+{\em \+\_\+size} & La taille des données à copier, en octets. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & en cas d\textquotesingle{}échec de l\textquotesingle{}allocation ou de l\textquotesingle{}enregistrement des commandes. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classlve_1_1_lve_device_ada99e3ebd5a9f7b3df3840e97fa91f78}\label{classlve_1_1_lve_device_ada99e3ebd5a9f7b3df3840e97fa91f78} 
+\index{lve::LveDevice@{lve::LveDevice}!CopyBufferToImage@{CopyBufferToImage}}
+\index{CopyBufferToImage@{CopyBufferToImage}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{CopyBufferToImage()}{CopyBufferToImage()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Device\+::\+Copy\+Buffer\+To\+Image (\begin{DoxyParamCaption}\item[{vk\+::\+Buffer}]{\+\_\+buffer,  }\item[{vk\+::\+Image}]{\+\_\+image,  }\item[{uint32\+\_\+t}]{\+\_\+width,  }\item[{uint32\+\_\+t}]{\+\_\+height,  }\item[{uint32\+\_\+t}]{\+\_\+layer\+Count }\end{DoxyParamCaption}) const}
+
+
+
+Copie les données d\textquotesingle{}un tampon vers une image Vulkan. 
+
+Cette fonction copie les données d\textquotesingle{}un tampon Vulkan vers une image Vulkan en spécifiant la largeur, la hauteur et le nombre de couches de l\textquotesingle{}image.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+buffer} & Le tampon contenant les données à copier. \\
+\hline
+{\em \+\_\+image} & L\textquotesingle{}image Vulkan de destination. \\
+\hline
+{\em \+\_\+width} & La largeur de l\textquotesingle{}image. \\
+\hline
+{\em \+\_\+height} & La hauteur de l\textquotesingle{}image. \\
+\hline
+{\em \+\_\+layer\+Count} & Le nombre de couches de l\textquotesingle{}image.\\
+\hline
+\end{DoxyParams}
+Cette fonction utilise un tampon de commandes temporaire pour copier les données du tampon vers l\textquotesingle{}image Vulkan. Elle garantit que l\textquotesingle{}opération de copie se produit de manière synchrone, c\textquotesingle{}est-\/à-\/dire que le tampon de commandes temporaire est soumis à la file de commandes graphiques, attend que toutes les opérations en cours sur cette file soient terminées, puis est libéré.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+buffer} & Le tampon contenant les données à copier vers l\textquotesingle{}image. \\
+\hline
+{\em \+\_\+image} & L\textquotesingle{}image Vulkan de destination vers laquelle copier les données. \\
+\hline
+{\em \+\_\+width} & La largeur de l\textquotesingle{}image en pixels. \\
+\hline
+{\em \+\_\+height} & La hauteur de l\textquotesingle{}image en pixels. \\
+\hline
+{\em \+\_\+layer\+Count} & Le nombre de couches de l\textquotesingle{}image. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & en cas d\textquotesingle{}échec de l\textquotesingle{}allocation ou de l\textquotesingle{}enregistrement des commandes. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classlve_1_1_lve_device_a170e75725fcef0f1c461651a139bb8ce}\label{classlve_1_1_lve_device_a170e75725fcef0f1c461651a139bb8ce} 
+\index{lve::LveDevice@{lve::LveDevice}!CreateBuffer@{CreateBuffer}}
+\index{CreateBuffer@{CreateBuffer}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{CreateBuffer()}{CreateBuffer()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Device\+::\+Create\+Buffer (\begin{DoxyParamCaption}\item[{vk\+::\+Device\+Size}]{\+\_\+size,  }\item[{vk\+::\+Buffer\+Usage\+Flags}]{\+\_\+usage,  }\item[{vk\+::\+Memory\+Property\+Flags}]{\+\_\+properties,  }\item[{vk\+::\+Buffer \&}]{\+\_\+buffer,  }\item[{vk\+::\+Device\+Memory \&}]{\+\_\+buffer\+Memory }\end{DoxyParamCaption}) const}
+
+
+
+Crée un tampon Vulkan avec les paramètres spécifiés. 
+
+Crée un tampon Vulkan avec la taille, l\textquotesingle{}utilisation et les propriétés spécifiées.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+size} & La taille du tampon. \\
+\hline
+{\em \+\_\+usage} & Les indicateurs d\textquotesingle{}utilisation du tampon. \\
+\hline
+{\em \+\_\+properties} & Les propriétés de la mémoire du tampon. \\
+\hline
+{\em \+\_\+buffer} & Référence à l\textquotesingle{}objet tampon Vulkan créé. \\
+\hline
+{\em \+\_\+buffer\+Memory} & Référence à l\textquotesingle{}objet mémoire du tampon Vulkan créé.\\
+\hline
+\end{DoxyParams}
+Cette fonction crée un tampon Vulkan avec la taille, l\textquotesingle{}utilisation et les propriétés spécifiées, et associe la mémoire appropriée au tampon.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+size} & La taille du tampon en octets. \\
+\hline
+{\em \+\_\+usage} & Les indicateurs d\textquotesingle{}utilisation du tampon. \\
+\hline
+{\em \+\_\+properties} & Les propriétés de mémoire du tampon. \\
+\hline
+{\em \+\_\+buffer} & Une référence à l\textquotesingle{}objet tampon à créer. \\
+\hline
+{\em \+\_\+buffer\+Memory} & Une référence à la mémoire allouée pour le tampon. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & en cas d\textquotesingle{}échec de la création ou de l\textquotesingle{}allocation de mémoire pour le tampon. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classlve_1_1_lve_device_af0556bd5de6d7e04cd817ce000c64f1d}\label{classlve_1_1_lve_device_af0556bd5de6d7e04cd817ce000c64f1d} 
+\index{lve::LveDevice@{lve::LveDevice}!CreateImageWithInfo@{CreateImageWithInfo}}
+\index{CreateImageWithInfo@{CreateImageWithInfo}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{CreateImageWithInfo()}{CreateImageWithInfo()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Device\+::\+Create\+Image\+With\+Info (\begin{DoxyParamCaption}\item[{const vk\+::\+Image\+Create\+Info \&}]{\+\_\+image\+Info,  }\item[{vk\+::\+Memory\+Property\+Flags}]{\+\_\+properties,  }\item[{vk\+::\+Image \&}]{\+\_\+image,  }\item[{vk\+::\+Device\+Memory \&}]{\+\_\+image\+Memory }\end{DoxyParamCaption}) const}
+
+
+
+Crée une image Vulkan avec les informations fournies. 
+
+Crée une image Vulkan avec les informations spécifiées.
+
+Cette fonction crée une image Vulkan en utilisant les informations spécifiées dans la structure Vk\+Image\+Create\+Info.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+image\+Info} & Les informations de création de l\textquotesingle{}image. \\
+\hline
+{\em \+\_\+properties} & Les propriétés de la mémoire de l\textquotesingle{}image. \\
+\hline
+{\em \+\_\+image} & Référence à l\textquotesingle{}objet image Vulkan créé. \\
+\hline
+{\em \+\_\+image\+Memory} & Référence à l\textquotesingle{}objet mémoire de l\textquotesingle{}image Vulkan créé.\\
+\hline
+\end{DoxyParams}
+Cette fonction crée une image Vulkan en utilisant les informations fournies dans l\textquotesingle{}objet Vk\+Image\+Create\+Info. Elle alloue également la mémoire nécessaire pour cette image et associe cette mémoire à l\textquotesingle{}image créée.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+image\+Info} & Les informations nécessaires à la création de l\textquotesingle{}image. \\
+\hline
+{\em \+\_\+properties} & Les propriétés de la mémoire de l\textquotesingle{}image. \\
+\hline
+{\em \+\_\+image} & Référence où l\textquotesingle{}objet image créé sera stocké. \\
+\hline
+{\em \+\_\+image\+Memory} & Référence où la mémoire de l\textquotesingle{}image sera stockée. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & en cas d\textquotesingle{}échec de la création de l\textquotesingle{}image ou de l\textquotesingle{}allocation de mémoire. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classlve_1_1_lve_device_a11d82b4686e1e0ca2e3ca7143fd56865}\label{classlve_1_1_lve_device_a11d82b4686e1e0ca2e3ca7143fd56865} 
+\index{lve::LveDevice@{lve::LveDevice}!CreateInstance@{CreateInstance}}
+\index{CreateInstance@{CreateInstance}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{CreateInstance()}{CreateInstance()}}
+{\footnotesize\ttfamily vk\+::\+Instance lve\+::\+Lve\+Device\+::\+Create\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crée une instance Vulkan. 
+
+Crée une instance Vulkan pour l\textquotesingle{}application.
+
+Cette fonction initialise une instance Vulkan, qui représente la connexion entre l\textquotesingle{}application et l\textquotesingle{}API Vulkan.
+
+Cette fonction configure et crée une instance Vulkan, qui est la première étape dans l\textquotesingle{}utilisation de l\textquotesingle{}API Vulkan. Elle configure les informations d\textquotesingle{}application, les extensions requises, les couches de validation, et crée l\textquotesingle{}instance Vulkan correspondante.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & si la création de l\textquotesingle{}instance échoue ou si les couches de validation sont activées mais non disponibles. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classlve_1_1_lve_device_ab4755528cbaa93add122a7edbf464845}\label{classlve_1_1_lve_device_ab4755528cbaa93add122a7edbf464845} 
+\index{lve::LveDevice@{lve::LveDevice}!Device@{Device}}
+\index{Device@{Device}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{Device()}{Device()}}
+{\footnotesize\ttfamily vk\+::\+Device lve\+::\+Lve\+Device\+::\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Récupère l\textquotesingle{}objet de périphérique Vulkan. 
+
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}objet de périphérique Vulkan. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_device_a1e3f80b67ef6cbd66e48490e5396fd13}\label{classlve_1_1_lve_device_a1e3f80b67ef6cbd66e48490e5396fd13} 
+\index{lve::LveDevice@{lve::LveDevice}!EndSingleTimeCommands@{EndSingleTimeCommands}}
+\index{EndSingleTimeCommands@{EndSingleTimeCommands}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{EndSingleTimeCommands()}{EndSingleTimeCommands()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Device\+::\+End\+Single\+Time\+Commands (\begin{DoxyParamCaption}\item[{vk\+::\+Command\+Buffer}]{\+\_\+command\+Buffer }\end{DoxyParamCaption}) const}
+
+
+
+Termine une séquence de commandes Vulkan temporaires. 
+
+Termine une série de commandes Vulkan pour une utilisation unique.
+
+Cette fonction termine l\textquotesingle{}exécution d\textquotesingle{}une séquence de commandes Vulkan temporaires et libère les ressources associées.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+command\+Buffer} & Le tampon de commandes Vulkan à terminer.\\
+\hline
+\end{DoxyParams}
+Cette fonction termine l\textquotesingle{}enregistrement des commandes dans le tampon de commandes spécifié, soumet les commandes à la file de commandes graphiques pour exécution, attend la fin de l\textquotesingle{}exécution des commandes, puis libère le tampon de commandes.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+command\+Buffer} & Le tampon de commandes Vulkan à terminer et à soumettre. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & en cas d\textquotesingle{}échec de soumission des commandes ou d\textquotesingle{}attente de la fin de l\textquotesingle{}exécution. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classlve_1_1_lve_device_a84495cbcca8e67db53fc15d6ab5a6847}\label{classlve_1_1_lve_device_a84495cbcca8e67db53fc15d6ab5a6847} 
+\index{lve::LveDevice@{lve::LveDevice}!FindMemoryType@{FindMemoryType}}
+\index{FindMemoryType@{FindMemoryType}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{FindMemoryType()}{FindMemoryType()}}
+{\footnotesize\ttfamily uint32\+\_\+t lve\+::\+Lve\+Device\+::\+Find\+Memory\+Type (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{\+\_\+type\+Filter,  }\item[{vk\+::\+Memory\+Property\+Flags}]{\+\_\+properties }\end{DoxyParamCaption}) const}
+
+
+
+Trouve un type de mémoire approprié pour une utilisation spécifiée. 
+
+Recherche un type de mémoire adapté pour les allocations de mémoire graphique.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+type\+Filter} & Le type de filtre de mémoire. \\
+\hline
+{\em \+\_\+properties} & Les propriétés de la mémoire. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le type de mémoire approprié.
+\end{DoxyReturn}
+Cette fonction recherche un type de mémoire adapté pour les allocations de mémoire graphique, en tenant compte du filtre de type spécifié et des propriétés de mémoire requises.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+type\+Filter} & Le filtre de type de mémoire spécifié. \\
+\hline
+{\em \+\_\+properties} & Les propriétés de mémoire requises. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}index du type de mémoire adapté trouvé. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & si aucun type de mémoire adapté n\textquotesingle{}est trouvé. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classlve_1_1_lve_device_aa1b015567e250ee4f37aac78a940620a}\label{classlve_1_1_lve_device_aa1b015567e250ee4f37aac78a940620a} 
+\index{lve::LveDevice@{lve::LveDevice}!FindPhysicalQueueFamilies@{FindPhysicalQueueFamilies}}
+\index{FindPhysicalQueueFamilies@{FindPhysicalQueueFamilies}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{FindPhysicalQueueFamilies()}{FindPhysicalQueueFamilies()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlve_1_1_queue_family_indices}{Queue\+Family\+Indices}} lve\+::\+Lve\+Device\+::\+Find\+Physical\+Queue\+Families (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Trouve les familles de files de commandes physiques disponibles sur le périphérique. 
+
+\begin{DoxyReturn}{Renvoie}
+Les familles de files de commandes physiques disponibles sur le périphérique. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_device_a20a393668b4b4c5aa202ea41168dc16e}\label{classlve_1_1_lve_device_a20a393668b4b4c5aa202ea41168dc16e} 
+\index{lve::LveDevice@{lve::LveDevice}!FindSupportedFormat@{FindSupportedFormat}}
+\index{FindSupportedFormat@{FindSupportedFormat}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{FindSupportedFormat()}{FindSupportedFormat()}}
+{\footnotesize\ttfamily vk\+::\+Format lve\+::\+Lve\+Device\+::\+Find\+Supported\+Format (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ vk\+::\+Format $>$ \&}]{\+\_\+candidates,  }\item[{vk\+::\+Image\+Tiling}]{\+\_\+tiling,  }\item[{vk\+::\+Format\+Feature\+Flags}]{\+\_\+features }\end{DoxyParamCaption}) const}
+
+
+
+Trouve un format d\textquotesingle{}image supporté par le périphérique. 
+
+Recherche un format d\textquotesingle{}image supporté parmi une liste de formats candidats.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+candidates} & Les formats d\textquotesingle{}image candidats. \\
+\hline
+{\em \+\_\+tiling} & L\textquotesingle{}inclinaison de l\textquotesingle{}image. \\
+\hline
+{\em \+\_\+features} & Les fonctionnalités du format de l\textquotesingle{}image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le format d\textquotesingle{}image supporté par le périphérique.
+\end{DoxyReturn}
+Cette fonction recherche un format d\textquotesingle{}image supporté parmi une liste de formats candidats, en tenant compte du mode de tiling spécifié (linéaire ou optimal) et des fonctionnalités requises.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+candidates} & La liste des formats candidats à vérifier. \\
+\hline
+{\em \+\_\+tiling} & Le mode de tiling de l\textquotesingle{}image (VK\+\_\+\+IMAGE\+\_\+\+TILING\+\_\+\+LINEAR ou VK\+\_\+\+IMAGE\+\_\+\+TILING\+\_\+\+OPTIMAL). \\
+\hline
+{\em \+\_\+features} & Les fonctionnalités requises pour le format. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le format d\textquotesingle{}image supporté trouvé. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & si aucun format d\textquotesingle{}image supporté n\textquotesingle{}est trouvé. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classlve_1_1_lve_device_a34aae465d220806aacc3322242696d1d}\label{classlve_1_1_lve_device_a34aae465d220806aacc3322242696d1d} 
+\index{lve::LveDevice@{lve::LveDevice}!GetCommandPool@{GetCommandPool}}
+\index{GetCommandPool@{GetCommandPool}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{GetCommandPool()}{GetCommandPool()}}
+{\footnotesize\ttfamily vk\+::\+Command\+Pool lve\+::\+Lve\+Device\+::\+Get\+Command\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Récupère le pool de commandes Vulkan associé au périphérique. 
+
+\begin{DoxyReturn}{Renvoie}
+Le pool de commandes Vulkan associé au périphérique. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_device_a705e5ae87f7a4885b8f4a115694076a5}\label{classlve_1_1_lve_device_a705e5ae87f7a4885b8f4a115694076a5} 
+\index{lve::LveDevice@{lve::LveDevice}!GetSwapChainSupport@{GetSwapChainSupport}}
+\index{GetSwapChainSupport@{GetSwapChainSupport}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{GetSwapChainSupport()}{GetSwapChainSupport()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlve_1_1_swap_chain_support_details}{Swap\+Chain\+Support\+Details}} lve\+::\+Lve\+Device\+::\+Get\+Swap\+Chain\+Support (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Récupère les détails de prise en charge de la chaîne de balisage pour le périphérique. 
+
+\begin{DoxyReturn}{Renvoie}
+Les détails de prise en charge de la chaîne de balisage pour le périphérique. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_device_a3db7cac38a972c8794d8cb209a784231}\label{classlve_1_1_lve_device_a3db7cac38a972c8794d8cb209a784231} 
+\index{lve::LveDevice@{lve::LveDevice}!GraphicsQueue@{GraphicsQueue}}
+\index{GraphicsQueue@{GraphicsQueue}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{GraphicsQueue()}{GraphicsQueue()}}
+{\footnotesize\ttfamily vk\+::\+Queue lve\+::\+Lve\+Device\+::\+Graphics\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Récupère la file de commandes graphiques du périphérique. 
+
+\begin{DoxyReturn}{Renvoie}
+La file de commandes graphiques du périphérique. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_device_aab611df790f3cc5fc5719d2d90578ecf}\label{classlve_1_1_lve_device_aab611df790f3cc5fc5719d2d90578ecf} 
+\index{lve::LveDevice@{lve::LveDevice}!operator=@{operator=}}
+\index{operator=@{operator=}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \& lve\+::\+Lve\+Device\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Opérateur d\textquotesingle{}affectation de copie supprimé. 
+
+Empêche la copie des membres d\textquotesingle{}une instance de \doxylink{classlve_1_1_lve_device}{Lve\+Device} vers une autre instance existante. \Hypertarget{classlve_1_1_lve_device_a0a7c2ce480c9381910528bb05ef68f70}\label{classlve_1_1_lve_device_a0a7c2ce480c9381910528bb05ef68f70} 
+\index{lve::LveDevice@{lve::LveDevice}!operator=@{operator=}}
+\index{operator=@{operator=}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \& lve\+::\+Lve\+Device\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Opérateur d\textquotesingle{}affectation de déplacement supprimé. 
+
+Empêche le déplacement des membres d\textquotesingle{}une instance de \doxylink{classlve_1_1_lve_device}{Lve\+Device} vers une autre instance existante. \Hypertarget{classlve_1_1_lve_device_a880570c94a1582853d2301af3c88e104}\label{classlve_1_1_lve_device_a880570c94a1582853d2301af3c88e104} 
+\index{lve::LveDevice@{lve::LveDevice}!PresentQueue@{PresentQueue}}
+\index{PresentQueue@{PresentQueue}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{PresentQueue()}{PresentQueue()}}
+{\footnotesize\ttfamily vk\+::\+Queue lve\+::\+Lve\+Device\+::\+Present\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Récupère la file de commandes de présentation du périphérique. 
+
+\begin{DoxyReturn}{Renvoie}
+La file de commandes de présentation du périphérique. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_device_a5c8aa1272efa148228a786f43eee2605}\label{classlve_1_1_lve_device_a5c8aa1272efa148228a786f43eee2605} 
+\index{lve::LveDevice@{lve::LveDevice}!SetupDebugMessenger@{SetupDebugMessenger}}
+\index{SetupDebugMessenger@{SetupDebugMessenger}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{SetupDebugMessenger()}{SetupDebugMessenger()}}
+{\footnotesize\ttfamily vk\+::\+Debug\+Utils\+Messenger\+EXT lve\+::\+Lve\+Device\+::\+Setup\+Debug\+Messenger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Configure le gestionnaire de débogage. 
+
+Configure le gestionnaire de débogage Vulkan.
+
+Cette fonction configure un gestionnaire de débogage Vulkan pour recevoir les messages de validation et de débogage de l\textquotesingle{}API Vulkan.
+
+Cette fonction configure le gestionnaire de débogage Vulkan si les couches de validation sont activées.
+
+Elle utilise la fonction populate\+Debug\+Messenger\+Create\+Info() pour remplir les informations nécessaires pour la création du gestionnaire de débogage.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & si la configuration du gestionnaire de débogage échoue. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classlve_1_1_lve_device_a4e39fcb2417fc88244a2bd7b47fda216}\label{classlve_1_1_lve_device_a4e39fcb2417fc88244a2bd7b47fda216} 
+\index{lve::LveDevice@{lve::LveDevice}!Surface@{Surface}}
+\index{Surface@{Surface}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{Surface()}{Surface()}}
+{\footnotesize\ttfamily vk\+::\+Surface\+KHR lve\+::\+Lve\+Device\+::\+Surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Récupère la surface Vulkan associée au périphérique. 
+
+\begin{DoxyReturn}{Renvoie}
+La surface Vulkan associée au périphérique. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentation des donnÃ©es membres}
+\Hypertarget{classlve_1_1_lve_device_a1ee7068dc3c270e771cf87b14da36bff}\label{classlve_1_1_lve_device_a1ee7068dc3c270e771cf87b14da36bff} 
+\index{lve::LveDevice@{lve::LveDevice}!properties@{properties}}
+\index{properties@{properties}!lve::LveDevice@{lve::LveDevice}}
+\doxysubsubsection{\texorpdfstring{properties}{properties}}
+{\footnotesize\ttfamily vk\+::\+Physical\+Device\+Properties lve\+::\+Lve\+Device\+::properties}
+
+
+
+Propriétés du périphérique physique Vulkan associé. 
+
+Cette structure contient les propriétés du périphérique physique Vulkan associé. 
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Lve\+Engine/lve\+\_\+device.\+h\item 
+sources/\+Lve\+Engine/lve\+\_\+device.\+cpp\end{DoxyCompactItemize}

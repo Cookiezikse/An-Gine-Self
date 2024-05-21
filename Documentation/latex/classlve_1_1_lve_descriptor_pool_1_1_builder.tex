@@ -1,0 +1,121 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Lve\+Descriptor\+Pool\+::Builder}
+\hypertarget{classlve_1_1_lve_descriptor_pool_1_1_builder}{}\label{classlve_1_1_lve_descriptor_pool_1_1_builder}\index{lve::LveDescriptorPool::Builder@{lve::LveDescriptorPool::Builder}}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder_a1e387fb18d76be21989d4d4d11c27fb1}{Builder}} (\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&\+\_\+lve\+Device)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classlve_1_1_lve_descriptor_pool_1_1_builder}{Builder}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder}{Builder}} \& \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder_ab0b7634459ce414dcd86d1a6c3927d9f}{Add\+Pool\+Size}} (vk\+::\+Descriptor\+Type \+\_\+descriptor\+Type, uint32\+\_\+t \+\_\+count)
+\begin{DoxyCompactList}\small\item\em Ajoute une taille de pool de descripteurs au builder. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder}{Builder}} \& \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder_a383c79857f57f53f811851983986adb6}{Set\+Pool\+Flags}} (vk\+::\+Descriptor\+Pool\+Create\+Flags \+\_\+flags)
+\begin{DoxyCompactList}\small\item\em Définit les indicateurs de création du pool de descripteurs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder}{Builder}} \& \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder_a690d6728d7bd24960884bcdf10e095b8}{Set\+Max\+Sets}} (uint32\+\_\+t \+\_\+count)
+\begin{DoxyCompactList}\small\item\em Définit le nombre maximal d\textquotesingle{}ensembles de descripteurs pouvant être alloués à partir du pool. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool}{Lve\+Descriptor\+Pool}} $>$ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder_a4b2eef819c6bb219f9979b9b7def832b}{Build}} () const
+\begin{DoxyCompactList}\small\item\em Construit et retourne un objet \doxylink{classlve_1_1_lve_descriptor_pool}{Lve\+Descriptor\+Pool}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classlve_1_1_lve_descriptor_pool_1_1_builder_a1e387fb18d76be21989d4d4d11c27fb1}\label{classlve_1_1_lve_descriptor_pool_1_1_builder_a1e387fb18d76be21989d4d4d11c27fb1} 
+\index{lve::LveDescriptorPool::Builder@{lve::LveDescriptorPool::Builder}!Builder@{Builder}}
+\index{Builder@{Builder}!lve::LveDescriptorPool::Builder@{lve::LveDescriptorPool::Builder}}
+\doxysubsubsection{\texorpdfstring{Builder()}{Builder()}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Descriptor\+Pool\+::\+Builder\+::\+Builder (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&}]{\+\_\+lve\+Device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructeur de la classe \doxylink{classlve_1_1_lve_descriptor_pool_1_1_builder}{Builder}. 
+
+Initialise un nouvel objet \doxylink{classlve_1_1_lve_descriptor_pool_1_1_builder}{Builder} avec une référence à l\textquotesingle{}objet \doxylink{classlve_1_1_lve_device}{Lve\+Device} spécifié.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+lve\+Device} & Référence à l\textquotesingle{}objet \doxylink{classlve_1_1_lve_device}{Lve\+Device} associé à ce builder. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_lve_descriptor_pool_1_1_builder_ab0b7634459ce414dcd86d1a6c3927d9f}\label{classlve_1_1_lve_descriptor_pool_1_1_builder_ab0b7634459ce414dcd86d1a6c3927d9f} 
+\index{lve::LveDescriptorPool::Builder@{lve::LveDescriptorPool::Builder}!AddPoolSize@{AddPoolSize}}
+\index{AddPoolSize@{AddPoolSize}!lve::LveDescriptorPool::Builder@{lve::LveDescriptorPool::Builder}}
+\doxysubsubsection{\texorpdfstring{AddPoolSize()}{AddPoolSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder}{Lve\+Descriptor\+Pool\+::\+Builder}} \& lve\+::\+Lve\+Descriptor\+Pool\+::\+Builder\+::\+Add\+Pool\+Size (\begin{DoxyParamCaption}\item[{vk\+::\+Descriptor\+Type}]{\+\_\+descriptor\+Type,  }\item[{uint32\+\_\+t}]{\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Ajoute une taille de pool de descripteurs au builder. 
+
+Cette fonction ajoute une taille de pool de descripteurs au builder. Elle spécifie le type de descripteur et le nombre de descripteurs à allouer dans le pool.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+descriptor\+Type} & Le type de descripteur à ajouter. \\
+\hline
+{\em \+\_\+count} & Le nombre de descripteurs à allouer dans le pool pour le type spécifié. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Une référence à cet objet \doxylink{classlve_1_1_lve_descriptor_pool_1_1_builder}{Builder} pour permettre les appels de méthode en chaîne. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_descriptor_pool_1_1_builder_a4b2eef819c6bb219f9979b9b7def832b}\label{classlve_1_1_lve_descriptor_pool_1_1_builder_a4b2eef819c6bb219f9979b9b7def832b} 
+\index{lve::LveDescriptorPool::Builder@{lve::LveDescriptorPool::Builder}!Build@{Build}}
+\index{Build@{Build}!lve::LveDescriptorPool::Builder@{lve::LveDescriptorPool::Builder}}
+\doxysubsubsection{\texorpdfstring{Build()}{Build()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool}{Lve\+Descriptor\+Pool}} $>$ lve\+::\+Lve\+Descriptor\+Pool\+::\+Builder\+::\+Build (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Construit et retourne un objet \doxylink{classlve_1_1_lve_descriptor_pool}{Lve\+Descriptor\+Pool}. 
+
+Cette fonction construit et retourne un objet \doxylink{classlve_1_1_lve_descriptor_pool}{Lve\+Descriptor\+Pool} avec les configurations spécifiées précédemment.
+
+\begin{DoxyReturn}{Renvoie}
+Un unique\+\_\+ptr pointant vers l\textquotesingle{}objet \doxylink{classlve_1_1_lve_descriptor_pool}{Lve\+Descriptor\+Pool} nouvellement créé. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_descriptor_pool_1_1_builder_a690d6728d7bd24960884bcdf10e095b8}\label{classlve_1_1_lve_descriptor_pool_1_1_builder_a690d6728d7bd24960884bcdf10e095b8} 
+\index{lve::LveDescriptorPool::Builder@{lve::LveDescriptorPool::Builder}!SetMaxSets@{SetMaxSets}}
+\index{SetMaxSets@{SetMaxSets}!lve::LveDescriptorPool::Builder@{lve::LveDescriptorPool::Builder}}
+\doxysubsubsection{\texorpdfstring{SetMaxSets()}{SetMaxSets()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder}{Lve\+Descriptor\+Pool\+::\+Builder}} \& lve\+::\+Lve\+Descriptor\+Pool\+::\+Builder\+::\+Set\+Max\+Sets (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Définit le nombre maximal d\textquotesingle{}ensembles de descripteurs pouvant être alloués à partir du pool. 
+
+Cette fonction définit le nombre maximal d\textquotesingle{}ensembles de descripteurs pouvant être alloués à partir du pool. Elle spécifie le nombre maximal d\textquotesingle{}ensembles de descripteurs qui peuvent être alloués à partir du pool de descripteurs.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+count} & Le nombre maximal d\textquotesingle{}ensembles de descripteurs pouvant être alloués à partir du pool. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Une référence à cet objet \doxylink{classlve_1_1_lve_descriptor_pool_1_1_builder}{Builder} pour permettre les appels de méthode en chaîne. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_descriptor_pool_1_1_builder_a383c79857f57f53f811851983986adb6}\label{classlve_1_1_lve_descriptor_pool_1_1_builder_a383c79857f57f53f811851983986adb6} 
+\index{lve::LveDescriptorPool::Builder@{lve::LveDescriptorPool::Builder}!SetPoolFlags@{SetPoolFlags}}
+\index{SetPoolFlags@{SetPoolFlags}!lve::LveDescriptorPool::Builder@{lve::LveDescriptorPool::Builder}}
+\doxysubsubsection{\texorpdfstring{SetPoolFlags()}{SetPoolFlags()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder}{Lve\+Descriptor\+Pool\+::\+Builder}} \& lve\+::\+Lve\+Descriptor\+Pool\+::\+Builder\+::\+Set\+Pool\+Flags (\begin{DoxyParamCaption}\item[{vk\+::\+Descriptor\+Pool\+Create\+Flags}]{\+\_\+flags }\end{DoxyParamCaption})}
+
+
+
+Définit les indicateurs de création du pool de descripteurs. 
+
+Cette fonction définit les indicateurs de création du pool de descripteurs. Elle spécifie les options de création pour le pool de descripteurs.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+flags} & Les indicateurs de création du pool de descripteurs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Une référence à cet objet \doxylink{classlve_1_1_lve_descriptor_pool_1_1_builder}{Builder} pour permettre les appels de méthode en chaîne. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Lve\+Engine/lve\+\_\+descriptors.\+h\item 
+sources/\+Lve\+Engine/lve\+\_\+descriptors.\+cpp\end{DoxyCompactItemize}

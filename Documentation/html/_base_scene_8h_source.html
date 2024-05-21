@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/Scene/BaseScene.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_5c358e70f649ae1aeee986ff0b9610e2.html">Scene</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">BaseScene.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;GameObject/GameObject.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;LveEngine/lve_window.h&quot;</span></div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_base_scene.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="class_base_scene.html">BaseScene</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_base_scene.html#a081fcef7e1359202d221dc545cef0989">   24</a></span>        <span class="keyword">explicit</span> <a class="code hl_function" href="class_base_scene.html#a081fcef7e1359202d221dc545cef0989">BaseScene</a>(<span class="keyword">const</span> std::string&amp; _fileName) : <a class="code hl_variable" href="class_base_scene.html#a7a93c99d6af8a2a2a744bdaa15cb611b">name</a>(_fileName){}</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_class" href="class_base_scene.html">~BaseScene</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_function" href="class_base_scene.html#a081fcef7e1359202d221dc545cef0989">BaseScene</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_base_scene.html">BaseScene</a>&amp;)            = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <a class="code hl_class" href="class_base_scene.html">BaseScene</a>&amp; operator=(<span class="keyword">const</span> <a class="code hl_class" href="class_base_scene.html">BaseScene</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#pragma region Event</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#a18dd7016e2e7c4018626a55f9f1b282b">Init</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#a0bf7efbff5d56c717dfb44827767268c">Start</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#aaac18134f2437eaa0950ab757f27831f">FixedUpdate</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#a17042b8ea83cddfed783ce500047e6bb">Update</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> UpdateEditor();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#aa4361dab94a6c4422820a2b22e5afdd8">PreRender</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#ab12655e3f795bcf612235a168081ee8f">Render</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#a3389f47d502659067e53efeb5ea1fa1b">RenderGui</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#ab6f71ce0d177008c296e2045bbeea047">PostRender</a>();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#a50ffb057ce2b14e8f2c4a90c8ff37a0e">Release</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#a29a0115af911638c4083e529a1192419">Finalize</a>();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#pragma region Getter</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_function" href="class_base_scene.html#aefdae9ab66f5644144d946e4a858d226">GetGameObjectById</a>(<span class="keyword">const</span> GameObject::id_t&amp; _gameObjectId) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        std::vector&lt;GameObject*&gt; <a class="code hl_function" href="class_base_scene.html#a2f8720a8078109df3df95741bff71ab9">FindGameObjectsByName</a>(<span class="keyword">const</span> std::string&amp; _name) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        std::string <a class="code hl_function" href="class_base_scene.html#ad1c48681ba910c2c0ba72610e74bb089">GetName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        std::string <a class="code hl_function" href="class_base_scene.html#a8be86895e74df0a4cd3b0eca7feee84b">GetDefaultRelativeFilePath</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        std::string <a class="code hl_function" href="class_base_scene.html#ab9316394e3ed0d9e6bda6154911d4edf">GetFileName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        std::vector&lt;GameObject*&gt;&amp; <a class="code hl_function" href="class_base_scene.html#af2b7648d5c65e0643c0a69014147b7f8">GetRootObjects</a>();</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="foldopen" id="foldopen00137" data-start="{" data-end="}">
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="class_base_scene.html#a347ca4aa83a124be19b5e56f89cee7a7">  137</a></span>        std::vector&lt;GameObject*&gt; <a class="code hl_function" href="class_base_scene.html#a347ca4aa83a124be19b5e56f89cee7a7">GetAllGameObject</a>() {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            std::vector&lt;GameObject*&gt; allGameObject;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; gameObject : <a class="code hl_variable" href="class_base_scene.html#a462479820c153a0b230bb31246aec922">rootObjects</a>) {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                <a class="code hl_function" href="class_base_scene.html#abbd582bf4a24bf257ae60855b21911a7">AddGameObjectInVector</a>(allGameObject, gameObject);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            <span class="keywordflow">return</span> allGameObject;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        }</div>
+</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">#pragma region Setter</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_base_scene.html#acf73ef32322ffa846db37f4e07a220eb">SetName</a>(<span class="keyword">const</span> std::string&amp; _name);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_base_scene.html#afbe51e76d09ce38b5e727a1d0a688ac7">SetFileName</a>(<span class="keyword">const</span> std::string&amp; _fileName, <span class="keywordtype">bool</span> _bDeletePreviousFiles) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="class_base_scene.html#af7fc9655341c18fd9c73202975c72dd5">  172</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#af7fc9655341c18fd9c73202975c72dd5">SetRootObjectIndex</a>(<a class="code hl_class" href="class_game_object.html">GameObject</a>* _rootObject, uint32_t _newIndex) {}</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="preprocessor">#pragma region Create</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_function" href="class_base_scene.html#afbb2fd581e08cec8b730fa11bdf52a5c">CreateGameObject</a>();</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="preprocessor">#pragma region Destroy</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="keywordtype">void</span>                     <a class="code hl_function" href="class_base_scene.html#a4184a719d7aaf086ab64da0cac144879">DestroyGameObject</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_game_object.html">GameObject</a>* _gameObject);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_base_scene.html#a9ddd1f47f2a846ece62f6532b474c1ea">IsInitialized</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_base_scene.html#ad8015fb0b689036e048fefe4d09d1160">FileExists</a>(<span class="keyword">const</span> std::string&amp; _filePath);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_base_scene.html#ade7aa81f2f79609a6408cb57fa94033c">IsUsingSaveFile</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_base_scene.html#ac65255ae7f5bfcec1df1d537deb72468">DeleteSaveFiles</a>();</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="keywordtype">bool</span>        <a class="code hl_function" href="class_base_scene.html#a58f83535913ba87fc8b3ea09c96609a9">Contains</a>(<span class="keyword">const</span> std::vector&lt;GameObject::id_t&gt;&amp; _container, <span class="keyword">const</span> GameObject::id_t&amp; _value);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_function" href="class_base_scene.html#a92798a6a991d22494cfd8674507478dc">AddRootObject</a>(<a class="code hl_class" href="class_game_object.html">GameObject</a>* _gameObject);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="class_base_scene.html#a920ab444e16b8f0483a3c12bb1cb593c">  250</a></span>        <a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_function" href="class_base_scene.html#a920ab444e16b8f0483a3c12bb1cb593c">AddRootObjectImmediate</a>(<a class="code hl_class" href="class_game_object.html">GameObject</a>* _gameObject){}</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="class_base_scene.html#abae8826cbe2331ea4b3cf6ce274c408d">  259</a></span>        <a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_function" href="class_base_scene.html#abae8826cbe2331ea4b3cf6ce274c408d">AddChildObject</a>(<a class="code hl_class" href="class_game_object.html">GameObject</a>* _parent, <a class="code hl_class" href="class_game_object.html">GameObject</a>* _child) {}</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno"><a class="line" href="class_base_scene.html#a1980dbec06368934f797fec2c534b843">  270</a></span>        <a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_function" href="class_base_scene.html#a1980dbec06368934f797fec2c534b843">AddChildObjectImmediate</a>(<a class="code hl_class" href="class_game_object.html">GameObject</a>* _parent, <a class="code hl_class" href="class_game_object.html">GameObject</a>* _child) {}</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno"><a class="line" href="class_base_scene.html#aa8a9e9afcb7af5de48bc0e6e62a48ae4">  281</a></span>        <a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_function" href="class_base_scene.html#aa8a9e9afcb7af5de48bc0e6e62a48ae4">AddSiblingObjectImmediate</a>(<a class="code hl_class" href="class_game_object.html">GameObject</a>* _gameObject, <a class="code hl_class" href="class_game_object.html">GameObject</a>* _newSibling) {}</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="preprocessor">#pragma region Remove</span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#a7bc84a73f659eafc9cb0bcd4b20a2e5a">RemoveAllObjects</a>();</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno"><a class="line" href="class_base_scene.html#a4aef515aa3a1cd3d3536d84ef9d18d16">  293</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#a4aef515aa3a1cd3d3536d84ef9d18d16">RemoveAllObjectsImmediate</a>(){}</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno"><a class="line" href="class_base_scene.html#a9833201f5fc2608edb21619a4b1db1b6">  298</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#a9833201f5fc2608edb21619a4b1db1b6">RemoveAllEditorObjectsImmediate</a>(){}</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#aa08ceda4403231cf6090c56d0df5ee68">RemoveObject</a>(<span class="keyword">const</span> GameObject::id_t&amp; _gameObjectId, <span class="keywordtype">bool</span> _bDestroy);</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#aa08ceda4403231cf6090c56d0df5ee68">RemoveObject</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_game_object.html">GameObject</a>* _gameObject, <span class="keywordtype">bool</span> _bDestroy);</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        <span class="comment">//void RemoveObjectImmediate(const GameObject::id_t&amp; _gameObjectID, bool _bDestroy);</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        <span class="comment">//void RemoveObjectImmediate(GameObject* _gameObject, bool _bDestroy);</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#aab5197be3ab10416d80796c63b12f89d">RemoveObjects</a>(<span class="keyword">const</span> std::vector&lt;GameObject::id_t&gt;&amp; _gameObjects, <span class="keywordtype">bool</span> _bDestroy);</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#aab5197be3ab10416d80796c63b12f89d">RemoveObjects</a>(<span class="keyword">const</span> std::vector&lt;GameObject*&gt;&amp; _gameObjects, <span class="keywordtype">bool</span> _bDestroy);</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno"><a class="line" href="class_base_scene.html#aad43896fe03af531cbc8d0c45c564cb2">  341</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#aad43896fe03af531cbc8d0c45c564cb2">RemoveObjectsImmediate</a>(<span class="keyword">const</span> std::vector&lt;GameObject::id_t&gt;&amp; _gameObjects, <span class="keywordtype">bool</span> _bDestroy){}</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno"><a class="line" href="class_base_scene.html#a7a7b366b6d926a1c853782bb9616ba9a">  349</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#a7a7b366b6d926a1c853782bb9616ba9a">RemoveObjectsImmediate</a>(<span class="keyword">const</span> std::vector&lt;GameObject*&gt;&amp; _gameObjects, <span class="keywordtype">bool</span> _bDestroy){}</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno"><a class="line" href="class_base_scene.html#a50ed32fa47d91d177f8d09fb0eddfe67">  359</a></span>        GameObject::id_t <a class="code hl_function" href="class_base_scene.html#a50ed32fa47d91d177f8d09fb0eddfe67">FirstObjectWithTag</a>(<span class="keyword">const</span> std::string&amp; _tag){}</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#ac4c053b464819b8ecef4fbc0e4b625b0">TestLoadGameObjects</a>();</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
+<div class="foldopen" id="foldopen00374" data-start="{" data-end="}">
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno"><a class="line" href="class_base_scene.html#abbd582bf4a24bf257ae60855b21911a7">  374</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_base_scene.html#abbd582bf4a24bf257ae60855b21911a7">AddGameObjectInVector</a>(std::vector&lt;GameObject*&gt;&amp; _gameObjects, <a class="code hl_class" href="class_game_object.html">GameObject</a>* _gameObject) {</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>            _gameObjects.push_back(_gameObject);</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; gameObject : _gameObject-&gt;<a class="code hl_function" href="class_game_object.html#acc9c5c271db831c5b713c5b104f270d9">GetChildren</a>()) {</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                <a class="code hl_function" href="class_base_scene.html#abbd582bf4a24bf257ae60855b21911a7">AddGameObjectInVector</a>(_gameObjects, gameObject);</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>            }</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>        }</div>
+</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span> </div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        <a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_function" href="class_base_scene.html#a54110dc3a0e4d0ca08e9a08b31ad3548">CreateCubeGameObject</a>(<span class="keywordtype">int</span> _type);</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span> </div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>        <a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_function" href="class_base_scene.html#af0f7e4035cde76688c4eaf39a08e609a">CreateLightGameObject</a>();</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span> </div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>        <a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_function" href="class_base_scene.html#a77233636020ef22fc964961af22c96ba">CreatePlaneGameObject</a>();</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span> </div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>        <a class="code hl_class" href="class_game_object.html">GameObject</a>* CreateVaseGameObject(<span class="keywordtype">int</span> _type);</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span> </div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno"><a class="line" href="class_base_scene.html#a7a93c99d6af8a2a2a744bdaa15cb611b">  405</a></span>        std::string <a class="code hl_variable" href="class_base_scene.html#a7a93c99d6af8a2a2a744bdaa15cb611b">name</a>; </div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno"><a class="line" href="class_base_scene.html#a9fa392d05125cc88b75de264f0e59d07">  406</a></span>        std::string <a class="code hl_variable" href="class_base_scene.html#a9fa392d05125cc88b75de264f0e59d07">fileName</a>; </div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno"><a class="line" href="class_base_scene.html#acb4914ea048763a6dd8d6ef573e53451">  408</a></span>        std::vector&lt;GameObject::id_t&gt; <a class="code hl_variable" href="class_base_scene.html#acb4914ea048763a6dd8d6ef573e53451">pendingDestroyObjects</a>; </div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno"><a class="line" href="class_base_scene.html#afa27359b9bc27ee57b3512d17ca7d43f">  409</a></span>        std::vector&lt;GameObject*&gt; <a class="code hl_variable" href="class_base_scene.html#afa27359b9bc27ee57b3512d17ca7d43f">pendingAddObjects</a>; </div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno"><a class="line" href="class_base_scene.html#a462479820c153a0b230bb31246aec922">  410</a></span>        std::vector&lt;GameObject*&gt; <a class="code hl_variable" href="class_base_scene.html#a462479820c153a0b230bb31246aec922">rootObjects</a>; </div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno"><a class="line" href="class_base_scene.html#a89d1ed36b3076d31cfa035ca03db914b">  411</a></span>        std::vector&lt;GameObject::id_t&gt; <a class="code hl_variable" href="class_base_scene.html#a89d1ed36b3076d31cfa035ca03db914b">pendingRemoveObjects</a>; </div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno"><a class="line" href="class_base_scene.html#a6d909301e434bfc5dde9f05b1d71bcb7">  413</a></span>        <span class="keyword">const</span> GameObject::id_t <a class="code hl_variable" href="class_base_scene.html#a6d909301e434bfc5dde9f05b1d71bcb7">invalidGameObjectId</a> = {}; </div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno"><a class="line" href="class_base_scene.html#ac7dcc4eca603fac2b28433411d065d8b">  415</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_base_scene.html#ac7dcc4eca603fac2b28433411d065d8b">bInitialized</a> = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno"><a class="line" href="class_base_scene.html#a9c9accdbd65b2c06798acf110fb33a89">  416</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_base_scene.html#a9c9accdbd65b2c06798acf110fb33a89">bLoaded</a> = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>};</div>
+</div>
+<div class="ttc" id="aclass_base_scene_html"><div class="ttname"><a href="class_base_scene.html">BaseScene</a></div><div class="ttdoc">Interface de base pour les scènes du jeu.</div><div class="ttdef"><b>Definition</b> BaseScene.h:15</div></div>
+<div class="ttc" id="aclass_base_scene_html_a081fcef7e1359202d221dc545cef0989"><div class="ttname"><a href="class_base_scene.html#a081fcef7e1359202d221dc545cef0989">BaseScene::BaseScene</a></div><div class="ttdeci">BaseScene(const std::string &amp;_fileName)</div><div class="ttdoc">Constructeur explicite de la classe BaseScene.</div><div class="ttdef"><b>Definition</b> BaseScene.h:24</div></div>
+<div class="ttc" id="aclass_base_scene_html_a0bf7efbff5d56c717dfb44827767268c"><div class="ttname"><a href="class_base_scene.html#a0bf7efbff5d56c717dfb44827767268c">BaseScene::Start</a></div><div class="ttdeci">virtual void Start()</div><div class="ttdoc">D�marre le module.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:204</div></div>
+<div class="ttc" id="aclass_base_scene_html_a17042b8ea83cddfed783ce500047e6bb"><div class="ttname"><a href="class_base_scene.html#a17042b8ea83cddfed783ce500047e6bb">BaseScene::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdoc">Met � jour le module.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:213</div></div>
+<div class="ttc" id="aclass_base_scene_html_a18dd7016e2e7c4018626a55f9f1b282b"><div class="ttname"><a href="class_base_scene.html#a18dd7016e2e7c4018626a55f9f1b282b">BaseScene::Init</a></div><div class="ttdeci">virtual void Init()</div><div class="ttdoc">Initialise le module.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:200</div></div>
+<div class="ttc" id="aclass_base_scene_html_a1980dbec06368934f797fec2c534b843"><div class="ttname"><a href="class_base_scene.html#a1980dbec06368934f797fec2c534b843">BaseScene::AddChildObjectImmediate</a></div><div class="ttdeci">GameObject * AddChildObjectImmediate(GameObject *_parent, GameObject *_child)</div><div class="ttdoc">Ajoute immédiatement un objet enfant à un parent donné dans la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.h:270</div></div>
+<div class="ttc" id="aclass_base_scene_html_a29a0115af911638c4083e529a1192419"><div class="ttname"><a href="class_base_scene.html#a29a0115af911638c4083e529a1192419">BaseScene::Finalize</a></div><div class="ttdeci">virtual void Finalize()</div><div class="ttdoc">Finalise le module.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:265</div></div>
+<div class="ttc" id="aclass_base_scene_html_a2f8720a8078109df3df95741bff71ab9"><div class="ttname"><a href="class_base_scene.html#a2f8720a8078109df3df95741bff71ab9">BaseScene::FindGameObjectsByName</a></div><div class="ttdeci">std::vector&lt; GameObject * &gt; FindGameObjectsByName(const std::string &amp;_name) const</div><div class="ttdoc">Recherche et retourne tous les objets GameObject portant un nom spécifique.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:189</div></div>
+<div class="ttc" id="aclass_base_scene_html_a3389f47d502659067e53efeb5ea1fa1b"><div class="ttname"><a href="class_base_scene.html#a3389f47d502659067e53efeb5ea1fa1b">BaseScene::RenderGui</a></div><div class="ttdeci">virtual void RenderGui()</div><div class="ttdoc">Rendu de l'interface graphique du module.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:253</div></div>
+<div class="ttc" id="aclass_base_scene_html_a347ca4aa83a124be19b5e56f89cee7a7"><div class="ttname"><a href="class_base_scene.html#a347ca4aa83a124be19b5e56f89cee7a7">BaseScene::GetAllGameObject</a></div><div class="ttdeci">std::vector&lt; GameObject * &gt; GetAllGameObject()</div><div class="ttdoc">Obtient tous les objets de jeu.</div><div class="ttdef"><b>Definition</b> BaseScene.h:137</div></div>
+<div class="ttc" id="aclass_base_scene_html_a4184a719d7aaf086ab64da0cac144879"><div class="ttname"><a href="class_base_scene.html#a4184a719d7aaf086ab64da0cac144879">BaseScene::DestroyGameObject</a></div><div class="ttdeci">void DestroyGameObject(const GameObject *_gameObject)</div><div class="ttdoc">Détruit le GameObject spécifié et le retire de la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:175</div></div>
+<div class="ttc" id="aclass_base_scene_html_a462479820c153a0b230bb31246aec922"><div class="ttname"><a href="class_base_scene.html#a462479820c153a0b230bb31246aec922">BaseScene::rootObjects</a></div><div class="ttdeci">std::vector&lt; GameObject * &gt; rootObjects</div><div class="ttdef"><b>Definition</b> BaseScene.h:410</div></div>
+<div class="ttc" id="aclass_base_scene_html_a4aef515aa3a1cd3d3536d84ef9d18d16"><div class="ttname"><a href="class_base_scene.html#a4aef515aa3a1cd3d3536d84ef9d18d16">BaseScene::RemoveAllObjectsImmediate</a></div><div class="ttdeci">void RemoveAllObjectsImmediate()</div><div class="ttdoc">Supprime et détruit tous les objets de la scène immédiatement.</div><div class="ttdef"><b>Definition</b> BaseScene.h:293</div></div>
+<div class="ttc" id="aclass_base_scene_html_a50ed32fa47d91d177f8d09fb0eddfe67"><div class="ttname"><a href="class_base_scene.html#a50ed32fa47d91d177f8d09fb0eddfe67">BaseScene::FirstObjectWithTag</a></div><div class="ttdeci">GameObject::id_t FirstObjectWithTag(const std::string &amp;_tag)</div><div class="ttdoc">Obtient l'identifiant du premier objet avec l'étiquette spécifiée.</div><div class="ttdef"><b>Definition</b> BaseScene.h:359</div></div>
+<div class="ttc" id="aclass_base_scene_html_a50ffb057ce2b14e8f2c4a90c8ff37a0e"><div class="ttname"><a href="class_base_scene.html#a50ffb057ce2b14e8f2c4a90c8ff37a0e">BaseScene::Release</a></div><div class="ttdeci">virtual void Release()</div><div class="ttdoc">Lib�re les ressources utilis�es par le module.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:261</div></div>
+<div class="ttc" id="aclass_base_scene_html_a54110dc3a0e4d0ca08e9a08b31ad3548"><div class="ttname"><a href="class_base_scene.html#a54110dc3a0e4d0ca08e9a08b31ad3548">BaseScene::CreateCubeGameObject</a></div><div class="ttdeci">GameObject * CreateCubeGameObject(int _type)</div><div class="ttdoc">Crée un nouvel GameObject représentant un cube.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:361</div></div>
+<div class="ttc" id="aclass_base_scene_html_a58f83535913ba87fc8b3ea09c96609a9"><div class="ttname"><a href="class_base_scene.html#a58f83535913ba87fc8b3ea09c96609a9">BaseScene::Contains</a></div><div class="ttdeci">bool Contains(const std::vector&lt; GameObject::id_t &gt; &amp;_container, const GameObject::id_t &amp;_value)</div><div class="ttdoc">Vérifie si une valeur est contenue dans un conteneur.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:116</div></div>
+<div class="ttc" id="aclass_base_scene_html_a6d909301e434bfc5dde9f05b1d71bcb7"><div class="ttname"><a href="class_base_scene.html#a6d909301e434bfc5dde9f05b1d71bcb7">BaseScene::invalidGameObjectId</a></div><div class="ttdeci">const GameObject::id_t invalidGameObjectId</div><div class="ttdef"><b>Definition</b> BaseScene.h:413</div></div>
+<div class="ttc" id="aclass_base_scene_html_a77233636020ef22fc964961af22c96ba"><div class="ttname"><a href="class_base_scene.html#a77233636020ef22fc964961af22c96ba">BaseScene::CreatePlaneGameObject</a></div><div class="ttdeci">GameObject * CreatePlaneGameObject()</div><div class="ttdoc">Crée un nouvel GameObject représentant un plan.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:387</div></div>
+<div class="ttc" id="aclass_base_scene_html_a7a7b366b6d926a1c853782bb9616ba9a"><div class="ttname"><a href="class_base_scene.html#a7a7b366b6d926a1c853782bb9616ba9a">BaseScene::RemoveObjectsImmediate</a></div><div class="ttdeci">void RemoveObjectsImmediate(const std::vector&lt; GameObject * &gt; &amp;_gameObjects, bool _bDestroy)</div><div class="ttdoc">Supprime et détruit immédiatement une liste d'objets de la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.h:349</div></div>
+<div class="ttc" id="aclass_base_scene_html_a7a93c99d6af8a2a2a744bdaa15cb611b"><div class="ttname"><a href="class_base_scene.html#a7a93c99d6af8a2a2a744bdaa15cb611b">BaseScene::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition</b> BaseScene.h:405</div></div>
+<div class="ttc" id="aclass_base_scene_html_a7bc84a73f659eafc9cb0bcd4b20a2e5a"><div class="ttname"><a href="class_base_scene.html#a7bc84a73f659eafc9cb0bcd4b20a2e5a">BaseScene::RemoveAllObjects</a></div><div class="ttdeci">void RemoveAllObjects()</div><div class="ttdoc">Supprime et détruit tous les objets de la scène à la fin de la trame.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:25</div></div>
+<div class="ttc" id="aclass_base_scene_html_a89d1ed36b3076d31cfa035ca03db914b"><div class="ttname"><a href="class_base_scene.html#a89d1ed36b3076d31cfa035ca03db914b">BaseScene::pendingRemoveObjects</a></div><div class="ttdeci">std::vector&lt; GameObject::id_t &gt; pendingRemoveObjects</div><div class="ttdef"><b>Definition</b> BaseScene.h:411</div></div>
+<div class="ttc" id="aclass_base_scene_html_a8be86895e74df0a4cd3b0eca7feee84b"><div class="ttname"><a href="class_base_scene.html#a8be86895e74df0a4cd3b0eca7feee84b">BaseScene::GetDefaultRelativeFilePath</a></div><div class="ttdeci">std::string GetDefaultRelativeFilePath() const</div><div class="ttdoc">Obtient le chemin de fichier relatif par défaut pour la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:74</div></div>
+<div class="ttc" id="aclass_base_scene_html_a920ab444e16b8f0483a3c12bb1cb593c"><div class="ttname"><a href="class_base_scene.html#a920ab444e16b8f0483a3c12bb1cb593c">BaseScene::AddRootObjectImmediate</a></div><div class="ttdeci">GameObject * AddRootObjectImmediate(GameObject *_gameObject)</div><div class="ttdoc">Ajoute immédiatement un objet racine à la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.h:250</div></div>
+<div class="ttc" id="aclass_base_scene_html_a92798a6a991d22494cfd8674507478dc"><div class="ttname"><a href="class_base_scene.html#a92798a6a991d22494cfd8674507478dc">BaseScene::AddRootObject</a></div><div class="ttdeci">GameObject * AddRootObject(GameObject *_gameObject)</div><div class="ttdoc">Ajoute un objet racine à la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:16</div></div>
+<div class="ttc" id="aclass_base_scene_html_a9833201f5fc2608edb21619a4b1db1b6"><div class="ttname"><a href="class_base_scene.html#a9833201f5fc2608edb21619a4b1db1b6">BaseScene::RemoveAllEditorObjectsImmediate</a></div><div class="ttdeci">void RemoveAllEditorObjectsImmediate()</div><div class="ttdoc">Supprime et détruit tous les objets de l'éditeur de la scène immédiatement.</div><div class="ttdef"><b>Definition</b> BaseScene.h:298</div></div>
+<div class="ttc" id="aclass_base_scene_html_a9c9accdbd65b2c06798acf110fb33a89"><div class="ttname"><a href="class_base_scene.html#a9c9accdbd65b2c06798acf110fb33a89">BaseScene::bLoaded</a></div><div class="ttdeci">bool bLoaded</div><div class="ttdef"><b>Definition</b> BaseScene.h:416</div></div>
+<div class="ttc" id="aclass_base_scene_html_a9ddd1f47f2a846ece62f6532b474c1ea"><div class="ttname"><a href="class_base_scene.html#a9ddd1f47f2a846ece62f6532b474c1ea">BaseScene::IsInitialized</a></div><div class="ttdeci">bool IsInitialized() const</div><div class="ttdoc">Vérifie si la scène a été initialisée.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:34</div></div>
+<div class="ttc" id="aclass_base_scene_html_a9fa392d05125cc88b75de264f0e59d07"><div class="ttname"><a href="class_base_scene.html#a9fa392d05125cc88b75de264f0e59d07">BaseScene::fileName</a></div><div class="ttdeci">std::string fileName</div><div class="ttdef"><b>Definition</b> BaseScene.h:406</div></div>
+<div class="ttc" id="aclass_base_scene_html_aa08ceda4403231cf6090c56d0df5ee68"><div class="ttname"><a href="class_base_scene.html#aa08ceda4403231cf6090c56d0df5ee68">BaseScene::RemoveObject</a></div><div class="ttdeci">void RemoveObject(const GameObject::id_t &amp;_gameObjectId, bool _bDestroy)</div><div class="ttdoc">Supprime et détruit un objet de la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:121</div></div>
+<div class="ttc" id="aclass_base_scene_html_aa4361dab94a6c4422820a2b22e5afdd8"><div class="ttname"><a href="class_base_scene.html#aa4361dab94a6c4422820a2b22e5afdd8">BaseScene::PreRender</a></div><div class="ttdeci">virtual void PreRender()</div><div class="ttdoc">Fonction pr�-rendu du module.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:241</div></div>
+<div class="ttc" id="aclass_base_scene_html_aa8a9e9afcb7af5de48bc0e6e62a48ae4"><div class="ttname"><a href="class_base_scene.html#aa8a9e9afcb7af5de48bc0e6e62a48ae4">BaseScene::AddSiblingObjectImmediate</a></div><div class="ttdeci">GameObject * AddSiblingObjectImmediate(GameObject *_gameObject, GameObject *_newSibling)</div><div class="ttdoc">Ajoute immédiatement un nouvel objet frère à un objet donné dans la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.h:281</div></div>
+<div class="ttc" id="aclass_base_scene_html_aaac18134f2437eaa0950ab757f27831f"><div class="ttname"><a href="class_base_scene.html#aaac18134f2437eaa0950ab757f27831f">BaseScene::FixedUpdate</a></div><div class="ttdeci">virtual void FixedUpdate()</div><div class="ttdoc">Effectue une mise � jour fixe du module.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:209</div></div>
+<div class="ttc" id="aclass_base_scene_html_aab5197be3ab10416d80796c63b12f89d"><div class="ttname"><a href="class_base_scene.html#aab5197be3ab10416d80796c63b12f89d">BaseScene::RemoveObjects</a></div><div class="ttdeci">void RemoveObjects(const std::vector&lt; GameObject::id_t &gt; &amp;_gameObjects, bool _bDestroy)</div><div class="ttdoc">Supprime et détruit une liste d'objets de la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:138</div></div>
+<div class="ttc" id="aclass_base_scene_html_aad43896fe03af531cbc8d0c45c564cb2"><div class="ttname"><a href="class_base_scene.html#aad43896fe03af531cbc8d0c45c564cb2">BaseScene::RemoveObjectsImmediate</a></div><div class="ttdeci">void RemoveObjectsImmediate(const std::vector&lt; GameObject::id_t &gt; &amp;_gameObjects, bool _bDestroy)</div><div class="ttdoc">Supprime et détruit immédiatement une liste d'objets de la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.h:341</div></div>
+<div class="ttc" id="aclass_base_scene_html_ab12655e3f795bcf612235a168081ee8f"><div class="ttname"><a href="class_base_scene.html#ab12655e3f795bcf612235a168081ee8f">BaseScene::Render</a></div><div class="ttdeci">virtual void Render()</div><div class="ttdoc">Rendu du module.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:244</div></div>
+<div class="ttc" id="aclass_base_scene_html_ab6f71ce0d177008c296e2045bbeea047"><div class="ttname"><a href="class_base_scene.html#ab6f71ce0d177008c296e2045bbeea047">BaseScene::PostRender</a></div><div class="ttdeci">virtual void PostRender()</div><div class="ttdoc">Fonction post-rendu du module.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:257</div></div>
+<div class="ttc" id="aclass_base_scene_html_ab9316394e3ed0d9e6bda6154911d4edf"><div class="ttname"><a href="class_base_scene.html#ab9316394e3ed0d9e6bda6154911d4edf">BaseScene::GetFileName</a></div><div class="ttdeci">std::string GetFileName() const</div><div class="ttdoc">Récupère le nom du fichier associé à la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:61</div></div>
+<div class="ttc" id="aclass_base_scene_html_abae8826cbe2331ea4b3cf6ce274c408d"><div class="ttname"><a href="class_base_scene.html#abae8826cbe2331ea4b3cf6ce274c408d">BaseScene::AddChildObject</a></div><div class="ttdeci">GameObject * AddChildObject(GameObject *_parent, GameObject *_child)</div><div class="ttdoc">Ajoute un objet enfant à un parent donné dans la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.h:259</div></div>
+<div class="ttc" id="aclass_base_scene_html_abbd582bf4a24bf257ae60855b21911a7"><div class="ttname"><a href="class_base_scene.html#abbd582bf4a24bf257ae60855b21911a7">BaseScene::AddGameObjectInVector</a></div><div class="ttdeci">void AddGameObjectInVector(std::vector&lt; GameObject * &gt; &amp;_gameObjects, GameObject *_gameObject)</div><div class="ttdoc">Ajoute un objet de jeu et tous ses enfants à un vecteur.</div><div class="ttdef"><b>Definition</b> BaseScene.h:374</div></div>
+<div class="ttc" id="aclass_base_scene_html_ac4c053b464819b8ecef4fbc0e4b625b0"><div class="ttname"><a href="class_base_scene.html#ac4c053b464819b8ecef4fbc0e4b625b0">BaseScene::TestLoadGameObjects</a></div><div class="ttdeci">void TestLoadGameObjects()</div><div class="ttdoc">Charge les objets de jeu pour les tests.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:285</div></div>
+<div class="ttc" id="aclass_base_scene_html_ac65255ae7f5bfcec1df1d537deb72468"><div class="ttname"><a href="class_base_scene.html#ac65255ae7f5bfcec1df1d537deb72468">BaseScene::DeleteSaveFiles</a></div><div class="ttdeci">void DeleteSaveFiles()</div><div class="ttdoc">Supprime les fichiers de sauvegarde associés à la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:87</div></div>
+<div class="ttc" id="aclass_base_scene_html_ac7dcc4eca603fac2b28433411d065d8b"><div class="ttname"><a href="class_base_scene.html#ac7dcc4eca603fac2b28433411d065d8b">BaseScene::bInitialized</a></div><div class="ttdeci">bool bInitialized</div><div class="ttdef"><b>Definition</b> BaseScene.h:415</div></div>
+<div class="ttc" id="aclass_base_scene_html_acb4914ea048763a6dd8d6ef573e53451"><div class="ttname"><a href="class_base_scene.html#acb4914ea048763a6dd8d6ef573e53451">BaseScene::pendingDestroyObjects</a></div><div class="ttdeci">std::vector&lt; GameObject::id_t &gt; pendingDestroyObjects</div><div class="ttdef"><b>Definition</b> BaseScene.h:408</div></div>
+<div class="ttc" id="aclass_base_scene_html_acf73ef32322ffa846db37f4e07a220eb"><div class="ttname"><a href="class_base_scene.html#acf73ef32322ffa846db37f4e07a220eb">BaseScene::SetName</a></div><div class="ttdeci">void SetName(const std::string &amp;_name)</div><div class="ttdoc">Définit le nom de la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:39</div></div>
+<div class="ttc" id="aclass_base_scene_html_ad1c48681ba910c2c0ba72610e74bb089"><div class="ttname"><a href="class_base_scene.html#ad1c48681ba910c2c0ba72610e74bb089">BaseScene::GetName</a></div><div class="ttdeci">std::string GetName() const</div><div class="ttdoc">Obtient le nom de la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:44</div></div>
+<div class="ttc" id="aclass_base_scene_html_ad8015fb0b689036e048fefe4d09d1160"><div class="ttname"><a href="class_base_scene.html#ad8015fb0b689036e048fefe4d09d1160">BaseScene::FileExists</a></div><div class="ttdeci">bool FileExists(const std::string &amp;_filePath)</div><div class="ttdoc">Vérifie si un fichier existe.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:81</div></div>
+<div class="ttc" id="aclass_base_scene_html_ade7aa81f2f79609a6408cb57fa94033c"><div class="ttname"><a href="class_base_scene.html#ade7aa81f2f79609a6408cb57fa94033c">BaseScene::IsUsingSaveFile</a></div><div class="ttdeci">bool IsUsingSaveFile() const</div><div class="ttdoc">Indique si la scène utilise un fichier de sauvegarde.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:49</div></div>
+<div class="ttc" id="aclass_base_scene_html_aefdae9ab66f5644144d946e4a858d226"><div class="ttname"><a href="class_base_scene.html#aefdae9ab66f5644144d946e4a858d226">BaseScene::GetGameObjectById</a></div><div class="ttdeci">GameObject * GetGameObjectById(const GameObject::id_t &amp;_gameObjectId) const</div><div class="ttdoc">Obtient un pointeur vers l'objet GameObject ayant l'identifiant spécifié.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:180</div></div>
+<div class="ttc" id="aclass_base_scene_html_af0f7e4035cde76688c4eaf39a08e609a"><div class="ttname"><a href="class_base_scene.html#af0f7e4035cde76688c4eaf39a08e609a">BaseScene::CreateLightGameObject</a></div><div class="ttdeci">GameObject * CreateLightGameObject()</div><div class="ttdoc">Crée un nouvel GameObject représentant une lumière.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:374</div></div>
+<div class="ttc" id="aclass_base_scene_html_af2b7648d5c65e0643c0a69014147b7f8"><div class="ttname"><a href="class_base_scene.html#af2b7648d5c65e0643c0a69014147b7f8">BaseScene::GetRootObjects</a></div><div class="ttdeci">std::vector&lt; GameObject * &gt; &amp; GetRootObjects()</div><div class="ttdoc">Récupère une référence vers le vecteur des objets racine de la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:55</div></div>
+<div class="ttc" id="aclass_base_scene_html_af7fc9655341c18fd9c73202975c72dd5"><div class="ttname"><a href="class_base_scene.html#af7fc9655341c18fd9c73202975c72dd5">BaseScene::SetRootObjectIndex</a></div><div class="ttdeci">void SetRootObjectIndex(GameObject *_rootObject, uint32_t _newIndex)</div><div class="ttdoc">Définit l'indice d'un objet racine dans la liste des objets racines de la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.h:172</div></div>
+<div class="ttc" id="aclass_base_scene_html_afa27359b9bc27ee57b3512d17ca7d43f"><div class="ttname"><a href="class_base_scene.html#afa27359b9bc27ee57b3512d17ca7d43f">BaseScene::pendingAddObjects</a></div><div class="ttdeci">std::vector&lt; GameObject * &gt; pendingAddObjects</div><div class="ttdef"><b>Definition</b> BaseScene.h:409</div></div>
+<div class="ttc" id="aclass_base_scene_html_afbb2fd581e08cec8b730fa11bdf52a5c"><div class="ttname"><a href="class_base_scene.html#afbb2fd581e08cec8b730fa11bdf52a5c">BaseScene::CreateGameObject</a></div><div class="ttdeci">GameObject * CreateGameObject()</div><div class="ttdoc">Crée un nouveau GameObject et l'ajoute à la scène.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:168</div></div>
+<div class="ttc" id="aclass_base_scene_html_afbe51e76d09ce38b5e727a1d0a688ac7"><div class="ttname"><a href="class_base_scene.html#afbe51e76d09ce38b5e727a1d0a688ac7">BaseScene::SetFileName</a></div><div class="ttdeci">bool SetFileName(const std::string &amp;_fileName, bool _bDeletePreviousFiles) const</div><div class="ttdoc">Définit le nom de fichier de la scène et supprime les fichiers précédents si spécifié.</div><div class="ttdef"><b>Definition</b> BaseScene.cpp:66</div></div>
+<div class="ttc" id="aclass_game_object_html"><div class="ttname"><a href="class_game_object.html">GameObject</a></div><div class="ttdoc">Représente un objet générique dans le jeu.</div><div class="ttdef"><b>Definition</b> GameObject.h:45</div></div>
+<div class="ttc" id="aclass_game_object_html_acc9c5c271db831c5b713c5b104f270d9"><div class="ttname"><a href="class_game_object.html#acc9c5c271db831c5b713c5b104f270d9">GameObject::GetChildren</a></div><div class="ttdeci">const std::vector&lt; GameObject * &gt; &amp; GetChildren() const</div><div class="ttdoc">Obtient les enfants de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.h:311</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

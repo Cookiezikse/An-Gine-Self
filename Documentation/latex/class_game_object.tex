@@ -1,0 +1,966 @@
+\doxysection{Référence de la classe Game\+Object}
+\hypertarget{class_game_object}{}\label{class_game_object}\index{GameObject@{GameObject}}
+
+
+Représente un objet générique dans le jeu.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Object.\+h$>$}
+
+\doxysubsubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_object_a12dcad390ebb8b3d977b1bf462d4b7e1}\label{class_game_object_a12dcad390ebb8b3d977b1bf462d4b7e1} 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{using}} {\bfseries id\+\_\+t} = \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{unsigned}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{int}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de la classe \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ab82dfdb656f9051c0587e6593b2dda97}{\texorpdfstring{$\sim$}{\string~}\+Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_a2c35b23f9d3d1a4f73242d750327d888}{Game\+Object}} (id\+\_\+t \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+id}})
+\begin{DoxyCompactList}\small\item\em Constructeur de \doxylink{class_game_object}{Game\+Object} avec ID spécifique. \end{DoxyCompactList}\item 
+id\+\_\+t \mbox{\hyperlink{class_game_object_a99799782d6841cc6ea9a9fc2c70970b1}{Get\+Id}} () \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}identifiant unique de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_game_object_a986731c4dfb08336dbf0731e6514bad9}{Get\+Name}} () \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Obtient le nom de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_transform}{Transform}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_object_a775791ff7e70d9ab35802f82fab26718}{Get\+Transform}} () \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Obtient le transform de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+glm\+::vec3 \mbox{\hyperlink{class_game_object_a977d4bbb9ebe2266bae702b59508303b}{Get\+Position}} () \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Obtient la position de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+glm\+::vec3 \mbox{\hyperlink{class_game_object_a73e30effed19f0fd52d10e24867d300b}{Get\+Scale}} () \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}échelle de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+glm\+::vec3 \mbox{\hyperlink{class_game_object_afe52aedcc4f6e746f3ccd18d413f88fb}{Get\+Rotation}} () \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Obtient la rotation de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{bool}} \mbox{\hyperlink{class_game_object_aeacebf64d0153edf9e02a43defc0d26f}{Get\+Active}} () \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}état d\textquotesingle{}activation de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{bool}} \mbox{\hyperlink{class_game_object_a821630aa6f0c19413a22475cac54c7b4}{Get\+Visible}} () \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}état d\textquotesingle{}activation de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+Layer\+Type \mbox{\hyperlink{class_game_object_a49eeb421bc3fbbc4ae487998282c8c5c}{Get\+Layer}} () \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Obtient le type de couche de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlve_1_1_lve_model}{lve\+::\+Lve\+Model}} $>$ \mbox{\hyperlink{class_game_object_af525d7b7d88a1359a865e96ced9665ef}{Get\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Obtient le modèle associé au module de débogage. \end{DoxyCompactList}\item 
+glm\+::vec3 \mbox{\hyperlink{class_game_object_a30fa6e5a4b339c7fbfb53ce2c42d6c49}{Get\+Color}} () \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Obtient la couleur associée au module de débogage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{int}} \mbox{\hyperlink{class_game_object_a719472e50bfbe3d3efb4c73e81592113}{Get\+Texture}} () \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}identifiant de texture associé au module de débogage. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_component}{Component}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_game_object_a53e71063284902e7c9bcd2cd60f47f37}{Get\+Components}} ()
+\begin{DoxyCompactList}\small\item\em Obtient les composants de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+{\footnotesize template$<$\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{typename}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{T}} $>$ }\\\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_object_a5ba3b458e6bee6ea5aedd5c8cdeabf18}{Get\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Obtient un composant de type spécifique. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ T \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{Get\+Components\+By\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Obtient tous les composants d\textquotesingle{}un type spécifique attachés à l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+{\footnotesize template$<$\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{typename}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{T}} $>$ }\\\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_object_a40a0ea82a4a821ae3b7520bfd3e5b70e}{Get\+Component\+By\+Name}} (\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} std\+::string \&\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+name}})
+\begin{DoxyCompactList}\small\item\em Obtient un composant d\textquotesingle{}un type spécifique par son nom. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_component}{Component}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_object_af09284eb1172cd31f5a332fb0c385abf}{Get\+Component\+Recursive}} (\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} std\+::string \&\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+component\+Name}}) \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Obtient un composant récursivement par son nom. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_game_object_a0f068b3de8ad469afebf024eda43fb53}{Find\+Children\+By\+Name}} (\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} std\+::string \&\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+name}}) \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Recherche les enfants de l\textquotesingle{}objet par leur nom. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{class_game_object_acc9c5c271db831c5b713c5b104f270d9}{Get\+Children}} () \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Obtient les enfants de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} \mbox{\hyperlink{class_game_object_a6ebd7e126f166fb69bea1af26c7fde60}{Set\+Name}} (\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} std\+::string \&\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+new\+Name}})
+\begin{DoxyCompactList}\small\item\em Définit le nom de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_aff62958d5bf1a91be17b7338bac8d53e}\label{class_game_object_aff62958d5bf1a91be17b7338bac8d53e} 
+std\+::string {\bfseries Get\+File\+Model} ()
+\item 
+\Hypertarget{class_game_object_a70e9ceea9e004066c0ae713b3d74a24d}\label{class_game_object_a70e9ceea9e004066c0ae713b3d74a24d} 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{float}} {\bfseries Get\+Tex\+Multiplier} ()
+\item 
+\Hypertarget{class_game_object_af76038e0867b8d433a90b040c5ed96c2}\label{class_game_object_af76038e0867b8d433a90b040c5ed96c2} 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} {\bfseries Set\+Tex\+Multiplier} (\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{float}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+new\+Tex\+Multiplier}})
+\item 
+\Hypertarget{class_game_object_a8775ca3ab623317f0182eb3385502e0b}\label{class_game_object_a8775ca3ab623317f0182eb3385502e0b} 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} {\bfseries Set\+File\+Model} (std\+::string \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+new\+File\+Model}})
+\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} \mbox{\hyperlink{class_game_object_a57d38c977e7b4c4858760674643af712}{Set\+Position}} (glm\+::vec3 \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+new\+Position}}) \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Définit la position de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} \mbox{\hyperlink{class_game_object_aa2bde5996fc67e746c6e4f14ef24f1ec}{Set\+Scale}} (glm\+::vec3 \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+new\+Scale}}) \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Définit l\textquotesingle{}échelle de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} \mbox{\hyperlink{class_game_object_a3f85c85ffc0370de80d44952df381de0}{Set\+Rotation}} (\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{float}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+new\+Rotation}}) \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Définit la rotation de l\textquotesingle{}objet autour de l\textquotesingle{}axe Y. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} \mbox{\hyperlink{class_game_object_ac0e2d29626f3b8a88d969dff8bc02f39}{Set\+Active}} (\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{bool}} \&\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+state}})
+\begin{DoxyCompactList}\small\item\em Active ou désactive l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} \mbox{\hyperlink{class_game_object_a34e7664032bb67c53ce9d878ad99816f}{Set\+Visible}} (\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{bool}} \&\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+state}})
+\begin{DoxyCompactList}\small\item\em Active ou désactive le rendu de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} \mbox{\hyperlink{class_game_object_aeb451f629da26ba79cc67cd2e3ab9253}{Set\+Active\+And\+Visible}} (\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{bool}} \&\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+state}})
+\begin{DoxyCompactList}\small\item\em Active ou désactive l\textquotesingle{}objet et son rendu simultanément. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} \mbox{\hyperlink{class_game_object_a7be5b2e44f87294feabc0c4a34427f48}{Set\+Layer}} (\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} Layer\+Type \&\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+layer\+Type}})
+\begin{DoxyCompactList}\small\item\em Définit le type de couche de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} \mbox{\hyperlink{class_game_object_accd7aa344773abacb8ce7ea6ee382408}{Set\+Parent}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+parent}})
+\begin{DoxyCompactList}\small\item\em Définit le parent de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} \mbox{\hyperlink{class_game_object_a4000d60162fe95afdfa2795078899700}{Add\+Child\+Object}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+child}})
+\begin{DoxyCompactList}\small\item\em Ajoute un enfant à l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} \mbox{\hyperlink{class_game_object_a43de4d32d96d38061bc4fc5a7659954a}{Set\+Model}} (\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlve_1_1_lve_model}{lve\+::\+Lve\+Model}} $>$ \&\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+model}})
+\begin{DoxyCompactList}\small\item\em Définit le modèle associé au module de débogage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} \mbox{\hyperlink{class_game_object_a43386c337d99366144bb2f069f9478ef}{Set\+Color}} (\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} glm\+::vec3 \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+color}})
+\begin{DoxyCompactList}\small\item\em Définit la couleur associée au module de débogage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} \mbox{\hyperlink{class_game_object_a7fd851e067a0728f557a9e45c046b44a}{Set\+Texture}} (\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{int}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+texture}})
+\begin{DoxyCompactList}\small\item\em Définit l\textquotesingle{}identifiant de texture associé au module de débogage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} \mbox{\hyperlink{class_game_object_aa3e6f8f41791bec9a9869213de7da161}{Add\+Component}} (\mbox{\hyperlink{class_component}{Component}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+component}})
+\begin{DoxyCompactList}\small\item\em Ajoute un composant à l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+{\footnotesize template$<$\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{typename}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{T}} $>$ }\\\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{T}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_object_ad6ecd4f946bc85daab0a58c7981cbccc}{Create\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Crée un nouveau composant de type spécifique et l\textquotesingle{}attache à l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} \mbox{\hyperlink{class_game_object_a0c32cde998e7175d1594c97a1e217996}{Destroy\+Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Supprime directement cet objet de jeu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} \mbox{\hyperlink{class_game_object_a348a03f16010f5da1e1e0bc98a434cb3}{Mark\+For\+Deletion}} ()
+\begin{DoxyCompactList}\small\item\em Marque cet objet de jeu pour suppression. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} \mbox{\hyperlink{class_game_object_a12fa2ca0ff9a2847c978f91f2b9b64a9}{Remove\+Component}} (\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} \mbox{\hyperlink{class_component}{Component}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{\+\_\+component}})
+\begin{DoxyCompactList}\small\item\em Supprime un composant de l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_aa70012636f8b4c1e84d8344bf5f3480a}\label{class_game_object_aa70012636f8b4c1e84d8344bf5f3480a} 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{virtual}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em Initialise le module. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_aa27714b4172ebff2f7cddcf63b325ac7}\label{class_game_object_aa27714b4172ebff2f7cddcf63b325ac7} 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{virtual}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Démarre le module. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_a61e26e2087a508aa7ea0fcd540b09f28}\label{class_game_object_a61e26e2087a508aa7ea0fcd540b09f28} 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{virtual}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} {\bfseries Fixed\+Update} () \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Effectue une mise à jour fixe du module. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_a81a09eb2c3de2c0a6374b8acde812c52}\label{class_game_object_a81a09eb2c3de2c0a6374b8acde812c52} 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{virtual}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} {\bfseries Update} () \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Met à jour le module. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_a7067bc5d3617cce201ded43e3387f936}\label{class_game_object_a7067bc5d3617cce201ded43e3387f936} 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{virtual}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} {\bfseries Update\+Editor} () \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\item 
+\Hypertarget{class_game_object_ac0807fcf3eb3d02eb1f045eee87af1b5}\label{class_game_object_ac0807fcf3eb3d02eb1f045eee87af1b5} 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{virtual}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} {\bfseries Pre\+Render} ()
+\begin{DoxyCompactList}\small\item\em Fonction pré-\/rendu du module. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_a037f81e3dbcf1716d892b7ecd1178fc2}\label{class_game_object_a037f81e3dbcf1716d892b7ecd1178fc2} 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{virtual}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} {\bfseries Render} () \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}}
+\begin{DoxyCompactList}\small\item\em Rendu du module. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_abcfdfd7b4f1e25c961a04ada6af4931a}\label{class_game_object_abcfdfd7b4f1e25c961a04ada6af4931a} 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{virtual}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} {\bfseries Render\+Gui} ()
+\begin{DoxyCompactList}\small\item\em Rendu de l\textquotesingle{}interface graphique du module. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_a5b78dcbae0147bfbf550991751a02050}\label{class_game_object_a5b78dcbae0147bfbf550991751a02050} 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{virtual}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} {\bfseries Post\+Render} ()
+\begin{DoxyCompactList}\small\item\em Fonction post-\/rendu du module. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_a52f23306620f024c034a1bde6407e74a}\label{class_game_object_a52f23306620f024c034a1bde6407e74a} 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{virtual}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} {\bfseries Release} ()
+\begin{DoxyCompactList}\small\item\em Libère les ressources utilisées par le module. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_a9800a9dcc709907dd90a0204748ce513}\label{class_game_object_a9800a9dcc709907dd90a0204748ce513} 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{virtual}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} {\bfseries Finalize} ()
+\begin{DoxyCompactList}\small\item\em Finalise le module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{static}} \mbox{\hyperlink{class_game_object}{Game\+Object}} \mbox{\hyperlink{class_game_object_ae24f42d843b9d2901b1590949e9c5656}{Create\+Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Crée un nouvel objet \doxylink{class_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{static}} \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_object_a7a325ab2cd9b28c2c223131c466e042d}{Create\+PGame\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Crée un nouvel objet \doxylink{class_game_object}{Game\+Object} sur le tas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_object_a4f81f385b2c379c6afb2c9897204e44e}\label{class_game_object_a4f81f385b2c379c6afb2c9897204e44e} 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{float}} {\bfseries tex\+Multiplier} = 1
+\item 
+\Hypertarget{class_game_object_ac6cea2777e90261fb552e1db179cfe89}\label{class_game_object_ac6cea2777e90261fb552e1db179cfe89} 
+std\+::string {\bfseries file\+Model}
+\item 
+std\+::string \mbox{\hyperlink{class_game_object_af542b33c8de269343e22c5629e6b66c0}{name}} = "{}Game\+Object"{}
+\item 
+id\+\_\+t \mbox{\hyperlink{class_game_object_af1f2aaf9c054e60e83f2c8e482bc1819}{id}}
+\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_object_a4113a496ed45ca90756cfa0d8dfe6171}{parent}} = \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{nullptr}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_game_object_a5eba794ac3ef3b94bd9a43494c842ade}{children}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlve_1_1_lve_model}{lve\+::\+Lve\+Model}} $>$ \mbox{\hyperlink{class_game_object_ac12a2cfd246ffddbffde8716d3e2785f}{model}} \{\}
+\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{int}} \mbox{\hyperlink{class_game_object_a1d4d998891f953e4a4f15d7372a0d9e3}{texture}} = 0
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_game_object_a3a3cb49f7d67386167bbe9049ce2d3fd}{color}} \{\}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_component}{Component}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_game_object_aac1acad42a3837282d3abf7df8eb34a7}{components}}
+\item 
+\mbox{\hyperlink{class_transform}{Transform}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_object_a9edf603be120d5a9221e5c5c962465f8}{transform}} = \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{nullptr}}
+\item 
+Layer\+Type \mbox{\hyperlink{class_game_object_af673409499aaed493584462b8efa4baf}{layer\+Type}} = Layer\+Type\+::\+Normal
+\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{float}} \mbox{\hyperlink{class_game_object_a74a0456a0a9330047cc8eea61fc79864}{depth}} = 0.f
+\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{bool}} \mbox{\hyperlink{class_game_object_a7535ae769c1f801baf9469105ed7d38f}{is\+Active}} = \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{true}}
+\item 
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{bool}} \mbox{\hyperlink{class_game_object_a3bb2d61e98450c1252f41220e809a25a}{is\+Visible}} = \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{true}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Représente un objet générique dans le jeu. 
+
+Cette classe représente un objet générique dans le jeu. Un objet peut être un cube, un plan, une lumière, etc. Elle sert de base pour d\textquotesingle{}autres types d\textquotesingle{}objets spécifiques. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}\label{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4} 
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur par défaut de la classe \doxylink{class_game_object}{Game\+Object}. 
+
+Ce constructeur crée un nouvel objet \doxylink{class_game_object}{Game\+Object}. \Hypertarget{class_game_object_ab82dfdb656f9051c0587e6593b2dda97}\label{class_game_object_ab82dfdb656f9051c0587e6593b2dda97} 
+\index{GameObject@{GameObject}!````~GameObject@{\texorpdfstring{$\sim$}{\string~}GameObject}}
+\index{````~GameObject@{\texorpdfstring{$\sim$}{\string~}GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GameObject()}{\string~GameObject()}}
+{\footnotesize\ttfamily Game\+Object\+::\texorpdfstring{$\sim$}{\string~}\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur de la classe \doxylink{class_game_object}{Game\+Object}. 
+
+Ce destructeur libère les ressources associées à l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}. \Hypertarget{class_game_object_a2c35b23f9d3d1a4f73242d750327d888}\label{class_game_object_a2c35b23f9d3d1a4f73242d750327d888} 
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}\item[{id\+\_\+t}]{\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructeur de \doxylink{class_game_object}{Game\+Object} avec ID spécifique. 
+
+Initialise un \doxylink{class_game_object}{Game\+Object} avec un identifiant unique. Cela garantit que chaque \doxylink{class_game_object}{Game\+Object} a un identifiant unique au sein de la scène.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+id} & Identifiant unique du \doxylink{class_game_object}{Game\+Object}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_game_object_a4000d60162fe95afdfa2795078899700}\label{class_game_object_a4000d60162fe95afdfa2795078899700} 
+\index{GameObject@{GameObject}!AddChildObject@{AddChildObject}}
+\index{AddChildObject@{AddChildObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{AddChildObject()}{AddChildObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} Game\+Object\+::\+Add\+Child\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{\+\_\+child }\end{DoxyParamCaption})}
+
+
+
+Ajoute un enfant à l\textquotesingle{}objet. 
+
+Cette méthode ajoute un nouvel enfant à l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+child} & Un pointeur vers l\textquotesingle{}objet enfant à ajouter. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_object_aa3e6f8f41791bec9a9869213de7da161}\label{class_game_object_aa3e6f8f41791bec9a9869213de7da161} 
+\index{GameObject@{GameObject}!AddComponent@{AddComponent}}
+\index{AddComponent@{AddComponent}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{AddComponent()}{AddComponent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} Game\+Object\+::\+Add\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_component}{Component}} \texorpdfstring{$\ast$}{*}}]{\+\_\+component }\end{DoxyParamCaption})}
+
+
+
+Ajoute un composant à l\textquotesingle{}objet. 
+
+Cette méthode ajoute un nouveau composant à l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+component} & Un pointeur vers le composant à ajouter. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_object_ad6ecd4f946bc85daab0a58c7981cbccc}\label{class_game_object_ad6ecd4f946bc85daab0a58c7981cbccc} 
+\index{GameObject@{GameObject}!CreateComponent@{CreateComponent}}
+\index{CreateComponent@{CreateComponent}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{CreateComponent()}{CreateComponent()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{typename}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{T}} $>$ \\
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{T}} \texorpdfstring{$\ast$}{*} Game\+Object\+::\+Create\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Crée un nouveau composant de type spécifique et l\textquotesingle{}attache à l\textquotesingle{}objet. 
+
+Cette méthode crée un nouveau composant de type spécifique et l\textquotesingle{}attache à l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}.
+
+
+\begin{DoxyTemplParams}{Paramètres du template}
+{\em T} & Le type de composant à créer. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le nouveau composant créé et attaché à l\textquotesingle{}objet, ou nullptr en cas d\textquotesingle{}échec de création. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_ae24f42d843b9d2901b1590949e9c5656}\label{class_game_object_ae24f42d843b9d2901b1590949e9c5656} 
+\index{GameObject@{GameObject}!CreateGameObject@{CreateGameObject}}
+\index{CreateGameObject@{CreateGameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{CreateGameObject()}{CreateGameObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{static}} \mbox{\hyperlink{class_game_object}{Game\+Object}} Game\+Object\+::\+Create\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Crée un nouvel objet \doxylink{class_game_object}{Game\+Object}. 
+
+Cette méthode statique crée un nouvel objet \doxylink{class_game_object}{Game\+Object} avec un identifiant unique.
+
+\begin{DoxyReturn}{Renvoie}
+Un nouvel objet \doxylink{class_game_object}{Game\+Object} créé avec un identifiant unique. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a7a325ab2cd9b28c2c223131c466e042d}\label{class_game_object_a7a325ab2cd9b28c2c223131c466e042d} 
+\index{GameObject@{GameObject}!CreatePGameObject@{CreatePGameObject}}
+\index{CreatePGameObject@{CreatePGameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{CreatePGameObject()}{CreatePGameObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{static}} \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} Game\+Object\+::\+Create\+PGame\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Crée un nouvel objet \doxylink{class_game_object}{Game\+Object} sur le tas. 
+
+Cette méthode statique crée un nouvel objet \doxylink{class_game_object}{Game\+Object} avec un identifiant unique sur le tas (allocation dynamique).
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le nouvel objet \doxylink{class_game_object}{Game\+Object} créé avec un identifiant unique sur le tas. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a0c32cde998e7175d1594c97a1e217996}\label{class_game_object_a0c32cde998e7175d1594c97a1e217996} 
+\index{GameObject@{GameObject}!DestroyGameObject@{DestroyGameObject}}
+\index{DestroyGameObject@{DestroyGameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{DestroyGameObject()}{DestroyGameObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} Game\+Object\+::\+Destroy\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Supprime directement cet objet de jeu. 
+
+Cette méthode supprime directement l\textquotesingle{}objet de jeu de la scène et libère la mémoire associée. À utiliser avec prudence, car elle ne gère pas les relations entre objets. \Hypertarget{class_game_object_a0f068b3de8ad469afebf024eda43fb53}\label{class_game_object_a0f068b3de8ad469afebf024eda43fb53} 
+\index{GameObject@{GameObject}!FindChildrenByName@{FindChildrenByName}}
+\index{FindChildrenByName@{FindChildrenByName}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{FindChildrenByName()}{FindChildrenByName()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ Game\+Object\+::\+Find\+Children\+By\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} std\+::string \&}]{\+\_\+name }\end{DoxyParamCaption}) const}
+
+
+
+Recherche les enfants de l\textquotesingle{}objet par leur nom. 
+
+Cette méthode recherche les enfants de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} dont le nom correspond au nom spécifié.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+name} & Le nom des enfants à rechercher. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un vecteur contenant des pointeurs vers les enfants dont le nom correspond au nom spécifié. Si aucun enfant n\textquotesingle{}est trouvé, le vecteur est vide. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_aeacebf64d0153edf9e02a43defc0d26f}\label{class_game_object_aeacebf64d0153edf9e02a43defc0d26f} 
+\index{GameObject@{GameObject}!GetActive@{GetActive}}
+\index{GetActive@{GetActive}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetActive()}{GetActive()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{bool}} Game\+Object\+::\+Get\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient l\textquotesingle{}état d\textquotesingle{}activation de l\textquotesingle{}objet. 
+
+Cette méthode retourne l\textquotesingle{}état d\textquotesingle{}activation de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}.
+
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}état d\textquotesingle{}activation de l\textquotesingle{}objet (true s\textquotesingle{}il est activé, false s\textquotesingle{}il est désactivé). 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_acc9c5c271db831c5b713c5b104f270d9}\label{class_game_object_acc9c5c271db831c5b713c5b104f270d9} 
+\index{GameObject@{GameObject}!GetChildren@{GetChildren}}
+\index{GetChildren@{GetChildren}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetChildren()}{GetChildren()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \& Game\+Object\+::\+Get\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient les enfants de l\textquotesingle{}objet. 
+
+Cette méthode retourne une référence constante vers le vecteur contenant les pointeurs vers les enfants de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}.
+
+\begin{DoxyReturn}{Renvoie}
+Une référence constante vers le vecteur contenant les enfants de l\textquotesingle{}objet. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a30fa6e5a4b339c7fbfb53ce2c42d6c49}\label{class_game_object_a30fa6e5a4b339c7fbfb53ce2c42d6c49} 
+\index{GameObject@{GameObject}!GetColor@{GetColor}}
+\index{GetColor@{GetColor}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetColor()}{GetColor()}}
+{\footnotesize\ttfamily glm\+::vec3 Game\+Object\+::\+Get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la couleur associée au module de débogage. 
+
+Cette méthode permet d\textquotesingle{}obtenir la couleur associée au module de débogage.
+
+\begin{DoxyReturn}{Renvoie}
+La couleur associée au module de débogage. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a5ba3b458e6bee6ea5aedd5c8cdeabf18}\label{class_game_object_a5ba3b458e6bee6ea5aedd5c8cdeabf18} 
+\index{GameObject@{GameObject}!GetComponent@{GetComponent}}
+\index{GetComponent@{GetComponent}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetComponent()}{GetComponent()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{typename}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{T}} $>$ \\
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{T}} \texorpdfstring{$\ast$}{*} Game\+Object\+::\+Get\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient un composant de type spécifique. 
+
+Cette méthode recherche un composant de type spécifique attaché à l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}.
+
+
+\begin{DoxyTemplParams}{Paramètres du template}
+{\em T} & Le type de composant à rechercher. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le premier composant de type spécifique trouvé attaché à l\textquotesingle{}objet, ou nullptr si aucun composant n\textquotesingle{}est trouvé. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a40a0ea82a4a821ae3b7520bfd3e5b70e}\label{class_game_object_a40a0ea82a4a821ae3b7520bfd3e5b70e} 
+\index{GameObject@{GameObject}!GetComponentByName@{GetComponentByName}}
+\index{GetComponentByName@{GetComponentByName}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetComponentByName()}{GetComponentByName()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{typename}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{T}} $>$ \\
+\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{T}} \texorpdfstring{$\ast$}{*} Game\+Object\+::\+Get\+Component\+By\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} std\+::string \&}]{\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient un composant d\textquotesingle{}un type spécifique par son nom. 
+
+Cette méthode recherche un composant d\textquotesingle{}un type spécifique attaché à l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} dont le nom correspond au nom spécifié.
+
+
+\begin{DoxyTemplParams}{Paramètres du template}
+{\em T} & Le type de composant à rechercher. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+name} & Le nom du composant à rechercher. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le premier composant de type spécifique trouvé avec le nom correspondant, ou nullptr si aucun composant n\textquotesingle{}est trouvé. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_af09284eb1172cd31f5a332fb0c385abf}\label{class_game_object_af09284eb1172cd31f5a332fb0c385abf} 
+\index{GameObject@{GameObject}!GetComponentRecursive@{GetComponentRecursive}}
+\index{GetComponentRecursive@{GetComponentRecursive}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetComponentRecursive()}{GetComponentRecursive()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_component}{Component}} \texorpdfstring{$\ast$}{*} Game\+Object\+::\+Get\+Component\+Recursive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} std\+::string \&}]{\+\_\+component\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Obtient un composant récursivement par son nom. 
+
+Cette méthode recherche récursivement un composant dans l\textquotesingle{}arborescence des enfants de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} dont le nom correspond au nom spécifié.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+component\+Name} & Le nom du composant à rechercher. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le premier composant trouvé dont le nom correspond au nom spécifié. Si aucun composant correspondant n\textquotesingle{}est trouvé dans cet objet ou ses enfants, retourne nullptr. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a53e71063284902e7c9bcd2cd60f47f37}\label{class_game_object_a53e71063284902e7c9bcd2cd60f47f37} 
+\index{GameObject@{GameObject}!GetComponents@{GetComponents}}
+\index{GetComponents@{GetComponents}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetComponents()}{GetComponents()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_component}{Component}} \texorpdfstring{$\ast$}{*} $>$ Game\+Object\+::\+Get\+Components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient les composants de l\textquotesingle{}objet. 
+
+Cette méthode retourne un vecteur contenant des pointeurs vers tous les composants attachés à l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}.
+
+\begin{DoxyReturn}{Renvoie}
+Un vecteur contenant des pointeurs vers les composants de l\textquotesingle{}objet. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}\label{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4} 
+\index{GameObject@{GameObject}!GetComponentsByType@{GetComponentsByType}}
+\index{GetComponentsByType@{GetComponentsByType}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetComponentsByType()}{GetComponentsByType()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ T \texorpdfstring{$\ast$}{*} $>$ Game\+Object\+::\+Get\+Components\+By\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient tous les composants d\textquotesingle{}un type spécifique attachés à l\textquotesingle{}objet. 
+
+Cette méthode recherche tous les composants d\textquotesingle{}un type spécifique attachés à l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}.
+
+
+\begin{DoxyTemplParams}{Paramètres du template}
+{\em T} & Le type de composant à rechercher. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Renvoie}
+Un vecteur contenant des pointeurs vers tous les composants de type spécifique attachés à l\textquotesingle{}objet, ou un vecteur vide si aucun composant n\textquotesingle{}est trouvé. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a99799782d6841cc6ea9a9fc2c70970b1}\label{class_game_object_a99799782d6841cc6ea9a9fc2c70970b1} 
+\index{GameObject@{GameObject}!GetId@{GetId}}
+\index{GetId@{GetId}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetId()}{GetId()}}
+{\footnotesize\ttfamily id\+\_\+t Game\+Object\+::\+Get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient l\textquotesingle{}identifiant unique de l\textquotesingle{}objet. 
+
+Cette méthode retourne l\textquotesingle{}identifiant unique de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}.
+
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}identifiant unique de l\textquotesingle{}objet. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a49eeb421bc3fbbc4ae487998282c8c5c}\label{class_game_object_a49eeb421bc3fbbc4ae487998282c8c5c} 
+\index{GameObject@{GameObject}!GetLayer@{GetLayer}}
+\index{GetLayer@{GetLayer}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetLayer()}{GetLayer()}}
+{\footnotesize\ttfamily Layer\+Type Game\+Object\+::\+Get\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le type de couche de l\textquotesingle{}objet. 
+
+Cette méthode retourne le type de couche de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}.
+
+\begin{DoxyReturn}{Renvoie}
+Le type de couche de l\textquotesingle{}objet. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_af525d7b7d88a1359a865e96ced9665ef}\label{class_game_object_af525d7b7d88a1359a865e96ced9665ef} 
+\index{GameObject@{GameObject}!GetModel@{GetModel}}
+\index{GetModel@{GetModel}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetModel()}{GetModel()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlve_1_1_lve_model}{lve\+::\+Lve\+Model}} $>$ Game\+Object\+::\+Get\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le modèle associé au module de débogage. 
+
+Cette méthode permet d\textquotesingle{}obtenir le modèle associé au module de débogage.
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur partagé vers le modèle associé au module de débogage. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a986731c4dfb08336dbf0731e6514bad9}\label{class_game_object_a986731c4dfb08336dbf0731e6514bad9} 
+\index{GameObject@{GameObject}!GetName@{GetName}}
+\index{GetName@{GetName}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily std\+::string Game\+Object\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le nom de l\textquotesingle{}objet. 
+
+Cette méthode retourne le nom de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}.
+
+\begin{DoxyReturn}{Renvoie}
+Le nom de l\textquotesingle{}objet. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a977d4bbb9ebe2266bae702b59508303b}\label{class_game_object_a977d4bbb9ebe2266bae702b59508303b} 
+\index{GameObject@{GameObject}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily glm\+::vec3 Game\+Object\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtient la position de l\textquotesingle{}objet. 
+
+Cette méthode retourne la position de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} dans l\textquotesingle{}espace tridimensionnel.
+
+\begin{DoxyReturn}{Renvoie}
+La position de l\textquotesingle{}objet. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_afe52aedcc4f6e746f3ccd18d413f88fb}\label{class_game_object_afe52aedcc4f6e746f3ccd18d413f88fb} 
+\index{GameObject@{GameObject}!GetRotation@{GetRotation}}
+\index{GetRotation@{GetRotation}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetRotation()}{GetRotation()}}
+{\footnotesize\ttfamily glm\+::vec3 Game\+Object\+::\+Get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtient la rotation de l\textquotesingle{}objet. 
+
+Cette méthode retourne la rotation de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} dans l\textquotesingle{}espace tridimensionnel.
+
+\begin{DoxyReturn}{Renvoie}
+La rotation de l\textquotesingle{}objet. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a73e30effed19f0fd52d10e24867d300b}\label{class_game_object_a73e30effed19f0fd52d10e24867d300b} 
+\index{GameObject@{GameObject}!GetScale@{GetScale}}
+\index{GetScale@{GetScale}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetScale()}{GetScale()}}
+{\footnotesize\ttfamily glm\+::vec3 Game\+Object\+::\+Get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtient l\textquotesingle{}échelle de l\textquotesingle{}objet. 
+
+Cette méthode retourne l\textquotesingle{}échelle de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} dans l\textquotesingle{}espace tridimensionnel.
+
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}échelle de l\textquotesingle{}objet. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a719472e50bfbe3d3efb4c73e81592113}\label{class_game_object_a719472e50bfbe3d3efb4c73e81592113} 
+\index{GameObject@{GameObject}!GetTexture@{GetTexture}}
+\index{GetTexture@{GetTexture}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetTexture()}{GetTexture()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{int}} Game\+Object\+::\+Get\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient l\textquotesingle{}identifiant de texture associé au module de débogage. 
+
+Cette méthode permet d\textquotesingle{}obtenir l\textquotesingle{}identifiant de texture associé au module de débogage.
+
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}identifiant de texture associé au module de débogage. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a775791ff7e70d9ab35802f82fab26718}\label{class_game_object_a775791ff7e70d9ab35802f82fab26718} 
+\index{GameObject@{GameObject}!GetTransform@{GetTransform}}
+\index{GetTransform@{GetTransform}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetTransform()}{GetTransform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transform}{Transform}} \texorpdfstring{$\ast$}{*} Game\+Object\+::\+Get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtient le transform de l\textquotesingle{}objet. 
+
+Cette méthode retourne un pointeur vers l\textquotesingle{}objet \doxylink{class_transform}{Transform} associé à l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}.
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers l\textquotesingle{}objet \doxylink{class_transform}{Transform} associé à l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}. Si aucun \doxylink{class_transform}{Transform} n\textquotesingle{}est associé, retourne nullptr. 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a821630aa6f0c19413a22475cac54c7b4}\label{class_game_object_a821630aa6f0c19413a22475cac54c7b4} 
+\index{GameObject@{GameObject}!GetVisible@{GetVisible}}
+\index{GetVisible@{GetVisible}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetVisible()}{GetVisible()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{bool}} Game\+Object\+::\+Get\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient l\textquotesingle{}état d\textquotesingle{}activation de l\textquotesingle{}objet. 
+
+Cette méthode retourne l\textquotesingle{}état d\textquotesingle{}activation de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}.
+
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}état d\textquotesingle{}activation de l\textquotesingle{}objet (true s\textquotesingle{}il est activé, false s\textquotesingle{}il est désactivé). 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a348a03f16010f5da1e1e0bc98a434cb3}\label{class_game_object_a348a03f16010f5da1e1e0bc98a434cb3} 
+\index{GameObject@{GameObject}!MarkForDeletion@{MarkForDeletion}}
+\index{MarkForDeletion@{MarkForDeletion}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{MarkForDeletion()}{MarkForDeletion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} Game\+Object\+::\+Mark\+For\+Deletion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Marque cet objet de jeu pour suppression. 
+
+Cette méthode marque l\textquotesingle{}objet de jeu pour suppression par le gestionnaire de scènes. La suppression réelle aura lieu plus tard, gérée par le gestionnaire de scènes. \Hypertarget{class_game_object_a12fa2ca0ff9a2847c978f91f2b9b64a9}\label{class_game_object_a12fa2ca0ff9a2847c978f91f2b9b64a9} 
+\index{GameObject@{GameObject}!RemoveComponent@{RemoveComponent}}
+\index{RemoveComponent@{RemoveComponent}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{RemoveComponent()}{RemoveComponent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} Game\+Object\+::\+Remove\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} \mbox{\hyperlink{class_component}{Component}} \texorpdfstring{$\ast$}{*}}]{\+\_\+component }\end{DoxyParamCaption})}
+
+
+
+Supprime un composant de l\textquotesingle{}objet. 
+
+Cette méthode supprime un composant spécifié de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+component} & Un pointeur vers le composant à supprimer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_object_ac0e2d29626f3b8a88d969dff8bc02f39}\label{class_game_object_ac0e2d29626f3b8a88d969dff8bc02f39} 
+\index{GameObject@{GameObject}!SetActive@{SetActive}}
+\index{SetActive@{SetActive}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetActive()}{SetActive()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} Game\+Object\+::\+Set\+Active (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{bool}} \&}]{\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Active ou désactive l\textquotesingle{}objet. 
+
+Cette méthode active ou désactive l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} en fonction de l\textquotesingle{}état spécifié.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+state} & L\textquotesingle{}état d\textquotesingle{}activation à définir pour l\textquotesingle{}objet (true pour activer, false pour désactiver). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_object_aeb451f629da26ba79cc67cd2e3ab9253}\label{class_game_object_aeb451f629da26ba79cc67cd2e3ab9253} 
+\index{GameObject@{GameObject}!SetActiveAndVisible@{SetActiveAndVisible}}
+\index{SetActiveAndVisible@{SetActiveAndVisible}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetActiveAndVisible()}{SetActiveAndVisible()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} Game\+Object\+::\+Set\+Active\+And\+Visible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{bool}} \&}]{\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Active ou désactive l\textquotesingle{}objet et son rendu simultanément. 
+
+Cette méthode active ou désactive l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} et son rendu simultanément en fonction de l\textquotesingle{}état spécifié.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+state} & L\textquotesingle{}état à définir pour l\textquotesingle{}activation et la visibilité de l\textquotesingle{}objet (true pour activer et rendre visible, false pour désactiver et rendre invisible). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_object_a43386c337d99366144bb2f069f9478ef}\label{class_game_object_a43386c337d99366144bb2f069f9478ef} 
+\index{GameObject@{GameObject}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetColor()}{SetColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} Game\+Object\+::\+Set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} glm\+::vec3}]{\+\_\+color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit la couleur associée au module de débogage. 
+
+Cette méthode permet de définir la couleur associée au module de débogage.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+color} & La couleur à associer au module de débogage. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_object_a7be5b2e44f87294feabc0c4a34427f48}\label{class_game_object_a7be5b2e44f87294feabc0c4a34427f48} 
+\index{GameObject@{GameObject}!SetLayer@{SetLayer}}
+\index{SetLayer@{SetLayer}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetLayer()}{SetLayer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} Game\+Object\+::\+Set\+Layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} Layer\+Type \&}]{\+\_\+layer\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit le type de couche de l\textquotesingle{}objet. 
+
+Cette méthode définit le type de couche de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+layer\+Type} & Le nouveau type de couche à définir pour l\textquotesingle{}objet. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_object_a43de4d32d96d38061bc4fc5a7659954a}\label{class_game_object_a43de4d32d96d38061bc4fc5a7659954a} 
+\index{GameObject@{GameObject}!SetModel@{SetModel}}
+\index{SetModel@{SetModel}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetModel()}{SetModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} Game\+Object\+::\+Set\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlve_1_1_lve_model}{lve\+::\+Lve\+Model}} $>$ \&}]{\+\_\+model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit le modèle associé au module de débogage. 
+
+Cette méthode permet de définir le modèle associé au module de débogage.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+model} & Un pointeur partagé vers le modèle à associer au module de débogage. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_object_a6ebd7e126f166fb69bea1af26c7fde60}\label{class_game_object_a6ebd7e126f166fb69bea1af26c7fde60} 
+\index{GameObject@{GameObject}!SetName@{SetName}}
+\index{SetName@{SetName}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetName()}{SetName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} Game\+Object\+::\+Set\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} std\+::string \&}]{\+\_\+new\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit le nom de l\textquotesingle{}objet. 
+
+Cette méthode définit le nom de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+new\+Name} & Le nouveau nom à définir pour l\textquotesingle{}objet. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_object_accd7aa344773abacb8ce7ea6ee382408}\label{class_game_object_accd7aa344773abacb8ce7ea6ee382408} 
+\index{GameObject@{GameObject}!SetParent@{SetParent}}
+\index{SetParent@{SetParent}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetParent()}{SetParent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} Game\+Object\+::\+Set\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{\+\_\+parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit le parent de l\textquotesingle{}objet. 
+
+Cette méthode définit le parent de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+parent} & Un pointeur vers l\textquotesingle{}objet parent à définir pour cet objet. Si nullptr est passé, l\textquotesingle{}objet n\textquotesingle{}aura aucun parent. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_object_a57d38c977e7b4c4858760674643af712}\label{class_game_object_a57d38c977e7b4c4858760674643af712} 
+\index{GameObject@{GameObject}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} Game\+Object\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{\+\_\+new\+Position }\end{DoxyParamCaption}) const}
+
+
+
+Définit la position de l\textquotesingle{}objet. 
+
+Cette méthode définit la position de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} dans l\textquotesingle{}espace tridimensionnel.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+new\+Position} & La nouvelle position à définir pour l\textquotesingle{}objet. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_object_a3f85c85ffc0370de80d44952df381de0}\label{class_game_object_a3f85c85ffc0370de80d44952df381de0} 
+\index{GameObject@{GameObject}!SetRotation@{SetRotation}}
+\index{SetRotation@{SetRotation}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetRotation()}{SetRotation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} Game\+Object\+::\+Set\+Rotation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{float}}}]{\+\_\+new\+Rotation }\end{DoxyParamCaption}) const}
+
+
+
+Définit la rotation de l\textquotesingle{}objet autour de l\textquotesingle{}axe Y. 
+
+Cette méthode définit la rotation de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} autour de l\textquotesingle{}axe Y dans l\textquotesingle{}espace tridimensionnel.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+new\+Rotation} & La nouvelle rotation à définir pour l\textquotesingle{}objet (en radians). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_object_aa2bde5996fc67e746c6e4f14ef24f1ec}\label{class_game_object_aa2bde5996fc67e746c6e4f14ef24f1ec} 
+\index{GameObject@{GameObject}!SetScale@{SetScale}}
+\index{SetScale@{SetScale}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetScale()}{SetScale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} Game\+Object\+::\+Set\+Scale (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{\+\_\+new\+Scale }\end{DoxyParamCaption}) const}
+
+
+
+Définit l\textquotesingle{}échelle de l\textquotesingle{}objet. 
+
+Cette méthode définit l\textquotesingle{}échelle de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} dans l\textquotesingle{}espace tridimensionnel.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+new\+Scale} & La nouvelle échelle à définir pour l\textquotesingle{}objet. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_object_a7fd851e067a0728f557a9e45c046b44a}\label{class_game_object_a7fd851e067a0728f557a9e45c046b44a} 
+\index{GameObject@{GameObject}!SetTexture@{SetTexture}}
+\index{SetTexture@{SetTexture}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetTexture()}{SetTexture()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} Game\+Object\+::\+Set\+Texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{int}}}]{\+\_\+texture }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit l\textquotesingle{}identifiant de texture associé au module de débogage. 
+
+Cette méthode permet de définir l\textquotesingle{}identifiant de texture associé au module de débogage.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+texture} & L\textquotesingle{}identifiant de texture à associer au module de débogage. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_object_a34e7664032bb67c53ce9d878ad99816f}\label{class_game_object_a34e7664032bb67c53ce9d878ad99816f} 
+\index{GameObject@{GameObject}!SetVisible@{SetVisible}}
+\index{SetVisible@{SetVisible}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetVisible()}{SetVisible()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{void}} Game\+Object\+::\+Set\+Visible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{const}} \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{bool}} \&}]{\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Active ou désactive le rendu de l\textquotesingle{}objet. 
+
+Cette méthode active ou désactive le rendu de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} en fonction de l\textquotesingle{}état spécifié.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+state} & L\textquotesingle{}état de visibilité à définir pour l\textquotesingle{}objet (true pour le rendre visible, false pour le rendre invisible). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des données membres}
+\Hypertarget{class_game_object_a5eba794ac3ef3b94bd9a43494c842ade}\label{class_game_object_a5eba794ac3ef3b94bd9a43494c842ade} 
+\index{GameObject@{GameObject}!children@{children}}
+\index{children@{children}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{children}{children}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_game_object}{Game\+Object}}\texorpdfstring{$\ast$}{*}$>$ Game\+Object\+::children\hspace{0.3cm}{\ttfamily [protected]}}
+
+Les enfants de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}. \Hypertarget{class_game_object_a3a3cb49f7d67386167bbe9049ce2d3fd}\label{class_game_object_a3a3cb49f7d67386167bbe9049ce2d3fd} 
+\index{GameObject@{GameObject}!color@{color}}
+\index{color@{color}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily glm\+::vec3 Game\+Object\+::color \{\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+La couleur de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}. \Hypertarget{class_game_object_aac1acad42a3837282d3abf7df8eb34a7}\label{class_game_object_aac1acad42a3837282d3abf7df8eb34a7} 
+\index{GameObject@{GameObject}!components@{components}}
+\index{components@{components}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{components}{components}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_component}{Component}}\texorpdfstring{$\ast$}{*}$>$ Game\+Object\+::components\hspace{0.3cm}{\ttfamily [protected]}}
+
+Les composants attachés à l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}. \Hypertarget{class_game_object_a74a0456a0a9330047cc8eea61fc79864}\label{class_game_object_a74a0456a0a9330047cc8eea61fc79864} 
+\index{GameObject@{GameObject}!depth@{depth}}
+\index{depth@{depth}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{depth}{depth}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{float}} Game\+Object\+::depth = 0.f\hspace{0.3cm}{\ttfamily [protected]}}
+
+La profondeur de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} (plus proche de 1 signifie plus proche de l\textquotesingle{}écran). \Hypertarget{class_game_object_af1f2aaf9c054e60e83f2c8e482bc1819}\label{class_game_object_af1f2aaf9c054e60e83f2c8e482bc1819} 
+\index{GameObject@{GameObject}!id@{id}}
+\index{id@{id}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily id\+\_\+t Game\+Object\+::id\hspace{0.3cm}{\ttfamily [protected]}}
+
+L\textquotesingle{}identifiant unique de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}. \Hypertarget{class_game_object_a7535ae769c1f801baf9469105ed7d38f}\label{class_game_object_a7535ae769c1f801baf9469105ed7d38f} 
+\index{GameObject@{GameObject}!isActive@{isActive}}
+\index{isActive@{isActive}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{isActive}{isActive}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{bool}} Game\+Object\+::is\+Active = \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{true}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Indique si l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} est actif (true) ou non (false). \Hypertarget{class_game_object_a3bb2d61e98450c1252f41220e809a25a}\label{class_game_object_a3bb2d61e98450c1252f41220e809a25a} 
+\index{GameObject@{GameObject}!isVisible@{isVisible}}
+\index{isVisible@{isVisible}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{isVisible}{isVisible}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{bool}} Game\+Object\+::is\+Visible = \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{true}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Indique si l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} est visible (true) ou non (false). \Hypertarget{class_game_object_af673409499aaed493584462b8efa4baf}\label{class_game_object_af673409499aaed493584462b8efa4baf} 
+\index{GameObject@{GameObject}!layerType@{layerType}}
+\index{layerType@{layerType}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{layerType}{layerType}}
+{\footnotesize\ttfamily Layer\+Type Game\+Object\+::layer\+Type = Layer\+Type\+::\+Normal\hspace{0.3cm}{\ttfamily [protected]}}
+
+Le type de couche de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}. \Hypertarget{class_game_object_ac12a2cfd246ffddbffde8716d3e2785f}\label{class_game_object_ac12a2cfd246ffddbffde8716d3e2785f} 
+\index{GameObject@{GameObject}!model@{model}}
+\index{model@{model}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classlve_1_1_lve_model}{lve\+::\+Lve\+Model}}$>$ Game\+Object\+::model \{\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Le modèle de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}. \Hypertarget{class_game_object_af542b33c8de269343e22c5629e6b66c0}\label{class_game_object_af542b33c8de269343e22c5629e6b66c0} 
+\index{GameObject@{GameObject}!name@{name}}
+\index{name@{name}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Game\+Object\+::name = "{}Game\+Object"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Le nom de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}. \Hypertarget{class_game_object_a4113a496ed45ca90756cfa0d8dfe6171}\label{class_game_object_a4113a496ed45ca90756cfa0d8dfe6171} 
+\index{GameObject@{GameObject}!parent@{parent}}
+\index{parent@{parent}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object}{Game\+Object}}\texorpdfstring{$\ast$}{*} Game\+Object\+::parent = \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{nullptr}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Le parent de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}. \Hypertarget{class_game_object_a1d4d998891f953e4a4f15d7372a0d9e3}\label{class_game_object_a1d4d998891f953e4a4f15d7372a0d9e3} 
+\index{GameObject@{GameObject}!texture@{texture}}
+\index{texture@{texture}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{texture}{texture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{int}} Game\+Object\+::texture = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+L\textquotesingle{}identifiant de texture de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}. \Hypertarget{class_game_object_a9edf603be120d5a9221e5c5c962465f8}\label{class_game_object_a9edf603be120d5a9221e5c5c962465f8} 
+\index{GameObject@{GameObject}!transform@{transform}}
+\index{transform@{transform}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{transform}{transform}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transform}{Transform}}\texorpdfstring{$\ast$}{*} Game\+Object\+::transform = \mbox{\hyperlink{class_game_object_ae1f87b3e412542296c4f59b4f804c0f4}{nullptr}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Le composant de transformation attaché à l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object}. 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Game\+Object/Game\+Object.\+h\item 
+sources/\+Game\+Object/Game\+Object.\+cpp\end{DoxyCompactItemize}

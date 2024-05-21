@@ -1,0 +1,114 @@
+\doxysection{Im\+GUIModule.\+h}
+\hypertarget{_im_g_u_i_module_8h_source}{}\label{_im_g_u_i_module_8h_source}\index{includes/Modules/ImGUIModule.h@{includes/Modules/ImGUIModule.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Modules/Module.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Modules/WindowModule.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Scene/SceneManager.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}RHIVulkanModule.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_r_h_i_module}{RHIModule}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_im_gui_module}{ImGuiModule}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_module}{Module}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//TimeModule*\ timeModule\ =\ nullptr;}}
+\DoxyCodeLine{00019\ \ \ \ \ vk::Fence\ \ \ \ \ \ \ \ \ immFence;}
+\DoxyCodeLine{00020\ \ \ \ \ vk::CommandBuffer\ immCommandBuffer;}
+\DoxyCodeLine{00021\ \ \ \ \ vk::CommandPool\ \ \ immCommandPool;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/==========\ IMGUI\ SETTINGS\ ==========-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ //}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_a789d564bb784deb1a76bc9785f221d5e}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_a0aef3322c112235bc038cfc0b9c62fa7}{Start}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_ac34fdc8c2c2e6338c68ba68bed5798e7}{FixedUpdate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_a09392d7282f2cb9f120db4ca5776385a}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_aac4b06dfc1dbbad552e820af1f605d35}{PreRender}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_a28d1ef88461b218dcd358dd047c06674}{Render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_a337f2c65bd158e39d89f7769fc4d9920}{RenderGui}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_a962739d0cb1769792363df53802a6925}{PostRender}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_ae45e29b9025b130e030e54dfc045f3e0}{Release}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_ae51921c37415c169fd0551aef5b669de}{Finalize}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_a799d9c6842fb765029b73555c506779e}{ImmediateSubmit}}(std::function<\textcolor{keywordtype}{void}(vk::CommandBuffer\ \_cmd)>\&\&\ \_function)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/==========\ IMGUI\ SHOWN\ ==========-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ //}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_a7f33c566fbe081b75dca96bcb6707dbb}{GetGui}}();}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_a5e0b8717004df555bd7c7e95f6668224}{AnchorWindow}}(\textcolor{keyword}{const}\ std::string\&\ \_windowName);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/==========\ DRAW\ WINDOWS\ ==========-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ //}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_a946258a533c49e5ea282f86afcb898d8}{DrawHierarchyWindow}}();}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_aab36080f4bfca6384b2cebce05984df2}{DrawInspectorWindow}}();}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_aff9dc1bf288561b8063c5ab5b6a60963}{DisplayTransform}}(\mbox{\hyperlink{class_transform}{Transform}}*\ \_transform);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ DrawModesWindow();}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_ac9ff75b10b3a3ec853348cc752c09951}{DrawSettingsWindow}}();}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/==========\ POPUPS\ ==========-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ //}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_a1fe0c0297d80d15141c6d593a37214d3}{ShowRenamePopup}}();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/==========\ OBJECT\ OPERATIONS\ ==========-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ //}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_aaf05ac68949491eb8606e0de6f69d47f}{RenameGameObject}}(\mbox{\hyperlink{class_game_object}{GameObject}}*\ \_gameObject,\ \textcolor{keyword}{const}\ std::string\&\ \_newName);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_ab5315e1896eadd7b3b0fa6952cca8fa9}{DeleteGameObject}}(\mbox{\hyperlink{class_game_object}{GameObject}}*\ \_gameObject);}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_a58ffcbfd47af624c2699b34a32a05af9}{DuplicateGameObject}}(\mbox{\hyperlink{class_game_object}{GameObject}}*\ \_gameObject);}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_im_gui_module_adde47c76109469e0ad3cf56e4edb64b7}{CreateSpecificGameObject}}(GameObjectType\ \_type,\ \textcolor{keywordtype}{int}\ \_otherType\ =\ 0);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00160\ \ \ \ \ vk::Device\ \mbox{\hyperlink{class_im_gui_module_ae121d0441870a164991d36493dae734d}{device}};\ }
+\DoxyCodeLine{00161\ \ \ \ \ vk::Queue\ \mbox{\hyperlink{class_im_gui_module_a2427c08a4d3e3fdaa1dd033e7fd36201}{graphicsQueue}};\ }
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \mbox{\hyperlink{class_window_module}{WindowModule}}*\ \mbox{\hyperlink{class_im_gui_module_a18cb0bdc0ed883a8c26be006778a29f0}{windowModule}}\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00164\ \ \ \ \ \mbox{\hyperlink{class_r_h_i_module}{RHIModule}}*\ \mbox{\hyperlink{class_im_gui_module_a0d8a1509473acbda71dcc19408be3d02}{rhiModule}}\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00165\ \ \ \ \ \mbox{\hyperlink{class_scene_manager}{SceneManager}}*\ \mbox{\hyperlink{class_im_gui_module_af06f65844fce295b22a0eb050ea0f459}{sceneManager}}\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \mbox{\hyperlink{class_im_gui_module_a194cfe4f52ea64be8c9b81cfc421d641}{selectedGameObject}}\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_im_gui_module_a6082dd9fd4ee78af1c9100bec2d5717e}{isRenamePopupOpen}}\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_im_gui_module_aa2d13a31e1e9ff6349f4440bd877e52f}{entityToRename}}\ =\ -\/1;\ }
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_im_gui_module_a61f5f1cd5b5e44a771673fd347cc469f}{renameBuffer}}[256];\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_im_gui_module_a7117c6b5a499546e7841ec28e0e2da3e}{sceneToRename}}\ =\ -\/1;\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_im_gui_module_ad20e3d26263ff8bacb123591db57a67f}{renameSceneBuffer}}[100];\ }
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_im_gui_module_a4f3f8f985582efff218a469f5c640e55}{openPositionEdit}}\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_im_gui_module_a781acf4bad8e9457bb32d44b9a53e37f}{openScaleEdit}}\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00177\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_im_gui_module_ac26a29296d687741384bacf0dbed7d7e}{positionEdit}};\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_im_gui_module_a4b08888aba7c9db25825f6ea7527c02c}{rotationEdit}};\ }
+\DoxyCodeLine{00179\ \ \ \ \ glm::vec3\ \mbox{\hyperlink{class_im_gui_module_aa55e63dd6b57116829e2abe2f4283db4}{scaleEdit}};\ }
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ std::vector<bool>\ \mbox{\hyperlink{class_im_gui_module_ac2cd62364dc11e4b5a76d0f2036d8992}{isOpen}};\ }
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{bool}\ textureView\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00188\ \ \ \ \ \mbox{\hyperlink{class_im_gui_module_ac0b66194c865917ef2ed79457fda1944}{\string~ImGuiModule}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00189\ \};}
+
+\end{DoxyCode}

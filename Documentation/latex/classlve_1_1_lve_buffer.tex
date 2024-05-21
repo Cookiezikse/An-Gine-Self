@@ -1,0 +1,490 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Lve\+Buffer}
+\hypertarget{classlve_1_1_lve_buffer}{}\label{classlve_1_1_lve_buffer}\index{lve::LveBuffer@{lve::LveBuffer}}
+
+
+Classe représentant un tampon Vulkan.  
+
+
+
+
+{\ttfamily \#include $<$lve\+\_\+buffer.\+h$>$}
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_buffer_ade3763325c66ecf858b7fe9f3460eece}{Lve\+Buffer}} (\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&\+\_\+device, vk\+::\+Device\+Size \+\_\+instance\+Size, uint32\+\_\+t \+\_\+instance\+Count, vk\+::\+Buffer\+Usage\+Flags \+\_\+usage\+Flags, vk\+::\+Memory\+Property\+Flags \+\_\+memory\+Property\+Flags, vk\+::\+Device\+Size \+\_\+min\+Offset\+Alignment=1)
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_buffer_aa6c331ab69d4aa643adf4064f6d0b0a6}{\texorpdfstring{$\sim$}{\string~}\+Lve\+Buffer}} ()
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_buffer_a3d89ad819978a1b70af40eedffe52e84}{Lve\+Buffer}} (const \mbox{\hyperlink{classlve_1_1_lve_buffer}{Lve\+Buffer}} \&)=delete
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_buffer}{Lve\+Buffer}} \& \mbox{\hyperlink{classlve_1_1_lve_buffer_a8dfe52fd4f156fa70c72c15da717ad51}{operator=}} (const \mbox{\hyperlink{classlve_1_1_lve_buffer}{Lve\+Buffer}} \&)=delete
+\item 
+vk\+::\+Result \mbox{\hyperlink{classlve_1_1_lve_buffer_a058b9e955091430382eabb82a92d6e14}{Map}} (vk\+::\+Device\+Size \+\_\+size=VK\+\_\+\+WHOLE\+\_\+\+SIZE, vk\+::\+Device\+Size \+\_\+offset=0)
+\begin{DoxyCompactList}\small\item\em Mappe le tampon en mémoire. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_buffer_a3737439d5df0a6924df04243cea435c6}{Unmap}} ()
+\begin{DoxyCompactList}\small\item\em Désalloue le tampon mappé en mémoire. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_buffer_a0418ba23f49723e99673394eddd51379}{Write\+To\+Buffer}} (const void \texorpdfstring{$\ast$}{*}\+\_\+data, vk\+::\+Device\+Size \+\_\+size=VK\+\_\+\+WHOLE\+\_\+\+SIZE, vk\+::\+Device\+Size \+\_\+offset=0) const
+\begin{DoxyCompactList}\small\item\em Écrit les données dans le tampon. \end{DoxyCompactList}\item 
+vk\+::\+Result \mbox{\hyperlink{classlve_1_1_lve_buffer_a469fde4476081eb91e2fdfe5f3228cd5}{Flush}} (vk\+::\+Device\+Size \+\_\+size=VK\+\_\+\+WHOLE\+\_\+\+SIZE, vk\+::\+Device\+Size \+\_\+offset=0) const
+\begin{DoxyCompactList}\small\item\em Flushes the memory-\/mapped buffer range. \end{DoxyCompactList}\item 
+vk\+::\+Descriptor\+Buffer\+Info \mbox{\hyperlink{classlve_1_1_lve_buffer_a1d4c7fa6311f80d62c12a3a639c8f8dd}{Descriptor\+Info}} (vk\+::\+Device\+Size \+\_\+size=VK\+\_\+\+WHOLE\+\_\+\+SIZE, vk\+::\+Device\+Size \+\_\+offset=0) const
+\begin{DoxyCompactList}\small\item\em Récupère les informations de tampon de descripteur. \end{DoxyCompactList}\item 
+vk\+::\+Result \mbox{\hyperlink{classlve_1_1_lve_buffer_a9c4726a7691ff98b61d244833825cee4}{Invalidate}} (vk\+::\+Device\+Size \+\_\+size=VK\+\_\+\+WHOLE\+\_\+\+SIZE, vk\+::\+Device\+Size \+\_\+offset=0) const
+\begin{DoxyCompactList}\small\item\em Invalidate the memory-\/mapped buffer range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_buffer_ac1263a1e75b0266d516446e56325a241}{Write\+To\+Index}} (void \texorpdfstring{$\ast$}{*}\+\_\+data, int \+\_\+index)
+\begin{DoxyCompactList}\small\item\em Écrit les données dans l\textquotesingle{}index spécifié du tampon. \end{DoxyCompactList}\item 
+vk\+::\+Result \mbox{\hyperlink{classlve_1_1_lve_buffer_a3d8eebf70f870470496e9f06cf68170f}{Flush\+Index}} (int \+\_\+index)
+\begin{DoxyCompactList}\small\item\em Flushes the memory-\/mapped buffer range for the specified index. \end{DoxyCompactList}\item 
+vk\+::\+Descriptor\+Buffer\+Info \mbox{\hyperlink{classlve_1_1_lve_buffer_a7c01c935c41e31c205c20d7bc53f1339}{Descriptor\+Info\+For\+Index}} (int \+\_\+index)
+\begin{DoxyCompactList}\small\item\em Récupère les informations de tampon de descripteur pour l\textquotesingle{}index spécifié. \end{DoxyCompactList}\item 
+vk\+::\+Result \mbox{\hyperlink{classlve_1_1_lve_buffer_a5f2aa2a10a5c6eb70d267ece1d174377}{Invalidate\+Index}} (int \+\_\+index)
+\begin{DoxyCompactList}\small\item\em Invalide la plage du tampon pour l\textquotesingle{}index spécifié. \end{DoxyCompactList}\item 
+vk\+::\+Buffer \mbox{\hyperlink{classlve_1_1_lve_buffer_a123c3a8b7d2a889b2c33177830a6455b}{Get\+Buffer}} () const
+\begin{DoxyCompactList}\small\item\em Récupère le tampon Vulkan associé à l\textquotesingle{}objet \doxylink{classlve_1_1_lve_buffer}{Lve\+Buffer}. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classlve_1_1_lve_buffer_a97d181347b813107739e2b4911470b89}{Get\+Mapped\+Memory}} () const
+\begin{DoxyCompactList}\small\item\em Récupère le pointeur vers la mémoire mappée du tampon. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classlve_1_1_lve_buffer_a544b877cb8d2db1d8fd8e2e68637c95a}{Get\+Instance\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Récupère le nombre d\textquotesingle{}instances dans le tampon. \end{DoxyCompactList}\item 
+vk\+::\+Device\+Size \mbox{\hyperlink{classlve_1_1_lve_buffer_a4cf00afb05543c9a4095f022dcd97b97}{Get\+Instance\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Récupère la taille de chaque instance dans le tampon. \end{DoxyCompactList}\item 
+vk\+::\+Device\+Size \mbox{\hyperlink{classlve_1_1_lve_buffer_a5ab64933278c2ba4dabb593f19b0d1d5}{Get\+Alignment\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Récupère la taille d\textquotesingle{}alignement du tampon. \end{DoxyCompactList}\item 
+vk\+::\+Buffer\+Usage\+Flags \mbox{\hyperlink{classlve_1_1_lve_buffer_a66004c65f1a48e5f0ca9ac588230ae4f}{Get\+Usage\+Flags}} () const
+\begin{DoxyCompactList}\small\item\em Récupère les indicateurs d\textquotesingle{}utilisation du tampon. \end{DoxyCompactList}\item 
+vk\+::\+Memory\+Property\+Flags \mbox{\hyperlink{classlve_1_1_lve_buffer_a8eedbdd757e9d0a72099d8463dcd171b}{Get\+Memory\+Property\+Flags}} () const
+\begin{DoxyCompactList}\small\item\em Récupère les propriétés de la mémoire du tampon. \end{DoxyCompactList}\item 
+vk\+::\+Device\+Size \mbox{\hyperlink{classlve_1_1_lve_buffer_a4f5e91163936df8b5d11f9d24ce1172e}{Get\+Buffer\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Récupère la taille totale du tampon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Classe représentant un tampon Vulkan. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classlve_1_1_lve_buffer_ade3763325c66ecf858b7fe9f3460eece}\label{classlve_1_1_lve_buffer_ade3763325c66ecf858b7fe9f3460eece} 
+\index{lve::LveBuffer@{lve::LveBuffer}!LveBuffer@{LveBuffer}}
+\index{LveBuffer@{LveBuffer}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{LveBuffer()}{LveBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Buffer\+::\+Lve\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&}]{\+\_\+device,  }\item[{vk\+::\+Device\+Size}]{\+\_\+instance\+Size,  }\item[{uint32\+\_\+t}]{\+\_\+instance\+Count,  }\item[{vk\+::\+Buffer\+Usage\+Flags}]{\+\_\+usage\+Flags,  }\item[{vk\+::\+Memory\+Property\+Flags}]{\+\_\+memory\+Property\+Flags,  }\item[{vk\+::\+Device\+Size}]{\+\_\+min\+Offset\+Alignment = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Constructeur de \doxylink{classlve_1_1_lve_buffer}{Lve\+Buffer}. \Hypertarget{classlve_1_1_lve_buffer_aa6c331ab69d4aa643adf4064f6d0b0a6}\label{classlve_1_1_lve_buffer_aa6c331ab69d4aa643adf4064f6d0b0a6} 
+\index{lve::LveBuffer@{lve::LveBuffer}!````~LveBuffer@{\texorpdfstring{$\sim$}{\string~}LveBuffer}}
+\index{````~LveBuffer@{\texorpdfstring{$\sim$}{\string~}LveBuffer}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LveBuffer()}{\string~LveBuffer()}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Buffer\+::\texorpdfstring{$\sim$}{\string~}\+Lve\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructeur de \doxylink{classlve_1_1_lve_buffer}{Lve\+Buffer}. \Hypertarget{classlve_1_1_lve_buffer_a3d89ad819978a1b70af40eedffe52e84}\label{classlve_1_1_lve_buffer_a3d89ad819978a1b70af40eedffe52e84} 
+\index{lve::LveBuffer@{lve::LveBuffer}!LveBuffer@{LveBuffer}}
+\index{LveBuffer@{LveBuffer}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{LveBuffer()}{LveBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Buffer\+::\+Lve\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlve_1_1_lve_buffer}{Lve\+Buffer}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Constructeur de copie supprimé. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_lve_buffer_a1d4c7fa6311f80d62c12a3a639c8f8dd}\label{classlve_1_1_lve_buffer_a1d4c7fa6311f80d62c12a3a639c8f8dd} 
+\index{lve::LveBuffer@{lve::LveBuffer}!DescriptorInfo@{DescriptorInfo}}
+\index{DescriptorInfo@{DescriptorInfo}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{DescriptorInfo()}{DescriptorInfo()}}
+{\footnotesize\ttfamily vk\+::\+Descriptor\+Buffer\+Info lve\+::\+Lve\+Buffer\+::\+Descriptor\+Info (\begin{DoxyParamCaption}\item[{vk\+::\+Device\+Size}]{\+\_\+size = {\ttfamily VK\+\_\+WHOLE\+\_\+SIZE},  }\item[{vk\+::\+Device\+Size}]{\+\_\+offset = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+Récupère les informations de tampon de descripteur. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+size} & La taille des données à inclure dans les informations de descripteur. Par défaut, toute la taille des données est incluse. \\
+\hline
+{\em \+\_\+offset} & Le décalage à partir du début du tampon pour inclure dans les informations de descripteur. Par défaut, les informations de descripteur incluent le début du tampon.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Descriptor\+Buffer\+Info contenant les informations de tampon de descripteur.
+\end{DoxyReturn}
+Create a buffer info descriptor
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+size} & (Optional) Size of the memory range of the descriptor \\
+\hline
+{\em \+\_\+offset} & (Optional) Byte offset from beginning\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Descriptor\+Buffer\+Info of specified offset and range 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_buffer_a7c01c935c41e31c205c20d7bc53f1339}\label{classlve_1_1_lve_buffer_a7c01c935c41e31c205c20d7bc53f1339} 
+\index{lve::LveBuffer@{lve::LveBuffer}!DescriptorInfoForIndex@{DescriptorInfoForIndex}}
+\index{DescriptorInfoForIndex@{DescriptorInfoForIndex}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{DescriptorInfoForIndex()}{DescriptorInfoForIndex()}}
+{\footnotesize\ttfamily vk\+::\+Descriptor\+Buffer\+Info lve\+::\+Lve\+Buffer\+::\+Descriptor\+Info\+For\+Index (\begin{DoxyParamCaption}\item[{int}]{\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Récupère les informations de tampon de descripteur pour l\textquotesingle{}index spécifié. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+index} & L\textquotesingle{}index du tampon pour lequel récupérer les informations de descripteur.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Descriptor\+Buffer\+Info contenant les informations de tampon de descripteur pour l\textquotesingle{}index spécifié.
+\end{DoxyReturn}
+Create a buffer info descriptor
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+index} & Specifies the region given by index \texorpdfstring{$\ast$}{*} alignment\+Size\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Descriptor\+Buffer\+Info for instance at index 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_buffer_a469fde4476081eb91e2fdfe5f3228cd5}\label{classlve_1_1_lve_buffer_a469fde4476081eb91e2fdfe5f3228cd5} 
+\index{lve::LveBuffer@{lve::LveBuffer}!Flush@{Flush}}
+\index{Flush@{Flush}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{Flush()}{Flush()}}
+{\footnotesize\ttfamily vk\+::\+Result lve\+::\+Lve\+Buffer\+::\+Flush (\begin{DoxyParamCaption}\item[{vk\+::\+Device\+Size}]{\+\_\+size = {\ttfamily VK\+\_\+WHOLE\+\_\+SIZE},  }\item[{vk\+::\+Device\+Size}]{\+\_\+offset = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+Flushes the memory-\/mapped buffer range. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+size} & La taille de la plage du tampon à flusher. Par défaut, toute la taille du tampon est flushée. \\
+\hline
+{\em \+\_\+offset} & Le décalage à partir du début du tampon pour commencer le flush. Par défaut, le flush commence au début du tampon.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Result indiquant le succès ou l\textquotesingle{}échec de l\textquotesingle{}opération de flush.
+\end{DoxyReturn}
+Flush a memory range of the buffer to make it visible to the device
+
+\begin{DoxyNote}{Note}
+Only required for non-\/coherent memory
+\end{DoxyNote}
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+size} & (Optional) Size of the memory range to flush. Pass VK\+\_\+\+WHOLE\+\_\+\+SIZE to flush the complete buffer range. \\
+\hline
+{\em \+\_\+offset} & (Optional) Byte offset from beginning\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Result of the flush call 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_buffer_a3d8eebf70f870470496e9f06cf68170f}\label{classlve_1_1_lve_buffer_a3d8eebf70f870470496e9f06cf68170f} 
+\index{lve::LveBuffer@{lve::LveBuffer}!FlushIndex@{FlushIndex}}
+\index{FlushIndex@{FlushIndex}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{FlushIndex()}{FlushIndex()}}
+{\footnotesize\ttfamily vk\+::\+Result lve\+::\+Lve\+Buffer\+::\+Flush\+Index (\begin{DoxyParamCaption}\item[{int}]{\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Flushes the memory-\/mapped buffer range for the specified index. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+index} & L\textquotesingle{}index du tampon pour lequel effectuer le flush.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Result indiquant le succès ou l\textquotesingle{}échec de l\textquotesingle{}opération de flush.
+\end{DoxyReturn}
+Flush the memory range at index \texorpdfstring{$\ast$}{*} alignment\+Size of the buffer to make it visible to the device
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+index} & Used in offset calculation \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_buffer_a5ab64933278c2ba4dabb593f19b0d1d5}\label{classlve_1_1_lve_buffer_a5ab64933278c2ba4dabb593f19b0d1d5} 
+\index{lve::LveBuffer@{lve::LveBuffer}!GetAlignmentSize@{GetAlignmentSize}}
+\index{GetAlignmentSize@{GetAlignmentSize}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{GetAlignmentSize()}{GetAlignmentSize()}}
+{\footnotesize\ttfamily vk\+::\+Device\+Size lve\+::\+Lve\+Buffer\+::\+Get\+Alignment\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Récupère la taille d\textquotesingle{}alignement du tampon. 
+
+\begin{DoxyReturn}{Renvoie}
+La taille d\textquotesingle{}alignement du tampon. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_buffer_a123c3a8b7d2a889b2c33177830a6455b}\label{classlve_1_1_lve_buffer_a123c3a8b7d2a889b2c33177830a6455b} 
+\index{lve::LveBuffer@{lve::LveBuffer}!GetBuffer@{GetBuffer}}
+\index{GetBuffer@{GetBuffer}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{GetBuffer()}{GetBuffer()}}
+{\footnotesize\ttfamily vk\+::\+Buffer lve\+::\+Lve\+Buffer\+::\+Get\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Récupère le tampon Vulkan associé à l\textquotesingle{}objet \doxylink{classlve_1_1_lve_buffer}{Lve\+Buffer}. 
+
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Buffer contenant le tampon Vulkan. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_buffer_a4f5e91163936df8b5d11f9d24ce1172e}\label{classlve_1_1_lve_buffer_a4f5e91163936df8b5d11f9d24ce1172e} 
+\index{lve::LveBuffer@{lve::LveBuffer}!GetBufferSize@{GetBufferSize}}
+\index{GetBufferSize@{GetBufferSize}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{GetBufferSize()}{GetBufferSize()}}
+{\footnotesize\ttfamily vk\+::\+Device\+Size lve\+::\+Lve\+Buffer\+::\+Get\+Buffer\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Récupère la taille totale du tampon. 
+
+\begin{DoxyReturn}{Renvoie}
+La taille totale du tampon. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_buffer_a544b877cb8d2db1d8fd8e2e68637c95a}\label{classlve_1_1_lve_buffer_a544b877cb8d2db1d8fd8e2e68637c95a} 
+\index{lve::LveBuffer@{lve::LveBuffer}!GetInstanceCount@{GetInstanceCount}}
+\index{GetInstanceCount@{GetInstanceCount}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{GetInstanceCount()}{GetInstanceCount()}}
+{\footnotesize\ttfamily uint32\+\_\+t lve\+::\+Lve\+Buffer\+::\+Get\+Instance\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Récupère le nombre d\textquotesingle{}instances dans le tampon. 
+
+\begin{DoxyReturn}{Renvoie}
+Le nombre d\textquotesingle{}instances dans le tampon. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_buffer_a4cf00afb05543c9a4095f022dcd97b97}\label{classlve_1_1_lve_buffer_a4cf00afb05543c9a4095f022dcd97b97} 
+\index{lve::LveBuffer@{lve::LveBuffer}!GetInstanceSize@{GetInstanceSize}}
+\index{GetInstanceSize@{GetInstanceSize}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{GetInstanceSize()}{GetInstanceSize()}}
+{\footnotesize\ttfamily vk\+::\+Device\+Size lve\+::\+Lve\+Buffer\+::\+Get\+Instance\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Récupère la taille de chaque instance dans le tampon. 
+
+\begin{DoxyReturn}{Renvoie}
+La taille de chaque instance dans le tampon. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_buffer_a97d181347b813107739e2b4911470b89}\label{classlve_1_1_lve_buffer_a97d181347b813107739e2b4911470b89} 
+\index{lve::LveBuffer@{lve::LveBuffer}!GetMappedMemory@{GetMappedMemory}}
+\index{GetMappedMemory@{GetMappedMemory}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{GetMappedMemory()}{GetMappedMemory()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} lve\+::\+Lve\+Buffer\+::\+Get\+Mapped\+Memory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Récupère le pointeur vers la mémoire mappée du tampon. 
+
+\begin{DoxyReturn}{Renvoie}
+Pointeur vers la mémoire mappée du tampon. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_buffer_a8eedbdd757e9d0a72099d8463dcd171b}\label{classlve_1_1_lve_buffer_a8eedbdd757e9d0a72099d8463dcd171b} 
+\index{lve::LveBuffer@{lve::LveBuffer}!GetMemoryPropertyFlags@{GetMemoryPropertyFlags}}
+\index{GetMemoryPropertyFlags@{GetMemoryPropertyFlags}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{GetMemoryPropertyFlags()}{GetMemoryPropertyFlags()}}
+{\footnotesize\ttfamily vk\+::\+Memory\+Property\+Flags lve\+::\+Lve\+Buffer\+::\+Get\+Memory\+Property\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Récupère les propriétés de la mémoire du tampon. 
+
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Memory\+Property\+Flags contenant les propriétés de la mémoire du tampon. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_buffer_a66004c65f1a48e5f0ca9ac588230ae4f}\label{classlve_1_1_lve_buffer_a66004c65f1a48e5f0ca9ac588230ae4f} 
+\index{lve::LveBuffer@{lve::LveBuffer}!GetUsageFlags@{GetUsageFlags}}
+\index{GetUsageFlags@{GetUsageFlags}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{GetUsageFlags()}{GetUsageFlags()}}
+{\footnotesize\ttfamily vk\+::\+Buffer\+Usage\+Flags lve\+::\+Lve\+Buffer\+::\+Get\+Usage\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Récupère les indicateurs d\textquotesingle{}utilisation du tampon. 
+
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Buffer\+Usage\+Flags contenant les indicateurs d\textquotesingle{}utilisation du tampon. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_buffer_a9c4726a7691ff98b61d244833825cee4}\label{classlve_1_1_lve_buffer_a9c4726a7691ff98b61d244833825cee4} 
+\index{lve::LveBuffer@{lve::LveBuffer}!Invalidate@{Invalidate}}
+\index{Invalidate@{Invalidate}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{Invalidate()}{Invalidate()}}
+{\footnotesize\ttfamily vk\+::\+Result lve\+::\+Lve\+Buffer\+::\+Invalidate (\begin{DoxyParamCaption}\item[{vk\+::\+Device\+Size}]{\+\_\+size = {\ttfamily VK\+\_\+WHOLE\+\_\+SIZE},  }\item[{vk\+::\+Device\+Size}]{\+\_\+offset = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+Invalidate the memory-\/mapped buffer range. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+size} & La taille de la plage du tampon à invalider. Par défaut, toute la taille du tampon est invalidée. \\
+\hline
+{\em \+\_\+offset} & Le décalage à partir du début du tampon pour commencer l\textquotesingle{}invalidation. Par défaut, l\textquotesingle{}invalidation commence au début du tampon.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Result indiquant le succès ou l\textquotesingle{}échec de l\textquotesingle{}opération d\textquotesingle{}invalidation.
+\end{DoxyReturn}
+Invalidate a memory range of the buffer to make it visible to the host
+
+\begin{DoxyNote}{Note}
+Only required for non-\/coherent memory
+\end{DoxyNote}
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+size} & (Optional) Size of the memory range to invalidate. Pass VK\+\_\+\+WHOLE\+\_\+\+SIZE to invalidate the complete buffer range. \\
+\hline
+{\em \+\_\+offset} & (Optional) Byte offset from beginning\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Result of the invalidate call 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_buffer_a5f2aa2a10a5c6eb70d267ece1d174377}\label{classlve_1_1_lve_buffer_a5f2aa2a10a5c6eb70d267ece1d174377} 
+\index{lve::LveBuffer@{lve::LveBuffer}!InvalidateIndex@{InvalidateIndex}}
+\index{InvalidateIndex@{InvalidateIndex}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{InvalidateIndex()}{InvalidateIndex()}}
+{\footnotesize\ttfamily vk\+::\+Result lve\+::\+Lve\+Buffer\+::\+Invalidate\+Index (\begin{DoxyParamCaption}\item[{int}]{\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Invalide la plage du tampon pour l\textquotesingle{}index spécifié. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+index} & L\textquotesingle{}index du tampon pour lequel effectuer l\textquotesingle{}invalidation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Result indiquant le succès ou l\textquotesingle{}échec de l\textquotesingle{}opération d\textquotesingle{}invalidation.
+\end{DoxyReturn}
+Invalidate a memory range of the buffer to make it visible to the host
+
+\begin{DoxyNote}{Note}
+Only required for non-\/coherent memory
+\end{DoxyNote}
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+index} & Specifies the region to invalidate\+: index \texorpdfstring{$\ast$}{*} alignment\+Size\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Result of the invalidate call 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_buffer_a058b9e955091430382eabb82a92d6e14}\label{classlve_1_1_lve_buffer_a058b9e955091430382eabb82a92d6e14} 
+\index{lve::LveBuffer@{lve::LveBuffer}!Map@{Map}}
+\index{Map@{Map}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily vk\+::\+Result lve\+::\+Lve\+Buffer\+::\+Map (\begin{DoxyParamCaption}\item[{vk\+::\+Device\+Size}]{\+\_\+size = {\ttfamily VK\+\_\+WHOLE\+\_\+SIZE},  }\item[{vk\+::\+Device\+Size}]{\+\_\+offset = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Mappe le tampon en mémoire. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+size} & La taille du tampon à mapper. Par défaut, toute la taille du tampon est mappée. \\
+\hline
+{\em \+\_\+offset} & Le décalage à partir du début du tampon pour commencer le mappage. Par défaut, le mappage commence au début du tampon.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Result indiquant le succès ou l\textquotesingle{}échec de l\textquotesingle{}opération de mappage.
+\end{DoxyReturn}
+Map a memory range of this buffer. If successful, mapped points to the specified buffer range.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+size} & (Optional) Size of the memory range to map. Pass VK\+\_\+\+WHOLE\+\_\+\+SIZE to map the complete buffer range. \\
+\hline
+{\em \+\_\+offset} & (Optional) Byte offset from beginning\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Result of the buffer mapping call 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_buffer_a8dfe52fd4f156fa70c72c15da717ad51}\label{classlve_1_1_lve_buffer_a8dfe52fd4f156fa70c72c15da717ad51} 
+\index{lve::LveBuffer@{lve::LveBuffer}!operator=@{operator=}}
+\index{operator=@{operator=}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_lve_buffer}{Lve\+Buffer}} \& lve\+::\+Lve\+Buffer\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlve_1_1_lve_buffer}{Lve\+Buffer}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Opérateur d\textquotesingle{}affectation supprimé. \Hypertarget{classlve_1_1_lve_buffer_a3737439d5df0a6924df04243cea435c6}\label{classlve_1_1_lve_buffer_a3737439d5df0a6924df04243cea435c6} 
+\index{lve::LveBuffer@{lve::LveBuffer}!Unmap@{Unmap}}
+\index{Unmap@{Unmap}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{Unmap()}{Unmap()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Buffer\+::\+Unmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Désalloue le tampon mappé en mémoire. 
+
+Unmap a mapped memory range
+
+\begin{DoxyNote}{Note}
+Does not return a result as vk\+Unmap\+Memory can\textquotesingle{}t fail 
+\end{DoxyNote}
+\Hypertarget{classlve_1_1_lve_buffer_a0418ba23f49723e99673394eddd51379}\label{classlve_1_1_lve_buffer_a0418ba23f49723e99673394eddd51379} 
+\index{lve::LveBuffer@{lve::LveBuffer}!WriteToBuffer@{WriteToBuffer}}
+\index{WriteToBuffer@{WriteToBuffer}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{WriteToBuffer()}{WriteToBuffer()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Buffer\+::\+Write\+To\+Buffer (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{\+\_\+data,  }\item[{vk\+::\+Device\+Size}]{\+\_\+size = {\ttfamily VK\+\_\+WHOLE\+\_\+SIZE},  }\item[{vk\+::\+Device\+Size}]{\+\_\+offset = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+Écrit les données dans le tampon. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+data} & Pointeur vers les données à écrire dans le tampon. \\
+\hline
+{\em \+\_\+size} & La taille des données à écrire dans le tampon. Par défaut, toute la taille des données est écrite. \\
+\hline
+{\em \+\_\+offset} & Le décalage à partir du début du tampon où écrire les données. Par défaut, les données sont écrites à partir du début du tampon.\\
+\hline
+\end{DoxyParams}
+Copies the specified data to the mapped buffer. Default value writes whole buffer range
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+data} & Pointer to the data to copy \\
+\hline
+{\em \+\_\+size} & (Optional) Size of the data to copy. Pass VK\+\_\+\+WHOLE\+\_\+\+SIZE to flush the complete buffer range. \\
+\hline
+{\em \+\_\+offset} & (Optional) Byte offset from beginning of mapped region \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_buffer_ac1263a1e75b0266d516446e56325a241}\label{classlve_1_1_lve_buffer_ac1263a1e75b0266d516446e56325a241} 
+\index{lve::LveBuffer@{lve::LveBuffer}!WriteToIndex@{WriteToIndex}}
+\index{WriteToIndex@{WriteToIndex}!lve::LveBuffer@{lve::LveBuffer}}
+\doxysubsubsection{\texorpdfstring{WriteToIndex()}{WriteToIndex()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Buffer\+::\+Write\+To\+Index (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{\+\_\+data,  }\item[{int}]{\+\_\+index }\end{DoxyParamCaption})}
+
+
+
+Écrit les données dans l\textquotesingle{}index spécifié du tampon. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+data} & Pointeur vers les données à écrire dans le tampon. \\
+\hline
+{\em \+\_\+index} & L\textquotesingle{}index dans le tampon où écrire les données.\\
+\hline
+\end{DoxyParams}
+Copies "{}instance\+Size"{} bytes of data to the mapped buffer at an offset of index \texorpdfstring{$\ast$}{*} alignment\+Size
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+data} & Pointer to the data to copy \\
+\hline
+{\em \+\_\+index} & Used in offset calculation \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Lve\+Engine/lve\+\_\+buffer.\+h\item 
+sources/\+Lve\+Engine/lve\+\_\+buffer.\+cpp\end{DoxyCompactItemize}

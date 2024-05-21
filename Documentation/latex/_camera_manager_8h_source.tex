@@ -1,0 +1,106 @@
+\doxysection{Camera\+Manager.\+h}
+\hypertarget{_camera_manager_8h_source}{}\label{_camera_manager_8h_source}\index{includes/Camera/CameraManager.h@{includes/Camera/CameraManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ std}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stack>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Camera}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Camera/BaseCamera.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Modules/Module.h"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }lve}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{class\ }BaseCamera;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ TODO:\ Make\ inherit\ from\ System}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlve_1_1_camera_manager}{CameraManager}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_module}{Module}}}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_camera_manager_abb0a3b2b3ba147a82859f76621bcf719}{CameraManager}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_camera_manager_ab43e4c4467c11bfa90b16c8324ac8df9}{\string~CameraManager}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_camera_manager_aa70b6eae079acb080fdcf6d1829f069f}{OnPostSceneChange}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_camera_manager_aa5fd44f2794c8de7fbe5dbd460b34615}{AddCamera}}(\mbox{\hyperlink{classlve_1_1_base_camera}{BaseCamera}}*\ \_camera,\ \textcolor{keywordtype}{bool}\ \_bSwitchTo\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clears\ stack\ and\ pushes\ the\ given\ camera\ onto\ it,\ then\ returns\ a\ pointer\ to\ it}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_base_camera}{BaseCamera}}*\ \mbox{\hyperlink{classlve_1_1_camera_manager_a06d062546e8d3335bf8bb5df93294217}{CycleCamera}}(uint32\_t\ \_deltaIndex,\ \textcolor{keywordtype}{bool}\ \_bAlignWithPrevious\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_base_camera}{BaseCamera}}*\ \mbox{\hyperlink{classlve_1_1_camera_manager_a9f1107dba75de18fa58ab0adc64cd351}{PushCamera}}(\mbox{\hyperlink{classlve_1_1_base_camera}{BaseCamera}}*\ \_camera,\ \textcolor{keywordtype}{bool}\ \_bAlignWithPrevious,\ \textcolor{keywordtype}{bool}\ \_bInitialize);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_base_camera}{BaseCamera}}*\ \mbox{\hyperlink{classlve_1_1_camera_manager_a4279ff3beb1a41337747648fd81bb188}{PushCameraByName}}(\textcolor{keyword}{const}\ std::string\&\ \_name,\ \textcolor{keywordtype}{bool}\ \_bAlignWithPrevious,\ \textcolor{keywordtype}{bool}\ \_bInitialize);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_camera_manager_ac62024485d7bda8cbe19192d6d1c1118}{PopCamera}}(\textcolor{keywordtype}{bool}\ \_bAlignWithCurrent\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#pragma\ region\ Getter}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlve_1_1_base_camera}{BaseCamera}}*\ \mbox{\hyperlink{classlve_1_1_camera_manager_a3e7274417894fe6bd513d2e4eeea2ecf}{GetCurrentCamera}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classlve_1_1_base_camera}{BaseCamera}}*\ \mbox{\hyperlink{classlve_1_1_camera_manager_a50e8df6872ef731f12d3a127049c8727}{GetCameraByName}}(\textcolor{keyword}{const}\ std::string\&\ \_name)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#pragma\ endregion}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#pragma\ region\ Setter}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_base_camera}{BaseCamera}}*\ \mbox{\hyperlink{classlve_1_1_camera_manager_a7045027b41d266b91d007e2ceaaaf0f6}{SetCamera}}(\mbox{\hyperlink{classlve_1_1_base_camera}{BaseCamera}}*\ \_camera,\ \textcolor{keywordtype}{bool}\ \_bAlignWithPrevious);}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_base_camera}{BaseCamera}}*\ \mbox{\hyperlink{classlve_1_1_camera_manager_ac8e0e786fe08bf3496cc8d2e6ee6f101}{SetCameraByName}}(\textcolor{keyword}{const}\ std::string\&\ \_name,\ \textcolor{keywordtype}{bool}\ \_bAlignWithPrevious);}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#pragma\ endregion}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_camera_manager_a1b1d319c94914d1ca5f664a5a364db2d}{DrawImGuiObjects}}();}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_camera_manager_ad6b29551b7cceaebb4c52298b740cd1c}{AlignCameras}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_base_camera}{BaseCamera}}*\ \_from,\ \mbox{\hyperlink{classlve_1_1_base_camera}{BaseCamera}}*\ \_to);}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#pragma\ region\ Event}}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_camera_manager_aa5a34d8688524f4c9aa19b6c39fd666e}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_camera_manager_aec01cb4461c34667ec1fd0e29e52e5c4}{Start}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_camera_manager_ad10b9d64802b6138440542b063a6dc3f}{FixedUpdate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_camera_manager_a0f78f04e89c740917534cfb281ef638d}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_camera_manager_a2d0fd46b41c1d8268d04be02130fcf2d}{PreRender}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_camera_manager_aa87a8b6743c4dc934249a9aed7be4c25}{Render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_camera_manager_a28606a0bc5d2d24070708181eb81635d}{RenderGui}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_camera_manager_aa9197459d1795ea81b84f301a9e59984}{PostRender}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_camera_manager_a4f2bcf387d73f5ba54845a6232f5028a}{Release}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_camera_manager_a613105627c3a7c59236af821c91b685e}{Finalize}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00226\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#pragma\ endregion}}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*EventReply\ OnActionEvent(Action\ action,\ ActionEvent\ actionEvent);}}
+\DoxyCodeLine{00230\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ ActionCallback<CameraManager>\ m\_ActionCallback;*/}}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ GetCameraIndex(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_base_camera}{BaseCamera}}*\ \_camera)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Roll\ custom\ stack\ class}}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Stack\ containing\ temporary\ cameras,\ the\ topmost\ of\ which\ is\ the\ current\ camera}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Always\ contains\ at\ least\ one\ element}}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ std::stack<BaseCamera*>\ cameraStack;\ }
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ All\ cameras,\ unordered}}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<BaseCamera*>\ cameras;\ \ \ \ }
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bInitialized\ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \ \ \ \ \};}
+\DoxyCodeLine{00255\ \};}
+
+\end{DoxyCode}

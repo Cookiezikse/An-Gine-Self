@@ -1,0 +1,38 @@
+\doxysection{Référence de la classe Bousk\+::Network\+::UDP\+::Simulator}
+\hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator}{}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator}\index{Bousk::Network::UDP::Simulator@{Bousk::Network::UDP::Simulator}}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_a6eccf3e633fe5dc87fa5b21d8762c61d}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_a6eccf3e633fe5dc87fa5b21d8762c61d} 
+void {\bfseries enable} ()
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_ae4288a0b699dd4ebb37cfb51a9c86bd3}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_ae4288a0b699dd4ebb37cfb51a9c86bd3} 
+void {\bfseries disable} ()
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_a13387cf099c71bb8b928db73da89a7c6}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_a13387cf099c71bb8b928db73da89a7c6} 
+bool {\bfseries is\+Enabled} () const
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_a63fc2b6f3663e177702265b8b2c8aa83}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_a63fc2b6f3663e177702265b8b2c8aa83} 
+void {\bfseries seed} (unsigned int value)
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_a890a102380d6dae89e2f6e7ddb7c4634}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_a890a102380d6dae89e2f6e7ddb7c4634} 
+void {\bfseries set\+Duplicate} (\mbox{\hyperlink{class_bousk_1_1_ranged_integer}{Ranged\+Integer}}$<$ 1, 10 $>$ duplicate)
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_a44cf93b013a9bdd9caddbb084572aff0}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_a44cf93b013a9bdd9caddbb084572aff0} 
+void {\bfseries set\+Loss\+Rate} (\mbox{\hyperlink{class_bousk_1_1_ranged_integer}{Ranged\+Integer}}$<$ 0, 100 $>$ loss)
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_a031cf104f8f0ae9f1d5e34acd9f0d669}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_a031cf104f8f0ae9f1d5e34acd9f0d669} 
+void {\bfseries set\+Delay} (\mbox{\hyperlink{class_bousk_1_1_ranged_integer}{Ranged\+Integer}}$<$ 0, 250 $>$ fixed, \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{Ranged\+Integer}}$<$ 0, 100 $>$ random)
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_aac8cfe7bbd9b06aa37be4024f4984c36}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_aac8cfe7bbd9b06aa37be4024f4984c36} 
+void {\bfseries push} (const \mbox{\hyperlink{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram}{Datagram}} \&datagram, const \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} \&from)
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_ac89b5259794dbc364c7a0f05427c7780}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator_ac89b5259794dbc364c7a0f05427c7780} 
+std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram}{Datagram}}, \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}} $>$ $>$ {\bfseries poll} ()
+\end{DoxyCompactItemize}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+UDP/\+Protocol/Simulator.\+h\item 
+sources/\+UDP/\+Protocol/Simulator.\+cpp\end{DoxyCompactItemize}

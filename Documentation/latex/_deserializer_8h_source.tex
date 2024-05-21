@@ -1,0 +1,103 @@
+\doxysection{Deserializer.\+h}
+\hypertarget{_deserializer_8h_source}{}\label{_deserializer_8h_source}\index{includes/UDP/Serialization/Deserializer.h@{includes/UDP/Serialization/Deserializer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}UDP/Settings.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}UDP/Types.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_serialization___test}{Serialization\_Test}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }Bousk}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{namespace\ }Serialization}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }Serializable;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bousk_1_1_serialization_1_1_deserializer}{Deserializer}}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_serialization___test}{Serialization\_Test}};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_serialization_1_1_deserializer}{Deserializer}}(\textcolor{keyword}{const}\ uint8*\ buffer,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ bufferSize)}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ mBuffer(buffer)}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ mBufferSize(bufferSize)}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ read(\mbox{\hyperlink{class_bousk_1_1_serialization_1_1_serializable}{Serializable}}\&\ data);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ read(uint8\&\ data,\ uint8\ minValue,\ uint8\ maxValue);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ read(uint16\&\ data,\ uint16\ minValue,\ uint16\ maxValue);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ read(uint32\&\ data,\ uint32\ minValue,\ uint32\ maxValue);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ read(uint64\&\ data,\ uint64\ minValue,\ uint64\ maxValue);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ read(uint8\&\ data)\ \{\ \textcolor{keywordflow}{return}\ read(data,\ std::numeric\_limits<uint8>::min(),\ std::numeric\_limits<uint8>::max());\ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ read(uint16\&\ data)\ \{\ \textcolor{keywordflow}{return}\ read(data,\ std::numeric\_limits<uint16>::min(),\ std::numeric\_limits<uint16>::max());\ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ read(uint32\&\ data)\ \{\ \textcolor{keywordflow}{return}\ read(data,\ std::numeric\_limits<uint32>::min(),\ std::numeric\_limits<uint32>::max());\ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ read(uint64\&\ data)\ \{\ \textcolor{keywordflow}{return}\ read(data,\ std::numeric\_limits<uint64>::min(),\ std::numeric\_limits<uint64>::max());\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ read(int8\&\ data,\ int8\ minValue,\ int8\ maxValue);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ read(int16\&\ data,\ int16\ minValue,\ int16\ maxValue);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ read(int32\&\ data,\ int32\ minValue,\ int32\ maxValue);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ read(int64\&\ data,\ int64\ minValue,\ int64\ maxValue);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ read(int8\&\ data)\ \{\ \textcolor{keywordflow}{return}\ read(data,\ std::numeric\_limits<int8>::min(),\ std::numeric\_limits<int8>::max());\ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ read(int16\&\ data)\ \{\ \textcolor{keywordflow}{return}\ read(data,\ std::numeric\_limits<int16>::min(),\ std::numeric\_limits<int16>::max());\ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ read(int32\&\ data)\ \{\ \textcolor{keywordflow}{return}\ read(data,\ std::numeric\_limits<int32>::min(),\ std::numeric\_limits<int32>::max());\ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ read(int64\&\ data)\ \{\ \textcolor{keywordflow}{return}\ read(data,\ std::numeric\_limits<int64>::min(),\ std::numeric\_limits<int64>::max());\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ read(\textcolor{keywordtype}{bool}\&\ data);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ To\ use\ if\ your\ enum\ has\ Min\ \&\ Max\ entries}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ E>}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<std::is\_enum<E>::value,\ \textcolor{keywordtype}{bool}>::type\ read(E\&\ data)}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ read(data,\ E::Min,\ E::Max);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ this\ one\ to\ use\ custom\ min\ \&\ max\ enum\ values}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ E>}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ std::enable\_if<std::is\_enum<E>::value,\ \textcolor{keywordtype}{bool}>::type\ read(E\&\ data,\ E\ min,\ E\ max)}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }T\ =\ \textcolor{keyword}{typename}\ std::underlying\_type<E>::type;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ T\ temp;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (read(temp,\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(min),\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(max)))}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data\ =\ \textcolor{keyword}{static\_cast<}E\textcolor{keyword}{>}(temp);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#if\ BOUSKNET\_ALLOW\_FLOAT32\_SERIALIZATION\ ==\ BOUSKNET\_SETTINGS\_ENABLED}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ read(float32\&\ data);}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BOUSKNET\_ALLOW\_FLOAT32\_SERIALIZATION\ ==\ BOUSKNET\_SETTINGS\_ENABLED}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ read(std::vector<T>\&\ data)\ \{\ \textcolor{keywordflow}{return}\ readContainer(data);\ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ read(std::string\&\ data)\ \{\ \textcolor{keywordflow}{return}\ readContainer(data);\ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ readBits(uint8\ nbBits,\ uint8*\ buffer,\ uint8\ bufferSize);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ CONTAINER>}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ readContainer(CONTAINER\&\ container);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{size\_t}\ remainingBytes()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mBufferSize\ -\/\ mBytesRead;\ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{size\_t}\ bufferSizeBits()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mBufferSize\ *\ 8;\ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{size\_t}\ bufferReadBits()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mBytesRead\ *\ 8\ +\ mBitsRead;\ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{size\_t}\ remainingBits()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ bufferSizeBits()\ -\/\ bufferReadBits();\ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ For\ std::string\ support}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ read(\textcolor{keywordtype}{char}\&\ data)\ \{\ \textcolor{keywordflow}{return}\ read(\textcolor{keyword}{reinterpret\_cast<}uint8\&\textcolor{keyword}{>}(data));\ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint8*\ mBuffer;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ mBufferSize;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ mBytesRead\{\ 0\ \};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ uint8\ mBitsRead\{\ 0\ \};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#include\ <UDP/Serialization/Deserializer.inl>}}
+
+\end{DoxyCode}

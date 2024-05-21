@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/LveEngine/lve_frame_info.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_d17dbbfb40e9127a51f93ba39cbbb546.html">LveEngine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">lve_frame_info.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;Camera/lve_camera.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//lib</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vulkan/vulkan.hpp&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>lve</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">    #define MAX_LIGHTS 10</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structlve_1_1_point_light.html">   15</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structlve_1_1_point_light.html">PointLight</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structlve_1_1_point_light.html#a29252cebf3aa70913741c347fc82d33d">   17</a></span>        glm::vec4 <a class="code hl_variable" href="structlve_1_1_point_light.html#a29252cebf3aa70913741c347fc82d33d">position</a>{}; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structlve_1_1_point_light.html#af1ab48887995e5532ea19bee5823f374">   18</a></span>        glm::vec4 <a class="code hl_variable" href="structlve_1_1_point_light.html#af1ab48887995e5532ea19bee5823f374">color</a>{};    </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    };</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structlve_1_1_global_ubo.html">   24</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structlve_1_1_global_ubo.html">GlobalUbo</a></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structlve_1_1_global_ubo.html#a595834a9df1ded37f7b62b6bc9f9e966">   26</a></span>        glm::mat4  <a class="code hl_variable" href="structlve_1_1_global_ubo.html#a595834a9df1ded37f7b62b6bc9f9e966">projection</a>{1.f};                        </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structlve_1_1_global_ubo.html#ac348fd44b7d02cacefe128998e05272a">   27</a></span>        glm::mat4  <a class="code hl_variable" href="structlve_1_1_global_ubo.html#ac348fd44b7d02cacefe128998e05272a">view</a>{1.f};                              </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structlve_1_1_global_ubo.html#acafb7449fc35300919757f7252e683a7">   28</a></span>        glm::mat4  <a class="code hl_variable" href="structlve_1_1_global_ubo.html#acafb7449fc35300919757f7252e683a7">inverseView</a>{1.f};                       </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structlve_1_1_global_ubo.html#a372ba2b999589adb753f2c0cdc9c1232">   29</a></span>        glm::vec4  <a class="code hl_variable" href="structlve_1_1_global_ubo.html#a372ba2b999589adb753f2c0cdc9c1232">ambientLightColor</a>{1.f, 1.f, 1.f, .02f}; </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structlve_1_1_global_ubo.html#af8d207f5793c1d1de4ff418e705f218e">   30</a></span>        <a class="code hl_struct" href="structlve_1_1_point_light.html">PointLight</a> <a class="code hl_variable" href="structlve_1_1_global_ubo.html#af8d207f5793c1d1de4ff418e705f218e">pointLights</a>[MAX_LIGHTS];                </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structlve_1_1_global_ubo.html#a4bd2d4d4d5cff24e720c30b575ed8f36">   31</a></span>        <span class="keywordtype">int</span>        <a class="code hl_variable" href="structlve_1_1_global_ubo.html#a4bd2d4d4d5cff24e720c30b575ed8f36">numLights</a>;                              </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    };</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structlve_1_1_frame_info.html">   37</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structlve_1_1_frame_info.html">FrameInfo</a></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structlve_1_1_frame_info.html#aaf94e7c686046eaffcaea2fd55c0bd84">   39</a></span>        <span class="keywordtype">int</span>                 <a class="code hl_variable" href="structlve_1_1_frame_info.html#aaf94e7c686046eaffcaea2fd55c0bd84">frameIndex</a>;          </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structlve_1_1_frame_info.html#a1ac24afb21b5c256f43bf06d37cb40ab">   40</a></span>        <span class="keywordtype">float</span>               <a class="code hl_variable" href="structlve_1_1_frame_info.html#a1ac24afb21b5c256f43bf06d37cb40ab">frameTime</a>;           </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structlve_1_1_frame_info.html#ad59f1b9c9f59d8e59bce8ba2ba9f3ec6">   41</a></span>        vk::CommandBuffer   <a class="code hl_variable" href="structlve_1_1_frame_info.html#ad59f1b9c9f59d8e59bce8ba2ba9f3ec6">commandBuffer</a>;       </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structlve_1_1_frame_info.html#aca809bd36347b1507d4df1574d354c70">   42</a></span>        <a class="code hl_class" href="classlve_1_1_lve_camera.html">LveCamera</a>&amp;          <a class="code hl_variable" href="structlve_1_1_frame_info.html#aca809bd36347b1507d4df1574d354c70">camera</a>;              </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structlve_1_1_frame_info.html#a2cd4512e02675f7297d88c2dc0b5522a">   43</a></span>        vk::DescriptorSet   <a class="code hl_variable" href="structlve_1_1_frame_info.html#a2cd4512e02675f7297d88c2dc0b5522a">globalDescriptorSet</a>; </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        vk::DescriptorSet   tex1DescriptorSet;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        vk::DescriptorSet   tex2DescriptorSet;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    };</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>} <span class="comment">// namespace lve</span></div>
+<div class="ttc" id="aclasslve_1_1_lve_camera_html"><div class="ttname"><a href="classlve_1_1_lve_camera.html">lve::LveCamera</a></div><div class="ttdef"><b>Definition</b> lve_camera.h:11</div></div>
+<div class="ttc" id="astructlve_1_1_frame_info_html"><div class="ttname"><a href="structlve_1_1_frame_info.html">lve::FrameInfo</a></div><div class="ttdoc">Contient les informations de trame utilisées lors du rendu.</div><div class="ttdef"><b>Definition</b> lve_frame_info.h:38</div></div>
+<div class="ttc" id="astructlve_1_1_frame_info_html_a1ac24afb21b5c256f43bf06d37cb40ab"><div class="ttname"><a href="structlve_1_1_frame_info.html#a1ac24afb21b5c256f43bf06d37cb40ab">lve::FrameInfo::frameTime</a></div><div class="ttdeci">float frameTime</div><div class="ttdef"><b>Definition</b> lve_frame_info.h:40</div></div>
+<div class="ttc" id="astructlve_1_1_frame_info_html_a2cd4512e02675f7297d88c2dc0b5522a"><div class="ttname"><a href="structlve_1_1_frame_info.html#a2cd4512e02675f7297d88c2dc0b5522a">lve::FrameInfo::globalDescriptorSet</a></div><div class="ttdeci">vk::DescriptorSet globalDescriptorSet</div><div class="ttdef"><b>Definition</b> lve_frame_info.h:43</div></div>
+<div class="ttc" id="astructlve_1_1_frame_info_html_aaf94e7c686046eaffcaea2fd55c0bd84"><div class="ttname"><a href="structlve_1_1_frame_info.html#aaf94e7c686046eaffcaea2fd55c0bd84">lve::FrameInfo::frameIndex</a></div><div class="ttdeci">int frameIndex</div><div class="ttdef"><b>Definition</b> lve_frame_info.h:39</div></div>
+<div class="ttc" id="astructlve_1_1_frame_info_html_aca809bd36347b1507d4df1574d354c70"><div class="ttname"><a href="structlve_1_1_frame_info.html#aca809bd36347b1507d4df1574d354c70">lve::FrameInfo::camera</a></div><div class="ttdeci">LveCamera &amp; camera</div><div class="ttdef"><b>Definition</b> lve_frame_info.h:42</div></div>
+<div class="ttc" id="astructlve_1_1_frame_info_html_ad59f1b9c9f59d8e59bce8ba2ba9f3ec6"><div class="ttname"><a href="structlve_1_1_frame_info.html#ad59f1b9c9f59d8e59bce8ba2ba9f3ec6">lve::FrameInfo::commandBuffer</a></div><div class="ttdeci">vk::CommandBuffer commandBuffer</div><div class="ttdef"><b>Definition</b> lve_frame_info.h:41</div></div>
+<div class="ttc" id="astructlve_1_1_global_ubo_html"><div class="ttname"><a href="structlve_1_1_global_ubo.html">lve::GlobalUbo</a></div><div class="ttdoc">Représente les données uniformes globales utilisées dans le pipeline de rendu.</div><div class="ttdef"><b>Definition</b> lve_frame_info.h:25</div></div>
+<div class="ttc" id="astructlve_1_1_global_ubo_html_a372ba2b999589adb753f2c0cdc9c1232"><div class="ttname"><a href="structlve_1_1_global_ubo.html#a372ba2b999589adb753f2c0cdc9c1232">lve::GlobalUbo::ambientLightColor</a></div><div class="ttdeci">glm::vec4 ambientLightColor</div><div class="ttdef"><b>Definition</b> lve_frame_info.h:29</div></div>
+<div class="ttc" id="astructlve_1_1_global_ubo_html_a4bd2d4d4d5cff24e720c30b575ed8f36"><div class="ttname"><a href="structlve_1_1_global_ubo.html#a4bd2d4d4d5cff24e720c30b575ed8f36">lve::GlobalUbo::numLights</a></div><div class="ttdeci">int numLights</div><div class="ttdef"><b>Definition</b> lve_frame_info.h:31</div></div>
+<div class="ttc" id="astructlve_1_1_global_ubo_html_a595834a9df1ded37f7b62b6bc9f9e966"><div class="ttname"><a href="structlve_1_1_global_ubo.html#a595834a9df1ded37f7b62b6bc9f9e966">lve::GlobalUbo::projection</a></div><div class="ttdeci">glm::mat4 projection</div><div class="ttdef"><b>Definition</b> lve_frame_info.h:26</div></div>
+<div class="ttc" id="astructlve_1_1_global_ubo_html_ac348fd44b7d02cacefe128998e05272a"><div class="ttname"><a href="structlve_1_1_global_ubo.html#ac348fd44b7d02cacefe128998e05272a">lve::GlobalUbo::view</a></div><div class="ttdeci">glm::mat4 view</div><div class="ttdef"><b>Definition</b> lve_frame_info.h:27</div></div>
+<div class="ttc" id="astructlve_1_1_global_ubo_html_acafb7449fc35300919757f7252e683a7"><div class="ttname"><a href="structlve_1_1_global_ubo.html#acafb7449fc35300919757f7252e683a7">lve::GlobalUbo::inverseView</a></div><div class="ttdeci">glm::mat4 inverseView</div><div class="ttdef"><b>Definition</b> lve_frame_info.h:28</div></div>
+<div class="ttc" id="astructlve_1_1_global_ubo_html_af8d207f5793c1d1de4ff418e705f218e"><div class="ttname"><a href="structlve_1_1_global_ubo.html#af8d207f5793c1d1de4ff418e705f218e">lve::GlobalUbo::pointLights</a></div><div class="ttdeci">PointLight pointLights[MAX_LIGHTS]</div><div class="ttdef"><b>Definition</b> lve_frame_info.h:30</div></div>
+<div class="ttc" id="astructlve_1_1_point_light_html"><div class="ttname"><a href="structlve_1_1_point_light.html">lve::PointLight</a></div><div class="ttdoc">Représente une lumière ponctuelle dans l'espace 3D.</div><div class="ttdef"><b>Definition</b> lve_frame_info.h:16</div></div>
+<div class="ttc" id="astructlve_1_1_point_light_html_a29252cebf3aa70913741c347fc82d33d"><div class="ttname"><a href="structlve_1_1_point_light.html#a29252cebf3aa70913741c347fc82d33d">lve::PointLight::position</a></div><div class="ttdeci">glm::vec4 position</div><div class="ttdef"><b>Definition</b> lve_frame_info.h:17</div></div>
+<div class="ttc" id="astructlve_1_1_point_light_html_af1ab48887995e5532ea19bee5823f374"><div class="ttname"><a href="structlve_1_1_point_light.html#af1ab48887995e5532ea19bee5823f374">lve::PointLight::color</a></div><div class="ttdeci">glm::vec4 color</div><div class="ttdef"><b>Definition</b> lve_frame_info.h:18</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

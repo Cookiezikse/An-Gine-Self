@@ -1,0 +1,37 @@
+\doxysection{Sockets\+UDP.\+h}
+\hypertarget{_sockets_u_d_p_8h_source}{}\label{_sockets_u_d_p_8h_source}\index{includes/UDP/SocketsUDP.h@{includes/UDP/SocketsUDP.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ NOMINMAX}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <winSock2.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <ws2tcpip.h>}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ }nfds\_t\ =\ \textcolor{keywordtype}{unsigned}\ long;}
+\DoxyCodeLine{00008\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ poll(pollfd\ fdarray[],\ nfds\_t\ nfds,\ \textcolor{keywordtype}{int}\ timeout)\ \{\ \textcolor{keywordflow}{return}\ WSAPoll(fdarray,\ nfds,\ timeout);\ \}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }Bousk}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{namespace\ }Network}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ Start();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Release();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ SetNonBlocking(SOCKET\ socket);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ SetReuseAddr(SOCKET\ socket);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CloseSocket(SOCKET\ socket);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ std::string\ GetAddress(\textcolor{keyword}{const}\ sockaddr\_in\&\ addr);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ GetPort(\textcolor{keyword}{const}\ sockaddr\_in\&\ addr);}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \}}
+
+\end{DoxyCode}

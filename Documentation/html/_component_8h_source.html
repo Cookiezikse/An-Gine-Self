@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/GameObject/Components/Component.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_b5568337a7efd7b38bac1af67081c77f.html">GameObject</a></li><li class="navelem"><a class="el" href="dir_f916b7d0f8ae679a7b3a88c73e95d673.html">Components</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Component.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;GameObject/GameObject.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifdef ENGINECORE_EXPORTS</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define ENGINEDLL_API __declspec(dllexport)</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define ENGINEDLL_API __declspec(dllimport)</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">class </span><a class="code hl_class" href="class_game_object.html">GameObject</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//class ENGINEDLL_API Component</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_component.html">   20</a></span><span class="keyword">class  </span><a class="code hl_class" href="class_component.html">Component</a></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_class" href="class_component.html">Component</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="class_component.html">Component</a>(<a class="code hl_class" href="class_game_object.html">GameObject</a>* _owner);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">virtual</span>  <a class="code hl_class" href="class_component.html">~Component</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#pragma region Event</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> Init();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> Start();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> FixedUpdate();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> Update() ;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> UpdateEditor() ;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> PreRender();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> Render();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> RenderGui();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> PostRender();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> Release();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> Finalize();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#pragma region Getter</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_component.html#a92f94b02f4591895bb96392581c9ccd9">   49</a></span>        <a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_function" href="class_component.html#a92f94b02f4591895bb96392581c9ccd9">GetOwner</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_component.html#a715fc40771d21d6d43d8209dd5c9810a">owner</a>; }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_component.html#a9af52e1878212622948ab2189f4f29dd">   56</a></span>        std::string <a class="code hl_function" href="class_component.html#a9af52e1878212622948ab2189f4f29dd">GetName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_component.html#a46343549452bda5ee9752f7a9bc15efb">name</a>; }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_component.html#a9ad91aa536dc0b237bac510ef2981ff1">   63</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_component.html#a9ad91aa536dc0b237bac510ef2981ff1">GetActive</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_component.html#a6dad4f819c0814eee8219e9b391cf583">isActive</a>; }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_component.html#ae26f71032d146b80daeadb3eb9c9f772">   70</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_component.html#ae26f71032d146b80daeadb3eb9c9f772">GetVisible</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_component.html#a49f5a53967d8fa26917ccbb03312233b">isVisible</a>; }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#pragma region Setter</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_component.html#a404b9d2dd75d68fc0b3f4d83b096b083">   81</a></span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_component.html#a404b9d2dd75d68fc0b3f4d83b096b083">SetOwner</a>(<a class="code hl_class" href="class_game_object.html">GameObject</a>* _owner) { <a class="code hl_variable" href="class_component.html#a715fc40771d21d6d43d8209dd5c9810a">owner</a> = _owner; }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_component.html#a95c88d74e0604f8d883fb722eda085db">   88</a></span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_component.html#a95c88d74e0604f8d883fb722eda085db">SetName</a>(<span class="keyword">const</span> std::string&amp; _name) { <a class="code hl_variable" href="class_component.html#a46343549452bda5ee9752f7a9bc15efb">name</a> = _name; }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_component.html#a0a38ce3912f2363e7ea6aff6276c07a7">   95</a></span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_component.html#a0a38ce3912f2363e7ea6aff6276c07a7">SetName</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* _name) { <a class="code hl_variable" href="class_component.html#a46343549452bda5ee9752f7a9bc15efb">name</a> = _name; }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_component.html#a9be7df4eee8904fa8c7e5ef6f72064f4">  102</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_component.html#a9be7df4eee8904fa8c7e5ef6f72064f4">SetActive</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span>&amp; _state) { <a class="code hl_variable" href="class_component.html#a6dad4f819c0814eee8219e9b391cf583">isActive</a> = _state; }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="class_component.html#abc5545dc4ccecfe31a6fb551b4c4f514">  109</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_component.html#abc5545dc4ccecfe31a6fb551b4c4f514">SetVisible</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span>&amp; _state) { <a class="code hl_variable" href="class_component.html#a49f5a53967d8fa26917ccbb03312233b">isVisible</a> = _state; }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_component.html#a10db7b8781e80b3f502463868345dac7">  118</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_component.html#a10db7b8781e80b3f502463868345dac7">SetActiveAndVisible</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span>&amp; _state)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <a class="code hl_variable" href="class_component.html#a49f5a53967d8fa26917ccbb03312233b">isVisible</a> = _state;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <a class="code hl_variable" href="class_component.html#a6dad4f819c0814eee8219e9b391cf583">isActive</a>  = _state;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        }</div>
+</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="class_component.html#a715fc40771d21d6d43d8209dd5c9810a">  128</a></span>        <a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_variable" href="class_component.html#a715fc40771d21d6d43d8209dd5c9810a">owner</a> = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="class_component.html#a46343549452bda5ee9752f7a9bc15efb">  129</a></span>        std::string <a class="code hl_variable" href="class_component.html#a46343549452bda5ee9752f7a9bc15efb">name</a> = <span class="stringliteral">&quot;Component&quot;</span>; </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="class_component.html#a6dad4f819c0814eee8219e9b391cf583">  130</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_component.html#a6dad4f819c0814eee8219e9b391cf583">isActive</a> = <span class="keyword">true</span>; </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="class_component.html#a49f5a53967d8fa26917ccbb03312233b">  131</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_component.html#a49f5a53967d8fa26917ccbb03312233b">isVisible</a> = <span class="keyword">true</span>; </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>};</div>
+</div>
+<div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdoc">Classe de base pour tous les composants attachés à un GameObject.</div><div class="ttdef"><b>Definition</b> Component.h:21</div></div>
+<div class="ttc" id="aclass_component_html_a0a38ce3912f2363e7ea6aff6276c07a7"><div class="ttname"><a href="class_component.html#a0a38ce3912f2363e7ea6aff6276c07a7">Component::SetName</a></div><div class="ttdeci">void SetName(const char *_name)</div><div class="ttdoc">Définit le nom de ce composant à partir d'une chaîne de caractères.</div><div class="ttdef"><b>Definition</b> Component.h:95</div></div>
+<div class="ttc" id="aclass_component_html_a10db7b8781e80b3f502463868345dac7"><div class="ttname"><a href="class_component.html#a10db7b8781e80b3f502463868345dac7">Component::SetActiveAndVisible</a></div><div class="ttdeci">void SetActiveAndVisible(const bool &amp;_state)</div><div class="ttdoc">Active ou désactive ce composant et le rend visible ou invisible.</div><div class="ttdef"><b>Definition</b> Component.h:118</div></div>
+<div class="ttc" id="aclass_component_html_a404b9d2dd75d68fc0b3f4d83b096b083"><div class="ttname"><a href="class_component.html#a404b9d2dd75d68fc0b3f4d83b096b083">Component::SetOwner</a></div><div class="ttdeci">void SetOwner(GameObject *_owner)</div><div class="ttdoc">Définit le GameObject propriétaire de ce composant.</div><div class="ttdef"><b>Definition</b> Component.h:81</div></div>
+<div class="ttc" id="aclass_component_html_a46343549452bda5ee9752f7a9bc15efb"><div class="ttname"><a href="class_component.html#a46343549452bda5ee9752f7a9bc15efb">Component::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition</b> Component.h:129</div></div>
+<div class="ttc" id="aclass_component_html_a49f5a53967d8fa26917ccbb03312233b"><div class="ttname"><a href="class_component.html#a49f5a53967d8fa26917ccbb03312233b">Component::isVisible</a></div><div class="ttdeci">bool isVisible</div><div class="ttdef"><b>Definition</b> Component.h:131</div></div>
+<div class="ttc" id="aclass_component_html_a6dad4f819c0814eee8219e9b391cf583"><div class="ttname"><a href="class_component.html#a6dad4f819c0814eee8219e9b391cf583">Component::isActive</a></div><div class="ttdeci">bool isActive</div><div class="ttdef"><b>Definition</b> Component.h:130</div></div>
+<div class="ttc" id="aclass_component_html_a715fc40771d21d6d43d8209dd5c9810a"><div class="ttname"><a href="class_component.html#a715fc40771d21d6d43d8209dd5c9810a">Component::owner</a></div><div class="ttdeci">GameObject * owner</div><div class="ttdef"><b>Definition</b> Component.h:128</div></div>
+<div class="ttc" id="aclass_component_html_a92f94b02f4591895bb96392581c9ccd9"><div class="ttname"><a href="class_component.html#a92f94b02f4591895bb96392581c9ccd9">Component::GetOwner</a></div><div class="ttdeci">GameObject * GetOwner() const</div><div class="ttdoc">Obtient le GameObject propriétaire de ce composant.</div><div class="ttdef"><b>Definition</b> Component.h:49</div></div>
+<div class="ttc" id="aclass_component_html_a95c88d74e0604f8d883fb722eda085db"><div class="ttname"><a href="class_component.html#a95c88d74e0604f8d883fb722eda085db">Component::SetName</a></div><div class="ttdeci">void SetName(const std::string &amp;_name)</div><div class="ttdoc">Définit le nom de ce composant.</div><div class="ttdef"><b>Definition</b> Component.h:88</div></div>
+<div class="ttc" id="aclass_component_html_a9ad91aa536dc0b237bac510ef2981ff1"><div class="ttname"><a href="class_component.html#a9ad91aa536dc0b237bac510ef2981ff1">Component::GetActive</a></div><div class="ttdeci">bool GetActive() const</div><div class="ttdoc">Obtient l'état d'activité de ce composant.</div><div class="ttdef"><b>Definition</b> Component.h:63</div></div>
+<div class="ttc" id="aclass_component_html_a9af52e1878212622948ab2189f4f29dd"><div class="ttname"><a href="class_component.html#a9af52e1878212622948ab2189f4f29dd">Component::GetName</a></div><div class="ttdeci">std::string GetName() const</div><div class="ttdoc">Obtient le nom de ce composant.</div><div class="ttdef"><b>Definition</b> Component.h:56</div></div>
+<div class="ttc" id="aclass_component_html_a9be7df4eee8904fa8c7e5ef6f72064f4"><div class="ttname"><a href="class_component.html#a9be7df4eee8904fa8c7e5ef6f72064f4">Component::SetActive</a></div><div class="ttdeci">void SetActive(const bool &amp;_state)</div><div class="ttdoc">Définit l'état d'activité de ce composant.</div><div class="ttdef"><b>Definition</b> Component.h:102</div></div>
+<div class="ttc" id="aclass_component_html_abc5545dc4ccecfe31a6fb551b4c4f514"><div class="ttname"><a href="class_component.html#abc5545dc4ccecfe31a6fb551b4c4f514">Component::SetVisible</a></div><div class="ttdeci">void SetVisible(const bool &amp;_state)</div><div class="ttdoc">Définit l'état de visibilité de ce composant.</div><div class="ttdef"><b>Definition</b> Component.h:109</div></div>
+<div class="ttc" id="aclass_component_html_ae26f71032d146b80daeadb3eb9c9f772"><div class="ttname"><a href="class_component.html#ae26f71032d146b80daeadb3eb9c9f772">Component::GetVisible</a></div><div class="ttdeci">bool GetVisible() const</div><div class="ttdoc">Obtient l'état de visibilité de ce composant.</div><div class="ttdef"><b>Definition</b> Component.h:70</div></div>
+<div class="ttc" id="aclass_game_object_html"><div class="ttname"><a href="class_game_object.html">GameObject</a></div><div class="ttdoc">ReprÃ©sente un objet gÃ©nÃ©rique dans le jeu.</div><div class="ttdef"><b>Definition</b> GameObject.h:45</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

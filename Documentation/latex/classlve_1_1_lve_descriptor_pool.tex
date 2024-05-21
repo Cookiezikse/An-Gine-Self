@@ -1,0 +1,123 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Lve\+Descriptor\+Pool}
+\hypertarget{classlve_1_1_lve_descriptor_pool}{}\label{classlve_1_1_lve_descriptor_pool}\index{lve::LveDescriptorPool@{lve::LveDescriptorPool}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder}{Builder}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_a5b859fe2bbd70716d7733c5e9c34e2d2}{Lve\+Descriptor\+Pool}} (\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&\+\_\+lve\+Device, uint32\+\_\+t \+\_\+max\+Sets, vk\+::\+Descriptor\+Pool\+Create\+Flags \+\_\+pool\+Flags, const std\+::vector$<$ vk\+::\+Descriptor\+Pool\+Size $>$ \&\+\_\+pool\+Sizes)
+\begin{DoxyCompactList}\small\item\em Constructeur de \doxylink{classlve_1_1_lve_descriptor_pool}{Lve\+Descriptor\+Pool}. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_lve_descriptor_pool_ab254708b56169668c336729b1d55f483}\label{classlve_1_1_lve_descriptor_pool_ab254708b56169668c336729b1d55f483} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Lve\+Descriptor\+Pool} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \doxylink{classlve_1_1_lve_descriptor_pool}{Lve\+Descriptor\+Pool}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_aa2201681fe652dcf5f6790f34109ff5e}{Lve\+Descriptor\+Pool}} (const \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool}{Lve\+Descriptor\+Pool}} \&)=delete
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_descriptor_pool}{Lve\+Descriptor\+Pool}} \& \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_ac50a6003da364bf1f853fcea6e8247df}{operator=}} (const \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool}{Lve\+Descriptor\+Pool}} \&)=delete
+\item 
+bool \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_a11aa941d871760d9f8bba5a6e58842ea}{Allocate\+Descriptor}} (vk\+::\+Descriptor\+Set\+Layout \+\_\+descriptor\+Set\+Layout, vk\+::\+Descriptor\+Set \&\+\_\+descriptor) const
+\begin{DoxyCompactList}\small\item\em Alloue un ensemble de descripteurs à partir du pool. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_a545e2f9224baa0e1e25fb9a98d09902c}{Free\+Descriptors}} (const std\+::vector$<$ vk\+::\+Descriptor\+Set $>$ \&\+\_\+descriptors) const
+\begin{DoxyCompactList}\small\item\em Libère un ensemble de descripteurs. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_lve_descriptor_pool_ab5c8d23fa37c074a0b83ea8af9e9fda8}\label{classlve_1_1_lve_descriptor_pool_ab5c8d23fa37c074a0b83ea8af9e9fda8} 
+void {\bfseries Reset\+Pool} () const
+\begin{DoxyCompactList}\small\item\em Réinitialise le pool de descripteurs. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_lve_descriptor_pool_a88ba10eb7e864f617d6643f791bbe39f}\label{classlve_1_1_lve_descriptor_pool_a88ba10eb7e864f617d6643f791bbe39f} 
+vk\+::\+Descriptor\+Pool {\bfseries Get\+Descriptor\+Pool} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_a2851feef02cfcddf960ef4052101ee6e}{Lve\+Descriptor\+Writer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classlve_1_1_lve_descriptor_pool_a5b859fe2bbd70716d7733c5e9c34e2d2}\label{classlve_1_1_lve_descriptor_pool_a5b859fe2bbd70716d7733c5e9c34e2d2} 
+\index{lve::LveDescriptorPool@{lve::LveDescriptorPool}!LveDescriptorPool@{LveDescriptorPool}}
+\index{LveDescriptorPool@{LveDescriptorPool}!lve::LveDescriptorPool@{lve::LveDescriptorPool}}
+\doxysubsubsection{\texorpdfstring{LveDescriptorPool()}{LveDescriptorPool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Descriptor\+Pool\+::\+Lve\+Descriptor\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&}]{\+\_\+lve\+Device,  }\item[{uint32\+\_\+t}]{\+\_\+max\+Sets,  }\item[{vk\+::\+Descriptor\+Pool\+Create\+Flags}]{\+\_\+pool\+Flags,  }\item[{const std\+::vector$<$ vk\+::\+Descriptor\+Pool\+Size $>$ \&}]{\+\_\+pool\+Sizes }\end{DoxyParamCaption})}
+
+
+
+Constructeur de \doxylink{classlve_1_1_lve_descriptor_pool}{Lve\+Descriptor\+Pool}. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+lve\+Device} & Référence à l\textquotesingle{}objet \doxylink{classlve_1_1_lve_device}{Lve\+Device} associé à ce pool de descripteurs. \\
+\hline
+{\em \+\_\+max\+Sets} & Nombre maximal d\textquotesingle{}ensembles de descripteurs pouvant être alloués à partir du pool. \\
+\hline
+{\em \+\_\+pool\+Flags} & Indicateurs de création du pool de descripteurs. \\
+\hline
+{\em \+\_\+pool\+Sizes} & Vecteur contenant les tailles de pool de descripteurs. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_descriptor_pool_aa2201681fe652dcf5f6790f34109ff5e}\label{classlve_1_1_lve_descriptor_pool_aa2201681fe652dcf5f6790f34109ff5e} 
+\index{lve::LveDescriptorPool@{lve::LveDescriptorPool}!LveDescriptorPool@{LveDescriptorPool}}
+\index{LveDescriptorPool@{LveDescriptorPool}!lve::LveDescriptorPool@{lve::LveDescriptorPool}}
+\doxysubsubsection{\texorpdfstring{LveDescriptorPool()}{LveDescriptorPool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Descriptor\+Pool\+::\+Lve\+Descriptor\+Pool (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool}{Lve\+Descriptor\+Pool}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Constructeur de copie supprimé. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_lve_descriptor_pool_a11aa941d871760d9f8bba5a6e58842ea}\label{classlve_1_1_lve_descriptor_pool_a11aa941d871760d9f8bba5a6e58842ea} 
+\index{lve::LveDescriptorPool@{lve::LveDescriptorPool}!AllocateDescriptor@{AllocateDescriptor}}
+\index{AllocateDescriptor@{AllocateDescriptor}!lve::LveDescriptorPool@{lve::LveDescriptorPool}}
+\doxysubsubsection{\texorpdfstring{AllocateDescriptor()}{AllocateDescriptor()}}
+{\footnotesize\ttfamily bool lve\+::\+Lve\+Descriptor\+Pool\+::\+Allocate\+Descriptor (\begin{DoxyParamCaption}\item[{vk\+::\+Descriptor\+Set\+Layout}]{\+\_\+descriptor\+Set\+Layout,  }\item[{vk\+::\+Descriptor\+Set \&}]{\+\_\+descriptor }\end{DoxyParamCaption}) const}
+
+
+
+Alloue un ensemble de descripteurs à partir du pool. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+descriptor\+Set\+Layout} & Layout de l\textquotesingle{}ensemble de descripteurs à allouer. \\
+\hline
+{\em \+\_\+descriptor} & Référence où stocker l\textquotesingle{}ensemble de descripteurs alloué. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si l\textquotesingle{}allocation réussit, false sinon. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_descriptor_pool_a545e2f9224baa0e1e25fb9a98d09902c}\label{classlve_1_1_lve_descriptor_pool_a545e2f9224baa0e1e25fb9a98d09902c} 
+\index{lve::LveDescriptorPool@{lve::LveDescriptorPool}!FreeDescriptors@{FreeDescriptors}}
+\index{FreeDescriptors@{FreeDescriptors}!lve::LveDescriptorPool@{lve::LveDescriptorPool}}
+\doxysubsubsection{\texorpdfstring{FreeDescriptors()}{FreeDescriptors()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Descriptor\+Pool\+::\+Free\+Descriptors (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ vk\+::\+Descriptor\+Set $>$ \&}]{\+\_\+descriptors }\end{DoxyParamCaption}) const}
+
+
+
+Libère un ensemble de descripteurs. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+descriptors} & Vecteur contenant les ensembles de descripteurs à libérer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_descriptor_pool_ac50a6003da364bf1f853fcea6e8247df}\label{classlve_1_1_lve_descriptor_pool_ac50a6003da364bf1f853fcea6e8247df} 
+\index{lve::LveDescriptorPool@{lve::LveDescriptorPool}!operator=@{operator=}}
+\index{operator=@{operator=}!lve::LveDescriptorPool@{lve::LveDescriptorPool}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool}{Lve\+Descriptor\+Pool}} \& lve\+::\+Lve\+Descriptor\+Pool\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool}{Lve\+Descriptor\+Pool}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Opérateur d\textquotesingle{}affectation supprimé. 
+
+\doxysubsection{Documentation des fonctions amies et associÃ©es}
+\Hypertarget{classlve_1_1_lve_descriptor_pool_a2851feef02cfcddf960ef4052101ee6e}\label{classlve_1_1_lve_descriptor_pool_a2851feef02cfcddf960ef4052101ee6e} 
+\index{lve::LveDescriptorPool@{lve::LveDescriptorPool}!LveDescriptorWriter@{LveDescriptorWriter}}
+\index{LveDescriptorWriter@{LveDescriptorWriter}!lve::LveDescriptorPool@{lve::LveDescriptorPool}}
+\doxysubsubsection{\texorpdfstring{LveDescriptorWriter}{LveDescriptorWriter}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classlve_1_1_lve_descriptor_writer}{Lve\+Descriptor\+Writer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+Permet à la classe \doxylink{classlve_1_1_lve_descriptor_writer}{Lve\+Descriptor\+Writer} d\textquotesingle{}accéder aux membres privés. 
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Lve\+Engine/lve\+\_\+descriptors.\+h\item 
+sources/\+Lve\+Engine/lve\+\_\+descriptors.\+cpp\end{DoxyCompactItemize}

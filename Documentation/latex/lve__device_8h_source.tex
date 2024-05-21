@@ -1,0 +1,161 @@
+\doxysection{lve\+\_\+device.\+h}
+\hypertarget{lve__device_8h_source}{}\label{lve__device_8h_source}\index{includes/LveEngine/lve\_device.h@{includes/LveEngine/lve\_device.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_window.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan.hpp>}\ \textcolor{comment}{//\ Inclure\ les\ en-\/têtes\ Vulkan\ C++}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ std\ lib\ headers}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_window_module}{WindowModule}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }lve}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ Structure\ pour\ stocker\ les\ détails\ de\ support\ de\ la\ chaîne\ d'échange}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlve_1_1_swap_chain_support_details}{SwapChainSupportDetails}}}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ vk::SurfaceCapabilitiesKHR\ \ \ \ \ \ \ \ capabilities;\ \textcolor{comment}{//\ Capacités de\ la\ surface\ Vulkan}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::vector<vk::SurfaceFormatKHR>\ formats;\ \ \ \ \ \ \textcolor{comment}{//\ Formats\ de\ surface\ Vulkan\ pris\ en\ charge}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::vector<vk::PresentModeKHR>\ \ \ presentModes;\ \textcolor{comment}{//\ Modes\ de\ présentation\ Vulkan\ pris\ en\ charge}}
+\DoxyCodeLine{00021\ \ \ \ \ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Structure\ pour\ stocker\ les\ indices\ des\ files\ d'attente\ requises}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlve_1_1_queue_family_indices}{QueueFamilyIndices}}}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ uint32\_t\ graphicsFamily;\ \textcolor{comment}{//\ Indice\ de\ la\ famille\ de\ files\ d'attente\ graphiques}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ uint32\_t\ presentFamily;\ \ \textcolor{comment}{//\ Indice\ de\ la\ famille\ de\ files\ d'attente\ de\ présentation}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ graphicsFamilyHasValue\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Indique\ si\ l'indice\ de\ la\ famille\ de\ files\ d'attente\ graphiques\ est\ défini}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ presentFamilyHasValue\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Indique\ si\ l'indice\ de\ la\ famille\ de\ files\ d'attente\ de\ présentation\ est\ défini}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vérifie\ si\ les\ indices\ des\ files\ d'attente\ requis\ sont\ complets}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsComplete()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ graphicsFamilyHasValue\ \&\&\ presentFamilyHasValue;\ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#ifdef\ NDEBUG}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ enableValidationLayers\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#else}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ enableValidationLayers\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classlve_1_1_lve_device_a5dbf67e8518005fdcd3de7113272f6cc}{LveDevice}}(\mbox{\hyperlink{class_window_module}{WindowModule}}*\ \_windowModule);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device_a3928e5409dc9c8e054d06270a56c9d93}{\string~LveDevice}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Not\ copyable\ or\ movable}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device_acd0d35625590c8930b8045383c06a495}{LveDevice}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ \mbox{\hyperlink{classlve_1_1_lve_device_aab611df790f3cc5fc5719d2d90578ecf}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device_a2ec8815791e048ac42a73fcbfe1b154a}{LveDevice}}(\mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ \mbox{\hyperlink{classlve_1_1_lve_device_a0a7c2ce480c9381910528bb05ef68f70}{operator=}}(\mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ vk::CommandPool\ \mbox{\hyperlink{classlve_1_1_lve_device_a34aae465d220806aacc3322242696d1d}{GetCommandPool}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ commandPool;\ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Device\ \mbox{\hyperlink{classlve_1_1_lve_device_ab4755528cbaa93add122a7edbf464845}{Device}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ device\_;\ \}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ MAURAD}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Instance\ \ \ \ \ \ \ GetInstance()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ instance;\ \}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ vk::PhysicalDevice\ GetPhysicalDevice()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ physicalDevice;\ \}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ vk::SurfaceKHR\ \mbox{\hyperlink{classlve_1_1_lve_device_a4e39fcb2417fc88244a2bd7b47fda216}{Surface}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ surface\_;\ \}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Queue\ \mbox{\hyperlink{classlve_1_1_lve_device_a3db7cac38a972c8794d8cb209a784231}{GraphicsQueue}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ graphicsQueue\_;\ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Queue\ \mbox{\hyperlink{classlve_1_1_lve_device_a880570c94a1582853d2301af3c88e104}{PresentQueue}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ presentQueue\_;\ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlve_1_1_swap_chain_support_details}{SwapChainSupportDetails}}\ \mbox{\hyperlink{classlve_1_1_lve_device_a705e5ae87f7a4885b8f4a115694076a5}{GetSwapChainSupport}}()\ \{\ \textcolor{keywordflow}{return}\ QuerySwapChainSupport(physicalDevice);\ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \mbox{\hyperlink{classlve_1_1_lve_device_a84495cbcca8e67db53fc15d6ab5a6847}{FindMemoryType}}(uint32\_t\ \_typeFilter,\ vk::MemoryPropertyFlags\ \_properties)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlve_1_1_queue_family_indices}{QueueFamilyIndices}}\ \mbox{\hyperlink{classlve_1_1_lve_device_aa1b015567e250ee4f37aac78a940620a}{FindPhysicalQueueFamilies}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ FindQueueFamilies(physicalDevice);\ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Format\ \mbox{\hyperlink{classlve_1_1_lve_device_a20a393668b4b4c5aa202ea41168dc16e}{FindSupportedFormat}}(}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<vk::Format>\&\ \_candidates,\ vk::ImageTiling\ \_tiling,}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::FormatFeatureFlags\ \ \ \ \ \ \ \ \ \_features)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Buffer\ Helper\ Functions}}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_device_a170e75725fcef0f1c461651a139bb8ce}{CreateBuffer}}(}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::DeviceSize\ \ \ \ \ \ \ \ \ \ \_size,}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::BufferUsageFlags\ \ \ \ \_usage,}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::MemoryPropertyFlags\ \_properties,}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::Buffer\&\ \ \ \ \ \ \ \ \ \ \ \ \ \_buffer,}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::DeviceMemory\&\ \ \ \ \ \ \ \_bufferMemory)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ vk::CommandBuffer\ \mbox{\hyperlink{classlve_1_1_lve_device_a70cb21509496085180d25539f12c6e0f}{BeginSingleTimeCommands}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_device_a1e3f80b67ef6cbd66e48490e5396fd13}{EndSingleTimeCommands}}(vk::CommandBuffer\ \_commandBuffer)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_device_a15e53a2d80e60f69d69882e65429924b}{CopyBuffer}}(vk::Buffer\ \_srcBuffer,\ vk::Buffer\ \_dstBuffer,\ vk::DeviceSize\ \_size)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_device_ada99e3ebd5a9f7b3df3840e97fa91f78}{CopyBufferToImage}}(}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::Buffer\ \_buffer,\ vk::Image\ \_image,\ uint32\_t\ \_width,\ uint32\_t\ \_height,\ uint32\_t\ \_layerCount)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_device_af0556bd5de6d7e04cd817ce000c64f1d}{CreateImageWithInfo}}(}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ vk::ImageCreateInfo\&\ \_imageInfo,}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::MemoryPropertyFlags\ \ \ \ \_properties,}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::Image\&\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_image,}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::DeviceMemory\&\ \ \ \ \ \ \ \ \ \ \_imageMemory)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ vk::PhysicalDeviceProperties\ \mbox{\hyperlink{classlve_1_1_lve_device_a1ee7068dc3c270e771cf87b14da36bff}{properties}};}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Instance\ \mbox{\hyperlink{classlve_1_1_lve_device_a11d82b4686e1e0ca2e3ca7143fd56865}{CreateInstance}}();}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ vk::DebugUtilsMessengerEXT\ \mbox{\hyperlink{classlve_1_1_lve_device_a5c8aa1272efa148228a786f43eee2605}{SetupDebugMessenger}}();}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ vk::DebugUtilsMessengerEXT\ GetDebugMessenger()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ debugMessenger;\ \}}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateSurface();}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ PickPhysicalDevice();}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateLogicalDevice();}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateCommandPool();}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ helper\ functions}}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsDeviceSuitable(vk::PhysicalDevice\ \_device);}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<const\ char*>\ GetRequiredExtensions()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ CheckValidationLayerSupport()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlve_1_1_queue_family_indices}{QueueFamilyIndices}}\ FindQueueFamilies(vk::PhysicalDevice\ \_device)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ PopulateDebugMessengerCreateInfo(vk::DebugUtilsMessengerCreateInfoEXT\&\ \_createInfo);}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ HasGlfwRequiredInstanceExtensions()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ CheckDeviceExtensionSupport(vk::PhysicalDevice\ \_device)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlve_1_1_swap_chain_support_details}{SwapChainSupportDetails}}\ QuerySwapChainSupport(vk::PhysicalDevice\ \_device)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00370\ }
+\DoxyCodeLine{00371\ }
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Instance\ instance;\ }
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ vk::DebugUtilsMessengerEXT\ debugMessenger;}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \ \ \ \ vk::PhysicalDevice\ physicalDevice\ =\ VK\_NULL\_HANDLE;}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_window_module}{WindowModule}}*\ windowModule\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ vk::CommandPool\ commandPool;}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Device\ device\_;\ }
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ vk::SurfaceKHR\ surface\_;\ }
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Queue\ graphicsQueue\_;}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Queue\ presentQueue\_;}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<const\ char*>\ validationLayers\ =\ \{\textcolor{stringliteral}{"{}VK\_LAYER\_KHRONOS\_validation"{}}\};}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<const\ char*>\ deviceExtensions\ =\ \{vk::KHRSwapchainExtensionName\};}
+\DoxyCodeLine{00400\ \ \ \ \ \};}
+\DoxyCodeLine{00401\ \}\ \textcolor{comment}{//\ namespace\ lve}}
+
+\end{DoxyCode}

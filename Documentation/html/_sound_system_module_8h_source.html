@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/Modules/SoundSystemModule.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_8ba5de94bce70429844b810000c4522a.html">Modules</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">SoundSystemModule.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;fmod.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;Modules/Module.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using </span>SoundClass = FMOD::Sound*;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">using </span>SoundGroup = FMOD::SoundGroup*;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">using </span>Channel = FMOD::Channel*;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_sound_system_module.html">   24</a></span><span class="keyword">class </span><a class="code hl_class" href="class_sound_system_module.html">SoundSystemModule</a> final : <span class="keyword">public</span> <a class="code hl_class" href="class_module.html">Module</a></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_function" href="class_sound_system_module.html#a55a8440318be202d10abc6015d5ecee7">SoundSystemModule</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_system_module.html#a904b747c624df6b145bd906068215696">CreateSound</a>(SoundClass* p_sound, <span class="keyword">const</span> <span class="keywordtype">char</span>* p_pathAudio) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_system_module.html#a487ddddc0e1150c7d1d5c1f8bd95ad90">CreateSoundGroup</a>(SoundGroup* p_soundGroup, <span class="keyword">const</span> <span class="keywordtype">char</span>* p_pathAudio) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_system_module.html#ae433e992f56b8f0394014ab61e245699">GetMasterSoundGroup</a>(SoundGroup* p_Sound) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_system_module.html#acc0aa6ddcc6963ca5ea8e8a1dc8a4c14">PlaySound</a>(SoundClass p_sound, <span class="keywordtype">bool</span> _isPlay, <span class="keywordtype">int</span> _loopCount, <span class="keywordtype">float</span> _volume, Channel* p_channelPtr) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_system_module.html#a3077795c8b9a04e2a6683b71e4b66d8d">ReleaseSound</a>(SoundClass p_sound);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="comment">// ReSharper disable once CppInconsistentNaming</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_system_module.html#a4bcf8f3298f0d451bee38845b83e00d6">CreateChannelGroup</a>(FMOD::ChannelGroup** pp_channelGroup) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_system_module.html#a8d10f4af7fd38965c9f5a8608028c2bf">AddSoundToGroup</a>(SoundClass _pSound, FMOD::ChannelGroup* p_channelGroup) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_sound_system_module.html#a57278fcd05aaf69a73b316b6c183bfc0">GetLoopCount</a>(SoundClass _pSound, <span class="keywordtype">int</span>* p_loopCount);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        FMOD_RESULT <a class="code hl_function" href="class_sound_system_module.html#a569ede074cd8034277a821792f3965ee">AttachChannelGroupToPort</a>(FMOD_PORT_TYPE      _portType, FMOD_PORT_INDEX _portIndex,</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                                             FMOD::ChannelGroup* p_channelGroup, <span class="keywordtype">bool</span>       _passThru = <span class="keyword">false</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        FMOD_RESULT <a class="code hl_function" href="class_sound_system_module.html#a4af511c6363598c55cd6dcf248afe426">DetachChannelGroupFromPort</a>(FMOD::ChannelGroup* p_channelGroup) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        FMOD_RESULT <a class="code hl_function" href="class_sound_system_module.html#aaca22a353745fbd77edbac1df2275a2d">SetReverbProperties</a>(<span class="keywordtype">int</span> _instance, <span class="keyword">const</span> FMOD_REVERB_PROPERTIES* p_prop) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        FMOD_RESULT <a class="code hl_function" href="class_sound_system_module.html#ac7cda94248a25b7db83c7d7f812c553c">GetReverbProperties</a>(<span class="keywordtype">int</span> _instance, FMOD_REVERB_PROPERTIES* p_prop) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">#pragma region Event</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_system_module.html#ae10cac5749ca80edff05dc83f26911b3">Init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_system_module.html#a92e573244f8ecac20a6c024ed5a1713a">Start</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_system_module.html#a19650098e71e69d320221fc0be940b31">FixedUpdate</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_system_module.html#a90fb7f2ecf7b7bb32ee2bf45534ea328">Update</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_system_module.html#aafb4c4fd98c7047e567ce8da45ca24cd">PreRender</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_system_module.html#a1a431eed55857eef3ec3bf3b32b83c94">Render</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_system_module.html#adedbb8a55e7f4de13699b6ef5dcc78b0">RenderGui</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_system_module.html#a1babae9d378ecb15d404bcd344b3ee2a">PostRender</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_system_module.html#a8d00ae6a262f803991fc928e9cb69d7e">Release</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_sound_system_module.html#ae3f2bd04d953a7a1b871d036ffb69507">Finalize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        FMOD::System* system;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        FMOD::ChannelGroup* channelGroup;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keywordtype">float</span> min;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="keywordtype">float</span> max;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>};</div>
+</div>
+<div class="ttc" id="aclass_module_html"><div class="ttname"><a href="class_module.html">Module</a></div><div class="ttdoc">Classe Module.</div><div class="ttdef"><b>Definition</b> Module.h:19</div></div>
+<div class="ttc" id="aclass_sound_system_module_html"><div class="ttname"><a href="class_sound_system_module.html">SoundSystemModule</a></div><div class="ttdoc">Classe SoundSystemModule : Gère le système audio utilisant la bibliothèque FMOD.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.h:25</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_a19650098e71e69d320221fc0be940b31"><div class="ttname"><a href="class_sound_system_module.html#a19650098e71e69d320221fc0be940b31">SoundSystemModule::FixedUpdate</a></div><div class="ttdeci">void FixedUpdate() override</div><div class="ttdoc">Effectue une mise à jour fixe du module.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:127</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_a1a431eed55857eef3ec3bf3b32b83c94"><div class="ttname"><a href="class_sound_system_module.html#a1a431eed55857eef3ec3bf3b32b83c94">SoundSystemModule::Render</a></div><div class="ttdeci">void Render() override</div><div class="ttdoc">Rendu du module.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:142</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_a1babae9d378ecb15d404bcd344b3ee2a"><div class="ttname"><a href="class_sound_system_module.html#a1babae9d378ecb15d404bcd344b3ee2a">SoundSystemModule::PostRender</a></div><div class="ttdeci">void PostRender() override</div><div class="ttdoc">Fonction post-rendu du module.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:152</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_a3077795c8b9a04e2a6683b71e4b66d8d"><div class="ttname"><a href="class_sound_system_module.html#a3077795c8b9a04e2a6683b71e4b66d8d">SoundSystemModule::ReleaseSound</a></div><div class="ttdeci">void ReleaseSound(SoundClass p_sound)</div><div class="ttdoc">Libère les ressources utilisées par un son spécifié.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:71</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_a487ddddc0e1150c7d1d5c1f8bd95ad90"><div class="ttname"><a href="class_sound_system_module.html#a487ddddc0e1150c7d1d5c1f8bd95ad90">SoundSystemModule::CreateSoundGroup</a></div><div class="ttdeci">void CreateSoundGroup(SoundGroup *p_soundGroup, const char *p_pathAudio) const</div><div class="ttdoc">Crée un objet SoundGroup à partir d'un fichier audio spécifié.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:33</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_a4af511c6363598c55cd6dcf248afe426"><div class="ttname"><a href="class_sound_system_module.html#a4af511c6363598c55cd6dcf248afe426">SoundSystemModule::DetachChannelGroupFromPort</a></div><div class="ttdeci">FMOD_RESULT DetachChannelGroupFromPort(FMOD::ChannelGroup *p_channelGroup) const</div><div class="ttdoc">Détache un groupe de canaux d'un port auquel il était précédemment attaché.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:102</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_a4bcf8f3298f0d451bee38845b83e00d6"><div class="ttname"><a href="class_sound_system_module.html#a4bcf8f3298f0d451bee38845b83e00d6">SoundSystemModule::CreateChannelGroup</a></div><div class="ttdeci">void CreateChannelGroup(FMOD::ChannelGroup **pp_channelGroup) const</div><div class="ttdoc">Crée un groupe de canaux pour le système audio.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:83</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_a55a8440318be202d10abc6015d5ecee7"><div class="ttname"><a href="class_sound_system_module.html#a55a8440318be202d10abc6015d5ecee7">SoundSystemModule::SoundSystemModule</a></div><div class="ttdeci">SoundSystemModule()</div><div class="ttdoc">Constructeur par défaut de la classe SoundSystemModule.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:5</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_a569ede074cd8034277a821792f3965ee"><div class="ttname"><a href="class_sound_system_module.html#a569ede074cd8034277a821792f3965ee">SoundSystemModule::AttachChannelGroupToPort</a></div><div class="ttdeci">FMOD_RESULT AttachChannelGroupToPort(FMOD_PORT_TYPE _portType, FMOD_PORT_INDEX _portIndex, FMOD::ChannelGroup *p_channelGroup, bool _passThru=false) const</div><div class="ttdoc">Attache un groupe de canaux à un port spécifié pour le rendu audio.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:95</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_a57278fcd05aaf69a73b316b6c183bfc0"><div class="ttname"><a href="class_sound_system_module.html#a57278fcd05aaf69a73b316b6c183bfc0">SoundSystemModule::GetLoopCount</a></div><div class="ttdeci">static int GetLoopCount(SoundClass _pSound, int *p_loopCount)</div><div class="ttdoc">Obtient le nombre de boucles d'un son spécifié.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:77</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_a8d00ae6a262f803991fc928e9cb69d7e"><div class="ttname"><a href="class_sound_system_module.html#a8d00ae6a262f803991fc928e9cb69d7e">SoundSystemModule::Release</a></div><div class="ttdeci">void Release() override</div><div class="ttdoc">Libère les ressources utilisées par le module.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:157</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_a8d10f4af7fd38965c9f5a8608028c2bf"><div class="ttname"><a href="class_sound_system_module.html#a8d10f4af7fd38965c9f5a8608028c2bf">SoundSystemModule::AddSoundToGroup</a></div><div class="ttdeci">void AddSoundToGroup(SoundClass _pSound, FMOD::ChannelGroup *p_channelGroup) const</div><div class="ttdoc">Ajoute un son à un groupe de canaux spécifié.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:89</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_a904b747c624df6b145bd906068215696"><div class="ttname"><a href="class_sound_system_module.html#a904b747c624df6b145bd906068215696">SoundSystemModule::CreateSound</a></div><div class="ttdeci">void CreateSound(SoundClass *p_sound, const char *p_pathAudio) const</div><div class="ttdoc">Crée un objet Sound à partir d'un fichier audio spécifié.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:27</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_a90fb7f2ecf7b7bb32ee2bf45534ea328"><div class="ttname"><a href="class_sound_system_module.html#a90fb7f2ecf7b7bb32ee2bf45534ea328">SoundSystemModule::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">Met à jour le module.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:132</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_a92e573244f8ecac20a6c024ed5a1713a"><div class="ttname"><a href="class_sound_system_module.html#a92e573244f8ecac20a6c024ed5a1713a">SoundSystemModule::Start</a></div><div class="ttdeci">void Start() override</div><div class="ttdoc">Démarre le module.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:122</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_aaca22a353745fbd77edbac1df2275a2d"><div class="ttname"><a href="class_sound_system_module.html#aaca22a353745fbd77edbac1df2275a2d">SoundSystemModule::SetReverbProperties</a></div><div class="ttdeci">FMOD_RESULT SetReverbProperties(int _instance, const FMOD_REVERB_PROPERTIES *p_prop) const</div><div class="ttdoc">Définit les propriétés de réverbération pour une instance de réverbération spécifiée.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:107</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_aafb4c4fd98c7047e567ce8da45ca24cd"><div class="ttname"><a href="class_sound_system_module.html#aafb4c4fd98c7047e567ce8da45ca24cd">SoundSystemModule::PreRender</a></div><div class="ttdeci">void PreRender() override</div><div class="ttdoc">Fonction pré-rendu du module.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:137</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_ac7cda94248a25b7db83c7d7f812c553c"><div class="ttname"><a href="class_sound_system_module.html#ac7cda94248a25b7db83c7d7f812c553c">SoundSystemModule::GetReverbProperties</a></div><div class="ttdeci">FMOD_RESULT GetReverbProperties(int _instance, FMOD_REVERB_PROPERTIES *p_prop) const</div><div class="ttdoc">Obtient les propriétés de réverbération pour une instance de réverbération spécifiée.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:112</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_acc0aa6ddcc6963ca5ea8e8a1dc8a4c14"><div class="ttname"><a href="class_sound_system_module.html#acc0aa6ddcc6963ca5ea8e8a1dc8a4c14">SoundSystemModule::PlaySound</a></div><div class="ttdeci">void PlaySound(SoundClass p_sound, bool _isPlay, int _loopCount, float _volume, Channel *p_channelPtr) const</div><div class="ttdoc">Joue un son spécifié.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:47</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_adedbb8a55e7f4de13699b6ef5dcc78b0"><div class="ttname"><a href="class_sound_system_module.html#adedbb8a55e7f4de13699b6ef5dcc78b0">SoundSystemModule::RenderGui</a></div><div class="ttdeci">void RenderGui() override</div><div class="ttdoc">Rendu de l'interface graphique du module.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:147</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_ae10cac5749ca80edff05dc83f26911b3"><div class="ttname"><a href="class_sound_system_module.html#ae10cac5749ca80edff05dc83f26911b3">SoundSystemModule::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdoc">Initialise le module.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:117</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_ae3f2bd04d953a7a1b871d036ffb69507"><div class="ttname"><a href="class_sound_system_module.html#ae3f2bd04d953a7a1b871d036ffb69507">SoundSystemModule::Finalize</a></div><div class="ttdeci">void Finalize() override</div><div class="ttdoc">Finalise le module.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:162</div></div>
+<div class="ttc" id="aclass_sound_system_module_html_ae433e992f56b8f0394014ab61e245699"><div class="ttname"><a href="class_sound_system_module.html#ae433e992f56b8f0394014ab61e245699">SoundSystemModule::GetMasterSoundGroup</a></div><div class="ttdeci">void GetMasterSoundGroup(SoundGroup *p_Sound) const</div><div class="ttdoc">Obtient le groupe de sons principal.</div><div class="ttdef"><b>Definition</b> SoundSystemModule.cpp:40</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

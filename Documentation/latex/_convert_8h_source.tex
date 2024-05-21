@@ -1,0 +1,37 @@
+\doxysection{Convert.\+h}
+\hypertarget{_convert_8h_source}{}\label{_convert_8h_source}\index{includes/UDP/Serialization/Convert.h@{includes/UDP/Serialization/Convert.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}UDP/Types.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }Bousk}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{namespace\ }Serialization}
+\DoxyCodeLine{00008\ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }Conversion}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ToNetwork(uint16\ in,\ uint16\&\ out);}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ToNetwork(uint32\ in,\ uint32\&\ out);}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ToNetwork(uint64\ in,\ uint64\&\ out);}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ToNetwork(float32\ in,\ uint32\&\ out);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ToNetwork(uint16\ in,\ uint8\ out[2]);}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ToNetwork(uint32\ in,\ uint8\ out[4]);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ToNetwork(uint64\ in,\ uint8\ out[8]);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ToLocal(uint16\ in,\ uint16\&\ out);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ToLocal(uint32\ in,\ uint32\&\ out);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ToLocal(uint64\ in,\ uint64\&\ out);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ToLocal(uint32\ in,\ float32\&\ out);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ToLocal(\textcolor{keyword}{const}\ uint8\ in[2],\ uint16\&\ out);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ToLocal(\textcolor{keyword}{const}\ uint8\ in[4],\ uint32\&\ out);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ToLocal(\textcolor{keyword}{const}\ uint8\ in[8],\ uint64\&\ out);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \}}
+\DoxyCodeLine{00031\ }
+
+\end{DoxyCode}

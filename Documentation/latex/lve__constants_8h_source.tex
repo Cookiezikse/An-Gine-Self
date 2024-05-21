@@ -1,0 +1,59 @@
+\doxysection{lve\+\_\+constants.\+h}
+\hypertarget{lve__constants_8h_source}{}\label{lve__constants_8h_source}\index{includes/LveEngine/lve\_constants.h@{includes/LveEngine/lve\_constants.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <glm.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <gtc/quaternion.hpp>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ PI\ (glm::pi<float>())}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ TWO\_PI\ (glm::two\_pi<float>())}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ PI\_DIV\_TWO\ (glm::half\_pi<float>())}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ PI\_DIV\_FOUR\ (glm::quarter\_pi<float>())}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ THREE\_PI\_DIV\_TWO\ (glm::three\_over\_two\_pi<float>())}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ EPSILON\ (glm::epsilon<float>())}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }lve}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ Constants}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec3\ VEC3\_RIGHT;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec3\ VEC3\_UP;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec3\ VEC3\_FORWARD;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec2\ VEC2\_ONE;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec2\ VEC2\_NEG\_ONE;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec2\ VEC2\_ZERO;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec3\ VEC3\_ONE;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec3\ VEC3\_NEG\_ONE;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec3\ VEC3\_ZERO;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec3\ VEC3\_GAMMA;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec3\ VEC3\_GAMMA\_INVERSE;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec4\ VEC4\_ONE;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec4\ VEC4\_NEG\_ONE;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec4\ VEC4\_ZERO;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec4\ VEC4\_GAMMA;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec4\ VEC4\_GAMMA\_INVERSE;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::quat\ QUAT\_IDENTITY;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::mat2\ MAT2\_IDENTITY;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::mat3\ MAT3\_IDENTITY;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::mat4\ MAT4\_IDENTITY;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::mat4\ MAT4\_ZERO;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ uint32\_t\ \ COLOUR32U\_WHITE;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ uint32\_t\ \ COLOUR32U\_BLACK;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec4\ COLOUR128F\_WHITE;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ glm::vec4\ COLOUR128F\_BLACK;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ std::string\ EMPTY\_STRING;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ uint32\_t\ MAX\_TEXTURE\_DIM;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\ \ \ \ \#if\ defined(\_MSC\_VER)\ \&\&\ \_MSVC\_LANG\ >=\ 201703L\ }\textcolor{comment}{//\ C++17}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLEX\_NO\_DISCARD\ [[nodiscard]]}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\ \ \ \ \#else}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\ \ \ \ \#define\ FLEX\_NO\_DISCARD}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00053\ \}}
+
+\end{DoxyCode}

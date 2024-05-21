@@ -1,0 +1,39 @@
+\doxysection{function\+Helpers.\+h}
+\hypertarget{function_helpers_8h_source}{}\label{function_helpers_8h_source}\index{includes/Tools/functionHelpers.h@{includes/Tools/functionHelpers.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <ios>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_constants.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }lve}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ FLEX\_NO\_DISCARD\ \textcolor{keywordtype}{float}\ \ \ \ \ Lerp(\textcolor{keywordtype}{float}\ \_a,\ \textcolor{keywordtype}{float}\ \_b,\ \textcolor{keywordtype}{float}\ \_t);}
+\DoxyCodeLine{00012\ \ \ \ \ FLEX\_NO\_DISCARD\ glm::vec2\ Lerp(\textcolor{keyword}{const}\ glm::vec2\&\ \_a,\ \textcolor{keyword}{const}\ glm::vec2\&\ \_b,\ \textcolor{keywordtype}{float}\ \_t);}
+\DoxyCodeLine{00013\ \ \ \ \ FLEX\_NO\_DISCARD\ glm::vec3\ Lerp(\textcolor{keyword}{const}\ glm::vec3\&\ \_a,\ \textcolor{keyword}{const}\ glm::vec3\&\ \_b,\ \textcolor{keywordtype}{float}\ \_t);}
+\DoxyCodeLine{00014\ \ \ \ \ FLEX\_NO\_DISCARD\ glm::vec4\ Lerp(\textcolor{keyword}{const}\ glm::vec4\&\ \_a,\ \textcolor{keyword}{const}\ glm::vec4\&\ \_b,\ \textcolor{keywordtype}{float}\ \_t);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ FLEX\_NO\_DISCARD\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ Saturate(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \_val)}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::clamp(\_val,\ 0.0f,\ 1.0f);}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00022\ \ \ \ \ FLEX\_NO\_DISCARD\ T\ Saturate(T\ \_val)}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::clamp(\_val,\ T(0),\ T(1));}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{inline}\ std::string\ FloatToString(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \_f,\ \textcolor{keyword}{const}\ uint32\_t\ \_precision\ \textcolor{comment}{/*\ =\ DEFAULT\_FLOAT\_PRECISION\ */})}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::stringstream\ stream;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ stream\ <<\ std::fixed\ <<\ std::setprecision(\_precision)\ <<\ \_f;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stream.str();}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \}}
+
+\end{DoxyCode}

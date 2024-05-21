@@ -1,0 +1,134 @@
+\doxysection{Messages.\+h}
+\hypertarget{_u_d_p_2_messages_8h_source}{}\label{_u_d_p_2_messages_8h_source}\index{includes/UDP/Messages.h@{includes/UDP/Messages.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Address.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <numeric>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }Bousk}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{namespace\ }Network}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }Messages}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ DECLARE\_MESSAGE(name)\ friend\ class\ Base;\ static\ const\ Base::Type\ StaticType\ =\ Base::Type::name}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Base}}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ M>}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ is()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mType\ ==\ M::StaticType;\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ M>}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ M*\ as()\textcolor{keyword}{\ const\ }\{\ assert(is<M>());\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const\ }M*\textcolor{keyword}{>}(\textcolor{keyword}{this});\ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ emitter()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mEmitter;\ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint64\_t\ emmiterId()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mEmitterId;\ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ Type\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_incoming_connection}{IncomingConnection}},}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_connection}{Connection}},}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_connection_interrupted}{ConnectionInterrupted}},}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_connection_resumed}{ConnectionResumed}},}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_disconnection}{Disconnection}},}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_user_data}{UserData}},}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Base}}(Type\ type,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ emitter,\ uint64\_t\ emitterid)}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ mType(type)}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ mEmitter(emitter)}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ mEmitterId(emitterid)}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\ mEmitter;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint64\_t\ mEmitterId;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type\ mType;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_incoming_connection}{IncomingConnection}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Base}}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DECLARE\_MESSAGE(\mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_incoming_connection}{IncomingConnection}});}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_incoming_connection}{IncomingConnection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ emitter,\ uint64\_t\ emitterid)}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Base}}(Type::IncomingConnection,\ emitter,\ emitterid)}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_connection}{Connection}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Base}}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DECLARE\_MESSAGE(\mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_connection}{Connection}});}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ Result\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Success,}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Failed,}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Refused,}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TimedOut,}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_connection}{Connection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ emitter,\ uint64\_t\ emitterid,\ Result\ r)}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Base}}(Type::Connection,\ emitter,\ emitterid)}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ result(r)}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Result\ result;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#if\ BOUSKNET\_ALLOW\_NETWORK\_INTERRUPTION\ ==\ BOUSKNET\_SETTINGS\_ENABLED}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_connection_interrupted}{ConnectionInterrupted}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Base}}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DECLARE\_MESSAGE(\mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_connection_interrupted}{ConnectionInterrupted}});}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_connection_interrupted}{ConnectionInterrupted}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ emitter,\ uint64\_t\ emitterid,\ \textcolor{keywordtype}{bool}\ isDirect)}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Base}}(Type::ConnectionInterrupted,\ emitter,\ emitterid)}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ isDirectInterruption(isDirect)}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ True\ if\ the\ emitter\ is\ directly\ interrupted\ to\ us.\ False\ if\ the\ emitter\ forwarded\ an\ interruption\ on\ his\ side.}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isDirectInterruption;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_connection_resumed}{ConnectionResumed}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Base}}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DECLARE\_MESSAGE(\mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_connection_resumed}{ConnectionResumed}});}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_connection_resumed}{ConnectionResumed}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ emitter,\ uint64\_t\ emitterid,\ \textcolor{keywordtype}{bool}\ networkResume)}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Base}}(Type::ConnectionResumed,\ emitter,\ emitterid)}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ isNetworkResumed(networkResume)}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ True\ if\ the\ network\ is\ now\ completely\ resumed.\ False\ if\ network\ is\ not\ yet\ resumed\ due\ to\ another\ client\ being\ interrupted.}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isNetworkResumed;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BOUSKNET\_ALLOW\_NETWORK\_INTERRUPTION\ ==\ BOUSKNET\_SETTINGS\_ENABLED}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_disconnection}{Disconnection}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Base}}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DECLARE\_MESSAGE(\mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_disconnection}{Disconnection}});}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ Reason\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Disconnected,}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Lost,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_disconnection}{Disconnection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ emitter,\ uint64\_t\ emitterid,\ Reason\ r)}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Base}}(Type::Disconnection,\ emitter,\ emitterid)}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ reason(r)}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Reason\ reason;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_user_data}{UserData}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Base}}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DECLARE\_MESSAGE(\mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_user_data}{UserData}});}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_user_data}{UserData}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ emitter,\ uint64\_t\ emitterid,\ std::vector<unsigned\ char>\&\&\ d,\ uint8\_t\ chanId)}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_messages_1_1_base}{Base}}(Type::UserData,\ emitter,\ emitterid)}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ data(std::move(d))}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ channelId(chanId)}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<unsigned\ char>\ data;}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\_t\ channelId;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#undef\ DECLARE\_MESSAGE}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \}}
+\DoxyCodeLine{00124\ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\#include\ <iosfwd>}}
+\DoxyCodeLine{00127\ std::ostream\&\ operator<<(std::ostream\&\ out,\ Bousk::Network::Messages::Connection::Result\ result);}
+\DoxyCodeLine{00128\ std::ostream\&\ operator<<(std::ostream\&\ out,\ Bousk::Network::Messages::Disconnection::Reason\ reason);}
+
+\end{DoxyCode}

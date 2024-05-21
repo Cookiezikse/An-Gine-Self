@@ -1,0 +1,617 @@
+\doxysection{Input\+Key\+Code.\+h}
+\hypertarget{_input_key_code_8h_source}{}\label{_input_key_code_8h_source}\index{includes/Inputs/InputKeyCode.h@{includes/Inputs/InputKeyCode.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{namespace\ }Inputs}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keyword}{enum\ class}\ KeyAction}
+\DoxyCodeLine{00006\ \ \ \ \ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ KEY\_PRESS,}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ KEY\_RELEASE,}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ KEY\_REPEAT,}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \_NONE}
+\DoxyCodeLine{00012\ \ \ \ \ \};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ KeyActionStrings[]\ =}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Press"{}},}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Release"{}},}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Repeat"{}},}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}NONE"{}}}
+\DoxyCodeLine{00021\ \ \ \ \ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{enum\ class}\ KeyCode}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ KEY\_SPACE,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ KEY\_APOSTROPHE,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ KEY\_COMMA,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ KEY\_MINUS,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ KEY\_PERIOD,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ KEY\_SLASH,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ KEY\_0,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ KEY\_1,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ KEY\_2,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ KEY\_3,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ KEY\_4,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ KEY\_5,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ KEY\_6,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ KEY\_7,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ KEY\_8,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ KEY\_9,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ KEY\_SEMICOLON,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ KEY\_EQUAL,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ KEY\_A,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ KEY\_B,}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ KEY\_C,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ KEY\_D,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ KEY\_E,}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ KEY\_F,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ KEY\_G,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ KEY\_H,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ KEY\_I,}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ KEY\_J,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ KEY\_K,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ KEY\_L,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ KEY\_M,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ KEY\_N,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ KEY\_O,}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ KEY\_P,}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ KEY\_Q,}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ KEY\_R,}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ KEY\_S,}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ KEY\_T,}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ KEY\_U,}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ KEY\_V,}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ KEY\_W,}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ KEY\_X,}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ KEY\_Y,}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ KEY\_Z,}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ KEY\_LEFT\_BRACKET,}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ KEY\_BACKSLASH,}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ KEY\_RIGHT\_BRACKET,}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ KEY\_GRAVE\_ACCENT,}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ KEY\_WORLD\_1,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ KEY\_WORLD\_2,}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ KEY\_ESCAPE,}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ KEY\_ENTER,}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ KEY\_TAB,}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ KEY\_BACKSPACE,}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ KEY\_INSERT,}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ KEY\_DELETE,}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ KEY\_RIGHT,}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ KEY\_LEFT,}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ KEY\_DOWN,}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ KEY\_UP,}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ KEY\_PAGE\_UP,}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ KEY\_PAGE\_DOWN,}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ KEY\_HOME,}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ KEY\_END,}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ KEY\_CAPS\_LOCK,}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ KEY\_SCROLL\_LOCK,}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ KEY\_NUM\_LOCK,}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ KEY\_PRINT\_SCREEN,}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ KEY\_PAUSE,}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ KEY\_F1,}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ KEY\_F2,}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ KEY\_F3,}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ KEY\_F4,}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ KEY\_F5,}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ KEY\_F6,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ KEY\_F7,}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ KEY\_F8,}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ KEY\_F9,}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ KEY\_F10,}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ KEY\_F11,}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ KEY\_F12,}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ KEY\_F13,}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ KEY\_F14,}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ KEY\_F15,}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ KEY\_F16,}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ KEY\_F17,}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ KEY\_F18,}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ KEY\_F19,}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ KEY\_F20,}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ KEY\_F21,}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ KEY\_F22,}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ KEY\_F23,}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ KEY\_F24,}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ KEY\_F25,}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ KEY\_KP\_0,}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ KEY\_KP\_1,}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ KEY\_KP\_2,}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ KEY\_KP\_3,}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ KEY\_KP\_4,}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ KEY\_KP\_5,}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ KEY\_KP\_6,}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ KEY\_KP\_7,}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ KEY\_KP\_8,}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ KEY\_KP\_9,}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ KEY\_KP\_DECIMAL,}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ KEY\_KP\_DIVIDE,}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ KEY\_KP\_MULTIPLY,}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ KEY\_KP\_SUBTRACT,}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ KEY\_KP\_ADD,}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ KEY\_KP\_ENTER,}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ KEY\_KP\_EQUAL,}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ KEY\_LEFT\_SHIFT,}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ KEY\_LEFT\_CONTROL,}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ KEY\_LEFT\_ALT,}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ KEY\_LEFT\_SUPER,}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ KEY\_RIGHT\_SHIFT,}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ KEY\_RIGHT\_CONTROL,}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ KEY\_RIGHT\_ALT,}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ KEY\_RIGHT\_SUPER,}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ KEY\_MENU,}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ COUNT,}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \_NONE}
+\DoxyCodeLine{00151\ \ \ \ \ \};}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ KeyCodeStrings[]\ =}
+\DoxyCodeLine{00154\ \ \ \ \ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Space"{}},}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}'"{}},}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{},"{}},}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}-\/"{}},}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}."{}},}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}/"{}},}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}0"{}},}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}1"{}},}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}2"{}},}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}3"{}},}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}4"{}},}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}5"{}},}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}6"{}},}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}7"{}},}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}8"{}},}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}9"{}},}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{};"{}},}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}="{}},}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}A"{}},}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}B"{}},}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}C"{}},}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}D"{}},}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}E"{}},}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F"{}},}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}G"{}},}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}H"{}},}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}I"{}},}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}J"{}},}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}K"{}},}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}L"{}},}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}M"{}},}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}N"{}},}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}O"{}},}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}P"{}},}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Q"{}},}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}R"{}},}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}S"{}},}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}T"{}},}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}U"{}},}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}V"{}},}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}W"{}},}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}X"{}},}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Y"{}},}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Z"{}},}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}["{}},}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)"{}},}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}]"{}},}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\`{}"{}},}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}World\ 1"{}},}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}World\ 2"{}},}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}ESC"{}},}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Enter"{}},}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Tab"{}},}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Backspace"{}},}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Insert"{}},}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Delete"{}},}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Right"{}},}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Left"{}},}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Down"{}},}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Up"{}},}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Page\ up"{}},}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Page\ down"{}},}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Home"{}},}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}End"{}},}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Caps\ lock"{}},}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Scroll\ lock"{}},}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Num\ lock"{}},}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Print\ screen"{}},}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pause"{}},}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F1"{}},}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F2"{}},}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F3"{}},}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F4"{}},}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F5"{}},}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F6"{}},}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F7"{}},}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F8"{}},}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F9"{}},}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F10"{}},}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F11"{}},}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F12"{}},}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F13"{}},}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F14"{}},}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F15"{}},}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F16"{}},}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F17"{}},}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F18"{}},}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F19"{}},}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F20"{}},}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F21"{}},}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F22"{}},}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F23"{}},}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F24"{}},}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}F25"{}},}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ 0"{}},}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ 1"{}},}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ 2"{}},}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ 3"{}},}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ 4"{}},}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ 5"{}},}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ 6"{}},}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ 7"{}},}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ 8"{}},}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ 9"{}},}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ ."{}},}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ /"{}},}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ *"{}},}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ -\/"{}},}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ +"{}},}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ Enter"{}},}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ Equal"{}},}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}L\ Shift"{}},}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}L\ Ctrl"{}},}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}L\ Alt"{}},}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}L\ Super"{}},}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}R\ Shift"{}},}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}R\ Ctrl"{}},}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}R\ Alt"{}},}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}R\ Super"{}},}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Menu"{}},}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Count"{}},}
+\DoxyCodeLine{00278\ }
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}NONE"{}}}
+\DoxyCodeLine{00280\ \ \ \ \ \};}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{keyword}{enum\ class}\ InputModifier}
+\DoxyCodeLine{00283\ \ \ \ \ \{}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ SHIFT\ =\ (1\ <<\ 0),}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ CONTROL\ =\ (1\ <<\ 1),}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ ALT\ =\ (1\ <<\ 2),}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ SUPER\ =\ (1\ <<\ 3),}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ CAPS\_LOCK\ =\ (1\ <<\ 4),}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ NUM\_LOCK\ =\ (1\ <<\ 5),}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \_NONE\ =\ 0,}
+\DoxyCodeLine{00292\ \ \ \ \ \};}
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00294\ \ \ \ \ \textcolor{keyword}{enum\ class}\ MouseButton}
+\DoxyCodeLine{00295\ \ \ \ \ \{}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ MOUSE\_BUTTON\_1,}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ MOUSE\_BUTTON\_2,}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ MOUSE\_BUTTON\_3,}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ MOUSE\_BUTTON\_4,}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ MOUSE\_BUTTON\_5,}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ MOUSE\_BUTTON\_6,}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ MOUSE\_BUTTON\_7,}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ MOUSE\_BUTTON\_8,}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ COUNT,}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ LEFT\ =\ MOUSE\_BUTTON\_1,}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ RIGHT\ =\ MOUSE\_BUTTON\_2,}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ MIDDLE\ =\ MOUSE\_BUTTON\_3,}
+\DoxyCodeLine{00309\ }
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \_NONE\ =\ MOUSE\_BUTTON\_8\ +\ 1}
+\DoxyCodeLine{00311\ \ \ \ \ \};}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00313\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ MouseButtonStrings[]\ =}
+\DoxyCodeLine{00314\ \ \ \ \ \{}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}LMB"{}},}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}RMB"{}},}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}MMB"{}},}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Button\ 4"{}},}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Button\ 5"{}},}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Button\ 6"{}},}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Button\ 7"{}},}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Button\ 8"{}},}
+\DoxyCodeLine{00323\ }
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}NONE"{}}}
+\DoxyCodeLine{00325\ \ \ \ \ \};}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00328\ \ \ \ \ \textcolor{keyword}{enum\ class}\ GamepadButton}
+\DoxyCodeLine{00329\ \ \ \ \ \{}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ A\ =\ 0,}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ B\ =\ 1,}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ X\ =\ 2,}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ Y\ =\ 3,}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ LEFT\_BUMPER\ =\ 4,}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ RIGHT\_BUMPER\ =\ 5,}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ BACK\ =\ 6,}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ START\ =\ 7,}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 8\ ?}}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ LEFT\_STICK\_DOWN\ =\ 9,}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ RIGHT\_STICK\_DOWN\ =\ 10,}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ D\_PAD\_UP\ =\ 11,}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ D\_PAD\_RIGHT\ =\ 12,}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ D\_PAD\_DOWN\ =\ 13,}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ D\_PAD\_LEFT\ =\ 14,}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ COUNT,}
+\DoxyCodeLine{00347\ }
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \_NONE}
+\DoxyCodeLine{00349\ \ \ \ \ \};}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ \ \ \ \ \textcolor{comment}{//\ TODO:\ Support\ naming\ for\ other\ common\ gamepads}}
+\DoxyCodeLine{00352\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ GamepadButtonStrings[]\ =}
+\DoxyCodeLine{00353\ \ \ \ \ \{}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}A"{}},}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}B"{}},}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}X"{}},}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Y"{}},}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}L\ Bumper"{}},}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}R\ Bumper"{}},}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Back"{}},}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Start"{}},}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Invalid"{}},\ \textcolor{comment}{//\ TODO:\ Find\ out\ what\ gamepads\ use\ this\ index}}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}L\ Stick"{}},}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}R\ Stick"{}},}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ Up"{}},}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ Right"{}},}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ Down"{}},}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pad\ Left"{}},}
+\DoxyCodeLine{00369\ }
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}COUNT"{}},}
+\DoxyCodeLine{00371\ }
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}NONE"{}}}
+\DoxyCodeLine{00373\ \ \ \ \ \};}
+\DoxyCodeLine{00374\ }
+\DoxyCodeLine{00375\ \ \ \ \ \textcolor{keyword}{enum\ class}\ GamepadAxis}
+\DoxyCodeLine{00376\ \ \ \ \ \{}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ LEFT\_STICK\_X\ =\ 0,}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ LEFT\_STICK\_Y\ =\ 1,}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ RIGHT\_STICK\_X\ =\ 2,}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ RIGHT\_STICK\_Y\ =\ 3,}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ LEFT\_TRIGGER\ =\ 4,}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ RIGHT\_TRIGGER\ =\ 5,}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ COUNT,}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \_NONE}
+\DoxyCodeLine{00387\ \ \ \ \ \};}
+\DoxyCodeLine{00388\ }
+\DoxyCodeLine{00389\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ GamepadAxisStrings[]\ =}
+\DoxyCodeLine{00390\ \ \ \ \ \{}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}L\ Stick\ X"{}},}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}L\ Stick\ Y"{}},}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}R\ Stick\ X"{}},}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}R\ Stick\ Y"{}},}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}L\ Trigger"{}},}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}R\ Trigger"{}},}
+\DoxyCodeLine{00397\ }
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}COUNT"{}},}
+\DoxyCodeLine{00399\ }
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}NONE"{}}}
+\DoxyCodeLine{00401\ \ \ \ \ \};}
+\DoxyCodeLine{00402\ }
+\DoxyCodeLine{00403\ \ \ \ \ \textcolor{keyword}{enum\ class}\ MouseAxis}
+\DoxyCodeLine{00404\ \ \ \ \ \{}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ X,}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ Y,}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ SCROLL\_X,}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ SCROLL\_Y,}
+\DoxyCodeLine{00409\ }
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \_NONE}
+\DoxyCodeLine{00411\ \ \ \ \ \};}
+\DoxyCodeLine{00412\ }
+\DoxyCodeLine{00413\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ MouseAxisStrings[]\ =}
+\DoxyCodeLine{00414\ \ \ \ \ \{}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Axis\ X"{}},}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Axis\ Y"{}},}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Scroll\ X"{}},}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Scroll\ Y"{}},}
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}NONE"{}}}
+\DoxyCodeLine{00421\ \ \ \ \ \};}
+\DoxyCodeLine{00422\ }
+\DoxyCodeLine{00423\ }
+\DoxyCodeLine{00424\ \ \ \ \ \textcolor{keyword}{enum\ class}\ ActionEvent}
+\DoxyCodeLine{00425\ \ \ \ \ \{}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ ACTION\_TRIGGER,}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ ACTION\_RELEASE,}
+\DoxyCodeLine{00428\ }
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \_COUNT}
+\DoxyCodeLine{00430\ \ \ \ \ \};}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00432\ \ \ \ \ \textcolor{keyword}{enum\ class}\ Action}
+\DoxyCodeLine{00433\ \ \ \ \ \{}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ MOVE\_LEFT,}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ MOVE\_RIGHT,}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ MOVE\_FORWARD,}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ MOVE\_BACKWARD,}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ LOOK\_UP,}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ LOOK\_DOWN,}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ LOOK\_LEFT,}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ LOOK\_RIGHT,}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ INTERACT\_LEFT\_HAND,}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ INTERACT\_RIGHT\_HAND,}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ PLACE\_ITEM,}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ PLACE\_WIRE,}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ DROP\_ITEM,}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ PAUSE,}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ ZOOM\_IN,}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ ZOOM\_OUT,}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ TOGGLE\_TABLET,}
+\DoxyCodeLine{00451\ }
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tracks}}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ ENTER\_TRACK\_BUILD\_MODE,}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ ENTER\_TRACK\_EDIT\_MODE,}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ COMPLETE\_TRACK,}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ PICKUP\_ITEM,}
+\DoxyCodeLine{00457\ }
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Inventory}}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ SHOW\_INVENTORY,}
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ TOGGLE\_ITEM\_HOLDING,}
+\DoxyCodeLine{00461\ \ \ \ \ \ \ \ \ CYCLE\_SELECTED\_ITEM\_FORWARD,}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ CYCLE\_SELECTED\_ITEM\_BACKWARD,}
+\DoxyCodeLine{00463\ }
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vehicle}}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ VEHICLE\_ACCELERATE,}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ VEHICLE\_REVERSE,}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ VEHICLE\_BRAKE,}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ VEHICLE\_TURN\_LEFT,}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ VEHICLE\_TURN\_RIGHT,}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ VEHICLE\_LOOK\_LEFT,}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ VEHICLE\_LOOK\_RIGHT,}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ VEHICLE\_LOOK\_UP,}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ VEHICLE\_LOOK\_DOWN,}
+\DoxyCodeLine{00474\ }
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Misc}}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ TAKE\_SCREENSHOT,}
+\DoxyCodeLine{00477\ }
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Editor}}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ EDITOR\_RENAME\_SELECTED,}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ EDITOR\_SELECT\_TRANSLATE\_GIZMO,}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ EDITOR\_SELECT\_ROTATE\_GIZMO,}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ EDITOR\_SELECT\_SCALE\_GIZMO,}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ EDITOR\_FOCUS\_ON\_SELECTION,}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ EDITOR\_MOD\_FASTER,}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ EDITOR\_MOD\_SLOWER,}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ EDITOR\_ORBIT,}
+\DoxyCodeLine{00487\ }
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Debug}}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ DBG\_SWITCH\_TO\_NEXT\_CAM,}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ DBG\_SWITCH\_TO\_PREV\_CAM,}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ DBG\_ENTER\_NEXT\_SCENE,}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ DBG\_ENTER\_PREV\_SCENE,}
+\DoxyCodeLine{00493\ }
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Debug\ Camera}}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ DBG\_CAM\_MOVE\_FORWARD,}
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ DBG\_CAM\_MOVE\_BACKWARD,}
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ DBG\_CAM\_MOVE\_LEFT,}
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ DBG\_CAM\_MOVE\_RIGHT,}
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ DBG\_CAM\_MOVE\_UP,}
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \ \ DBG\_CAM\_MOVE\_DOWN,}
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ DBG\_CAM\_LOOK\_UP,}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ DBG\_CAM\_LOOK\_DOWN,}
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ DBG\_CAM\_LOOK\_LEFT,}
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ DBG\_CAM\_LOOK\_RIGHT,}
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ DBG\_CAM\_ZOOM,}
+\DoxyCodeLine{00506\ }
+\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ \_NONE}
+\DoxyCodeLine{00508\ \ \ \ \ \};}
+\DoxyCodeLine{00509\ }
+\DoxyCodeLine{00510\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ ActionStrings[]\ =}
+\DoxyCodeLine{00511\ \ \ \ \ \{}
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Move\ left"{}},}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Move\ right"{}},}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Move\ forward"{}},}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Move\ backward"{}},}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Look\ up"{}},}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Look\ down"{}},}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Look\ left"{}},}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Look\ right"{}},}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Interact\ Left\ Hand"{}},}
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Interact\ Right\ Hand"{}},}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Place\ item"{}},}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Place\ wire"{}},}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Drop\ item"{}},}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pause"{}},}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Zoom\ in"{}},}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Zoom\ out"{}},}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Toggle\ tablet"{}},}
+\DoxyCodeLine{00529\ }
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tracks}}
+\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Enter\ track\ build\ mode"{}},}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Enter\ track\ edit\ mode"{}},}
+\DoxyCodeLine{00533\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Complete\ track"{}},}
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pickup\ Item"{}},}
+\DoxyCodeLine{00535\ }
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Inventory}}
+\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Show\ inventory"{}},}
+\DoxyCodeLine{00538\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Toggle\ holding\ item"{}},}
+\DoxyCodeLine{00539\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Cycle\ selected\ item\ forward"{}},}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Cycle\ selected\ item\ backward"{}},}
+\DoxyCodeLine{00541\ }
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Vehicle}}
+\DoxyCodeLine{00543\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Vehicle\ accelerate"{}},}
+\DoxyCodeLine{00544\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Vehicle\ reverse"{}},}
+\DoxyCodeLine{00545\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Vehicle\ brake"{}},}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Vehicle\ turn\ left"{}},}
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Vehicle\ turn\ right"{}},}
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Vehicle\ look\ left"{}},}
+\DoxyCodeLine{00549\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Vehicle\ look\ right"{}},}
+\DoxyCodeLine{00550\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Vehicle\ look\ up"{}},}
+\DoxyCodeLine{00551\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Vehicle\ look\ down"{}},}
+\DoxyCodeLine{00552\ }
+\DoxyCodeLine{00553\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Misc}}
+\DoxyCodeLine{00554\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Take\ screenshot"{}},}
+\DoxyCodeLine{00555\ }
+\DoxyCodeLine{00556\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Editor}}
+\DoxyCodeLine{00557\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Editor\ Rename\ selected"{}},}
+\DoxyCodeLine{00558\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Editor\ Select\ translate\ gizmo"{}},}
+\DoxyCodeLine{00559\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Editor\ Select\ rotate\ gizmo"{}},}
+\DoxyCodeLine{00560\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Editor\ Select\ scale\ gizmo"{}},}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Editor\ Focus\ on\ selection"{}},}
+\DoxyCodeLine{00562\ }
+\DoxyCodeLine{00563\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Editor\ Mod\ faster"{}},}
+\DoxyCodeLine{00564\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Editor\ Mod\ slower"{}},}
+\DoxyCodeLine{00565\ }
+\DoxyCodeLine{00566\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Editor\ Orbit"{}},}
+\DoxyCodeLine{00567\ }
+\DoxyCodeLine{00568\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Debug}}
+\DoxyCodeLine{00569\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}DBG\ Switch\ to\ next\ cam"{}},}
+\DoxyCodeLine{00570\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}DBG\ Switch\ to\ prev\ cam"{}},}
+\DoxyCodeLine{00571\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}DBG\ Enter\ next\ scene"{}},}
+\DoxyCodeLine{00572\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}DBG\ Enter\ prev\ scene"{}},}
+\DoxyCodeLine{00573\ }
+\DoxyCodeLine{00574\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}DBG\ CAM\ Move\ forward"{}},}
+\DoxyCodeLine{00575\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}DBG\ CAM\ Move\ backward"{}},}
+\DoxyCodeLine{00576\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}DBG\ CAM\ Move\ left"{}},}
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}DBG\ CAM\ Move\ right"{}},}
+\DoxyCodeLine{00578\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}DBG\ CAM\ Move\ up"{}},}
+\DoxyCodeLine{00579\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}DBG\ CAM\ Move\ down"{}},}
+\DoxyCodeLine{00580\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}DBG\ CAM\ Look\ up"{}},}
+\DoxyCodeLine{00581\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}DBG\ CAM\ Look\ down"{}},}
+\DoxyCodeLine{00582\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}DBG\ CAM\ Look\ left"{}},}
+\DoxyCodeLine{00583\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}DBG\ CAM\ Look\ right"{}},}
+\DoxyCodeLine{00584\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}DBG\ CAM\ Zoom"{}},}
+\DoxyCodeLine{00585\ }
+\DoxyCodeLine{00586\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}None"{}}}
+\DoxyCodeLine{00587\ \ \ \ \ \};}
+\DoxyCodeLine{00588\ }
+\DoxyCodeLine{00589\ \ \ \ \ \textcolor{keyword}{enum\ class}\ InputType}
+\DoxyCodeLine{00590\ \ \ \ \ \{}
+\DoxyCodeLine{00591\ \ \ \ \ \ \ \ \ KEYBOARD,}
+\DoxyCodeLine{00592\ \ \ \ \ \ \ \ \ MOUSE\_BUTTON,}
+\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ MOUSE\_AXIS,}
+\DoxyCodeLine{00594\ \ \ \ \ \ \ \ \ GAMEPAD\_BUTTON,}
+\DoxyCodeLine{00595\ \ \ \ \ \ \ \ \ GAMEPAD\_AXIS,}
+\DoxyCodeLine{00596\ }
+\DoxyCodeLine{00597\ \ \ \ \ \ \ \ \ \_NONE}
+\DoxyCodeLine{00598\ \ \ \ \ \};}
+\DoxyCodeLine{00599\ }
+\DoxyCodeLine{00600\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ InputTypeStrings[]\ =}
+\DoxyCodeLine{00601\ \ \ \ \ \{}
+\DoxyCodeLine{00602\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Keyboard"{}},}
+\DoxyCodeLine{00603\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Mouse\ button"{}},}
+\DoxyCodeLine{00604\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Mouse\ axis"{}},}
+\DoxyCodeLine{00605\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Gamepad\ button"{}},}
+\DoxyCodeLine{00606\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Gamepad\ axis"{}},}
+\DoxyCodeLine{00607\ }
+\DoxyCodeLine{00608\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}None"{}}}
+\DoxyCodeLine{00609\ \ \ \ \ \};}
+\DoxyCodeLine{00610\ \}}
+\DoxyCodeLine{00611\ }
+
+\end{DoxyCode}

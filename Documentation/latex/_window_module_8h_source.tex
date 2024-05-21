@@ -1,0 +1,474 @@
+\doxysection{Window\+Module.\+h}
+\hypertarget{_window_module_8h_source}{}\label{_window_module_8h_source}\index{includes/Modules/WindowModule.h@{includes/Modules/WindowModule.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Modules/Module.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_descriptors.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_window.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//std}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <stb\_image.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}GameObject/GameObject.h"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ WINDOW\_CONFIG\_LOCATION\ "{}Saves\(\backslash\)\(\backslash\)window\_config.json"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }Inputs}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{enum\ class}\ KeyAction;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{enum\ class}\ MouseButton;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{enum\ class}\ KeyCode;}
+\DoxyCodeLine{00031\ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scene_manager}{SceneManager}};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{enum}\ GlfwCursorType}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ ARROW,}
+\DoxyCodeLine{00042\ \ \ \ \ IBEAM,}
+\DoxyCodeLine{00044\ \ \ \ \ CROSSHAIR,}
+\DoxyCodeLine{00046\ \ \ \ \ POINTING\_HAND,}
+\DoxyCodeLine{00048\ \ \ \ \ RESIZE\_EW,}
+\DoxyCodeLine{00050\ \ \ \ \ RESIZE\_NS,}
+\DoxyCodeLine{00052\ \ \ \ \ RESIZE\_NWSE,}
+\DoxyCodeLine{00054\ \ \ \ \ RESIZE\_NESW,}
+\DoxyCodeLine{00056\ \ \ \ \ RESIZE\_ALL,}
+\DoxyCodeLine{00058\ \ \ \ \ NOT\_ALLOWED\ }
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{enum}\ GlfwCursorMode}
+\DoxyCodeLine{00068\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ DISABLED,}
+\DoxyCodeLine{00071\ \ \ \ \ HIDDEN,}
+\DoxyCodeLine{00073\ \ \ \ \ NORMAL,}
+\DoxyCodeLine{00075\ \ \ \ \ CAPTURED,}
+\DoxyCodeLine{00078\ \ \ \ \ \_NONE}
+\DoxyCodeLine{00079\ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{keyword}{enum\ class}\ WindowMode}
+\DoxyCodeLine{00082\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ WINDOWED,}
+\DoxyCodeLine{00084\ \ \ \ \ WINDOWED\_FULLSCREEN,}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//\ (aka\ "{}Borderless\ windowed"{})}}
+\DoxyCodeLine{00086\ \ \ \ \ FULLSCREEN,}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \_NONE}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00096\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ WindowModeStrings[]\ =}
+\DoxyCodeLine{00097\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{stringliteral}{"{}Windowed"{}},}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{stringliteral}{"{}Windowed\ Fullscreen"{}},}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{stringliteral}{"{}Fullscreen"{}},}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{stringliteral}{"{}NONE"{}}}
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00112\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_window_module}{WindowModule}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_module}{Module}}}
+\DoxyCodeLine{00113\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_window_module_aacc29598aa3fd3cc3776699be6444938}{WIDTH}}\ \ =\ 800;\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_window_module_aa99037e333459e4ad122ef19b16ba9cf}{HEIGHT}}\ =\ 600;\ }
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_window_module_aaf6702928e44fde93d7e4fa34ecf846f}{WindowModule}}();}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_window_module_a476d0a74501e1b4d341bd84bf419acff}{\string~WindowModule}}();}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_window_module_a23a9ce9b82f5ef985e15e1879a6b483e}{WindowModule}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_window_module}{WindowModule}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_window_module}{WindowModule}}\&\ \mbox{\hyperlink{class_window_module_a81d3bfa14e4aaf47ddaf06417bb376bc}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_window_module}{WindowModule}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ [[nodiscard]]\ vk::Extent2D\ \mbox{\hyperlink{class_window_module_a566c6d99bf03f2861296bccc84a68373}{GetExtent}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00155\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(size.x),\ \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(size.y)\};}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_window_module_a98af15f4cd803986d3c6e7058baee79a}{WasWindowResized}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ bFrameBufferResize;\ \}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ResetWindowResizedFlag()\ \{\ bFrameBufferResize\ =\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a5ef3efe1bd31257e18fd58b3d155cff8}{CreateWindowSurface}}(vk::Instance\ \_instance,\ vk::SurfaceKHR*\ \_surface)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ [[nodiscard]]\ GLFWwindow*\ \mbox{\hyperlink{class_window_module_a8b735e722c56c2d3ef0b8aacc2bb46e4}{GetGlfwWindow}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ window;\ \}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a435cc3b3030d8c79a8f12da6f8f0439f}{ResetCursorWindow}}()\textcolor{keyword}{\ const\ }\{\ glfwSetCursor(window,\ \textcolor{keyword}{nullptr});\ \}}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a4d16e75236562fb95cccf5c4b8cae98d}{CubeCursorWindow}}(\textcolor{keywordtype}{int}\ \_color\ =\ 255)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a8fbe3ff773262dbd98389434d69e42ec}{StandardCursorWindow}}(GlfwCursorType\ \_cursorType)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a7ef61b4a58aa4275faf9b66bf223f822}{SetInputCursorMode}}(GlfwCursorMode\ \_mode);}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_window_module_a62d9d4a89382ee08811fb054c5b6d8c5}{ShouldClose}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ glfwWindowShouldClose(window);\ \}}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_abe09899b92e659ba71b811044254191d}{PollEvents}}()\ \{\ glfwPollEvents();\ \}}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ region\ Getter}}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ region\ Size}}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_window_module_aa99155593941ff3b293313e7abd979e1}{GetWidth}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ size.x;\ \}}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_window_module_a6d5d162194f8054fc1549cf0fd8902c5}{GetHeight}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ size.y;\ \}}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ [[nodiscard]]\ glm::vec2\ \mbox{\hyperlink{class_window_module_afc1508e4f04a44d0cb8b4602fe7e602a}{GetSize}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ size;\ \}}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_window_module_a6180f26987e5e41622639310ce8efa3b}{GetFrameBufferWidth}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ frameBufferSize.x;\ \}}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_window_module_af03714ddee79357df5b85301c6780263}{GetFrameBufferHeight}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ frameBufferSize.y;\ \}}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ [[nodiscard]]\ glm::vec2\ \mbox{\hyperlink{class_window_module_a21dff78e184314c952a4365a4f9be7f8}{GetFrameBufferSize}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ frameBufferSize;\ \}}
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00300\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ endregion}}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00302\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ region\ Position}}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ [[nodiscard]]\ glm::ivec2\ \mbox{\hyperlink{class_window_module_a3180eff4eff2e05f8e50f4ec5cf3ae08}{GetPosition}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ position;\ \}}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_window_module_a16d14e148c06942fad859d8a15b278f9}{GetPositionX}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ position.x;\ \}}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_window_module_a2a0c6938d30cab6a298c060490575b54}{GetPositionY}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ position.y;\ \}}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ [[nodiscard]]\ glm::ivec2\ \mbox{\hyperlink{class_window_module_a2785d52498ba2c113fbb9257190d0268}{GetStartingPosition}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ startingPosition;\ \}}
+\DoxyCodeLine{00339\ }
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_window_module_abdd6a93fb152e08d41e4956026335452}{GetStartingPositionX}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ startingPosition.x;\ \}}
+\DoxyCodeLine{00348\ }
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_window_module_a2c90fdfaf700784d1f5f975cad71bb95}{GetStartingPositionY}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ startingPosition.y;\ \}}
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00358\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ endregion}}
+\DoxyCodeLine{00359\ }
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_window_module_a8c0e41d5945be08dad704169ec1348ac}{GetFrameBufferResize}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ bFrameBufferResize;\ \}}
+\DoxyCodeLine{00368\ }
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_window_module_a0095592593df42ac6c15f499d2e3406d}{HasFocus}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ bHasFocus;\ \}}
+\DoxyCodeLine{00377\ }
+\DoxyCodeLine{00378\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ region\ Name\&Title}}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{class_window_module_a59edec1d68a526a7985083a61721be04}{GetName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ windowName;\ \}}
+\DoxyCodeLine{00388\ }
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{class_window_module_a331c03f6b7a2d740257714974a465a27}{GetWindowTitle}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ windowTitle;\ \}}
+\DoxyCodeLine{00397\ }
+\DoxyCodeLine{00398\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ endregion}}
+\DoxyCodeLine{00399\ }
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_window_module_a95897491d08071deef4328ed5bb9f66a}{GetAspectRatio}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(size.x)\ /\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(size.y);\ \}}
+\DoxyCodeLine{00408\ }
+\DoxyCodeLine{00409\ }
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_window_module_a60c250fa29d151430ab2c6b85a8d45f2}{GetInvAspectRatio}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00418\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(size.y)\ /\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(size.x);}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00421\ }
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_window_module_a294fb6e5828f34b5e1d42418522c582d}{GetVSyncEnabled}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ bVSyncEnabled;\ \}}
+\DoxyCodeLine{00430\ }
+\DoxyCodeLine{00431\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ region\ Mode}}
+\DoxyCodeLine{00432\ }
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ [[nodiscard]]\ GlfwCursorMode\ \mbox{\hyperlink{class_window_module_a52aabce0e6b21c6de21fa1df31f379aa}{GetCursorMode}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ cursorMode;\ \}}
+\DoxyCodeLine{00441\ }
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ [[nodiscard]]\ WindowMode\ \mbox{\hyperlink{class_window_module_a5913b6a97b753f0b56593ff21d690aa8}{GetWindowMode}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ currentWindowMode;\ \}}
+\DoxyCodeLine{00450\ }
+\DoxyCodeLine{00451\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ endregion}}
+\DoxyCodeLine{00452\ }
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{class_window_module_a1a642d9a91a41deaf371e622fddefdd9}{GetClipboardText}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ glfwGetClipboardString(window);\ \}}
+\DoxyCodeLine{00461\ }
+\DoxyCodeLine{00462\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ endregion}}
+\DoxyCodeLine{00463\ }
+\DoxyCodeLine{00464\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ region\ Setter}}
+\DoxyCodeLine{00465\ }
+\DoxyCodeLine{00466\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ region\ Size}}
+\DoxyCodeLine{00467\ }
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a69cc51bd13582ecb98890230639d8909}{SetSize}}(\textcolor{keyword}{const}\ glm::ivec2\&\ \_newSize)\ \{\ size\ =\ \_newSize;\ \}}
+\DoxyCodeLine{00476\ }
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a3c077bfcd307c5099ee61ca3ef3e4cb5}{SetSize}}(\textcolor{keyword}{const}\ int32\_t\&\ \_newWidth,\ \textcolor{keyword}{const}\ int32\_t\&\ \_newHeight)\ \{\ size\ =\ glm::ivec2(\_newWidth,\ \_newHeight);\ \}}
+\DoxyCodeLine{00486\ }
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_ab7268e7f7a290117f4dcfec0b1cccd6e}{SetWidth}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ \_newWidth)\ \{\ size.x\ =\ \_newWidth;\ \}}
+\DoxyCodeLine{00495\ }
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a23f5555e63d5e7e9bb4ef1ef048758b2}{SetHeight}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ \_newHeight)\ \{\ size.y\ =\ \_newHeight;\ \}}
+\DoxyCodeLine{00504\ }
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a1fe8a551c74af1d24536439d26582220}{SetFrameBufferSize}}(\textcolor{keyword}{const}\ glm::vec2\&\ \_newSize)\ \{\ frameBufferSize\ =\ \_newSize;\ \}}
+\DoxyCodeLine{00513\ }
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_ac090dbc2c5d2582a7334877ad5d80a15}{SetFrameBufferSize}}(\textcolor{keyword}{const}\ int32\_t\&\ \_newWidth,\ \textcolor{keyword}{const}\ int32\_t\&\ \_newHeight)}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \ \ \ \ frameBufferSize\ =\ glm::vec2(\_newWidth,\ \_newHeight);}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00526\ }
+\DoxyCodeLine{00535\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a3321619a849aa828e52c6b68d717754a}{SetFrameBufferWidth}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ \_newWidth)\ \{\ frameBufferSize.x\ =\ \_newWidth;\ \}}
+\DoxyCodeLine{00543\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_af75c79b5219f96caa255846f80d30ade}{SetFrameBufferHeight}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ \_newHeight)\ \{\ frameBufferSize.y\ =\ \_newHeight;\ \}}
+\DoxyCodeLine{00544\ }
+\DoxyCodeLine{00545\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ endregion}}
+\DoxyCodeLine{00546\ }
+\DoxyCodeLine{00547\ }
+\DoxyCodeLine{00548\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ region\ Position}}
+\DoxyCodeLine{00549\ }
+\DoxyCodeLine{00557\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_ab6f598156600dbe20c95f4471a296b57}{SetPosition}}(\textcolor{keyword}{const}\ glm::ivec2\&\ \_position)}
+\DoxyCodeLine{00558\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00559\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (window)\ glfwSetWindowPos(window,\ \_position.x,\ \_position.y);}
+\DoxyCodeLine{00560\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ startingPosition\ =\ \_position;}
+\DoxyCodeLine{00561\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_window_module_a7553cb108331ebe70314e0663af31f69}{OnPositionChanged}}(\_position);}
+\DoxyCodeLine{00562\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00563\ }
+\DoxyCodeLine{00572\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_aefd6685c1a7e4ce9db403e30f8e79a3b}{SetPosition}}(\textcolor{keyword}{const}\ int32\_t\&\ \_newPositionX,\ \textcolor{keyword}{const}\ int32\_t\&\ \_newPositionY)}
+\DoxyCodeLine{00573\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00574\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (window)\ glfwSetWindowPos(window,\ \_newPositionX,\ \_newPositionY);}
+\DoxyCodeLine{00575\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ startingPosition\ =\ \{\_newPositionX,\ \_newPositionY\};}
+\DoxyCodeLine{00576\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_window_module_a7553cb108331ebe70314e0663af31f69}{OnPositionChanged}}(\_newPositionX,\ \_newPositionY);}
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00578\ }
+\DoxyCodeLine{00586\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a8a7fa284d8a85bbb085e99c2c694b7e2}{SetPositionX}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ \_positionX)}
+\DoxyCodeLine{00587\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00588\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (window)\ glfwSetWindowPos(window,\ \_positionX,\ position.y);}
+\DoxyCodeLine{00589\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ startingPosition\ =\ \{\_positionX,\ position.y\};}
+\DoxyCodeLine{00590\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_window_module_a7553cb108331ebe70314e0663af31f69}{OnPositionChanged}}(\_positionX,\ position.y);}
+\DoxyCodeLine{00591\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00592\ }
+\DoxyCodeLine{00600\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a3711dc6e1b2cfa78717ccd6c8b8073a9}{SetPositionY}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ \_positionY)}
+\DoxyCodeLine{00601\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00602\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (window)\ glfwSetWindowPos(window,\ position.x,\ \_positionY);}
+\DoxyCodeLine{00603\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ startingPosition\ =\ \{position.x,\ \_positionY\};}
+\DoxyCodeLine{00604\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_window_module_a7553cb108331ebe70314e0663af31f69}{OnPositionChanged}}(position.x,\ \_positionY);}
+\DoxyCodeLine{00605\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00606\ }
+\DoxyCodeLine{00614\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_ace2d5b839b89a84714b47daffe6772e9}{SetMousePosition}}(\textcolor{keyword}{const}\ glm::ivec2\ \_mousePosition)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00615\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00616\ \ \ \ \ \ \ \ \ \ \ \ \ glfwSetCursorPos(window,\ \_mousePosition.x,\ \_mousePosition.y);}
+\DoxyCodeLine{00617\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00618\ }
+\DoxyCodeLine{00619\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ endregion}}
+\DoxyCodeLine{00620\ }
+\DoxyCodeLine{00621\ }
+\DoxyCodeLine{00622\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ region\ Name\&Title}}
+\DoxyCodeLine{00623\ }
+\DoxyCodeLine{00631\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_aef59173c5c253544cf2de5e1710d1ffc}{SetName}}(\textcolor{keyword}{const}\ std::string\&\ \_newName)\ \{\ windowName\ =\ \_newName;\ \}}
+\DoxyCodeLine{00632\ }
+\DoxyCodeLine{00640\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_aab373232babdfb9a4d9734a7cbbb85bb}{SetWindowTitle}}(\textcolor{keyword}{const}\ std::string\&\ \_windowTitle)}
+\DoxyCodeLine{00641\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00642\ \ \ \ \ \ \ \ \ \ \ \ \ windowTitle\ =\ \_windowTitle;}
+\DoxyCodeLine{00643\ \ \ \ \ \ \ \ \ \ \ \ \ glfwSetWindowTitle(window,\ windowTitle.c\_str());}
+\DoxyCodeLine{00644\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00645\ }
+\DoxyCodeLine{00646\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ endregion}}
+\DoxyCodeLine{00654\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_abbea4d8a57fbcdbaf4763735dace03d6}{SetFrameBufferResize}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\&\ \_state)\ \{\ bFrameBufferResize\ =\ \_state;\ \}}
+\DoxyCodeLine{00655\ }
+\DoxyCodeLine{00664\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_aa3d9d940b5d53daff2fc277c38bf4d31}{SetUpdateWindowTitleFrequency}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ \_updateFrequencyInSeconds)}
+\DoxyCodeLine{00665\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00666\ \ \ \ \ \ \ \ \ \ \ \ \ updateWindowTitleFrequency\ =\ \_updateFrequencyInSeconds;}
+\DoxyCodeLine{00667\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00668\ }
+\DoxyCodeLine{00676\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a02bba3410cdc3c3660b69735cfe6513c}{SetVSyncEnabled}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\&\ \_bEnabled)\ \{\ bVSyncEnabled\ =\ \_bEnabled;\ \}}
+\DoxyCodeLine{00677\ }
+\DoxyCodeLine{00685\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a8adc66b68fcb8d01008f99578513bf58}{SetCursorMode}}(\textcolor{keyword}{const}\ GlfwCursorMode\&\ \_mode)}
+\DoxyCodeLine{00686\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00687\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cursorMode\ !=\ \_mode)\ cursorMode\ =\ \_mode;}
+\DoxyCodeLine{00688\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//g\_InputManager-\/>OnCursorModeChanged(\_mode);}}
+\DoxyCodeLine{00689\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00690\ }
+\DoxyCodeLine{00698\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{class_window_module_a44a32c0251d6cba741f9a31175c18860}{WindowModeToStr}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ WindowModeStrings[\textcolor{keyword}{static\_cast<}int32\_t\textcolor{keyword}{>}(\mbox{\hyperlink{class_window_module_a52aabce0e6b21c6de21fa1df31f379aa}{GetCursorMode}}())];\ \}}
+\DoxyCodeLine{00699\ }
+\DoxyCodeLine{00708\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a59c3513015182ff5b126be4b02255b87}{SetWindowMode}}(\textcolor{keyword}{const}\ WindowMode\&\ \_mode,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \_bForce\ =\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00709\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00710\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_bForce\ ||\ currentWindowMode\ !=\ \_mode)}
+\DoxyCodeLine{00711\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00712\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentWindowMode\ =\ \_mode;}
+\DoxyCodeLine{00713\ }
+\DoxyCodeLine{00714\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GLFWmonitor*\ monitor\ =\ glfwGetPrimaryMonitor();}
+\DoxyCodeLine{00715\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!monitor)}
+\DoxyCodeLine{00716\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00717\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ (\textcolor{stringliteral}{"{}Failed\ to\ find\ primary\ monitor!\ Can't\ set\ window\ mode\(\backslash\)n"{}});}
+\DoxyCodeLine{00718\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00719\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00720\ }
+\DoxyCodeLine{00721\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ GLFWvidmode*\ video\_mode\ =\ glfwGetVideoMode(monitor);}
+\DoxyCodeLine{00722\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!video\_mode)}
+\DoxyCodeLine{00723\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00724\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ (\textcolor{stringliteral}{"{}Failed\ to\ get\ monitor's\ video\ mode!\ Can't\ set\ window\ mode\(\backslash\)n"{}});}
+\DoxyCodeLine{00725\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00726\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00727\ }
+\DoxyCodeLine{00728\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\_mode)}
+\DoxyCodeLine{00729\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00730\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ WindowMode::FULLSCREEN:}
+\DoxyCodeLine{00731\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00732\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ glfwSetWindowMonitor(window,\ monitor,\ 0,\ 0,\ video\_mode-\/>width,\ video\_mode-\/>height,}
+\DoxyCodeLine{00733\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ video\_mode-\/>refreshRate);}
+\DoxyCodeLine{00734\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00735\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00736\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ WindowMode::WINDOWED\_FULLSCREEN:}
+\DoxyCodeLine{00737\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00738\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ glfwSetWindowMonitor(window,\ monitor,\ 0,\ 0,\ video\_mode-\/>width,\ video\_mode-\/>height,}
+\DoxyCodeLine{00739\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ video\_mode-\/>refreshRate);}
+\DoxyCodeLine{00740\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lastNonFullscreenWindowMode\ =\ WindowMode::WINDOWED\_FULLSCREEN;}
+\DoxyCodeLine{00741\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00742\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00743\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ WindowMode::WINDOWED:}
+\DoxyCodeLine{00744\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00745\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//CHECK(lastWindowedSize.x\ !=\ 0\ \&\&\ lastWindowedSize.y\ !=\ 0);}}
+\DoxyCodeLine{00746\ }
+\DoxyCodeLine{00747\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lastWindowedPos.y\ ==\ 0)}
+\DoxyCodeLine{00748\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ When\ in\ windowed\ mode\ a\ y\ position\ of\ 0\ means\ the\ title\ bar\ isn't}}
+\DoxyCodeLine{00749\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ visible.\ This\ will\ occur\ if\ the\ app\ launched\ in\ fullscreen\ since}}
+\DoxyCodeLine{00750\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ last\ y\ position\ to\ never\ have\ been\ set\ to\ a\ valid\ value.}}
+\DoxyCodeLine{00751\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lastWindowedPos.y\ =\ 40;}
+\DoxyCodeLine{00752\ }
+\DoxyCodeLine{00753\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ glfwSetWindowMonitor(window,\ \textcolor{keyword}{nullptr},\ lastWindowedPos.x,\ lastWindowedPos.y,}
+\DoxyCodeLine{00754\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lastWindowedSize.x,\ lastWindowedSize.y,\ video\_mode-\/>refreshRate);}
+\DoxyCodeLine{00755\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lastNonFullscreenWindowMode\ =\ WindowMode::WINDOWED;}
+\DoxyCodeLine{00756\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00757\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00758\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ WindowMode::\_NONE:}
+\DoxyCodeLine{00759\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00760\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00761\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ (\textcolor{stringliteral}{"{}Unhandled\ window\ mode:\ \%u\(\backslash\)n"{}},\ \textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(\_mode));}
+\DoxyCodeLine{00762\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00763\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00764\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00765\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00766\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00767\ }
+\DoxyCodeLine{00775\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_ada524e4571b2b589c16945adee5ca42e}{SetClipboardText}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \_text)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00776\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00777\ \ \ \ \ \ \ \ \ \ \ \ \ glfwSetClipboardString(window,\ \_text);}
+\DoxyCodeLine{00778\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00779\ }
+\DoxyCodeLine{00787\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_ac53776af8d5a05223d465e39a55a4a68}{SetWindowIcon}}(\textcolor{keyword}{const}\ std::string\&\ \_fileName)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00788\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00789\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ width,\ height,\ nr\_channels;}
+\DoxyCodeLine{00790\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}*\ data\ =\ stbi\_load(\_fileName.c\_str(),\ \&width,\ \&height,\ \&nr\_channels,\ 0))}
+\DoxyCodeLine{00791\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00792\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GLFWimage\ icon;}
+\DoxyCodeLine{00793\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ icon.width\ \ =\ width;}
+\DoxyCodeLine{00794\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ icon.height\ =\ height;}
+\DoxyCodeLine{00795\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ icon.pixels\ =\ data;}
+\DoxyCodeLine{00796\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ glfwSetWindowIcon(window,\ 1,\ \&icon);}
+\DoxyCodeLine{00797\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00798\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00799\ }
+\DoxyCodeLine{00800\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ endregion}}
+\DoxyCodeLine{00801\ }
+\DoxyCodeLine{00810\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_ae14b497a2f7f416b3261b00d67fb6db9}{OnSizeChanged}}(\textcolor{keyword}{const}\ int32\_t\ \_width,\ \textcolor{keyword}{const}\ int32\_t\ \_height)}
+\DoxyCodeLine{00811\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00812\ \ \ \ \ \ \ \ \ \ \ \ \ size\ \ \ \ \ \ \ \ \ \ \ \ =\ glm::ivec2(\_width,\ \_height);}
+\DoxyCodeLine{00813\ \ \ \ \ \ \ \ \ \ \ \ \ frameBufferSize\ =\ size;}
+\DoxyCodeLine{00814\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentWindowMode\ ==\ WindowMode::WINDOWED)\ lastWindowedSize\ =\ size;}
+\DoxyCodeLine{00815\ }
+\DoxyCodeLine{00816\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*if\ (g\_Renderer)}}
+\DoxyCodeLine{00817\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{00818\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ g\_Renderer-\/>OnWindowSizeChanged(\_width,\ \_height);}}
+\DoxyCodeLine{00819\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \}*/}}
+\DoxyCodeLine{00820\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00821\ }
+\DoxyCodeLine{00829\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a3e15554dfed0d609c36e8b9c6a28051e}{OnSizeChanged}}(\textcolor{keyword}{const}\ glm::ivec2\&\ \_newPosition)}
+\DoxyCodeLine{00830\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00831\ \ \ \ \ \ \ \ \ \ \ \ \ size\ \ \ \ \ \ \ \ \ \ \ \ =\ \_newPosition;}
+\DoxyCodeLine{00832\ \ \ \ \ \ \ \ \ \ \ \ \ frameBufferSize\ =\ size;}
+\DoxyCodeLine{00833\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentWindowMode\ ==\ WindowMode::WINDOWED)\ lastWindowedSize\ =\ size;}
+\DoxyCodeLine{00834\ }
+\DoxyCodeLine{00835\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*if\ (g\_Renderer)}}
+\DoxyCodeLine{00836\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{00837\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ g\_Renderer-\/>OnWindowSizeChanged(\_width,\ \_height);}}
+\DoxyCodeLine{00838\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ \}*/}}
+\DoxyCodeLine{00839\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00840\ }
+\DoxyCodeLine{00849\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a7553cb108331ebe70314e0663af31f69}{OnPositionChanged}}(\textcolor{keyword}{const}\ int32\_t\ \_newPositionX,\ \textcolor{keyword}{const}\ int32\_t\ \_newPositionY)}
+\DoxyCodeLine{00850\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00851\ \ \ \ \ \ \ \ \ \ \ \ \ position\ =\ glm::ivec2\{\_newPositionX,\ \_newPositionY\};}
+\DoxyCodeLine{00852\ }
+\DoxyCodeLine{00853\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentWindowMode\ ==\ WindowMode::WINDOWED)\ lastWindowedPos\ =\ position;}
+\DoxyCodeLine{00854\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00855\ }
+\DoxyCodeLine{00863\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_aab6379ef6c0fe63cfe29f7f1c3bee0a3}{OnPositionChanged}}(\textcolor{keyword}{const}\ glm::ivec2\&\ \_newPosition)}
+\DoxyCodeLine{00864\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00865\ \ \ \ \ \ \ \ \ \ \ \ \ position\ =\ \_newPosition;}
+\DoxyCodeLine{00866\ }
+\DoxyCodeLine{00867\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentWindowMode\ ==\ WindowMode::WINDOWED)\ lastWindowedPos\ =\ position;}
+\DoxyCodeLine{00868\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00869\ }
+\DoxyCodeLine{00870\ \ \ \ \ \ \ \ \ \textcolor{comment}{//TODO\ :\ faire\ les\ fonctions\ de\ callback}}
+\DoxyCodeLine{00871\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*void\ KeyCallback(Inputs::KeyCode\ keycode,\ Inputs::KeyAction\ action,\ int32\_t\ mods)\{\}}}
+\DoxyCodeLine{00872\ \textcolor{comment}{\ \ \ \ \ \ \ \ void\ CharCallback(uint32\_t\ character)\{\}}}
+\DoxyCodeLine{00873\ \textcolor{comment}{\ \ \ \ \ \ \ \ void\ MouseButtonCallback(Inputs::MouseButton\ mouseButton,\ Inputs::KeyAction\ action,\ int32\_t\ mods)\{\}}}
+\DoxyCodeLine{00874\ \textcolor{comment}{\ \ \ \ \ \ \ \ void\ WindowFocusCallback(int32\_t\ focused)\{\}}}
+\DoxyCodeLine{00875\ \textcolor{comment}{\ \ \ \ \ \ \ \ void\ CursorPosCallback(double\ x,\ double\ y)\{\}}}
+\DoxyCodeLine{00876\ \textcolor{comment}{\ \ \ \ \ \ \ \ void\ ScrollCallback(double\ xoffset,\ double\ yoffset)\{\}}}
+\DoxyCodeLine{00877\ \textcolor{comment}{\ \ \ \ \ \ \ \ void\ WindowSizeCallback(int32\_t\ width,\ int32\_t\ height,\ bool\ bMaximized,\ bool\ bIconified)\{\}}}
+\DoxyCodeLine{00878\ \textcolor{comment}{\ \ \ \ \ \ \ \ void\ WindowPosCallback(int32\_t\ newX,\ int32\_t\ newY)\{\}}}
+\DoxyCodeLine{00879\ \textcolor{comment}{\ \ \ \ \ \ \ \ void\ FrameBufferSizeCallback(int32\_t\ width,\ int32\_t\ height)\{\}*/}}
+\DoxyCodeLine{00880\ }
+\DoxyCodeLine{00889\ \ \ \ \ \ \ \ \ WindowMode\ \mbox{\hyperlink{class_window_module_a7730e5e58c94b77e3eb5e58f5576fbf5}{StrToWindowMode}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \_modeStr);}
+\DoxyCodeLine{00890\ }
+\DoxyCodeLine{00898\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a555996e3e28179fbb5ec2125a90b0bb4}{ToggleFullscreen}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \_bForce\ =\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00899\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00900\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (currentWindowMode\ ==\ WindowMode::FULLSCREEN)}
+\DoxyCodeLine{00901\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//CHECK(lastNonFullscreenWindowMode\ ==\ WindowMode::WINDOWED\ ||\ lastNonFullscreenWindowMode\ ==\ WindowMode::WINDOWED\_FULLSCREEN);}}
+\DoxyCodeLine{00902\ }
+\DoxyCodeLine{00903\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_window_module_a59c3513015182ff5b126be4b02255b87}{SetWindowMode}}(lastNonFullscreenWindowMode,\ \_bForce);}
+\DoxyCodeLine{00904\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{class_window_module_a59c3513015182ff5b126be4b02255b87}{SetWindowMode}}(WindowMode::FULLSCREEN,\ \_bForce);}
+\DoxyCodeLine{00905\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00906\ }
+\DoxyCodeLine{00912\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_ace948d4af563849cf88e973a157c27f5}{Maximize}}()\textcolor{keyword}{\ const\ }\{\ glfwMaximizeWindow(window);\ \}}
+\DoxyCodeLine{00913\ }
+\DoxyCodeLine{00919\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_ab63e2f86c82f1b2a8898788c8997d2c7}{Iconify}}()\textcolor{keyword}{\ const\ }\{\ glfwIconifyWindow(window);\ \}}
+\DoxyCodeLine{00920\ }
+\DoxyCodeLine{00921\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ region\ Event}}
+\DoxyCodeLine{00922\ }
+\DoxyCodeLine{00926\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_afaa58a06178289492ce7aecf41606ecc}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00927\ }
+\DoxyCodeLine{00931\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a72eec720cfe887e876ed4622c74f84c9}{Start}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00932\ }
+\DoxyCodeLine{00936\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a76ef4f261f536f2a8060817708d7e1e9}{FixedUpdate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00937\ }
+\DoxyCodeLine{00941\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_aa10199f2b56f4e0275d3de3c90627b29}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00942\ }
+\DoxyCodeLine{00946\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a3be50f59f440ae61adb8c8f276cdac93}{PreRender}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00947\ }
+\DoxyCodeLine{00951\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a2624ecb83c3b24e02fe3c1534e992f20}{Render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00952\ }
+\DoxyCodeLine{00956\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_af8a0593bd7384f1644e9d1051d0f11d2}{RenderGui}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00957\ }
+\DoxyCodeLine{00961\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a135a0d38ee3a34e0863c49e175fb6f92}{PostRender}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00962\ }
+\DoxyCodeLine{00966\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_ac79d598b44c2675c799f35965c045bf8}{Release}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00967\ }
+\DoxyCodeLine{00971\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_module_a7934ced6f9107b52b4647258adecfa7f}{Finalize}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00972\ }
+\DoxyCodeLine{00973\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#pragma\ endregion}}
+\DoxyCodeLine{00974\ }
+\DoxyCodeLine{00975\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00985\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ FrameBufferResizeCallBack(GLFWwindow*\ \_window,\ \textcolor{keywordtype}{int}\ \_width,\ \textcolor{keywordtype}{int}\ \_height);}
+\DoxyCodeLine{00993\ \ \ \ \ \ \ \ \ std::string\ GenerateWindowTitle()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00994\ }
+\DoxyCodeLine{01002\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ InitFromConfig();}
+\DoxyCodeLine{01003\ }
+\DoxyCodeLine{01009\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SaveToConfig();}
+\DoxyCodeLine{01010\ }
+\DoxyCodeLine{01011\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bFrameBufferResize\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{01013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_scene_manager}{SceneManager}}*\ sceneManager\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{01015\ \ \ \ \ \ \ \ \ std::string\ windowName;\ }
+\DoxyCodeLine{01017\ \ \ \ \ \ \ \ \ std::string\ windowTitle;\ }
+\DoxyCodeLine{01019\ \ \ \ \ \ \ \ \ GLFWwindow*\ window;\ }
+\DoxyCodeLine{01021\ \ \ \ \ \ \ \ \ glm::ivec2\ size\ =\ \{0,\ 0\};\ }
+\DoxyCodeLine{01023\ \ \ \ \ \ \ \ \ glm::ivec2\ startingPosition\ =\ \{0,\ 0\};\ }
+\DoxyCodeLine{01025\ \ \ \ \ \ \ \ \ glm::ivec2\ position\ =\ \{0,\ 0\};\ }
+\DoxyCodeLine{01027\ \ \ \ \ \ \ \ \ glm::ivec2\ frameBufferSize\ =\ \{0,\ 0\};\ }
+\DoxyCodeLine{01029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bHasFocus\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{01031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bMoveConsoleToOtherMonitor\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bAutoRestoreStateOnBootup\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01037\ \ \ \ \ \ \ \ \ WindowMode\ currentWindowMode\ =\ WindowMode::\_NONE;\ }
+\DoxyCodeLine{01039\ \ \ \ \ \ \ \ \ glm::ivec2\ lastWindowedSize;\ }
+\DoxyCodeLine{01041\ \ \ \ \ \ \ \ \ glm::ivec2\ lastWindowedPos;\ }
+\DoxyCodeLine{01043\ \ \ \ \ \ \ \ \ WindowMode\ lastNonFullscreenWindowMode\ =\ WindowMode::\_NONE;}
+\DoxyCodeLine{01046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bShowFPSInWindowTitle\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bShowMSInWindowTitle\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{01052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bMaximized\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{01054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bIconified\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{01056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bVSyncEnabled\ =\ \textcolor{keyword}{true};\ }
+\DoxyCodeLine{01058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ updateWindowTitleFrequency\ =\ 0.0f;\ }
+\DoxyCodeLine{01060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ secondsSinceTitleUpdate\ =\ 0.0f;}
+\DoxyCodeLine{01063\ \ \ \ \ \ \ \ \ GlfwCursorMode\ cursorMode\ =\ NORMAL;\ }
+\DoxyCodeLine{01064\ \};}
+
+\end{DoxyCode}

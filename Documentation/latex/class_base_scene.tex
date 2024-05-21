@@ -1,0 +1,781 @@
+\doxysection{Référence de la classe Base\+Scene}
+\hypertarget{class_base_scene}{}\label{class_base_scene}\index{BaseScene@{BaseScene}}
+
+
+Interface de base pour les scènes du jeu.  
+
+
+
+
+{\ttfamily \#include $<$Base\+Scene.\+h$>$}
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_base_scene_a081fcef7e1359202d221dc545cef0989}{Base\+Scene}} (const std\+::string \&\+\_\+file\+Name)
+\begin{DoxyCompactList}\small\item\em Constructeur explicite de la classe \doxylink{class_base_scene}{Base\+Scene}. \end{DoxyCompactList}\item 
+\Hypertarget{class_base_scene_a0bbd7c43262416c72521c733b3b62cbf}\label{class_base_scene_a0bbd7c43262416c72521c733b3b62cbf} 
+{\bfseries Base\+Scene} (const \mbox{\hyperlink{class_base_scene}{Base\+Scene}} \&)=delete
+\item 
+\Hypertarget{class_base_scene_a5fdbab65e3283d3fef4d26755c451216}\label{class_base_scene_a5fdbab65e3283d3fef4d26755c451216} 
+\mbox{\hyperlink{class_base_scene}{Base\+Scene}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_base_scene}{Base\+Scene}} \&)=delete
+\item 
+\Hypertarget{class_base_scene_a18dd7016e2e7c4018626a55f9f1b282b}\label{class_base_scene_a18dd7016e2e7c4018626a55f9f1b282b} 
+virtual void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em Initialise le module. \end{DoxyCompactList}\item 
+\Hypertarget{class_base_scene_a0bf7efbff5d56c717dfb44827767268c}\label{class_base_scene_a0bf7efbff5d56c717dfb44827767268c} 
+virtual void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em D{\ucr}marre le module. \end{DoxyCompactList}\item 
+\Hypertarget{class_base_scene_aaac18134f2437eaa0950ab757f27831f}\label{class_base_scene_aaac18134f2437eaa0950ab757f27831f} 
+virtual void {\bfseries Fixed\+Update} ()
+\begin{DoxyCompactList}\small\item\em Effectue une mise {\ucr} jour fixe du module. \end{DoxyCompactList}\item 
+\Hypertarget{class_base_scene_a17042b8ea83cddfed783ce500047e6bb}\label{class_base_scene_a17042b8ea83cddfed783ce500047e6bb} 
+virtual void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Met {\ucr} jour le module. \end{DoxyCompactList}\item 
+\Hypertarget{class_base_scene_ac4a3b03bd671ad8ce5df6140d1f256bc}\label{class_base_scene_ac4a3b03bd671ad8ce5df6140d1f256bc} 
+virtual void {\bfseries Update\+Editor} ()
+\item 
+\Hypertarget{class_base_scene_aa4361dab94a6c4422820a2b22e5afdd8}\label{class_base_scene_aa4361dab94a6c4422820a2b22e5afdd8} 
+virtual void {\bfseries Pre\+Render} ()
+\begin{DoxyCompactList}\small\item\em Fonction pr{\ucr}-\/rendu du module. \end{DoxyCompactList}\item 
+\Hypertarget{class_base_scene_ab12655e3f795bcf612235a168081ee8f}\label{class_base_scene_ab12655e3f795bcf612235a168081ee8f} 
+virtual void {\bfseries Render} ()
+\begin{DoxyCompactList}\small\item\em Rendu du module. \end{DoxyCompactList}\item 
+\Hypertarget{class_base_scene_a3389f47d502659067e53efeb5ea1fa1b}\label{class_base_scene_a3389f47d502659067e53efeb5ea1fa1b} 
+virtual void {\bfseries Render\+Gui} ()
+\begin{DoxyCompactList}\small\item\em Rendu de l\textquotesingle{}interface graphique du module. \end{DoxyCompactList}\item 
+\Hypertarget{class_base_scene_ab6f71ce0d177008c296e2045bbeea047}\label{class_base_scene_ab6f71ce0d177008c296e2045bbeea047} 
+virtual void {\bfseries Post\+Render} ()
+\begin{DoxyCompactList}\small\item\em Fonction post-\/rendu du module. \end{DoxyCompactList}\item 
+\Hypertarget{class_base_scene_a50ffb057ce2b14e8f2c4a90c8ff37a0e}\label{class_base_scene_a50ffb057ce2b14e8f2c4a90c8ff37a0e} 
+virtual void {\bfseries Release} ()
+\begin{DoxyCompactList}\small\item\em Lib{\ucr}re les ressources utilis{\ucr}es par le module. \end{DoxyCompactList}\item 
+\Hypertarget{class_base_scene_a29a0115af911638c4083e529a1192419}\label{class_base_scene_a29a0115af911638c4083e529a1192419} 
+virtual void {\bfseries Finalize} ()
+\begin{DoxyCompactList}\small\item\em Finalise le module. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_base_scene_aefdae9ab66f5644144d946e4a858d226}{Get\+Game\+Object\+By\+Id}} (const Game\+Object\+::id\+\_\+t \&\+\_\+game\+Object\+Id) const
+\begin{DoxyCompactList}\small\item\em Obtient un pointeur vers l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} ayant l\textquotesingle{}identifiant spécifié. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_base_scene_a2f8720a8078109df3df95741bff71ab9}{Find\+Game\+Objects\+By\+Name}} (const std\+::string \&\+\_\+name) const
+\begin{DoxyCompactList}\small\item\em Recherche et retourne tous les objets \doxylink{class_game_object}{Game\+Object} portant un nom spécifique. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_base_scene_ad1c48681ba910c2c0ba72610e74bb089}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le nom de la scène. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_base_scene_a8be86895e74df0a4cd3b0eca7feee84b}{Get\+Default\+Relative\+File\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le chemin de fichier relatif par défaut pour la scène. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_base_scene_ab9316394e3ed0d9e6bda6154911d4edf}{Get\+File\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Récupère le nom du fichier associé à la scène. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{class_base_scene_af2b7648d5c65e0643c0a69014147b7f8}{Get\+Root\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em Récupère une référence vers le vecteur des objets racine de la scène. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_base_scene_a347ca4aa83a124be19b5e56f89cee7a7}{Get\+All\+Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Obtient tous les objets de jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_scene_acf73ef32322ffa846db37f4e07a220eb}{Set\+Name}} (const std\+::string \&\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Définit le nom de la scène. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_scene_afbe51e76d09ce38b5e727a1d0a688ac7}{Set\+File\+Name}} (const std\+::string \&\+\_\+file\+Name, bool \+\_\+b\+Delete\+Previous\+Files) const
+\begin{DoxyCompactList}\small\item\em Définit le nom de fichier de la scène et supprime les fichiers précédents si spécifié. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_scene_af7fc9655341c18fd9c73202975c72dd5}{Set\+Root\+Object\+Index}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+root\+Object, uint32\+\_\+t \+\_\+new\+Index)
+\begin{DoxyCompactList}\small\item\em Définit l\textquotesingle{}indice d\textquotesingle{}un objet racine dans la liste des objets racines de la scène. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_base_scene_afbb2fd581e08cec8b730fa11bdf52a5c}{Create\+Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Crée un nouveau \doxylink{class_game_object}{Game\+Object} et l\textquotesingle{}ajoute à la scène. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_scene_a4184a719d7aaf086ab64da0cac144879}{Destroy\+Game\+Object}} (const \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+game\+Object)
+\begin{DoxyCompactList}\small\item\em Détruit le \doxylink{class_game_object}{Game\+Object} spécifié et le retire de la scène. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_scene_a9ddd1f47f2a846ece62f6532b474c1ea}{Is\+Initialized}} () const
+\begin{DoxyCompactList}\small\item\em Vérifie si la scène a été initialisée. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_scene_ad8015fb0b689036e048fefe4d09d1160}{File\+Exists}} (const std\+::string \&\+\_\+file\+Path)
+\begin{DoxyCompactList}\small\item\em Vérifie si un fichier existe. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_scene_ade7aa81f2f79609a6408cb57fa94033c}{Is\+Using\+Save\+File}} () const
+\begin{DoxyCompactList}\small\item\em Indique si la scène utilise un fichier de sauvegarde. \end{DoxyCompactList}\item 
+\Hypertarget{class_base_scene_ac65255ae7f5bfcec1df1d537deb72468}\label{class_base_scene_ac65255ae7f5bfcec1df1d537deb72468} 
+void {\bfseries Delete\+Save\+Files} ()
+\begin{DoxyCompactList}\small\item\em Supprime les fichiers de sauvegarde associés à la scène. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_base_scene_a58f83535913ba87fc8b3ea09c96609a9}{Contains}} (const std\+::vector$<$ Game\+Object\+::id\+\_\+t $>$ \&\+\_\+container, const Game\+Object\+::id\+\_\+t \&\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Vérifie si une valeur est contenue dans un conteneur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_base_scene_a92798a6a991d22494cfd8674507478dc}{Add\+Root\+Object}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+game\+Object)
+\begin{DoxyCompactList}\small\item\em Ajoute un objet racine à la scène. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_base_scene_a920ab444e16b8f0483a3c12bb1cb593c}{Add\+Root\+Object\+Immediate}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+game\+Object)
+\begin{DoxyCompactList}\small\item\em Ajoute immédiatement un objet racine à la scène. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_base_scene_abae8826cbe2331ea4b3cf6ce274c408d}{Add\+Child\+Object}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+parent, \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+child)
+\begin{DoxyCompactList}\small\item\em Ajoute un objet enfant à un parent donné dans la scène. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_base_scene_a1980dbec06368934f797fec2c534b843}{Add\+Child\+Object\+Immediate}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+parent, \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+child)
+\begin{DoxyCompactList}\small\item\em Ajoute immédiatement un objet enfant à un parent donné dans la scène. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_base_scene_aa8a9e9afcb7af5de48bc0e6e62a48ae4}{Add\+Sibling\+Object\+Immediate}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+game\+Object, \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+new\+Sibling)
+\begin{DoxyCompactList}\small\item\em Ajoute immédiatement un nouvel objet frère à un objet donné dans la scène. \end{DoxyCompactList}\item 
+\Hypertarget{class_base_scene_a7bc84a73f659eafc9cb0bcd4b20a2e5a}\label{class_base_scene_a7bc84a73f659eafc9cb0bcd4b20a2e5a} 
+void {\bfseries Remove\+All\+Objects} ()
+\begin{DoxyCompactList}\small\item\em Supprime et détruit tous les objets de la scène à la fin de la trame. \end{DoxyCompactList}\item 
+\Hypertarget{class_base_scene_a4aef515aa3a1cd3d3536d84ef9d18d16}\label{class_base_scene_a4aef515aa3a1cd3d3536d84ef9d18d16} 
+void {\bfseries Remove\+All\+Objects\+Immediate} ()
+\begin{DoxyCompactList}\small\item\em Supprime et détruit tous les objets de la scène immédiatement. \end{DoxyCompactList}\item 
+\Hypertarget{class_base_scene_a9833201f5fc2608edb21619a4b1db1b6}\label{class_base_scene_a9833201f5fc2608edb21619a4b1db1b6} 
+void {\bfseries Remove\+All\+Editor\+Objects\+Immediate} ()
+\begin{DoxyCompactList}\small\item\em Supprime et détruit tous les objets de l\textquotesingle{}éditeur de la scène immédiatement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_scene_aa08ceda4403231cf6090c56d0df5ee68}{Remove\+Object}} (const Game\+Object\+::id\+\_\+t \&\+\_\+game\+Object\+Id, bool \+\_\+b\+Destroy)
+\begin{DoxyCompactList}\small\item\em Supprime et détruit un objet de la scène. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_scene_af641d5dc5576de638fa8e94c95bcd665}{Remove\+Object}} (const \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+game\+Object, bool \+\_\+b\+Destroy)
+\begin{DoxyCompactList}\small\item\em Supprime et détruit un objet de la scène. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_scene_aab5197be3ab10416d80796c63b12f89d}{Remove\+Objects}} (const std\+::vector$<$ Game\+Object\+::id\+\_\+t $>$ \&\+\_\+game\+Objects, bool \+\_\+b\+Destroy)
+\begin{DoxyCompactList}\small\item\em Supprime et détruit une liste d\textquotesingle{}objets de la scène. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_scene_a509d0beedcba13a7edcdeabdf9870c98}{Remove\+Objects}} (const std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&\+\_\+game\+Objects, bool \+\_\+b\+Destroy)
+\begin{DoxyCompactList}\small\item\em Supprime et détruit une liste d\textquotesingle{}objets de la scène. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_scene_aad43896fe03af531cbc8d0c45c564cb2}{Remove\+Objects\+Immediate}} (const std\+::vector$<$ Game\+Object\+::id\+\_\+t $>$ \&\+\_\+game\+Objects, bool \+\_\+b\+Destroy)
+\begin{DoxyCompactList}\small\item\em Supprime et détruit immédiatement une liste d\textquotesingle{}objets de la scène. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_scene_a7a7b366b6d926a1c853782bb9616ba9a}{Remove\+Objects\+Immediate}} (const std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&\+\_\+game\+Objects, bool \+\_\+b\+Destroy)
+\begin{DoxyCompactList}\small\item\em Supprime et détruit immédiatement une liste d\textquotesingle{}objets de la scène. \end{DoxyCompactList}\item 
+Game\+Object\+::id\+\_\+t \mbox{\hyperlink{class_base_scene_a50ed32fa47d91d177f8d09fb0eddfe67}{First\+Object\+With\+Tag}} (const std\+::string \&\+\_\+tag)
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}identifiant du premier objet avec l\textquotesingle{}étiquette spécifiée. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_scene_ac4c053b464819b8ecef4fbc0e4b625b0}{Test\+Load\+Game\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em Charge les objets de jeu pour les tests. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_scene_abbd582bf4a24bf257ae60855b21911a7}{Add\+Game\+Object\+In\+Vector}} (std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&\+\_\+game\+Objects, \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+game\+Object)
+\begin{DoxyCompactList}\small\item\em Ajoute un objet de jeu et tous ses enfants à un vecteur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_base_scene_a54110dc3a0e4d0ca08e9a08b31ad3548}{Create\+Cube\+Game\+Object}} (int \+\_\+type)
+\begin{DoxyCompactList}\small\item\em Crée un nouvel \doxylink{class_game_object}{Game\+Object} représentant un cube. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_base_scene_af0f7e4035cde76688c4eaf39a08e609a}{Create\+Light\+Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Crée un nouvel \doxylink{class_game_object}{Game\+Object} représentant une lumière. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_base_scene_a77233636020ef22fc964961af22c96ba}{Create\+Plane\+Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Crée un nouvel \doxylink{class_game_object}{Game\+Object} représentant un plan. \end{DoxyCompactList}\item 
+\Hypertarget{class_base_scene_ac6042a5ff555b771ab528ebb5e81f73d}\label{class_base_scene_ac6042a5ff555b771ab528ebb5e81f73d} 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} {\bfseries Create\+Vase\+Game\+Object} (int \+\_\+type)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_base_scene_a7a93c99d6af8a2a2a744bdaa15cb611b}{name}}
+\item 
+std\+::string \mbox{\hyperlink{class_base_scene_a9fa392d05125cc88b75de264f0e59d07}{file\+Name}}
+\item 
+std\+::vector$<$ Game\+Object\+::id\+\_\+t $>$ \mbox{\hyperlink{class_base_scene_acb4914ea048763a6dd8d6ef573e53451}{pending\+Destroy\+Objects}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_base_scene_afa27359b9bc27ee57b3512d17ca7d43f}{pending\+Add\+Objects}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_base_scene_a462479820c153a0b230bb31246aec922}{root\+Objects}}
+\item 
+std\+::vector$<$ Game\+Object\+::id\+\_\+t $>$ \mbox{\hyperlink{class_base_scene_a89d1ed36b3076d31cfa035ca03db914b}{pending\+Remove\+Objects}}
+\item 
+const Game\+Object\+::id\+\_\+t \mbox{\hyperlink{class_base_scene_a6d909301e434bfc5dde9f05b1d71bcb7}{invalid\+Game\+Object\+Id}} = \{\}
+\item 
+bool \mbox{\hyperlink{class_base_scene_ac7dcc4eca603fac2b28433411d065d8b}{b\+Initialized}} = false
+\item 
+bool \mbox{\hyperlink{class_base_scene_a9c9accdbd65b2c06798acf110fb33a89}{b\+Loaded}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Interface de base pour les scènes du jeu. 
+
+Cette classe définit une interface abstraite pour les scènes du jeu. Les classes dérivées sont responsables de définir le comportement spécifique de chaque scène 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_base_scene_a081fcef7e1359202d221dc545cef0989}\label{class_base_scene_a081fcef7e1359202d221dc545cef0989} 
+\index{BaseScene@{BaseScene}!BaseScene@{BaseScene}}
+\index{BaseScene@{BaseScene}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{BaseScene()}{BaseScene()}}
+{\footnotesize\ttfamily Base\+Scene\+::\+Base\+Scene (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructeur explicite de la classe \doxylink{class_base_scene}{Base\+Scene}. 
+
+Initialise une nouvelle instance de la classe \doxylink{class_base_scene}{Base\+Scene} avec le nom spécifié.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+file\+Name} & Le nom de la scène. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_base_scene_abae8826cbe2331ea4b3cf6ce274c408d}\label{class_base_scene_abae8826cbe2331ea4b3cf6ce274c408d} 
+\index{BaseScene@{BaseScene}!AddChildObject@{AddChildObject}}
+\index{AddChildObject@{AddChildObject}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{AddChildObject()}{AddChildObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} Base\+Scene\+::\+Add\+Child\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{\+\_\+parent,  }\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{\+\_\+child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ajoute un objet enfant à un parent donné dans la scène. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+parent} & Le parent auquel ajouter l\textquotesingle{}objet enfant. \\
+\hline
+{\em \+\_\+child} & L\textquotesingle{}objet à ajouter comme enfant. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers l\textquotesingle{}objet ajouté comme enfant. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_a1980dbec06368934f797fec2c534b843}\label{class_base_scene_a1980dbec06368934f797fec2c534b843} 
+\index{BaseScene@{BaseScene}!AddChildObjectImmediate@{AddChildObjectImmediate}}
+\index{AddChildObjectImmediate@{AddChildObjectImmediate}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{AddChildObjectImmediate()}{AddChildObjectImmediate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} Base\+Scene\+::\+Add\+Child\+Object\+Immediate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{\+\_\+parent,  }\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{\+\_\+child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ajoute immédiatement un objet enfant à un parent donné dans la scène. 
+
+Cette fonction ajoute immédiatement un objet enfant à un parent donné dans la scène sans attendre la prochaine mise à jour.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+parent} & Le parent auquel ajouter l\textquotesingle{}objet enfant. \\
+\hline
+{\em \+\_\+child} & L\textquotesingle{}objet à ajouter comme enfant. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers l\textquotesingle{}objet ajouté comme enfant. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_abbd582bf4a24bf257ae60855b21911a7}\label{class_base_scene_abbd582bf4a24bf257ae60855b21911a7} 
+\index{BaseScene@{BaseScene}!AddGameObjectInVector@{AddGameObjectInVector}}
+\index{AddGameObjectInVector@{AddGameObjectInVector}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{AddGameObjectInVector()}{AddGameObjectInVector()}}
+{\footnotesize\ttfamily void Base\+Scene\+::\+Add\+Game\+Object\+In\+Vector (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&}]{\+\_\+game\+Objects,  }\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{\+\_\+game\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ajoute un objet de jeu et tous ses enfants à un vecteur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+game\+Objects} & Le vecteur où ajouter les objets. \\
+\hline
+{\em \+\_\+game\+Object} & L\textquotesingle{}objet de jeu à ajouter. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_base_scene_a92798a6a991d22494cfd8674507478dc}\label{class_base_scene_a92798a6a991d22494cfd8674507478dc} 
+\index{BaseScene@{BaseScene}!AddRootObject@{AddRootObject}}
+\index{AddRootObject@{AddRootObject}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{AddRootObject()}{AddRootObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} Base\+Scene\+::\+Add\+Root\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{\+\_\+game\+Object }\end{DoxyParamCaption})}
+
+
+
+Ajoute un objet racine à la scène. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+game\+Object} & L\textquotesingle{}objet à ajouter comme racine. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers l\textquotesingle{}objet ajouté en tant que racine. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_a920ab444e16b8f0483a3c12bb1cb593c}\label{class_base_scene_a920ab444e16b8f0483a3c12bb1cb593c} 
+\index{BaseScene@{BaseScene}!AddRootObjectImmediate@{AddRootObjectImmediate}}
+\index{AddRootObjectImmediate@{AddRootObjectImmediate}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{AddRootObjectImmediate()}{AddRootObjectImmediate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} Base\+Scene\+::\+Add\+Root\+Object\+Immediate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{\+\_\+game\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ajoute immédiatement un objet racine à la scène. 
+
+Cette fonction ajoute immédiatement un objet racine à la scène sans attendre la prochaine mise à jour.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+game\+Object} & L\textquotesingle{}objet à ajouter comme racine. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers l\textquotesingle{}objet ajouté en tant que racine. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_aa8a9e9afcb7af5de48bc0e6e62a48ae4}\label{class_base_scene_aa8a9e9afcb7af5de48bc0e6e62a48ae4} 
+\index{BaseScene@{BaseScene}!AddSiblingObjectImmediate@{AddSiblingObjectImmediate}}
+\index{AddSiblingObjectImmediate@{AddSiblingObjectImmediate}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{AddSiblingObjectImmediate()}{AddSiblingObjectImmediate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} Base\+Scene\+::\+Add\+Sibling\+Object\+Immediate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{\+\_\+game\+Object,  }\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{\+\_\+new\+Sibling }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ajoute immédiatement un nouvel objet frère à un objet donné dans la scène. 
+
+Cette fonction ajoute immédiatement un nouvel objet frère à un objet donné dans la scène sans attendre la prochaine mise à jour.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+game\+Object} & L\textquotesingle{}objet auquel ajouter le nouveau frère. \\
+\hline
+{\em \+\_\+new\+Sibling} & Le nouvel objet frère à ajouter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le nouvel objet frère ajouté. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_a58f83535913ba87fc8b3ea09c96609a9}\label{class_base_scene_a58f83535913ba87fc8b3ea09c96609a9} 
+\index{BaseScene@{BaseScene}!Contains@{Contains}}
+\index{Contains@{Contains}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{Contains()}{Contains()}}
+{\footnotesize\ttfamily bool Base\+Scene\+::\+Contains (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Game\+Object\+::id\+\_\+t $>$ \&}]{\+\_\+container,  }\item[{const Game\+Object\+::id\+\_\+t \&}]{\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Vérifie si une valeur est contenue dans un conteneur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+container} & Le conteneur à vérifier. \\
+\hline
+{\em \+\_\+value} & La valeur à rechercher dans le conteneur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si la valeur est présente dans le conteneur, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_a54110dc3a0e4d0ca08e9a08b31ad3548}\label{class_base_scene_a54110dc3a0e4d0ca08e9a08b31ad3548} 
+\index{BaseScene@{BaseScene}!CreateCubeGameObject@{CreateCubeGameObject}}
+\index{CreateCubeGameObject@{CreateCubeGameObject}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{CreateCubeGameObject()}{CreateCubeGameObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} Base\+Scene\+::\+Create\+Cube\+Game\+Object (\begin{DoxyParamCaption}\item[{int}]{\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Crée un nouvel \doxylink{class_game_object}{Game\+Object} représentant un cube. 
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le \doxylink{class_game_object}{Game\+Object} créé. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_afbb2fd581e08cec8b730fa11bdf52a5c}\label{class_base_scene_afbb2fd581e08cec8b730fa11bdf52a5c} 
+\index{BaseScene@{BaseScene}!CreateGameObject@{CreateGameObject}}
+\index{CreateGameObject@{CreateGameObject}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{CreateGameObject()}{CreateGameObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} Base\+Scene\+::\+Create\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crée un nouveau \doxylink{class_game_object}{Game\+Object} et l\textquotesingle{}ajoute à la scène. 
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le nouveau \doxylink{class_game_object}{Game\+Object} créé. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_af0f7e4035cde76688c4eaf39a08e609a}\label{class_base_scene_af0f7e4035cde76688c4eaf39a08e609a} 
+\index{BaseScene@{BaseScene}!CreateLightGameObject@{CreateLightGameObject}}
+\index{CreateLightGameObject@{CreateLightGameObject}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{CreateLightGameObject()}{CreateLightGameObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} Base\+Scene\+::\+Create\+Light\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crée un nouvel \doxylink{class_game_object}{Game\+Object} représentant une lumière. 
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le \doxylink{class_game_object}{Game\+Object} créé. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_a77233636020ef22fc964961af22c96ba}\label{class_base_scene_a77233636020ef22fc964961af22c96ba} 
+\index{BaseScene@{BaseScene}!CreatePlaneGameObject@{CreatePlaneGameObject}}
+\index{CreatePlaneGameObject@{CreatePlaneGameObject}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{CreatePlaneGameObject()}{CreatePlaneGameObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} Base\+Scene\+::\+Create\+Plane\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crée un nouvel \doxylink{class_game_object}{Game\+Object} représentant un plan. 
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le \doxylink{class_game_object}{Game\+Object} créé. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_a4184a719d7aaf086ab64da0cac144879}\label{class_base_scene_a4184a719d7aaf086ab64da0cac144879} 
+\index{BaseScene@{BaseScene}!DestroyGameObject@{DestroyGameObject}}
+\index{DestroyGameObject@{DestroyGameObject}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{DestroyGameObject()}{DestroyGameObject()}}
+{\footnotesize\ttfamily void Base\+Scene\+::\+Destroy\+Game\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{\+\_\+game\+Object }\end{DoxyParamCaption})}
+
+
+
+Détruit le \doxylink{class_game_object}{Game\+Object} spécifié et le retire de la scène. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+game\+Object} & Le \doxylink{class_game_object}{Game\+Object} à détruire. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_base_scene_ad8015fb0b689036e048fefe4d09d1160}\label{class_base_scene_ad8015fb0b689036e048fefe4d09d1160} 
+\index{BaseScene@{BaseScene}!FileExists@{FileExists}}
+\index{FileExists@{FileExists}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{FileExists()}{FileExists()}}
+{\footnotesize\ttfamily bool Base\+Scene\+::\+File\+Exists (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+file\+Path }\end{DoxyParamCaption})}
+
+
+
+Vérifie si un fichier existe. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+file\+Path} & Le chemin du fichier à vérifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si le fichier existe, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_a2f8720a8078109df3df95741bff71ab9}\label{class_base_scene_a2f8720a8078109df3df95741bff71ab9} 
+\index{BaseScene@{BaseScene}!FindGameObjectsByName@{FindGameObjectsByName}}
+\index{FindGameObjectsByName@{FindGameObjectsByName}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{FindGameObjectsByName()}{FindGameObjectsByName()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ Base\+Scene\+::\+Find\+Game\+Objects\+By\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name }\end{DoxyParamCaption}) const}
+
+
+
+Recherche et retourne tous les objets \doxylink{class_game_object}{Game\+Object} portant un nom spécifique. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+name} & Le nom des objets \doxylink{class_game_object}{Game\+Object} à rechercher. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un vecteur contenant tous les objets \doxylink{class_game_object}{Game\+Object} trouvés avec le nom spécifié. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_a50ed32fa47d91d177f8d09fb0eddfe67}\label{class_base_scene_a50ed32fa47d91d177f8d09fb0eddfe67} 
+\index{BaseScene@{BaseScene}!FirstObjectWithTag@{FirstObjectWithTag}}
+\index{FirstObjectWithTag@{FirstObjectWithTag}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{FirstObjectWithTag()}{FirstObjectWithTag()}}
+{\footnotesize\ttfamily Game\+Object\+::id\+\_\+t Base\+Scene\+::\+First\+Object\+With\+Tag (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient l\textquotesingle{}identifiant du premier objet avec l\textquotesingle{}étiquette spécifiée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+tag} & L\textquotesingle{}étiquette de l\textquotesingle{}objet recherché. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}identifiant du premier objet avec l\textquotesingle{}étiquette spécifiée, ou ID\+\_\+\+INVALID si aucun objet correspondant n\textquotesingle{}est trouvé. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_a347ca4aa83a124be19b5e56f89cee7a7}\label{class_base_scene_a347ca4aa83a124be19b5e56f89cee7a7} 
+\index{BaseScene@{BaseScene}!GetAllGameObject@{GetAllGameObject}}
+\index{GetAllGameObject@{GetAllGameObject}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{GetAllGameObject()}{GetAllGameObject()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ Base\+Scene\+::\+Get\+All\+Game\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient tous les objets de jeu. 
+
+\begin{DoxyReturn}{Renvoie}
+Un vecteur contenant tous les objets de jeu. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_a8be86895e74df0a4cd3b0eca7feee84b}\label{class_base_scene_a8be86895e74df0a4cd3b0eca7feee84b} 
+\index{BaseScene@{BaseScene}!GetDefaultRelativeFilePath@{GetDefaultRelativeFilePath}}
+\index{GetDefaultRelativeFilePath@{GetDefaultRelativeFilePath}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{GetDefaultRelativeFilePath()}{GetDefaultRelativeFilePath()}}
+{\footnotesize\ttfamily std\+::string Base\+Scene\+::\+Get\+Default\+Relative\+File\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtient le chemin de fichier relatif par défaut pour la scène. 
+
+\begin{DoxyReturn}{Renvoie}
+Le chemin de fichier relatif par défaut pour la scène. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_ab9316394e3ed0d9e6bda6154911d4edf}\label{class_base_scene_ab9316394e3ed0d9e6bda6154911d4edf} 
+\index{BaseScene@{BaseScene}!GetFileName@{GetFileName}}
+\index{GetFileName@{GetFileName}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{GetFileName()}{GetFileName()}}
+{\footnotesize\ttfamily std\+::string Base\+Scene\+::\+Get\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Récupère le nom du fichier associé à la scène. 
+
+\begin{DoxyReturn}{Renvoie}
+Le nom du fichier de la scène. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_aefdae9ab66f5644144d946e4a858d226}\label{class_base_scene_aefdae9ab66f5644144d946e4a858d226} 
+\index{BaseScene@{BaseScene}!GetGameObjectById@{GetGameObjectById}}
+\index{GetGameObjectById@{GetGameObjectById}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{GetGameObjectById()}{GetGameObjectById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} Base\+Scene\+::\+Get\+Game\+Object\+By\+Id (\begin{DoxyParamCaption}\item[{const Game\+Object\+::id\+\_\+t \&}]{\+\_\+game\+Object\+Id }\end{DoxyParamCaption}) const}
+
+
+
+Obtient un pointeur vers l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} ayant l\textquotesingle{}identifiant spécifié. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+game\+Object\+Id} & L\textquotesingle{}identifiant de l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} à rechercher. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers l\textquotesingle{}objet \doxylink{class_game_object}{Game\+Object} trouvé, ou nullptr s\textquotesingle{}il n\textquotesingle{}est pas trouvé. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_ad1c48681ba910c2c0ba72610e74bb089}\label{class_base_scene_ad1c48681ba910c2c0ba72610e74bb089} 
+\index{BaseScene@{BaseScene}!GetName@{GetName}}
+\index{GetName@{GetName}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily std\+::string Base\+Scene\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtient le nom de la scène. 
+
+\begin{DoxyReturn}{Renvoie}
+Le nom de la scène. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_af2b7648d5c65e0643c0a69014147b7f8}\label{class_base_scene_af2b7648d5c65e0643c0a69014147b7f8} 
+\index{BaseScene@{BaseScene}!GetRootObjects@{GetRootObjects}}
+\index{GetRootObjects@{GetRootObjects}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{GetRootObjects()}{GetRootObjects()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \& Base\+Scene\+::\+Get\+Root\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Récupère une référence vers le vecteur des objets racine de la scène. 
+
+\begin{DoxyReturn}{Renvoie}
+Une référence vers le vecteur des objets racine de la scène. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_a9ddd1f47f2a846ece62f6532b474c1ea}\label{class_base_scene_a9ddd1f47f2a846ece62f6532b474c1ea} 
+\index{BaseScene@{BaseScene}!IsInitialized@{IsInitialized}}
+\index{IsInitialized@{IsInitialized}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{IsInitialized()}{IsInitialized()}}
+{\footnotesize\ttfamily bool Base\+Scene\+::\+Is\+Initialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Vérifie si la scène a été initialisée. 
+
+\begin{DoxyReturn}{Renvoie}
+true si la scène est initialisée, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_ade7aa81f2f79609a6408cb57fa94033c}\label{class_base_scene_ade7aa81f2f79609a6408cb57fa94033c} 
+\index{BaseScene@{BaseScene}!IsUsingSaveFile@{IsUsingSaveFile}}
+\index{IsUsingSaveFile@{IsUsingSaveFile}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{IsUsingSaveFile()}{IsUsingSaveFile()}}
+{\footnotesize\ttfamily bool Base\+Scene\+::\+Is\+Using\+Save\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Indique si la scène utilise un fichier de sauvegarde. 
+
+\begin{DoxyReturn}{Renvoie}
+true si la scène utilise un fichier de sauvegarde, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_af641d5dc5576de638fa8e94c95bcd665}\label{class_base_scene_af641d5dc5576de638fa8e94c95bcd665} 
+\index{BaseScene@{BaseScene}!RemoveObject@{RemoveObject}}
+\index{RemoveObject@{RemoveObject}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{RemoveObject()}{RemoveObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Base\+Scene\+::\+Remove\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{\+\_\+game\+Object,  }\item[{bool}]{\+\_\+b\+Destroy }\end{DoxyParamCaption})}
+
+
+
+Supprime et détruit un objet de la scène. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+game\+Object} & L\textquotesingle{}objet à supprimer. \\
+\hline
+{\em \+\_\+b\+Destroy} & Booléen indiquant s\textquotesingle{}il faut détruire l\textquotesingle{}objet ou non. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_base_scene_aa08ceda4403231cf6090c56d0df5ee68}\label{class_base_scene_aa08ceda4403231cf6090c56d0df5ee68} 
+\index{BaseScene@{BaseScene}!RemoveObject@{RemoveObject}}
+\index{RemoveObject@{RemoveObject}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{RemoveObject()}{RemoveObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Base\+Scene\+::\+Remove\+Object (\begin{DoxyParamCaption}\item[{const Game\+Object\+::id\+\_\+t \&}]{\+\_\+game\+Object\+Id,  }\item[{bool}]{\+\_\+b\+Destroy }\end{DoxyParamCaption})}
+
+
+
+Supprime et détruit un objet de la scène. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+game\+Object\+Id} & L\textquotesingle{}identifiant de l\textquotesingle{}objet à supprimer. \\
+\hline
+{\em \+\_\+b\+Destroy} & Booléen indiquant s\textquotesingle{}il faut détruire l\textquotesingle{}objet ou non. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_base_scene_a509d0beedcba13a7edcdeabdf9870c98}\label{class_base_scene_a509d0beedcba13a7edcdeabdf9870c98} 
+\index{BaseScene@{BaseScene}!RemoveObjects@{RemoveObjects}}
+\index{RemoveObjects@{RemoveObjects}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{RemoveObjects()}{RemoveObjects()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Base\+Scene\+::\+Remove\+Objects (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&}]{\+\_\+game\+Objects,  }\item[{bool}]{\+\_\+b\+Destroy }\end{DoxyParamCaption})}
+
+
+
+Supprime et détruit une liste d\textquotesingle{}objets de la scène. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+game\+Objects} & Le vecteur d\textquotesingle{}objets à supprimer. \\
+\hline
+{\em \+\_\+b\+Destroy} & Booléen indiquant s\textquotesingle{}il faut détruire les objets ou non. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_base_scene_aab5197be3ab10416d80796c63b12f89d}\label{class_base_scene_aab5197be3ab10416d80796c63b12f89d} 
+\index{BaseScene@{BaseScene}!RemoveObjects@{RemoveObjects}}
+\index{RemoveObjects@{RemoveObjects}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{RemoveObjects()}{RemoveObjects()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Base\+Scene\+::\+Remove\+Objects (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Game\+Object\+::id\+\_\+t $>$ \&}]{\+\_\+game\+Objects,  }\item[{bool}]{\+\_\+b\+Destroy }\end{DoxyParamCaption})}
+
+
+
+Supprime et détruit une liste d\textquotesingle{}objets de la scène. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+game\+Objects} & Le vecteur d\textquotesingle{}identifiants des objets à supprimer. \\
+\hline
+{\em \+\_\+b\+Destroy} & Booléen indiquant s\textquotesingle{}il faut détruire les objets ou non. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_base_scene_a7a7b366b6d926a1c853782bb9616ba9a}\label{class_base_scene_a7a7b366b6d926a1c853782bb9616ba9a} 
+\index{BaseScene@{BaseScene}!RemoveObjectsImmediate@{RemoveObjectsImmediate}}
+\index{RemoveObjectsImmediate@{RemoveObjectsImmediate}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{RemoveObjectsImmediate()}{RemoveObjectsImmediate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Base\+Scene\+::\+Remove\+Objects\+Immediate (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&}]{\+\_\+game\+Objects,  }\item[{bool}]{\+\_\+b\+Destroy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Supprime et détruit immédiatement une liste d\textquotesingle{}objets de la scène. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+game\+Objects} & Le vecteur d\textquotesingle{}objets à supprimer. \\
+\hline
+{\em \+\_\+b\+Destroy} & Booléen indiquant s\textquotesingle{}il faut détruire les objets ou non. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_base_scene_aad43896fe03af531cbc8d0c45c564cb2}\label{class_base_scene_aad43896fe03af531cbc8d0c45c564cb2} 
+\index{BaseScene@{BaseScene}!RemoveObjectsImmediate@{RemoveObjectsImmediate}}
+\index{RemoveObjectsImmediate@{RemoveObjectsImmediate}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{RemoveObjectsImmediate()}{RemoveObjectsImmediate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Base\+Scene\+::\+Remove\+Objects\+Immediate (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ Game\+Object\+::id\+\_\+t $>$ \&}]{\+\_\+game\+Objects,  }\item[{bool}]{\+\_\+b\+Destroy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Supprime et détruit immédiatement une liste d\textquotesingle{}objets de la scène. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+game\+Objects} & Le vecteur d\textquotesingle{}identifiants des objets à supprimer. \\
+\hline
+{\em \+\_\+b\+Destroy} & Booléen indiquant s\textquotesingle{}il faut détruire les objets ou non. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_base_scene_afbe51e76d09ce38b5e727a1d0a688ac7}\label{class_base_scene_afbe51e76d09ce38b5e727a1d0a688ac7} 
+\index{BaseScene@{BaseScene}!SetFileName@{SetFileName}}
+\index{SetFileName@{SetFileName}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{SetFileName()}{SetFileName()}}
+{\footnotesize\ttfamily bool Base\+Scene\+::\+Set\+File\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+file\+Name,  }\item[{bool}]{\+\_\+b\+Delete\+Previous\+Files }\end{DoxyParamCaption}) const}
+
+
+
+Définit le nom de fichier de la scène et supprime les fichiers précédents si spécifié. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+file\+Name} & Le nouveau nom de fichier de la scène. \\
+\hline
+{\em \+\_\+b\+Delete\+Previous\+Files} & Indique s\textquotesingle{}il faut supprimer les fichiers précédents ou non. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si le nom de fichier a été correctement défini, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_base_scene_acf73ef32322ffa846db37f4e07a220eb}\label{class_base_scene_acf73ef32322ffa846db37f4e07a220eb} 
+\index{BaseScene@{BaseScene}!SetName@{SetName}}
+\index{SetName@{SetName}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{SetName()}{SetName()}}
+{\footnotesize\ttfamily void Base\+Scene\+::\+Set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Définit le nom de la scène. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+name} & Le nouveau nom de la scène. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_base_scene_af7fc9655341c18fd9c73202975c72dd5}\label{class_base_scene_af7fc9655341c18fd9c73202975c72dd5} 
+\index{BaseScene@{BaseScene}!SetRootObjectIndex@{SetRootObjectIndex}}
+\index{SetRootObjectIndex@{SetRootObjectIndex}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{SetRootObjectIndex()}{SetRootObjectIndex()}}
+{\footnotesize\ttfamily void Base\+Scene\+::\+Set\+Root\+Object\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}}]{\+\_\+root\+Object,  }\item[{uint32\+\_\+t}]{\+\_\+new\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit l\textquotesingle{}indice d\textquotesingle{}un objet racine dans la liste des objets racines de la scène. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+root\+Object} & L\textquotesingle{}objet racine dont l\textquotesingle{}indice doit être défini. \\
+\hline
+{\em \+\_\+new\+Index} & Le nouvel indice de l\textquotesingle{}objet racine. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_base_scene_ac4c053b464819b8ecef4fbc0e4b625b0}\label{class_base_scene_ac4c053b464819b8ecef4fbc0e4b625b0} 
+\index{BaseScene@{BaseScene}!TestLoadGameObjects@{TestLoadGameObjects}}
+\index{TestLoadGameObjects@{TestLoadGameObjects}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{TestLoadGameObjects()}{TestLoadGameObjects()}}
+{\footnotesize\ttfamily void Base\+Scene\+::\+Test\+Load\+Game\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Charge les objets de jeu pour les tests. 
+
+Cette fonction charge les objets de jeu pour les tests. 
+
+\doxysubsection{Documentation des données membres}
+\Hypertarget{class_base_scene_ac7dcc4eca603fac2b28433411d065d8b}\label{class_base_scene_ac7dcc4eca603fac2b28433411d065d8b} 
+\index{BaseScene@{BaseScene}!bInitialized@{bInitialized}}
+\index{bInitialized@{bInitialized}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{bInitialized}{bInitialized}}
+{\footnotesize\ttfamily bool Base\+Scene\+::b\+Initialized = false}
+
+Indique si la scène est initialisée. \Hypertarget{class_base_scene_a9c9accdbd65b2c06798acf110fb33a89}\label{class_base_scene_a9c9accdbd65b2c06798acf110fb33a89} 
+\index{BaseScene@{BaseScene}!bLoaded@{bLoaded}}
+\index{bLoaded@{bLoaded}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{bLoaded}{bLoaded}}
+{\footnotesize\ttfamily bool Base\+Scene\+::b\+Loaded = false}
+
+Indique si la scène est chargée. \Hypertarget{class_base_scene_a9fa392d05125cc88b75de264f0e59d07}\label{class_base_scene_a9fa392d05125cc88b75de264f0e59d07} 
+\index{BaseScene@{BaseScene}!fileName@{fileName}}
+\index{fileName@{fileName}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{fileName}{fileName}}
+{\footnotesize\ttfamily std\+::string Base\+Scene\+::file\+Name}
+
+Le nom du fichier de la scène. \Hypertarget{class_base_scene_a6d909301e434bfc5dde9f05b1d71bcb7}\label{class_base_scene_a6d909301e434bfc5dde9f05b1d71bcb7} 
+\index{BaseScene@{BaseScene}!invalidGameObjectId@{invalidGameObjectId}}
+\index{invalidGameObjectId@{invalidGameObjectId}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{invalidGameObjectId}{invalidGameObjectId}}
+{\footnotesize\ttfamily const Game\+Object\+::id\+\_\+t Base\+Scene\+::invalid\+Game\+Object\+Id = \{\}}
+
+Identifiant invalide d\textquotesingle{}un \doxylink{class_game_object}{Game\+Object}. \Hypertarget{class_base_scene_a7a93c99d6af8a2a2a744bdaa15cb611b}\label{class_base_scene_a7a93c99d6af8a2a2a744bdaa15cb611b} 
+\index{BaseScene@{BaseScene}!name@{name}}
+\index{name@{name}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Base\+Scene\+::name}
+
+Le nom de la scène. \Hypertarget{class_base_scene_afa27359b9bc27ee57b3512d17ca7d43f}\label{class_base_scene_afa27359b9bc27ee57b3512d17ca7d43f} 
+\index{BaseScene@{BaseScene}!pendingAddObjects@{pendingAddObjects}}
+\index{pendingAddObjects@{pendingAddObjects}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{pendingAddObjects}{pendingAddObjects}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_game_object}{Game\+Object}}\texorpdfstring{$\ast$}{*}$>$ Base\+Scene\+::pending\+Add\+Objects}
+
+Liste des objets à ajouter en tant qu\textquotesingle{}objets racine à la fin de la mise à jour de cette frame. \Hypertarget{class_base_scene_acb4914ea048763a6dd8d6ef573e53451}\label{class_base_scene_acb4914ea048763a6dd8d6ef573e53451} 
+\index{BaseScene@{BaseScene}!pendingDestroyObjects@{pendingDestroyObjects}}
+\index{pendingDestroyObjects@{pendingDestroyObjects}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{pendingDestroyObjects}{pendingDestroyObjects}}
+{\footnotesize\ttfamily std\+::vector$<$Game\+Object\+::id\+\_\+t$>$ Base\+Scene\+::pending\+Destroy\+Objects}
+
+Liste des objets à détruire à la fin de la mise à jour de cette frame. \Hypertarget{class_base_scene_a89d1ed36b3076d31cfa035ca03db914b}\label{class_base_scene_a89d1ed36b3076d31cfa035ca03db914b} 
+\index{BaseScene@{BaseScene}!pendingRemoveObjects@{pendingRemoveObjects}}
+\index{pendingRemoveObjects@{pendingRemoveObjects}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{pendingRemoveObjects}{pendingRemoveObjects}}
+{\footnotesize\ttfamily std\+::vector$<$Game\+Object\+::id\+\_\+t$>$ Base\+Scene\+::pending\+Remove\+Objects}
+
+Liste des objets à supprimer. \Hypertarget{class_base_scene_a462479820c153a0b230bb31246aec922}\label{class_base_scene_a462479820c153a0b230bb31246aec922} 
+\index{BaseScene@{BaseScene}!rootObjects@{rootObjects}}
+\index{rootObjects@{rootObjects}!BaseScene@{BaseScene}}
+\doxysubsubsection{\texorpdfstring{rootObjects}{rootObjects}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_game_object}{Game\+Object}}\texorpdfstring{$\ast$}{*}$>$ Base\+Scene\+::root\+Objects}
+
+Liste des objets racine de la scène. 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Scene/Base\+Scene.\+h\item 
+sources/\+Scene/Base\+Scene.\+cpp\end{DoxyCompactItemize}

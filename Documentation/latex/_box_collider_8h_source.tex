@@ -1,0 +1,35 @@
+\doxysection{Box\+Collider.\+h}
+\hypertarget{_box_collider_8h_source}{}\label{_box_collider_8h_source}\index{includes/GameObject/Components/BoxCollider.h@{includes/GameObject/Components/BoxCollider.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <glm.hpp>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <BulletCollision/CollisionDispatch/btGhostObject.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <BulletCollision/CollisionShapes/btBoxShape.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <BulletDynamics/Dynamics/btDiscreteDynamicsWorld.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Component.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_box_collider}{BoxCollider}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_component}{Component}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_box_collider_aab1b3780b2e73d04c240363bfd356198}{BoxCollider}}(btDiscreteDynamicsWorld*\ \_dynamicsWorld,\ glm::vec3\ \_center,\ glm::vec3\ \_position,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btCollisionWorld*\ \ \ \ \ \ \ \ \_collisionWorld);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_box_collider_a226a4efef1f573ecb48a4844f28e5eca}{SetSize}}(glm::vec3\ \_size);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_box_collider_ada94e385e44c4933b4ab7b060503451d}{SetCenter}}(glm::vec3\ \_center)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_box_collider_abcf1df3d8e1cc05a6c168672e7cdd7b5}{OnTrigger}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00048\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ghostObject-\/>getNumOverlappingObjects()\ >\ 0;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_box_collider_add8c9ce36828c6ede423cca7931dd56e}{\string~BoxCollider}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ btBoxShape*\ collisionShape\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ btGhostObject*\ ghostObject\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ btRigidBody*\ rigidBody\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ }
+\DoxyCodeLine{00061\ \};}
+
+\end{DoxyCode}

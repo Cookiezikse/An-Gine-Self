@@ -1,0 +1,76 @@
+\doxysection{lve\+\_\+pipeline.\+h}
+\hypertarget{lve__pipeline_8h_source}{}\label{lve__pipeline_8h_source}\index{includes/LveEngine/lve\_pipeline.h@{includes/LveEngine/lve\_pipeline.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_device.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan.hpp>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }lve}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlve_1_1_pipeline_config_info}{PipelineConfigInfo}}}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_ae1f9b727fa4b672eb2fa43e76574d123}{PipelineConfigInfo}}()\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keywordflow}{default};\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_a7d67d337a64b3b5be6f1167bf9c52eb9}{PipelineConfigInfo}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structlve_1_1_pipeline_config_info}{PipelineConfigInfo}}\&)\ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{delete};\ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlve_1_1_pipeline_config_info}{PipelineConfigInfo}}\&\ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_aaad9655178cd8e806c2f319d437fc65f}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structlve_1_1_pipeline_config_info}{PipelineConfigInfo}}\&)\ =\ \textcolor{keyword}{delete};\ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::vector<vk::VertexInputAttributeDescription>\ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_a7481d780692c39134ffb4a1e0596e3cd}{attributeDescriptions}}\{\};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::vector<vk::VertexInputBindingDescription>\ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_aded1676226606e68e189db7ed44a11f3}{bindingDescriptions}}\{\};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ vk::PipelineViewportStateCreateInfo\ \ \ \ \ \ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_a22c7a38ed1b1392d4441d06e6d734d31}{viewportInfo}};\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ vk::PipelineInputAssemblyStateCreateInfo\ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_ad01ce5921f883eeaac7d39711bda9270}{inputAssemblyInfo}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ vk::PipelineRasterizationStateCreateInfo\ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_a66e27d9096cb66723aca6bc379848e3f}{rasterizationInfo}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ vk::PipelineMultisampleStateCreateInfo\ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_ad3b3266178e6c9841950f988135bd88e}{multisampleInfo}};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ vk::PipelineColorBlendAttachmentState\ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_ae082230ad8893c2bf5ef2272f7a0c704}{colorBlendAttachment}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ vk::PipelineColorBlendStateCreateInfo\ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_a2490d9f71c93a654d778151235c8d358}{colorBlendInfo}};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ vk::PipelineDepthStencilStateCreateInfo\ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_aab5f07a499efb89eff5e6ddb1907daed}{depthStencilInfo}};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::vector<vk::DynamicState>\ \ \ \ \ \ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_a0ac7d9a26c0c8e15578564e4f0f9d1d8}{dynamicStateEnables}};\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ vk::PipelineDynamicStateCreateInfo\ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_add2163ac59974d31b9d828566114db3a}{dynamicStateInfo}};\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ vk::PipelineLayout\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_a7d223d02ba9f2b0211575e70d7900d4b}{pipelineLayout}}\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ vk::RenderPass\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_a681dc36dfb945d2f9a7f4ec4c3c4c955}{renderPass}}\ \ \ \ \ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_a5f3504cbefbaafa6fab603bb2001025b}{subpass}}\ \ \ \ \ \ \ \ =\ 0;\ }
+\DoxyCodeLine{00043\ \ \ \ \ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlve_1_1_lve_pipeline}{LvePipeline}}}
+\DoxyCodeLine{00049\ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_pipeline_a7022072e515c4372b484881969593dad}{LvePipeline}}(\mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ \_device,\ \textcolor{keyword}{const}\ std::string\&\ \_vertFilepath,\ \textcolor{keyword}{const}\ std::string\&\ \_fragFilepath,}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structlve_1_1_pipeline_config_info}{PipelineConfigInfo}}\&\ \_configInfo);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_pipeline_aef30f3a0e1d55cdb51a212aa48d5fb7f}{\string~LvePipeline}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_pipeline_ac72818765c3c328346fe955b92895283}{LvePipeline}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_pipeline}{LvePipeline}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_pipeline}{LvePipeline}}\&\ \mbox{\hyperlink{classlve_1_1_lve_pipeline_a90100f03b393c0873368f08541debdff}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_pipeline}{LvePipeline}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_pipeline_af7f5fcdbb3b754c2f82fac5be4bd0fe0}{Bind}}(vk::CommandBuffer\ \_commandBuffer)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_pipeline_a5e056e96a183f1afd033350395234b34}{DefaultPipelineConfigInfo}}(\mbox{\hyperlink{structlve_1_1_pipeline_config_info}{PipelineConfigInfo}}\&\ \_configInfo);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_pipeline_a80e232d47ded91f535a26dac1725af8a}{EnableAlphaBlending}}(\mbox{\hyperlink{structlve_1_1_pipeline_config_info}{PipelineConfigInfo}}\&\ \_configInfo);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<char>\ ReadFile(\textcolor{keyword}{const}\ std::string\&\ \_filepath);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateGraphicsPipeline(\textcolor{keyword}{const}\ std::string\&\ \ \ \ \ \ \ \ \_vertFilepath,\ \textcolor{keyword}{const}\ std::string\&\ \_fragFilepath,}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structlve_1_1_pipeline_config_info}{PipelineConfigInfo}}\&\ \_configInfo);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateShaderModule(\textcolor{keyword}{const}\ std::vector<char>\&\ \_code,\ vk::ShaderModule*\ \_shaderModule)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ lveDevice;}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ vk::Pipeline\ graphicsPipeline;}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ vk::ShaderModule\ vertShaderModule;}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ vk::ShaderModule\ fragShaderModule;}
+\DoxyCodeLine{00163\ \ \ \ \ \};}
+\DoxyCodeLine{00164\ \}\ \textcolor{comment}{//namespace\ lve}}
+
+\end{DoxyCode}

@@ -1,0 +1,94 @@
+\doxysection{Messages.\+h}
+\hypertarget{_t_c_p_2_messages_8h_source}{}\label{_t_c_p_2_messages_8h_source}\index{includes/TCP/Messages.h@{includes/TCP/Messages.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <winSock2.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }Network}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{namespace\ }Messages}
+\DoxyCodeLine{00009\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Base}}}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ M>}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_ad1147d97f230c6be6276fdf3668b1d0a}{is}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mType\ ==\ M::StaticType;\ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ M>}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ M*\ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a06b16a57d0fb98dc0bacf5ff2a90f283}{as}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const\ }M*\textcolor{keyword}{>}(\textcolor{keyword}{this});\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ sockaddr\_in\ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a69cd114b95f2b08d2c1cc7e9e8b3e0d1}{from}};\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ uint64\_t\ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a8774bdd6b0cdd35e14379b903617643d}{idFrom}};\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Type}}\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ac2cc7082a89c1ad6631a2f66af5f00c0}{Connection}},\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a522d5fadad05effceba392f6e8f70b64}{Disconnection}},\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a12b4595813f48775b089bc59c0f97152}{UserData}},\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a3bb3c9f2296d822d9fe4467060e02f52}{Base}}(\mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Type}}\ type)}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ mType(type)}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Type}}\ mType;\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_1_1_messages_1_1_connection}{Connection}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Base}}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Base}};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Base::Type}}\ StaticType\ =\ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ac2cc7082a89c1ad6631a2f66af5f00c0}{Base::Type::Connection}};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6}{Result}}\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6a505a83f220c02df2f85c3810cd9ceb38}{Success}},\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6ad7c8c85bf79bbe1b7188497c32c3b0ca}{Failed}},\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a98074843fa7d7dee6baeb3863a421872}{Connection}}(\mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6}{Result}}\ r)}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Base}}(\mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Type}}::\mbox{\hyperlink{class_network_1_1_messages_1_1_connection}{Connection}})}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a5ee62fd0bb656b93ef08f22afdc5a47e}{result}}(r)}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6}{Result}}\ \mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a5ee62fd0bb656b93ef08f22afdc5a47e}{result}};\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection}{Disconnection}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Base}}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Base}};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Base::Type}}\ StaticType\ =\ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a522d5fadad05effceba392f6e8f70b64}{Base::Type::Disconnection}};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21}{Reason}}\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21aef70e46fd3bbc21e3e1f0b6815e750c0}{Disconnected}},\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21ab578b733cbb788fc6ad208314d2c4c2b}{Lost}},\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a36af05a34ca6caf93bc68f2562a08166}{Disconnection}}(\mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21}{Reason}}\ r)}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Base}}(\mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Type}}::\mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection}{Disconnection}})}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a48eb1be4be59d3e75de7bf203f092899}{reason}}(r)}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a0c473c9cdef42320c45dbc239f1c5c21}{Reason}}\ \mbox{\hyperlink{class_network_1_1_messages_1_1_disconnection_a48eb1be4be59d3e75de7bf203f092899}{reason}};\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_1_1_messages_1_1_user_data}{UserData}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Base}}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Base}};}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Base::Type}}\ StaticType\ =\ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a12b4595813f48775b089bc59c0f97152}{Base::Type::UserData}};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_messages_1_1_user_data_ad5c14fb148b73d9c83ab7c73c3a6433b}{UserData}}(std::vector<unsigned\ char>\&\&\ d)}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Base}}(\mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Type}}::\mbox{\hyperlink{class_network_1_1_messages_1_1_user_data}{UserData}})}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_network_1_1_messages_1_1_user_data_a779b1efb052cd38dab45d90714a798e1}{data}}(std::move(d))}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<unsigned\ char>\ \mbox{\hyperlink{class_network_1_1_messages_1_1_user_data_a779b1efb052cd38dab45d90714a798e1}{data}};\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00135\ \ \ \ \ \}}
+\DoxyCodeLine{00136\ \}}
+
+\end{DoxyCode}

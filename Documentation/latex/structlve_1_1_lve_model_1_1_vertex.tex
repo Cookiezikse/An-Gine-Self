@@ -1,0 +1,120 @@
+\doxysection{RÃ©fÃ©rence de la structure lve\+::Lve\+Model\+::Vertex}
+\hypertarget{structlve_1_1_lve_model_1_1_vertex}{}\label{structlve_1_1_lve_model_1_1_vertex}\index{lve::LveModel::Vertex@{lve::LveModel::Vertex}}
+
+
+Structure représentant un vertex dans l\textquotesingle{}espace 3D.  
+
+
+
+
+{\ttfamily \#include $<$lve\+\_\+model.\+h$>$}
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a9a9ec41d8d9383074092d3336edeaff7}{operator==}} (const \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex}{Vertex}} \&\+\_\+other) const
+\begin{DoxyCompactList}\small\item\em Opérateur de comparaison d\textquotesingle{}égalité. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ vk\+::\+Vertex\+Input\+Binding\+Description $>$ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a4d82dfd81c2710e7b388ec8e245dcd06}{Get\+Binding\+Descriptions}} ()
+\begin{DoxyCompactList}\small\item\em Obtient les descriptions de liaison des entrées de vertex. \end{DoxyCompactList}\item 
+static std\+::vector$<$ vk\+::\+Vertex\+Input\+Attribute\+Description $>$ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a36bf601a47123b950dac5b3adb7ea98e}{Get\+Attribute\+Descriptions}} ()
+\begin{DoxyCompactList}\small\item\em Obtient les descriptions d\textquotesingle{}attribut des entrées de vertex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::vec3 \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a33a8126b05b90330db3d8c72fb77881d}{position}} \{\}
+\item 
+glm\+::vec3 \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a84d72954fc8a587a987fecf3e9072929}{color}} \{\}
+\item 
+glm\+::vec3 \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_aafaaa8427b700590fa4a7bbbfb1a1202}{normal}} \{\}
+\item 
+glm\+::vec2 \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a38ad66bd6a187703c1590dd6d3465664}{uv}} \{\}
+\item 
+\Hypertarget{structlve_1_1_lve_model_1_1_vertex_a2e227c5385b970e15d76a83ddea84a8c}\label{structlve_1_1_lve_model_1_1_vertex_a2e227c5385b970e15d76a83ddea84a8c} 
+unsigned int {\bfseries tex\+Multiplier} = 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Structure représentant un vertex dans l\textquotesingle{}espace 3D. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{structlve_1_1_lve_model_1_1_vertex_a36bf601a47123b950dac5b3adb7ea98e}\label{structlve_1_1_lve_model_1_1_vertex_a36bf601a47123b950dac5b3adb7ea98e} 
+\index{lve::LveModel::Vertex@{lve::LveModel::Vertex}!GetAttributeDescriptions@{GetAttributeDescriptions}}
+\index{GetAttributeDescriptions@{GetAttributeDescriptions}!lve::LveModel::Vertex@{lve::LveModel::Vertex}}
+\doxysubsubsection{\texorpdfstring{GetAttributeDescriptions()}{GetAttributeDescriptions()}}
+{\footnotesize\ttfamily std\+::vector$<$ vk\+::\+Vertex\+Input\+Attribute\+Description $>$ lve\+::\+Lve\+Model\+::\+Vertex\+::\+Get\+Attribute\+Descriptions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obtient les descriptions d\textquotesingle{}attribut des entrées de vertex. 
+
+\begin{DoxyReturn}{Renvoie}
+Un vecteur contenant les descriptions d\textquotesingle{}attribut des entrées de vertex. 
+\end{DoxyReturn}
+\Hypertarget{structlve_1_1_lve_model_1_1_vertex_a4d82dfd81c2710e7b388ec8e245dcd06}\label{structlve_1_1_lve_model_1_1_vertex_a4d82dfd81c2710e7b388ec8e245dcd06} 
+\index{lve::LveModel::Vertex@{lve::LveModel::Vertex}!GetBindingDescriptions@{GetBindingDescriptions}}
+\index{GetBindingDescriptions@{GetBindingDescriptions}!lve::LveModel::Vertex@{lve::LveModel::Vertex}}
+\doxysubsubsection{\texorpdfstring{GetBindingDescriptions()}{GetBindingDescriptions()}}
+{\footnotesize\ttfamily std\+::vector$<$ vk\+::\+Vertex\+Input\+Binding\+Description $>$ lve\+::\+Lve\+Model\+::\+Vertex\+::\+Get\+Binding\+Descriptions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obtient les descriptions de liaison des entrées de vertex. 
+
+\begin{DoxyReturn}{Renvoie}
+Un vecteur contenant les descriptions de liaison des entrées de vertex. 
+\end{DoxyReturn}
+\Hypertarget{structlve_1_1_lve_model_1_1_vertex_a9a9ec41d8d9383074092d3336edeaff7}\label{structlve_1_1_lve_model_1_1_vertex_a9a9ec41d8d9383074092d3336edeaff7} 
+\index{lve::LveModel::Vertex@{lve::LveModel::Vertex}!operator==@{operator==}}
+\index{operator==@{operator==}!lve::LveModel::Vertex@{lve::LveModel::Vertex}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool lve\+::\+Lve\+Model\+::\+Vertex\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex}{Vertex}} \&}]{\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Opérateur de comparaison d\textquotesingle{}égalité. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+other} & L\textquotesingle{}autre vertex à comparer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si les deux vertices sont égaux, sinon false. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentation des donnÃ©es membres}
+\Hypertarget{structlve_1_1_lve_model_1_1_vertex_a84d72954fc8a587a987fecf3e9072929}\label{structlve_1_1_lve_model_1_1_vertex_a84d72954fc8a587a987fecf3e9072929} 
+\index{lve::LveModel::Vertex@{lve::LveModel::Vertex}!color@{color}}
+\index{color@{color}!lve::LveModel::Vertex@{lve::LveModel::Vertex}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily glm\+::vec3 lve\+::\+Lve\+Model\+::\+Vertex\+::color \{\}}
+
+Couleur du vertex. \Hypertarget{structlve_1_1_lve_model_1_1_vertex_aafaaa8427b700590fa4a7bbbfb1a1202}\label{structlve_1_1_lve_model_1_1_vertex_aafaaa8427b700590fa4a7bbbfb1a1202} 
+\index{lve::LveModel::Vertex@{lve::LveModel::Vertex}!normal@{normal}}
+\index{normal@{normal}!lve::LveModel::Vertex@{lve::LveModel::Vertex}}
+\doxysubsubsection{\texorpdfstring{normal}{normal}}
+{\footnotesize\ttfamily glm\+::vec3 lve\+::\+Lve\+Model\+::\+Vertex\+::normal \{\}}
+
+Normale du vertex. \Hypertarget{structlve_1_1_lve_model_1_1_vertex_a33a8126b05b90330db3d8c72fb77881d}\label{structlve_1_1_lve_model_1_1_vertex_a33a8126b05b90330db3d8c72fb77881d} 
+\index{lve::LveModel::Vertex@{lve::LveModel::Vertex}!position@{position}}
+\index{position@{position}!lve::LveModel::Vertex@{lve::LveModel::Vertex}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily glm\+::vec3 lve\+::\+Lve\+Model\+::\+Vertex\+::position \{\}}
+
+Position du vertex dans l\textquotesingle{}espace. \Hypertarget{structlve_1_1_lve_model_1_1_vertex_a38ad66bd6a187703c1590dd6d3465664}\label{structlve_1_1_lve_model_1_1_vertex_a38ad66bd6a187703c1590dd6d3465664} 
+\index{lve::LveModel::Vertex@{lve::LveModel::Vertex}!uv@{uv}}
+\index{uv@{uv}!lve::LveModel::Vertex@{lve::LveModel::Vertex}}
+\doxysubsubsection{\texorpdfstring{uv}{uv}}
+{\footnotesize\ttfamily glm\+::vec2 lve\+::\+Lve\+Model\+::\+Vertex\+::uv \{\}}
+
+Coordonnées de texture du vertex. 
+
+La documentation de cette structure a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Lve\+Engine/lve\+\_\+model.\+h\item 
+sources/\+Lve\+Engine/lve\+\_\+model.\+cpp\end{DoxyCompactItemize}

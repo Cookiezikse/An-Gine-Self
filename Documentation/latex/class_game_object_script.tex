@@ -1,0 +1,84 @@
+\doxysection{RÃ©fÃ©rence de la classe Game\+Object\+Script}
+\hypertarget{class_game_object_script}{}\label{class_game_object_script}\index{GameObjectScript@{GameObjectScript}}
+
+
+Classe \doxylink{class_game_object_script}{Game\+Object\+Script}.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Object\+Script.\+h$>$}
+
+Graphe d\textquotesingle{}hÃ©ritage de Game\+Object\+Script\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_game_object_script}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_object_script_a19154e145a37b453cd7a85b894918612}\label{class_game_object_script_a19154e145a37b453cd7a85b894918612} 
+{\bfseries Game\+Object\+Script} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_script_a41961f9152f27752fd784476c94bbc5b}\label{class_game_object_script_a41961f9152f27752fd784476c94bbc5b} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Game\+Object\+Script} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur par défaut. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques hÃ©ritÃ©s de \mbox{\hyperlink{class_script}{Script}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Script} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Script} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur par défaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_time_module}{Time\+Module}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_script_a027448bc995c4569bdf644ef20657c5a}{Get\+Time\+Module}} () const
+\begin{DoxyCompactList}\small\item\em Obtient une référence vers le module de temps. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_window_module}{Window\+Module}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_script_a71e110918fb0bdbf15bd24a77f98087e}{Get\+Window\+Module}} () const
+\begin{DoxyCompactList}\small\item\em Obtient une référence vers le module de fenêtre. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_r_h_i_module}{RHIModule}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_script_a5e786e82ab55492b134fa4208746bed0}{Get\+Render\+Interface\+Module}} () const
+\begin{DoxyCompactList}\small\item\em Obtient une référence vers le module d\textquotesingle{}interface de rendu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_input_module}{Input\+Module}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_script_a7add180d1a2b5582fc8c052dc4b5fc6a}{Get\+Input\+Module}} () const
+\begin{DoxyCompactList}\small\item\em Obtient une référence vers le module d\textquotesingle{}entrée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques hÃ©ritÃ©s de \mbox{\hyperlink{class_i_script}{IScript}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+IScript} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel par défaut. \end{DoxyCompactList}\item 
+virtual void {\bfseries Initialize} ()
+\begin{DoxyCompactList}\small\item\em Initialise le script. \end{DoxyCompactList}\item 
+virtual void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Démarre le script. \end{DoxyCompactList}\item 
+virtual void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Met à jour le script. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_script_a1122f44c81a4de2394dc43a046ebba61}{Update}} (const float \+\_\+delta)
+\begin{DoxyCompactList}\small\item\em Met à jour le script avec un delta de temps spécifié. \end{DoxyCompactList}\item 
+virtual void {\bfseries Destruct} ()
+\begin{DoxyCompactList}\small\item\em Destructeur le script. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_script_a2ef909243065cd57abb397271ed89493}{Set\+Script\+Name}} (const std\+::string \&\+\_\+new\+Name="{}Unnamed script"{})
+\begin{DoxyCompactList}\small\item\em Définit le nom par défaut du script. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_i_script_a5731d6bb19f20d64e910f7f8e43c8674}{Get\+Script\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le nom du script. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs protÃ©gÃ©s}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_object_script_a6b8750d60ba9cf45149fcff125fc3456}\label{class_game_object_script_a6b8750d60ba9cf45149fcff125fc3456} 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} {\bfseries object}
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protÃ©gÃ©s hÃ©ritÃ©s de \mbox{\hyperlink{class_i_script}{IScript}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries script\+Name} = "{}Unnamed Script"{}
+\item 
+int {\bfseries id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Classe \doxylink{class_game_object_script}{Game\+Object\+Script}. 
+
+Cette classe représente un script attaché à un \doxylink{class_game_object}{Game\+Object}. Elle hérite de la classe de base \doxylink{class_script}{Script}. 
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Script/Game\+Object\+Script.\+h\item 
+sources/\+Script/Game\+Object\+Script.\+cpp\end{DoxyCompactItemize}

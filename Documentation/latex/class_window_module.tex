@@ -1,0 +1,1405 @@
+\doxysection{Référence de la classe Window\+Module}
+\hypertarget{class_window_module}{}\label{class_window_module}\index{WindowModule@{WindowModule}}
+
+
+Classe \doxylink{class_window_module}{Window\+Module}.  
+
+
+
+
+{\ttfamily \#include $<$Window\+Module.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Window\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_window_module}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_window_module_aaf6702928e44fde93d7e4fa34ecf846f}{Window\+Module}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{class_window_module}{Window\+Module}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_window_module_a476d0a74501e1b4d341bd84bf419acff}{\texorpdfstring{$\sim$}{\string~}\+Window\+Module}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \doxylink{class_window_module}{Window\+Module}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_window_module_a23a9ce9b82f5ef985e15e1879a6b483e}{Window\+Module}} (const \mbox{\hyperlink{class_window_module}{Window\+Module}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Constructeur de copie supprimé. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_window_module}{Window\+Module}} \& \mbox{\hyperlink{class_window_module_a81d3bfa14e4aaf47ddaf06417bb376bc}{operator=}} (const \mbox{\hyperlink{class_window_module}{Window\+Module}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}affectation de copie supprimé. \end{DoxyCompactList}\item 
+vk\+::\+Extent2D \mbox{\hyperlink{class_window_module_a566c6d99bf03f2861296bccc84a68373}{Get\+Extent}} () const
+\begin{DoxyCompactList}\small\item\em Obtient les dimensions de la fenêtre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_window_module_a98af15f4cd803986d3c6e7058baee79a}{Was\+Window\+Resized}} () const
+\begin{DoxyCompactList}\small\item\em Indique si la fenêtre a été redimensionnée depuis la dernière vérification. \end{DoxyCompactList}\item 
+\Hypertarget{class_window_module_a74fcb33c2f5c4c1e8515a97ad44d46e1}\label{class_window_module_a74fcb33c2f5c4c1e8515a97ad44d46e1} 
+void {\bfseries Reset\+Window\+Resized\+Flag} ()
+\item 
+void \mbox{\hyperlink{class_window_module_a5ef3efe1bd31257e18fd58b3d155cff8}{Create\+Window\+Surface}} (vk\+::\+Instance \+\_\+instance, vk\+::\+Surface\+KHR \texorpdfstring{$\ast$}{*}\+\_\+surface) const
+\begin{DoxyCompactList}\small\item\em Crée une surface Vulkan associée à une fenêtre. \end{DoxyCompactList}\item 
+GLFWwindow \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_window_module_a8b735e722c56c2d3ef0b8aacc2bb46e4}{Get\+Glfw\+Window}} () const
+\begin{DoxyCompactList}\small\item\em Obtient un pointeur vers la fenêtre GLFW. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a435cc3b3030d8c79a8f12da6f8f0439f}{Reset\+Cursor\+Window}} () const
+\begin{DoxyCompactList}\small\item\em Réinitialise le curseur de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a4d16e75236562fb95cccf5c4b8cae98d}{Cube\+Cursor\+Window}} (int \+\_\+color=255) const
+\begin{DoxyCompactList}\small\item\em Change la forme du curseur de la fenêtre en un cube coloré. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a8fbe3ff773262dbd98389434d69e42ec}{Standard\+Cursor\+Window}} (Glfw\+Cursor\+Type \+\_\+cursor\+Type) const
+\begin{DoxyCompactList}\small\item\em Définit le curseur standard de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a7ef61b4a58aa4275faf9b66bf223f822}{Set\+Input\+Cursor\+Mode}} (Glfw\+Cursor\+Mode \+\_\+mode)
+\begin{DoxyCompactList}\small\item\em Définit le mode de curseur d\textquotesingle{}entrée pour la fenêtre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_window_module_a62d9d4a89382ee08811fb054c5b6d8c5}{Should\+Close}} () const
+\begin{DoxyCompactList}\small\item\em Vérifie si la fenêtre doit être fermée. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_abe09899b92e659ba71b811044254191d}{Poll\+Events}} ()
+\begin{DoxyCompactList}\small\item\em Traite tous les événements de la fenêtre en attente. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_window_module_aa99155593941ff3b293313e7abd979e1}{Get\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la largeur de la fenêtre. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_window_module_a6d5d162194f8054fc1549cf0fd8902c5}{Get\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la hauteur de la fenêtre. \end{DoxyCompactList}\item 
+glm\+::vec2 \mbox{\hyperlink{class_window_module_afc1508e4f04a44d0cb8b4602fe7e602a}{Get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la taille de la fenêtre. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_window_module_a6180f26987e5e41622639310ce8efa3b}{Get\+Frame\+Buffer\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la largeur du framebuffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_window_module_af03714ddee79357df5b85301c6780263}{Get\+Frame\+Buffer\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la hauteur du framebuffer. \end{DoxyCompactList}\item 
+glm\+::vec2 \mbox{\hyperlink{class_window_module_a21dff78e184314c952a4365a4f9be7f8}{Get\+Frame\+Buffer\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la taille du framebuffer. \end{DoxyCompactList}\item 
+glm\+::ivec2 \mbox{\hyperlink{class_window_module_a3180eff4eff2e05f8e50f4ec5cf3ae08}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la position de la fenêtre. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_window_module_a16d14e148c06942fad859d8a15b278f9}{Get\+PositionX}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la position horizontale de la fenêtre. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_window_module_a2a0c6938d30cab6a298c060490575b54}{Get\+PositionY}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la position verticale de la fenêtre. \end{DoxyCompactList}\item 
+glm\+::ivec2 \mbox{\hyperlink{class_window_module_a2785d52498ba2c113fbb9257190d0268}{Get\+Starting\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la position initiale de la fenêtre. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_window_module_abdd6a93fb152e08d41e4956026335452}{Get\+Starting\+PositionX}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la position horizontale initiale de la fenêtre. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_window_module_a2c90fdfaf700784d1f5f975cad71bb95}{Get\+Starting\+PositionY}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la position verticale initiale de la fenêtre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_window_module_a8c0e41d5945be08dad704169ec1348ac}{Get\+Frame\+Buffer\+Resize}} () const
+\begin{DoxyCompactList}\small\item\em Vérifie si un redimensionnement du framebuffer de la fenêtre est en cours. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_window_module_a0095592593df42ac6c15f499d2e3406d}{Has\+Focus}} () const
+\begin{DoxyCompactList}\small\item\em Vérifie si la fenêtre a le focus. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_window_module_a59edec1d68a526a7985083a61721be04}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le nom de la fenêtre. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_window_module_a331c03f6b7a2d740257714974a465a27}{Get\+Window\+Title}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le titre de la fenêtre. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_window_module_a95897491d08071deef4328ed5bb9f66a}{Get\+Aspect\+Ratio}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le rapport largeur-\/hauteur de la fenêtre. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_window_module_a60c250fa29d151430ab2c6b85a8d45f2}{Get\+Inv\+Aspect\+Ratio}} () const
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}inverse du rapport largeur-\/hauteur de la fenêtre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_window_module_a294fb6e5828f34b5e1d42418522c582d}{Get\+VSync\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Vérifie si la synchronisation verticale est activée. \end{DoxyCompactList}\item 
+Glfw\+Cursor\+Mode \mbox{\hyperlink{class_window_module_a52aabce0e6b21c6de21fa1df31f379aa}{Get\+Cursor\+Mode}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le mode de curseur de la fenêtre. \end{DoxyCompactList}\item 
+Window\+Mode \mbox{\hyperlink{class_window_module_a5913b6a97b753f0b56593ff21d690aa8}{Get\+Window\+Mode}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le mode de fenêtre actuel. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_window_module_a1a642d9a91a41deaf371e622fddefdd9}{Get\+Clipboard\+Text}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le texte actuellement copié dans le presse-\/papiers de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a69cc51bd13582ecb98890230639d8909}{Set\+Size}} (const glm\+::ivec2 \&\+\_\+new\+Size)
+\begin{DoxyCompactList}\small\item\em Définit la taille de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a3c077bfcd307c5099ee61ca3ef3e4cb5}{Set\+Size}} (const int32\+\_\+t \&\+\_\+new\+Width, const int32\+\_\+t \&\+\_\+new\+Height)
+\begin{DoxyCompactList}\small\item\em Définit la taille de la fenêtre en spécifiant la largeur et la hauteur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_ab7268e7f7a290117f4dcfec0b1cccd6e}{Set\+Width}} (const int \&\+\_\+new\+Width)
+\begin{DoxyCompactList}\small\item\em Définit la largeur de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a23f5555e63d5e7e9bb4ef1ef048758b2}{Set\+Height}} (const int \&\+\_\+new\+Height)
+\begin{DoxyCompactList}\small\item\em Définit la hauteur de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a1fe8a551c74af1d24536439d26582220}{Set\+Frame\+Buffer\+Size}} (const glm\+::vec2 \&\+\_\+new\+Size)
+\begin{DoxyCompactList}\small\item\em Définit la taille du framebuffer de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_ac090dbc2c5d2582a7334877ad5d80a15}{Set\+Frame\+Buffer\+Size}} (const int32\+\_\+t \&\+\_\+new\+Width, const int32\+\_\+t \&\+\_\+new\+Height)
+\begin{DoxyCompactList}\small\item\em Définit la taille du framebuffer de la fenêtre en spécifiant la largeur et la hauteur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a3321619a849aa828e52c6b68d717754a}{Set\+Frame\+Buffer\+Width}} (const int \&\+\_\+new\+Width)
+\begin{DoxyCompactList}\small\item\em Définit la largeur du framebuffer de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_af75c79b5219f96caa255846f80d30ade}{Set\+Frame\+Buffer\+Height}} (const int \&\+\_\+new\+Height)
+\begin{DoxyCompactList}\small\item\em Définit la hauteur du framebuffer de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_ab6f598156600dbe20c95f4471a296b57}{Set\+Position}} (const glm\+::ivec2 \&\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Définit la position de la fenêtre en spécifiant les coordonnées x et y. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_aefd6685c1a7e4ce9db403e30f8e79a3b}{Set\+Position}} (const int32\+\_\+t \&\+\_\+new\+PositionX, const int32\+\_\+t \&\+\_\+new\+PositionY)
+\begin{DoxyCompactList}\small\item\em Définit la position de la fenêtre en spécifiant la coordonnée x et y. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a8a7fa284d8a85bbb085e99c2c694b7e2}{Set\+PositionX}} (const int \&\+\_\+positionX)
+\begin{DoxyCompactList}\small\item\em Définit la coordonnée x de la position de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a3711dc6e1b2cfa78717ccd6c8b8073a9}{Set\+PositionY}} (const int \&\+\_\+positionY)
+\begin{DoxyCompactList}\small\item\em Définit la coordonnée y de la position de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_ace2d5b839b89a84714b47daffe6772e9}{Set\+Mouse\+Position}} (const glm\+::ivec2 \+\_\+mouse\+Position) const
+\begin{DoxyCompactList}\small\item\em Définit la position du curseur de la souris. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_aef59173c5c253544cf2de5e1710d1ffc}{Set\+Name}} (const std\+::string \&\+\_\+new\+Name)
+\begin{DoxyCompactList}\small\item\em Définit le nom de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_aab373232babdfb9a4d9734a7cbbb85bb}{Set\+Window\+Title}} (const std\+::string \&\+\_\+window\+Title)
+\begin{DoxyCompactList}\small\item\em Définit le titre de la fenêtre affiché dans la barre de titre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_abbea4d8a57fbcdbaf4763735dace03d6}{Set\+Frame\+Buffer\+Resize}} (const bool \&\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Définit l\textquotesingle{}état de redimensionnement du framebuffer de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_aa3d9d940b5d53daff2fc277c38bf4d31}{Set\+Update\+Window\+Title\+Frequency}} (const float \&\+\_\+update\+Frequency\+In\+Seconds)
+\begin{DoxyCompactList}\small\item\em Définit la fréquence de mise à jour du titre de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a02bba3410cdc3c3660b69735cfe6513c}{Set\+VSync\+Enabled}} (const bool \&\+\_\+b\+Enabled)
+\begin{DoxyCompactList}\small\item\em Active ou désactive la synchronisation verticale (VSync) de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a8adc66b68fcb8d01008f99578513bf58}{Set\+Cursor\+Mode}} (const Glfw\+Cursor\+Mode \&\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em Définit le mode du curseur de la fenêtre. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_window_module_a44a32c0251d6cba741f9a31175c18860}{Window\+Mode\+To\+Str}} () const
+\begin{DoxyCompactList}\small\item\em Convertit le mode de curseur actuel en une chaîne de caractères. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a59c3513015182ff5b126be4b02255b87}{Set\+Window\+Mode}} (const Window\+Mode \&\+\_\+mode, const bool \+\_\+b\+Force=false)
+\begin{DoxyCompactList}\small\item\em Définit le mode de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_ada524e4571b2b589c16945adee5ca42e}{Set\+Clipboard\+Text}} (const char \texorpdfstring{$\ast$}{*}\+\_\+text) const
+\begin{DoxyCompactList}\small\item\em Définit le texte du presse-\/papiers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_ac53776af8d5a05223d465e39a55a4a68}{Set\+Window\+Icon}} (const std\+::string \&\+\_\+file\+Name) const
+\begin{DoxyCompactList}\small\item\em Définit l\textquotesingle{}icône de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_ae14b497a2f7f416b3261b00d67fb6db9}{On\+Size\+Changed}} (const int32\+\_\+t \+\_\+width, const int32\+\_\+t \+\_\+height)
+\begin{DoxyCompactList}\small\item\em Appelé lorsque la taille de la fenêtre est modifiée. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a3e15554dfed0d609c36e8b9c6a28051e}{On\+Size\+Changed}} (const glm\+::ivec2 \&\+\_\+new\+Position)
+\begin{DoxyCompactList}\small\item\em Appelé lorsque la taille de la fenêtre est modifiée. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a7553cb108331ebe70314e0663af31f69}{On\+Position\+Changed}} (const int32\+\_\+t \+\_\+new\+PositionX, const int32\+\_\+t \+\_\+new\+PositionY)
+\begin{DoxyCompactList}\small\item\em Appelé lorsque la position de la fenêtre est modifiée. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_aab6379ef6c0fe63cfe29f7f1c3bee0a3}{On\+Position\+Changed}} (const glm\+::ivec2 \&\+\_\+new\+Position)
+\begin{DoxyCompactList}\small\item\em Appelé lorsque la position de la fenêtre est modifiée. \end{DoxyCompactList}\item 
+Window\+Mode \mbox{\hyperlink{class_window_module_a7730e5e58c94b77e3eb5e58f5576fbf5}{Str\+To\+Window\+Mode}} (const char \texorpdfstring{$\ast$}{*}\+\_\+mode\+Str)
+\begin{DoxyCompactList}\small\item\em Convertit une chaîne de caractères en mode de fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a555996e3e28179fbb5ec2125a90b0bb4}{Toggle\+Fullscreen}} (const bool \+\_\+b\+Force=false)
+\begin{DoxyCompactList}\small\item\em Bascule entre le mode plein écran et le mode fenêtré. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_ace948d4af563849cf88e973a157c27f5}{Maximize}} () const
+\begin{DoxyCompactList}\small\item\em Maximise la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_ab63e2f86c82f1b2a8898788c8997d2c7}{Iconify}} () const
+\begin{DoxyCompactList}\small\item\em Minimise la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_afaa58a06178289492ce7aecf41606ecc}{Init}} () override
+\begin{DoxyCompactList}\small\item\em Initialise le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a72eec720cfe887e876ed4622c74f84c9}{Start}} () override
+\begin{DoxyCompactList}\small\item\em Démarre le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a76ef4f261f536f2a8060817708d7e1e9}{Fixed\+Update}} () override
+\begin{DoxyCompactList}\small\item\em Effectue une mise à jour fixe du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_aa10199f2b56f4e0275d3de3c90627b29}{Update}} () override
+\begin{DoxyCompactList}\small\item\em Met à jour le temps écoulé depuis la dernière frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a3be50f59f440ae61adb8c8f276cdac93}{Pre\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction pré-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a2624ecb83c3b24e02fe3c1534e992f20}{Render}} () override
+\begin{DoxyCompactList}\small\item\em Rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_af8a0593bd7384f1644e9d1051d0f11d2}{Render\+Gui}} () override
+\begin{DoxyCompactList}\small\item\em Rendu de l\textquotesingle{}interface graphique du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a135a0d38ee3a34e0863c49e175fb6f92}{Post\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction post-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_ac79d598b44c2675c799f35965c045bf8}{Release}} () override
+\begin{DoxyCompactList}\small\item\em Libère les ressources utilisées par le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_module_a7934ced6f9107b52b4647258adecfa7f}{Finalize}} () override
+\begin{DoxyCompactList}\small\item\em Finalise le module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_window_module_aacc29598aa3fd3cc3776699be6444938}\label{class_window_module_aacc29598aa3fd3cc3776699be6444938} 
+static constexpr int {\bfseries WIDTH} = 800
+\begin{DoxyCompactList}\small\item\em Largeur de la fen{\ucr}tre par d{\ucr}faut. \end{DoxyCompactList}\item 
+\Hypertarget{class_window_module_aa99037e333459e4ad122ef19b16ba9cf}\label{class_window_module_aa99037e333459e4ad122ef19b16ba9cf} 
+static constexpr int {\bfseries HEIGHT} = 600
+\begin{DoxyCompactList}\small\item\em Hauteur de la fen{\ucr}tre par d{\ucr}faut. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membres hérités additionnels}
+\doxysubsection*{Fonctions membres protégées hérités de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_af09dc286b704160d8f0f273e1fe8576b}{\texorpdfstring{$\sim$}{\string~}\+Module}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur prot�g�. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protégés hérités de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_manager}{Module\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_module_a8d9f92fc1216d933c961bfa685b0ad6f}{module\+Manager}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Classe \doxylink{class_window_module}{Window\+Module}. 
+
+Cette classe représente le gestionnaire de fen{\ucr}tres dans le système. Elle hérite de la classe \doxylink{class_module}{Module}, ce qui lui permet d\textquotesingle{}être intégrée dans le syst{\ucr}me de modules. Le \doxylink{class_window_module}{Window\+Module} est responsable de la gestion et de la manipulation des fenêtres de l\textquotesingle{}application. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_window_module_aaf6702928e44fde93d7e4fa34ecf846f}\label{class_window_module_aaf6702928e44fde93d7e4fa34ecf846f} 
+\index{WindowModule@{WindowModule}!WindowModule@{WindowModule}}
+\index{WindowModule@{WindowModule}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{WindowModule()}{WindowModule()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Window\+Module\+::\+Window\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{class_window_module}{Window\+Module}. 
+
+Ce constructeur initialise un nouvel objet \doxylink{class_window_module}{Window\+Module}. \Hypertarget{class_window_module_a476d0a74501e1b4d341bd84bf419acff}\label{class_window_module_a476d0a74501e1b4d341bd84bf419acff} 
+\index{WindowModule@{WindowModule}!````~WindowModule@{\texorpdfstring{$\sim$}{\string~}WindowModule}}
+\index{````~WindowModule@{\texorpdfstring{$\sim$}{\string~}WindowModule}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}WindowModule()}{\string~WindowModule()}}
+{\footnotesize\ttfamily Window\+Module\+::\texorpdfstring{$\sim$}{\string~}\+Window\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur de la classe \doxylink{class_window_module}{Window\+Module}. 
+
+Ce destructeur libère les ressources associées à l\textquotesingle{}objet \doxylink{class_window_module}{Window\+Module}. \Hypertarget{class_window_module_a23a9ce9b82f5ef985e15e1879a6b483e}\label{class_window_module_a23a9ce9b82f5ef985e15e1879a6b483e} 
+\index{WindowModule@{WindowModule}!WindowModule@{WindowModule}}
+\index{WindowModule@{WindowModule}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{WindowModule()}{WindowModule()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Window\+Module\+::\+Window\+Module (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_window_module}{Window\+Module}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Constructeur de copie supprimé. 
+
+Ce constructeur de copie est supprimé pour empêcher la duplication d\textquotesingle{}objets \doxylink{class_window_module}{Window\+Module}. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_window_module_a5ef3efe1bd31257e18fd58b3d155cff8}\label{class_window_module_a5ef3efe1bd31257e18fd58b3d155cff8} 
+\index{WindowModule@{WindowModule}!CreateWindowSurface@{CreateWindowSurface}}
+\index{CreateWindowSurface@{CreateWindowSurface}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{CreateWindowSurface()}{CreateWindowSurface()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Create\+Window\+Surface (\begin{DoxyParamCaption}\item[{vk\+::\+Instance}]{\+\_\+instance,  }\item[{vk\+::\+Surface\+KHR \texorpdfstring{$\ast$}{*}}]{\+\_\+surface }\end{DoxyParamCaption}) const}
+
+
+
+Crée une surface Vulkan associée à une fenêtre. 
+
+Cette fonction crée une surface Vulkan associée à une fenêtre, permettant à Vulkan de dessiner dans cette fenêtre.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+instance} & L\textquotesingle{}instance Vulkan utilisée pour créer la surface. \\
+\hline
+{\em \+\_\+surface} & Un pointeur vers l\textquotesingle{}objet de surface Vulkan à créer. Ce pointeur sera mis à jour pour contenir la surface créée. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Une} & exception en cas d\textquotesingle{}échec lors de la création de la surface. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_window_module_a4d16e75236562fb95cccf5c4b8cae98d}\label{class_window_module_a4d16e75236562fb95cccf5c4b8cae98d} 
+\index{WindowModule@{WindowModule}!CubeCursorWindow@{CubeCursorWindow}}
+\index{CubeCursorWindow@{CubeCursorWindow}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{CubeCursorWindow()}{CubeCursorWindow()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Cube\+Cursor\+Window (\begin{DoxyParamCaption}\item[{int}]{\+\_\+color = {\ttfamily 255} }\end{DoxyParamCaption}) const}
+
+
+
+Change la forme du curseur de la fenêtre en un cube coloré. 
+
+Cette fonction change la forme du curseur de la fenêtre en un cube coloré, avec la possibilité de spécifier la couleur du cube.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+color} & La couleur du cube. La valeur par défaut est 255. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_a7934ced6f9107b52b4647258adecfa7f}\label{class_window_module_a7934ced6f9107b52b4647258adecfa7f} 
+\index{WindowModule@{WindowModule}!Finalize@{Finalize}}
+\index{Finalize@{Finalize}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{Finalize()}{Finalize()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finalise le module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_a4ed07ee636825b626c8f5021c34e408c}{Module}}.
+
+\Hypertarget{class_window_module_a76ef4f261f536f2a8060817708d7e1e9}\label{class_window_module_a76ef4f261f536f2a8060817708d7e1e9} 
+\index{WindowModule@{WindowModule}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Effectue une mise à jour fixe du module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_a4bbf5f6e563f86794d7ae718371f1ca4}{Module}}.
+
+\Hypertarget{class_window_module_a95897491d08071deef4328ed5bb9f66a}\label{class_window_module_a95897491d08071deef4328ed5bb9f66a} 
+\index{WindowModule@{WindowModule}!GetAspectRatio@{GetAspectRatio}}
+\index{GetAspectRatio@{GetAspectRatio}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetAspectRatio()}{GetAspectRatio()}}
+{\footnotesize\ttfamily float Window\+Module\+::\+Get\+Aspect\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le rapport largeur-\/hauteur de la fenêtre. 
+
+Cette méthode retourne le rapport largeur-\/hauteur de la fenêtre, calculé en divisant la largeur par la hauteur.
+
+\begin{DoxyReturn}{Renvoie}
+Le rapport largeur-\/hauteur de la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a1a642d9a91a41deaf371e622fddefdd9}\label{class_window_module_a1a642d9a91a41deaf371e622fddefdd9} 
+\index{WindowModule@{WindowModule}!GetClipboardText@{GetClipboardText}}
+\index{GetClipboardText@{GetClipboardText}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetClipboardText()}{GetClipboardText()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} Window\+Module\+::\+Get\+Clipboard\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le texte actuellement copié dans le presse-\/papiers de la fenêtre. 
+
+Cette méthode retourne le texte actuellement copié dans le presse-\/papiers de la fenêtre.
+
+\begin{DoxyReturn}{Renvoie}
+Le texte actuellement copié dans le presse-\/papiers de la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a52aabce0e6b21c6de21fa1df31f379aa}\label{class_window_module_a52aabce0e6b21c6de21fa1df31f379aa} 
+\index{WindowModule@{WindowModule}!GetCursorMode@{GetCursorMode}}
+\index{GetCursorMode@{GetCursorMode}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetCursorMode()}{GetCursorMode()}}
+{\footnotesize\ttfamily Glfw\+Cursor\+Mode Window\+Module\+::\+Get\+Cursor\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le mode de curseur de la fenêtre. 
+
+Cette méthode retourne le mode de curseur actuel de la fenêtre.
+
+\begin{DoxyReturn}{Renvoie}
+Le mode de curseur de la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a566c6d99bf03f2861296bccc84a68373}\label{class_window_module_a566c6d99bf03f2861296bccc84a68373} 
+\index{WindowModule@{WindowModule}!GetExtent@{GetExtent}}
+\index{GetExtent@{GetExtent}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetExtent()}{GetExtent()}}
+{\footnotesize\ttfamily vk\+::\+Extent2D Window\+Module\+::\+Get\+Extent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient les dimensions de la fenêtre. 
+
+Cette méthode retourne les dimensions de la fenêtre sous forme d\textquotesingle{}un objet vk\+::\+Extent2D.
+
+\begin{DoxyReturn}{Renvoie}
+Les dimensions de la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_af03714ddee79357df5b85301c6780263}\label{class_window_module_af03714ddee79357df5b85301c6780263} 
+\index{WindowModule@{WindowModule}!GetFrameBufferHeight@{GetFrameBufferHeight}}
+\index{GetFrameBufferHeight@{GetFrameBufferHeight}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetFrameBufferHeight()}{GetFrameBufferHeight()}}
+{\footnotesize\ttfamily int Window\+Module\+::\+Get\+Frame\+Buffer\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la hauteur du framebuffer. 
+
+Cette méthode retourne la hauteur du framebuffer en pixels.
+
+\begin{DoxyReturn}{Renvoie}
+La hauteur du framebuffer. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a8c0e41d5945be08dad704169ec1348ac}\label{class_window_module_a8c0e41d5945be08dad704169ec1348ac} 
+\index{WindowModule@{WindowModule}!GetFrameBufferResize@{GetFrameBufferResize}}
+\index{GetFrameBufferResize@{GetFrameBufferResize}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetFrameBufferResize()}{GetFrameBufferResize()}}
+{\footnotesize\ttfamily bool Window\+Module\+::\+Get\+Frame\+Buffer\+Resize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vérifie si un redimensionnement du framebuffer de la fenêtre est en cours. 
+
+Cette méthode retourne true si un redimensionnement du framebuffer de la fenêtre est en cours, sinon elle retourne false.
+
+\begin{DoxyReturn}{Renvoie}
+true si un redimensionnement du framebuffer de la fenêtre est en cours, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a21dff78e184314c952a4365a4f9be7f8}\label{class_window_module_a21dff78e184314c952a4365a4f9be7f8} 
+\index{WindowModule@{WindowModule}!GetFrameBufferSize@{GetFrameBufferSize}}
+\index{GetFrameBufferSize@{GetFrameBufferSize}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetFrameBufferSize()}{GetFrameBufferSize()}}
+{\footnotesize\ttfamily glm\+::vec2 Window\+Module\+::\+Get\+Frame\+Buffer\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la taille du framebuffer. 
+
+Cette méthode retourne la taille du framebuffer sous forme d\textquotesingle{}un objet glm\+::vec2, représentant la largeur et la hauteur en pixels.
+
+\begin{DoxyReturn}{Renvoie}
+La taille du framebuffer. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a6180f26987e5e41622639310ce8efa3b}\label{class_window_module_a6180f26987e5e41622639310ce8efa3b} 
+\index{WindowModule@{WindowModule}!GetFrameBufferWidth@{GetFrameBufferWidth}}
+\index{GetFrameBufferWidth@{GetFrameBufferWidth}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetFrameBufferWidth()}{GetFrameBufferWidth()}}
+{\footnotesize\ttfamily int Window\+Module\+::\+Get\+Frame\+Buffer\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la largeur du framebuffer. 
+
+Cette méthode retourne la largeur du framebuffer en pixels.
+
+\begin{DoxyReturn}{Renvoie}
+La largeur du framebuffer. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a8b735e722c56c2d3ef0b8aacc2bb46e4}\label{class_window_module_a8b735e722c56c2d3ef0b8aacc2bb46e4} 
+\index{WindowModule@{WindowModule}!GetGlfwWindow@{GetGlfwWindow}}
+\index{GetGlfwWindow@{GetGlfwWindow}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetGlfwWindow()}{GetGlfwWindow()}}
+{\footnotesize\ttfamily GLFWwindow \texorpdfstring{$\ast$}{*} Window\+Module\+::\+Get\+Glfw\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient un pointeur vers la fenêtre GLFW. 
+
+Cette fonction retourne un pointeur vers la fenêtre GLFW associée à l\textquotesingle{}instance actuelle.
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers la fenêtre GLFW. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a6d5d162194f8054fc1549cf0fd8902c5}\label{class_window_module_a6d5d162194f8054fc1549cf0fd8902c5} 
+\index{WindowModule@{WindowModule}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily int Window\+Module\+::\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la hauteur de la fenêtre. 
+
+Cette méthode retourne la hauteur de la fenêtre en pixels.
+
+\begin{DoxyReturn}{Renvoie}
+La hauteur de la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a60c250fa29d151430ab2c6b85a8d45f2}\label{class_window_module_a60c250fa29d151430ab2c6b85a8d45f2} 
+\index{WindowModule@{WindowModule}!GetInvAspectRatio@{GetInvAspectRatio}}
+\index{GetInvAspectRatio@{GetInvAspectRatio}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetInvAspectRatio()}{GetInvAspectRatio()}}
+{\footnotesize\ttfamily float Window\+Module\+::\+Get\+Inv\+Aspect\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient l\textquotesingle{}inverse du rapport largeur-\/hauteur de la fenêtre. 
+
+Cette méthode retourne l\textquotesingle{}inverse du rapport largeur-\/hauteur de la fenêtre, calculé en divisant la hauteur par la largeur.
+
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}inverse du rapport largeur-\/hauteur de la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a59edec1d68a526a7985083a61721be04}\label{class_window_module_a59edec1d68a526a7985083a61721be04} 
+\index{WindowModule@{WindowModule}!GetName@{GetName}}
+\index{GetName@{GetName}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily std\+::string Window\+Module\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le nom de la fenêtre. 
+
+Cette méthode retourne le nom de la fenêtre.
+
+\begin{DoxyReturn}{Renvoie}
+Le nom de la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a3180eff4eff2e05f8e50f4ec5cf3ae08}\label{class_window_module_a3180eff4eff2e05f8e50f4ec5cf3ae08} 
+\index{WindowModule@{WindowModule}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily glm\+::ivec2 Window\+Module\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la position de la fenêtre. 
+
+Cette méthode retourne la position de la fenêtre sous forme d\textquotesingle{}un objet glm\+::ivec2, représentant les coordonnées x et y du coin supérieur gauche de la fenêtre en pixels.
+
+\begin{DoxyReturn}{Renvoie}
+La position de la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a16d14e148c06942fad859d8a15b278f9}\label{class_window_module_a16d14e148c06942fad859d8a15b278f9} 
+\index{WindowModule@{WindowModule}!GetPositionX@{GetPositionX}}
+\index{GetPositionX@{GetPositionX}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetPositionX()}{GetPositionX()}}
+{\footnotesize\ttfamily int Window\+Module\+::\+Get\+PositionX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la position horizontale de la fenêtre. 
+
+Cette méthode retourne la position horizontale (coordonnée x) du coin supérieur gauche de la fenêtre en pixels.
+
+\begin{DoxyReturn}{Renvoie}
+La position horizontale de la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a2a0c6938d30cab6a298c060490575b54}\label{class_window_module_a2a0c6938d30cab6a298c060490575b54} 
+\index{WindowModule@{WindowModule}!GetPositionY@{GetPositionY}}
+\index{GetPositionY@{GetPositionY}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetPositionY()}{GetPositionY()}}
+{\footnotesize\ttfamily int Window\+Module\+::\+Get\+PositionY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la position verticale de la fenêtre. 
+
+Cette méthode retourne la position verticale (coordonnée y) du coin supérieur gauche de la fenêtre en pixels.
+
+\begin{DoxyReturn}{Renvoie}
+La position verticale de la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_afc1508e4f04a44d0cb8b4602fe7e602a}\label{class_window_module_afc1508e4f04a44d0cb8b4602fe7e602a} 
+\index{WindowModule@{WindowModule}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily glm\+::vec2 Window\+Module\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la taille de la fenêtre. 
+
+Cette méthode retourne la taille de la fenêtre sous forme d\textquotesingle{}un objet glm\+::vec2, représentant la largeur et la hauteur en pixels.
+
+\begin{DoxyReturn}{Renvoie}
+La taille de la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a2785d52498ba2c113fbb9257190d0268}\label{class_window_module_a2785d52498ba2c113fbb9257190d0268} 
+\index{WindowModule@{WindowModule}!GetStartingPosition@{GetStartingPosition}}
+\index{GetStartingPosition@{GetStartingPosition}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetStartingPosition()}{GetStartingPosition()}}
+{\footnotesize\ttfamily glm\+::ivec2 Window\+Module\+::\+Get\+Starting\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la position initiale de la fenêtre. 
+
+Cette méthode retourne la position initiale de la fenêtre sous forme d\textquotesingle{}un objet glm\+::ivec2, représentant les coordonnées x et y du coin supérieur gauche de la fenêtre au moment de sa création en pixels.
+
+\begin{DoxyReturn}{Renvoie}
+La position initiale de la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_abdd6a93fb152e08d41e4956026335452}\label{class_window_module_abdd6a93fb152e08d41e4956026335452} 
+\index{WindowModule@{WindowModule}!GetStartingPositionX@{GetStartingPositionX}}
+\index{GetStartingPositionX@{GetStartingPositionX}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetStartingPositionX()}{GetStartingPositionX()}}
+{\footnotesize\ttfamily int Window\+Module\+::\+Get\+Starting\+PositionX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la position horizontale initiale de la fenêtre. 
+
+Cette méthode retourne la position horizontale initiale (coordonnée x) du coin supérieur gauche de la fenêtre au moment de sa création en pixels.
+
+\begin{DoxyReturn}{Renvoie}
+La position horizontale initiale de la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a2c90fdfaf700784d1f5f975cad71bb95}\label{class_window_module_a2c90fdfaf700784d1f5f975cad71bb95} 
+\index{WindowModule@{WindowModule}!GetStartingPositionY@{GetStartingPositionY}}
+\index{GetStartingPositionY@{GetStartingPositionY}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetStartingPositionY()}{GetStartingPositionY()}}
+{\footnotesize\ttfamily int Window\+Module\+::\+Get\+Starting\+PositionY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la position verticale initiale de la fenêtre. 
+
+Cette méthode retourne la position verticale initiale (coordonnée y) du coin supérieur gauche de la fenêtre au moment de sa création en pixels.
+
+\begin{DoxyReturn}{Renvoie}
+La position verticale initiale de la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a294fb6e5828f34b5e1d42418522c582d}\label{class_window_module_a294fb6e5828f34b5e1d42418522c582d} 
+\index{WindowModule@{WindowModule}!GetVSyncEnabled@{GetVSyncEnabled}}
+\index{GetVSyncEnabled@{GetVSyncEnabled}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetVSyncEnabled()}{GetVSyncEnabled()}}
+{\footnotesize\ttfamily bool Window\+Module\+::\+Get\+VSync\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vérifie si la synchronisation verticale est activée. 
+
+Cette méthode retourne true si la synchronisation verticale (VSync) est activée pour la fenêtre, sinon elle retourne false.
+
+\begin{DoxyReturn}{Renvoie}
+true si la synchronisation verticale est activée, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_aa99155593941ff3b293313e7abd979e1}\label{class_window_module_aa99155593941ff3b293313e7abd979e1} 
+\index{WindowModule@{WindowModule}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetWidth()}{GetWidth()}}
+{\footnotesize\ttfamily int Window\+Module\+::\+Get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la largeur de la fenêtre. 
+
+Cette méthode retourne la largeur de la fenêtre en pixels.
+
+\begin{DoxyReturn}{Renvoie}
+La largeur de la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a5913b6a97b753f0b56593ff21d690aa8}\label{class_window_module_a5913b6a97b753f0b56593ff21d690aa8} 
+\index{WindowModule@{WindowModule}!GetWindowMode@{GetWindowMode}}
+\index{GetWindowMode@{GetWindowMode}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetWindowMode()}{GetWindowMode()}}
+{\footnotesize\ttfamily Window\+Mode Window\+Module\+::\+Get\+Window\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le mode de fenêtre actuel. 
+
+Cette méthode retourne le mode de fenêtre actuellement utilisé.
+
+\begin{DoxyReturn}{Renvoie}
+Le mode de fenêtre actuel. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a331c03f6b7a2d740257714974a465a27}\label{class_window_module_a331c03f6b7a2d740257714974a465a27} 
+\index{WindowModule@{WindowModule}!GetWindowTitle@{GetWindowTitle}}
+\index{GetWindowTitle@{GetWindowTitle}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{GetWindowTitle()}{GetWindowTitle()}}
+{\footnotesize\ttfamily std\+::string Window\+Module\+::\+Get\+Window\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le titre de la fenêtre. 
+
+Cette méthode retourne le titre de la fenêtre affiché dans la barre de titre.
+
+\begin{DoxyReturn}{Renvoie}
+Le titre de la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a0095592593df42ac6c15f499d2e3406d}\label{class_window_module_a0095592593df42ac6c15f499d2e3406d} 
+\index{WindowModule@{WindowModule}!HasFocus@{HasFocus}}
+\index{HasFocus@{HasFocus}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{HasFocus()}{HasFocus()}}
+{\footnotesize\ttfamily bool Window\+Module\+::\+Has\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vérifie si la fenêtre a le focus. 
+
+Cette méthode retourne true si la fenêtre a le focus (est au premier plan et est active), sinon elle retourne false.
+
+\begin{DoxyReturn}{Renvoie}
+true si la fenêtre a le focus, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_ab63e2f86c82f1b2a8898788c8997d2c7}\label{class_window_module_ab63e2f86c82f1b2a8898788c8997d2c7} 
+\index{WindowModule@{WindowModule}!Iconify@{Iconify}}
+\index{Iconify@{Iconify}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{Iconify()}{Iconify()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Iconify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Minimise la fenêtre. 
+
+Cette méthode minimise la fenêtre. \Hypertarget{class_window_module_afaa58a06178289492ce7aecf41606ecc}\label{class_window_module_afaa58a06178289492ce7aecf41606ecc} 
+\index{WindowModule@{WindowModule}!Init@{Init}}
+\index{Init@{Init}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialise le module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_a0151ba4ab62f6e91251b0a20b168985e}{Module}}.
+
+\Hypertarget{class_window_module_ace948d4af563849cf88e973a157c27f5}\label{class_window_module_ace948d4af563849cf88e973a157c27f5} 
+\index{WindowModule@{WindowModule}!Maximize@{Maximize}}
+\index{Maximize@{Maximize}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{Maximize()}{Maximize()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Maximize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Maximise la fenêtre. 
+
+Cette méthode maximise la fenêtre à l\textquotesingle{}écran. \Hypertarget{class_window_module_aab6379ef6c0fe63cfe29f7f1c3bee0a3}\label{class_window_module_aab6379ef6c0fe63cfe29f7f1c3bee0a3} 
+\index{WindowModule@{WindowModule}!OnPositionChanged@{OnPositionChanged}}
+\index{OnPositionChanged@{OnPositionChanged}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{OnPositionChanged()}{OnPositionChanged()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Window\+Module\+::\+On\+Position\+Changed (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{\+\_\+new\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Appelé lorsque la position de la fenêtre est modifiée. 
+
+Cette méthode est appelée lorsque la position de la fenêtre est modifiée avec la nouvelle position spécifiée.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+new\+Position} & La nouvelle position de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_a7553cb108331ebe70314e0663af31f69}\label{class_window_module_a7553cb108331ebe70314e0663af31f69} 
+\index{WindowModule@{WindowModule}!OnPositionChanged@{OnPositionChanged}}
+\index{OnPositionChanged@{OnPositionChanged}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{OnPositionChanged()}{OnPositionChanged()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Window\+Module\+::\+On\+Position\+Changed (\begin{DoxyParamCaption}\item[{const int32\+\_\+t}]{\+\_\+new\+PositionX,  }\item[{const int32\+\_\+t}]{\+\_\+new\+PositionY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Appelé lorsque la position de la fenêtre est modifiée. 
+
+Cette méthode est appelée lorsque la position de la fenêtre est modifiée avec les coordonnées spécifiées.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+new\+PositionX} & La nouvelle position en X de la fenêtre. \\
+\hline
+{\em \+\_\+new\+PositionY} & La nouvelle position en Y de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_a3e15554dfed0d609c36e8b9c6a28051e}\label{class_window_module_a3e15554dfed0d609c36e8b9c6a28051e} 
+\index{WindowModule@{WindowModule}!OnSizeChanged@{OnSizeChanged}}
+\index{OnSizeChanged@{OnSizeChanged}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{OnSizeChanged()}{OnSizeChanged()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Window\+Module\+::\+On\+Size\+Changed (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{\+\_\+new\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Appelé lorsque la taille de la fenêtre est modifiée. 
+
+Cette méthode est appelée lorsque la taille de la fenêtre est modifiée avec la nouvelle position spécifiée.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+new\+Position} & Les nouvelles dimensions de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_ae14b497a2f7f416b3261b00d67fb6db9}\label{class_window_module_ae14b497a2f7f416b3261b00d67fb6db9} 
+\index{WindowModule@{WindowModule}!OnSizeChanged@{OnSizeChanged}}
+\index{OnSizeChanged@{OnSizeChanged}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{OnSizeChanged()}{OnSizeChanged()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Window\+Module\+::\+On\+Size\+Changed (\begin{DoxyParamCaption}\item[{const int32\+\_\+t}]{\+\_\+width,  }\item[{const int32\+\_\+t}]{\+\_\+height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Appelé lorsque la taille de la fenêtre est modifiée. 
+
+Cette méthode est appelée lorsque la taille de la fenêtre est modifiée avec les dimensions spécifiées.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+width} & La nouvelle largeur de la fenêtre. \\
+\hline
+{\em \+\_\+height} & La nouvelle hauteur de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_a81d3bfa14e4aaf47ddaf06417bb376bc}\label{class_window_module_a81d3bfa14e4aaf47ddaf06417bb376bc} 
+\index{WindowModule@{WindowModule}!operator=@{operator=}}
+\index{operator=@{operator=}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_window_module}{Window\+Module}} \& Window\+Module\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_window_module}{Window\+Module}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Opérateur d\textquotesingle{}affectation de copie supprimé. 
+
+Cet opérateur d\textquotesingle{}affectation de copie est supprimé pour empêcher la duplication d\textquotesingle{}objets \doxylink{class_window_module}{Window\+Module}. \Hypertarget{class_window_module_abe09899b92e659ba71b811044254191d}\label{class_window_module_abe09899b92e659ba71b811044254191d} 
+\index{WindowModule@{WindowModule}!PollEvents@{PollEvents}}
+\index{PollEvents@{PollEvents}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{PollEvents()}{PollEvents()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Poll\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Traite tous les événements de la fenêtre en attente. 
+
+Cette méthode traite tous les événements de la fenêtre en attente en appelant la fonction GLFW glfw\+Poll\+Events(). Cela permet de garantir que tous les événements de la fenêtre sont traités de manière appropriée. \Hypertarget{class_window_module_a135a0d38ee3a34e0863c49e175fb6f92}\label{class_window_module_a135a0d38ee3a34e0863c49e175fb6f92} 
+\index{WindowModule@{WindowModule}!PostRender@{PostRender}}
+\index{PostRender@{PostRender}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{PostRender()}{PostRender()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Post\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction post-\/rendu du module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_a0bb23668b2717e4bb3b4e1f6350a7e87}{Module}}.
+
+\Hypertarget{class_window_module_a3be50f59f440ae61adb8c8f276cdac93}\label{class_window_module_a3be50f59f440ae61adb8c8f276cdac93} 
+\index{WindowModule@{WindowModule}!PreRender@{PreRender}}
+\index{PreRender@{PreRender}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{PreRender()}{PreRender()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Pre\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction pré-\/rendu du module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_a7a88e7aaddd55bf9f15beb8d297afd1e}{Module}}.
+
+\Hypertarget{class_window_module_ac79d598b44c2675c799f35965c045bf8}\label{class_window_module_ac79d598b44c2675c799f35965c045bf8} 
+\index{WindowModule@{WindowModule}!Release@{Release}}
+\index{Release@{Release}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Libère les ressources utilisées par le module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_a7e2e4615b80a57040eccf9794bee1007}{Module}}.
+
+\Hypertarget{class_window_module_a2624ecb83c3b24e02fe3c1534e992f20}\label{class_window_module_a2624ecb83c3b24e02fe3c1534e992f20} 
+\index{WindowModule@{WindowModule}!Render@{Render}}
+\index{Render@{Render}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu du module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_ab6ec60e3eced3faa0217348cfca2785f}{Module}}.
+
+\Hypertarget{class_window_module_af8a0593bd7384f1644e9d1051d0f11d2}\label{class_window_module_af8a0593bd7384f1644e9d1051d0f11d2} 
+\index{WindowModule@{WindowModule}!RenderGui@{RenderGui}}
+\index{RenderGui@{RenderGui}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{RenderGui()}{RenderGui()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Render\+Gui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu de l\textquotesingle{}interface graphique du module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_aadc90c55712eba976e6bf87318713d11}{Module}}.
+
+\Hypertarget{class_window_module_a435cc3b3030d8c79a8f12da6f8f0439f}\label{class_window_module_a435cc3b3030d8c79a8f12da6f8f0439f} 
+\index{WindowModule@{WindowModule}!ResetCursorWindow@{ResetCursorWindow}}
+\index{ResetCursorWindow@{ResetCursorWindow}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{ResetCursorWindow()}{ResetCursorWindow()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Reset\+Cursor\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Réinitialise le curseur de la fenêtre. 
+
+Cette fonction réinitialise le curseur de la fenêtre à sa forme par défaut. \Hypertarget{class_window_module_ada524e4571b2b589c16945adee5ca42e}\label{class_window_module_ada524e4571b2b589c16945adee5ca42e} 
+\index{WindowModule@{WindowModule}!SetClipboardText@{SetClipboardText}}
+\index{SetClipboardText@{SetClipboardText}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetClipboardText()}{SetClipboardText()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Clipboard\+Text (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+text }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit le texte du presse-\/papiers. 
+
+Cette méthode définit le texte du presse-\/papiers avec la chaîne spécifiée.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+text} & La chaîne à copier dans le presse-\/papiers. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_a8adc66b68fcb8d01008f99578513bf58}\label{class_window_module_a8adc66b68fcb8d01008f99578513bf58} 
+\index{WindowModule@{WindowModule}!SetCursorMode@{SetCursorMode}}
+\index{SetCursorMode@{SetCursorMode}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetCursorMode()}{SetCursorMode()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Cursor\+Mode (\begin{DoxyParamCaption}\item[{const Glfw\+Cursor\+Mode \&}]{\+\_\+mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit le mode du curseur de la fenêtre. 
+
+Cette méthode définit le mode du curseur de la fenêtre à un mode spécifié.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+mode} & Le mode du curseur de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_af75c79b5219f96caa255846f80d30ade}\label{class_window_module_af75c79b5219f96caa255846f80d30ade} 
+\index{WindowModule@{WindowModule}!SetFrameBufferHeight@{SetFrameBufferHeight}}
+\index{SetFrameBufferHeight@{SetFrameBufferHeight}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetFrameBufferHeight()}{SetFrameBufferHeight()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Frame\+Buffer\+Height (\begin{DoxyParamCaption}\item[{const int \&}]{\+\_\+new\+Height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit la hauteur du framebuffer de la fenêtre. 
+
+Cette méthode définit la hauteur du framebuffer de la fenêtre à la nouvelle hauteur spécifiée.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+new\+Height} & La nouvelle hauteur du framebuffer de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_abbea4d8a57fbcdbaf4763735dace03d6}\label{class_window_module_abbea4d8a57fbcdbaf4763735dace03d6} 
+\index{WindowModule@{WindowModule}!SetFrameBufferResize@{SetFrameBufferResize}}
+\index{SetFrameBufferResize@{SetFrameBufferResize}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetFrameBufferResize()}{SetFrameBufferResize()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Frame\+Buffer\+Resize (\begin{DoxyParamCaption}\item[{const bool \&}]{\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit l\textquotesingle{}état de redimensionnement du framebuffer de la fenêtre. 
+
+Cette méthode définit l\textquotesingle{}état de redimensionnement du framebuffer de la fenêtre à l\textquotesingle{}état spécifié.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+state} & L\textquotesingle{}état de redimensionnement du framebuffer de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_a1fe8a551c74af1d24536439d26582220}\label{class_window_module_a1fe8a551c74af1d24536439d26582220} 
+\index{WindowModule@{WindowModule}!SetFrameBufferSize@{SetFrameBufferSize}}
+\index{SetFrameBufferSize@{SetFrameBufferSize}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetFrameBufferSize()}{SetFrameBufferSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Frame\+Buffer\+Size (\begin{DoxyParamCaption}\item[{const glm\+::vec2 \&}]{\+\_\+new\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit la taille du framebuffer de la fenêtre. 
+
+Cette méthode définit la taille du framebuffer de la fenêtre à la nouvelle taille spécifiée.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+new\+Size} & La nouvelle taille du framebuffer de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_ac090dbc2c5d2582a7334877ad5d80a15}\label{class_window_module_ac090dbc2c5d2582a7334877ad5d80a15} 
+\index{WindowModule@{WindowModule}!SetFrameBufferSize@{SetFrameBufferSize}}
+\index{SetFrameBufferSize@{SetFrameBufferSize}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetFrameBufferSize()}{SetFrameBufferSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Frame\+Buffer\+Size (\begin{DoxyParamCaption}\item[{const int32\+\_\+t \&}]{\+\_\+new\+Width,  }\item[{const int32\+\_\+t \&}]{\+\_\+new\+Height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit la taille du framebuffer de la fenêtre en spécifiant la largeur et la hauteur. 
+
+Cette méthode définit la taille du framebuffer de la fenêtre en spécifiant la largeur et la hauteur.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+new\+Width} & La nouvelle largeur du framebuffer de la fenêtre. \\
+\hline
+{\em \+\_\+new\+Height} & La nouvelle hauteur du framebuffer de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_a3321619a849aa828e52c6b68d717754a}\label{class_window_module_a3321619a849aa828e52c6b68d717754a} 
+\index{WindowModule@{WindowModule}!SetFrameBufferWidth@{SetFrameBufferWidth}}
+\index{SetFrameBufferWidth@{SetFrameBufferWidth}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetFrameBufferWidth()}{SetFrameBufferWidth()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Frame\+Buffer\+Width (\begin{DoxyParamCaption}\item[{const int \&}]{\+\_\+new\+Width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit la largeur du framebuffer de la fenêtre. 
+
+Cette méthode définit la largeur du framebuffer de la fenêtre à la nouvelle largeur spécifiée.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+new\+Width} & La nouvelle largeur du framebuffer de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_a23f5555e63d5e7e9bb4ef1ef048758b2}\label{class_window_module_a23f5555e63d5e7e9bb4ef1ef048758b2} 
+\index{WindowModule@{WindowModule}!SetHeight@{SetHeight}}
+\index{SetHeight@{SetHeight}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetHeight()}{SetHeight()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Height (\begin{DoxyParamCaption}\item[{const int \&}]{\+\_\+new\+Height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit la hauteur de la fenêtre. 
+
+Cette méthode définit la hauteur de la fenêtre à la nouvelle hauteur spécifiée.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+new\+Height} & La nouvelle hauteur de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_a7ef61b4a58aa4275faf9b66bf223f822}\label{class_window_module_a7ef61b4a58aa4275faf9b66bf223f822} 
+\index{WindowModule@{WindowModule}!SetInputCursorMode@{SetInputCursorMode}}
+\index{SetInputCursorMode@{SetInputCursorMode}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetInputCursorMode()}{SetInputCursorMode()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Input\+Cursor\+Mode (\begin{DoxyParamCaption}\item[{Glfw\+Cursor\+Mode}]{\+\_\+mode }\end{DoxyParamCaption})}
+
+
+
+Définit le mode de curseur d\textquotesingle{}entrée pour la fenêtre. 
+
+Cette fonction définit le mode de curseur d\textquotesingle{}entrée pour la fenêtre à un mode spécifié.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+mode} & Le mode de curseur d\textquotesingle{}entrée à définir. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_ace2d5b839b89a84714b47daffe6772e9}\label{class_window_module_ace2d5b839b89a84714b47daffe6772e9} 
+\index{WindowModule@{WindowModule}!SetMousePosition@{SetMousePosition}}
+\index{SetMousePosition@{SetMousePosition}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetMousePosition()}{SetMousePosition()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Mouse\+Position (\begin{DoxyParamCaption}\item[{const glm\+::ivec2}]{\+\_\+mouse\+Position }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit la position du curseur de la souris. 
+
+Cette méthode définit la position du curseur de la souris à la nouvelle position spécifiée.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+mouse\+Position} & La nouvelle position du curseur de la souris. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_aef59173c5c253544cf2de5e1710d1ffc}\label{class_window_module_aef59173c5c253544cf2de5e1710d1ffc} 
+\index{WindowModule@{WindowModule}!SetName@{SetName}}
+\index{SetName@{SetName}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetName()}{SetName()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+new\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit le nom de la fenêtre. 
+
+Cette méthode définit le nom de la fenêtre à la nouvelle valeur spécifiée.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+new\+Name} & Le nouveau nom de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_ab6f598156600dbe20c95f4471a296b57}\label{class_window_module_ab6f598156600dbe20c95f4471a296b57} 
+\index{WindowModule@{WindowModule}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{\+\_\+position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit la position de la fenêtre en spécifiant les coordonnées x et y. 
+
+Cette méthode définit la position de la fenêtre en spécifiant les coordonnées x et y.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+position} & Les nouvelles coordonnées x et y de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_aefd6685c1a7e4ce9db403e30f8e79a3b}\label{class_window_module_aefd6685c1a7e4ce9db403e30f8e79a3b} 
+\index{WindowModule@{WindowModule}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{const int32\+\_\+t \&}]{\+\_\+new\+PositionX,  }\item[{const int32\+\_\+t \&}]{\+\_\+new\+PositionY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit la position de la fenêtre en spécifiant la coordonnée x et y. 
+
+Cette méthode définit la position de la fenêtre en spécifiant la coordonnée x et y.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+new\+PositionX} & La nouvelle coordonnée x de la fenêtre. \\
+\hline
+{\em \+\_\+new\+PositionY} & La nouvelle coordonnée y de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_a8a7fa284d8a85bbb085e99c2c694b7e2}\label{class_window_module_a8a7fa284d8a85bbb085e99c2c694b7e2} 
+\index{WindowModule@{WindowModule}!SetPositionX@{SetPositionX}}
+\index{SetPositionX@{SetPositionX}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetPositionX()}{SetPositionX()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+PositionX (\begin{DoxyParamCaption}\item[{const int \&}]{\+\_\+positionX }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit la coordonnée x de la position de la fenêtre. 
+
+Cette méthode définit la coordonnée x de la position de la fenêtre à la nouvelle valeur spécifiée.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+positionX} & La nouvelle coordonnée x de la position de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_a3711dc6e1b2cfa78717ccd6c8b8073a9}\label{class_window_module_a3711dc6e1b2cfa78717ccd6c8b8073a9} 
+\index{WindowModule@{WindowModule}!SetPositionY@{SetPositionY}}
+\index{SetPositionY@{SetPositionY}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetPositionY()}{SetPositionY()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+PositionY (\begin{DoxyParamCaption}\item[{const int \&}]{\+\_\+positionY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit la coordonnée y de la position de la fenêtre. 
+
+Cette méthode définit la coordonnée y de la position de la fenêtre à la nouvelle valeur spécifiée.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+positionY} & La nouvelle coordonnée y de la position de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_a69cc51bd13582ecb98890230639d8909}\label{class_window_module_a69cc51bd13582ecb98890230639d8909} 
+\index{WindowModule@{WindowModule}!SetSize@{SetSize}}
+\index{SetSize@{SetSize}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetSize()}{SetSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Size (\begin{DoxyParamCaption}\item[{const glm\+::ivec2 \&}]{\+\_\+new\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit la taille de la fenêtre. 
+
+Cette méthode définit la taille de la fenêtre à la nouvelle taille spécifiée.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+new\+Size} & La nouvelle taille de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_a3c077bfcd307c5099ee61ca3ef3e4cb5}\label{class_window_module_a3c077bfcd307c5099ee61ca3ef3e4cb5} 
+\index{WindowModule@{WindowModule}!SetSize@{SetSize}}
+\index{SetSize@{SetSize}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetSize()}{SetSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Size (\begin{DoxyParamCaption}\item[{const int32\+\_\+t \&}]{\+\_\+new\+Width,  }\item[{const int32\+\_\+t \&}]{\+\_\+new\+Height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit la taille de la fenêtre en spécifiant la largeur et la hauteur. 
+
+Cette méthode définit la taille de la fenêtre en spécifiant la largeur et la hauteur.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+new\+Width} & La nouvelle largeur de la fenêtre. \\
+\hline
+{\em \+\_\+new\+Height} & La nouvelle hauteur de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_aa3d9d940b5d53daff2fc277c38bf4d31}\label{class_window_module_aa3d9d940b5d53daff2fc277c38bf4d31} 
+\index{WindowModule@{WindowModule}!SetUpdateWindowTitleFrequency@{SetUpdateWindowTitleFrequency}}
+\index{SetUpdateWindowTitleFrequency@{SetUpdateWindowTitleFrequency}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetUpdateWindowTitleFrequency()}{SetUpdateWindowTitleFrequency()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Update\+Window\+Title\+Frequency (\begin{DoxyParamCaption}\item[{const float \&}]{\+\_\+update\+Frequency\+In\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit la fréquence de mise à jour du titre de la fenêtre. 
+
+Cette méthode définit la fréquence de mise à jour du titre de la fenêtre en secondes.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+update\+Frequency\+In\+Seconds} & La fréquence de mise à jour du titre de la fenêtre en secondes. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_a02bba3410cdc3c3660b69735cfe6513c}\label{class_window_module_a02bba3410cdc3c3660b69735cfe6513c} 
+\index{WindowModule@{WindowModule}!SetVSyncEnabled@{SetVSyncEnabled}}
+\index{SetVSyncEnabled@{SetVSyncEnabled}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetVSyncEnabled()}{SetVSyncEnabled()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+VSync\+Enabled (\begin{DoxyParamCaption}\item[{const bool \&}]{\+\_\+b\+Enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Active ou désactive la synchronisation verticale (VSync) de la fenêtre. 
+
+Cette méthode active ou désactive la synchronisation verticale (VSync) de la fenêtre selon l\textquotesingle{}état spécifié.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+b\+Enabled} & État de la synchronisation verticale (VSync). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_ab7268e7f7a290117f4dcfec0b1cccd6e}\label{class_window_module_ab7268e7f7a290117f4dcfec0b1cccd6e} 
+\index{WindowModule@{WindowModule}!SetWidth@{SetWidth}}
+\index{SetWidth@{SetWidth}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetWidth()}{SetWidth()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Width (\begin{DoxyParamCaption}\item[{const int \&}]{\+\_\+new\+Width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit la largeur de la fenêtre. 
+
+Cette méthode définit la largeur de la fenêtre à la nouvelle largeur spécifiée.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+new\+Width} & La nouvelle largeur de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_ac53776af8d5a05223d465e39a55a4a68}\label{class_window_module_ac53776af8d5a05223d465e39a55a4a68} 
+\index{WindowModule@{WindowModule}!SetWindowIcon@{SetWindowIcon}}
+\index{SetWindowIcon@{SetWindowIcon}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetWindowIcon()}{SetWindowIcon()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Window\+Icon (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+file\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit l\textquotesingle{}icône de la fenêtre. 
+
+Cette méthode définit l\textquotesingle{}icône de la fenêtre avec l\textquotesingle{}image spécifiée dans le fichier.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+file\+Name} & Le nom du fichier contenant l\textquotesingle{}image de l\textquotesingle{}icône de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_a59c3513015182ff5b126be4b02255b87}\label{class_window_module_a59c3513015182ff5b126be4b02255b87} 
+\index{WindowModule@{WindowModule}!SetWindowMode@{SetWindowMode}}
+\index{SetWindowMode@{SetWindowMode}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetWindowMode()}{SetWindowMode()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Window\+Mode (\begin{DoxyParamCaption}\item[{const Window\+Mode \&}]{\+\_\+mode,  }\item[{const bool}]{\+\_\+b\+Force = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit le mode de la fenêtre. 
+
+Cette méthode définit le mode de la fenêtre à un mode spécifié.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+mode} & Le mode de la fenêtre. \\
+\hline
+{\em \+\_\+b\+Force} & Spécifie si le changement de mode doit être forcé même s\textquotesingle{}il est identique au mode actuel. La valeur par défaut est false. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_aab373232babdfb9a4d9734a7cbbb85bb}\label{class_window_module_aab373232babdfb9a4d9734a7cbbb85bb} 
+\index{WindowModule@{WindowModule}!SetWindowTitle@{SetWindowTitle}}
+\index{SetWindowTitle@{SetWindowTitle}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{SetWindowTitle()}{SetWindowTitle()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Set\+Window\+Title (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+window\+Title }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit le titre de la fenêtre affiché dans la barre de titre. 
+
+Cette méthode définit le titre de la fenêtre affiché dans la barre de titre à la nouvelle valeur spécifiée.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+window\+Title} & Le nouveau titre de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_a62d9d4a89382ee08811fb054c5b6d8c5}\label{class_window_module_a62d9d4a89382ee08811fb054c5b6d8c5} 
+\index{WindowModule@{WindowModule}!ShouldClose@{ShouldClose}}
+\index{ShouldClose@{ShouldClose}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{ShouldClose()}{ShouldClose()}}
+{\footnotesize\ttfamily bool Window\+Module\+::\+Should\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vérifie si la fenêtre doit être fermée. 
+
+Cette méthode vérifie si la fenêtre doit être fermée en interrogeant la fonction GLFW glfw\+Window\+Should\+Close().
+
+\begin{DoxyReturn}{Renvoie}
+true si la fenêtre doit être fermée, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a8fbe3ff773262dbd98389434d69e42ec}\label{class_window_module_a8fbe3ff773262dbd98389434d69e42ec} 
+\index{WindowModule@{WindowModule}!StandardCursorWindow@{StandardCursorWindow}}
+\index{StandardCursorWindow@{StandardCursorWindow}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{StandardCursorWindow()}{StandardCursorWindow()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Standard\+Cursor\+Window (\begin{DoxyParamCaption}\item[{Glfw\+Cursor\+Type}]{\+\_\+cursor\+Type }\end{DoxyParamCaption}) const}
+
+
+
+Définit le curseur standard de la fenêtre. 
+
+Cette fonction définit le curseur standard de la fenêtre à un type spécifié.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+cursor\+Type} & Le type de curseur à définir. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_a72eec720cfe887e876ed4622c74f84c9}\label{class_window_module_a72eec720cfe887e876ed4622c74f84c9} 
+\index{WindowModule@{WindowModule}!Start@{Start}}
+\index{Start@{Start}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Démarre le module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_aed9229993dada6ed800f73036aade722}{Module}}.
+
+\Hypertarget{class_window_module_a7730e5e58c94b77e3eb5e58f5576fbf5}\label{class_window_module_a7730e5e58c94b77e3eb5e58f5576fbf5} 
+\index{WindowModule@{WindowModule}!StrToWindowMode@{StrToWindowMode}}
+\index{StrToWindowMode@{StrToWindowMode}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{StrToWindowMode()}{StrToWindowMode()}}
+{\footnotesize\ttfamily Window\+Mode Window\+Module\+::\+Str\+To\+Window\+Mode (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+mode\+Str }\end{DoxyParamCaption})}
+
+
+
+Convertit une chaîne de caractères en mode de fenêtre. 
+
+Cette fonction convertit une chaîne de caractères en un mode de fenêtre correspondant.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+mode\+Str} & La chaîne de caractères représentant le mode de fenêtre à convertir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le mode de fenêtre correspondant à la chaîne de caractères. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a555996e3e28179fbb5ec2125a90b0bb4}\label{class_window_module_a555996e3e28179fbb5ec2125a90b0bb4} 
+\index{WindowModule@{WindowModule}!ToggleFullscreen@{ToggleFullscreen}}
+\index{ToggleFullscreen@{ToggleFullscreen}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{ToggleFullscreen()}{ToggleFullscreen()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Toggle\+Fullscreen (\begin{DoxyParamCaption}\item[{const bool}]{\+\_\+b\+Force = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Bascule entre le mode plein écran et le mode fenêtré. 
+
+Cette méthode bascule entre le mode plein écran et le mode fenêtré de la fenêtre. Si le mode actuel est plein écran, la fenêtre bascule en mode fenêtré, et vice versa.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+b\+Force} & Indique si le changement de mode doit être forcé. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_module_aa10199f2b56f4e0275d3de3c90627b29}\label{class_window_module_aa10199f2b56f4e0275d3de3c90627b29} 
+\index{WindowModule@{WindowModule}!Update@{Update}}
+\index{Update@{Update}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Window\+Module\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Met à jour le temps écoulé depuis la dernière frame. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_abf63d5bb322a751fbf95f2da0978817b}{Module}}.
+
+\Hypertarget{class_window_module_a98af15f4cd803986d3c6e7058baee79a}\label{class_window_module_a98af15f4cd803986d3c6e7058baee79a} 
+\index{WindowModule@{WindowModule}!WasWindowResized@{WasWindowResized}}
+\index{WasWindowResized@{WasWindowResized}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{WasWindowResized()}{WasWindowResized()}}
+{\footnotesize\ttfamily bool Window\+Module\+::\+Was\+Window\+Resized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Indique si la fenêtre a été redimensionnée depuis la dernière vérification. 
+
+Cette méthode retourne vrai si la fenêtre a été redimensionnée depuis la dernière vérification, sinon faux.
+
+\begin{DoxyReturn}{Renvoie}
+Vrai si la fenêtre a été redimensionnée, sinon faux. 
+\end{DoxyReturn}
+\Hypertarget{class_window_module_a44a32c0251d6cba741f9a31175c18860}\label{class_window_module_a44a32c0251d6cba741f9a31175c18860} 
+\index{WindowModule@{WindowModule}!WindowModeToStr@{WindowModeToStr}}
+\index{WindowModeToStr@{WindowModeToStr}!WindowModule@{WindowModule}}
+\doxysubsubsection{\texorpdfstring{WindowModeToStr()}{WindowModeToStr()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} Window\+Module\+::\+Window\+Mode\+To\+Str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convertit le mode de curseur actuel en une chaîne de caractères. 
+
+Cette méthode convertit le mode de curseur actuel en une chaîne de caractères représentant le mode.
+
+\begin{DoxyReturn}{Renvoie}
+Une chaîne de caractères représentant le mode de curseur actuel. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Modules/Window\+Module.\+h\item 
+sources/\+Modules/Window\+Module.\+cpp\end{DoxyCompactItemize}

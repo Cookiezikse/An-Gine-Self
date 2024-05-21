@@ -1,0 +1,28 @@
+\doxysection{Tester.\+h}
+\hypertarget{_tester_8h_source}{}\label{_tester_8h_source}\index{includes/UDP/Tester.h@{includes/UDP/Tester.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <UDP/Types.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifdef\ \_MSC\_VER}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ DEBUGBREAK()\ \_\_debugbreak()}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ TODO}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ DEBUGBREAK()\ }}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ TO\_STRING\_INTERNAL(...)\ \#\_\_VA\_ARGS\_\_}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ TO\_STRING(...)\ TO\_STRING\_INTERNAL(\_\_VA\_ARGS\_\_)}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ CHECK\_SUCCESS(expr)\ do\ \{\ }\textcolor{comment}{/*std::cout\ <<\ "{}[OK]\ "{}\ \#expr\ <<\ std::endl;*/}\textcolor{preprocessor}{\ \}\ while(0)}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ CHECK\_FAILURE(expr)\ do\ \{\ std::cout\ <<\ "{}[FAILURE]["{}\ \_\_FILE\_\_\ "{}:"{}\ TO\_STRING(\_\_LINE\_\_)\ "{}]\ "{}\ \#expr\ <<\ std::endl;\ DEBUGBREAK();\ \}\ while(0)}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ variadic\ arguments\ but\ is\ supposed\ to\ be\ used\ with\ 1\ single\ check.\ This\ to\ prevent\ issues\ "{}too\ many\ arguments"{}\ when\ using\ multiple\ template\ parameters\ hence\ using\ a\ ,\ ...}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ CHECK(...)\ do\ \{\ if\ ((\_\_VA\_ARGS\_\_))\ \{\ CHECK\_SUCCESS((\_\_VA\_ARGS\_\_));\ \}\ else\ \{\ CHECK\_FAILURE((\_\_VA\_ARGS\_\_));\ \}\ \}\ while(0)}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ STATIC\_CHECK(...)\ static\_assert(\_\_VA\_ARGS\_\_,\ TO\_STRING(\_\_VA\_ARGS\_\_))}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ CHECK\_FLOATS\_EQUAL(type,\ a,\ b,\ nbdecimals)\ CHECK(std::abs((a)\ -\/\ (b))\ <=\ 1.\ /\ Bousk::Pow<10,\ nbdecimals\ +\ 1>::Value)}}
+\DoxyCodeLine{00022\ }
+
+\end{DoxyCode}

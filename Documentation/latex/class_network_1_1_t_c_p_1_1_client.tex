@@ -1,0 +1,158 @@
+\doxysection{Référence de la classe Network\+::TCP\+::Client}
+\hypertarget{class_network_1_1_t_c_p_1_1_client}{}\label{class_network_1_1_t_c_p_1_1_client}\index{Network::TCP::Client@{Network::TCP::Client}}
+
+
+La classe \doxylink{class_network_1_1_t_c_p_1_1_client}{Client} repr{\ucr}sente un client TCP.  
+
+
+
+
+{\ttfamily \#include $<$Client.\+h$>$}
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_network_1_1_t_c_p_1_1_client_a99343e530fa07f67ecc375337870ffc9}\label{class_network_1_1_t_c_p_1_1_client_a99343e530fa07f67ecc375337870ffc9} 
+{\bfseries Client} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par d{\ucr}faut de la classe \doxylink{class_network_1_1_t_c_p_1_1_client}{Client}. \end{DoxyCompactList}\item 
+\Hypertarget{class_network_1_1_t_c_p_1_1_client_ae60fb67a8cf8547b4ac0bab6a7d7f9d1}\label{class_network_1_1_t_c_p_1_1_client_ae60fb67a8cf8547b4ac0bab6a7d7f9d1} 
+{\bfseries Client} (const \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Constructeur de copie supprim{\ucr}. \end{DoxyCompactList}\item 
+\Hypertarget{class_network_1_1_t_c_p_1_1_client_acfb3e7a41bf2a03b0a5d540a5a789c0e}\label{class_network_1_1_t_c_p_1_1_client_acfb3e7a41bf2a03b0a5d540a5a789c0e} 
+\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Op{\ucr}rateur d\textquotesingle{}assignation de copie supprim{\ucr}. \end{DoxyCompactList}\item 
+\Hypertarget{class_network_1_1_t_c_p_1_1_client_a2d3960f6984a5127c8af7eea54409d4d}\label{class_network_1_1_t_c_p_1_1_client_a2d3960f6984a5127c8af7eea54409d4d} 
+{\bfseries Client} (\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client}} \&\&)
+\begin{DoxyCompactList}\small\item\em Constructeur de d{\ucr}placement de la classe \doxylink{class_network_1_1_t_c_p_1_1_client}{Client}. \end{DoxyCompactList}\item 
+\Hypertarget{class_network_1_1_t_c_p_1_1_client_af00b447cfd536ecf168e665d07ef870f}\label{class_network_1_1_t_c_p_1_1_client_af00b447cfd536ecf168e665d07ef870f} 
+\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client}} \& {\bfseries operator=} (\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client}{Client}} \&\&)
+\begin{DoxyCompactList}\small\item\em Op{\ucr}rateur d\textquotesingle{}assignation par d{\ucr}placement de la classe \doxylink{class_network_1_1_t_c_p_1_1_client}{Client}. \end{DoxyCompactList}\item 
+\Hypertarget{class_network_1_1_t_c_p_1_1_client_a149dfc62245dfedcc53bd60b463058ad}\label{class_network_1_1_t_c_p_1_1_client_a149dfc62245dfedcc53bd60b463058ad} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Client} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \doxylink{class_network_1_1_t_c_p_1_1_client}{Client}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_a3163413dc374bd5483eae9000a54ccfd}{init}} (SOCKET \&\&sckt, const sockaddr\+\_\+in \&addr)
+\begin{DoxyCompactList}\small\item\em Initialise le client avec le socket et l\textquotesingle{}adresse sp{\ucr}cifi{\ucr}s. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_a43d4da1617070a9ce3e7833c2ee7b4a0}{connect}} (const std\+::string \&ipaddress, unsigned short port)
+\begin{DoxyCompactList}\small\item\em {\ucr}tablit une connexion avec le serveur {\ucr} l\textquotesingle{}adresse et au port sp{\ucr}cifi{\ucr}s. \end{DoxyCompactList}\item 
+\Hypertarget{class_network_1_1_t_c_p_1_1_client_a5cc4376052a6c472e6ff3f42d28f8b5c}\label{class_network_1_1_t_c_p_1_1_client_a5cc4376052a6c472e6ff3f42d28f8b5c} 
+void {\bfseries disconnect} ()
+\begin{DoxyCompactList}\small\item\em Ferme la connexion avec le serveur. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_aace9752c2eebba46ed246c3f36509348}{send}} (const unsigned char \texorpdfstring{$\ast$}{*}data, unsigned int len)
+\begin{DoxyCompactList}\small\item\em Envoie des donn{\ucr}es au serveur. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Messages\+::\+Base}} $>$ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_af12a7cc81c93af23e55e1eceeb4a1b38}{poll}} ()
+\begin{DoxyCompactList}\small\item\em R{\ucr}cup{\ucr}re les messages entrants du serveur. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_a16807160db05b04f8a12d744c5954023}{id}} () const
+\begin{DoxyCompactList}\small\item\em R{\ucr}cup{\ucr}re l\textquotesingle{}identifiant du client. \end{DoxyCompactList}\item 
+const sockaddr\+\_\+in \& \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_client_a45c5f7987a2238d1eb00079c75e8351a}{destination\+Address}} () const
+\begin{DoxyCompactList}\small\item\em R{\ucr}cup{\ucr}re l\textquotesingle{}adresse de destination du client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+La classe \doxylink{class_network_1_1_t_c_p_1_1_client}{Client} repr{\ucr}sente un client TCP. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_network_1_1_t_c_p_1_1_client_a43d4da1617070a9ce3e7833c2ee7b4a0}\label{class_network_1_1_t_c_p_1_1_client_a43d4da1617070a9ce3e7833c2ee7b4a0} 
+\index{Network::TCP::Client@{Network::TCP::Client}!connect@{connect}}
+\index{connect@{connect}!Network::TCP::Client@{Network::TCP::Client}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily bool Network\+::\+TCP\+::\+Client\+::connect (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ipaddress,  }\item[{unsigned short}]{port }\end{DoxyParamCaption})}
+
+
+
+{\ucr}tablit une connexion avec le serveur {\ucr} l\textquotesingle{}adresse et au port sp{\ucr}cifi{\ucr}s. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ipaddress} & Adresse IP du serveur. \\
+\hline
+{\em port} & Port du serveur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si la connexion r{\ucr}ussit, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_network_1_1_t_c_p_1_1_client_a45c5f7987a2238d1eb00079c75e8351a}\label{class_network_1_1_t_c_p_1_1_client_a45c5f7987a2238d1eb00079c75e8351a} 
+\index{Network::TCP::Client@{Network::TCP::Client}!destinationAddress@{destinationAddress}}
+\index{destinationAddress@{destinationAddress}!Network::TCP::Client@{Network::TCP::Client}}
+\doxysubsubsection{\texorpdfstring{destinationAddress()}{destinationAddress()}}
+{\footnotesize\ttfamily const sockaddr\+\_\+in \& Network\+::\+TCP\+::\+Client\+::destination\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+R{\ucr}cup{\ucr}re l\textquotesingle{}adresse de destination du client. 
+
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}adresse de destination du client. 
+\end{DoxyReturn}
+\Hypertarget{class_network_1_1_t_c_p_1_1_client_a16807160db05b04f8a12d744c5954023}\label{class_network_1_1_t_c_p_1_1_client_a16807160db05b04f8a12d744c5954023} 
+\index{Network::TCP::Client@{Network::TCP::Client}!id@{id}}
+\index{id@{id}!Network::TCP::Client@{Network::TCP::Client}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily uint64\+\_\+t Network\+::\+TCP\+::\+Client\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+R{\ucr}cup{\ucr}re l\textquotesingle{}identifiant du client. 
+
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}identifiant du client. 
+\end{DoxyReturn}
+\Hypertarget{class_network_1_1_t_c_p_1_1_client_a3163413dc374bd5483eae9000a54ccfd}\label{class_network_1_1_t_c_p_1_1_client_a3163413dc374bd5483eae9000a54ccfd} 
+\index{Network::TCP::Client@{Network::TCP::Client}!init@{init}}
+\index{init@{init}!Network::TCP::Client@{Network::TCP::Client}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool Network\+::\+TCP\+::\+Client\+::init (\begin{DoxyParamCaption}\item[{SOCKET \&\&}]{sckt,  }\item[{const sockaddr\+\_\+in \&}]{addr }\end{DoxyParamCaption})}
+
+
+
+Initialise le client avec le socket et l\textquotesingle{}adresse sp{\ucr}cifi{\ucr}s. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em sckt} & Socket {\ucr} associer au client. \\
+\hline
+{\em addr} & Adresse {\ucr} associer au client. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si l\textquotesingle{}initialisation r{\ucr}ussit, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_network_1_1_t_c_p_1_1_client_af12a7cc81c93af23e55e1eceeb4a1b38}\label{class_network_1_1_t_c_p_1_1_client_af12a7cc81c93af23e55e1eceeb4a1b38} 
+\index{Network::TCP::Client@{Network::TCP::Client}!poll@{poll}}
+\index{poll@{poll}!Network::TCP::Client@{Network::TCP::Client}}
+\doxysubsubsection{\texorpdfstring{poll()}{poll()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Messages\+::\+Base}} $>$ Network\+::\+TCP\+::\+Client\+::poll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+R{\ucr}cup{\ucr}re les messages entrants du serveur. 
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur unique vers le message re{\ucr}u. 
+\end{DoxyReturn}
+\Hypertarget{class_network_1_1_t_c_p_1_1_client_aace9752c2eebba46ed246c3f36509348}\label{class_network_1_1_t_c_p_1_1_client_aace9752c2eebba46ed246c3f36509348} 
+\index{Network::TCP::Client@{Network::TCP::Client}!send@{send}}
+\index{send@{send}!Network::TCP::Client@{Network::TCP::Client}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily bool Network\+::\+TCP\+::\+Client\+::send (\begin{DoxyParamCaption}\item[{const unsigned char \texorpdfstring{$\ast$}{*}}]{data,  }\item[{unsigned int}]{len }\end{DoxyParamCaption})}
+
+
+
+Envoie des donn{\ucr}es au serveur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em data} & Pointeur vers les donn{\ucr}es {\ucr} envoyer. \\
+\hline
+{\em len} & Longueur des donn{\ucr}es {\ucr} envoyer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si l\textquotesingle{}envoi r{\ucr}ussit, sinon false. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+TCP/\+Client/Client.\+h\item 
+sources/\+TCP/\+Client/Client.\+cpp\end{DoxyCompactItemize}

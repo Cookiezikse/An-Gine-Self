@@ -1,0 +1,52 @@
+\doxysection{point\+\_\+light\+\_\+system.\+h}
+\hypertarget{point__light__system_8h_source}{}\label{point__light__system_8h_source}\index{includes/Systems/point\_light\_system.h@{includes/Systems/point\_light\_system.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_device.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_frame\_info.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_pipeline.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Camera/lve\_camera.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//std}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_object}{GameObject}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }lve}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlve_1_1_point_light_push_constants}{PointLightPushConstants}}}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ glm::vec4\ position\{\};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ glm::vec4\ color\{\};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ radius;}
+\DoxyCodeLine{00021\ \ \ \ \ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlve_1_1_point_light_system}{PointLightSystem}}}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_point_light_system}{PointLightSystem}}(\mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ \_device,\ vk::RenderPass\ \_renderPass,\ vk::DescriptorSetLayout\ \_globalSetLayout);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_point_light_system}{\string~PointLightSystem}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_point_light_system}{PointLightSystem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_point_light_system}{PointLightSystem}}\&)\ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_point_light_system}{PointLightSystem}}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_point_light_system}{PointLightSystem}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_point_light_system_a9a09d5b098102a1621482bd617e2d86b}{Update}}(\textcolor{keyword}{const}\ std::vector<GameObject*>\&\ \_gameObjects,\ \mbox{\hyperlink{structlve_1_1_global_ubo}{GlobalUbo}}\&\ \_ubo);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Render(\textcolor{keyword}{const}\ std::vector<GameObject*>\&\ \_gameObjects,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_camera}{LveCamera}}\&\ \_camera,\ \textcolor{keyword}{const}\ vk::CommandBuffer\ \_commandBuffer,\textcolor{keyword}{const}\ vk::DescriptorSet\ \_globalDescriptorSet)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreatePipelineLayout(vk::DescriptorSetLayout\ \_globalSetLayout);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreatePipeline(vk::RenderPass\ \_renderPass);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ lveDevice;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<LvePipeline>\ lvePipeline;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ vk::PipelineLayout\ \ \ \ \ \ \ \ \ \ \ pipelineLayout;}
+\DoxyCodeLine{00077\ \ \ \ \ \};}
+\DoxyCodeLine{00078\ \}\ \textcolor{comment}{//\ namespace\ lve}}
+
+\end{DoxyCode}

@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/LveEngine/lve_device.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_d17dbbfb40e9127a51f93ba39cbbb546.html">LveEngine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">lve_device.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;LveEngine/lve_window.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vulkan/vulkan.hpp&gt;</span> <span class="comment">// Inclure les en-têtes Vulkan C++</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// std lib headers</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">class </span><a class="code hl_class" href="class_window_module.html">WindowModule</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>lve</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">// Structure pour stocker les détails de support de la chaîne d&#39;échange</span></div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structlve_1_1_swap_chain_support_details.html">   16</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structlve_1_1_swap_chain_support_details.html">SwapChainSupportDetails</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        vk::SurfaceCapabilitiesKHR        capabilities; <span class="comment">// Capacités de la surface Vulkan</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        std::vector&lt;vk::SurfaceFormatKHR&gt; formats;      <span class="comment">// Formats de surface Vulkan pris en charge</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        std::vector&lt;vk::PresentModeKHR&gt;   presentModes; <span class="comment">// Modes de présentation Vulkan pris en charge</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    };</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">// Structure pour stocker les indices des files d&#39;attente requises</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structlve_1_1_queue_family_indices.html">   24</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structlve_1_1_queue_family_indices.html">QueueFamilyIndices</a></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        uint32_t graphicsFamily; <span class="comment">// Indice de la famille de files d&#39;attente graphiques</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        uint32_t presentFamily;  <span class="comment">// Indice de la famille de files d&#39;attente de présentation</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">bool</span>     graphicsFamilyHasValue = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="comment">// Indique si l&#39;indice de la famille de files d&#39;attente graphiques est défini</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordtype">bool</span> presentFamilyHasValue = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="comment">// Indique si l&#39;indice de la famille de files d&#39;attente de présentation est défini</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="comment">// Vérifie si les indices des files d&#39;attente requis sont complets</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">bool</span> IsComplete()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> graphicsFamilyHasValue &amp;&amp; presentFamilyHasValue; }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    };</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_device.html">   40</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">            #ifdef NDEBUG</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">const</span> <span class="keywordtype">bool</span> enableValidationLayers = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">            #else</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keyword">const</span> <span class="keywordtype">bool</span> enableValidationLayers = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">            #endif</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keyword">explicit</span> <a class="code hl_function" href="classlve_1_1_lve_device.html#a5dbf67e8518005fdcd3de7113272f6cc">LveDevice</a>(<a class="code hl_class" href="class_window_module.html">WindowModule</a>* _windowModule);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <a class="code hl_function" href="classlve_1_1_lve_device.html#a3928e5409dc9c8e054d06270a56c9d93">~LveDevice</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="comment">// Not copyable or movable</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_device.html#acd0d35625590c8930b8045383c06a495">   71</a></span>            <a class="code hl_function" href="classlve_1_1_lve_device.html#acd0d35625590c8930b8045383c06a495">LveDevice</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_device.html#aab611df790f3cc5fc5719d2d90578ecf">   78</a></span>            <a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp; <a class="code hl_function" href="classlve_1_1_lve_device.html#aab611df790f3cc5fc5719d2d90578ecf">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_device.html#a2ec8815791e048ac42a73fcbfe1b154a">   85</a></span>            <a class="code hl_function" href="classlve_1_1_lve_device.html#a2ec8815791e048ac42a73fcbfe1b154a">LveDevice</a>(<a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_device.html#a0a7c2ce480c9381910528bb05ef68f70">   92</a></span>            <a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp; <a class="code hl_function" href="classlve_1_1_lve_device.html#a0a7c2ce480c9381910528bb05ef68f70">operator=</a>(<a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_device.html#a34aae465d220806aacc3322242696d1d">   99</a></span>            vk::CommandPool <a class="code hl_function" href="classlve_1_1_lve_device.html#a34aae465d220806aacc3322242696d1d">GetCommandPool</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> commandPool; }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_device.html#ab4755528cbaa93add122a7edbf464845">  106</a></span>            vk::Device <a class="code hl_function" href="classlve_1_1_lve_device.html#ab4755528cbaa93add122a7edbf464845">Device</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> device_; }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="comment">// MAURAD</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            vk::Instance       GetInstance()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> instance; }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            vk::PhysicalDevice GetPhysicalDevice()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> physicalDevice; }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_device.html#a4e39fcb2417fc88244a2bd7b47fda216">  117</a></span>            vk::SurfaceKHR <a class="code hl_function" href="classlve_1_1_lve_device.html#a4e39fcb2417fc88244a2bd7b47fda216">Surface</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> surface_; }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_device.html#a3db7cac38a972c8794d8cb209a784231">  124</a></span>            vk::Queue <a class="code hl_function" href="classlve_1_1_lve_device.html#a3db7cac38a972c8794d8cb209a784231">GraphicsQueue</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> graphicsQueue_; }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_device.html#a880570c94a1582853d2301af3c88e104">  131</a></span>            vk::Queue <a class="code hl_function" href="classlve_1_1_lve_device.html#a880570c94a1582853d2301af3c88e104">PresentQueue</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> presentQueue_; }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_device.html#a705e5ae87f7a4885b8f4a115694076a5">  139</a></span>            <a class="code hl_struct" href="structlve_1_1_swap_chain_support_details.html">SwapChainSupportDetails</a> <a class="code hl_function" href="classlve_1_1_lve_device.html#a705e5ae87f7a4885b8f4a115694076a5">GetSwapChainSupport</a>() { <span class="keywordflow">return</span> QuerySwapChainSupport(physicalDevice); }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            uint32_t <a class="code hl_function" href="classlve_1_1_lve_device.html#a84495cbcca8e67db53fc15d6ab5a6847">FindMemoryType</a>(uint32_t _typeFilter, vk::MemoryPropertyFlags _properties) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_device.html#aa1b015567e250ee4f37aac78a940620a">  155</a></span>            <a class="code hl_struct" href="structlve_1_1_queue_family_indices.html">QueueFamilyIndices</a> <a class="code hl_function" href="classlve_1_1_lve_device.html#aa1b015567e250ee4f37aac78a940620a">FindPhysicalQueueFamilies</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> FindQueueFamilies(physicalDevice); }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            vk::Format <a class="code hl_function" href="classlve_1_1_lve_device.html#a20a393668b4b4c5aa202ea41168dc16e">FindSupportedFormat</a>(</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                <span class="keyword">const</span> std::vector&lt;vk::Format&gt;&amp; _candidates, vk::ImageTiling _tiling,</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                vk::FormatFeatureFlags         _features) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            <span class="comment">// Buffer Helper Functions</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_lve_device.html#a170e75725fcef0f1c461651a139bb8ce">CreateBuffer</a>(</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                vk::DeviceSize          _size,</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                vk::BufferUsageFlags    _usage,</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                vk::MemoryPropertyFlags _properties,</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                vk::Buffer&amp;             _buffer,</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                vk::DeviceMemory&amp;       _bufferMemory) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            vk::CommandBuffer <a class="code hl_function" href="classlve_1_1_lve_device.html#a70cb21509496085180d25539f12c6e0f">BeginSingleTimeCommands</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_lve_device.html#a1e3f80b67ef6cbd66e48490e5396fd13">EndSingleTimeCommands</a>(vk::CommandBuffer _commandBuffer) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_lve_device.html#a15e53a2d80e60f69d69882e65429924b">CopyBuffer</a>(vk::Buffer _srcBuffer, vk::Buffer _dstBuffer, vk::DeviceSize _size) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_lve_device.html#ada99e3ebd5a9f7b3df3840e97fa91f78">CopyBufferToImage</a>(</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                vk::Buffer _buffer, vk::Image _image, uint32_t _width, uint32_t _height, uint32_t _layerCount) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_lve_device.html#af0556bd5de6d7e04cd817ce000c64f1d">CreateImageWithInfo</a>(</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                <span class="keyword">const</span> vk::ImageCreateInfo&amp; _imageInfo,</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                vk::MemoryPropertyFlags    _properties,</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                vk::Image&amp;                 _image,</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                vk::DeviceMemory&amp;          _imageMemory) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_device.html#a1ee7068dc3c270e771cf87b14da36bff">  249</a></span>            vk::PhysicalDeviceProperties <a class="code hl_variable" href="classlve_1_1_lve_device.html#a1ee7068dc3c270e771cf87b14da36bff">properties</a>;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>            vk::Instance <a class="code hl_function" href="classlve_1_1_lve_device.html#a11d82b4686e1e0ca2e3ca7143fd56865">CreateInstance</a>();</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            vk::DebugUtilsMessengerEXT <a class="code hl_function" href="classlve_1_1_lve_device.html#a5c8aa1272efa148228a786f43eee2605">SetupDebugMessenger</a>();</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            vk::DebugUtilsMessengerEXT GetDebugMessenger()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> debugMessenger; }</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            <span class="keywordtype">void</span> CreateSurface();</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            <span class="keywordtype">void</span> PickPhysicalDevice();</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>            <span class="keywordtype">void</span> CreateLogicalDevice();</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            <span class="keywordtype">void</span> CreateCommandPool();</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            <span class="comment">// helper functions</span></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            <span class="keywordtype">bool</span> IsDeviceSuitable(vk::PhysicalDevice _device);</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            std::vector&lt;const char*&gt; GetRequiredExtensions() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>            <span class="keywordtype">bool</span> CheckValidationLayerSupport() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>            <a class="code hl_struct" href="structlve_1_1_queue_family_indices.html">QueueFamilyIndices</a> FindQueueFamilies(vk::PhysicalDevice _device) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            <span class="keywordtype">void</span> PopulateDebugMessengerCreateInfo(vk::DebugUtilsMessengerCreateInfoEXT&amp; _createInfo);</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            <span class="keywordtype">void</span> HasGlfwRequiredInstanceExtensions() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>            <span class="keywordtype">bool</span> CheckDeviceExtensionSupport(vk::PhysicalDevice _device) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>            <a class="code hl_struct" href="structlve_1_1_swap_chain_support_details.html">SwapChainSupportDetails</a> QuerySwapChainSupport(vk::PhysicalDevice _device) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span> </div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span> </div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>            vk::Instance instance; </div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>            vk::DebugUtilsMessengerEXT debugMessenger;</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>            vk::PhysicalDevice physicalDevice = VK_NULL_HANDLE;</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>            <a class="code hl_class" href="class_window_module.html">WindowModule</a>* windowModule = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>            vk::CommandPool commandPool;</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>            vk::Device device_; </div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>            vk::SurfaceKHR surface_; </div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>            vk::Queue graphicsQueue_;</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>            vk::Queue presentQueue_;</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>            <span class="keyword">const</span> std::vector&lt;const char*&gt; validationLayers = {<span class="stringliteral">&quot;VK_LAYER_KHRONOS_validation&quot;</span>};</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>            <span class="keyword">const</span> std::vector&lt;const char*&gt; deviceExtensions = {vk::KHRSwapchainExtensionName};</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>    };</div>
+</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>} <span class="comment">// namespace lve</span></div>
+<div class="ttc" id="aclass_window_module_html"><div class="ttname"><a href="class_window_module.html">WindowModule</a></div><div class="ttdoc">Classe WindowModule.</div><div class="ttdef"><b>Definition</b> WindowModule.h:113</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html"><div class="ttname"><a href="classlve_1_1_lve_device.html">lve::LveDevice</a></div><div class="ttdoc">Classe représentant un périphérique Vulkan.</div><div class="ttdef"><b>Definition</b> lve_device.h:41</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a0a7c2ce480c9381910528bb05ef68f70"><div class="ttname"><a href="classlve_1_1_lve_device.html#a0a7c2ce480c9381910528bb05ef68f70">lve::LveDevice::operator=</a></div><div class="ttdeci">LveDevice &amp; operator=(LveDevice &amp;&amp;)=delete</div><div class="ttdoc">Opérateur d'affectation de déplacement supprimé.</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a11d82b4686e1e0ca2e3ca7143fd56865"><div class="ttname"><a href="classlve_1_1_lve_device.html#a11d82b4686e1e0ca2e3ca7143fd56865">lve::LveDevice::CreateInstance</a></div><div class="ttdeci">vk::Instance CreateInstance()</div><div class="ttdoc">Crée une instance Vulkan.</div><div class="ttdef"><b>Definition</b> lve_device.cpp:133</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a15e53a2d80e60f69d69882e65429924b"><div class="ttname"><a href="classlve_1_1_lve_device.html#a15e53a2d80e60f69d69882e65429924b">lve::LveDevice::CopyBuffer</a></div><div class="ttdeci">void CopyBuffer(vk::Buffer _srcBuffer, vk::Buffer _dstBuffer, vk::DeviceSize _size) const</div><div class="ttdoc">Copie les données d'un tampon source vers un tampon de destination.</div><div class="ttdef"><b>Definition</b> lve_device.cpp:806</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a170e75725fcef0f1c461651a139bb8ce"><div class="ttname"><a href="classlve_1_1_lve_device.html#a170e75725fcef0f1c461651a139bb8ce">lve::LveDevice::CreateBuffer</a></div><div class="ttdeci">void CreateBuffer(vk::DeviceSize _size, vk::BufferUsageFlags _usage, vk::MemoryPropertyFlags _properties, vk::Buffer &amp;_buffer, vk::DeviceMemory &amp;_bufferMemory) const</div><div class="ttdoc">Crée un tampon Vulkan avec les paramètres spécifiés.</div><div class="ttdef"><b>Definition</b> lve_device.cpp:696</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a1e3f80b67ef6cbd66e48490e5396fd13"><div class="ttname"><a href="classlve_1_1_lve_device.html#a1e3f80b67ef6cbd66e48490e5396fd13">lve::LveDevice::EndSingleTimeCommands</a></div><div class="ttdeci">void EndSingleTimeCommands(vk::CommandBuffer _commandBuffer) const</div><div class="ttdoc">Termine une séquence de commandes Vulkan temporaires.</div><div class="ttdef"><b>Definition</b> lve_device.cpp:772</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a1ee7068dc3c270e771cf87b14da36bff"><div class="ttname"><a href="classlve_1_1_lve_device.html#a1ee7068dc3c270e771cf87b14da36bff">lve::LveDevice::properties</a></div><div class="ttdeci">vk::PhysicalDeviceProperties properties</div><div class="ttdoc">Propriétés du périphérique physique Vulkan associé.</div><div class="ttdef"><b>Definition</b> lve_device.h:249</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a20a393668b4b4c5aa202ea41168dc16e"><div class="ttname"><a href="classlve_1_1_lve_device.html#a20a393668b4b4c5aa202ea41168dc16e">lve::LveDevice::FindSupportedFormat</a></div><div class="ttdeci">vk::Format FindSupportedFormat(const std::vector&lt; vk::Format &gt; &amp;_candidates, vk::ImageTiling _tiling, vk::FormatFeatureFlags _features) const</div><div class="ttdoc">Trouve un format d'image supporté par le périphérique.</div><div class="ttdef"><b>Definition</b> lve_device.cpp:630</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a2ec8815791e048ac42a73fcbfe1b154a"><div class="ttname"><a href="classlve_1_1_lve_device.html#a2ec8815791e048ac42a73fcbfe1b154a">lve::LveDevice::LveDevice</a></div><div class="ttdeci">LveDevice(LveDevice &amp;&amp;)=delete</div><div class="ttdoc">Constructeur de déplacement supprimé.</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a34aae465d220806aacc3322242696d1d"><div class="ttname"><a href="classlve_1_1_lve_device.html#a34aae465d220806aacc3322242696d1d">lve::LveDevice::GetCommandPool</a></div><div class="ttdeci">vk::CommandPool GetCommandPool() const</div><div class="ttdoc">Récupère le pool de commandes Vulkan associé au périphérique.</div><div class="ttdef"><b>Definition</b> lve_device.h:99</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a3928e5409dc9c8e054d06270a56c9d93"><div class="ttname"><a href="classlve_1_1_lve_device.html#a3928e5409dc9c8e054d06270a56c9d93">lve::LveDevice::~LveDevice</a></div><div class="ttdeci">~LveDevice()</div><div class="ttdoc">Destructeur de la classe LveDevice.</div><div class="ttdef"><b>Definition</b> lve_device.cpp:106</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a3db7cac38a972c8794d8cb209a784231"><div class="ttname"><a href="classlve_1_1_lve_device.html#a3db7cac38a972c8794d8cb209a784231">lve::LveDevice::GraphicsQueue</a></div><div class="ttdeci">vk::Queue GraphicsQueue() const</div><div class="ttdoc">Récupère la file de commandes graphiques du périphérique.</div><div class="ttdef"><b>Definition</b> lve_device.h:124</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a4e39fcb2417fc88244a2bd7b47fda216"><div class="ttname"><a href="classlve_1_1_lve_device.html#a4e39fcb2417fc88244a2bd7b47fda216">lve::LveDevice::Surface</a></div><div class="ttdeci">vk::SurfaceKHR Surface() const</div><div class="ttdoc">Récupère la surface Vulkan associée au périphérique.</div><div class="ttdef"><b>Definition</b> lve_device.h:117</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a5c8aa1272efa148228a786f43eee2605"><div class="ttname"><a href="classlve_1_1_lve_device.html#a5c8aa1272efa148228a786f43eee2605">lve::LveDevice::SetupDebugMessenger</a></div><div class="ttdeci">vk::DebugUtilsMessengerEXT SetupDebugMessenger()</div><div class="ttdoc">Configure le gestionnaire de débogage.</div><div class="ttdef"><b>Definition</b> lve_device.cpp:398</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a5dbf67e8518005fdcd3de7113272f6cc"><div class="ttname"><a href="classlve_1_1_lve_device.html#a5dbf67e8518005fdcd3de7113272f6cc">lve::LveDevice::LveDevice</a></div><div class="ttdeci">LveDevice(WindowModule *_windowModule)</div><div class="ttdoc">Constructeur de la classe LveDevice.</div><div class="ttdef"><b>Definition</b> lve_device.cpp:95</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a705e5ae87f7a4885b8f4a115694076a5"><div class="ttname"><a href="classlve_1_1_lve_device.html#a705e5ae87f7a4885b8f4a115694076a5">lve::LveDevice::GetSwapChainSupport</a></div><div class="ttdeci">SwapChainSupportDetails GetSwapChainSupport()</div><div class="ttdoc">Récupère les détails de prise en charge de la chaîne de balisage pour le périphérique.</div><div class="ttdef"><b>Definition</b> lve_device.h:139</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a70cb21509496085180d25539f12c6e0f"><div class="ttname"><a href="classlve_1_1_lve_device.html#a70cb21509496085180d25539f12c6e0f">lve::LveDevice::BeginSingleTimeCommands</a></div><div class="ttdeci">vk::CommandBuffer BeginSingleTimeCommands() const</div><div class="ttdoc">Démarre une séquence de commandes Vulkan temporaires.</div><div class="ttdef"><b>Definition</b> lve_device.cpp:740</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a84495cbcca8e67db53fc15d6ab5a6847"><div class="ttname"><a href="classlve_1_1_lve_device.html#a84495cbcca8e67db53fc15d6ab5a6847">lve::LveDevice::FindMemoryType</a></div><div class="ttdeci">uint32_t FindMemoryType(uint32_t _typeFilter, vk::MemoryPropertyFlags _properties) const</div><div class="ttdoc">Trouve un type de mémoire approprié pour une utilisation spécifiée.</div><div class="ttdef"><b>Definition</b> lve_device.cpp:665</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_a880570c94a1582853d2301af3c88e104"><div class="ttname"><a href="classlve_1_1_lve_device.html#a880570c94a1582853d2301af3c88e104">lve::LveDevice::PresentQueue</a></div><div class="ttdeci">vk::Queue PresentQueue() const</div><div class="ttdoc">Récupère la file de commandes de présentation du périphérique.</div><div class="ttdef"><b>Definition</b> lve_device.h:131</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_aa1b015567e250ee4f37aac78a940620a"><div class="ttname"><a href="classlve_1_1_lve_device.html#aa1b015567e250ee4f37aac78a940620a">lve::LveDevice::FindPhysicalQueueFamilies</a></div><div class="ttdeci">QueueFamilyIndices FindPhysicalQueueFamilies() const</div><div class="ttdoc">Trouve les familles de files de commandes physiques disponibles sur le périphérique.</div><div class="ttdef"><b>Definition</b> lve_device.h:155</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_aab611df790f3cc5fc5719d2d90578ecf"><div class="ttname"><a href="classlve_1_1_lve_device.html#aab611df790f3cc5fc5719d2d90578ecf">lve::LveDevice::operator=</a></div><div class="ttdeci">LveDevice &amp; operator=(const LveDevice &amp;)=delete</div><div class="ttdoc">Opérateur d'affectation de copie supprimé.</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_ab4755528cbaa93add122a7edbf464845"><div class="ttname"><a href="classlve_1_1_lve_device.html#ab4755528cbaa93add122a7edbf464845">lve::LveDevice::Device</a></div><div class="ttdeci">vk::Device Device() const</div><div class="ttdoc">Récupère l'objet de périphérique Vulkan.</div><div class="ttdef"><b>Definition</b> lve_device.h:106</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_acd0d35625590c8930b8045383c06a495"><div class="ttname"><a href="classlve_1_1_lve_device.html#acd0d35625590c8930b8045383c06a495">lve::LveDevice::LveDevice</a></div><div class="ttdeci">LveDevice(const LveDevice &amp;)=delete</div><div class="ttdoc">Constructeur de copie supprimé.</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_ada99e3ebd5a9f7b3df3840e97fa91f78"><div class="ttname"><a href="classlve_1_1_lve_device.html#ada99e3ebd5a9f7b3df3840e97fa91f78">lve::LveDevice::CopyBufferToImage</a></div><div class="ttdeci">void CopyBufferToImage(vk::Buffer _buffer, vk::Image _image, uint32_t _width, uint32_t _height, uint32_t _layerCount) const</div><div class="ttdoc">Copie les données d'un tampon vers une image Vulkan.</div><div class="ttdef"><b>Definition</b> lve_device.cpp:841</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html_af0556bd5de6d7e04cd817ce000c64f1d"><div class="ttname"><a href="classlve_1_1_lve_device.html#af0556bd5de6d7e04cd817ce000c64f1d">lve::LveDevice::CreateImageWithInfo</a></div><div class="ttdeci">void CreateImageWithInfo(const vk::ImageCreateInfo &amp;_imageInfo, vk::MemoryPropertyFlags _properties, vk::Image &amp;_image, vk::DeviceMemory &amp;_imageMemory) const</div><div class="ttdoc">Crée une image Vulkan avec les informations fournies.</div><div class="ttdef"><b>Definition</b> lve_device.cpp:888</div></div>
+<div class="ttc" id="astructlve_1_1_queue_family_indices_html"><div class="ttname"><a href="structlve_1_1_queue_family_indices.html">lve::QueueFamilyIndices</a></div><div class="ttdef"><b>Definition</b> lve_device.h:25</div></div>
+<div class="ttc" id="astructlve_1_1_swap_chain_support_details_html"><div class="ttname"><a href="structlve_1_1_swap_chain_support_details.html">lve::SwapChainSupportDetails</a></div><div class="ttdef"><b>Definition</b> lve_device.h:17</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

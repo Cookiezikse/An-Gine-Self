@@ -1,0 +1,68 @@
+\doxysection{Référence de la classe Network\+::TCP\+::Connection\+Handler}
+\hypertarget{class_network_1_1_t_c_p_1_1_connection_handler}{}\label{class_network_1_1_t_c_p_1_1_connection_handler}\index{Network::TCP::ConnectionHandler@{Network::TCP::ConnectionHandler}}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_connection_handler_ab2a6934f68bb7b9ca6c279130d5bfa25}{connect}} (SOCKET sckt, const std\+::string \&address, unsigned short port)
+\begin{DoxyCompactList}\small\item\em {\ucr}tablit une connexion avec l\textquotesingle{}adresse et le port sp{\ucr}cifi{\ucr}s. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_network_1_1_messages_1_1_connection}{Messages\+::\+Connection}} $>$ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_connection_handler_acada6e8c41b8391d31649393fda5fac2}{poll}} ()
+\begin{DoxyCompactList}\small\item\em R{\ucr}cup{\ucr}re les messages de connexion. \end{DoxyCompactList}\item 
+const sockaddr\+\_\+in \& \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_connection_handler_a6e5e03b415959394cbea574c1b29b224}{connected\+Address}} () const
+\begin{DoxyCompactList}\small\item\em Renvoie l\textquotesingle{}adresse {\ucr} laquelle la connexion est {\ucr}tablie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_network_1_1_t_c_p_1_1_connection_handler_ab2a6934f68bb7b9ca6c279130d5bfa25}\label{class_network_1_1_t_c_p_1_1_connection_handler_ab2a6934f68bb7b9ca6c279130d5bfa25} 
+\index{Network::TCP::ConnectionHandler@{Network::TCP::ConnectionHandler}!connect@{connect}}
+\index{connect@{connect}!Network::TCP::ConnectionHandler@{Network::TCP::ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily bool Network\+::\+TCP\+::\+Connection\+Handler\+::connect (\begin{DoxyParamCaption}\item[{SOCKET}]{sckt,  }\item[{const std\+::string \&}]{address,  }\item[{unsigned short}]{port }\end{DoxyParamCaption})}
+
+
+
+{\ucr}tablit une connexion avec l\textquotesingle{}adresse et le port sp{\ucr}cifi{\ucr}s. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em sckt} & Socket {\ucr} utiliser pour la connexion. \\
+\hline
+{\em address} & Adresse IP du serveur. \\
+\hline
+{\em port} & Port du serveur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si la connexion r{\ucr}ussit, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_network_1_1_t_c_p_1_1_connection_handler_a6e5e03b415959394cbea574c1b29b224}\label{class_network_1_1_t_c_p_1_1_connection_handler_a6e5e03b415959394cbea574c1b29b224} 
+\index{Network::TCP::ConnectionHandler@{Network::TCP::ConnectionHandler}!connectedAddress@{connectedAddress}}
+\index{connectedAddress@{connectedAddress}!Network::TCP::ConnectionHandler@{Network::TCP::ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{connectedAddress()}{connectedAddress()}}
+{\footnotesize\ttfamily const sockaddr\+\_\+in \& Network\+::\+TCP\+::\+Connection\+Handler\+::connected\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Renvoie l\textquotesingle{}adresse {\ucr} laquelle la connexion est {\ucr}tablie. 
+
+\begin{DoxyReturn}{Renvoie}
+L\textquotesingle{}adresse {\ucr} laquelle la connexion est {\ucr}tablie. 
+\end{DoxyReturn}
+\Hypertarget{class_network_1_1_t_c_p_1_1_connection_handler_acada6e8c41b8391d31649393fda5fac2}\label{class_network_1_1_t_c_p_1_1_connection_handler_acada6e8c41b8391d31649393fda5fac2} 
+\index{Network::TCP::ConnectionHandler@{Network::TCP::ConnectionHandler}!poll@{poll}}
+\index{poll@{poll}!Network::TCP::ConnectionHandler@{Network::TCP::ConnectionHandler}}
+\doxysubsubsection{\texorpdfstring{poll()}{poll()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_network_1_1_messages_1_1_connection}{Messages\+::\+Connection}} $>$ Network\+::\+TCP\+::\+Connection\+Handler\+::poll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+R{\ucr}cup{\ucr}re les messages de connexion. 
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur unique vers le message de connexion re{\ucr}u. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+TCP/\+Client/Client.\+h\item 
+sources/\+TCP/\+Client/Client.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,93 @@
+\doxysection{Référence du modèle de la classe Bousk\+::Ranged\+Integer\texorpdfstring{$<$}{<} MIN, MAX \texorpdfstring{$>$}{>}}
+\hypertarget{class_bousk_1_1_ranged_integer}{}\label{class_bousk_1_1_ranged_integer}\index{Bousk::RangedInteger$<$ MIN, MAX $>$@{Bousk::RangedInteger$<$ MIN, MAX $>$}}
+Graphe d\textquotesingle{}héritage de Bousk\+::Ranged\+Integer\texorpdfstring{$<$}{<} MIN, MAX \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bousk_1_1_ranged_integer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_ranged_integer_ab9f74e168188548c0b8de26f2fd0cbe9}\label{class_bousk_1_1_ranged_integer_ab9f74e168188548c0b8de26f2fd0cbe9} 
+using {\bfseries Type} = typename \mbox{\hyperlink{struct_bousk_1_1_fitting_type}{Fitting\+Type}}$<$MIN, MAX$>$\+::\+Type
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_ranged_integer_a9686f566d3495c5278e46921f845ceca}\label{class_bousk_1_1_ranged_integer_a9686f566d3495c5278e46921f845ceca} 
+{\bfseries Ranged\+Integer} (Type v)
+\item 
+\Hypertarget{class_bousk_1_1_ranged_integer_a18c981438242b78f39212d489be9e6ca}\label{class_bousk_1_1_ranged_integer_a18c981438242b78f39212d489be9e6ca} 
+\mbox{\hyperlink{class_bousk_1_1_ranged_integer}{Ranged\+Integer}} \& {\bfseries operator=} (Type v)
+\item 
+\Hypertarget{class_bousk_1_1_ranged_integer_a3f41a0b9b3af300598dae23a1ceb8b3d}\label{class_bousk_1_1_ranged_integer_a3f41a0b9b3af300598dae23a1ceb8b3d} 
+{\footnotesize template$<$typename Other\+Type $>$ }\\{\bfseries Ranged\+Integer} (Other\+Type v)
+\item 
+\Hypertarget{class_bousk_1_1_ranged_integer_a07f38ea1ea86b113df76bc350af28632}\label{class_bousk_1_1_ranged_integer_a07f38ea1ea86b113df76bc350af28632} 
+{\footnotesize template$<$typename Other\+Type $>$ }\\\mbox{\hyperlink{class_bousk_1_1_ranged_integer}{Ranged\+Integer}} \& {\bfseries operator=} (Other\+Type v)
+\item 
+\Hypertarget{class_bousk_1_1_ranged_integer_a6bb062a8c8f9121fe36fd0a44019dc3d}\label{class_bousk_1_1_ranged_integer_a6bb062a8c8f9121fe36fd0a44019dc3d} 
+Type {\bfseries get} () const
+\item 
+\Hypertarget{class_bousk_1_1_ranged_integer_a5f6ba07031b121a33a6f89b118966968}\label{class_bousk_1_1_ranged_integer_a5f6ba07031b121a33a6f89b118966968} 
+{\bfseries operator Type} () const
+\item 
+bool \mbox{\hyperlink{class_bousk_1_1_ranged_integer_ad1e13f1368d23b263e3bfc1afe3ff311}{write}} (\mbox{\hyperlink{class_bousk_1_1_serialization_1_1_serializer}{Serialization\+::\+Serializer}} \&serializer) const override
+\item 
+bool \mbox{\hyperlink{class_bousk_1_1_ranged_integer_a870e3e02d0326f5c2a117b034c4f0446}{read}} (\mbox{\hyperlink{class_bousk_1_1_serialization_1_1_deserializer}{Serialization\+::\+Deserializer}} \&deserializer) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_ranged_integer_aa19a2fb2161fb8bec0a18f04ecd29b1a}\label{class_bousk_1_1_ranged_integer_aa19a2fb2161fb8bec0a18f04ecd29b1a} 
+static constexpr Type {\bfseries Min} ()
+\item 
+\Hypertarget{class_bousk_1_1_ranged_integer_a0d8dbbb8c4b1fb41296c4046d91c68e5}\label{class_bousk_1_1_ranged_integer_a0d8dbbb8c4b1fb41296c4046d91c68e5} 
+static constexpr Type {\bfseries Max} ()
+\item 
+\Hypertarget{class_bousk_1_1_ranged_integer_adc908011d89ecb5aa1cfa6cdae657949}\label{class_bousk_1_1_ranged_integer_adc908011d89ecb5aa1cfa6cdae657949} 
+static constexpr bool {\bfseries Is\+Within\+Range} (Type v)
+\item 
+\Hypertarget{class_bousk_1_1_ranged_integer_a52eae88cad73bbc6d5a1e8de1ee50e49}\label{class_bousk_1_1_ranged_integer_a52eae88cad73bbc6d5a1e8de1ee50e49} 
+{\footnotesize template$<$typename Other\+Type $>$ }\\static constexpr bool {\bfseries Is\+Within\+Range} (Other\+Type v)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_ranged_integer_ad984f13d7c66251d2b4e374fbdd7c4cb}\label{class_bousk_1_1_ranged_integer_ad984f13d7c66251d2b4e374fbdd7c4cb} 
+static constexpr uint64 {\bfseries Range} = Range$<$MIN, MAX$>$()
+\item 
+\Hypertarget{class_bousk_1_1_ranged_integer_a196693aaa41e873864496a238eadb4ac}\label{class_bousk_1_1_ranged_integer_a196693aaa41e873864496a238eadb4ac} 
+static constexpr uint8 {\bfseries Nb\+Bits} = \mbox{\hyperlink{struct_bousk_1_1_nb_bits}{Nb\+Bits}}$<$Range$>$\+::\+Value
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_bousk_1_1_ranged_integer_a870e3e02d0326f5c2a117b034c4f0446}\label{class_bousk_1_1_ranged_integer_a870e3e02d0326f5c2a117b034c4f0446} 
+\index{Bousk::RangedInteger$<$ MIN, MAX $>$@{Bousk::RangedInteger$<$ MIN, MAX $>$}!read@{read}}
+\index{read@{read}!Bousk::RangedInteger$<$ MIN, MAX $>$@{Bousk::RangedInteger$<$ MIN, MAX $>$}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily template$<$auto MIN, auto MAX$>$ \\
+bool \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{Bousk\+::\+Ranged\+Integer}}$<$ MIN, MAX $>$\+::read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bousk_1_1_serialization_1_1_deserializer}{Serialization\+::\+Deserializer}} \&}]{deserializer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implémente \mbox{\hyperlink{class_bousk_1_1_serialization_1_1_serializable}{Bousk\+::\+Serialization\+::\+Serializable}}.
+
+\Hypertarget{class_bousk_1_1_ranged_integer_ad1e13f1368d23b263e3bfc1afe3ff311}\label{class_bousk_1_1_ranged_integer_ad1e13f1368d23b263e3bfc1afe3ff311} 
+\index{Bousk::RangedInteger$<$ MIN, MAX $>$@{Bousk::RangedInteger$<$ MIN, MAX $>$}!write@{write}}
+\index{write@{write}!Bousk::RangedInteger$<$ MIN, MAX $>$@{Bousk::RangedInteger$<$ MIN, MAX $>$}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily template$<$auto MIN, auto MAX$>$ \\
+bool \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{Bousk\+::\+Ranged\+Integer}}$<$ MIN, MAX $>$\+::write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bousk_1_1_serialization_1_1_serializer}{Serialization\+::\+Serializer}} \&}]{serializer }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implémente \mbox{\hyperlink{class_bousk_1_1_serialization_1_1_serializable}{Bousk\+::\+Serialization\+::\+Serializable}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+UDP/Ranged\+Integer.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,37 @@
+\doxysection{Script.\+h}
+\hypertarget{_script_8h_source}{}\label{_script_8h_source}\index{includes/Script/Script.h@{includes/Script/Script.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}IScript.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Modules/InputModule.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Modules/rhi.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Modules/TimeModule.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Modules/WindowModule.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_script}{Script}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_script}{IScript}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_script_a10975b78b03162488c522f095fd7707f}{Script}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_script_a991fdaa989ed13bab6bc28249b935c52}{\string~Script}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_time_module}{TimeModule}}*\ \mbox{\hyperlink{class_script_a027448bc995c4569bdf644ef20657c5a}{GetTimeModule}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_window_module}{WindowModule}}*\ \mbox{\hyperlink{class_script_a71e110918fb0bdbf15bd24a77f98087e}{GetWindowModule}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_r_h_i_module}{RHIModule}}*\ \mbox{\hyperlink{class_script_a5e786e82ab55492b134fa4208746bed0}{GetRenderInterfaceModule}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_input_module}{InputModule}}*\ \mbox{\hyperlink{class_script_a7add180d1a2b5582fc8c052dc4b5fc6a}{GetInputModule}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_time_module}{TimeModule}}*\ timeModuleReference\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_window_module}{WindowModule}}*\ windowModuleReference\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_r_h_i_module}{RHIModule}}*\ renderInterfaceModuleReference\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_input_module}{InputModule}}*\ inputModuleReference\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00060\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,54 @@
+\doxysection{Référence de la structure Bousk\+::Network\+::UDP\+::Datagram}
+\hypertarget{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram}{}\label{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram}\index{Bousk::Network::UDP::Datagram@{Bousk::Network::UDP::Datagram}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_1_1_header}{Header}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_a199c59cf2b6423db430174e132a36216}\label{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_a199c59cf2b6423db430174e132a36216} 
+enum class {\bfseries Type} \+: uint8\+\_\+t \{ {\bfseries Connected\+Data}
+, {\bfseries Keep\+Alive}
+, {\bfseries Disconnection}
+ \}
+\item 
+\Hypertarget{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_a94606cf59c7a8659ce8b0e9563d8b1bb}\label{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_a94606cf59c7a8659ce8b0e9563d8b1bb} 
+using {\bfseries ID} = uint16\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_a555907577255a4f055a91b4698d3646b}\label{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_a555907577255a4f055a91b4698d3646b} 
+uint16\+\_\+t {\bfseries size} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_aa12d7d48700c15954d861f9d6d6225eb}\label{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_aa12d7d48700c15954d861f9d6d6225eb} 
+\mbox{\hyperlink{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_1_1_header}{Header}} {\bfseries header}
+\item 
+\Hypertarget{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_a7cd8a0829c095de7c181e735c11dd2b9}\label{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_a7cd8a0829c095de7c181e735c11dd2b9} 
+std\+::array$<$ uint8\+\_\+t, Data\+Max\+Size $>$ {\bfseries data}
+\item 
+\Hypertarget{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_a7de29f1917c38d57d3e6aa00fa50eba8}\label{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_a7de29f1917c38d57d3e6aa00fa50eba8} 
+uint16\+\_\+t {\bfseries datasize} \{ 0 \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_a6b5d8d37ffb21241c7aceb5a9d30b6bc}\label{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_a6b5d8d37ffb21241c7aceb5a9d30b6bc} 
+static constexpr uint16\+\_\+t {\bfseries Buffer\+Max\+Size} = 1400
+\item 
+\Hypertarget{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_a99f7e3811aeb4dbc02df3993327bf15a}\label{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_a99f7e3811aeb4dbc02df3993327bf15a} 
+static constexpr uint16\+\_\+t {\bfseries Header\+Size} = sizeof(\mbox{\hyperlink{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_1_1_header}{Header}})
+\item 
+\Hypertarget{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_a57c44b05ec50fd964eef4f412a33c167}\label{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram_a57c44b05ec50fd964eef4f412a33c167} 
+static constexpr uint16\+\_\+t {\bfseries Data\+Max\+Size} = Buffer\+Max\+Size -\/ Header\+Size
+\end{DoxyCompactItemize}
+
+
+La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+UDP/Datagram.\+h\end{DoxyCompactItemize}

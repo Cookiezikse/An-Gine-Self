@@ -1,0 +1,490 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Camera\+Manager}
+\hypertarget{classlve_1_1_camera_manager}{}\label{classlve_1_1_camera_manager}\index{lve::CameraManager@{lve::CameraManager}}
+
+
+Gère les caméras dans le moteur de jeu.  
+
+
+
+
+{\ttfamily \#include $<$Camera\+Manager.\+h$>$}
+
+Graphe d\textquotesingle{}hÃ©ritage de lve\+::Camera\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classlve_1_1_camera_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlve_1_1_camera_manager_abb0a3b2b3ba147a82859f76621bcf719}{Camera\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classlve_1_1_camera_manager}{Camera\+Manager}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_camera_manager_ab43e4c4467c11bfa90b16c8324ac8df9}{\texorpdfstring{$\sim$}{\string~}\+Camera\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \doxylink{classlve_1_1_camera_manager}{Camera\+Manager}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_camera_manager_aa70b6eae079acb080fdcf6d1829f069f}{On\+Post\+Scene\+Change}} () const
+\begin{DoxyCompactList}\small\item\em Appelée après un changement de scène. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_camera_manager_aa5fd44f2794c8de7fbe5dbd460b34615}{Add\+Camera}} (\mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*}\+\_\+camera, bool \+\_\+b\+Switch\+To=false)
+\begin{DoxyCompactList}\small\item\em Ajoute une nouvelle caméra au gestionnaire de caméras. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classlve_1_1_camera_manager_a06d062546e8d3335bf8bb5df93294217}{Cycle\+Camera}} (uint32\+\_\+t \+\_\+delta\+Index, bool \+\_\+b\+Align\+With\+Previous=true)
+\begin{DoxyCompactList}\small\item\em Fait passer la caméra actuelle à la suivante ou à la précédente dans la liste des caméras gérées. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classlve_1_1_camera_manager_a9f1107dba75de18fa58ab0adc64cd351}{Push\+Camera}} (\mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*}\+\_\+camera, bool \+\_\+b\+Align\+With\+Previous, bool \+\_\+b\+Initialize)
+\begin{DoxyCompactList}\small\item\em Ajoute une nouvelle caméra à la pile et la définit comme caméra actuelle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classlve_1_1_camera_manager_a4279ff3beb1a41337747648fd81bb188}{Push\+Camera\+By\+Name}} (const std\+::string \&\+\_\+name, bool \+\_\+b\+Align\+With\+Previous, bool \+\_\+b\+Initialize)
+\begin{DoxyCompactList}\small\item\em Ajoute une nouvelle caméra par son nom à la pile et la définit comme caméra actuelle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_camera_manager_ac62024485d7bda8cbe19192d6d1c1118}{Pop\+Camera}} (bool \+\_\+b\+Align\+With\+Current=false)
+\begin{DoxyCompactList}\small\item\em Supprime la caméra actuelle de la pile et restaure la caméra précédente. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classlve_1_1_camera_manager_a3e7274417894fe6bd513d2e4eeea2ecf}{Get\+Current\+Camera}} () const
+\begin{DoxyCompactList}\small\item\em Obtient un pointeur vers la caméra actuelle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classlve_1_1_camera_manager_a50e8df6872ef731f12d3a127049c8727}{Get\+Camera\+By\+Name}} (const std\+::string \&\+\_\+name) const
+\begin{DoxyCompactList}\small\item\em Obtient un pointeur vers une caméra par son nom. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classlve_1_1_camera_manager_a7045027b41d266b91d007e2ceaaaf0f6}{Set\+Camera}} (\mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*}\+\_\+camera, bool \+\_\+b\+Align\+With\+Previous)
+\begin{DoxyCompactList}\small\item\em Définit une caméra spécifique comme caméra actuelle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classlve_1_1_camera_manager_ac8e0e786fe08bf3496cc8d2e6ee6f101}{Set\+Camera\+By\+Name}} (const std\+::string \&\+\_\+name, bool \+\_\+b\+Align\+With\+Previous)
+\begin{DoxyCompactList}\small\item\em Définit une caméra spécifique par son nom comme caméra actuelle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_camera_manager_a1b1d319c94914d1ca5f664a5a364db2d}{Draw\+Im\+Gui\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em Affiche les objets Im\+Gui associés au gestionnaire de caméras. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_camera_manager_ad6b29551b7cceaebb4c52298b740cd1c}{Align\+Cameras}} (const \mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*}\+\_\+from, \mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*}\+\_\+to)
+\begin{DoxyCompactList}\small\item\em Aligne les paramètres de position, de rotation et de champ de vision d\textquotesingle{}une caméra source avec une caméra cible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_camera_manager_aa5a34d8688524f4c9aa19b6c39fd666e}{Init}} () override
+\begin{DoxyCompactList}\small\item\em Initialise le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_camera_manager_aec01cb4461c34667ec1fd0e29e52e5c4}{Start}} () override
+\begin{DoxyCompactList}\small\item\em Démarre le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_camera_manager_ad10b9d64802b6138440542b063a6dc3f}{Fixed\+Update}} () override
+\begin{DoxyCompactList}\small\item\em Effectue une mise à jour fixe du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_camera_manager_a0f78f04e89c740917534cfb281ef638d}{Update}} () override
+\begin{DoxyCompactList}\small\item\em Met à jour le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_camera_manager_a2d0fd46b41c1d8268d04be02130fcf2d}{Pre\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction pré-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_camera_manager_aa87a8b6743c4dc934249a9aed7be4c25}{Render}} () override
+\begin{DoxyCompactList}\small\item\em Rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_camera_manager_a28606a0bc5d2d24070708181eb81635d}{Render\+Gui}} () override
+\begin{DoxyCompactList}\small\item\em Rendu de l\textquotesingle{}interface graphique du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_camera_manager_aa9197459d1795ea81b84f301a9e59984}{Post\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction post-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_camera_manager_a4f2bcf387d73f5ba54845a6232f5028a}{Release}} () override
+\begin{DoxyCompactList}\small\item\em Libère les ressources utilisées par le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_camera_manager_a613105627c3a7c59236af821c91b685e}{Finalize}} () override
+\begin{DoxyCompactList}\small\item\em Finalise le module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membres hÃ©ritÃ©s additionnels}
+\doxysubsection*{Fonctions membres protÃ©gÃ©es hÃ©ritÃ©s de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_af09dc286b704160d8f0f273e1fe8576b}{\texorpdfstring{$\sim$}{\string~}\+Module}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur protégé. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protÃ©gÃ©s hÃ©ritÃ©s de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_manager}{Module\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_module_a8d9f92fc1216d933c961bfa685b0ad6f}{module\+Manager}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Gère les caméras dans le moteur de jeu. 
+
+Cette classe gère les différentes caméras utilisées dans le moteur de jeu. Elle permet de créer, de supprimer et de manipuler les caméras, ainsi que de gérer les vues et projections associées. La classe \doxylink{classlve_1_1_camera_manager}{Camera\+Manager} est une classe finale, ce qui signifie qu\textquotesingle{}elle ne peut pas être dérivée. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classlve_1_1_camera_manager_abb0a3b2b3ba147a82859f76621bcf719}\label{classlve_1_1_camera_manager_abb0a3b2b3ba147a82859f76621bcf719} 
+\index{lve::CameraManager@{lve::CameraManager}!CameraManager@{CameraManager}}
+\index{CameraManager@{CameraManager}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{CameraManager()}{CameraManager()}}
+{\footnotesize\ttfamily lve\+::\+Camera\+Manager\+::\+Camera\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{classlve_1_1_camera_manager}{Camera\+Manager}. 
+
+Ce constructeur initialise un nouvel objet \doxylink{classlve_1_1_camera_manager}{Camera\+Manager}. \Hypertarget{classlve_1_1_camera_manager_ab43e4c4467c11bfa90b16c8324ac8df9}\label{classlve_1_1_camera_manager_ab43e4c4467c11bfa90b16c8324ac8df9} 
+\index{lve::CameraManager@{lve::CameraManager}!````~CameraManager@{\texorpdfstring{$\sim$}{\string~}CameraManager}}
+\index{````~CameraManager@{\texorpdfstring{$\sim$}{\string~}CameraManager}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CameraManager()}{\string~CameraManager()}}
+{\footnotesize\ttfamily lve\+::\+Camera\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+Camera\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur de la classe \doxylink{classlve_1_1_camera_manager}{Camera\+Manager}. 
+
+Ce destructeur libère les ressources associées à l\textquotesingle{}objet \doxylink{classlve_1_1_camera_manager}{Camera\+Manager}. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_camera_manager_aa5fd44f2794c8de7fbe5dbd460b34615}\label{classlve_1_1_camera_manager_aa5fd44f2794c8de7fbe5dbd460b34615} 
+\index{lve::CameraManager@{lve::CameraManager}!AddCamera@{AddCamera}}
+\index{AddCamera@{AddCamera}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{AddCamera()}{AddCamera()}}
+{\footnotesize\ttfamily void lve\+::\+Camera\+Manager\+::\+Add\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*}}]{\+\_\+camera,  }\item[{bool}]{\+\_\+b\+Switch\+To = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Ajoute une nouvelle caméra au gestionnaire de caméras. 
+
+Cette méthode ajoute une nouvelle caméra au gestionnaire de caméras.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+camera} & Un pointeur vers la caméra à ajouter. \\
+\hline
+{\em \+\_\+b\+Switch\+To} & Indique si la nouvelle caméra doit être définie comme caméra actuelle (par défaut \+: false). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_camera_manager_ad6b29551b7cceaebb4c52298b740cd1c}\label{classlve_1_1_camera_manager_ad6b29551b7cceaebb4c52298b740cd1c} 
+\index{lve::CameraManager@{lve::CameraManager}!AlignCameras@{AlignCameras}}
+\index{AlignCameras@{AlignCameras}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{AlignCameras()}{AlignCameras()}}
+{\footnotesize\ttfamily void lve\+::\+Camera\+Manager\+::\+Align\+Cameras (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*}}]{\+\_\+from,  }\item[{\mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*}}]{\+\_\+to }\end{DoxyParamCaption})}
+
+
+
+Aligne les paramètres de position, de rotation et de champ de vision d\textquotesingle{}une caméra source avec une caméra cible. 
+
+Cette méthode copie les paramètres de position, de rotation et de champ de vision d\textquotesingle{}une caméra source vers une caméra cible.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+from} & La caméra source à partir de laquelle copier les paramètres. \\
+\hline
+{\em \+\_\+to} & La caméra cible vers laquelle copier les paramètres. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_camera_manager_a06d062546e8d3335bf8bb5df93294217}\label{classlve_1_1_camera_manager_a06d062546e8d3335bf8bb5df93294217} 
+\index{lve::CameraManager@{lve::CameraManager}!CycleCamera@{CycleCamera}}
+\index{CycleCamera@{CycleCamera}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{CycleCamera()}{CycleCamera()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*} lve\+::\+Camera\+Manager\+::\+Cycle\+Camera (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{\+\_\+delta\+Index,  }\item[{bool}]{\+\_\+b\+Align\+With\+Previous = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Fait passer la caméra actuelle à la suivante ou à la précédente dans la liste des caméras gérées. 
+
+Cette méthode fait passer la caméra actuelle à la suivante ou à la précédente dans la liste des caméras gérées.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+delta\+Index} & Le delta pour l\textquotesingle{}index de la caméra (positif pour passer à la caméra suivante, négatif pour passer à la précédente). \\
+\hline
+{\em \+\_\+b\+Align\+With\+Previous} & Indique si la nouvelle caméra doit être alignée avec la position et l\textquotesingle{}orientation de la caméra précédente (par défaut \+: true). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers la caméra actuelle après le changement. Si aucune caméra n\textquotesingle{}est actuellement définie ou si l\textquotesingle{}index spécifié est en dehors de la plage des caméras gérées, retourne nullptr. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_camera_manager_a1b1d319c94914d1ca5f664a5a364db2d}\label{classlve_1_1_camera_manager_a1b1d319c94914d1ca5f664a5a364db2d} 
+\index{lve::CameraManager@{lve::CameraManager}!DrawImGuiObjects@{DrawImGuiObjects}}
+\index{DrawImGuiObjects@{DrawImGuiObjects}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{DrawImGuiObjects()}{DrawImGuiObjects()}}
+{\footnotesize\ttfamily void lve\+::\+Camera\+Manager\+::\+Draw\+Im\+Gui\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche les objets Im\+Gui associés au gestionnaire de caméras. 
+
+Cette méthode affiche les objets Im\+Gui associés au gestionnaire de caméras, permettant ainsi de visualiser et de modifier les paramètres des caméras.
+
+\begin{DoxyNote}{Note}
+Cette méthode est généralement utilisée pour afficher une interface utilisateur graphique dans le cadre d\textquotesingle{}un éditeur de niveau ou d\textquotesingle{}un mode de débogage. 
+\end{DoxyNote}
+\Hypertarget{classlve_1_1_camera_manager_a613105627c3a7c59236af821c91b685e}\label{classlve_1_1_camera_manager_a613105627c3a7c59236af821c91b685e} 
+\index{lve::CameraManager@{lve::CameraManager}!Finalize@{Finalize}}
+\index{Finalize@{Finalize}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{Finalize()}{Finalize()}}
+{\footnotesize\ttfamily void lve\+::\+Camera\+Manager\+::\+Finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finalise le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a4ed07ee636825b626c8f5021c34e408c}{Module}}.
+
+\Hypertarget{classlve_1_1_camera_manager_ad10b9d64802b6138440542b063a6dc3f}\label{classlve_1_1_camera_manager_ad10b9d64802b6138440542b063a6dc3f} 
+\index{lve::CameraManager@{lve::CameraManager}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void lve\+::\+Camera\+Manager\+::\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Effectue une mise à jour fixe du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a4bbf5f6e563f86794d7ae718371f1ca4}{Module}}.
+
+\Hypertarget{classlve_1_1_camera_manager_a50e8df6872ef731f12d3a127049c8727}\label{classlve_1_1_camera_manager_a50e8df6872ef731f12d3a127049c8727} 
+\index{lve::CameraManager@{lve::CameraManager}!GetCameraByName@{GetCameraByName}}
+\index{GetCameraByName@{GetCameraByName}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{GetCameraByName()}{GetCameraByName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*} lve\+::\+Camera\+Manager\+::\+Get\+Camera\+By\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name }\end{DoxyParamCaption}) const}
+
+
+
+Obtient un pointeur vers une caméra par son nom. 
+
+Cette méthode recherche une caméra par son nom dans le gestionnaire de caméras et retourne un pointeur vers la première caméra trouvée avec le nom spécifié.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+name} & Le nom de la caméra à rechercher. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers la caméra avec le nom spécifié. Si aucune caméra avec ce nom n\textquotesingle{}est trouvée, retourne nullptr. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_camera_manager_a3e7274417894fe6bd513d2e4eeea2ecf}\label{classlve_1_1_camera_manager_a3e7274417894fe6bd513d2e4eeea2ecf} 
+\index{lve::CameraManager@{lve::CameraManager}!GetCurrentCamera@{GetCurrentCamera}}
+\index{GetCurrentCamera@{GetCurrentCamera}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{GetCurrentCamera()}{GetCurrentCamera()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*} lve\+::\+Camera\+Manager\+::\+Get\+Current\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtient un pointeur vers la caméra actuelle. 
+
+Cette méthode retourne un pointeur vers la caméra actuellement active dans le gestionnaire de caméras.
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers la caméra actuelle. Si aucune caméra n\textquotesingle{}est actuellement définie, retourne nullptr. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_camera_manager_aa5a34d8688524f4c9aa19b6c39fd666e}\label{classlve_1_1_camera_manager_aa5a34d8688524f4c9aa19b6c39fd666e} 
+\index{lve::CameraManager@{lve::CameraManager}!Init@{Init}}
+\index{Init@{Init}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void lve\+::\+Camera\+Manager\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialise le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a0151ba4ab62f6e91251b0a20b168985e}{Module}}.
+
+\Hypertarget{classlve_1_1_camera_manager_aa70b6eae079acb080fdcf6d1829f069f}\label{classlve_1_1_camera_manager_aa70b6eae079acb080fdcf6d1829f069f} 
+\index{lve::CameraManager@{lve::CameraManager}!OnPostSceneChange@{OnPostSceneChange}}
+\index{OnPostSceneChange@{OnPostSceneChange}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{OnPostSceneChange()}{OnPostSceneChange()}}
+{\footnotesize\ttfamily void lve\+::\+Camera\+Manager\+::\+On\+Post\+Scene\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Appelée après un changement de scène. 
+
+Cette méthode est appelée après qu\textquotesingle{}une scène a été changée dans le moteur de jeu. Elle peut être utilisée pour effectuer des actions spécifiques liées au changement de scène.
+
+\begin{DoxyNote}{Note}
+Cette méthode est constante et ne modifie pas l\textquotesingle{}état de l\textquotesingle{}objet \doxylink{classlve_1_1_camera_manager}{Camera\+Manager}. 
+\end{DoxyNote}
+\Hypertarget{classlve_1_1_camera_manager_ac62024485d7bda8cbe19192d6d1c1118}\label{classlve_1_1_camera_manager_ac62024485d7bda8cbe19192d6d1c1118} 
+\index{lve::CameraManager@{lve::CameraManager}!PopCamera@{PopCamera}}
+\index{PopCamera@{PopCamera}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{PopCamera()}{PopCamera()}}
+{\footnotesize\ttfamily void lve\+::\+Camera\+Manager\+::\+Pop\+Camera (\begin{DoxyParamCaption}\item[{bool}]{\+\_\+b\+Align\+With\+Current = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Supprime la caméra actuelle de la pile et restaure la caméra précédente. 
+
+Cette méthode supprime la caméra actuelle de la pile des caméras gérées et restaure la caméra précédente comme caméra actuelle.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+b\+Align\+With\+Current} & Indique si la nouvelle caméra actuelle doit être alignée avec la position et l\textquotesingle{}orientation de la caméra supprimée (par défaut \+: false). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_camera_manager_aa9197459d1795ea81b84f301a9e59984}\label{classlve_1_1_camera_manager_aa9197459d1795ea81b84f301a9e59984} 
+\index{lve::CameraManager@{lve::CameraManager}!PostRender@{PostRender}}
+\index{PostRender@{PostRender}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{PostRender()}{PostRender()}}
+{\footnotesize\ttfamily void lve\+::\+Camera\+Manager\+::\+Post\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction post-\/rendu du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a0bb23668b2717e4bb3b4e1f6350a7e87}{Module}}.
+
+\Hypertarget{classlve_1_1_camera_manager_a2d0fd46b41c1d8268d04be02130fcf2d}\label{classlve_1_1_camera_manager_a2d0fd46b41c1d8268d04be02130fcf2d} 
+\index{lve::CameraManager@{lve::CameraManager}!PreRender@{PreRender}}
+\index{PreRender@{PreRender}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{PreRender()}{PreRender()}}
+{\footnotesize\ttfamily void lve\+::\+Camera\+Manager\+::\+Pre\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction pré-\/rendu du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a7a88e7aaddd55bf9f15beb8d297afd1e}{Module}}.
+
+\Hypertarget{classlve_1_1_camera_manager_a9f1107dba75de18fa58ab0adc64cd351}\label{classlve_1_1_camera_manager_a9f1107dba75de18fa58ab0adc64cd351} 
+\index{lve::CameraManager@{lve::CameraManager}!PushCamera@{PushCamera}}
+\index{PushCamera@{PushCamera}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{PushCamera()}{PushCamera()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*} lve\+::\+Camera\+Manager\+::\+Push\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*}}]{\+\_\+camera,  }\item[{bool}]{\+\_\+b\+Align\+With\+Previous,  }\item[{bool}]{\+\_\+b\+Initialize }\end{DoxyParamCaption})}
+
+
+
+Ajoute une nouvelle caméra à la pile et la définit comme caméra actuelle. 
+
+Cette méthode ajoute une nouvelle caméra à la pile des caméras gérées et la définit comme caméra actuelle.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+camera} & Un pointeur vers la caméra à ajouter à la pile et à définir comme caméra actuelle. \\
+\hline
+{\em \+\_\+b\+Align\+With\+Previous} & Indique si la nouvelle caméra doit être alignée avec la position et l\textquotesingle{}orientation de la caméra précédente (par défaut \+: true). \\
+\hline
+{\em \+\_\+b\+Initialize} & Indique si la nouvelle caméra doit être initialisée après son ajout (par défaut \+: true). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers la caméra actuelle après l\textquotesingle{}ajout. Si \+\_\+b\+Initialize est true et que l\textquotesingle{}initialisation échoue, retourne nullptr. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_camera_manager_a4279ff3beb1a41337747648fd81bb188}\label{classlve_1_1_camera_manager_a4279ff3beb1a41337747648fd81bb188} 
+\index{lve::CameraManager@{lve::CameraManager}!PushCameraByName@{PushCameraByName}}
+\index{PushCameraByName@{PushCameraByName}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{PushCameraByName()}{PushCameraByName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*} lve\+::\+Camera\+Manager\+::\+Push\+Camera\+By\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{bool}]{\+\_\+b\+Align\+With\+Previous,  }\item[{bool}]{\+\_\+b\+Initialize }\end{DoxyParamCaption})}
+
+
+
+Ajoute une nouvelle caméra par son nom à la pile et la définit comme caméra actuelle. 
+
+Cette méthode ajoute une nouvelle caméra par son nom à la pile des caméras gérées et la définit comme caméra actuelle.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+name} & Le nom de la caméra à ajouter à la pile et à définir comme caméra actuelle. \\
+\hline
+{\em \+\_\+b\+Align\+With\+Previous} & Indique si la nouvelle caméra doit être alignée avec la position et l\textquotesingle{}orientation de la caméra précédente (par défaut \+: true). \\
+\hline
+{\em \+\_\+b\+Initialize} & Indique si la nouvelle caméra doit être initialisée après son ajout (par défaut \+: true). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers la caméra actuelle après l\textquotesingle{}ajout. Si \+\_\+b\+Initialize est true et que l\textquotesingle{}initialisation échoue, retourne nullptr. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_camera_manager_a4f2bcf387d73f5ba54845a6232f5028a}\label{classlve_1_1_camera_manager_a4f2bcf387d73f5ba54845a6232f5028a} 
+\index{lve::CameraManager@{lve::CameraManager}!Release@{Release}}
+\index{Release@{Release}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void lve\+::\+Camera\+Manager\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Libère les ressources utilisées par le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a7e2e4615b80a57040eccf9794bee1007}{Module}}.
+
+\Hypertarget{classlve_1_1_camera_manager_aa87a8b6743c4dc934249a9aed7be4c25}\label{classlve_1_1_camera_manager_aa87a8b6743c4dc934249a9aed7be4c25} 
+\index{lve::CameraManager@{lve::CameraManager}!Render@{Render}}
+\index{Render@{Render}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void lve\+::\+Camera\+Manager\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_ab6ec60e3eced3faa0217348cfca2785f}{Module}}.
+
+\Hypertarget{classlve_1_1_camera_manager_a28606a0bc5d2d24070708181eb81635d}\label{classlve_1_1_camera_manager_a28606a0bc5d2d24070708181eb81635d} 
+\index{lve::CameraManager@{lve::CameraManager}!RenderGui@{RenderGui}}
+\index{RenderGui@{RenderGui}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{RenderGui()}{RenderGui()}}
+{\footnotesize\ttfamily void lve\+::\+Camera\+Manager\+::\+Render\+Gui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu de l\textquotesingle{}interface graphique du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_aadc90c55712eba976e6bf87318713d11}{Module}}.
+
+\Hypertarget{classlve_1_1_camera_manager_a7045027b41d266b91d007e2ceaaaf0f6}\label{classlve_1_1_camera_manager_a7045027b41d266b91d007e2ceaaaf0f6} 
+\index{lve::CameraManager@{lve::CameraManager}!SetCamera@{SetCamera}}
+\index{SetCamera@{SetCamera}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{SetCamera()}{SetCamera()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*} lve\+::\+Camera\+Manager\+::\+Set\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*}}]{\+\_\+camera,  }\item[{bool}]{\+\_\+b\+Align\+With\+Previous }\end{DoxyParamCaption})}
+
+
+
+Définit une caméra spécifique comme caméra actuelle. 
+
+Cette méthode définit une caméra spécifique comme caméra actuelle dans le gestionnaire de caméras.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+camera} & Un pointeur vers la caméra à définir comme caméra actuelle. \\
+\hline
+{\em \+\_\+b\+Align\+With\+Previous} & Indique si la nouvelle caméra doit être alignée avec la position et l\textquotesingle{}orientation de la caméra précédente (par défaut \+: true). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers la caméra actuelle après le changement. Si la caméra spécifiée n\textquotesingle{}est pas dans la liste des caméras gérées, retourne nullptr. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_camera_manager_ac8e0e786fe08bf3496cc8d2e6ee6f101}\label{classlve_1_1_camera_manager_ac8e0e786fe08bf3496cc8d2e6ee6f101} 
+\index{lve::CameraManager@{lve::CameraManager}!SetCameraByName@{SetCameraByName}}
+\index{SetCameraByName@{SetCameraByName}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{SetCameraByName()}{SetCameraByName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_base_camera}{Base\+Camera}} \texorpdfstring{$\ast$}{*} lve\+::\+Camera\+Manager\+::\+Set\+Camera\+By\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name,  }\item[{bool}]{\+\_\+b\+Align\+With\+Previous }\end{DoxyParamCaption})}
+
+
+
+Définit une caméra spécifique par son nom comme caméra actuelle. 
+
+Cette méthode définit une caméra spécifique par son nom comme caméra actuelle dans le gestionnaire de caméras.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+name} & Le nom de la caméra à définir comme caméra actuelle. \\
+\hline
+{\em \+\_\+b\+Align\+With\+Previous} & Indique si la nouvelle caméra doit être alignée avec la position et l\textquotesingle{}orientation de la caméra précédente (par défaut \+: true). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers la caméra actuelle après le changement. Si aucune caméra avec le nom spécifié n\textquotesingle{}est trouvée, retourne nullptr. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_camera_manager_aec01cb4461c34667ec1fd0e29e52e5c4}\label{classlve_1_1_camera_manager_aec01cb4461c34667ec1fd0e29e52e5c4} 
+\index{lve::CameraManager@{lve::CameraManager}!Start@{Start}}
+\index{Start@{Start}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void lve\+::\+Camera\+Manager\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Démarre le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_aed9229993dada6ed800f73036aade722}{Module}}.
+
+\Hypertarget{classlve_1_1_camera_manager_a0f78f04e89c740917534cfb281ef638d}\label{classlve_1_1_camera_manager_a0f78f04e89c740917534cfb281ef638d} 
+\index{lve::CameraManager@{lve::CameraManager}!Update@{Update}}
+\index{Update@{Update}!lve::CameraManager@{lve::CameraManager}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void lve\+::\+Camera\+Manager\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Met à jour le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_abf63d5bb322a751fbf95f2da0978817b}{Module}}.
+
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Camera/Camera\+Manager.\+h\item 
+sources/\+Camera/Camera\+Manager.\+cpp\end{DoxyCompactItemize}

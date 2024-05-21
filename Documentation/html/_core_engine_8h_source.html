@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/Engine/CoreEngine.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- G√©n√©r√© par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_bc91a9376302aca949db90cb95abffa5.html">Engine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">CoreEngine.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;Modules/ModuleManager.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifdef ENGINECORE_EXPORTS</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define ENGINEDLL_API __declspec(dllexport)</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define ENGINEDLL_API __declspec(dllimport)</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">enum</span> EngineMode</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    Editor,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    Play,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    Pause</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_engine.html">   18</a></span><span class="keyword">class </span>ENGINEDLL_API <a class="code hl_class" href="class_engine.html">Engine</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">static</span> <a class="code hl_class" href="class_engine.html">Engine</a>* GetInstance();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordtype">void</span> Init() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">void</span> Run() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_engine.html#ac703279e3531bc1e668115affceb8c37">   41</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_engine.html#ac703279e3531bc1e668115affceb8c37">Quit</a>() { shouldQuit = <span class="keyword">true</span>; }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_engine.html#ab5387d007ef3edba4db6bd6e60ff54fc">   47</a></span>        [[nodiscard]] <a class="code hl_class" href="class_module_manager.html">ModuleManager</a>* <a class="code hl_function" href="class_engine.html#ab5387d007ef3edba4db6bd6e60ff54fc">GetModuleManager</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> moduleManager; }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_engine.html#a7859a600c9e5dea6c93357c66c22e98d">   53</a></span>        [[nodiscard]] EngineMode <a class="code hl_function" href="class_engine.html#a7859a600c9e5dea6c93357c66c22e98d">GetEngineMode</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> engineMode; }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_engine.html#a3cf2dd32de98d0f3435844e927b70843">   59</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_engine.html#a3cf2dd32de98d0f3435844e927b70843">SetEngineMode</a>(<span class="keyword">const</span> EngineMode _engineMode) { engineMode = _engineMode; }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_engine.html#a9f26bc64debd7c6336330cd00e6b030f">   64</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_engine.html#a9f26bc64debd7c6336330cd00e6b030f">PlayEngineMode</a>() { engineMode = Play; }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_engine.html#a94d49ffab5a324093a1bf7737cbc8508">   69</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_engine.html#a94d49ffab5a324093a1bf7737cbc8508">PauseEngineMode</a>() { engineMode = Pause; }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_engine.html#a04585b20ff6bd1cc1429f967b765b58c">   74</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_engine.html#a04585b20ff6bd1cc1429f967b765b58c">EditorEngineMode</a>() { engineMode = Editor; }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keyword">static</span> <a class="code hl_class" href="class_engine.html">Engine</a>* instance; </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_class" href="class_module_manager.html">ModuleManager</a>* moduleManager = <span class="keyword">new</span> <a class="code hl_class" href="class_module_manager.html">ModuleManager</a>; </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordtype">bool</span> shouldQuit = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        EngineMode engineMode = Editor; </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>};</div>
+</div>
+<div class="ttc" id="aclass_engine_html"><div class="ttname"><a href="class_engine.html">Engine</a></div><div class="ttdef"><b>Definition</b> CoreEngine.h:19</div></div>
+<div class="ttc" id="aclass_engine_html_a04585b20ff6bd1cc1429f967b765b58c"><div class="ttname"><a href="class_engine.html#a04585b20ff6bd1cc1429f967b765b58c">Engine::EditorEngineMode</a></div><div class="ttdeci">void EditorEngineMode()</div><div class="ttdoc">DÈfinit le mode du moteur comme &quot;Editor&quot;.</div><div class="ttdef"><b>Definition</b> CoreEngine.h:74</div></div>
+<div class="ttc" id="aclass_engine_html_a3cf2dd32de98d0f3435844e927b70843"><div class="ttname"><a href="class_engine.html#a3cf2dd32de98d0f3435844e927b70843">Engine::SetEngineMode</a></div><div class="ttdeci">void SetEngineMode(const EngineMode _engineMode)</div><div class="ttdoc">DÈfinit le mode du moteur.</div><div class="ttdef"><b>Definition</b> CoreEngine.h:59</div></div>
+<div class="ttc" id="aclass_engine_html_a7859a600c9e5dea6c93357c66c22e98d"><div class="ttname"><a href="class_engine.html#a7859a600c9e5dea6c93357c66c22e98d">Engine::GetEngineMode</a></div><div class="ttdeci">EngineMode GetEngineMode() const</div><div class="ttdoc">Obtient le mode du moteur.</div><div class="ttdef"><b>Definition</b> CoreEngine.h:53</div></div>
+<div class="ttc" id="aclass_engine_html_a94d49ffab5a324093a1bf7737cbc8508"><div class="ttname"><a href="class_engine.html#a94d49ffab5a324093a1bf7737cbc8508">Engine::PauseEngineMode</a></div><div class="ttdeci">void PauseEngineMode()</div><div class="ttdoc">DÈfinit le mode du moteur comme &quot;Pause&quot;.</div><div class="ttdef"><b>Definition</b> CoreEngine.h:69</div></div>
+<div class="ttc" id="aclass_engine_html_a9f26bc64debd7c6336330cd00e6b030f"><div class="ttname"><a href="class_engine.html#a9f26bc64debd7c6336330cd00e6b030f">Engine::PlayEngineMode</a></div><div class="ttdeci">void PlayEngineMode()</div><div class="ttdoc">DÈfinit le mode du moteur comme &quot;Play&quot;.</div><div class="ttdef"><b>Definition</b> CoreEngine.h:64</div></div>
+<div class="ttc" id="aclass_engine_html_ab5387d007ef3edba4db6bd6e60ff54fc"><div class="ttname"><a href="class_engine.html#ab5387d007ef3edba4db6bd6e60ff54fc">Engine::GetModuleManager</a></div><div class="ttdeci">ModuleManager * GetModuleManager() const</div><div class="ttdoc">Obtient le gestionnaire de modules du moteur.</div><div class="ttdef"><b>Definition</b> CoreEngine.h:47</div></div>
+<div class="ttc" id="aclass_engine_html_ac703279e3531bc1e668115affceb8c37"><div class="ttname"><a href="class_engine.html#ac703279e3531bc1e668115affceb8c37">Engine::Quit</a></div><div class="ttdeci">void Quit()</div><div class="ttdoc">Quitte le moteur.</div><div class="ttdef"><b>Definition</b> CoreEngine.h:41</div></div>
+<div class="ttc" id="aclass_module_manager_html"><div class="ttname"><a href="class_module_manager.html">ModuleManager</a></div><div class="ttdoc">Classe ModuleManager.</div><div class="ttdef"><b>Definition</b> ModuleManager.h:13</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+G√©n√©r√© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

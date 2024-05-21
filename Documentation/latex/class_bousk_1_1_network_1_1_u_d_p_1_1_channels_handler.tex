@@ -1,0 +1,32 @@
+\doxysection{Référence de la classe Bousk\+::Network\+::UDP\+::Channels\+Handler}
+\hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_channels_handler}{}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_channels_handler}\index{Bousk::Network::UDP::ChannelsHandler@{Bousk::Network::UDP::ChannelsHandler}}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_channels_handler_a9e88f090e9be66f4287c3fecd5879cdd}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_channels_handler_a9e88f090e9be66f4287c3fecd5879cdd} 
+{\footnotesize template$<$class T $>$ }\\void {\bfseries register\+Channel} (uint8 channel\+Id)
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_channels_handler_a5e1e84d69644ea1e64393ce809c2e196}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_channels_handler_a5e1e84d69644ea1e64393ce809c2e196} 
+void {\bfseries queue} (std\+::vector$<$ uint8 $>$ \&\&msg\+Data, uint32 channel\+Index)
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_channels_handler_a97a94f5133e7ca1076d02cfdca9efc86}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_channels_handler_a97a94f5133e7ca1076d02cfdca9efc86} 
+uint16 {\bfseries serialize} (uint8 \texorpdfstring{$\ast$}{*}buffer, uint16 buffersize, Datagram\+::\+ID datagram\+Id, bool connection\+Interrupted)
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_channels_handler_a975537728c5e9b209d934d7f80b64d8a}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_channels_handler_a975537728c5e9b209d934d7f80b64d8a} 
+void {\bfseries on\+Datagram\+Acked} (Datagram\+::\+ID datagram\+Id)
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_channels_handler_a8f7c2afccc659a48f0db05f44b2e6ee4}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_channels_handler_a8f7c2afccc659a48f0db05f44b2e6ee4} 
+void {\bfseries on\+Datagram\+Lost} (Datagram\+::\+ID datagram\+Id)
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_channels_handler_a5caa8a65eae855de7ec951d738201a8c}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_channels_handler_a5caa8a65eae855de7ec951d738201a8c} 
+void {\bfseries on\+Data\+Received} (const uint8 \texorpdfstring{$\ast$}{*}data, uint16 datasize)
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_channels_handler_aeeb2d85f3ab46eb42b0a7ebb295ff712}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_channels_handler_aeeb2d85f3ab46eb42b0a7ebb295ff712} 
+std\+::vector$<$ std\+::tuple$<$ uint8, std\+::vector$<$ uint8 $>$ $>$ $>$ {\bfseries process} (bool is\+Connected)
+\end{DoxyCompactItemize}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+UDP/Channels\+Handler.\+h\item 
+sources/\+UDP/Channels\+Handler.\+cpp\end{DoxyCompactItemize}

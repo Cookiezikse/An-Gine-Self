@@ -1,0 +1,342 @@
+\doxysection{RÃ©fÃ©rence de la classe Debug\+Module}
+\hypertarget{class_debug_module}{}\label{class_debug_module}\index{DebugModule@{DebugModule}}
+
+
+Classe représentant un module de débogage.  
+
+
+
+
+{\ttfamily \#include $<$Debug\+Module.\+h$>$}
+
+Graphe d\textquotesingle{}hÃ©ritage de Debug\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_debug_module}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_debug_module_ad82f52d250b1227fdcc4022a08e26bb5}{Type\+Log}} \{ {\bfseries INFO}
+, {\bfseries WARNING}
+, {\bfseries ERROR}
+, {\bfseries SUCCESS}
+ \}
+\begin{DoxyCompactList}\small\item\em Énumération représentant les types de journaux. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_debug_module_acf16f4056fe32e343545ad853ed8d66c}{\texorpdfstring{$\sim$}{\string~}\+Debug\+Module}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel de la classe \doxylink{class_debug_module}{Debug\+Module}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_debug_module_a819596af9d8525044fccd9118a83af35}{Init}} () override
+\begin{DoxyCompactList}\small\item\em Initialise le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_debug_module_af31af5dda56fdb3e5eed28f945f8c628}{Start}} () override
+\begin{DoxyCompactList}\small\item\em Démarre le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_debug_module_ac4025384311e8733b8ba5c94a8b0252f}{Fixed\+Update}} () override
+\begin{DoxyCompactList}\small\item\em Effectue une mise à jour fixe du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_debug_module_aff4802838a0ff36b58084fedb231dfca}{Update}} () override
+\begin{DoxyCompactList}\small\item\em Met à jour le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_debug_module_a229c9533acfa2fc45786c2875c6d3a54}{Pre\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction pré-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_debug_module_add6febbd15384f7046715a0d992414c1}{Render}} () override
+\begin{DoxyCompactList}\small\item\em Rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_debug_module_a79049be3e811dc839746c0e7e1ebe562}{Render\+Gui}} () override
+\begin{DoxyCompactList}\small\item\em Rendu de l\textquotesingle{}interface graphique du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_debug_module_a3e24cc06e108cca745cc8652c6ab881d}{Post\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction post-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_debug_module_a8026c62cc075f9eacd3f6c8dabc4672e}{Release}} () override
+\begin{DoxyCompactList}\small\item\em Libère les ressources utilisées par le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_debug_module_ac6c67867804ab058f0a99bbafb06c12d}{Finalize}} () override
+\begin{DoxyCompactList}\small\item\em Finalise le module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_debug_module_aef1c5eed746a4a9b5fc3a496d8efd82d}{Log}} (const std\+::string \&\+\_\+message, const \mbox{\hyperlink{class_debug_module_ad82f52d250b1227fdcc4022a08e26bb5}{Type\+Log}} \+\_\+level=Type\+Log\+::\+INFO)
+\begin{DoxyCompactList}\small\item\em Enregistre un message de journal avec un niveau de priorité spécifié. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_debug_module_a86ff1d5c1cd13138c81e6f15b1f98c6c}{Log\+Error}} (const std\+::string \&\+\_\+message)
+\begin{DoxyCompactList}\small\item\em Enregistre un message d\textquotesingle{}erreur dans le journal. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_debug_module_a58489da45c8192ed37aff3e5f81355b0}{Log\+Warning}} (const std\+::string \&\+\_\+message)
+\begin{DoxyCompactList}\small\item\em Enregistre un message d\textquotesingle{}avertissement dans le journal. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_debug_module_ae79635d4795b3e5326f8b8e1209520aa}{Log\+Info}} (const std\+::string \&\+\_\+message)
+\begin{DoxyCompactList}\small\item\em Enregistre un message d\textquotesingle{}information dans le journal. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_debug_module_a35f8b2b6e384ee48a9d61b2767cbc8fb}{Log\+Success}} (const std\+::string \&\+\_\+message)
+\begin{DoxyCompactList}\small\item\em Enregistre un message de réussite dans le journal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membres hÃ©ritÃ©s additionnels}
+\doxysubsection*{Fonctions membres protÃ©gÃ©es hÃ©ritÃ©s de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_af09dc286b704160d8f0f273e1fe8576b}{\texorpdfstring{$\sim$}{\string~}\+Module}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur protégé. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protÃ©gÃ©s hÃ©ritÃ©s de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_manager}{Module\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_module_a8d9f92fc1216d933c961bfa685b0ad6f}{module\+Manager}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Classe représentant un module de débogage. 
+
+Cette classe hérite de la classe \doxylink{class_module}{Module} et permet de gérer les fonctionnalités de débogage dans le jeu. 
+
+\doxysubsection{Documentation des Ã©numÃ©rations membres}
+\Hypertarget{class_debug_module_ad82f52d250b1227fdcc4022a08e26bb5}\label{class_debug_module_ad82f52d250b1227fdcc4022a08e26bb5} 
+\index{DebugModule@{DebugModule}!TypeLog@{TypeLog}}
+\index{TypeLog@{TypeLog}!DebugModule@{DebugModule}}
+\doxysubsubsection{\texorpdfstring{TypeLog}{TypeLog}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{class_debug_module_ad82f52d250b1227fdcc4022a08e26bb5}{Debug\+Module\+::\+Type\+Log}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Énumération représentant les types de journaux. 
+
+Cette énumération définit les différents types de journaux utilisés pour les messages de débogage. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_debug_module_acf16f4056fe32e343545ad853ed8d66c}\label{class_debug_module_acf16f4056fe32e343545ad853ed8d66c} 
+\index{DebugModule@{DebugModule}!````~DebugModule@{\texorpdfstring{$\sim$}{\string~}DebugModule}}
+\index{````~DebugModule@{\texorpdfstring{$\sim$}{\string~}DebugModule}!DebugModule@{DebugModule}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DebugModule()}{\string~DebugModule()}}
+{\footnotesize\ttfamily Debug\+Module\+::\texorpdfstring{$\sim$}{\string~}\+Debug\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destructeur virtuel de la classe \doxylink{class_debug_module}{Debug\+Module}. 
+
+Ce destructeur virtuel permet une destruction appropriée des objets de la classe \doxylink{class_debug_module}{Debug\+Module} lorsqu\textquotesingle{}ils sont utilisés polymorphiquement. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_debug_module_ac6c67867804ab058f0a99bbafb06c12d}\label{class_debug_module_ac6c67867804ab058f0a99bbafb06c12d} 
+\index{DebugModule@{DebugModule}!Finalize@{Finalize}}
+\index{Finalize@{Finalize}!DebugModule@{DebugModule}}
+\doxysubsubsection{\texorpdfstring{Finalize()}{Finalize()}}
+{\footnotesize\ttfamily void Debug\+Module\+::\+Finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finalise le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a4ed07ee636825b626c8f5021c34e408c}{Module}}.
+
+\Hypertarget{class_debug_module_ac4025384311e8733b8ba5c94a8b0252f}\label{class_debug_module_ac4025384311e8733b8ba5c94a8b0252f} 
+\index{DebugModule@{DebugModule}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!DebugModule@{DebugModule}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Debug\+Module\+::\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Effectue une mise à jour fixe du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a4bbf5f6e563f86794d7ae718371f1ca4}{Module}}.
+
+\Hypertarget{class_debug_module_a819596af9d8525044fccd9118a83af35}\label{class_debug_module_a819596af9d8525044fccd9118a83af35} 
+\index{DebugModule@{DebugModule}!Init@{Init}}
+\index{Init@{Init}!DebugModule@{DebugModule}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Debug\+Module\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialise le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a0151ba4ab62f6e91251b0a20b168985e}{Module}}.
+
+\Hypertarget{class_debug_module_aef1c5eed746a4a9b5fc3a496d8efd82d}\label{class_debug_module_aef1c5eed746a4a9b5fc3a496d8efd82d} 
+\index{DebugModule@{DebugModule}!Log@{Log}}
+\index{Log@{Log}!DebugModule@{DebugModule}}
+\doxysubsubsection{\texorpdfstring{Log()}{Log()}}
+{\footnotesize\ttfamily void Debug\+Module\+::\+Log (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+message,  }\item[{const \mbox{\hyperlink{class_debug_module_ad82f52d250b1227fdcc4022a08e26bb5}{Type\+Log}}}]{\+\_\+level = {\ttfamily TypeLog\+:\+:INFO} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Enregistre un message de journal avec un niveau de priorité spécifié. 
+
+Cette méthode statique enregistre un message de journal avec un niveau de priorité spécifié.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+message} & Le message à enregistrer dans le journal. \\
+\hline
+{\em \+\_\+level} & Le niveau de priorité du message (par défaut\+: Type\+Log\+::\+INFO). Les valeurs possibles sont Type\+Log\+::\+INFO, Type\+Log\+::\+WARNING, Type\+Log\+::\+ERROR et Type\+Log\+::\+SUCCESS. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_debug_module_a86ff1d5c1cd13138c81e6f15b1f98c6c}\label{class_debug_module_a86ff1d5c1cd13138c81e6f15b1f98c6c} 
+\index{DebugModule@{DebugModule}!LogError@{LogError}}
+\index{LogError@{LogError}!DebugModule@{DebugModule}}
+\doxysubsubsection{\texorpdfstring{LogError()}{LogError()}}
+{\footnotesize\ttfamily static void Debug\+Module\+::\+Log\+Error (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Enregistre un message d\textquotesingle{}erreur dans le journal. 
+
+Cette méthode statique enregistre un message d\textquotesingle{}erreur dans le journal avec le niveau de priorité Type\+Log\+::\+ERROR.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+message} & Le message d\textquotesingle{}erreur à enregistrer dans le journal. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_debug_module_ae79635d4795b3e5326f8b8e1209520aa}\label{class_debug_module_ae79635d4795b3e5326f8b8e1209520aa} 
+\index{DebugModule@{DebugModule}!LogInfo@{LogInfo}}
+\index{LogInfo@{LogInfo}!DebugModule@{DebugModule}}
+\doxysubsubsection{\texorpdfstring{LogInfo()}{LogInfo()}}
+{\footnotesize\ttfamily static void Debug\+Module\+::\+Log\+Info (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Enregistre un message d\textquotesingle{}information dans le journal. 
+
+Cette méthode statique enregistre un message d\textquotesingle{}information dans le journal avec le niveau de priorité Type\+Log\+::\+INFO.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+message} & Le message d\textquotesingle{}information à enregistrer dans le journal. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_debug_module_a35f8b2b6e384ee48a9d61b2767cbc8fb}\label{class_debug_module_a35f8b2b6e384ee48a9d61b2767cbc8fb} 
+\index{DebugModule@{DebugModule}!LogSuccess@{LogSuccess}}
+\index{LogSuccess@{LogSuccess}!DebugModule@{DebugModule}}
+\doxysubsubsection{\texorpdfstring{LogSuccess()}{LogSuccess()}}
+{\footnotesize\ttfamily static void Debug\+Module\+::\+Log\+Success (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Enregistre un message de réussite dans le journal. 
+
+Cette méthode statique enregistre un message de réussite dans le journal avec le niveau de priorité Type\+Log\+::\+SUCCESS.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+message} & Le message de réussite à enregistrer dans le journal. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_debug_module_a58489da45c8192ed37aff3e5f81355b0}\label{class_debug_module_a58489da45c8192ed37aff3e5f81355b0} 
+\index{DebugModule@{DebugModule}!LogWarning@{LogWarning}}
+\index{LogWarning@{LogWarning}!DebugModule@{DebugModule}}
+\doxysubsubsection{\texorpdfstring{LogWarning()}{LogWarning()}}
+{\footnotesize\ttfamily static void Debug\+Module\+::\+Log\+Warning (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Enregistre un message d\textquotesingle{}avertissement dans le journal. 
+
+Cette méthode statique enregistre un message d\textquotesingle{}avertissement dans le journal avec le niveau de priorité Type\+Log\+::\+WARNING.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+message} & Le message d\textquotesingle{}avertissement à enregistrer dans le journal. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_debug_module_a3e24cc06e108cca745cc8652c6ab881d}\label{class_debug_module_a3e24cc06e108cca745cc8652c6ab881d} 
+\index{DebugModule@{DebugModule}!PostRender@{PostRender}}
+\index{PostRender@{PostRender}!DebugModule@{DebugModule}}
+\doxysubsubsection{\texorpdfstring{PostRender()}{PostRender()}}
+{\footnotesize\ttfamily void Debug\+Module\+::\+Post\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction post-\/rendu du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a0bb23668b2717e4bb3b4e1f6350a7e87}{Module}}.
+
+\Hypertarget{class_debug_module_a229c9533acfa2fc45786c2875c6d3a54}\label{class_debug_module_a229c9533acfa2fc45786c2875c6d3a54} 
+\index{DebugModule@{DebugModule}!PreRender@{PreRender}}
+\index{PreRender@{PreRender}!DebugModule@{DebugModule}}
+\doxysubsubsection{\texorpdfstring{PreRender()}{PreRender()}}
+{\footnotesize\ttfamily void Debug\+Module\+::\+Pre\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction pré-\/rendu du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a7a88e7aaddd55bf9f15beb8d297afd1e}{Module}}.
+
+\Hypertarget{class_debug_module_a8026c62cc075f9eacd3f6c8dabc4672e}\label{class_debug_module_a8026c62cc075f9eacd3f6c8dabc4672e} 
+\index{DebugModule@{DebugModule}!Release@{Release}}
+\index{Release@{Release}!DebugModule@{DebugModule}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Debug\+Module\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Libère les ressources utilisées par le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a7e2e4615b80a57040eccf9794bee1007}{Module}}.
+
+\Hypertarget{class_debug_module_add6febbd15384f7046715a0d992414c1}\label{class_debug_module_add6febbd15384f7046715a0d992414c1} 
+\index{DebugModule@{DebugModule}!Render@{Render}}
+\index{Render@{Render}!DebugModule@{DebugModule}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Debug\+Module\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_ab6ec60e3eced3faa0217348cfca2785f}{Module}}.
+
+\Hypertarget{class_debug_module_a79049be3e811dc839746c0e7e1ebe562}\label{class_debug_module_a79049be3e811dc839746c0e7e1ebe562} 
+\index{DebugModule@{DebugModule}!RenderGui@{RenderGui}}
+\index{RenderGui@{RenderGui}!DebugModule@{DebugModule}}
+\doxysubsubsection{\texorpdfstring{RenderGui()}{RenderGui()}}
+{\footnotesize\ttfamily void Debug\+Module\+::\+Render\+Gui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu de l\textquotesingle{}interface graphique du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_aadc90c55712eba976e6bf87318713d11}{Module}}.
+
+\Hypertarget{class_debug_module_af31af5dda56fdb3e5eed28f945f8c628}\label{class_debug_module_af31af5dda56fdb3e5eed28f945f8c628} 
+\index{DebugModule@{DebugModule}!Start@{Start}}
+\index{Start@{Start}!DebugModule@{DebugModule}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Debug\+Module\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Démarre le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_aed9229993dada6ed800f73036aade722}{Module}}.
+
+\Hypertarget{class_debug_module_aff4802838a0ff36b58084fedb231dfca}\label{class_debug_module_aff4802838a0ff36b58084fedb231dfca} 
+\index{DebugModule@{DebugModule}!Update@{Update}}
+\index{Update@{Update}!DebugModule@{DebugModule}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Debug\+Module\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Met à jour le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_abf63d5bb322a751fbf95f2da0978817b}{Module}}.
+
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Modules/Debug\+Module.\+h\item 
+sources/\+Modules/Debug\+Module.\+cpp\end{DoxyCompactItemize}

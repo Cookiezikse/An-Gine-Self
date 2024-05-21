@@ -1,0 +1,213 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Lve\+Camera}
+\hypertarget{classlve_1_1_lve_camera}{}\label{classlve_1_1_lve_camera}\index{lve::LveCamera@{lve::LveCamera}}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlve_1_1_lve_camera_ac7cd10387ef6e4b6c64fd3d80c1a879e}{Set\+Orthographic\+Projection}} (float \+\_\+left, float \+\_\+right, float \+\_\+top, float \+\_\+bottom, float \+\_\+near, float \+\_\+far)
+\begin{DoxyCompactList}\small\item\em Définit une projection orthographique. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_camera_ab5e5cc5b81379ecaa39599fe978285da}{Set\+Perspective\+Projection}} (float \+\_\+fovY, float \+\_\+aspect, float \+\_\+near, float \+\_\+far)
+\begin{DoxyCompactList}\small\item\em Définit une projection en perspective. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_camera_a63bcbca50d9427983b7500c632bcec73}{Set\+View\+Direction}} (glm\+::vec3 \+\_\+position, glm\+::vec3 \+\_\+direction, glm\+::vec3 \+\_\+up=glm\+::vec3\{0.f, -\/1.f, 0.f\})
+\begin{DoxyCompactList}\small\item\em Définit la direction de vue de la caméra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_camera_a640db642681e51ad4fe9fba76ac48cb1}{Set\+View\+Target}} (glm\+::vec3 \+\_\+position, glm\+::vec3 \+\_\+target, glm\+::vec3 \+\_\+up=glm\+::vec3\{0.f, -\/1.f, 0.f\})
+\begin{DoxyCompactList}\small\item\em Définit la cible de vue de la caméra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_camera_a2e220832a2e7222ac94601527f36bbb4}{Set\+View\+YXZ}} (glm\+::vec3 \+\_\+position, glm\+::vec3 \+\_\+rotation)
+\begin{DoxyCompactList}\small\item\em Définit la vue de la caméra en utilisant les rotations YXZ. \end{DoxyCompactList}\item 
+const glm\+::mat4 \& \mbox{\hyperlink{classlve_1_1_lve_camera_a3994d2b8473f1997a84ba936013db504}{Get\+Projection}} () const
+\begin{DoxyCompactList}\small\item\em Renvoie la matrice de projection. \end{DoxyCompactList}\item 
+const glm\+::mat4 \& \mbox{\hyperlink{classlve_1_1_lve_camera_aff6d8f5cba65207351c8cedd8cb8b789}{Get\+View}} () const
+\begin{DoxyCompactList}\small\item\em Renvoie la matrice de vue. \end{DoxyCompactList}\item 
+const glm\+::mat4 \& \mbox{\hyperlink{classlve_1_1_lve_camera_ae3f48844ba1dafdade08cbc5fff230c0}{Get\+Inverse\+View}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la matrice de vue inverse. \end{DoxyCompactList}\item 
+glm\+::vec3 \mbox{\hyperlink{classlve_1_1_lve_camera_a4fda1867eb3e5ce24052425183016e40}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la position de la caméra. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_lve_camera_ae3f48844ba1dafdade08cbc5fff230c0}\label{classlve_1_1_lve_camera_ae3f48844ba1dafdade08cbc5fff230c0} 
+\index{lve::LveCamera@{lve::LveCamera}!GetInverseView@{GetInverseView}}
+\index{GetInverseView@{GetInverseView}!lve::LveCamera@{lve::LveCamera}}
+\doxysubsubsection{\texorpdfstring{GetInverseView()}{GetInverseView()}}
+{\footnotesize\ttfamily const glm\+::mat4 \& lve\+::\+Lve\+Camera\+::\+Get\+Inverse\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la matrice de vue inverse. 
+
+\begin{DoxyReturn}{Renvoie}
+La référence constante vers la matrice de vue inverse. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_camera_a4fda1867eb3e5ce24052425183016e40}\label{classlve_1_1_lve_camera_a4fda1867eb3e5ce24052425183016e40} 
+\index{lve::LveCamera@{lve::LveCamera}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!lve::LveCamera@{lve::LveCamera}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily glm\+::vec3 lve\+::\+Lve\+Camera\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la position de la caméra. 
+
+\begin{DoxyReturn}{Renvoie}
+La position de la caméra en tant que vecteur glm\+::vec3. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_camera_a3994d2b8473f1997a84ba936013db504}\label{classlve_1_1_lve_camera_a3994d2b8473f1997a84ba936013db504} 
+\index{lve::LveCamera@{lve::LveCamera}!GetProjection@{GetProjection}}
+\index{GetProjection@{GetProjection}!lve::LveCamera@{lve::LveCamera}}
+\doxysubsubsection{\texorpdfstring{GetProjection()}{GetProjection()}}
+{\footnotesize\ttfamily const glm\+::mat4 \& lve\+::\+Lve\+Camera\+::\+Get\+Projection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Renvoie la matrice de projection. 
+
+Cette fonction renvoie la matrice de projection stockée en interne. La matrice de projection est généralement utilisée en infographie pour projeter des coordonnées 3D sur un écran 2D.
+
+\begin{DoxyReturn}{Renvoie}
+const glm\+::mat4\& La matrice de projection. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_camera_aff6d8f5cba65207351c8cedd8cb8b789}\label{classlve_1_1_lve_camera_aff6d8f5cba65207351c8cedd8cb8b789} 
+\index{lve::LveCamera@{lve::LveCamera}!GetView@{GetView}}
+\index{GetView@{GetView}!lve::LveCamera@{lve::LveCamera}}
+\doxysubsubsection{\texorpdfstring{GetView()}{GetView()}}
+{\footnotesize\ttfamily const glm\+::mat4 \& lve\+::\+Lve\+Camera\+::\+Get\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Renvoie la matrice de vue. 
+
+Cette fonction renvoie la matrice de vue stockée en interne. La matrice de vue est utilisée dans les systèmes de graphiques 3D pour transformer les coordonnées des objets de l\textquotesingle{}espace monde à l\textquotesingle{}espace caméra.
+
+\begin{DoxyReturn}{Renvoie}
+const glm\+::mat4\& La matrice de vue. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_camera_ac7cd10387ef6e4b6c64fd3d80c1a879e}\label{classlve_1_1_lve_camera_ac7cd10387ef6e4b6c64fd3d80c1a879e} 
+\index{lve::LveCamera@{lve::LveCamera}!SetOrthographicProjection@{SetOrthographicProjection}}
+\index{SetOrthographicProjection@{SetOrthographicProjection}!lve::LveCamera@{lve::LveCamera}}
+\doxysubsubsection{\texorpdfstring{SetOrthographicProjection()}{SetOrthographicProjection()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Camera\+::\+Set\+Orthographic\+Projection (\begin{DoxyParamCaption}\item[{float}]{\+\_\+left,  }\item[{float}]{\+\_\+right,  }\item[{float}]{\+\_\+top,  }\item[{float}]{\+\_\+bottom,  }\item[{float}]{\+\_\+near,  }\item[{float}]{\+\_\+far }\end{DoxyParamCaption})}
+
+
+
+Définit une projection orthographique. 
+
+Cette fonction configure la matrice de projection pour une projection orthographique. Une projection orthographique est une méthode de projection en infographie où les objets sont projetés sur un plan parallèle à l\textquotesingle{}écran, ce qui donne une représentation sans perspective.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+left} & La position du plan de gauche de la vue orthographique. \\
+\hline
+{\em \+\_\+right} & La position du plan de droite de la vue orthographique. \\
+\hline
+{\em \+\_\+top} & La position du plan de dessus de la vue orthographique. \\
+\hline
+{\em \+\_\+bottom} & La position du plan de dessous de la vue orthographique. \\
+\hline
+{\em \+\_\+near} & La distance au plan de vue proche. \\
+\hline
+{\em \+\_\+far} & La distance au plan de vue éloignée. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_camera_ab5e5cc5b81379ecaa39599fe978285da}\label{classlve_1_1_lve_camera_ab5e5cc5b81379ecaa39599fe978285da} 
+\index{lve::LveCamera@{lve::LveCamera}!SetPerspectiveProjection@{SetPerspectiveProjection}}
+\index{SetPerspectiveProjection@{SetPerspectiveProjection}!lve::LveCamera@{lve::LveCamera}}
+\doxysubsubsection{\texorpdfstring{SetPerspectiveProjection()}{SetPerspectiveProjection()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Camera\+::\+Set\+Perspective\+Projection (\begin{DoxyParamCaption}\item[{float}]{\+\_\+fovY,  }\item[{float}]{\+\_\+aspect,  }\item[{float}]{\+\_\+near,  }\item[{float}]{\+\_\+far }\end{DoxyParamCaption})}
+
+
+
+Définit une projection en perspective. 
+
+Cette fonction configure la matrice de projection pour une projection en perspective. Une projection en perspective est une méthode de projection en infographie qui crée une illusion de profondeur en donnant aux objets plus éloignés l\textquotesingle{}air d\textquotesingle{}être plus petits qu\textquotesingle{}ils ne le sont réellement.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+fovY} & L\textquotesingle{}angle de champ vertical de la vue en degrés. \\
+\hline
+{\em \+\_\+aspect} & Le rapport d\textquotesingle{}aspect de la vue, défini comme la largeur de la fenêtre divisée par sa hauteur. \\
+\hline
+{\em \+\_\+near} & La distance au plan de vue proche. \\
+\hline
+{\em \+\_\+far} & La distance au plan de vue éloignée.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Cette fonction exige que {\ttfamily \+\_\+aspect} soit différent de zéro. 
+
+L\textquotesingle{}angle de champ vertical {\ttfamily \+\_\+fovY} est spécifié en degrés. 
+\end{DoxyNote}
+\Hypertarget{classlve_1_1_lve_camera_a63bcbca50d9427983b7500c632bcec73}\label{classlve_1_1_lve_camera_a63bcbca50d9427983b7500c632bcec73} 
+\index{lve::LveCamera@{lve::LveCamera}!SetViewDirection@{SetViewDirection}}
+\index{SetViewDirection@{SetViewDirection}!lve::LveCamera@{lve::LveCamera}}
+\doxysubsubsection{\texorpdfstring{SetViewDirection()}{SetViewDirection()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Camera\+::\+Set\+View\+Direction (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{\+\_\+position,  }\item[{glm\+::vec3}]{\+\_\+direction,  }\item[{glm\+::vec3}]{\+\_\+up = {\ttfamily glm\+:\+:vec3\{0.f,~-\/1.f,~0.f\}} }\end{DoxyParamCaption})}
+
+
+
+Définit la direction de vue de la caméra. 
+
+Cette fonction configure la matrice de vue pour orienter la caméra dans une direction spécifiée. La matrice de vue est utilisée en infographie pour transformer les coordonnées des objets de l\textquotesingle{}espace monde à l\textquotesingle{}espace caméra, en tenant compte de la position de la caméra et de sa direction de vue.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+position} & La position de la caméra dans l\textquotesingle{}espace. \\
+\hline
+{\em \+\_\+direction} & La direction vers laquelle la caméra fait face. \\
+\hline
+{\em \+\_\+up} & La direction considérée comme étant "{}vers le haut"{} pour la caméra.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Les vecteurs \+\_\+direction et \+\_\+up doivent être normalisés pour garantir des résultats corrects. 
+\end{DoxyNote}
+\Hypertarget{classlve_1_1_lve_camera_a640db642681e51ad4fe9fba76ac48cb1}\label{classlve_1_1_lve_camera_a640db642681e51ad4fe9fba76ac48cb1} 
+\index{lve::LveCamera@{lve::LveCamera}!SetViewTarget@{SetViewTarget}}
+\index{SetViewTarget@{SetViewTarget}!lve::LveCamera@{lve::LveCamera}}
+\doxysubsubsection{\texorpdfstring{SetViewTarget()}{SetViewTarget()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Camera\+::\+Set\+View\+Target (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{\+\_\+position,  }\item[{glm\+::vec3}]{\+\_\+target,  }\item[{glm\+::vec3}]{\+\_\+up = {\ttfamily glm\+:\+:vec3\{0.f,~-\/1.f,~0.f\}} }\end{DoxyParamCaption})}
+
+
+
+Définit la cible de vue de la caméra. 
+
+Cette fonction configure la matrice de vue pour orienter la caméra vers une cible spécifiée. La matrice de vue est utilisée en infographie pour transformer les coordonnées des objets de l\textquotesingle{}espace monde à l\textquotesingle{}espace caméra, en tenant compte de la position de la caméra et de sa direction de vue.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+position} & La position de la caméra dans l\textquotesingle{}espace. \\
+\hline
+{\em \+\_\+target} & La position de la cible vers laquelle la caméra doit être orientée. \\
+\hline
+{\em \+\_\+up} & La direction considérée comme étant "{}vers le haut"{} pour la caméra.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+La différence entre \+\_\+target et \+\_\+position est utilisée pour calculer la direction de vue de la caméra. 
+\end{DoxyNote}
+\Hypertarget{classlve_1_1_lve_camera_a2e220832a2e7222ac94601527f36bbb4}\label{classlve_1_1_lve_camera_a2e220832a2e7222ac94601527f36bbb4} 
+\index{lve::LveCamera@{lve::LveCamera}!SetViewYXZ@{SetViewYXZ}}
+\index{SetViewYXZ@{SetViewYXZ}!lve::LveCamera@{lve::LveCamera}}
+\doxysubsubsection{\texorpdfstring{SetViewYXZ()}{SetViewYXZ()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Camera\+::\+Set\+View\+YXZ (\begin{DoxyParamCaption}\item[{glm\+::vec3}]{\+\_\+position,  }\item[{glm\+::vec3}]{\+\_\+rotation }\end{DoxyParamCaption})}
+
+
+
+Définit la vue de la caméra en utilisant les rotations YXZ. 
+
+Cette fonction configure la matrice de vue pour orienter la caméra en fonction des rotations autour des axes Y, X et Z. La matrice de vue est utilisée en infographie pour transformer les coordonnées des objets de l\textquotesingle{}espace monde à l\textquotesingle{}espace caméra, en tenant compte de la position de la caméra et de son orientation.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+position} & La position de la caméra dans l\textquotesingle{}espace. \\
+\hline
+{\em \+\_\+rotation} & Les rotations autour des axes Y, X et Z, respectivement, spécifiées en radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Les rotations sont appliquées dans l\textquotesingle{}ordre suivant \+: d\textquotesingle{}abord autour de l\textquotesingle{}axe Y, puis autour de l\textquotesingle{}axe X et enfin autour de l\textquotesingle{}axe Z. 
+\end{DoxyNote}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Camera/lve\+\_\+camera.\+h\item 
+sources/\+Camera/lve\+\_\+camera.\+cpp\end{DoxyCompactItemize}

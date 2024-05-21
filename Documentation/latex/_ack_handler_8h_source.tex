@@ -1,0 +1,46 @@
+\doxysection{Ack\+Handler.\+h}
+\hypertarget{_ack_handler_8h_source}{}\label{_ack_handler_8h_source}\index{includes/UDP/AckHandler.h@{includes/UDP/AckHandler.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}UDP/Utils/Utils.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}UDP/Utils/Utils.inl"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }Bousk}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{namespace\ }UDP}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler}{AckHandler}}}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler}{AckHandler}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler}{AckHandler}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler}{AckHandler}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler}{AckHandler}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler}{AckHandler}}\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler}{AckHandler}}(\mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler}{AckHandler}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler}{AckHandler}}\&\ operator=(\mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler}{AckHandler}}\&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler}{\string~AckHandler}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler_a8968e4a461ad4e20d94a434202c3f653}{update}}(uint16\ newAck,\ uint64\ previousAcks,\ \textcolor{keywordtype}{bool}\ trackLoss\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isAcked(uint16\ ack)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isNewlyAcked(uint16\ ack)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ uint16\ lastAck()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ uint64\ previousAcksMask()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<uint16>\ getNewAcks()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<uint16>\&\&\ loss();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ uint16\ mLastAck\ =\ -\/1;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ uint64\ mPreviousAcks\ =\ -\/1;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ uint64\ mNewAcks\ =\ 0;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<uint16>\ mLoss;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mLastAckIsNew\ \{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \}}
+
+\end{DoxyCode}

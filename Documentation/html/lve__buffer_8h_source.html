@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/LveEngine/lve_buffer.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_d17dbbfb40e9127a51f93ba39cbbb546.html">LveEngine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">lve_buffer.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vulkan/vulkan.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;LveEngine/lve_device.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>lve</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_buffer.html">   11</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classlve_1_1_lve_buffer.html">LveBuffer</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            <a class="code hl_function" href="classlve_1_1_lve_buffer.html#ade3763325c66ecf858b7fe9f3460eece">LveBuffer</a>(</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                <a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp;              _device,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                vk::DeviceSize          _instanceSize,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                uint32_t                _instanceCount,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                vk::BufferUsageFlags    _usageFlags,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                vk::MemoryPropertyFlags _memoryPropertyFlags,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                vk::DeviceSize          _minOffsetAlignment = 1); </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <a class="code hl_function" href="classlve_1_1_lve_buffer.html#aa6c331ab69d4aa643adf4064f6d0b0a6">~LveBuffer</a>(); </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_buffer.html#a3d89ad819978a1b70af40eedffe52e84">   24</a></span>            <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a3d89ad819978a1b70af40eedffe52e84">LveBuffer</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlve_1_1_lve_buffer.html">LveBuffer</a>&amp;)            = <span class="keyword">delete</span>; </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_buffer.html#a8dfe52fd4f156fa70c72c15da717ad51">   25</a></span>            <a class="code hl_class" href="classlve_1_1_lve_buffer.html">LveBuffer</a>&amp; <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a8dfe52fd4f156fa70c72c15da717ad51">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlve_1_1_lve_buffer.html">LveBuffer</a>&amp;) = <span class="keyword">delete</span>; </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            vk::Result <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a058b9e955091430382eabb82a92d6e14">Map</a>(vk::DeviceSize _size = VK_WHOLE_SIZE, vk::DeviceSize _offset = 0);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a3737439d5df0a6924df04243cea435c6">Unmap</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a0418ba23f49723e99673394eddd51379">WriteToBuffer</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>*    _data, vk::DeviceSize _size = VK_WHOLE_SIZE,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                               vk::DeviceSize _offset                     = 0) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            vk::Result <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a469fde4476081eb91e2fdfe5f3228cd5">Flush</a>(vk::DeviceSize _size = VK_WHOLE_SIZE, vk::DeviceSize _offset = 0) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            vk::DescriptorBufferInfo <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a1d4c7fa6311f80d62c12a3a639c8f8dd">DescriptorInfo</a>(vk::DeviceSize _size   = VK_WHOLE_SIZE,</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                                                    vk::DeviceSize _offset = 0) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            vk::Result <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a9c4726a7691ff98b61d244833825cee4">Invalidate</a>(vk::DeviceSize _size = VK_WHOLE_SIZE, vk::DeviceSize _offset = 0) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_lve_buffer.html#ac1263a1e75b0266d516446e56325a241">WriteToIndex</a>(<span class="keywordtype">void</span>* _data, <span class="keywordtype">int</span> _index);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            vk::Result <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a3d8eebf70f870470496e9f06cf68170f">FlushIndex</a>(<span class="keywordtype">int</span> _index);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            vk::DescriptorBufferInfo <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a7c01c935c41e31c205c20d7bc53f1339">DescriptorInfoForIndex</a>(<span class="keywordtype">int</span> _index);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            vk::Result <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a5f2aa2a10a5c6eb70d267ece1d174377">InvalidateIndex</a>(<span class="keywordtype">int</span> _index);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_buffer.html#a123c3a8b7d2a889b2c33177830a6455b">  124</a></span>            vk::Buffer <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a123c3a8b7d2a889b2c33177830a6455b">GetBuffer</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> buffer; }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_buffer.html#a97d181347b813107739e2b4911470b89">  131</a></span>            <span class="keywordtype">void</span>* <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a97d181347b813107739e2b4911470b89">GetMappedMemory</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mapped; }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_buffer.html#a544b877cb8d2db1d8fd8e2e68637c95a">  138</a></span>            uint32_t <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a544b877cb8d2db1d8fd8e2e68637c95a">GetInstanceCount</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> instanceCount; }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_buffer.html#a4cf00afb05543c9a4095f022dcd97b97">  145</a></span>            vk::DeviceSize <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a4cf00afb05543c9a4095f022dcd97b97">GetInstanceSize</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> instanceSize; }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_buffer.html#a5ab64933278c2ba4dabb593f19b0d1d5">  152</a></span>            vk::DeviceSize <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a5ab64933278c2ba4dabb593f19b0d1d5">GetAlignmentSize</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> instanceSize; }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_buffer.html#a66004c65f1a48e5f0ca9ac588230ae4f">  159</a></span>            vk::BufferUsageFlags <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a66004c65f1a48e5f0ca9ac588230ae4f">GetUsageFlags</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> usageFlags; }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_buffer.html#a8eedbdd757e9d0a72099d8463dcd171b">  166</a></span>            vk::MemoryPropertyFlags <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a8eedbdd757e9d0a72099d8463dcd171b">GetMemoryPropertyFlags</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> memoryPropertyFlags; }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_buffer.html#a4f5e91163936df8b5d11f9d24ce1172e">  173</a></span>            vk::DeviceSize <a class="code hl_function" href="classlve_1_1_lve_buffer.html#a4f5e91163936df8b5d11f9d24ce1172e">GetBufferSize</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> bufferSize; }</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <span class="keyword">static</span> vk::DeviceSize GetAlignment(vk::DeviceSize _instanceSize, vk::DeviceSize _minOffsetAlignment);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            <a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp; lveDevice;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            <span class="keywordtype">void</span>* mapped = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            vk::Buffer buffer = VK_NULL_HANDLE;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            vk::DeviceMemory memory = VK_NULL_HANDLE;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            vk::DeviceSize bufferSize;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            uint32_t instanceCount;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            vk::DeviceSize instanceSize;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            vk::DeviceSize alignmentSize;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            vk::BufferUsageFlags usageFlags;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            vk::MemoryPropertyFlags memoryPropertyFlags;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    };</div>
+</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>} <span class="comment">// namespace lve</span></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html"><div class="ttname"><a href="classlve_1_1_lve_buffer.html">lve::LveBuffer</a></div><div class="ttdoc">Classe représentant un tampon Vulkan.</div><div class="ttdef"><b>Definition</b> lve_buffer.h:12</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a0418ba23f49723e99673394eddd51379"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a0418ba23f49723e99673394eddd51379">lve::LveBuffer::WriteToBuffer</a></div><div class="ttdeci">void WriteToBuffer(const void *_data, vk::DeviceSize _size=VK_WHOLE_SIZE, vk::DeviceSize _offset=0) const</div><div class="ttdoc">Écrit les données dans le tampon.</div><div class="ttdef"><b>Definition</b> lve_buffer.cpp:95</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a058b9e955091430382eabb82a92d6e14"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a058b9e955091430382eabb82a92d6e14">lve::LveBuffer::Map</a></div><div class="ttdeci">vk::Result Map(vk::DeviceSize _size=VK_WHOLE_SIZE, vk::DeviceSize _offset=0)</div><div class="ttdoc">Mappe le tampon en mémoire.</div><div class="ttdef"><b>Definition</b> lve_buffer.cpp:66</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a123c3a8b7d2a889b2c33177830a6455b"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a123c3a8b7d2a889b2c33177830a6455b">lve::LveBuffer::GetBuffer</a></div><div class="ttdeci">vk::Buffer GetBuffer() const</div><div class="ttdoc">Récupère le tampon Vulkan associé à l'objet LveBuffer.</div><div class="ttdef"><b>Definition</b> lve_buffer.h:124</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a1d4c7fa6311f80d62c12a3a639c8f8dd"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a1d4c7fa6311f80d62c12a3a639c8f8dd">lve::LveBuffer::DescriptorInfo</a></div><div class="ttdeci">vk::DescriptorBufferInfo DescriptorInfo(vk::DeviceSize _size=VK_WHOLE_SIZE, vk::DeviceSize _offset=0) const</div><div class="ttdoc">Récupère les informations de tampon de descripteur.</div><div class="ttdef"><b>Definition</b> lve_buffer.cpp:159</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a3737439d5df0a6924df04243cea435c6"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a3737439d5df0a6924df04243cea435c6">lve::LveBuffer::Unmap</a></div><div class="ttdeci">void Unmap()</div><div class="ttdoc">Désalloue le tampon mappé en mémoire.</div><div class="ttdef"><b>Definition</b> lve_buffer.cpp:77</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a3d89ad819978a1b70af40eedffe52e84"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a3d89ad819978a1b70af40eedffe52e84">lve::LveBuffer::LveBuffer</a></div><div class="ttdeci">LveBuffer(const LveBuffer &amp;)=delete</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a3d8eebf70f870470496e9f06cf68170f"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a3d8eebf70f870470496e9f06cf68170f">lve::LveBuffer::FlushIndex</a></div><div class="ttdeci">vk::Result FlushIndex(int _index)</div><div class="ttdoc">Flushes the memory-mapped buffer range for the specified index.</div><div class="ttdef"><b>Definition</b> lve_buffer.cpp:186</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a469fde4476081eb91e2fdfe5f3228cd5"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a469fde4476081eb91e2fdfe5f3228cd5">lve::LveBuffer::Flush</a></div><div class="ttdeci">vk::Result Flush(vk::DeviceSize _size=VK_WHOLE_SIZE, vk::DeviceSize _offset=0) const</div><div class="ttdoc">Flushes the memory-mapped buffer range.</div><div class="ttdef"><b>Definition</b> lve_buffer.cpp:122</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a4cf00afb05543c9a4095f022dcd97b97"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a4cf00afb05543c9a4095f022dcd97b97">lve::LveBuffer::GetInstanceSize</a></div><div class="ttdeci">vk::DeviceSize GetInstanceSize() const</div><div class="ttdoc">Récupère la taille de chaque instance dans le tampon.</div><div class="ttdef"><b>Definition</b> lve_buffer.h:145</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a4f5e91163936df8b5d11f9d24ce1172e"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a4f5e91163936df8b5d11f9d24ce1172e">lve::LveBuffer::GetBufferSize</a></div><div class="ttdeci">vk::DeviceSize GetBufferSize() const</div><div class="ttdoc">Récupère la taille totale du tampon.</div><div class="ttdef"><b>Definition</b> lve_buffer.h:173</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a544b877cb8d2db1d8fd8e2e68637c95a"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a544b877cb8d2db1d8fd8e2e68637c95a">lve::LveBuffer::GetInstanceCount</a></div><div class="ttdeci">uint32_t GetInstanceCount() const</div><div class="ttdoc">Récupère le nombre d'instances dans le tampon.</div><div class="ttdef"><b>Definition</b> lve_buffer.h:138</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a5ab64933278c2ba4dabb593f19b0d1d5"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a5ab64933278c2ba4dabb593f19b0d1d5">lve::LveBuffer::GetAlignmentSize</a></div><div class="ttdeci">vk::DeviceSize GetAlignmentSize() const</div><div class="ttdoc">Récupère la taille d'alignement du tampon.</div><div class="ttdef"><b>Definition</b> lve_buffer.h:152</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a5f2aa2a10a5c6eb70d267ece1d174377"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a5f2aa2a10a5c6eb70d267ece1d174377">lve::LveBuffer::InvalidateIndex</a></div><div class="ttdeci">vk::Result InvalidateIndex(int _index)</div><div class="ttdoc">Invalide la plage du tampon pour l'index spécifié.</div><div class="ttdef"><b>Definition</b> lve_buffer.cpp:209</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a66004c65f1a48e5f0ca9ac588230ae4f"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a66004c65f1a48e5f0ca9ac588230ae4f">lve::LveBuffer::GetUsageFlags</a></div><div class="ttdeci">vk::BufferUsageFlags GetUsageFlags() const</div><div class="ttdoc">Récupère les indicateurs d'utilisation du tampon.</div><div class="ttdef"><b>Definition</b> lve_buffer.h:159</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a7c01c935c41e31c205c20d7bc53f1339"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a7c01c935c41e31c205c20d7bc53f1339">lve::LveBuffer::DescriptorInfoForIndex</a></div><div class="ttdeci">vk::DescriptorBufferInfo DescriptorInfoForIndex(int _index)</div><div class="ttdoc">Récupère les informations de tampon de descripteur pour l'index spécifié.</div><div class="ttdef"><b>Definition</b> lve_buffer.cpp:195</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a8dfe52fd4f156fa70c72c15da717ad51"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a8dfe52fd4f156fa70c72c15da717ad51">lve::LveBuffer::operator=</a></div><div class="ttdeci">LveBuffer &amp; operator=(const LveBuffer &amp;)=delete</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a8eedbdd757e9d0a72099d8463dcd171b"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a8eedbdd757e9d0a72099d8463dcd171b">lve::LveBuffer::GetMemoryPropertyFlags</a></div><div class="ttdeci">vk::MemoryPropertyFlags GetMemoryPropertyFlags() const</div><div class="ttdoc">Récupère les propriétés de la mémoire du tampon.</div><div class="ttdef"><b>Definition</b> lve_buffer.h:166</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a97d181347b813107739e2b4911470b89"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a97d181347b813107739e2b4911470b89">lve::LveBuffer::GetMappedMemory</a></div><div class="ttdeci">void * GetMappedMemory() const</div><div class="ttdoc">Récupère le pointeur vers la mémoire mappée du tampon.</div><div class="ttdef"><b>Definition</b> lve_buffer.h:131</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_a9c4726a7691ff98b61d244833825cee4"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#a9c4726a7691ff98b61d244833825cee4">lve::LveBuffer::Invalidate</a></div><div class="ttdeci">vk::Result Invalidate(vk::DeviceSize _size=VK_WHOLE_SIZE, vk::DeviceSize _offset=0) const</div><div class="ttdoc">Invalidate the memory-mapped buffer range.</div><div class="ttdef"><b>Definition</b> lve_buffer.cpp:142</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_aa6c331ab69d4aa643adf4064f6d0b0a6"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#aa6c331ab69d4aa643adf4064f6d0b0a6">lve::LveBuffer::~LveBuffer</a></div><div class="ttdeci">~LveBuffer()</div><div class="ttdef"><b>Definition</b> lve_buffer.cpp:50</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_ac1263a1e75b0266d516446e56325a241"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#ac1263a1e75b0266d516446e56325a241">lve::LveBuffer::WriteToIndex</a></div><div class="ttdeci">void WriteToIndex(void *_data, int _index)</div><div class="ttdoc">Écrit les données dans l'index spécifié du tampon.</div><div class="ttdef"><b>Definition</b> lve_buffer.cpp:175</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_buffer_html_ade3763325c66ecf858b7fe9f3460eece"><div class="ttname"><a href="classlve_1_1_lve_buffer.html#ade3763325c66ecf858b7fe9f3460eece">lve::LveBuffer::LveBuffer</a></div><div class="ttdeci">LveBuffer(LveDevice &amp;_device, vk::DeviceSize _instanceSize, uint32_t _instanceCount, vk::BufferUsageFlags _usageFlags, vk::MemoryPropertyFlags _memoryPropertyFlags, vk::DeviceSize _minOffsetAlignment=1)</div><div class="ttdef"><b>Definition</b> lve_buffer.cpp:33</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html"><div class="ttname"><a href="classlve_1_1_lve_device.html">lve::LveDevice</a></div><div class="ttdoc">Classe représentant un périphérique Vulkan.</div><div class="ttdef"><b>Definition</b> lve_device.h:41</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

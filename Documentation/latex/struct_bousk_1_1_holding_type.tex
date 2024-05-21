@@ -1,0 +1,42 @@
+\doxysection{Référence du modèle de la structure Bousk\+::Holding\+Type\texorpdfstring{$<$}{<} A, B \texorpdfstring{$>$}{>}}
+\hypertarget{struct_bousk_1_1_holding_type}{}\label{struct_bousk_1_1_holding_type}\index{Bousk::HoldingType$<$ A, B $>$@{Bousk::HoldingType$<$ A, B $>$}}
+\doxysubsubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{struct_bousk_1_1_holding_type_a9d9720ca684a6876aa4579ae023b976c}{Type}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_bousk_1_1_holding_type_afe8cf3feef3db3570ab17feb0c1d0ed2}\label{struct_bousk_1_1_holding_type_afe8cf3feef3db3570ab17feb0c1d0ed2} 
+static constexpr bool {\bfseries Is\+Possible} = !((std\+::is\+\_\+same\+\_\+v$<$A, uint64$>$ \&\& std\+::is\+\_\+signed\+\_\+v$<$B$>$) \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} (std\+::is\+\_\+same\+\_\+v$<$B, uint64$>$ \&\& std\+::is\+\_\+signed\+\_\+v$<$A$>$))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des définitions de type membres}
+\Hypertarget{struct_bousk_1_1_holding_type_a9d9720ca684a6876aa4579ae023b976c}\label{struct_bousk_1_1_holding_type_a9d9720ca684a6876aa4579ae023b976c} 
+\index{Bousk::HoldingType$<$ A, B $>$@{Bousk::HoldingType$<$ A, B $>$}!Type@{Type}}
+\index{Type@{Type}!Bousk::HoldingType$<$ A, B $>$@{Bousk::HoldingType$<$ A, B $>$}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily template$<$class A , class B $>$ \\
+using \mbox{\hyperlink{struct_bousk_1_1_holding_type}{Bousk\+::\+Holding\+Type}}$<$ A, B $>$\+::\+Type}
+
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \textcolor{keyword}{typename}\ std::conditional\_t<!IsPossible,\ void}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<std::is\_same\_v<A,\ B>,\ A}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<std::is\_signed\_v<A>\ ==\ std::is\_signed\_v<B>,\ \textcolor{keyword}{typename}\ Biggest<A,\ B>::Type}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<std::is\_signed\_v<typename\ Biggest<A,\ B>::Type>,\ \textcolor{keyword}{typename}\ Biggest<A,\ B>::Type}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ,\ std::make\_signed\_t<typename\ Promote<typename\ Biggest<A,\ B>::Type>::Type>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ >>>>}
+
+\end{DoxyCode}
+
+
+La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+UDP/Ranged\+Integer.\+h\end{DoxyCompactItemize}

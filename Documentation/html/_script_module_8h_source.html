@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/Modules/ScriptModule.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_8ba5de94bce70429844b810000c4522a.html">Modules</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">ScriptModule.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;queue&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;Module.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Script/IScript.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_script_module.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="class_script_module.html">ScriptModule</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_module.html">Module</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_script_module.html#a9095faa300d28d811b5fa472db47b442">   20</a></span>    <a class="code hl_function" href="class_script_module.html#a9095faa300d28d811b5fa472db47b442">ScriptModule</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_script_module.html#a3ed6883a8992c8e10a1b04b1ec60f1f1">   25</a></span>    <a class="code hl_function" href="class_script_module.html#a3ed6883a8992c8e10a1b04b1ec60f1f1">~ScriptModule</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">class</span> U&gt;</div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_script_module.html#a4c386f4e25f28a6d1cb6c332961ba4cb">   34</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_script_module.html#a4c386f4e25f28a6d1cb6c332961ba4cb">AddScript</a>()</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_class" href="class_i_script.html">IScript</a>* script = <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_i_script.html">IScript</a>*<span class="keyword">&gt;</span>(<span class="keyword">new</span> U);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        script-&gt;<a class="code hl_function" href="class_i_script.html#acfb73ccefc0766fe7acb341a1f4e37c7">Initialize</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        scriptsToStart.push(script);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        scripts.push_back(script);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#pragma region Event</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_script_module.html#a3d323ed01e33f3fe93dfeaa4b12137a2">   48</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_script_module.html#a3d323ed01e33f3fe93dfeaa4b12137a2">Update</a>()<span class="keyword"> override</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_function" href="class_script_module.html#a4af39590c8da663dd0763eef50c20648">UpdateScripts</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#pragma endregion</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_script_module.html#a8f6dc9891fb765c5def4ef8fb3eac411">StartScripts</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_class" href="class_i_script.html">IScript</a>* <a class="code hl_function" href="class_script_module.html#afa2905f3d16b2435f35d32b51637f3a9">GetIScriptByName</a>(<span class="keyword">const</span> std::string&amp; _name) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_script_module.html#a4af39590c8da663dd0763eef50c20648">UpdateScripts</a>();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_script_module.html#a7a9c2991aca47d845263ed67d3471a59">Stop</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    std::vector&lt;IScript*&gt; scripts;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    std::queue&lt;IScript*&gt; scriptsToStart;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>};</div>
+</div>
+<div class="ttc" id="aclass_i_script_html"><div class="ttname"><a href="class_i_script.html">IScript</a></div><div class="ttdoc">Interface de base pour les scripts.</div><div class="ttdef"><b>Definition</b> IScript.h:32</div></div>
+<div class="ttc" id="aclass_i_script_html_acfb73ccefc0766fe7acb341a1f4e37c7"><div class="ttname"><a href="class_i_script.html#acfb73ccefc0766fe7acb341a1f4e37c7">IScript::Initialize</a></div><div class="ttdeci">virtual void Initialize()</div><div class="ttdoc">Initialise le script.</div><div class="ttdef"><b>Definition</b> IScript.h:42</div></div>
+<div class="ttc" id="aclass_module_html"><div class="ttname"><a href="class_module.html">Module</a></div><div class="ttdoc">Classe Module.</div><div class="ttdef"><b>Definition</b> Module.h:19</div></div>
+<div class="ttc" id="aclass_script_module_html"><div class="ttname"><a href="class_script_module.html">ScriptModule</a></div><div class="ttdoc">Classe ScriptModule.</div><div class="ttdef"><b>Definition</b> ScriptModule.h:15</div></div>
+<div class="ttc" id="aclass_script_module_html_a3d323ed01e33f3fe93dfeaa4b12137a2"><div class="ttname"><a href="class_script_module.html#a3d323ed01e33f3fe93dfeaa4b12137a2">ScriptModule::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">Met à jour le module.</div><div class="ttdef"><b>Definition</b> ScriptModule.h:48</div></div>
+<div class="ttc" id="aclass_script_module_html_a3ed6883a8992c8e10a1b04b1ec60f1f1"><div class="ttname"><a href="class_script_module.html#a3ed6883a8992c8e10a1b04b1ec60f1f1">ScriptModule::~ScriptModule</a></div><div class="ttdeci">~ScriptModule()=default</div><div class="ttdoc">Destructeur par défaut.</div></div>
+<div class="ttc" id="aclass_script_module_html_a4af39590c8da663dd0763eef50c20648"><div class="ttname"><a href="class_script_module.html#a4af39590c8da663dd0763eef50c20648">ScriptModule::UpdateScripts</a></div><div class="ttdeci">void UpdateScripts()</div><div class="ttdoc">Met à jour tous les scripts.</div><div class="ttdef"><b>Definition</b> ScriptModule.cpp:28</div></div>
+<div class="ttc" id="aclass_script_module_html_a4c386f4e25f28a6d1cb6c332961ba4cb"><div class="ttname"><a href="class_script_module.html#a4c386f4e25f28a6d1cb6c332961ba4cb">ScriptModule::AddScript</a></div><div class="ttdeci">bool AddScript()</div><div class="ttdoc">Ajoute un script au module.</div><div class="ttdef"><b>Definition</b> ScriptModule.h:34</div></div>
+<div class="ttc" id="aclass_script_module_html_a7a9c2991aca47d845263ed67d3471a59"><div class="ttname"><a href="class_script_module.html#a7a9c2991aca47d845263ed67d3471a59">ScriptModule::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdoc">Arrête tous les scripts et libère les ressources.</div><div class="ttdef"><b>Definition</b> ScriptModule.cpp:43</div></div>
+<div class="ttc" id="aclass_script_module_html_a8f6dc9891fb765c5def4ef8fb3eac411"><div class="ttname"><a href="class_script_module.html#a8f6dc9891fb765c5def4ef8fb3eac411">ScriptModule::StartScripts</a></div><div class="ttdeci">bool StartScripts()</div><div class="ttdoc">Démarre tous les scripts en attente.</div><div class="ttdef"><b>Definition</b> ScriptModule.cpp:5</div></div>
+<div class="ttc" id="aclass_script_module_html_a9095faa300d28d811b5fa472db47b442"><div class="ttname"><a href="class_script_module.html#a9095faa300d28d811b5fa472db47b442">ScriptModule::ScriptModule</a></div><div class="ttdeci">ScriptModule()=default</div><div class="ttdoc">Constructeur par défaut.</div></div>
+<div class="ttc" id="aclass_script_module_html_afa2905f3d16b2435f35d32b51637f3a9"><div class="ttname"><a href="class_script_module.html#afa2905f3d16b2435f35d32b51637f3a9">ScriptModule::GetIScriptByName</a></div><div class="ttdeci">IScript * GetIScriptByName(const std::string &amp;_name) const</div><div class="ttdoc">Obtient un script par son nom.</div><div class="ttdef"><b>Definition</b> ScriptModule.cpp:16</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

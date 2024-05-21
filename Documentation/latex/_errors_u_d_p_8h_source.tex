@@ -1,0 +1,35 @@
+\doxysection{Errors\+UDP.\+h}
+\hypertarget{_errors_u_d_p_8h_source}{}\label{_errors_u_d_p_8h_source}\index{includes/UDP/ErrorsUDP.h@{includes/UDP/ErrorsUDP.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <winSock2.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <cerrno>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ SOCKET\ int}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ INVALID\_SOCKET\ ((int)-\/1)}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SOCKET\_ERROR\ (int(-\/1))}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }Bousk}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{namespace\ }Network}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }ErrorsUDP}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ Get();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AGAIN\ =\ WSATRY\_AGAIN,\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WOULDBLOCK\ =\ WSAEWOULDBLOCK,\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INPROGRESS\ =\ WSAEINPROGRESS,\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ INTR\ =\ WSAEINTR,\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \}}
+
+\end{DoxyCode}

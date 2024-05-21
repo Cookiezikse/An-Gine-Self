@@ -1,0 +1,335 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Lve\+Swap\+Chain}
+\hypertarget{classlve_1_1_lve_swap_chain}{}\label{classlve_1_1_lve_swap_chain}\index{lve::LveSwapChain@{lve::LveSwapChain}}
+
+
+Classe représentant une chaîne d\textquotesingle{}échange Vulkan.  
+
+
+
+
+{\ttfamily \#include $<$lve\+\_\+swap\+\_\+chain.\+h$>$}
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_swap_chain_aeeddf19004a02f382d5f5128173b8352}{Lve\+Swap\+Chain}} (\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&\+\_\+device\+Ref, vk\+::\+Extent2D \+\_\+window\+Extent)
+\begin{DoxyCompactList}\small\item\em Constructeur prenant une référence à un objet \doxylink{classlve_1_1_lve_device}{Lve\+Device} et une étendue window\+Extent. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_swap_chain_ab8e074749422fd396425053545ceb235}{Lve\+Swap\+Chain}} (\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&\+\_\+device\+Ref, vk\+::\+Extent2D \+\_\+extent, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlve_1_1_lve_swap_chain}{Lve\+Swap\+Chain}} $>$ \&\+\_\+previous)
+\begin{DoxyCompactList}\small\item\em Constructeur prenant une référence à un objet \doxylink{classlve_1_1_lve_device}{Lve\+Device}, une étendue extent et un pointeur partagé vers une précédente chaîne d\textquotesingle{}échanges. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_lve_swap_chain_a32030cdbbc79c138d31ff1bb692afef4}\label{classlve_1_1_lve_swap_chain_a32030cdbbc79c138d31ff1bb692afef4} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Lve\+Swap\+Chain} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_lve_swap_chain_af99ff1e13861395b4372eed18734822f}\label{classlve_1_1_lve_swap_chain_af99ff1e13861395b4372eed18734822f} 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em Initialise la chaîne d\textquotesingle{}échanges. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_lve_swap_chain_ab96dac1c6f4ae3d0a44bd4331639b635}\label{classlve_1_1_lve_swap_chain_ab96dac1c6f4ae3d0a44bd4331639b635} 
+{\bfseries Lve\+Swap\+Chain} (const \mbox{\hyperlink{classlve_1_1_lve_swap_chain}{Lve\+Swap\+Chain}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Constructeur de recopie supprimé. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_lve_swap_chain_a667b48617df4c414a2d081433dc8732e}\label{classlve_1_1_lve_swap_chain_a667b48617df4c414a2d081433dc8732e} 
+\mbox{\hyperlink{classlve_1_1_lve_swap_chain}{Lve\+Swap\+Chain}} \& {\bfseries operator=} (const \mbox{\hyperlink{classlve_1_1_lve_swap_chain}{Lve\+Swap\+Chain}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}assignation par recopie supprimé. \end{DoxyCompactList}\item 
+vk\+::\+Framebuffer \mbox{\hyperlink{classlve_1_1_lve_swap_chain_aa747130968571e75dd11824f56a92666}{Get\+Frame\+Buffer}} (const int \+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Obtient le framebuffer correspondant à l\textquotesingle{}indice spécifié. \end{DoxyCompactList}\item 
+vk\+::\+Render\+Pass \mbox{\hyperlink{classlve_1_1_lve_swap_chain_a9e7d921c19ffd5a05d38e9362c5d986e}{Get\+Render\+Pass}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le passe de rendu. \end{DoxyCompactList}\item 
+vk\+::\+Image\+View \mbox{\hyperlink{classlve_1_1_lve_swap_chain_a33a3d95c7fa62d030e79784481304ce8}{Get\+Image\+View}} (const int \+\_\+index) const
+\begin{DoxyCompactList}\small\item\em Obtient la vue d\textquotesingle{}image correspondant à l\textquotesingle{}indice spécifié. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classlve_1_1_lve_swap_chain_a820d95ec795ce4e413cd4ee2d07a2376}{Image\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le nombre d\textquotesingle{}images dans la swap chain. \end{DoxyCompactList}\item 
+vk\+::\+Format \mbox{\hyperlink{classlve_1_1_lve_swap_chain_a978c1fa0008e0681c9ced1ace17b70f5}{Get\+Swap\+Chain\+Image\+Format}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le format d\textquotesingle{}image de la swap chain. \end{DoxyCompactList}\item 
+vk\+::\+Extent2D \mbox{\hyperlink{classlve_1_1_lve_swap_chain_a48a1917c7ef50fd8196ff5da38dd70ff}{Get\+Swap\+Chain\+Extent}} () const
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}étendue de la swap chain. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classlve_1_1_lve_swap_chain_a50fb43817c0a559d68c0175aec72c9c4}{Width}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la largeur de la swap chain. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{classlve_1_1_lve_swap_chain_ae71d00e32033652719779b8287b71aca}{Height}} () const
+\begin{DoxyCompactList}\small\item\em Obtient la hauteur de la swap chain. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classlve_1_1_lve_swap_chain_a73f53af60bb45ac03e044dfd7f9318f2}{Extent\+Aspect\+Ratio}} () const
+\begin{DoxyCompactList}\small\item\em Calcule le rapport d\textquotesingle{}aspect de l\textquotesingle{}étendue de la swap chain. \end{DoxyCompactList}\item 
+vk\+::\+Format \mbox{\hyperlink{classlve_1_1_lve_swap_chain_a871dd50bcca4d97e07af87f6224d8e08}{Find\+Depth\+Format}} () const
+\begin{DoxyCompactList}\small\item\em Recherche le format de profondeur adapté. \end{DoxyCompactList}\item 
+vk\+::\+Result \mbox{\hyperlink{classlve_1_1_lve_swap_chain_a394f9c7a0c4ec005433b6e02240609e1}{Acquire\+Next\+Image}} (uint32\+\_\+t \texorpdfstring{$\ast$}{*}\+\_\+image\+Index) const
+\begin{DoxyCompactList}\small\item\em Acquiert l\textquotesingle{}index de l\textquotesingle{}image suivante dans la chaîne de swaps. \end{DoxyCompactList}\item 
+vk\+::\+Result \mbox{\hyperlink{classlve_1_1_lve_swap_chain_a301b293efd9093bd71ef60a407ce8576}{Submit\+Command\+Buffers}} (const vk\+::\+Command\+Buffer \texorpdfstring{$\ast$}{*}\+\_\+buffers, uint32\+\_\+t \texorpdfstring{$\ast$}{*}\+\_\+image\+Index)
+\begin{DoxyCompactList}\small\item\em Soumet les command buffers pour exécution et présente le résultat. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlve_1_1_lve_swap_chain_af0e2f1309c8c64ed307607f80f7ade9d}{Compare\+Swap\+Formats}} (const \mbox{\hyperlink{classlve_1_1_lve_swap_chain}{Lve\+Swap\+Chain}} \&\+\_\+swap\+Chain) const
+\begin{DoxyCompactList}\small\item\em Compare les formats de profondeur et d\textquotesingle{}image avec une autre \doxylink{classlve_1_1_lve_swap_chain}{Lve\+Swap\+Chain}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classlve_1_1_lve_swap_chain_adaaaed0ea30a7189a4e3244e6a11854c}\label{classlve_1_1_lve_swap_chain_adaaaed0ea30a7189a4e3244e6a11854c} 
+static constexpr int {\bfseries MAX\+\_\+\+FRAMES\+\_\+\+IN\+\_\+\+FLIGHT} = 2
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Classe représentant une chaîne d\textquotesingle{}échange Vulkan. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classlve_1_1_lve_swap_chain_aeeddf19004a02f382d5f5128173b8352}\label{classlve_1_1_lve_swap_chain_aeeddf19004a02f382d5f5128173b8352} 
+\index{lve::LveSwapChain@{lve::LveSwapChain}!LveSwapChain@{LveSwapChain}}
+\index{LveSwapChain@{LveSwapChain}!lve::LveSwapChain@{lve::LveSwapChain}}
+\doxysubsubsection{\texorpdfstring{LveSwapChain()}{LveSwapChain()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Swap\+Chain\+::\+Lve\+Swap\+Chain (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&}]{\+\_\+device\+Ref,  }\item[{vk\+::\+Extent2D}]{\+\_\+window\+Extent }\end{DoxyParamCaption})}
+
+
+
+Constructeur prenant une référence à un objet \doxylink{classlve_1_1_lve_device}{Lve\+Device} et une étendue window\+Extent. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+device\+Ref} & Référence à un objet \doxylink{classlve_1_1_lve_device}{Lve\+Device}. \\
+\hline
+{\em \+\_\+window\+Extent} & Étendue de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_swap_chain_ab8e074749422fd396425053545ceb235}\label{classlve_1_1_lve_swap_chain_ab8e074749422fd396425053545ceb235} 
+\index{lve::LveSwapChain@{lve::LveSwapChain}!LveSwapChain@{LveSwapChain}}
+\index{LveSwapChain@{LveSwapChain}!lve::LveSwapChain@{lve::LveSwapChain}}
+\doxysubsubsection{\texorpdfstring{LveSwapChain()}{LveSwapChain()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Swap\+Chain\+::\+Lve\+Swap\+Chain (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&}]{\+\_\+device\+Ref,  }\item[{vk\+::\+Extent2D}]{\+\_\+extent,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classlve_1_1_lve_swap_chain}{Lve\+Swap\+Chain}} $>$ \&}]{\+\_\+previous }\end{DoxyParamCaption})}
+
+
+
+Constructeur prenant une référence à un objet \doxylink{classlve_1_1_lve_device}{Lve\+Device}, une étendue extent et un pointeur partagé vers une précédente chaîne d\textquotesingle{}échanges. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+device\+Ref} & Référence à un objet \doxylink{classlve_1_1_lve_device}{Lve\+Device}. \\
+\hline
+{\em \+\_\+extent} & Étendue de la chaîne d\textquotesingle{}échanges. \\
+\hline
+{\em \+\_\+previous} & Pointeur partagé vers une précédente chaîne d\textquotesingle{}échanges. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_lve_swap_chain_a394f9c7a0c4ec005433b6e02240609e1}\label{classlve_1_1_lve_swap_chain_a394f9c7a0c4ec005433b6e02240609e1} 
+\index{lve::LveSwapChain@{lve::LveSwapChain}!AcquireNextImage@{AcquireNextImage}}
+\index{AcquireNextImage@{AcquireNextImage}!lve::LveSwapChain@{lve::LveSwapChain}}
+\doxysubsubsection{\texorpdfstring{AcquireNextImage()}{AcquireNextImage()}}
+{\footnotesize\ttfamily vk\+::\+Result lve\+::\+Lve\+Swap\+Chain\+::\+Acquire\+Next\+Image (\begin{DoxyParamCaption}\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{\+\_\+image\+Index }\end{DoxyParamCaption}) const}
+
+
+
+Acquiert l\textquotesingle{}index de l\textquotesingle{}image suivante dans la chaîne de swaps. 
+
+Cette fonction acquiert l\textquotesingle{}index de l\textquotesingle{}image suivante dans la chaîne de swaps.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+image\+Index} & Pointeur vers la variable où stocker l\textquotesingle{}index de l\textquotesingle{}image acquise. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Vk\+Result Le résultat de l\textquotesingle{}opération. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_swap_chain_af0e2f1309c8c64ed307607f80f7ade9d}\label{classlve_1_1_lve_swap_chain_af0e2f1309c8c64ed307607f80f7ade9d} 
+\index{lve::LveSwapChain@{lve::LveSwapChain}!CompareSwapFormats@{CompareSwapFormats}}
+\index{CompareSwapFormats@{CompareSwapFormats}!lve::LveSwapChain@{lve::LveSwapChain}}
+\doxysubsubsection{\texorpdfstring{CompareSwapFormats()}{CompareSwapFormats()}}
+{\footnotesize\ttfamily bool lve\+::\+Lve\+Swap\+Chain\+::\+Compare\+Swap\+Formats (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlve_1_1_lve_swap_chain}{Lve\+Swap\+Chain}} \&}]{\+\_\+swap\+Chain }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compare les formats de profondeur et d\textquotesingle{}image avec une autre \doxylink{classlve_1_1_lve_swap_chain}{Lve\+Swap\+Chain}. 
+
+Cette fonction compare les formats de profondeur et d\textquotesingle{}image de cette \doxylink{classlve_1_1_lve_swap_chain}{Lve\+Swap\+Chain} avec ceux d\textquotesingle{}une autre \doxylink{classlve_1_1_lve_swap_chain}{Lve\+Swap\+Chain} spécifiée.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+swap\+Chain} & La \doxylink{classlve_1_1_lve_swap_chain}{Lve\+Swap\+Chain} avec laquelle comparer les formats. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool True si les formats de profondeur et d\textquotesingle{}image sont identiques, sinon False. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_swap_chain_a73f53af60bb45ac03e044dfd7f9318f2}\label{classlve_1_1_lve_swap_chain_a73f53af60bb45ac03e044dfd7f9318f2} 
+\index{lve::LveSwapChain@{lve::LveSwapChain}!ExtentAspectRatio@{ExtentAspectRatio}}
+\index{ExtentAspectRatio@{ExtentAspectRatio}!lve::LveSwapChain@{lve::LveSwapChain}}
+\doxysubsubsection{\texorpdfstring{ExtentAspectRatio()}{ExtentAspectRatio()}}
+{\footnotesize\ttfamily float lve\+::\+Lve\+Swap\+Chain\+::\+Extent\+Aspect\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcule le rapport d\textquotesingle{}aspect de l\textquotesingle{}étendue de la swap chain. 
+
+Cette fonction calcule le rapport d\textquotesingle{}aspect (largeur/hauteur) de l\textquotesingle{}étendue de la swap chain.
+
+\begin{DoxyReturn}{Renvoie}
+float Le rapport d\textquotesingle{}aspect de l\textquotesingle{}étendue de la swap chain. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_swap_chain_a871dd50bcca4d97e07af87f6224d8e08}\label{classlve_1_1_lve_swap_chain_a871dd50bcca4d97e07af87f6224d8e08} 
+\index{lve::LveSwapChain@{lve::LveSwapChain}!FindDepthFormat@{FindDepthFormat}}
+\index{FindDepthFormat@{FindDepthFormat}!lve::LveSwapChain@{lve::LveSwapChain}}
+\doxysubsubsection{\texorpdfstring{FindDepthFormat()}{FindDepthFormat()}}
+{\footnotesize\ttfamily vk\+::\+Format lve\+::\+Lve\+Swap\+Chain\+::\+Find\+Depth\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Recherche le format de profondeur adapté. 
+
+Cette fonction recherche le format de profondeur adapté parmi une liste de formats donnée, en tenant compte des caractéristiques spécifiées.
+
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Format Le format de profondeur adapté. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_swap_chain_aa747130968571e75dd11824f56a92666}\label{classlve_1_1_lve_swap_chain_aa747130968571e75dd11824f56a92666} 
+\index{lve::LveSwapChain@{lve::LveSwapChain}!GetFrameBuffer@{GetFrameBuffer}}
+\index{GetFrameBuffer@{GetFrameBuffer}!lve::LveSwapChain@{lve::LveSwapChain}}
+\doxysubsubsection{\texorpdfstring{GetFrameBuffer()}{GetFrameBuffer()}}
+{\footnotesize\ttfamily vk\+::\+Framebuffer lve\+::\+Lve\+Swap\+Chain\+::\+Get\+Frame\+Buffer (\begin{DoxyParamCaption}\item[{const int}]{\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le framebuffer correspondant à l\textquotesingle{}indice spécifié. 
+
+Cette fonction retourne le framebuffer de la swap chain qui correspond à l\textquotesingle{}indice spécifié.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+index} & L\textquotesingle{}indice du framebuffer à récupérer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Framebuffer Le framebuffer correspondant à l\textquotesingle{}indice spécifié. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_swap_chain_a33a3d95c7fa62d030e79784481304ce8}\label{classlve_1_1_lve_swap_chain_a33a3d95c7fa62d030e79784481304ce8} 
+\index{lve::LveSwapChain@{lve::LveSwapChain}!GetImageView@{GetImageView}}
+\index{GetImageView@{GetImageView}!lve::LveSwapChain@{lve::LveSwapChain}}
+\doxysubsubsection{\texorpdfstring{GetImageView()}{GetImageView()}}
+{\footnotesize\ttfamily vk\+::\+Image\+View lve\+::\+Lve\+Swap\+Chain\+::\+Get\+Image\+View (\begin{DoxyParamCaption}\item[{const int}]{\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la vue d\textquotesingle{}image correspondant à l\textquotesingle{}indice spécifié. 
+
+Cette fonction retourne la vue d\textquotesingle{}image de la swap chain qui correspond à l\textquotesingle{}indice spécifié.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+index} & L\textquotesingle{}indice de la vue d\textquotesingle{}image à récupérer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Image\+View La vue d\textquotesingle{}image correspondant à l\textquotesingle{}indice spécifié. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_swap_chain_a9e7d921c19ffd5a05d38e9362c5d986e}\label{classlve_1_1_lve_swap_chain_a9e7d921c19ffd5a05d38e9362c5d986e} 
+\index{lve::LveSwapChain@{lve::LveSwapChain}!GetRenderPass@{GetRenderPass}}
+\index{GetRenderPass@{GetRenderPass}!lve::LveSwapChain@{lve::LveSwapChain}}
+\doxysubsubsection{\texorpdfstring{GetRenderPass()}{GetRenderPass()}}
+{\footnotesize\ttfamily vk\+::\+Render\+Pass lve\+::\+Lve\+Swap\+Chain\+::\+Get\+Render\+Pass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le passe de rendu. 
+
+Cette fonction retourne le passe de rendu associé à la swap chain.
+
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Render\+Pass Le passe de rendu associé à la swap chain. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_swap_chain_a48a1917c7ef50fd8196ff5da38dd70ff}\label{classlve_1_1_lve_swap_chain_a48a1917c7ef50fd8196ff5da38dd70ff} 
+\index{lve::LveSwapChain@{lve::LveSwapChain}!GetSwapChainExtent@{GetSwapChainExtent}}
+\index{GetSwapChainExtent@{GetSwapChainExtent}!lve::LveSwapChain@{lve::LveSwapChain}}
+\doxysubsubsection{\texorpdfstring{GetSwapChainExtent()}{GetSwapChainExtent()}}
+{\footnotesize\ttfamily vk\+::\+Extent2D lve\+::\+Lve\+Swap\+Chain\+::\+Get\+Swap\+Chain\+Extent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient l\textquotesingle{}étendue de la swap chain. 
+
+Cette fonction retourne l\textquotesingle{}étendue (largeur et hauteur) de la swap chain.
+
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Extent2D L\textquotesingle{}étendue de la swap chain. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_swap_chain_a978c1fa0008e0681c9ced1ace17b70f5}\label{classlve_1_1_lve_swap_chain_a978c1fa0008e0681c9ced1ace17b70f5} 
+\index{lve::LveSwapChain@{lve::LveSwapChain}!GetSwapChainImageFormat@{GetSwapChainImageFormat}}
+\index{GetSwapChainImageFormat@{GetSwapChainImageFormat}!lve::LveSwapChain@{lve::LveSwapChain}}
+\doxysubsubsection{\texorpdfstring{GetSwapChainImageFormat()}{GetSwapChainImageFormat()}}
+{\footnotesize\ttfamily vk\+::\+Format lve\+::\+Lve\+Swap\+Chain\+::\+Get\+Swap\+Chain\+Image\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le format d\textquotesingle{}image de la swap chain. 
+
+Cette fonction retourne le format d\textquotesingle{}image utilisé par la swap chain.
+
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Format Le format d\textquotesingle{}image de la swap chain. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_swap_chain_ae71d00e32033652719779b8287b71aca}\label{classlve_1_1_lve_swap_chain_ae71d00e32033652719779b8287b71aca} 
+\index{lve::LveSwapChain@{lve::LveSwapChain}!Height@{Height}}
+\index{Height@{Height}!lve::LveSwapChain@{lve::LveSwapChain}}
+\doxysubsubsection{\texorpdfstring{Height()}{Height()}}
+{\footnotesize\ttfamily uint32\+\_\+t lve\+::\+Lve\+Swap\+Chain\+::\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la hauteur de la swap chain. 
+
+Cette fonction retourne la hauteur de la swap chain.
+
+\begin{DoxyReturn}{Renvoie}
+uint32\+\_\+t La hauteur de la swap chain. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_swap_chain_a820d95ec795ce4e413cd4ee2d07a2376}\label{classlve_1_1_lve_swap_chain_a820d95ec795ce4e413cd4ee2d07a2376} 
+\index{lve::LveSwapChain@{lve::LveSwapChain}!ImageCount@{ImageCount}}
+\index{ImageCount@{ImageCount}!lve::LveSwapChain@{lve::LveSwapChain}}
+\doxysubsubsection{\texorpdfstring{ImageCount()}{ImageCount()}}
+{\footnotesize\ttfamily size\+\_\+t lve\+::\+Lve\+Swap\+Chain\+::\+Image\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le nombre d\textquotesingle{}images dans la swap chain. 
+
+Cette fonction retourne le nombre d\textquotesingle{}images actuellement présentes dans la swap chain.
+
+\begin{DoxyReturn}{Renvoie}
+size\+\_\+t Le nombre d\textquotesingle{}images dans la swap chain. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_swap_chain_a301b293efd9093bd71ef60a407ce8576}\label{classlve_1_1_lve_swap_chain_a301b293efd9093bd71ef60a407ce8576} 
+\index{lve::LveSwapChain@{lve::LveSwapChain}!SubmitCommandBuffers@{SubmitCommandBuffers}}
+\index{SubmitCommandBuffers@{SubmitCommandBuffers}!lve::LveSwapChain@{lve::LveSwapChain}}
+\doxysubsubsection{\texorpdfstring{SubmitCommandBuffers()}{SubmitCommandBuffers()}}
+{\footnotesize\ttfamily vk\+::\+Result lve\+::\+Lve\+Swap\+Chain\+::\+Submit\+Command\+Buffers (\begin{DoxyParamCaption}\item[{const vk\+::\+Command\+Buffer \texorpdfstring{$\ast$}{*}}]{\+\_\+buffers,  }\item[{uint32\+\_\+t \texorpdfstring{$\ast$}{*}}]{\+\_\+image\+Index }\end{DoxyParamCaption})}
+
+
+
+Soumet les command buffers pour exécution et présente le résultat. 
+
+Cette fonction soumet les command buffers spécifiés pour exécution, attend leur achèvement, puis présente le résultat à l\textquotesingle{}écran.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+buffers} & Tableau des command buffers à soumettre. \\
+\hline
+{\em \+\_\+image\+Index} & Pointeur vers l\textquotesingle{}index de l\textquotesingle{}image à présenter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Vk\+Result Le résultat de l\textquotesingle{}opération. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_swap_chain_a50fb43817c0a559d68c0175aec72c9c4}\label{classlve_1_1_lve_swap_chain_a50fb43817c0a559d68c0175aec72c9c4} 
+\index{lve::LveSwapChain@{lve::LveSwapChain}!Width@{Width}}
+\index{Width@{Width}!lve::LveSwapChain@{lve::LveSwapChain}}
+\doxysubsubsection{\texorpdfstring{Width()}{Width()}}
+{\footnotesize\ttfamily uint32\+\_\+t lve\+::\+Lve\+Swap\+Chain\+::\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient la largeur de la swap chain. 
+
+Cette fonction retourne la largeur de la swap chain.
+
+\begin{DoxyReturn}{Renvoie}
+uint32\+\_\+t La largeur de la swap chain. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Lve\+Engine/lve\+\_\+swap\+\_\+chain.\+h\item 
+sources/\+Lve\+Engine/lve\+\_\+swap\+\_\+chain.\+cpp\end{DoxyCompactItemize}

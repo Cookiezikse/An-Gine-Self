@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/Modules/ImGUIModule.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_8ba5de94bce70429844b810000c4522a.html">Modules</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">ImGUIModule.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;Modules/Module.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;Modules/WindowModule.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Scene/SceneManager.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;RHIVulkanModule.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">class </span><a class="code hl_class" href="class_r_h_i_module.html">RHIModule</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_im_gui_module.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="class_im_gui_module.html">ImGuiModule</a> final : <span class="keyword">public</span> <a class="code hl_class" href="class_module.html">Module</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">//TimeModule* timeModule = nullptr;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    vk::Fence         immFence;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    vk::CommandBuffer immCommandBuffer;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    vk::CommandPool   immCommandPool;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// ----------========== IMGUI SETTINGS ==========---------- //</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#a789d564bb784deb1a76bc9785f221d5e">Init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#a0aef3322c112235bc038cfc0b9c62fa7">Start</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#ac34fdc8c2c2e6338c68ba68bed5798e7">FixedUpdate</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#a09392d7282f2cb9f120db4ca5776385a">Update</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#aac4b06dfc1dbbad552e820af1f605d35">PreRender</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#a28d1ef88461b218dcd358dd047c06674">Render</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#a337f2c65bd158e39d89f7769fc4d9920">RenderGui</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#a962739d0cb1769792363df53802a6925">PostRender</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#ae45e29b9025b130e030e54dfc045f3e0">Release</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#ae51921c37415c169fd0551aef5b669de">Finalize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#a799d9c6842fb765029b73555c506779e">ImmediateSubmit</a>(std::function&lt;<span class="keywordtype">void</span>(vk::CommandBuffer _cmd)&gt;&amp;&amp; _function) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">// ----------========== IMGUI SHOWN ==========---------- //</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#a7f33c566fbe081b75dca96bcb6707dbb">GetGui</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#a5e0b8717004df555bd7c7e95f6668224">AnchorWindow</a>(<span class="keyword">const</span> std::string&amp; _windowName);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="comment">// ----------========== DRAW WINDOWS ==========---------- //</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#a946258a533c49e5ea282f86afcb898d8">DrawHierarchyWindow</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#aab36080f4bfca6384b2cebce05984df2">DrawInspectorWindow</a>();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#aff9dc1bf288561b8063c5ab5b6a60963">DisplayTransform</a>(<a class="code hl_class" href="class_transform.html">Transform</a>* _transform);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordtype">void</span> DrawModesWindow();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#ac9ff75b10b3a3ec853348cc752c09951">DrawSettingsWindow</a>();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="comment">// ----------========== POPUPS ==========---------- //</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#a1fe0c0297d80d15141c6d593a37214d3">ShowRenamePopup</a>();</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="comment">// ----------========== OBJECT OPERATIONS ==========---------- //</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#aaf05ac68949491eb8606e0de6f69d47f">RenameGameObject</a>(<a class="code hl_class" href="class_game_object.html">GameObject</a>* _gameObject, <span class="keyword">const</span> std::string&amp; _newName);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#ab5315e1896eadd7b3b0fa6952cca8fa9">DeleteGameObject</a>(<a class="code hl_class" href="class_game_object.html">GameObject</a>* _gameObject);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#a58ffcbfd47af624c2699b34a32a05af9">DuplicateGameObject</a>(<a class="code hl_class" href="class_game_object.html">GameObject</a>* _gameObject);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_im_gui_module.html#adde47c76109469e0ad3cf56e4edb64b7">CreateSpecificGameObject</a>(GameObjectType _type, <span class="keywordtype">int</span> _otherType = 0);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#ae121d0441870a164991d36493dae734d">  160</a></span>    vk::Device <a class="code hl_variable" href="class_im_gui_module.html#ae121d0441870a164991d36493dae734d">device</a>; </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#a2427c08a4d3e3fdaa1dd033e7fd36201">  161</a></span>    vk::Queue <a class="code hl_variable" href="class_im_gui_module.html#a2427c08a4d3e3fdaa1dd033e7fd36201">graphicsQueue</a>; </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#a18cb0bdc0ed883a8c26be006778a29f0">  163</a></span>    <a class="code hl_class" href="class_window_module.html">WindowModule</a>* <a class="code hl_variable" href="class_im_gui_module.html#a18cb0bdc0ed883a8c26be006778a29f0">windowModule</a> = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#a0d8a1509473acbda71dcc19408be3d02">  164</a></span>    <a class="code hl_class" href="class_r_h_i_module.html">RHIModule</a>* <a class="code hl_variable" href="class_im_gui_module.html#a0d8a1509473acbda71dcc19408be3d02">rhiModule</a> = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#af06f65844fce295b22a0eb050ea0f459">  165</a></span>    <a class="code hl_class" href="class_scene_manager.html">SceneManager</a>* <a class="code hl_variable" href="class_im_gui_module.html#af06f65844fce295b22a0eb050ea0f459">sceneManager</a> = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#a194cfe4f52ea64be8c9b81cfc421d641">  167</a></span>    <a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_variable" href="class_im_gui_module.html#a194cfe4f52ea64be8c9b81cfc421d641">selectedGameObject</a> = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#a6082dd9fd4ee78af1c9100bec2d5717e">  169</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_im_gui_module.html#a6082dd9fd4ee78af1c9100bec2d5717e">isRenamePopupOpen</a> = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#aa2d13a31e1e9ff6349f4440bd877e52f">  170</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_im_gui_module.html#aa2d13a31e1e9ff6349f4440bd877e52f">entityToRename</a> = -1; </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#a61f5f1cd5b5e44a771673fd347cc469f">  171</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="class_im_gui_module.html#a61f5f1cd5b5e44a771673fd347cc469f">renameBuffer</a>[256]; </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#a7117c6b5a499546e7841ec28e0e2da3e">  172</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_im_gui_module.html#a7117c6b5a499546e7841ec28e0e2da3e">sceneToRename</a> = -1; </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#ad20e3d26263ff8bacb123591db57a67f">  173</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="class_im_gui_module.html#ad20e3d26263ff8bacb123591db57a67f">renameSceneBuffer</a>[100]; </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#a4f3f8f985582efff218a469f5c640e55">  175</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_im_gui_module.html#a4f3f8f985582efff218a469f5c640e55">openPositionEdit</a> = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#a781acf4bad8e9457bb32d44b9a53e37f">  176</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_im_gui_module.html#a781acf4bad8e9457bb32d44b9a53e37f">openScaleEdit</a> = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#ac26a29296d687741384bacf0dbed7d7e">  177</a></span>    glm::vec3 <a class="code hl_variable" href="class_im_gui_module.html#ac26a29296d687741384bacf0dbed7d7e">positionEdit</a>; </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#a4b08888aba7c9db25825f6ea7527c02c">  178</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_im_gui_module.html#a4b08888aba7c9db25825f6ea7527c02c">rotationEdit</a>; </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#aa55e63dd6b57116829e2abe2f4283db4">  179</a></span>    glm::vec3 <a class="code hl_variable" href="class_im_gui_module.html#aa55e63dd6b57116829e2abe2f4283db4">scaleEdit</a>; </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#ac2cd62364dc11e4b5a76d0f2036d8992">  181</a></span>    std::vector&lt;bool&gt; <a class="code hl_variable" href="class_im_gui_module.html#ac2cd62364dc11e4b5a76d0f2036d8992">isOpen</a>; </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordtype">bool</span> textureView = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="class_im_gui_module.html#ac0b66194c865917ef2ed79457fda1944">  188</a></span>    <a class="code hl_function" href="class_im_gui_module.html#ac0b66194c865917ef2ed79457fda1944">~ImGuiModule</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>};</div>
+</div>
+<div class="ttc" id="aclass_game_object_html"><div class="ttname"><a href="class_game_object.html">GameObject</a></div><div class="ttdoc">ReprÃ©sente un objet gÃ©nÃ©rique dans le jeu.</div><div class="ttdef"><b>Definition</b> GameObject.h:45</div></div>
+<div class="ttc" id="aclass_im_gui_module_html"><div class="ttname"><a href="class_im_gui_module.html">ImGuiModule</a></div><div class="ttdoc">Classe dédiée à la gestion de l'interface utilisateur avec ImGui dans le contexte du module de rendu.</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:15</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a09392d7282f2cb9f120db4ca5776385a"><div class="ttname"><a href="class_im_gui_module.html#a09392d7282f2cb9f120db4ca5776385a">ImGuiModule::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">Met à jour l'état du module ImGui avant le rendu.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:121</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a0aef3322c112235bc038cfc0b9c62fa7"><div class="ttname"><a href="class_im_gui_module.html#a0aef3322c112235bc038cfc0b9c62fa7">ImGuiModule::Start</a></div><div class="ttdeci">void Start() override</div><div class="ttdoc">Démarre le module ImGui et prépare l'interface utilisateur pour l'interaction.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:50</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a0d8a1509473acbda71dcc19408be3d02"><div class="ttname"><a href="class_im_gui_module.html#a0d8a1509473acbda71dcc19408be3d02">ImGuiModule::rhiModule</a></div><div class="ttdeci">RHIModule * rhiModule</div><div class="ttdoc">Module de gestion du rendu bas-niveau (RHI).</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:164</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a18cb0bdc0ed883a8c26be006778a29f0"><div class="ttname"><a href="class_im_gui_module.html#a18cb0bdc0ed883a8c26be006778a29f0">ImGuiModule::windowModule</a></div><div class="ttdeci">WindowModule * windowModule</div><div class="ttdoc">Module de gestion de la fenêtre de l'application.</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:163</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a194cfe4f52ea64be8c9b81cfc421d641"><div class="ttname"><a href="class_im_gui_module.html#a194cfe4f52ea64be8c9b81cfc421d641">ImGuiModule::selectedGameObject</a></div><div class="ttdeci">GameObject * selectedGameObject</div><div class="ttdoc">Pointeur vers l'objet de jeu actuellement sélectionné.</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:167</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a1fe0c0297d80d15141c6d593a37214d3"><div class="ttname"><a href="class_im_gui_module.html#a1fe0c0297d80d15141c6d593a37214d3">ImGuiModule::ShowRenamePopup</a></div><div class="ttdeci">void ShowRenamePopup()</div><div class="ttdoc">Affiche la popup de renommage pour l'entité sélectionnée.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:506</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a2427c08a4d3e3fdaa1dd033e7fd36201"><div class="ttname"><a href="class_im_gui_module.html#a2427c08a4d3e3fdaa1dd033e7fd36201">ImGuiModule::graphicsQueue</a></div><div class="ttdeci">vk::Queue graphicsQueue</div><div class="ttdoc">File d'attente graphique pour la soumission des commandes Vulkan.</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:161</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a28d1ef88461b218dcd358dd047c06674"><div class="ttname"><a href="class_im_gui_module.html#a28d1ef88461b218dcd358dd047c06674">ImGuiModule::Render</a></div><div class="ttdeci">void Render() override</div><div class="ttdoc">Exécute le rendu de l'interface utilisateur ImGui.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:137</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a337f2c65bd158e39d89f7769fc4d9920"><div class="ttname"><a href="class_im_gui_module.html#a337f2c65bd158e39d89f7769fc4d9920">ImGuiModule::RenderGui</a></div><div class="ttdeci">void RenderGui() override</div><div class="ttdoc">Dessine l'interface graphique spécifique au module, comme les menus et les fenêtres.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:146</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a4b08888aba7c9db25825f6ea7527c02c"><div class="ttname"><a href="class_im_gui_module.html#a4b08888aba7c9db25825f6ea7527c02c">ImGuiModule::rotationEdit</a></div><div class="ttdeci">float rotationEdit</div><div class="ttdoc">Stocke la rotation actuelle pour l'édition.</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:178</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a4f3f8f985582efff218a469f5c640e55"><div class="ttname"><a href="class_im_gui_module.html#a4f3f8f985582efff218a469f5c640e55">ImGuiModule::openPositionEdit</a></div><div class="ttdeci">bool openPositionEdit</div><div class="ttdoc">Indique si l'édition de la position est ouverte ou non.</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:175</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a58ffcbfd47af624c2699b34a32a05af9"><div class="ttname"><a href="class_im_gui_module.html#a58ffcbfd47af624c2699b34a32a05af9">ImGuiModule::DuplicateGameObject</a></div><div class="ttdeci">void DuplicateGameObject(GameObject *_gameObject)</div><div class="ttdoc">Duplique l'objet de jeu situé à l'index spécifié.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:561</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a5e0b8717004df555bd7c7e95f6668224"><div class="ttname"><a href="class_im_gui_module.html#a5e0b8717004df555bd7c7e95f6668224">ImGuiModule::AnchorWindow</a></div><div class="ttdeci">void AnchorWindow(const std::string &amp;_windowName)</div><div class="ttdoc">Fixe la fenêtre de l'interface utilisateur à une position spécifique.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:239</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a6082dd9fd4ee78af1c9100bec2d5717e"><div class="ttname"><a href="class_im_gui_module.html#a6082dd9fd4ee78af1c9100bec2d5717e">ImGuiModule::isRenamePopupOpen</a></div><div class="ttdeci">bool isRenamePopupOpen</div><div class="ttdoc">Indique si la popup de renommage est ouverte ou non.</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:169</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a61f5f1cd5b5e44a771673fd347cc469f"><div class="ttname"><a href="class_im_gui_module.html#a61f5f1cd5b5e44a771673fd347cc469f">ImGuiModule::renameBuffer</a></div><div class="ttdeci">char renameBuffer[256]</div><div class="ttdoc">Buffer pour le nouveau nom de l'entité à renommer.</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:171</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a7117c6b5a499546e7841ec28e0e2da3e"><div class="ttname"><a href="class_im_gui_module.html#a7117c6b5a499546e7841ec28e0e2da3e">ImGuiModule::sceneToRename</a></div><div class="ttdeci">int sceneToRename</div><div class="ttdoc">Index de la scène à renommer.</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:172</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a781acf4bad8e9457bb32d44b9a53e37f"><div class="ttname"><a href="class_im_gui_module.html#a781acf4bad8e9457bb32d44b9a53e37f">ImGuiModule::openScaleEdit</a></div><div class="ttdeci">bool openScaleEdit</div><div class="ttdoc">Indique si l'édition de l'échelle est ouverte ou non.</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:176</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a789d564bb784deb1a76bc9785f221d5e"><div class="ttname"><a href="class_im_gui_module.html#a789d564bb784deb1a76bc9785f221d5e">ImGuiModule::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdoc">Initialise le module ImGui, préparant les ressources nécessaires pour son fonctionnement.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:18</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a799d9c6842fb765029b73555c506779e"><div class="ttname"><a href="class_im_gui_module.html#a799d9c6842fb765029b73555c506779e">ImGuiModule::ImmediateSubmit</a></div><div class="ttdeci">void ImmediateSubmit(std::function&lt; void(vk::CommandBuffer _cmd)&gt; &amp;&amp;_function) const</div><div class="ttdoc">Soumet une commande graphique immédiate à exécuter.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:172</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a7f33c566fbe081b75dca96bcb6707dbb"><div class="ttname"><a href="class_im_gui_module.html#a7f33c566fbe081b75dca96bcb6707dbb">ImGuiModule::GetGui</a></div><div class="ttdeci">void GetGui()</div><div class="ttdoc">Construit les éléments de l'interface utilisateur à afficher, incluant les fenêtres &quot;Hierarchy&quot; et &quot;Inspect...</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:215</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a946258a533c49e5ea282f86afcb898d8"><div class="ttname"><a href="class_im_gui_module.html#a946258a533c49e5ea282f86afcb898d8">ImGuiModule::DrawHierarchyWindow</a></div><div class="ttdeci">void DrawHierarchyWindow()</div><div class="ttdoc">Dessine la hiérarchie des objets de la scène dans l'interface utilisateur.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:330</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_a962739d0cb1769792363df53802a6925"><div class="ttname"><a href="class_im_gui_module.html#a962739d0cb1769792363df53802a6925">ImGuiModule::PostRender</a></div><div class="ttdeci">void PostRender() override</div><div class="ttdoc">Opérations à effectuer après le rendu principal, souvent utilisées pour les nettoyages.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:151</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_aa2d13a31e1e9ff6349f4440bd877e52f"><div class="ttname"><a href="class_im_gui_module.html#aa2d13a31e1e9ff6349f4440bd877e52f">ImGuiModule::entityToRename</a></div><div class="ttdeci">int entityToRename</div><div class="ttdoc">Index de l'entité à renommer.</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:170</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_aa55e63dd6b57116829e2abe2f4283db4"><div class="ttname"><a href="class_im_gui_module.html#aa55e63dd6b57116829e2abe2f4283db4">ImGuiModule::scaleEdit</a></div><div class="ttdeci">glm::vec3 scaleEdit</div><div class="ttdoc">Stocke l'échelle actuelle pour l'édition.</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:179</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_aab36080f4bfca6384b2cebce05984df2"><div class="ttname"><a href="class_im_gui_module.html#aab36080f4bfca6384b2cebce05984df2">ImGuiModule::DrawInspectorWindow</a></div><div class="ttdeci">void DrawInspectorWindow()</div><div class="ttdoc">Dessine l'inspecteur des propriétés pour l'objet sélectionné.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:269</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_aac4b06dfc1dbbad552e820af1f605d35"><div class="ttname"><a href="class_im_gui_module.html#aac4b06dfc1dbbad552e820af1f605d35">ImGuiModule::PreRender</a></div><div class="ttdeci">void PreRender() override</div><div class="ttdoc">Prépare le module ImGui pour le rendu, mais avant que le rendu ne soit effectué.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:132</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_aaf05ac68949491eb8606e0de6f69d47f"><div class="ttname"><a href="class_im_gui_module.html#aaf05ac68949491eb8606e0de6f69d47f">ImGuiModule::RenameGameObject</a></div><div class="ttdeci">void RenameGameObject(GameObject *_gameObject, const std::string &amp;_newName)</div><div class="ttdoc">Renomme l'objet de jeu sélectionné.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:547</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_ab5315e1896eadd7b3b0fa6952cca8fa9"><div class="ttname"><a href="class_im_gui_module.html#ab5315e1896eadd7b3b0fa6952cca8fa9">ImGuiModule::DeleteGameObject</a></div><div class="ttdeci">void DeleteGameObject(GameObject *_gameObject)</div><div class="ttdoc">Supprime l'objet de jeu sélectionné de la scène.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:553</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_ac0b66194c865917ef2ed79457fda1944"><div class="ttname"><a href="class_im_gui_module.html#ac0b66194c865917ef2ed79457fda1944">ImGuiModule::~ImGuiModule</a></div><div class="ttdeci">~ImGuiModule()=default</div><div class="ttdoc">Destructeur par défaut.</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_ac26a29296d687741384bacf0dbed7d7e"><div class="ttname"><a href="class_im_gui_module.html#ac26a29296d687741384bacf0dbed7d7e">ImGuiModule::positionEdit</a></div><div class="ttdeci">glm::vec3 positionEdit</div><div class="ttdoc">Stocke la position actuelle pour l'édition.</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:177</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_ac2cd62364dc11e4b5a76d0f2036d8992"><div class="ttname"><a href="class_im_gui_module.html#ac2cd62364dc11e4b5a76d0f2036d8992">ImGuiModule::isOpen</a></div><div class="ttdeci">std::vector&lt; bool &gt; isOpen</div><div class="ttdoc">Vecteur pour suivre l'état ouvert/fermé des différents panneaux de l'interface utilisateur.</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:181</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_ac34fdc8c2c2e6338c68ba68bed5798e7"><div class="ttname"><a href="class_im_gui_module.html#ac34fdc8c2c2e6338c68ba68bed5798e7">ImGuiModule::FixedUpdate</a></div><div class="ttdeci">void FixedUpdate() override</div><div class="ttdoc">Exécute des mises à jour régulières à intervalles fixes, typiquement pour la logique de jeu.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:116</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_ac9ff75b10b3a3ec853348cc752c09951"><div class="ttname"><a href="class_im_gui_module.html#ac9ff75b10b3a3ec853348cc752c09951">ImGuiModule::DrawSettingsWindow</a></div><div class="ttdeci">void DrawSettingsWindow()</div><div class="ttdoc">Dessine les paramètres de l'interface utilisateur du moteur de jeu.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:463</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_ad20e3d26263ff8bacb123591db57a67f"><div class="ttname"><a href="class_im_gui_module.html#ad20e3d26263ff8bacb123591db57a67f">ImGuiModule::renameSceneBuffer</a></div><div class="ttdeci">char renameSceneBuffer[100]</div><div class="ttdoc">Buffer pour le nouveau nom de la scène à renommer.</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:173</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_adde47c76109469e0ad3cf56e4edb64b7"><div class="ttname"><a href="class_im_gui_module.html#adde47c76109469e0ad3cf56e4edb64b7">ImGuiModule::CreateSpecificGameObject</a></div><div class="ttdeci">void CreateSpecificGameObject(GameObjectType _type, int _otherType=0)</div><div class="ttdoc">Crée un nouveau GameObject du type spécifié et l'ajoute à la scène active.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:564</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_ae121d0441870a164991d36493dae734d"><div class="ttname"><a href="class_im_gui_module.html#ae121d0441870a164991d36493dae734d">ImGuiModule::device</a></div><div class="ttdeci">vk::Device device</div><div class="ttdoc">Périphérique utilisé pour le rendu avec Vulkan.</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:160</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_ae45e29b9025b130e030e54dfc045f3e0"><div class="ttname"><a href="class_im_gui_module.html#ae45e29b9025b130e030e54dfc045f3e0">ImGuiModule::Release</a></div><div class="ttdeci">void Release() override</div><div class="ttdoc">Libère les ressources utilisées par le module ImGui.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:156</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_ae51921c37415c169fd0551aef5b669de"><div class="ttname"><a href="class_im_gui_module.html#ae51921c37415c169fd0551aef5b669de">ImGuiModule::Finalize</a></div><div class="ttdeci">void Finalize() override</div><div class="ttdoc">Nettoie l'état du module ImGui et ferme l'interface utilisateur.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:161</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_af06f65844fce295b22a0eb050ea0f459"><div class="ttname"><a href="class_im_gui_module.html#af06f65844fce295b22a0eb050ea0f459">ImGuiModule::sceneManager</a></div><div class="ttdeci">SceneManager * sceneManager</div><div class="ttdoc">Gestionnaire de scènes de l'application.</div><div class="ttdef"><b>Definition</b> ImGUIModule.h:165</div></div>
+<div class="ttc" id="aclass_im_gui_module_html_aff9dc1bf288561b8063c5ab5b6a60963"><div class="ttname"><a href="class_im_gui_module.html#aff9dc1bf288561b8063c5ab5b6a60963">ImGuiModule::DisplayTransform</a></div><div class="ttdeci">void DisplayTransform(Transform *_transform)</div><div class="ttdoc">Affiche et permet l'édition des propriétés de transformation d'un objet.</div><div class="ttdef"><b>Definition</b> ImGUIModule.cpp:482</div></div>
+<div class="ttc" id="aclass_module_html"><div class="ttname"><a href="class_module.html">Module</a></div><div class="ttdoc">Classe Module.</div><div class="ttdef"><b>Definition</b> Module.h:19</div></div>
+<div class="ttc" id="aclass_r_h_i_module_html"><div class="ttname"><a href="class_r_h_i_module.html">RHIModule</a></div><div class="ttdef"><b>Definition</b> rhi.h:7</div></div>
+<div class="ttc" id="aclass_scene_manager_html"><div class="ttname"><a href="class_scene_manager.html">SceneManager</a></div><div class="ttdoc">Gestionnaire de scène.</div><div class="ttdef"><b>Definition</b> SceneManager.h:16</div></div>
+<div class="ttc" id="aclass_transform_html"><div class="ttname"><a href="class_transform.html">Transform</a></div><div class="ttdef"><b>Definition</b> Transform.h:12</div></div>
+<div class="ttc" id="aclass_window_module_html"><div class="ttname"><a href="class_window_module.html">WindowModule</a></div><div class="ttdoc">Classe WindowModule.</div><div class="ttdef"><b>Definition</b> WindowModule.h:113</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

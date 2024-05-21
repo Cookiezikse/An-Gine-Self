@@ -1,0 +1,126 @@
+\doxysection{Référence de la classe Network\+::Messages\+::Connection}
+\hypertarget{class_network_1_1_messages_1_1_connection}{}\label{class_network_1_1_messages_1_1_connection}\index{Network::Messages::Connection@{Network::Messages::Connection}}
+
+
+Message de connexion.  
+
+
+
+
+{\ttfamily \#include $<$Messages.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Network\+::Messages\+::Connection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_network_1_1_messages_1_1_connection}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6}{Result}} \{ \mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6a505a83f220c02df2f85c3810cd9ceb38}{Success}}
+, \mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6ad7c8c85bf79bbe1b7188497c32c3b0ca}{Failed}}
+ \}
+\begin{DoxyCompactList}\small\item\em R{\ucr}sultat de la connexion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a98074843fa7d7dee6baeb3863a421872}{Connection}} (\mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6}{Result}} r)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{class_network_1_1_messages_1_1_connection}{Connection}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques hérités de \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Network\+::\+Messages\+::\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class M $>$ }\\bool \mbox{\hyperlink{class_network_1_1_messages_1_1_base_ad1147d97f230c6be6276fdf3668b1d0a}{is}} () const
+\begin{DoxyCompactList}\small\item\em V{\ucr}rifie si le message est de type M. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class M $>$ }\\const M \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a06b16a57d0fb98dc0bacf5ff2a90f283}{as}} () const
+\begin{DoxyCompactList}\small\item\em Convertit le message en type M. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6}{Result}} \mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a5ee62fd0bb656b93ef08f22afdc5a47e}{result}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs publics hérités de \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Network\+::\+Messages\+::\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+sockaddr\+\_\+in \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a69cd114b95f2b08d2c1cc7e9e8b3e0d1}{from}}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a8774bdd6b0cdd35e14379b903617643d}{id\+From}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_network_1_1_messages_1_1_connection_a90aa5b342fe070a58857a221d500488c}\label{class_network_1_1_messages_1_1_connection_a90aa5b342fe070a58857a221d500488c} 
+class {\bfseries Base}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Membres hérités additionnels}
+\doxysubsection*{Types protégés hérités de \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Network\+::\+Messages\+::\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Type}} \{ \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4ac2cc7082a89c1ad6631a2f66af5f00c0}{Connection}}
+, \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a522d5fadad05effceba392f6e8f70b64}{Disconnection}}
+, \mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4a12b4595813f48775b089bc59c0f97152}{User\+Data}}
+ \}
+\begin{DoxyCompactList}\small\item\em Type de message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres protégées hérités de \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Network\+::\+Messages\+::\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_network_1_1_messages_1_1_base_a3bb3c9f2296d822d9fe4467060e02f52}{Base}} (\mbox{\hyperlink{class_network_1_1_messages_1_1_base_a9b516b2b52538f7057771fbd84e05fc4}{Type}} type)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{class_network_1_1_messages_1_1_base}{Base}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Message de connexion. 
+
+\doxysubsection{Documentation des énumérations membres}
+\Hypertarget{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6}\label{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6} 
+\index{Network::Messages::Connection@{Network::Messages::Connection}!Result@{Result}}
+\index{Result@{Result}!Network::Messages::Connection@{Network::Messages::Connection}}
+\doxysubsubsection{\texorpdfstring{Result}{Result}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6}{Network\+::\+Messages\+::\+Connection\+::\+Result}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+R{\ucr}sultat de la connexion. 
+
+\begin{DoxyEnumFields}{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Success@{Success}!Network::Messages::Connection@{Network::Messages::Connection}}\index{Network::Messages::Connection@{Network::Messages::Connection}!Success@{Success}}}\Hypertarget{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6a505a83f220c02df2f85c3810cd9ceb38}\label{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6a505a83f220c02df2f85c3810cd9ceb38} 
+Success&Connexion r{\ucr}ussie. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Failed@{Failed}!Network::Messages::Connection@{Network::Messages::Connection}}\index{Network::Messages::Connection@{Network::Messages::Connection}!Failed@{Failed}}}\Hypertarget{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6ad7c8c85bf79bbe1b7188497c32c3b0ca}\label{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6ad7c8c85bf79bbe1b7188497c32c3b0ca} 
+Failed&Connexion {\ucr}chou{\ucr}e. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{class_network_1_1_messages_1_1_connection_a98074843fa7d7dee6baeb3863a421872}\label{class_network_1_1_messages_1_1_connection_a98074843fa7d7dee6baeb3863a421872} 
+\index{Network::Messages::Connection@{Network::Messages::Connection}!Connection@{Connection}}
+\index{Connection@{Connection}!Network::Messages::Connection@{Network::Messages::Connection}}
+\doxysubsubsection{\texorpdfstring{Connection()}{Connection()}}
+{\footnotesize\ttfamily Network\+::\+Messages\+::\+Connection\+::\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6}{Result}}}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur de la classe \doxylink{class_network_1_1_messages_1_1_connection}{Connection}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em r} & R{\ucr}sultat de la connexion. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des données membres}
+\Hypertarget{class_network_1_1_messages_1_1_connection_a5ee62fd0bb656b93ef08f22afdc5a47e}\label{class_network_1_1_messages_1_1_connection_a5ee62fd0bb656b93ef08f22afdc5a47e} 
+\index{Network::Messages::Connection@{Network::Messages::Connection}!result@{result}}
+\index{result@{result}!Network::Messages::Connection@{Network::Messages::Connection}}
+\doxysubsubsection{\texorpdfstring{result}{result}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_network_1_1_messages_1_1_connection_a592ae6d90a06c7799df087658848ada6}{Result}} Network\+::\+Messages\+::\+Connection\+::result}
+
+R{\ucr}sultat de la connexion. 
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+TCP/Messages.\+h\end{DoxyCompactItemize}

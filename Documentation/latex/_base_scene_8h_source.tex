@@ -1,0 +1,169 @@
+\doxysection{Base\+Scene.\+h}
+\hypertarget{_base_scene_8h_source}{}\label{_base_scene_8h_source}\index{includes/Scene/BaseScene.h@{includes/Scene/BaseScene.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}GameObject/GameObject.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_window.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_base_scene}{BaseScene}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_base_scene_a081fcef7e1359202d221dc545cef0989}{BaseScene}}(\textcolor{keyword}{const}\ std::string\&\ \_fileName)\ :\ \mbox{\hyperlink{class_base_scene_a7a93c99d6af8a2a2a744bdaa15cb611b}{name}}(\_fileName)\{\}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_scene}{\string~BaseScene}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_scene_a081fcef7e1359202d221dc545cef0989}{BaseScene}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_base_scene}{BaseScene}}\&)\ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_scene}{BaseScene}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_base_scene}{BaseScene}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#pragma\ region\ Event}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_a18dd7016e2e7c4018626a55f9f1b282b}{Init}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_a0bf7efbff5d56c717dfb44827767268c}{Start}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_aaac18134f2437eaa0950ab757f27831f}{FixedUpdate}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_a17042b8ea83cddfed783ce500047e6bb}{Update}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ UpdateEditor();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_aa4361dab94a6c4422820a2b22e5afdd8}{PreRender}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_ab12655e3f795bcf612235a168081ee8f}{Render}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_a3389f47d502659067e53efeb5ea1fa1b}{RenderGui}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_ab6f71ce0d177008c296e2045bbeea047}{PostRender}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_a50ffb057ce2b14e8f2c4a90c8ff37a0e}{Release}}();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_a29a0115af911638c4083e529a1192419}{Finalize}}();}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#pragma\ region\ Getter}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \mbox{\hyperlink{class_base_scene_aefdae9ab66f5644144d946e4a858d226}{GetGameObjectById}}(\textcolor{keyword}{const}\ GameObject::id\_t\&\ \_gameObjectId)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ std::vector<GameObject*>\ \mbox{\hyperlink{class_base_scene_a2f8720a8078109df3df95741bff71ab9}{FindGameObjectsByName}}(\textcolor{keyword}{const}\ std::string\&\ \_name)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_base_scene_ad1c48681ba910c2c0ba72610e74bb089}{GetName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_base_scene_a8be86895e74df0a4cd3b0eca7feee84b}{GetDefaultRelativeFilePath}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_base_scene_ab9316394e3ed0d9e6bda6154911d4edf}{GetFileName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ std::vector<GameObject*>\&\ \mbox{\hyperlink{class_base_scene_af2b7648d5c65e0643c0a69014147b7f8}{GetRootObjects}}();}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ std::vector<GameObject*>\ \mbox{\hyperlink{class_base_scene_a347ca4aa83a124be19b5e56f89cee7a7}{GetAllGameObject}}()\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<GameObject*>\ allGameObject;}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ gameObject\ :\ \mbox{\hyperlink{class_base_scene_a462479820c153a0b230bb31246aec922}{rootObjects}})\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_scene_abbd582bf4a24bf257ae60855b21911a7}{AddGameObjectInVector}}(allGameObject,\ gameObject);}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ allGameObject;}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \textcolor{preprocessor}{\#pragma\ region\ Setter}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_scene_acf73ef32322ffa846db37f4e07a220eb}{SetName}}(\textcolor{keyword}{const}\ std::string\&\ \_name);}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_scene_afbe51e76d09ce38b5e727a1d0a688ac7}{SetFileName}}(\textcolor{keyword}{const}\ std::string\&\ \_fileName,\ \textcolor{keywordtype}{bool}\ \_bDeletePreviousFiles)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_af7fc9655341c18fd9c73202975c72dd5}{SetRootObjectIndex}}(\mbox{\hyperlink{class_game_object}{GameObject}}*\ \_rootObject,\ uint32\_t\ \_newIndex)\ \{\}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#pragma\ region\ Create}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \mbox{\hyperlink{class_base_scene_afbb2fd581e08cec8b730fa11bdf52a5c}{CreateGameObject}}();}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\#pragma\ region\ Destroy}}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_scene_a4184a719d7aaf086ab64da0cac144879}{DestroyGameObject}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \_gameObject);}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_base_scene_a9ddd1f47f2a846ece62f6532b474c1ea}{IsInitialized}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_scene_ad8015fb0b689036e048fefe4d09d1160}{FileExists}}(\textcolor{keyword}{const}\ std::string\&\ \_filePath);}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_scene_ade7aa81f2f79609a6408cb57fa94033c}{IsUsingSaveFile}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_scene_ac65255ae7f5bfcec1df1d537deb72468}{DeleteSaveFiles}}();}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_scene_a58f83535913ba87fc8b3ea09c96609a9}{Contains}}(\textcolor{keyword}{const}\ std::vector<GameObject::id\_t>\&\ \_container,\ \textcolor{keyword}{const}\ GameObject::id\_t\&\ \_value);}
+\DoxyCodeLine{00233\ \ \ \ \ }
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \mbox{\hyperlink{class_base_scene_a92798a6a991d22494cfd8674507478dc}{AddRootObject}}(\mbox{\hyperlink{class_game_object}{GameObject}}*\ \_gameObject);}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \mbox{\hyperlink{class_base_scene_a920ab444e16b8f0483a3c12bb1cb593c}{AddRootObjectImmediate}}(\mbox{\hyperlink{class_game_object}{GameObject}}*\ \_gameObject)\{\}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \mbox{\hyperlink{class_base_scene_abae8826cbe2331ea4b3cf6ce274c408d}{AddChildObject}}(\mbox{\hyperlink{class_game_object}{GameObject}}*\ \_parent,\ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \_child)\ \{\}}
+\DoxyCodeLine{00260\ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \mbox{\hyperlink{class_base_scene_a1980dbec06368934f797fec2c534b843}{AddChildObjectImmediate}}(\mbox{\hyperlink{class_game_object}{GameObject}}*\ \_parent,\ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \_child)\ \{\}}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \mbox{\hyperlink{class_base_scene_aa8a9e9afcb7af5de48bc0e6e62a48ae4}{AddSiblingObjectImmediate}}(\mbox{\hyperlink{class_game_object}{GameObject}}*\ \_gameObject,\ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \_newSibling)\ \{\}}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \textcolor{preprocessor}{\#pragma\ region\ Remove}}
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_a7bc84a73f659eafc9cb0bcd4b20a2e5a}{RemoveAllObjects}}();}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_a4aef515aa3a1cd3d3536d84ef9d18d16}{RemoveAllObjectsImmediate}}()\{\}}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_a9833201f5fc2608edb21619a4b1db1b6}{RemoveAllEditorObjectsImmediate}}()\{\}}
+\DoxyCodeLine{00299\ }
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_aa08ceda4403231cf6090c56d0df5ee68}{RemoveObject}}(\textcolor{keyword}{const}\ GameObject::id\_t\&\ \_gameObjectId,\ \textcolor{keywordtype}{bool}\ \_bDestroy);}
+\DoxyCodeLine{00307\ }
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_aa08ceda4403231cf6090c56d0df5ee68}{RemoveObject}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \_gameObject,\ \textcolor{keywordtype}{bool}\ \_bDestroy);}
+\DoxyCodeLine{00315\ }
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \textcolor{comment}{//void\ RemoveObjectImmediate(const\ GameObject::id\_t\&\ \_gameObjectID,\ bool\ \_bDestroy);}}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \textcolor{comment}{//void\ RemoveObjectImmediate(GameObject*\ \_gameObject,\ bool\ \_bDestroy);}}
+\DoxyCodeLine{00318\ }
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_aab5197be3ab10416d80796c63b12f89d}{RemoveObjects}}(\textcolor{keyword}{const}\ std::vector<GameObject::id\_t>\&\ \_gameObjects,\ \textcolor{keywordtype}{bool}\ \_bDestroy);}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_aab5197be3ab10416d80796c63b12f89d}{RemoveObjects}}(\textcolor{keyword}{const}\ std::vector<GameObject*>\&\ \_gameObjects,\ \textcolor{keywordtype}{bool}\ \_bDestroy);}
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_aad43896fe03af531cbc8d0c45c564cb2}{RemoveObjectsImmediate}}(\textcolor{keyword}{const}\ std::vector<GameObject::id\_t>\&\ \_gameObjects,\ \textcolor{keywordtype}{bool}\ \_bDestroy)\{\}}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_a7a7b366b6d926a1c853782bb9616ba9a}{RemoveObjectsImmediate}}(\textcolor{keyword}{const}\ std::vector<GameObject*>\&\ \_gameObjects,\ \textcolor{keywordtype}{bool}\ \_bDestroy)\{\}}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ GameObject::id\_t\ \mbox{\hyperlink{class_base_scene_a50ed32fa47d91d177f8d09fb0eddfe67}{FirstObjectWithTag}}(\textcolor{keyword}{const}\ std::string\&\ \_tag)\{\}}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_ac4c053b464819b8ecef4fbc0e4b625b0}{TestLoadGameObjects}}();}
+\DoxyCodeLine{00367\ }
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_base_scene_abbd582bf4a24bf257ae60855b21911a7}{AddGameObjectInVector}}(std::vector<GameObject*>\&\ \_gameObjects,\ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \_gameObject)\ \{}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \_gameObjects.push\_back(\_gameObject);}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ gameObject\ :\ \_gameObject-\/>\mbox{\hyperlink{class_game_object_acc9c5c271db831c5b713c5b104f270d9}{GetChildren}}())\ \{}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_base_scene_abbd582bf4a24bf257ae60855b21911a7}{AddGameObjectInVector}}(\_gameObjects,\ gameObject);}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00380\ }
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \mbox{\hyperlink{class_base_scene_a54110dc3a0e4d0ca08e9a08b31ad3548}{CreateCubeGameObject}}(\textcolor{keywordtype}{int}\ \_type);}
+\DoxyCodeLine{00387\ }
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \mbox{\hyperlink{class_base_scene_af0f7e4035cde76688c4eaf39a08e609a}{CreateLightGameObject}}();}
+\DoxyCodeLine{00394\ }
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_object}{GameObject}}*\ \mbox{\hyperlink{class_base_scene_a77233636020ef22fc964961af22c96ba}{CreatePlaneGameObject}}();}
+\DoxyCodeLine{00401\ }
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_object}{GameObject}}*\ CreateVaseGameObject(\textcolor{keywordtype}{int}\ \_type);}
+\DoxyCodeLine{00403\ }
+\DoxyCodeLine{00404\ }
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_base_scene_a7a93c99d6af8a2a2a744bdaa15cb611b}{name}};\ }
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_base_scene_a9fa392d05125cc88b75de264f0e59d07}{fileName}};\ }
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ std::vector<GameObject::id\_t>\ \mbox{\hyperlink{class_base_scene_acb4914ea048763a6dd8d6ef573e53451}{pendingDestroyObjects}};\ }
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ std::vector<GameObject*>\ \mbox{\hyperlink{class_base_scene_afa27359b9bc27ee57b3512d17ca7d43f}{pendingAddObjects}};\ }
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ std::vector<GameObject*>\ \mbox{\hyperlink{class_base_scene_a462479820c153a0b230bb31246aec922}{rootObjects}};\ }
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ std::vector<GameObject::id\_t>\ \mbox{\hyperlink{class_base_scene_a89d1ed36b3076d31cfa035ca03db914b}{pendingRemoveObjects}};\ }
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ GameObject::id\_t\ \mbox{\hyperlink{class_base_scene_a6d909301e434bfc5dde9f05b1d71bcb7}{invalidGameObjectId}}\ =\ \{\};\ }
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_base_scene_ac7dcc4eca603fac2b28433411d065d8b}{bInitialized}}\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_base_scene_a9c9accdbd65b2c06798acf110fb33a89}{bLoaded}}\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00417\ \};}
+
+\end{DoxyCode}

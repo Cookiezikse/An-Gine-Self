@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/GameObject/PreGameObject/CubeGameObject.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_b5568337a7efd7b38bac1af67081c77f.html">GameObject</a></li><li class="navelem"><a class="el" href="dir_1333dbe08e3fc43946506fc7e02ffc9e.html">PreGameObject</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">CubeGameObject.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;LveEngine/lve_constants.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;GameObject/GameObject.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span>lve</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classlve_1_1_cube_game_object.html">   13</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classlve_1_1_cube_game_object.html">CubeGameObject</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="keyword">static</span> <a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_function" href="classlve_1_1_cube_game_object.html#ac0ba24fee0cc7d25c32979d7fbfdba0b">Create</a>(<a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp; _lveDevice, glm::vec3 _position = VEC3_ZERO,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                glm::vec3  _scale = VEC3_ONE, glm::vec3 _rotation = VEC3_ZERO);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keyword">static</span> <a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_function" href="classlve_1_1_cube_game_object.html#a064b52ac14e261d51730b838958e14b8">CreateColor</a>(<a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp; _lveDevice, glm::vec3 _position = VEC3_ZERO,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                glm::vec3  _scale = VEC3_ONE, glm::vec3 _rotation = VEC3_ZERO);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    };</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
+<div class="ttc" id="aclass_game_object_html"><div class="ttname"><a href="class_game_object.html">GameObject</a></div><div class="ttdoc">Représente un objet générique dans le jeu.</div><div class="ttdef"><b>Definition</b> GameObject.h:45</div></div>
+<div class="ttc" id="aclasslve_1_1_cube_game_object_html"><div class="ttname"><a href="classlve_1_1_cube_game_object.html">lve::CubeGameObject</a></div><div class="ttdoc">Repr�sente un objet cube dans le jeu.</div><div class="ttdef"><b>Definition</b> CubeGameObject.h:14</div></div>
+<div class="ttc" id="aclasslve_1_1_cube_game_object_html_a064b52ac14e261d51730b838958e14b8"><div class="ttname"><a href="classlve_1_1_cube_game_object.html#a064b52ac14e261d51730b838958e14b8">lve::CubeGameObject::CreateColor</a></div><div class="ttdeci">static GameObject * CreateColor(LveDevice &amp;_lveDevice, glm::vec3 _position=VEC3_ZERO, glm::vec3 _scale=VEC3_ONE, glm::vec3 _rotation=VEC3_ZERO)</div><div class="ttdoc">Cr�e un nouvel objet cube avec une couleur al�atoire.</div><div class="ttdef"><b>Definition</b> CubeGameObject.cpp:23</div></div>
+<div class="ttc" id="aclasslve_1_1_cube_game_object_html_ac0ba24fee0cc7d25c32979d7fbfdba0b"><div class="ttname"><a href="classlve_1_1_cube_game_object.html#ac0ba24fee0cc7d25c32979d7fbfdba0b">lve::CubeGameObject::Create</a></div><div class="ttdeci">static GameObject * Create(LveDevice &amp;_lveDevice, glm::vec3 _position=VEC3_ZERO, glm::vec3 _scale=VEC3_ONE, glm::vec3 _rotation=VEC3_ZERO)</div><div class="ttdoc">Cr�e un nouvel objet cube.</div><div class="ttdef"><b>Definition</b> CubeGameObject.cpp:7</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html"><div class="ttname"><a href="classlve_1_1_lve_device.html">lve::LveDevice</a></div><div class="ttdoc">Classe repr�sentant un p�riph�rique Vulkan.</div><div class="ttdef"><b>Definition</b> lve_device.h:41</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

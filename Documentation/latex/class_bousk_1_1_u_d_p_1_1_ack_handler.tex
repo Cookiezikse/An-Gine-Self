@@ -1,0 +1,74 @@
+\doxysection{R√©f√©rence de la classe Bousk\+::UDP\+::Ack\+Handler}
+\hypertarget{class_bousk_1_1_u_d_p_1_1_ack_handler}{}\label{class_bousk_1_1_u_d_p_1_1_ack_handler}\index{Bousk::UDP::AckHandler@{Bousk::UDP::AckHandler}}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_u_d_p_1_1_ack_handler_a6f11d2a853f1f7f2ed2ecdc3e5fb0295}\label{class_bousk_1_1_u_d_p_1_1_ack_handler_a6f11d2a853f1f7f2ed2ecdc3e5fb0295} 
+{\bfseries Ack\+Handler} (const \mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler}{Ack\+Handler}} \&)=default
+\item 
+\Hypertarget{class_bousk_1_1_u_d_p_1_1_ack_handler_a8d3260fd7ca93ff7b7e64caf9e747ae7}\label{class_bousk_1_1_u_d_p_1_1_ack_handler_a8d3260fd7ca93ff7b7e64caf9e747ae7} 
+\mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler}{Ack\+Handler}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler}{Ack\+Handler}} \&)=default
+\item 
+\Hypertarget{class_bousk_1_1_u_d_p_1_1_ack_handler_a12a3c25f4a9e222722ae4f66ead250f5}\label{class_bousk_1_1_u_d_p_1_1_ack_handler_a12a3c25f4a9e222722ae4f66ead250f5} 
+{\bfseries Ack\+Handler} (\mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler}{Ack\+Handler}} \&\&)=default
+\item 
+\Hypertarget{class_bousk_1_1_u_d_p_1_1_ack_handler_a7450881e5f9437dc9cd4619b7e74b083}\label{class_bousk_1_1_u_d_p_1_1_ack_handler_a7450881e5f9437dc9cd4619b7e74b083} 
+\mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler}{Ack\+Handler}} \& {\bfseries operator=} (\mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler}{Ack\+Handler}} \&\&)=default
+\item 
+void \mbox{\hyperlink{class_bousk_1_1_u_d_p_1_1_ack_handler_a8968e4a461ad4e20d94a434202c3f653}{update}} (uint16 new\+Ack, uint64 previous\+Acks, bool track\+Loss=false)
+\item 
+\Hypertarget{class_bousk_1_1_u_d_p_1_1_ack_handler_a11abaf700de4fd00002d85c26cfbd8a0}\label{class_bousk_1_1_u_d_p_1_1_ack_handler_a11abaf700de4fd00002d85c26cfbd8a0} 
+bool {\bfseries is\+Acked} (uint16 ack) const
+\item 
+\Hypertarget{class_bousk_1_1_u_d_p_1_1_ack_handler_aced477b71207023dafaaaa51b2c687ae}\label{class_bousk_1_1_u_d_p_1_1_ack_handler_aced477b71207023dafaaaa51b2c687ae} 
+bool {\bfseries is\+Newly\+Acked} (uint16 ack) const
+\item 
+\Hypertarget{class_bousk_1_1_u_d_p_1_1_ack_handler_a9596c67d7c3dea0d1867be769ab4b7c4}\label{class_bousk_1_1_u_d_p_1_1_ack_handler_a9596c67d7c3dea0d1867be769ab4b7c4} 
+uint16 {\bfseries last\+Ack} () const
+\item 
+\Hypertarget{class_bousk_1_1_u_d_p_1_1_ack_handler_afcdfd56ec38ac98f8b55552036c4458d}\label{class_bousk_1_1_u_d_p_1_1_ack_handler_afcdfd56ec38ac98f8b55552036c4458d} 
+uint64 {\bfseries previous\+Acks\+Mask} () const
+\item 
+\Hypertarget{class_bousk_1_1_u_d_p_1_1_ack_handler_a7b2bc164dc78d38c31f1123d80c98f09}\label{class_bousk_1_1_u_d_p_1_1_ack_handler_a7b2bc164dc78d38c31f1123d80c98f09} 
+std\+::vector$<$ uint16 $>$ {\bfseries get\+New\+Acks} () const
+\item 
+\Hypertarget{class_bousk_1_1_u_d_p_1_1_ack_handler_a41490745d018549bcd1c6451908aa89f}\label{class_bousk_1_1_u_d_p_1_1_ack_handler_a41490745d018549bcd1c6451908aa89f} 
+std\+::vector$<$ uint16 $>$ \&\& {\bfseries loss} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_bousk_1_1_u_d_p_1_1_ack_handler_a8968e4a461ad4e20d94a434202c3f653}\label{class_bousk_1_1_u_d_p_1_1_ack_handler_a8968e4a461ad4e20d94a434202c3f653} 
+\index{Bousk::UDP::AckHandler@{Bousk::UDP::AckHandler}!update@{update}}
+\index{update@{update}!Bousk::UDP::AckHandler@{Bousk::UDP::AckHandler}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Bousk\+::\+UDP\+::\+Ack\+Handler\+::update (\begin{DoxyParamCaption}\item[{uint16}]{new\+Ack,  }\item[{uint64}]{previous\+Acks,  }\item[{bool}]{track\+Loss = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\texorpdfstring{$<$}{<} Doublon du dernier acquittement, mais le masque peut contenir de nouvelles informations
+
+\texorpdfstring{$<$}{<} Acquittement plus rÈcent, vÈrifier les pertes, etc.
+
+\texorpdfstring{$<$}{<} Nombre de bits ‡ dÈcaler du masque
+
+\texorpdfstring{$<$}{<} Cet identifiant nía pas ÈtÈ acquittÈ et est maintenant hors bornes \+: marquer comme perdu
+
+\texorpdfstring{$<$}{<} Il síagit díun saut qui supprime entiËrement le masque
+
+\texorpdfstring{$<$}{<} VÈrifier chaque identifiant du masque pour marquer comme perdus les non-\/acquittÈs
+
+\texorpdfstring{$<$}{<} Marquer líancien acquittement comme acquittÈ dans le masque dÈcalÈ
+
+\texorpdfstring{$<$}{<} Il síagit díun vieil acquittement, síil níest pas trop dÈpassÈ il peut contenir des informations intÈressantes
+
+\texorpdfstring{$<$}{<} Aligner le masque reÁu avec notre masque actuel
+
+\texorpdfstring{$<$}{<} InsÈrer líacquittement dans le masque
+
+\texorpdfstring{$<$}{<} Puis mise ‡ jour des acquittements
+
+\texorpdfstring{$<$}{<} Acquittement plus vieux que la borne infÈrieure du masque actuel, on líignore
+
+La documentation de cette classe a √©t√© g√©n√©r√©e √† partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+UDP/Ack\+Handler.\+h\item 
+sources/\+UDP/Ack\+Handler.\+cpp\end{DoxyCompactItemize}

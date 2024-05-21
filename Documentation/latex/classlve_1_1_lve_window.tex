@@ -1,0 +1,372 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Lve\+Window}
+\hypertarget{classlve_1_1_lve_window}{}\label{classlve_1_1_lve_window}\index{lve::LveWindow@{lve::LveWindow}}
+\doxysubsubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aef}{Glfw\+Cursor\+Type}} \{ \newline
+\mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefab0d2450c79ed70edf5a71a887a6740dc}{ARROW}}
+, \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefaba0f487fa9f9ec1b6ea3d188e51a4458}{IBEAM}}
+, \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefad6e02d2576dd6e365ad34514e0dade5d}{CROSSHAIR}}
+, \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa95b11f98c2c077aa6f9e3fe6d2162bd3}{POINTING\+\_\+\+HAND}}
+, \newline
+\mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa7361c79b81519895cd7315e2426c64b9}{RESIZE\+\_\+\+EW}}
+, \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa9a10132a282506865dc16796b16eaf07}{RESIZE\+\_\+\+NS}}
+, \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa6b0f43099e87d6deba4e000731434c75}{RESIZE\+\_\+\+NWSE}}
+, \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa35fc4c7763fc038f40a9fb804822867e}{RESIZE\+\_\+\+NESW}}
+, \newline
+\mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa57c579f6e08915a56d917a1b9b7750c3}{RESIZE\+\_\+\+ALL}}
+, \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa84267bbabe52429af142d0ecd425d9eb}{NOT\+\_\+\+ALLOWED}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumération des types de curseurs GLFW. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956}{Glfw\+Cursor\+Mode}} \{ \mbox{\hyperlink{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956a38fd674f568cb264fc26e88c67c5707a}{DISABLED}}
+, \mbox{\hyperlink{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956afc73d2af1804154c5040bb22bd1a2cdf}{HIDDEN}}
+, \mbox{\hyperlink{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956a8a5774c7757801114c00583a94ee9cda}{NORMAL}}
+, \mbox{\hyperlink{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956a062dda27351abd7b1c9cf24a2748e7d4}{CAPTURED}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumération des modes de curseurs GLFW. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_window_abf6eca68d3ca6f0cc2dc0aa487a61118}{Lve\+Window}} (int \+\_\+width, int \+\_\+height, const std\+::string \&\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \doxylink{classlve_1_1_lve_window}{Lve\+Window}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_window_acb6b104ed2d4bda2fb110c84c0707d00}{\texorpdfstring{$\sim$}{\string~}\+Lve\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \doxylink{classlve_1_1_lve_window}{Lve\+Window}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_window_ae55914f7a76712bbbf278941e285fb72}{Lve\+Window}} (const \mbox{\hyperlink{classlve_1_1_lve_window}{Lve\+Window}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Constructeur de copie supprimé. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_window}{Lve\+Window}} \& \mbox{\hyperlink{classlve_1_1_lve_window_a219c97ccdf34dc7bde8e35e75fdce79f}{operator=}} (const \mbox{\hyperlink{classlve_1_1_lve_window}{Lve\+Window}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}affectation par copie supprimé. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlve_1_1_lve_window_a9cda11e7e983cf0ab9b282f6b01eb14e}{Should\+Close}} () const
+\begin{DoxyCompactList}\small\item\em Vérifie si la fenêtre doit être fermée. \end{DoxyCompactList}\item 
+vk\+::\+Extent2D \mbox{\hyperlink{classlve_1_1_lve_window_a6d4174a836807f6aac22c98a93b9f732}{Get\+Extent}} () const
+\begin{DoxyCompactList}\small\item\em Obtient les dimensions de la fenêtre. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlve_1_1_lve_window_a3eb0f92138a81162bcdc23b948679766}{Was\+Window\+Resized}} () const
+\begin{DoxyCompactList}\small\item\em Vérifie si la fenêtre a été redimensionnée. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_window_a05b76d2ea4d73ea9d3385d294ae291c5}{Reset\+Window\+Resized\+Flag}} ()
+\begin{DoxyCompactList}\small\item\em Réinitialise le drapeau de redimensionnement de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_window_a7a4fe86a56aed0cf0cbb239f6d375f1c}{Create\+Window\+Surface}} (vk\+::\+Instance \+\_\+instance, vk\+::\+Surface\+KHR \texorpdfstring{$\ast$}{*}\+\_\+surface) const
+\begin{DoxyCompactList}\small\item\em Crée une surface Vulkan associée à une fenêtre. \end{DoxyCompactList}\item 
+GLFWwindow \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classlve_1_1_lve_window_a4bfd2b8aa1312f13eea732f0ca9aee48}{Get\+Glfw\+Window}} () const
+\begin{DoxyCompactList}\small\item\em Obtient un pointeur vers la fenêtre GLFW. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_window_ade46b53757c6ce6f5735d6013e88a1ac}{Reset\+Cursor\+Window}} () const
+\begin{DoxyCompactList}\small\item\em Réinitialise le curseur de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_window_a8a099e180758e4bd8f461228ba7d18ee}{Cube\+Cursor\+Window}} (int \+\_\+color=255) const
+\begin{DoxyCompactList}\small\item\em Change la forme du curseur de la fenêtre en un cube coloré. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_window_a7e3657c2c2521f5153ebd4837510e4bd}{Standard\+Cursor\+Window}} (\mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aef}{Glfw\+Cursor\+Type}} \+\_\+cursor\+Type) const
+\begin{DoxyCompactList}\small\item\em Définit le curseur standard de la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_window_abf26788840fc2e3f662bf21325303c7b}{Set\+Input\+Cursor\+Mode}} (\mbox{\hyperlink{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956}{Glfw\+Cursor\+Mode}} \+\_\+mode) const
+\begin{DoxyCompactList}\small\item\em Définit le mode de curseur d\textquotesingle{}entrée pour la fenêtre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des Ã©numÃ©rations membres}
+\Hypertarget{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956}\label{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956} 
+\index{lve::LveWindow@{lve::LveWindow}!GlfwCursorMode@{GlfwCursorMode}}
+\index{GlfwCursorMode@{GlfwCursorMode}!lve::LveWindow@{lve::LveWindow}}
+\doxysubsubsection{\texorpdfstring{GlfwCursorMode}{GlfwCursorMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956}{lve\+::\+Lve\+Window\+::\+Glfw\+Cursor\+Mode}}}
+
+
+
+Enumération des modes de curseurs GLFW. 
+
+Cette énumération représente les différents modes de curseurs GLFW. Ces modes définissent le comportement du curseur sur l\textquotesingle{}écran. \begin{DoxyEnumFields}{Valeurs Ã©numÃ©rÃ©es}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DISABLED@{DISABLED}!lve::LveWindow@{lve::LveWindow}}\index{lve::LveWindow@{lve::LveWindow}!DISABLED@{DISABLED}}}\Hypertarget{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956a38fd674f568cb264fc26e88c67c5707a}\label{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956a38fd674f568cb264fc26e88c67c5707a} 
+DISABLED&Curseur désactivé. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIDDEN@{HIDDEN}!lve::LveWindow@{lve::LveWindow}}\index{lve::LveWindow@{lve::LveWindow}!HIDDEN@{HIDDEN}}}\Hypertarget{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956afc73d2af1804154c5040bb22bd1a2cdf}\label{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956afc73d2af1804154c5040bb22bd1a2cdf} 
+HIDDEN&Curseur caché. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NORMAL@{NORMAL}!lve::LveWindow@{lve::LveWindow}}\index{lve::LveWindow@{lve::LveWindow}!NORMAL@{NORMAL}}}\Hypertarget{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956a8a5774c7757801114c00583a94ee9cda}\label{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956a8a5774c7757801114c00583a94ee9cda} 
+NORMAL&Curseur normal (visible). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CAPTURED@{CAPTURED}!lve::LveWindow@{lve::LveWindow}}\index{lve::LveWindow@{lve::LveWindow}!CAPTURED@{CAPTURED}}}\Hypertarget{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956a062dda27351abd7b1c9cf24a2748e7d4}\label{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956a062dda27351abd7b1c9cf24a2748e7d4} 
+CAPTURED&Curseur capturé (exclusif à la fenêtre). \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aef}\label{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aef} 
+\index{lve::LveWindow@{lve::LveWindow}!GlfwCursorType@{GlfwCursorType}}
+\index{GlfwCursorType@{GlfwCursorType}!lve::LveWindow@{lve::LveWindow}}
+\doxysubsubsection{\texorpdfstring{GlfwCursorType}{GlfwCursorType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aef}{lve\+::\+Lve\+Window\+::\+Glfw\+Cursor\+Type}}}
+
+
+
+Enumération des types de curseurs GLFW. 
+
+Cette énumération représente les différents types de curseurs GLFW disponibles. Ces types peuvent être utilisés pour spécifier le style du curseur à afficher. \begin{DoxyEnumFields}{Valeurs Ã©numÃ©rÃ©es}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARROW@{ARROW}!lve::LveWindow@{lve::LveWindow}}\index{lve::LveWindow@{lve::LveWindow}!ARROW@{ARROW}}}\Hypertarget{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefab0d2450c79ed70edf5a71a887a6740dc}\label{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefab0d2450c79ed70edf5a71a887a6740dc} 
+ARROW&Curseur flèche. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IBEAM@{IBEAM}!lve::LveWindow@{lve::LveWindow}}\index{lve::LveWindow@{lve::LveWindow}!IBEAM@{IBEAM}}}\Hypertarget{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefaba0f487fa9f9ec1b6ea3d188e51a4458}\label{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefaba0f487fa9f9ec1b6ea3d188e51a4458} 
+IBEAM&Curseur I-\/beam (curseur de texte). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CROSSHAIR@{CROSSHAIR}!lve::LveWindow@{lve::LveWindow}}\index{lve::LveWindow@{lve::LveWindow}!CROSSHAIR@{CROSSHAIR}}}\Hypertarget{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefad6e02d2576dd6e365ad34514e0dade5d}\label{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefad6e02d2576dd6e365ad34514e0dade5d} 
+CROSSHAIR&Curseur croix. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POINTING\_HAND@{POINTING\_HAND}!lve::LveWindow@{lve::LveWindow}}\index{lve::LveWindow@{lve::LveWindow}!POINTING\_HAND@{POINTING\_HAND}}}\Hypertarget{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa95b11f98c2c077aa6f9e3fe6d2162bd3}\label{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa95b11f98c2c077aa6f9e3fe6d2162bd3} 
+POINTING\+\_\+\+HAND&Curseur main pointant. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RESIZE\_EW@{RESIZE\_EW}!lve::LveWindow@{lve::LveWindow}}\index{lve::LveWindow@{lve::LveWindow}!RESIZE\_EW@{RESIZE\_EW}}}\Hypertarget{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa7361c79b81519895cd7315e2426c64b9}\label{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa7361c79b81519895cd7315e2426c64b9} 
+RESIZE\+\_\+\+EW&Curseur redimensionner horizontal. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RESIZE\_NS@{RESIZE\_NS}!lve::LveWindow@{lve::LveWindow}}\index{lve::LveWindow@{lve::LveWindow}!RESIZE\_NS@{RESIZE\_NS}}}\Hypertarget{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa9a10132a282506865dc16796b16eaf07}\label{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa9a10132a282506865dc16796b16eaf07} 
+RESIZE\+\_\+\+NS&Curseur redimensionner vertical. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RESIZE\_NWSE@{RESIZE\_NWSE}!lve::LveWindow@{lve::LveWindow}}\index{lve::LveWindow@{lve::LveWindow}!RESIZE\_NWSE@{RESIZE\_NWSE}}}\Hypertarget{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa6b0f43099e87d6deba4e000731434c75}\label{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa6b0f43099e87d6deba4e000731434c75} 
+RESIZE\+\_\+\+NWSE&Curseur redimensionner diagonale NW-\/\+SE. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RESIZE\_NESW@{RESIZE\_NESW}!lve::LveWindow@{lve::LveWindow}}\index{lve::LveWindow@{lve::LveWindow}!RESIZE\_NESW@{RESIZE\_NESW}}}\Hypertarget{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa35fc4c7763fc038f40a9fb804822867e}\label{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa35fc4c7763fc038f40a9fb804822867e} 
+RESIZE\+\_\+\+NESW&Curseur redimensionner diagonale NE-\/\+SW. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RESIZE\_ALL@{RESIZE\_ALL}!lve::LveWindow@{lve::LveWindow}}\index{lve::LveWindow@{lve::LveWindow}!RESIZE\_ALL@{RESIZE\_ALL}}}\Hypertarget{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa57c579f6e08915a56d917a1b9b7750c3}\label{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa57c579f6e08915a56d917a1b9b7750c3} 
+RESIZE\+\_\+\+ALL&Curseur redimensionner dans toutes les directions. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NOT\_ALLOWED@{NOT\_ALLOWED}!lve::LveWindow@{lve::LveWindow}}\index{lve::LveWindow@{lve::LveWindow}!NOT\_ALLOWED@{NOT\_ALLOWED}}}\Hypertarget{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa84267bbabe52429af142d0ecd425d9eb}\label{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aefa84267bbabe52429af142d0ecd425d9eb} 
+NOT\+\_\+\+ALLOWED&Curseur non autorisé. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classlve_1_1_lve_window_abf6eca68d3ca6f0cc2dc0aa487a61118}\label{classlve_1_1_lve_window_abf6eca68d3ca6f0cc2dc0aa487a61118} 
+\index{lve::LveWindow@{lve::LveWindow}!LveWindow@{LveWindow}}
+\index{LveWindow@{LveWindow}!lve::LveWindow@{lve::LveWindow}}
+\doxysubsubsection{\texorpdfstring{LveWindow()}{LveWindow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Window\+::\+Lve\+Window (\begin{DoxyParamCaption}\item[{int}]{\+\_\+width,  }\item[{int}]{\+\_\+height,  }\item[{const std\+::string \&}]{\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe \doxylink{classlve_1_1_lve_window}{Lve\+Window}. 
+
+Initialise une instance de \doxylink{classlve_1_1_lve_window}{Lve\+Window} avec les dimensions spécifiées et le nom de la fenêtre.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+width} & La largeur de la fenêtre. \\
+\hline
+{\em \+\_\+height} & La hauteur de la fenêtre. \\
+\hline
+{\em \+\_\+name} & Le nom de la fenêtre. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Rien. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_window_acb6b104ed2d4bda2fb110c84c0707d00}\label{classlve_1_1_lve_window_acb6b104ed2d4bda2fb110c84c0707d00} 
+\index{lve::LveWindow@{lve::LveWindow}!````~LveWindow@{\texorpdfstring{$\sim$}{\string~}LveWindow}}
+\index{````~LveWindow@{\texorpdfstring{$\sim$}{\string~}LveWindow}!lve::LveWindow@{lve::LveWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LveWindow()}{\string~LveWindow()}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Lve\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur de la classe \doxylink{classlve_1_1_lve_window}{Lve\+Window}. 
+
+Détruit la fenêtre GLFW. \Hypertarget{classlve_1_1_lve_window_ae55914f7a76712bbbf278941e285fb72}\label{classlve_1_1_lve_window_ae55914f7a76712bbbf278941e285fb72} 
+\index{lve::LveWindow@{lve::LveWindow}!LveWindow@{LveWindow}}
+\index{LveWindow@{LveWindow}!lve::LveWindow@{lve::LveWindow}}
+\doxysubsubsection{\texorpdfstring{LveWindow()}{LveWindow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Window\+::\+Lve\+Window (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlve_1_1_lve_window}{Lve\+Window}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Constructeur de copie supprimé. 
+
+La copie d\textquotesingle{}objets de type \doxylink{classlve_1_1_lve_window}{Lve\+Window} est explicitement interdite pour éviter les problèmes de gestion des ressources associées à la fenêtre. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_lve_window_a7a4fe86a56aed0cf0cbb239f6d375f1c}\label{classlve_1_1_lve_window_a7a4fe86a56aed0cf0cbb239f6d375f1c} 
+\index{lve::LveWindow@{lve::LveWindow}!CreateWindowSurface@{CreateWindowSurface}}
+\index{CreateWindowSurface@{CreateWindowSurface}!lve::LveWindow@{lve::LveWindow}}
+\doxysubsubsection{\texorpdfstring{CreateWindowSurface()}{CreateWindowSurface()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Window\+::\+Create\+Window\+Surface (\begin{DoxyParamCaption}\item[{vk\+::\+Instance}]{\+\_\+instance,  }\item[{vk\+::\+Surface\+KHR \texorpdfstring{$\ast$}{*}}]{\+\_\+surface }\end{DoxyParamCaption}) const}
+
+
+
+Crée une surface Vulkan associée à une fenêtre. 
+
+Cette fonction crée une surface Vulkan associée à une fenêtre, permettant à Vulkan de dessiner dans cette fenêtre.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+instance} & L\textquotesingle{}instance Vulkan utilisée pour créer la surface. \\
+\hline
+{\em \+\_\+surface} & Un pointeur vers l\textquotesingle{}objet de surface Vulkan à créer. Ce pointeur sera mis à jour pour contenir la surface créée. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Une} & exception en cas d\textquotesingle{}échec lors de la création de la surface. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classlve_1_1_lve_window_a8a099e180758e4bd8f461228ba7d18ee}\label{classlve_1_1_lve_window_a8a099e180758e4bd8f461228ba7d18ee} 
+\index{lve::LveWindow@{lve::LveWindow}!CubeCursorWindow@{CubeCursorWindow}}
+\index{CubeCursorWindow@{CubeCursorWindow}!lve::LveWindow@{lve::LveWindow}}
+\doxysubsubsection{\texorpdfstring{CubeCursorWindow()}{CubeCursorWindow()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Window\+::\+Cube\+Cursor\+Window (\begin{DoxyParamCaption}\item[{int}]{\+\_\+color = {\ttfamily 255} }\end{DoxyParamCaption}) const}
+
+
+
+Change la forme du curseur de la fenêtre en un cube coloré. 
+
+Cette fonction change la forme du curseur de la fenêtre en un cube coloré, avec la possibilité de spécifier la couleur du cube.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+color} & \\
+\hline
+{\em color} & La couleur du cube. La valeur par défaut est 255. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_window_a6d4174a836807f6aac22c98a93b9f732}\label{classlve_1_1_lve_window_a6d4174a836807f6aac22c98a93b9f732} 
+\index{lve::LveWindow@{lve::LveWindow}!GetExtent@{GetExtent}}
+\index{GetExtent@{GetExtent}!lve::LveWindow@{lve::LveWindow}}
+\doxysubsubsection{\texorpdfstring{GetExtent()}{GetExtent()}}
+{\footnotesize\ttfamily vk\+::\+Extent2D lve\+::\+Lve\+Window\+::\+Get\+Extent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient les dimensions de la fenêtre. 
+
+Cette fonction retourne les dimensions de la fenêtre sous forme d\textquotesingle{}une structure vk\+::\+Extent2D.
+
+\begin{DoxyReturn}{Renvoie}
+Les dimensions de la fenêtre sous forme d\textquotesingle{}une structure vk\+::\+Extent2D. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_window_a4bfd2b8aa1312f13eea732f0ca9aee48}\label{classlve_1_1_lve_window_a4bfd2b8aa1312f13eea732f0ca9aee48} 
+\index{lve::LveWindow@{lve::LveWindow}!GetGlfwWindow@{GetGlfwWindow}}
+\index{GetGlfwWindow@{GetGlfwWindow}!lve::LveWindow@{lve::LveWindow}}
+\doxysubsubsection{\texorpdfstring{GetGlfwWindow()}{GetGlfwWindow()}}
+{\footnotesize\ttfamily GLFWwindow \texorpdfstring{$\ast$}{*} lve\+::\+Lve\+Window\+::\+Get\+Glfw\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient un pointeur vers la fenêtre GLFW. 
+
+Cette fonction retourne un pointeur vers la fenêtre GLFW associée à l\textquotesingle{}instance actuelle.
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers la fenêtre GLFW. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_window_a219c97ccdf34dc7bde8e35e75fdce79f}\label{classlve_1_1_lve_window_a219c97ccdf34dc7bde8e35e75fdce79f} 
+\index{lve::LveWindow@{lve::LveWindow}!operator=@{operator=}}
+\index{operator=@{operator=}!lve::LveWindow@{lve::LveWindow}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_lve_window}{Lve\+Window}} \& lve\+::\+Lve\+Window\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlve_1_1_lve_window}{Lve\+Window}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Opérateur d\textquotesingle{}affectation par copie supprimé. 
+
+L\textquotesingle{}affectation par copie d\textquotesingle{}objets de type \doxylink{classlve_1_1_lve_window}{Lve\+Window} est explicitement interdite pour éviter les problèmes de gestion des ressources associées à la fenêtre.
+
+\begin{DoxyReturn}{Renvoie}
+Une référence vers l\textquotesingle{}objet \doxylink{classlve_1_1_lve_window}{Lve\+Window} après affectation. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_window_ade46b53757c6ce6f5735d6013e88a1ac}\label{classlve_1_1_lve_window_ade46b53757c6ce6f5735d6013e88a1ac} 
+\index{lve::LveWindow@{lve::LveWindow}!ResetCursorWindow@{ResetCursorWindow}}
+\index{ResetCursorWindow@{ResetCursorWindow}!lve::LveWindow@{lve::LveWindow}}
+\doxysubsubsection{\texorpdfstring{ResetCursorWindow()}{ResetCursorWindow()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Window\+::\+Reset\+Cursor\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Réinitialise le curseur de la fenêtre. 
+
+Cette fonction réinitialise le curseur de la fenêtre à sa forme par défaut. \Hypertarget{classlve_1_1_lve_window_a05b76d2ea4d73ea9d3385d294ae291c5}\label{classlve_1_1_lve_window_a05b76d2ea4d73ea9d3385d294ae291c5} 
+\index{lve::LveWindow@{lve::LveWindow}!ResetWindowResizedFlag@{ResetWindowResizedFlag}}
+\index{ResetWindowResizedFlag@{ResetWindowResizedFlag}!lve::LveWindow@{lve::LveWindow}}
+\doxysubsubsection{\texorpdfstring{ResetWindowResizedFlag()}{ResetWindowResizedFlag()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Window\+::\+Reset\+Window\+Resized\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Réinitialise le drapeau de redimensionnement de la fenêtre. 
+
+Cette fonction réinitialise le drapeau indiquant que la fenêtre a été redimensionnée. \Hypertarget{classlve_1_1_lve_window_abf26788840fc2e3f662bf21325303c7b}\label{classlve_1_1_lve_window_abf26788840fc2e3f662bf21325303c7b} 
+\index{lve::LveWindow@{lve::LveWindow}!SetInputCursorMode@{SetInputCursorMode}}
+\index{SetInputCursorMode@{SetInputCursorMode}!lve::LveWindow@{lve::LveWindow}}
+\doxysubsubsection{\texorpdfstring{SetInputCursorMode()}{SetInputCursorMode()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Window\+::\+Set\+Input\+Cursor\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_lve_window_abe3db3d65a148302ac82ad7d8e822956}{Glfw\+Cursor\+Mode}}}]{\+\_\+mode }\end{DoxyParamCaption}) const}
+
+
+
+Définit le mode de curseur d\textquotesingle{}entrée pour la fenêtre. 
+
+Cette fonction définit le mode de curseur d\textquotesingle{}entrée pour la fenêtre à un mode spécifié.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+mode} & \\
+\hline
+{\em mode} & Le mode de curseur d\textquotesingle{}entrée à définir. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_window_a9cda11e7e983cf0ab9b282f6b01eb14e}\label{classlve_1_1_lve_window_a9cda11e7e983cf0ab9b282f6b01eb14e} 
+\index{lve::LveWindow@{lve::LveWindow}!ShouldClose@{ShouldClose}}
+\index{ShouldClose@{ShouldClose}!lve::LveWindow@{lve::LveWindow}}
+\doxysubsubsection{\texorpdfstring{ShouldClose()}{ShouldClose()}}
+{\footnotesize\ttfamily bool lve\+::\+Lve\+Window\+::\+Should\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vérifie si la fenêtre doit être fermée. 
+
+Cette fonction renvoie true si la fenêtre doit être fermée, false sinon.
+
+\begin{DoxyReturn}{Renvoie}
+true si la fenêtre doit être fermée, false sinon. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_window_a7e3657c2c2521f5153ebd4837510e4bd}\label{classlve_1_1_lve_window_a7e3657c2c2521f5153ebd4837510e4bd} 
+\index{lve::LveWindow@{lve::LveWindow}!StandardCursorWindow@{StandardCursorWindow}}
+\index{StandardCursorWindow@{StandardCursorWindow}!lve::LveWindow@{lve::LveWindow}}
+\doxysubsubsection{\texorpdfstring{StandardCursorWindow()}{StandardCursorWindow()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Window\+::\+Standard\+Cursor\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_lve_window_aa2ffcb68dc1568f2f8ea13810b123aef}{Glfw\+Cursor\+Type}}}]{\+\_\+cursor\+Type }\end{DoxyParamCaption}) const}
+
+
+
+Définit le curseur standard de la fenêtre. 
+
+Cette fonction définit le curseur standard de la fenêtre à un type spécifié.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+cursor\+Type} & \\
+\hline
+{\em Cursor\+Type} & Le type de curseur à définir. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_window_a3eb0f92138a81162bcdc23b948679766}\label{classlve_1_1_lve_window_a3eb0f92138a81162bcdc23b948679766} 
+\index{lve::LveWindow@{lve::LveWindow}!WasWindowResized@{WasWindowResized}}
+\index{WasWindowResized@{WasWindowResized}!lve::LveWindow@{lve::LveWindow}}
+\doxysubsubsection{\texorpdfstring{WasWindowResized()}{WasWindowResized()}}
+{\footnotesize\ttfamily bool lve\+::\+Lve\+Window\+::\+Was\+Window\+Resized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vérifie si la fenêtre a été redimensionnée. 
+
+Cette fonction vérifie si la fenêtre a été redimensionnée depuis la dernière vérification.
+
+\begin{DoxyReturn}{Renvoie}
+true si la fenêtre a été redimensionnée, sinon false. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Lve\+Engine/lve\+\_\+window.\+h\item 
+sources/\+Lve\+Engine/lve\+\_\+window.\+cpp\end{DoxyCompactItemize}

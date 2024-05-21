@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/Modules/HUDModule.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_8ba5de94bce70429844b810000c4522a.html">Modules</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">HUDModule.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef HUD_MANAGER_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define HUD_MANAGER_H</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vulkan/vulkan.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;Modules/Module.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// TODO : Vérifier si c pertinent</span></div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="struct_h_u_d_component.html">   12</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_h_u_d_component.html">HUDComponent</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">float</span>       x,     y;      <span class="comment">// Position de l&#39;élément HUD</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">float</span>       width, height; <span class="comment">// Largeur et hauteur de l&#39;élément HUD</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    VkImage     texture;       <span class="comment">// Image Vulkan de l&#39;élément HUD</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    VkImageView imageView;     <span class="comment">// Vue de l&#39;image Vulkan</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    VkSampler   sampler;       <span class="comment">// Échantillonneur Vulkan</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_h_u_d_module.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="class_h_u_d_module.html">HUDModule</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_module.html">Module</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_class" href="class_h_u_d_module.html">HUDModule</a>(VkDevice _device, VkRenderPass _renderPass, VkQueue _graphicsQueue, VkCommandPool _commandPool);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_class" href="class_h_u_d_module.html">~HUDModule</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">void</span>        AddComponent(<span class="keywordtype">float</span> _x, <span class="keywordtype">float</span> _y, <span class="keywordtype">float</span> _width, <span class="keywordtype">float</span> _height, <span class="keyword">const</span> std::string&amp; _texturePath);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> RemoveComponent();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordtype">void</span>        CleanupComponents();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordtype">void</span>        <a class="code hl_function" href="class_h_u_d_module.html#a40d383abb7cc742eadffadb84fddd822">Render</a>(VkCommandBuffer _commandBuffer);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_h_u_d_module.html#a73da317df970d3235d36ef26a3e307e7">Init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_h_u_d_module.html#a7ee2836aa24659854edc1ba677f4b609">Start</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_h_u_d_module.html#ac45f954940b62fdea3f18aa13002bd05">FixedUpdate</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_h_u_d_module.html#a205e4135c7dae8ee289b20af66c2eb85">Update</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_h_u_d_module.html#a1e2ea09ef7c83bfd1f78cba518f97bff">PreRender</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_h_u_d_module.html#a40d383abb7cc742eadffadb84fddd822">Render</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_h_u_d_module.html#af46395911516a0fedc6e683135d8c9ea">RenderGui</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_h_u_d_module.html#a2066c395246c1a679c99ca8bf93233b6">PostRender</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_h_u_d_module.html#a70ff001d7b0ebd6b6d179b5ea28101b5">Release</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_h_u_d_module.html#a3713f85d4b721969735fd829d6a8b3c3">Finalize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> HEIGHT = 600;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> WIDTH  = 800;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        VkDevice                  device;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        VkRenderPass              renderPass;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        VkQueue                   graphicsQueue;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        VkCommandPool             commandPool;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        std::vector&lt;HUDComponent&gt; components;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        std::vector&lt;char&gt; ReadFile(<span class="keyword">const</span> std::string&amp; _filename);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="comment">// Méthodes pour créer et gérer les ressources Vulkan</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="comment">/*VkImage createTextureImage(const std::string&amp; texturePath);*/</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        VkImageView             CreateTextureImageView(VkImage _image);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        [[nodiscard]] VkSampler CreateTextureSampler() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordtype">void</span>                    TransitionImageLayout(VkImage       _image, VkFormat _format, VkImageLayout _oldLayout,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                                                      VkImageLayout _newLayout);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordtype">void</span> CreateBuffer(VkDeviceSize _size, VkBufferUsageFlags _usage, VkMemoryPropertyFlags _properties,</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                          VkBuffer&amp; _buffer, VkDeviceMemory&amp; _bufferMemory) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordtype">void</span> CreateImage(VkDeviceSize          _size, VkFormat _format, VkImageTiling _tiling, VkImageUsageFlags _usage,</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                         VkMemoryPropertyFlags _properties, VkImage&amp; _image, VkDeviceMemory&amp; _imageMemory) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordtype">void</span> CopyBufferToImage(VkBuffer _buffer, VkImage _image, uint32_t _width, uint32_t _height) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        VkImageView CreateImageView(VkImage _image, VkFormat _format, VkImageAspectFlags _aspectFlags);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>};</div>
+</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#endif </span><span class="comment">// HUD_MANAGER_H</span></div>
+<div class="ttc" id="aclass_h_u_d_module_html"><div class="ttname"><a href="class_h_u_d_module.html">HUDModule</a></div><div class="ttdef"><b>Definition</b> HUDModule.h:22</div></div>
+<div class="ttc" id="aclass_h_u_d_module_html_a1e2ea09ef7c83bfd1f78cba518f97bff"><div class="ttname"><a href="class_h_u_d_module.html#a1e2ea09ef7c83bfd1f78cba518f97bff">HUDModule::PreRender</a></div><div class="ttdeci">void PreRender() override</div><div class="ttdoc">Fonction pré-rendu du module.</div><div class="ttdef"><b>Definition</b> HUDModule.cpp:289</div></div>
+<div class="ttc" id="aclass_h_u_d_module_html_a205e4135c7dae8ee289b20af66c2eb85"><div class="ttname"><a href="class_h_u_d_module.html#a205e4135c7dae8ee289b20af66c2eb85">HUDModule::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdoc">Met à jour le module.</div><div class="ttdef"><b>Definition</b> HUDModule.cpp:284</div></div>
+<div class="ttc" id="aclass_h_u_d_module_html_a2066c395246c1a679c99ca8bf93233b6"><div class="ttname"><a href="class_h_u_d_module.html#a2066c395246c1a679c99ca8bf93233b6">HUDModule::PostRender</a></div><div class="ttdeci">void PostRender() override</div><div class="ttdoc">Fonction post-rendu du module.</div><div class="ttdef"><b>Definition</b> HUDModule.cpp:304</div></div>
+<div class="ttc" id="aclass_h_u_d_module_html_a3713f85d4b721969735fd829d6a8b3c3"><div class="ttname"><a href="class_h_u_d_module.html#a3713f85d4b721969735fd829d6a8b3c3">HUDModule::Finalize</a></div><div class="ttdeci">void Finalize() override</div><div class="ttdoc">Finalise le module.</div><div class="ttdef"><b>Definition</b> HUDModule.cpp:314</div></div>
+<div class="ttc" id="aclass_h_u_d_module_html_a40d383abb7cc742eadffadb84fddd822"><div class="ttname"><a href="class_h_u_d_module.html#a40d383abb7cc742eadffadb84fddd822">HUDModule::Render</a></div><div class="ttdeci">void Render() override</div><div class="ttdoc">Rendu du module.</div><div class="ttdef"><b>Definition</b> HUDModule.cpp:294</div></div>
+<div class="ttc" id="aclass_h_u_d_module_html_a70ff001d7b0ebd6b6d179b5ea28101b5"><div class="ttname"><a href="class_h_u_d_module.html#a70ff001d7b0ebd6b6d179b5ea28101b5">HUDModule::Release</a></div><div class="ttdeci">void Release() override</div><div class="ttdoc">Libère les ressources utilisées par le module.</div><div class="ttdef"><b>Definition</b> HUDModule.cpp:309</div></div>
+<div class="ttc" id="aclass_h_u_d_module_html_a73da317df970d3235d36ef26a3e307e7"><div class="ttname"><a href="class_h_u_d_module.html#a73da317df970d3235d36ef26a3e307e7">HUDModule::Init</a></div><div class="ttdeci">void Init() override</div><div class="ttdoc">Initialise le module.</div><div class="ttdef"><b>Definition</b> HUDModule.cpp:269</div></div>
+<div class="ttc" id="aclass_h_u_d_module_html_a7ee2836aa24659854edc1ba677f4b609"><div class="ttname"><a href="class_h_u_d_module.html#a7ee2836aa24659854edc1ba677f4b609">HUDModule::Start</a></div><div class="ttdeci">void Start() override</div><div class="ttdoc">Démarre le module.</div><div class="ttdef"><b>Definition</b> HUDModule.cpp:274</div></div>
+<div class="ttc" id="aclass_h_u_d_module_html_ac45f954940b62fdea3f18aa13002bd05"><div class="ttname"><a href="class_h_u_d_module.html#ac45f954940b62fdea3f18aa13002bd05">HUDModule::FixedUpdate</a></div><div class="ttdeci">void FixedUpdate() override</div><div class="ttdoc">Effectue une mise à jour fixe du module.</div><div class="ttdef"><b>Definition</b> HUDModule.cpp:279</div></div>
+<div class="ttc" id="aclass_h_u_d_module_html_af46395911516a0fedc6e683135d8c9ea"><div class="ttname"><a href="class_h_u_d_module.html#af46395911516a0fedc6e683135d8c9ea">HUDModule::RenderGui</a></div><div class="ttdeci">void RenderGui() override</div><div class="ttdoc">Rendu de l'interface graphique du module.</div><div class="ttdef"><b>Definition</b> HUDModule.cpp:299</div></div>
+<div class="ttc" id="aclass_module_html"><div class="ttname"><a href="class_module.html">Module</a></div><div class="ttdoc">Classe Module.</div><div class="ttdef"><b>Definition</b> Module.h:19</div></div>
+<div class="ttc" id="astruct_h_u_d_component_html"><div class="ttname"><a href="struct_h_u_d_component.html">HUDComponent</a></div><div class="ttdef"><b>Definition</b> HUDModule.h:13</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

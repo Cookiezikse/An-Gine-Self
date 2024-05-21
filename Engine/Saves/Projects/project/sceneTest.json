@@ -1,0 +1,259 @@
+{
+    "fileName": "",
+    "gameObjects": [
+        {
+            "color": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "isActive": true,
+                    "isVisible": true,
+                    "lightIntensity": 1000000.0,
+                    "name": "Light",
+                    "type": "Light"
+                }
+            ],
+            "fileModel": "",
+            "id": 0,
+            "isActive": true,
+            "isVisible": true,
+            "model_filename": "",
+            "name": "Sun",
+            "texture": 0
+        },
+        {
+            "color": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "components": [],
+            "fileModel": "Models\\flat_vase.obj",
+            "id": 1,
+            "isActive": true,
+            "isVisible": true,
+            "model_filename": "model.obj",
+            "name": "FlatVase",
+            "texture": 1
+        },
+        {
+            "color": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "components": [],
+            "fileModel": "Models\\smooth_vase.obj",
+            "id": 2,
+            "isActive": true,
+            "isVisible": true,
+            "model_filename": "model.obj",
+            "name": "SmoothVase",
+            "texture": 0
+        },
+        {
+            "color": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "components": [],
+            "fileModel": "Models\\quad.obj",
+            "id": 3,
+            "isActive": true,
+            "isVisible": true,
+            "model_filename": "model.obj",
+            "name": "QuadGo",
+            "texture": 1
+        },
+        {
+            "color": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "components": [],
+            "fileModel": "Models\\viking_room.obj",
+            "id": 4,
+            "isActive": true,
+            "isVisible": true,
+            "model_filename": "model.obj",
+            "name": "Viking",
+            "texture": 2
+        },
+        {
+            "color": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "components": [],
+            "fileModel": "Models\\cube.obj",
+            "id": 5,
+            "isActive": true,
+            "isVisible": true,
+            "model_filename": "model.obj",
+            "name": "Cube",
+            "texture": 0
+        },
+        {
+            "color": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "components": [],
+            "fileModel": "Models\\colored_cube.obj",
+            "id": 6,
+            "isActive": true,
+            "isVisible": true,
+            "model_filename": "model.obj",
+            "name": "ColorCube",
+            "texture": 0
+        },
+        {
+            "color": [
+                1.0,
+                0.10000000149011612,
+                0.10000000149011612
+            ],
+            "components": [
+                {
+                    "isActive": true,
+                    "isVisible": true,
+                    "lightIntensity": 0.20000000298023224,
+                    "name": "Light",
+                    "type": "Light"
+                }
+            ],
+            "fileModel": "",
+            "id": 7,
+            "isActive": true,
+            "isVisible": true,
+            "model_filename": "",
+            "name": "Point Light 0",
+            "texture": 0
+        },
+        {
+            "color": [
+                0.10000000149011612,
+                0.10000000149011612,
+                1.0
+            ],
+            "components": [
+                {
+                    "isActive": true,
+                    "isVisible": true,
+                    "lightIntensity": 0.20000000298023224,
+                    "name": "Light",
+                    "type": "Light"
+                }
+            ],
+            "fileModel": "",
+            "id": 8,
+            "isActive": true,
+            "isVisible": true,
+            "model_filename": "",
+            "name": "Point Light 1",
+            "texture": 0
+        },
+        {
+            "color": [
+                0.10000000149011612,
+                1.0,
+                0.10000000149011612
+            ],
+            "components": [
+                {
+                    "isActive": true,
+                    "isVisible": true,
+                    "lightIntensity": 0.20000000298023224,
+                    "name": "Light",
+                    "type": "Light"
+                }
+            ],
+            "fileModel": "",
+            "id": 9,
+            "isActive": true,
+            "isVisible": true,
+            "model_filename": "",
+            "name": "Point Light 2",
+            "texture": 0
+        },
+        {
+            "color": [
+                1.0,
+                1.0,
+                0.10000000149011612
+            ],
+            "components": [
+                {
+                    "isActive": true,
+                    "isVisible": true,
+                    "lightIntensity": 0.20000000298023224,
+                    "name": "Light",
+                    "type": "Light"
+                }
+            ],
+            "fileModel": "",
+            "id": 10,
+            "isActive": true,
+            "isVisible": true,
+            "model_filename": "",
+            "name": "Point Light 3",
+            "texture": 0
+        },
+        {
+            "color": [
+                0.10000000149011612,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "isActive": true,
+                    "isVisible": true,
+                    "lightIntensity": 0.20000000298023224,
+                    "name": "Light",
+                    "type": "Light"
+                }
+            ],
+            "fileModel": "",
+            "id": 11,
+            "isActive": true,
+            "isVisible": true,
+            "model_filename": "",
+            "name": "Point Light 4",
+            "texture": 0
+        },
+        {
+            "color": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "components": [
+                {
+                    "isActive": true,
+                    "isVisible": true,
+                    "lightIntensity": 0.20000000298023224,
+                    "name": "Light",
+                    "type": "Light"
+                }
+            ],
+            "fileModel": "",
+            "id": 12,
+            "isActive": true,
+            "isVisible": true,
+            "model_filename": "",
+            "name": "Point Light 5",
+            "texture": 0
+        }
+    ],
+    "id": 0,
+    "isActive": true,
+    "name": "sceneTest"
+}

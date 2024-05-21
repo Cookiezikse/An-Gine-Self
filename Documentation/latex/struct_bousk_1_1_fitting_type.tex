@@ -1,0 +1,47 @@
+\doxysection{Référence du modèle de la structure Bousk\+::Fitting\+Type\texorpdfstring{$<$}{<} MIN, MAX \texorpdfstring{$>$}{>}}
+\hypertarget{struct_bousk_1_1_fitting_type}{}\label{struct_bousk_1_1_fitting_type}\index{Bousk::FittingType$<$ MIN, MAX $>$@{Bousk::FittingType$<$ MIN, MAX $>$}}
+\doxysubsubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_bousk_1_1_fitting_type_a2a5aa81556555fccebc05b7be6cf6c9a}\label{struct_bousk_1_1_fitting_type_a2a5aa81556555fccebc05b7be6cf6c9a} 
+using {\bfseries Min\+Type} = typename \mbox{\hyperlink{struct_bousk_1_1_extract_type}{Extract\+Type}}$<$MIN, (MIN $>$= 0)$>$\+::\+Type
+\item 
+\Hypertarget{struct_bousk_1_1_fitting_type_a181c8527e5a04630f2174825b980453d}\label{struct_bousk_1_1_fitting_type_a181c8527e5a04630f2174825b980453d} 
+using {\bfseries Max\+Type} = typename \mbox{\hyperlink{struct_bousk_1_1_extract_type}{Extract\+Type}}$<$MAX, (MIN $>$= 0)$>$\+::\+Type
+\item 
+using \mbox{\hyperlink{struct_bousk_1_1_fitting_type_a5d61b39019eec0ff364e77494a8b70f1}{Type}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_bousk_1_1_fitting_type_aceebb028968e55c1f8bd25728419e879}\label{struct_bousk_1_1_fitting_type_aceebb028968e55c1f8bd25728419e879} 
+static constexpr bool {\bfseries Is\+Possible} = !(MIN $<$ 0 \&\& MAX $>$ std\+::numeric\+\_\+limits$<$int64$>$\+::max()) \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \mbox{\hyperlink{struct_bousk_1_1_holding_type}{Holding\+Type}}$<$Min\+Type, Max\+Type$>$\+::\+Is\+Possible
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des définitions de type membres}
+\Hypertarget{struct_bousk_1_1_fitting_type_a5d61b39019eec0ff364e77494a8b70f1}\label{struct_bousk_1_1_fitting_type_a5d61b39019eec0ff364e77494a8b70f1} 
+\index{Bousk::FittingType$<$ MIN, MAX $>$@{Bousk::FittingType$<$ MIN, MAX $>$}!Type@{Type}}
+\index{Type@{Type}!Bousk::FittingType$<$ MIN, MAX $>$@{Bousk::FittingType$<$ MIN, MAX $>$}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily template$<$auto MIN, auto MAX$>$ \\
+using \mbox{\hyperlink{struct_bousk_1_1_fitting_type}{Bousk\+::\+Fitting\+Type}}$<$ MIN, MAX $>$\+::\+Type}
+
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ std::conditional\_t<!IsPossible,\ void,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ std::conditional\_t<(MAX\ <=\ std::numeric\_limits<MinType>::max()),\ MinType,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ std::conditional\_t<(MIN\ >=\ std::numeric\_limits<MaxType>::min()),\ MaxType,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{typename}\ HoldingType<MinType,\ MaxType>::Type}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ >>>}
+
+\end{DoxyCode}
+
+
+La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+UDP/Ranged\+Integer.\+h\end{DoxyCompactItemize}

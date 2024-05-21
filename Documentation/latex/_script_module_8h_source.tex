@@ -1,0 +1,56 @@
+\doxysection{Script\+Module.\+h}
+\hypertarget{_script_module_8h_source}{}\label{_script_module_8h_source}\index{includes/Modules/ScriptModule.h@{includes/Modules/ScriptModule.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Module.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Script/IScript.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_script_module}{ScriptModule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_module}{Module}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_script_module_a9095faa300d28d811b5fa472db47b442}{ScriptModule}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_script_module_a3ed6883a8992c8e10a1b04b1ec60f1f1}{\string~ScriptModule}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{class}\ U>}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_script_module_a4c386f4e25f28a6d1cb6c332961ba4cb}{AddScript}}()}
+\DoxyCodeLine{00035\ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i_script}{IScript}}*\ script\ =\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{class_i_script}{IScript}}*\textcolor{keyword}{>}(\textcolor{keyword}{new}\ U);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ script-\/>\mbox{\hyperlink{class_i_script_acfb73ccefc0766fe7acb341a1f4e37c7}{Initialize}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ scriptsToStart.push(script);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ scripts.push\_back(script);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#pragma\ region\ Event}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_script_module_a3d323ed01e33f3fe93dfeaa4b12137a2}{Update}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00049\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_script_module_a4af39590c8da663dd0763eef50c20648}{UpdateScripts}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_script_module_a8f6dc9891fb765c5def4ef8fb3eac411}{StartScripts}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{class_i_script}{IScript}}*\ \mbox{\hyperlink{class_script_module_afa2905f3d16b2435f35d32b51637f3a9}{GetIScriptByName}}(\textcolor{keyword}{const}\ std::string\&\ \_name)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_script_module_a4af39590c8da663dd0763eef50c20648}{UpdateScripts}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_script_module_a7a9c2991aca47d845263ed67d3471a59}{Stop}}();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00080\ \ \ \ \ std::vector<IScript*>\ scripts;}
+\DoxyCodeLine{00081\ \ \ \ \ std::queue<IScript*>\ scriptsToStart;}
+\DoxyCodeLine{00082\ \};}
+
+\end{DoxyCode}

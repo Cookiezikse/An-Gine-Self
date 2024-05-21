@@ -1,0 +1,41 @@
+\doxysection{Settings.\+h}
+\hypertarget{_settings_8h_source}{}\label{_settings_8h_source}\index{includes/UDP/Settings.h@{includes/UDP/Settings.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ BOUSKNET\_SETTINGS\_ENABLED\ 1}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ BOUSKNET\_SETTINGS\_DISABLED\ 0}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Enable\ serialization\ of\ float32}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\#define\ BOUSKNET\_ALLOW\_FLOAT32\_SERIALIZATION\ BOUSKNET\_SETTINGS\_ENABLED}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ Default\ UDP\ timeout}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ BOUSKNET\_DEFAULT\_UDP\_TIMEOUT\ std::chrono::seconds(1)}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ Allow\ use\ of\ network\ simulator}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ BOUSKNET\_ALLOW\_NETWORK\_SIMULATOR\ BOUSKNET\_SETTINGS\_ENABLED}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ Allow\ debugging\ network\ applications\ :\ when\ a\ client\ times\ out,\ consider\ its\ connection\ interrupted\ rather\ than\ disconnected\ so\ he\ can\ come\ back\ and\ resume\ it}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ BOUSKNET\_ALLOW\_NETWORK\_INTERRUPTION\ BOUSKNET\_SETTINGS\_ENABLED}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ Default\ value\ for\ unset\ settings}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#ifndef\ BOUSKNET\_ALLOW\_FLOAT32\_SERIALIZATION}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ BOUSKNET\_ALLOW\_FLOAT32\_SERIALIZATION\ BOUSKNET\_SETTINGS\_DISABLED}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BOUSKNET\_ALLOW\_FLOAT32\_SERIALIZATION}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifndef\ BOUSKNET\_DEFAULT\_UDP\_TIMEOUT}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ BOUSKNET\_DEFAULT\_UDP\_TIMEOUT\ std::chrono::seconds(1)}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BOUSKNET\_DEFAULT\_UDP\_TIMEOUT}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#ifndef\ BOUSKNET\_ALLOW\_NETWORK\_SIMULATOR}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ BOUSKNET\_ALLOW\_NETWORK\_SIMULATOR\ BOUSKNET\_SETTINGS\_DISABLED}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BOUSKNET\_ALLOW\_NETWORK\_SIMULATOR}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#ifndef\ BOUSKNET\_ALLOW\_NETWORK\_INTERRUPTION}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ BOUSKNET\_ALLOW\_NETWORK\_INTERRUPTION\ BOUSKNET\_SETTINGS\_DISABLED}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BOUSKNET\_ALLOW\_NETWORK\_INTERRUPTION}}
+
+\end{DoxyCode}

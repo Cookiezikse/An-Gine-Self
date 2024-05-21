@@ -1,0 +1,644 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine: RÃ©fÃ©rence de la classe lve::LveWindow</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>lve</b></li><li class="navelem"><a class="el" href="classlve_1_1_lve_window.html">LveWindow</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Types publics</a> &#124;
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="classlve_1_1_lve_window-members.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle"><div class="title">RÃ©fÃ©rence de la classe lve::LveWindow</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Types publics</h2></td></tr>
+<tr class="memitem:aa2ffcb68dc1568f2f8ea13810b123aef" id="r_aa2ffcb68dc1568f2f8ea13810b123aef"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2ffcb68dc1568f2f8ea13810b123aef">GlfwCursorType</a> { <br />
+&#160;&#160;<a class="el" href="#aa2ffcb68dc1568f2f8ea13810b123aefab0d2450c79ed70edf5a71a887a6740dc">ARROW</a>
+, <a class="el" href="#aa2ffcb68dc1568f2f8ea13810b123aefaba0f487fa9f9ec1b6ea3d188e51a4458">IBEAM</a>
+, <a class="el" href="#aa2ffcb68dc1568f2f8ea13810b123aefad6e02d2576dd6e365ad34514e0dade5d">CROSSHAIR</a>
+, <a class="el" href="#aa2ffcb68dc1568f2f8ea13810b123aefa95b11f98c2c077aa6f9e3fe6d2162bd3">POINTING_HAND</a>
+, <br />
+&#160;&#160;<a class="el" href="#aa2ffcb68dc1568f2f8ea13810b123aefa7361c79b81519895cd7315e2426c64b9">RESIZE_EW</a>
+, <a class="el" href="#aa2ffcb68dc1568f2f8ea13810b123aefa9a10132a282506865dc16796b16eaf07">RESIZE_NS</a>
+, <a class="el" href="#aa2ffcb68dc1568f2f8ea13810b123aefa6b0f43099e87d6deba4e000731434c75">RESIZE_NWSE</a>
+, <a class="el" href="#aa2ffcb68dc1568f2f8ea13810b123aefa35fc4c7763fc038f40a9fb804822867e">RESIZE_NESW</a>
+, <br />
+&#160;&#160;<a class="el" href="#aa2ffcb68dc1568f2f8ea13810b123aefa57c579f6e08915a56d917a1b9b7750c3">RESIZE_ALL</a>
+, <a class="el" href="#aa2ffcb68dc1568f2f8ea13810b123aefa84267bbabe52429af142d0ecd425d9eb">NOT_ALLOWED</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:aa2ffcb68dc1568f2f8ea13810b123aef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumération des types de curseurs GLFW.  <a href="#aa2ffcb68dc1568f2f8ea13810b123aef">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:aa2ffcb68dc1568f2f8ea13810b123aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe3db3d65a148302ac82ad7d8e822956" id="r_abe3db3d65a148302ac82ad7d8e822956"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe3db3d65a148302ac82ad7d8e822956">GlfwCursorMode</a> { <a class="el" href="#abe3db3d65a148302ac82ad7d8e822956a38fd674f568cb264fc26e88c67c5707a">DISABLED</a>
+, <a class="el" href="#abe3db3d65a148302ac82ad7d8e822956afc73d2af1804154c5040bb22bd1a2cdf">HIDDEN</a>
+, <a class="el" href="#abe3db3d65a148302ac82ad7d8e822956a8a5774c7757801114c00583a94ee9cda">NORMAL</a>
+, <a class="el" href="#abe3db3d65a148302ac82ad7d8e822956a062dda27351abd7b1c9cf24a2748e7d4">CAPTURED</a>
+ }</td></tr>
+<tr class="memdesc:abe3db3d65a148302ac82ad7d8e822956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumération des modes de curseurs GLFW.  <a href="#abe3db3d65a148302ac82ad7d8e822956">Plus de dÃ©tails...</a><br /></td></tr>
+<tr class="separator:abe3db3d65a148302ac82ad7d8e822956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:abf6eca68d3ca6f0cc2dc0aa487a61118" id="r_abf6eca68d3ca6f0cc2dc0aa487a61118"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf6eca68d3ca6f0cc2dc0aa487a61118">LveWindow</a> (int _width, int _height, const std::string &amp;_name)</td></tr>
+<tr class="memdesc:abf6eca68d3ca6f0cc2dc0aa487a61118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la classe <a class="el" href="classlve_1_1_lve_window.html">LveWindow</a>.  <br /></td></tr>
+<tr class="separator:abf6eca68d3ca6f0cc2dc0aa487a61118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb6b104ed2d4bda2fb110c84c0707d00" id="r_acb6b104ed2d4bda2fb110c84c0707d00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb6b104ed2d4bda2fb110c84c0707d00">~LveWindow</a> ()</td></tr>
+<tr class="memdesc:acb6b104ed2d4bda2fb110c84c0707d00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur de la classe <a class="el" href="classlve_1_1_lve_window.html">LveWindow</a>.  <br /></td></tr>
+<tr class="separator:acb6b104ed2d4bda2fb110c84c0707d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae55914f7a76712bbbf278941e285fb72" id="r_ae55914f7a76712bbbf278941e285fb72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae55914f7a76712bbbf278941e285fb72">LveWindow</a> (const <a class="el" href="classlve_1_1_lve_window.html">LveWindow</a> &amp;)=delete</td></tr>
+<tr class="memdesc:ae55914f7a76712bbbf278941e285fb72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de copie supprimé.  <br /></td></tr>
+<tr class="separator:ae55914f7a76712bbbf278941e285fb72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a219c97ccdf34dc7bde8e35e75fdce79f" id="r_a219c97ccdf34dc7bde8e35e75fdce79f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classlve_1_1_lve_window.html">LveWindow</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a219c97ccdf34dc7bde8e35e75fdce79f">operator=</a> (const <a class="el" href="classlve_1_1_lve_window.html">LveWindow</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a219c97ccdf34dc7bde8e35e75fdce79f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opérateur d'affectation par copie supprimé.  <br /></td></tr>
+<tr class="separator:a219c97ccdf34dc7bde8e35e75fdce79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cda11e7e983cf0ab9b282f6b01eb14e" id="r_a9cda11e7e983cf0ab9b282f6b01eb14e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cda11e7e983cf0ab9b282f6b01eb14e">ShouldClose</a> () const</td></tr>
+<tr class="memdesc:a9cda11e7e983cf0ab9b282f6b01eb14e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si la fenêtre doit être fermée.  <br /></td></tr>
+<tr class="separator:a9cda11e7e983cf0ab9b282f6b01eb14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d4174a836807f6aac22c98a93b9f732" id="r_a6d4174a836807f6aac22c98a93b9f732"><td class="memItemLeft" align="right" valign="top">vk::Extent2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d4174a836807f6aac22c98a93b9f732">GetExtent</a> () const</td></tr>
+<tr class="memdesc:a6d4174a836807f6aac22c98a93b9f732"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtient les dimensions de la fenêtre.  <br /></td></tr>
+<tr class="separator:a6d4174a836807f6aac22c98a93b9f732"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eb0f92138a81162bcdc23b948679766" id="r_a3eb0f92138a81162bcdc23b948679766"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3eb0f92138a81162bcdc23b948679766">WasWindowResized</a> () const</td></tr>
+<tr class="memdesc:a3eb0f92138a81162bcdc23b948679766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si la fenêtre a été redimensionnée.  <br /></td></tr>
+<tr class="separator:a3eb0f92138a81162bcdc23b948679766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05b76d2ea4d73ea9d3385d294ae291c5" id="r_a05b76d2ea4d73ea9d3385d294ae291c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05b76d2ea4d73ea9d3385d294ae291c5">ResetWindowResizedFlag</a> ()</td></tr>
+<tr class="memdesc:a05b76d2ea4d73ea9d3385d294ae291c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Réinitialise le drapeau de redimensionnement de la fenêtre.  <br /></td></tr>
+<tr class="separator:a05b76d2ea4d73ea9d3385d294ae291c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a4fe86a56aed0cf0cbb239f6d375f1c" id="r_a7a4fe86a56aed0cf0cbb239f6d375f1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a4fe86a56aed0cf0cbb239f6d375f1c">CreateWindowSurface</a> (vk::Instance _instance, vk::SurfaceKHR *_surface) const</td></tr>
+<tr class="memdesc:a7a4fe86a56aed0cf0cbb239f6d375f1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée une surface Vulkan associée à une fenêtre.  <br /></td></tr>
+<tr class="separator:a7a4fe86a56aed0cf0cbb239f6d375f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bfd2b8aa1312f13eea732f0ca9aee48" id="r_a4bfd2b8aa1312f13eea732f0ca9aee48"><td class="memItemLeft" align="right" valign="top">GLFWwindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bfd2b8aa1312f13eea732f0ca9aee48">GetGlfwWindow</a> () const</td></tr>
+<tr class="memdesc:a4bfd2b8aa1312f13eea732f0ca9aee48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtient un pointeur vers la fenêtre GLFW.  <br /></td></tr>
+<tr class="separator:a4bfd2b8aa1312f13eea732f0ca9aee48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade46b53757c6ce6f5735d6013e88a1ac" id="r_ade46b53757c6ce6f5735d6013e88a1ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade46b53757c6ce6f5735d6013e88a1ac">ResetCursorWindow</a> () const</td></tr>
+<tr class="memdesc:ade46b53757c6ce6f5735d6013e88a1ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Réinitialise le curseur de la fenêtre.  <br /></td></tr>
+<tr class="separator:ade46b53757c6ce6f5735d6013e88a1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a099e180758e4bd8f461228ba7d18ee" id="r_a8a099e180758e4bd8f461228ba7d18ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a099e180758e4bd8f461228ba7d18ee">CubeCursorWindow</a> (int _color=255) const</td></tr>
+<tr class="memdesc:a8a099e180758e4bd8f461228ba7d18ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change la forme du curseur de la fenêtre en un cube coloré.  <br /></td></tr>
+<tr class="separator:a8a099e180758e4bd8f461228ba7d18ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e3657c2c2521f5153ebd4837510e4bd" id="r_a7e3657c2c2521f5153ebd4837510e4bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e3657c2c2521f5153ebd4837510e4bd">StandardCursorWindow</a> (<a class="el" href="#aa2ffcb68dc1568f2f8ea13810b123aef">GlfwCursorType</a> _cursorType) const</td></tr>
+<tr class="memdesc:a7e3657c2c2521f5153ebd4837510e4bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Définit le curseur standard de la fenêtre.  <br /></td></tr>
+<tr class="separator:a7e3657c2c2521f5153ebd4837510e4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf26788840fc2e3f662bf21325303c7b" id="r_abf26788840fc2e3f662bf21325303c7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf26788840fc2e3f662bf21325303c7b">SetInputCursorMode</a> (<a class="el" href="#abe3db3d65a148302ac82ad7d8e822956">GlfwCursorMode</a> _mode) const</td></tr>
+<tr class="memdesc:abf26788840fc2e3f662bf21325303c7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Définit le mode de curseur d'entrée pour la fenêtre.  <br /></td></tr>
+<tr class="separator:abf26788840fc2e3f662bf21325303c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des Ã©numÃ©rations membres</h2>
+<a id="abe3db3d65a148302ac82ad7d8e822956" name="abe3db3d65a148302ac82ad7d8e822956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe3db3d65a148302ac82ad7d8e822956">&#9670;&#160;</a></span>GlfwCursorMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#abe3db3d65a148302ac82ad7d8e822956">lve::LveWindow::GlfwCursorMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumération des modes de curseurs GLFW. </p>
+<p>Cette énumération représente les différents modes de curseurs GLFW. Ces modes définissent le comportement du curseur sur l'écran. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs Ã©numÃ©rÃ©es</th></tr><tr><td class="fieldname"><a id="abe3db3d65a148302ac82ad7d8e822956a38fd674f568cb264fc26e88c67c5707a" name="abe3db3d65a148302ac82ad7d8e822956a38fd674f568cb264fc26e88c67c5707a"></a>DISABLED&#160;</td><td class="fielddoc"><p>Curseur désactivé. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abe3db3d65a148302ac82ad7d8e822956afc73d2af1804154c5040bb22bd1a2cdf" name="abe3db3d65a148302ac82ad7d8e822956afc73d2af1804154c5040bb22bd1a2cdf"></a>HIDDEN&#160;</td><td class="fielddoc"><p>Curseur caché. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abe3db3d65a148302ac82ad7d8e822956a8a5774c7757801114c00583a94ee9cda" name="abe3db3d65a148302ac82ad7d8e822956a8a5774c7757801114c00583a94ee9cda"></a>NORMAL&#160;</td><td class="fielddoc"><p>Curseur normal (visible). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="abe3db3d65a148302ac82ad7d8e822956a062dda27351abd7b1c9cf24a2748e7d4" name="abe3db3d65a148302ac82ad7d8e822956a062dda27351abd7b1c9cf24a2748e7d4"></a>CAPTURED&#160;</td><td class="fielddoc"><p>Curseur capturé (exclusif à la fenêtre). </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="aa2ffcb68dc1568f2f8ea13810b123aef" name="aa2ffcb68dc1568f2f8ea13810b123aef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2ffcb68dc1568f2f8ea13810b123aef">&#9670;&#160;</a></span>GlfwCursorType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#aa2ffcb68dc1568f2f8ea13810b123aef">lve::LveWindow::GlfwCursorType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumération des types de curseurs GLFW. </p>
+<p>Cette énumération représente les différents types de curseurs GLFW disponibles. Ces types peuvent être utilisés pour spécifier le style du curseur à afficher. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs Ã©numÃ©rÃ©es</th></tr><tr><td class="fieldname"><a id="aa2ffcb68dc1568f2f8ea13810b123aefab0d2450c79ed70edf5a71a887a6740dc" name="aa2ffcb68dc1568f2f8ea13810b123aefab0d2450c79ed70edf5a71a887a6740dc"></a>ARROW&#160;</td><td class="fielddoc"><p>Curseur flèche. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa2ffcb68dc1568f2f8ea13810b123aefaba0f487fa9f9ec1b6ea3d188e51a4458" name="aa2ffcb68dc1568f2f8ea13810b123aefaba0f487fa9f9ec1b6ea3d188e51a4458"></a>IBEAM&#160;</td><td class="fielddoc"><p>Curseur I-beam (curseur de texte). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa2ffcb68dc1568f2f8ea13810b123aefad6e02d2576dd6e365ad34514e0dade5d" name="aa2ffcb68dc1568f2f8ea13810b123aefad6e02d2576dd6e365ad34514e0dade5d"></a>CROSSHAIR&#160;</td><td class="fielddoc"><p>Curseur croix. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa2ffcb68dc1568f2f8ea13810b123aefa95b11f98c2c077aa6f9e3fe6d2162bd3" name="aa2ffcb68dc1568f2f8ea13810b123aefa95b11f98c2c077aa6f9e3fe6d2162bd3"></a>POINTING_HAND&#160;</td><td class="fielddoc"><p>Curseur main pointant. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa2ffcb68dc1568f2f8ea13810b123aefa7361c79b81519895cd7315e2426c64b9" name="aa2ffcb68dc1568f2f8ea13810b123aefa7361c79b81519895cd7315e2426c64b9"></a>RESIZE_EW&#160;</td><td class="fielddoc"><p>Curseur redimensionner horizontal. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa2ffcb68dc1568f2f8ea13810b123aefa9a10132a282506865dc16796b16eaf07" name="aa2ffcb68dc1568f2f8ea13810b123aefa9a10132a282506865dc16796b16eaf07"></a>RESIZE_NS&#160;</td><td class="fielddoc"><p>Curseur redimensionner vertical. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa2ffcb68dc1568f2f8ea13810b123aefa6b0f43099e87d6deba4e000731434c75" name="aa2ffcb68dc1568f2f8ea13810b123aefa6b0f43099e87d6deba4e000731434c75"></a>RESIZE_NWSE&#160;</td><td class="fielddoc"><p>Curseur redimensionner diagonale NW-SE. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa2ffcb68dc1568f2f8ea13810b123aefa35fc4c7763fc038f40a9fb804822867e" name="aa2ffcb68dc1568f2f8ea13810b123aefa35fc4c7763fc038f40a9fb804822867e"></a>RESIZE_NESW&#160;</td><td class="fielddoc"><p>Curseur redimensionner diagonale NE-SW. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa2ffcb68dc1568f2f8ea13810b123aefa57c579f6e08915a56d917a1b9b7750c3" name="aa2ffcb68dc1568f2f8ea13810b123aefa57c579f6e08915a56d917a1b9b7750c3"></a>RESIZE_ALL&#160;</td><td class="fielddoc"><p>Curseur redimensionner dans toutes les directions. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa2ffcb68dc1568f2f8ea13810b123aefa84267bbabe52429af142d0ecd425d9eb" name="aa2ffcb68dc1568f2f8ea13810b123aefa84267bbabe52429af142d0ecd425d9eb"></a>NOT_ALLOWED&#160;</td><td class="fielddoc"><p>Curseur non autorisé. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="abf6eca68d3ca6f0cc2dc0aa487a61118" name="abf6eca68d3ca6f0cc2dc0aa487a61118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf6eca68d3ca6f0cc2dc0aa487a61118">&#9670;&#160;</a></span>LveWindow() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lve::LveWindow::LveWindow </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>_width</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>_height</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>_name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructeur de la classe <a class="el" href="classlve_1_1_lve_window.html">LveWindow</a>. </p>
+<p>Initialise une instance de <a class="el" href="classlve_1_1_lve_window.html">LveWindow</a> avec les dimensions spécifiées et le nom de la fenêtre.</p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_width</td><td>La largeur de la fenêtre. </td></tr>
+    <tr><td class="paramname">_height</td><td>La hauteur de la fenêtre. </td></tr>
+    <tr><td class="paramname">_name</td><td>Le nom de la fenêtre. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Rien. </dd></dl>
+
+</div>
+</div>
+<a id="acb6b104ed2d4bda2fb110c84c0707d00" name="acb6b104ed2d4bda2fb110c84c0707d00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb6b104ed2d4bda2fb110c84c0707d00">&#9670;&#160;</a></span>~LveWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">lve::LveWindow::~LveWindow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructeur de la classe <a class="el" href="classlve_1_1_lve_window.html">LveWindow</a>. </p>
+<p>Détruit la fenêtre GLFW. </p>
+
+</div>
+</div>
+<a id="ae55914f7a76712bbbf278941e285fb72" name="ae55914f7a76712bbbf278941e285fb72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae55914f7a76712bbbf278941e285fb72">&#9670;&#160;</a></span>LveWindow() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lve::LveWindow::LveWindow </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlve_1_1_lve_window.html">LveWindow</a> &amp;</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructeur de copie supprimé. </p>
+<p>La copie d'objets de type <a class="el" href="classlve_1_1_lve_window.html">LveWindow</a> est explicitement interdite pour éviter les problèmes de gestion des ressources associées à la fenêtre. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="a7a4fe86a56aed0cf0cbb239f6d375f1c" name="a7a4fe86a56aed0cf0cbb239f6d375f1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a4fe86a56aed0cf0cbb239f6d375f1c">&#9670;&#160;</a></span>CreateWindowSurface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lve::LveWindow::CreateWindowSurface </td>
+          <td>(</td>
+          <td class="paramtype">vk::Instance</td>          <td class="paramname"><span class="paramname"><em>_instance</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vk::SurfaceKHR *</td>          <td class="paramname"><span class="paramname"><em>_surface</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crée une surface Vulkan associée à une fenêtre. </p>
+<p>Cette fonction crée une surface Vulkan associée à une fenêtre, permettant à Vulkan de dessiner dans cette fenêtre.</p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_instance</td><td>L'instance Vulkan utilisée pour créer la surface. </td></tr>
+    <tr><td class="paramname">_surface</td><td>Un pointeur vers l'objet de surface Vulkan à créer. Ce pointeur sera mis à jour pour contenir la surface créée. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Une</td><td>exception en cas d'échec lors de la création de la surface. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8a099e180758e4bd8f461228ba7d18ee" name="a8a099e180758e4bd8f461228ba7d18ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a099e180758e4bd8f461228ba7d18ee">&#9670;&#160;</a></span>CubeCursorWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lve::LveWindow::CubeCursorWindow </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>_color</em><span class="paramdefsep"> = </span><span class="paramdefval">255</span></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change la forme du curseur de la fenêtre en un cube coloré. </p>
+<p>Cette fonction change la forme du curseur de la fenêtre en un cube coloré, avec la possibilité de spécifier la couleur du cube.</p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_color</td><td></td></tr>
+    <tr><td class="paramname">color</td><td>La couleur du cube. La valeur par défaut est 255. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6d4174a836807f6aac22c98a93b9f732" name="a6d4174a836807f6aac22c98a93b9f732"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d4174a836807f6aac22c98a93b9f732">&#9670;&#160;</a></span>GetExtent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vk::Extent2D lve::LveWindow::GetExtent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtient les dimensions de la fenêtre. </p>
+<p>Cette fonction retourne les dimensions de la fenêtre sous forme d'une structure vk::Extent2D.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>Les dimensions de la fenêtre sous forme d'une structure vk::Extent2D. </dd></dl>
+
+</div>
+</div>
+<a id="a4bfd2b8aa1312f13eea732f0ca9aee48" name="a4bfd2b8aa1312f13eea732f0ca9aee48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bfd2b8aa1312f13eea732f0ca9aee48">&#9670;&#160;</a></span>GetGlfwWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GLFWwindow * lve::LveWindow::GetGlfwWindow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtient un pointeur vers la fenêtre GLFW. </p>
+<p>Cette fonction retourne un pointeur vers la fenêtre GLFW associée à l'instance actuelle.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>Un pointeur vers la fenêtre GLFW. </dd></dl>
+
+</div>
+</div>
+<a id="a219c97ccdf34dc7bde8e35e75fdce79f" name="a219c97ccdf34dc7bde8e35e75fdce79f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a219c97ccdf34dc7bde8e35e75fdce79f">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classlve_1_1_lve_window.html">LveWindow</a> &amp; lve::LveWindow::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classlve_1_1_lve_window.html">LveWindow</a> &amp;</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Opérateur d'affectation par copie supprimé. </p>
+<p>L'affectation par copie d'objets de type <a class="el" href="classlve_1_1_lve_window.html">LveWindow</a> est explicitement interdite pour éviter les problèmes de gestion des ressources associées à la fenêtre.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>Une référence vers l'objet <a class="el" href="classlve_1_1_lve_window.html">LveWindow</a> après affectation. </dd></dl>
+
+</div>
+</div>
+<a id="ade46b53757c6ce6f5735d6013e88a1ac" name="ade46b53757c6ce6f5735d6013e88a1ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade46b53757c6ce6f5735d6013e88a1ac">&#9670;&#160;</a></span>ResetCursorWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lve::LveWindow::ResetCursorWindow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Réinitialise le curseur de la fenêtre. </p>
+<p>Cette fonction réinitialise le curseur de la fenêtre à sa forme par défaut. </p>
+
+</div>
+</div>
+<a id="a05b76d2ea4d73ea9d3385d294ae291c5" name="a05b76d2ea4d73ea9d3385d294ae291c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05b76d2ea4d73ea9d3385d294ae291c5">&#9670;&#160;</a></span>ResetWindowResizedFlag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lve::LveWindow::ResetWindowResizedFlag </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Réinitialise le drapeau de redimensionnement de la fenêtre. </p>
+<p>Cette fonction réinitialise le drapeau indiquant que la fenêtre a été redimensionnée. </p>
+
+</div>
+</div>
+<a id="abf26788840fc2e3f662bf21325303c7b" name="abf26788840fc2e3f662bf21325303c7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf26788840fc2e3f662bf21325303c7b">&#9670;&#160;</a></span>SetInputCursorMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lve::LveWindow::SetInputCursorMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#abe3db3d65a148302ac82ad7d8e822956">GlfwCursorMode</a></td>          <td class="paramname"><span class="paramname"><em>_mode</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définit le mode de curseur d'entrée pour la fenêtre. </p>
+<p>Cette fonction définit le mode de curseur d'entrée pour la fenêtre à un mode spécifié.</p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_mode</td><td></td></tr>
+    <tr><td class="paramname">mode</td><td>Le mode de curseur d'entrée à définir. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9cda11e7e983cf0ab9b282f6b01eb14e" name="a9cda11e7e983cf0ab9b282f6b01eb14e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cda11e7e983cf0ab9b282f6b01eb14e">&#9670;&#160;</a></span>ShouldClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lve::LveWindow::ShouldClose </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vérifie si la fenêtre doit être fermée. </p>
+<p>Cette fonction renvoie true si la fenêtre doit être fermée, false sinon.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>true si la fenêtre doit être fermée, false sinon. </dd></dl>
+
+</div>
+</div>
+<a id="a7e3657c2c2521f5153ebd4837510e4bd" name="a7e3657c2c2521f5153ebd4837510e4bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e3657c2c2521f5153ebd4837510e4bd">&#9670;&#160;</a></span>StandardCursorWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lve::LveWindow::StandardCursorWindow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa2ffcb68dc1568f2f8ea13810b123aef">GlfwCursorType</a></td>          <td class="paramname"><span class="paramname"><em>_cursorType</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définit le curseur standard de la fenêtre. </p>
+<p>Cette fonction définit le curseur standard de la fenêtre à un type spécifié.</p>
+<dl class="params"><dt>ParamÃ¨tres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_cursorType</td><td></td></tr>
+    <tr><td class="paramname">CursorType</td><td>Le type de curseur à définir. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3eb0f92138a81162bcdc23b948679766" name="a3eb0f92138a81162bcdc23b948679766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eb0f92138a81162bcdc23b948679766">&#9670;&#160;</a></span>WasWindowResized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lve::LveWindow::WasWindowResized </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vérifie si la fenêtre a été redimensionnée. </p>
+<p>Cette fonction vérifie si la fenêtre a été redimensionnée depuis la dernière vérification.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>true si la fenêtre a été redimensionnée, sinon false. </dd></dl>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants :<ul>
+<li>includes/LveEngine/<a class="el" href="lve__window_8h_source.html">lve_window.h</a></li>
+<li>sources/LveEngine/<b>lve_window.cpp</b></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

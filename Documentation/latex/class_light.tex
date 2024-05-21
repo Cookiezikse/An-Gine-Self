@@ -1,0 +1,237 @@
+\doxysection{R√©f√©rence de la classe Light}
+\hypertarget{class_light}{}\label{class_light}\index{Light@{Light}}
+
+
+Classe reprÈsentant une lumiËre.  
+
+
+
+
+{\ttfamily \#include $<$Light.\+h$>$}
+
+Graphe d\textquotesingle{}h√©ritage de Light\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_light}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_light_af7f2d88492acf722035aabd2ed703615}{Init}} () override
+\begin{DoxyCompactList}\small\item\em Initialise le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_a1b0dc29a025dac5e832a39074aa9024f}{Start}} () override
+\begin{DoxyCompactList}\small\item\em DÈmarre le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_a1c69d46911da4a2f08c8a3917c2b2202}{Fixed\+Update}} () override
+\begin{DoxyCompactList}\small\item\em Effectue une mise ‡ jour fixe du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_a67847fb749205eb5ddf59d008ba5e42d}{Update}} () override
+\begin{DoxyCompactList}\small\item\em Met ‡ jour le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_a3c3be4b3f14196daa94187cf975b57b4}{Pre\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction prÈ-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_a9379a7e8dd7fd6bb04a8d50ce874b8c9}{Render}} () override
+\begin{DoxyCompactList}\small\item\em Rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_a33434fd032e010702839eea41690c2a2}{Render\+Gui}} () override
+\begin{DoxyCompactList}\small\item\em Rendu de l\textquotesingle{}interface graphique du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_a9821416df2f2bd4b76918dda1584ff74}{Post\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction post-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_a8c5e62dfe193f95a191ad159b81c2b5b}{Release}} () override
+\begin{DoxyCompactList}\small\item\em LibËre les ressources utilisÈes par le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_a4c691a413cfd7c947b304653b93531c0}{Finalize}} () override
+\begin{DoxyCompactList}\small\item\em Finalise le module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques h√©rit√©s de \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Component} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+owner)
+\item 
+virtual void {\bfseries Update\+Editor} ()
+\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_component_a92f94b02f4591895bb96392581c9ccd9}{Get\+Owner}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le \doxylink{class_game_object}{Game\+Object} propriÈtaire de ce composant. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_component_a9af52e1878212622948ab2189f4f29dd}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le nom de ce composant. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_component_a9ad91aa536dc0b237bac510ef2981ff1}{Get\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}Ètat d\textquotesingle{}activitÈ de ce composant. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_component_ae26f71032d146b80daeadb3eb9c9f772}{Get\+Visible}} () const
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}Ètat de visibilitÈ de ce composant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_a404b9d2dd75d68fc0b3f4d83b096b083}{Set\+Owner}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+owner)
+\begin{DoxyCompactList}\small\item\em DÈfinit le \doxylink{class_game_object}{Game\+Object} propriÈtaire de ce composant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_a95c88d74e0604f8d883fb722eda085db}{Set\+Name}} (const std\+::string \&\+\_\+name)
+\begin{DoxyCompactList}\small\item\em DÈfinit le nom de ce composant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_a0a38ce3912f2363e7ea6aff6276c07a7}{Set\+Name}} (const char \texorpdfstring{$\ast$}{*}\+\_\+name)
+\begin{DoxyCompactList}\small\item\em DÈfinit le nom de ce composant ‡ partir d\textquotesingle{}une chaÓne de caractËres. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_a9be7df4eee8904fa8c7e5ef6f72064f4}{Set\+Active}} (const bool \&\+\_\+state)
+\begin{DoxyCompactList}\small\item\em DÈfinit l\textquotesingle{}Ètat d\textquotesingle{}activitÈ de ce composant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_abc5545dc4ccecfe31a6fb551b4c4f514}{Set\+Visible}} (const bool \&\+\_\+state)
+\begin{DoxyCompactList}\small\item\em DÈfinit l\textquotesingle{}Ètat de visibilitÈ de ce composant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_a10db7b8781e80b3f502463868345dac7}{Set\+Active\+And\+Visible}} (const bool \&\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Active ou dÈsactive ce composant et le rend visible ou invisible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_light_aba24be10ba774373dbbc096236c4e519}\label{class_light_aba24be10ba774373dbbc096236c4e519} 
+float {\bfseries light\+Intensity} = 1.\+0f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Membres h√©rit√©s additionnels}
+\doxysubsection*{Attributs prot√©g√©s h√©rit√©s de \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_component_a715fc40771d21d6d43d8209dd5c9810a}{owner}} = nullptr
+\item 
+std\+::string \mbox{\hyperlink{class_component_a46343549452bda5ee9752f7a9bc15efb}{name}} = "{}Component"{}
+\item 
+bool \mbox{\hyperlink{class_component_a6dad4f819c0814eee8219e9b391cf583}{is\+Active}} = true
+\item 
+bool \mbox{\hyperlink{class_component_a49f5a53967d8fa26917ccbb03312233b}{is\+Visible}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description d√©taill√©e}
+Classe reprÈsentant une lumiËre. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_light_a4c691a413cfd7c947b304653b93531c0}\label{class_light_a4c691a413cfd7c947b304653b93531c0} 
+\index{Light@{Light}!Finalize@{Finalize}}
+\index{Finalize@{Finalize}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{Finalize()}{Finalize()}}
+{\footnotesize\ttfamily void Light\+::\+Finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finalise le module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_light_a1c69d46911da4a2f08c8a3917c2b2202}\label{class_light_a1c69d46911da4a2f08c8a3917c2b2202} 
+\index{Light@{Light}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Light\+::\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Effectue une mise ‡ jour fixe du module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_light_af7f2d88492acf722035aabd2ed703615}\label{class_light_af7f2d88492acf722035aabd2ed703615} 
+\index{Light@{Light}!Init@{Init}}
+\index{Init@{Init}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Light\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialise le module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_light_a9821416df2f2bd4b76918dda1584ff74}\label{class_light_a9821416df2f2bd4b76918dda1584ff74} 
+\index{Light@{Light}!PostRender@{PostRender}}
+\index{PostRender@{PostRender}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{PostRender()}{PostRender()}}
+{\footnotesize\ttfamily void Light\+::\+Post\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction post-\/rendu du module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_light_a3c3be4b3f14196daa94187cf975b57b4}\label{class_light_a3c3be4b3f14196daa94187cf975b57b4} 
+\index{Light@{Light}!PreRender@{PreRender}}
+\index{PreRender@{PreRender}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{PreRender()}{PreRender()}}
+{\footnotesize\ttfamily void Light\+::\+Pre\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction prÈ-\/rendu du module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_light_a8c5e62dfe193f95a191ad159b81c2b5b}\label{class_light_a8c5e62dfe193f95a191ad159b81c2b5b} 
+\index{Light@{Light}!Release@{Release}}
+\index{Release@{Release}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Light\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+LibËre les ressources utilisÈes par le module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_light_a9379a7e8dd7fd6bb04a8d50ce874b8c9}\label{class_light_a9379a7e8dd7fd6bb04a8d50ce874b8c9} 
+\index{Light@{Light}!Render@{Render}}
+\index{Render@{Render}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Light\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu du module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_light_a33434fd032e010702839eea41690c2a2}\label{class_light_a33434fd032e010702839eea41690c2a2} 
+\index{Light@{Light}!RenderGui@{RenderGui}}
+\index{RenderGui@{RenderGui}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{RenderGui()}{RenderGui()}}
+{\footnotesize\ttfamily void Light\+::\+Render\+Gui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu de l\textquotesingle{}interface graphique du module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_light_a1b0dc29a025dac5e832a39074aa9024f}\label{class_light_a1b0dc29a025dac5e832a39074aa9024f} 
+\index{Light@{Light}!Start@{Start}}
+\index{Start@{Start}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Light\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+DÈmarre le module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_component}{Component}}.
+
+\Hypertarget{class_light_a67847fb749205eb5ddf59d008ba5e42d}\label{class_light_a67847fb749205eb5ddf59d008ba5e42d} 
+\index{Light@{Light}!Update@{Update}}
+\index{Update@{Update}!Light@{Light}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Light\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Met ‡ jour le module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_component}{Component}}.
+
+
+
+La documentation de cette classe a √©t√© g√©n√©r√©e √† partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Game\+Object/\+Components/Light.\+h\item 
+sources/\+Game\+Object/\+Components/Light.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,60 @@
+\doxysection{Input\+Module.\+h}
+\hypertarget{_input_module_8h_source}{}\label{_input_module_8h_source}\index{includes/Modules/InputModule.h@{includes/Modules/InputModule.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INPUT\_MANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INPUT\_MANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <GLFW/glfw3.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Modules/Module.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_input_module}{InputModule}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_module}{Module}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_input_module}{InputModule}}(GLFWwindow*\ \_window);}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_input_module}{\string~InputModule}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ProcessInput();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsKeyPressed(\textcolor{keywordtype}{int}\ \_key);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsMouseButtonPressed(\textcolor{keywordtype}{int}\ \_button);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ GetMousePosition(\textcolor{keywordtype}{double}\&\ \_xPos,\ \textcolor{keywordtype}{double}\&\ \_yPos)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_module_a40e8cc2b5270d56964fad0ef08ecefa2}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_module_a136eb3623da445fb7dd90ac23e54d655}{Start}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_module_accf7c2102e1efa3f15700295caf0f142}{FixedUpdate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_module_aecd84e3e0151354383ac8a035d54bfba}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_module_a524b69effa2a2ebb7e39a3a3a6bce3be}{PreRender}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_module_a049eb919bcfcfb102c78238bb5576825}{Render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_module_a48a3e5cdfbd4d0d12c1dfc3033cbc435}{RenderGui}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_module_a72bb1692ac2d1b44be3e4df0a8990501}{PostRender}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_module_ac054ef94f2a917202b6bf2fec17a18ab}{Release}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_module_ae9d67478628287e4f6dd0019ff07a1b7}{Finalize}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ GLFWwindow*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ window;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ std::unordered\_map<int,\ bool>\ keys;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ std::unordered\_map<int,\ bool>\ mouseButtons;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mouseX,\ mouseY;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ KeyCallback(GLFWwindow*\ \_window,\ \textcolor{keywordtype}{int}\ \_key,\ \textcolor{keywordtype}{int}\ \_scancode,\ \textcolor{keywordtype}{int}\ \_action,\ \textcolor{keywordtype}{int}\ \_mods);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ MouseButtonCallback(GLFWwindow*\ \_window,\ \textcolor{keywordtype}{int}\ \_button,\ \textcolor{keywordtype}{int}\ \_action,\ \textcolor{keywordtype}{int}\ \_mods);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ CursorPositionCallback(GLFWwindow*\ \_window,\ \textcolor{keywordtype}{double}\ \_xPos,\ \textcolor{keywordtype}{double}\ \_yPos);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ JoystickCallback(\textcolor{keywordtype}{int}\ \_jid,\ \textcolor{keywordtype}{int}\ \_event);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ GamepadInput(\textcolor{keywordtype}{int}\ \_jid,\ \textcolor{keyword}{const}\ GLFWgamepadstate*\ \_state);}
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ INPUT\_MANAGER\_H}}
+
+\end{DoxyCode}

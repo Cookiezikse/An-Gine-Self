@@ -1,0 +1,117 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Lve\+Descriptor\+Writer}
+\hypertarget{classlve_1_1_lve_descriptor_writer}{}\label{classlve_1_1_lve_descriptor_writer}\index{lve::LveDescriptorWriter@{lve::LveDescriptorWriter}}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_descriptor_writer_aab1933f682c63e51046bafdc32b887c2}{Lve\+Descriptor\+Writer}} (\mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout}{Lve\+Descriptor\+Set\+Layout}} \&\+\_\+set\+Layout, \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool}{Lve\+Descriptor\+Pool}} \&\+\_\+pool)
+\begin{DoxyCompactList}\small\item\em Constructeur de \doxylink{classlve_1_1_lve_descriptor_writer}{Lve\+Descriptor\+Writer}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_descriptor_writer}{Lve\+Descriptor\+Writer}} \& \mbox{\hyperlink{classlve_1_1_lve_descriptor_writer_a8c45a7412db7306369ef1f86bcd84a1b}{Write\+Buffer}} (uint32\+\_\+t \+\_\+binding, const vk\+::\+Descriptor\+Buffer\+Info \texorpdfstring{$\ast$}{*}\+\_\+buffer\+Info)
+\begin{DoxyCompactList}\small\item\em Écriture d\textquotesingle{}informations de tampon dans le descripteur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlve_1_1_lve_descriptor_writer}{Lve\+Descriptor\+Writer}} \& \mbox{\hyperlink{classlve_1_1_lve_descriptor_writer_a4b38b9ad83581458c9284985ed24e594}{Write\+Image}} (uint32\+\_\+t \+\_\+binding, const vk\+::\+Descriptor\+Image\+Info \texorpdfstring{$\ast$}{*}\+\_\+image\+Info)
+\begin{DoxyCompactList}\small\item\em Écriture d\textquotesingle{}informations d\textquotesingle{}image dans le descripteur. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlve_1_1_lve_descriptor_writer_a413e8222d4749423fd1f4245d9782da8}{Build}} (vk\+::\+Descriptor\+Set \&\+\_\+set)
+\begin{DoxyCompactList}\small\item\em Construit un ensemble de descripteurs à partir des écritures précédentes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_descriptor_writer_a2ce798ce441fcddc466b20cbdccc5768}{Overwrite}} (const vk\+::\+Descriptor\+Set \&\+\_\+set)
+\begin{DoxyCompactList}\small\item\em Écrit à nouveau les informations de descripteur dans un ensemble de descripteurs existant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classlve_1_1_lve_descriptor_writer_aab1933f682c63e51046bafdc32b887c2}\label{classlve_1_1_lve_descriptor_writer_aab1933f682c63e51046bafdc32b887c2} 
+\index{lve::LveDescriptorWriter@{lve::LveDescriptorWriter}!LveDescriptorWriter@{LveDescriptorWriter}}
+\index{LveDescriptorWriter@{LveDescriptorWriter}!lve::LveDescriptorWriter@{lve::LveDescriptorWriter}}
+\doxysubsubsection{\texorpdfstring{LveDescriptorWriter()}{LveDescriptorWriter()}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Descriptor\+Writer\+::\+Lve\+Descriptor\+Writer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout}{Lve\+Descriptor\+Set\+Layout}} \&}]{\+\_\+set\+Layout,  }\item[{\mbox{\hyperlink{classlve_1_1_lve_descriptor_pool}{Lve\+Descriptor\+Pool}} \&}]{\+\_\+pool }\end{DoxyParamCaption})}
+
+
+
+Constructeur de \doxylink{classlve_1_1_lve_descriptor_writer}{Lve\+Descriptor\+Writer}. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+set\+Layout} & Référence vers l\textquotesingle{}ensemble de descripteurs. \\
+\hline
+{\em \+\_\+pool} & Référence vers le pool de descripteurs. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_lve_descriptor_writer_a413e8222d4749423fd1f4245d9782da8}\label{classlve_1_1_lve_descriptor_writer_a413e8222d4749423fd1f4245d9782da8} 
+\index{lve::LveDescriptorWriter@{lve::LveDescriptorWriter}!Build@{Build}}
+\index{Build@{Build}!lve::LveDescriptorWriter@{lve::LveDescriptorWriter}}
+\doxysubsubsection{\texorpdfstring{Build()}{Build()}}
+{\footnotesize\ttfamily bool lve\+::\+Lve\+Descriptor\+Writer\+::\+Build (\begin{DoxyParamCaption}\item[{vk\+::\+Descriptor\+Set \&}]{\+\_\+set }\end{DoxyParamCaption})}
+
+
+
+Construit un ensemble de descripteurs à partir des écritures précédentes. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+set} & Référence vers l\textquotesingle{}ensemble de descripteurs à construire. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Booléen indiquant si la construction a réussi. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_descriptor_writer_a2ce798ce441fcddc466b20cbdccc5768}\label{classlve_1_1_lve_descriptor_writer_a2ce798ce441fcddc466b20cbdccc5768} 
+\index{lve::LveDescriptorWriter@{lve::LveDescriptorWriter}!Overwrite@{Overwrite}}
+\index{Overwrite@{Overwrite}!lve::LveDescriptorWriter@{lve::LveDescriptorWriter}}
+\doxysubsubsection{\texorpdfstring{Overwrite()}{Overwrite()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Descriptor\+Writer\+::\+Overwrite (\begin{DoxyParamCaption}\item[{const vk\+::\+Descriptor\+Set \&}]{\+\_\+set }\end{DoxyParamCaption})}
+
+
+
+Écrit à nouveau les informations de descripteur dans un ensemble de descripteurs existant. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+set} & Référence vers l\textquotesingle{}ensemble de descripteurs à modifier. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_descriptor_writer_a8c45a7412db7306369ef1f86bcd84a1b}\label{classlve_1_1_lve_descriptor_writer_a8c45a7412db7306369ef1f86bcd84a1b} 
+\index{lve::LveDescriptorWriter@{lve::LveDescriptorWriter}!WriteBuffer@{WriteBuffer}}
+\index{WriteBuffer@{WriteBuffer}!lve::LveDescriptorWriter@{lve::LveDescriptorWriter}}
+\doxysubsubsection{\texorpdfstring{WriteBuffer()}{WriteBuffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_lve_descriptor_writer}{Lve\+Descriptor\+Writer}} \& lve\+::\+Lve\+Descriptor\+Writer\+::\+Write\+Buffer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{\+\_\+binding,  }\item[{const vk\+::\+Descriptor\+Buffer\+Info \texorpdfstring{$\ast$}{*}}]{\+\_\+buffer\+Info }\end{DoxyParamCaption})}
+
+
+
+Écriture d\textquotesingle{}informations de tampon dans le descripteur. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+binding} & Indice de liaison du descripteur. \\
+\hline
+{\em \+\_\+buffer\+Info} & Pointeur vers les informations du tampon. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Une référence vers l\textquotesingle{}objet \doxylink{classlve_1_1_lve_descriptor_writer}{Lve\+Descriptor\+Writer}. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_descriptor_writer_a4b38b9ad83581458c9284985ed24e594}\label{classlve_1_1_lve_descriptor_writer_a4b38b9ad83581458c9284985ed24e594} 
+\index{lve::LveDescriptorWriter@{lve::LveDescriptorWriter}!WriteImage@{WriteImage}}
+\index{WriteImage@{WriteImage}!lve::LveDescriptorWriter@{lve::LveDescriptorWriter}}
+\doxysubsubsection{\texorpdfstring{WriteImage()}{WriteImage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_lve_descriptor_writer}{Lve\+Descriptor\+Writer}} \& lve\+::\+Lve\+Descriptor\+Writer\+::\+Write\+Image (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{\+\_\+binding,  }\item[{const vk\+::\+Descriptor\+Image\+Info \texorpdfstring{$\ast$}{*}}]{\+\_\+image\+Info }\end{DoxyParamCaption})}
+
+
+
+Écriture d\textquotesingle{}informations d\textquotesingle{}image dans le descripteur. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+binding} & Indice de liaison du descripteur. \\
+\hline
+{\em \+\_\+image\+Info} & Pointeur vers les informations de l\textquotesingle{}image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Une référence vers l\textquotesingle{}objet \doxylink{classlve_1_1_lve_descriptor_writer}{Lve\+Descriptor\+Writer}. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Lve\+Engine/lve\+\_\+descriptors.\+h\item 
+sources/\+Lve\+Engine/lve\+\_\+descriptors.\+cpp\end{DoxyCompactItemize}

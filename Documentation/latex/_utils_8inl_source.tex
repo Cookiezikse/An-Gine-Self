@@ -1,0 +1,56 @@
+\doxysection{Utils.\+inl}
+\hypertarget{_utils_8inl_source}{}\label{_utils_8inl_source}\index{includes/UDP/Utils/Utils.inl@{includes/UDP/Utils/Utils.inl}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Utils.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }Bousk}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{namespace\ }Utils}
+\DoxyCodeLine{00008\ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ std::chrono::milliseconds\ Now()}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::chrono::duration\_cast<std::chrono::milliseconds>(std::chrono::system\_clock::now().time\_since\_epoch());}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsSequenceNewer(\textcolor{keyword}{const}\ uint16\ sNew,\ \textcolor{keyword}{const}\ uint16\ sLast)}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sNew\ ==\ sLast)}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (sNew\ >\ sLast\ \&\&\ sNew\ -\/\ sLast\ <=\ std::numeric\_limits<uint16>::max()\ /\ 2)}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ||\ (sNew\ <\ sLast\ \&\&\ sLast\ -\/\ sNew\ >\ std::numeric\_limits<uint16>::max()\ /\ 2);\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ uint16\ SequenceDiff(\textcolor{keyword}{const}\ uint16\ sNew,\ \textcolor{keyword}{const}\ uint16\ sLast)}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sNew\ ==\ sLast)}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ assert(IsSequenceNewer(sNew,\ sLast));}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sNew\ >\ sLast\ \&\&\ sNew\ -\/\ sLast\ <=\ std::numeric\_limits<uint16>::max()\ /\ 2)}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sNew\ -\/\ sLast;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (std::numeric\_limits<uint16>::max()\ -\/\ sLast)\ +\ sNew\ +\ 1;\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetBit(uint64\&\ bitfield,\ \textcolor{keyword}{const}\ uint8\ n)}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ assert(n\ <\ 64);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ bitfield\ |=\ (Bit<uint64>::Right\ <<\ n);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ UnsetBit(uint64\&\ bitfield,\ \textcolor{keyword}{const}\ uint8\ n)}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ assert(n\ <\ 64);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ bitfield\ \&=\ (\string~(Bit<uint64>::Right\ <<\ n));}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ HasBit(uint64\ bitfield,\ \textcolor{keyword}{const}\ uint8\ n)}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ assert(n\ <\ 64);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (bitfield\ \&\ (Bit<uint64>::Right\ <<\ n))\ !=\ 0;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,128 @@
+\doxysection{Transform.\+h}
+\hypertarget{_transform_8h_source}{}\label{_transform_8h_source}\index{includes/GameObject/Components/Transform.h@{includes/GameObject/Components/Transform.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <glm.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <gtc/matrix\_transform.hpp>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <gtc/type\_ptr.hpp>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Component.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_transform}{Transform}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_component}{Component}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_transform}{Transform}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Méthode\ pour\ récupérer\ et\ définir\ la\ position}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ glm::vec3\ GetPosition()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ position;\ \}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ SetPosition(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ \_x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ \_y,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ \_z)\ \{\ position\ =\ glm::vec3(\_x,\ -\/\_y,\ -\/\_z);\ \}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ SetPosition(\textcolor{keyword}{const}\ glm::vec3\&\ \_position)\ \{\ position\ =\ \_position;\}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Méthode\ pour\ récupérer\ et\ définir\ la\ rotation\ en\ utilisant\ un\ angle}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ glm::vec3\ GetRotation()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ rotation;\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ SetRotation(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \_angle)\ \{\ rotation\ =\ glm::vec3\{\ \_angle,\ \_angle,\_angle\ \};\ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \ SetRotation(\textcolor{keyword}{const}\ glm::vec3\&\ \_rotation)\ \{\ rotation\ =\ \_rotation;\ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ glm::vec3\ GetRotationDegrees()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rotation\ *\ (180.0f\ /\ glm::pi<float>());}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetRotationDegrees(\textcolor{keyword}{const}\ glm::vec3\&\ degrees)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ rotation\ =\ degrees\ *\ (glm::pi<float>()\ /\ 180.0f);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Méthode\ pour\ récupérer\ et\ définir\ l'échelle}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ glm::vec3\ GetScale()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ scale;\ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetScale(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ \_scaleX,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ \_scaleY,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\&\ \_scaleZ)}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ scale\ =\ glm::vec3(\_scaleX,\ \_scaleY,\ \_scaleZ);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetScale(\textcolor{keyword}{const}\ glm::vec3\&\ \_scale)\ \{\ scale\ =\ \_scale;\ \}\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*void\ Rotate(const\ float\ \_angle)}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ \ \ \ \ \ \ \ \{}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Création\ de\ la\ matrice\ de\ rotation\ supplémentaire}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ glm::mat4\ rotation\_matrix\ =\ glm::rotate(glm::mat4(1.0f),\ \_angle,\ rotation);}}
+\DoxyCodeLine{00047\ \textcolor{comment}{}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Mise\ à jour\ de\ la\ matrice\ de\ rotation\ actuelle}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ rotation\_matrix\ =\ rotation\_matrix\ *\ rotation;}}
+\DoxyCodeLine{00050\ \textcolor{comment}{}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ //\ Mise\ à jour\ de\ la\ matrice\ de\ rotation\ actuelle}}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ rotation\ =\ rotation\_matrix;}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ \ \ \ \ \ \ \ \}*/}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ glm::mat4\ Mat4()}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ c3\ =\ glm::cos(rotation.z);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ s3\ =\ glm::sin(rotation.z);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ c2\ =\ glm::cos(rotation.x);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ s2\ =\ glm::sin(rotation.x);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ c1\ =\ glm::cos(rotation.y);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ s1\ =\ glm::sin(rotation.y);}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::mat4\{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ scale.x\ *\ (c1\ *\ c3\ +\ s1\ *\ s2\ *\ s3),}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ scale.x\ *\ (c2\ *\ s3),}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ scale.x\ *\ (c1\ *\ s2\ *\ s3\ -\/\ c3\ *\ s1),}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.0f,}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ scale.y\ *\ (c3\ *\ s1\ *\ s2\ -\/\ c1\ *\ s3),}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ scale.y\ *\ (c2\ *\ c3),}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ scale.y\ *\ (c1\ *\ c3\ *\ s2\ +\ s1\ *\ s3),}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.0f,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ scale.z\ *\ (c2\ *\ s1),}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ scale.z\ *\ (-\/s2),}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ scale.z\ *\ (c1\ *\ c2),}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0.0f,}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{position.x,\ position.y,\ position.z,\ 1.0f\}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ glm::mat3\ NormalMatrix()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00087\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \ \ \ \ c3\ =\ glm::cos(rotation.z);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \ \ \ \ s3\ =\ glm::sin(rotation.z);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \ \ \ \ c2\ =\ glm::cos(rotation.x);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \ \ \ \ s2\ =\ glm::sin(rotation.x);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \ \ \ \ c1\ =\ glm::cos(rotation.y);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \ \ \ \ s1\ =\ glm::sin(rotation.y);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ glm::vec3\ inv\_scale\ =\ 1.0f\ /\ scale;}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ glm::mat3\{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inv\_scale.x\ *\ (c1\ *\ c3\ +\ s1\ *\ s2\ *\ s3),}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inv\_scale.x\ *\ (c2\ *\ s3),}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inv\_scale.x\ *\ (c1\ *\ s2\ *\ s3\ -\/\ c3\ *\ s1),}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inv\_scale.y\ *\ (c3\ *\ s1\ *\ s2\ -\/\ c1\ *\ s3),}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inv\_scale.y\ *\ (c2\ *\ c3),}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inv\_scale.y\ *\ (c1\ *\ c3\ *\ s2\ +\ s1\ *\ s3),}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inv\_scale.z\ *\ (c2\ *\ s1),}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inv\_scale.z\ *\ (-\/s2),}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inv\_scale.z\ *\ (c1\ *\ c2),}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Méthode\ pour\ afficher\ les\ propriétés\ du\ Transform}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Display();}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ glm::vec3\ position\{\};}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ glm::vec3\ scale\{\ 1.0f\ \};}
+\DoxyCodeLine{00121\ \ \ \ \ glm::vec3\ rotation\{\};}
+\DoxyCodeLine{00122\ \};}
+
+\end{DoxyCode}

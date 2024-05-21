@@ -1,0 +1,58 @@
+\doxysection{Float.\+h}
+\hypertarget{_float_8h_source}{}\label{_float_8h_source}\index{includes/UDP/Float.h@{includes/UDP/Float.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Types.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}RangedInteger.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }Bousk}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ FLOATTYPE,\ \textcolor{keywordtype}{int}32\ MIN,\ \textcolor{keywordtype}{int}32\ MAX,\ u\textcolor{keywordtype}{int}8\ NBDECIMALS,\ u\textcolor{keywordtype}{int}8\ STEP\ =\ 1>}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bousk_1_1_float}{Float}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_bousk_1_1_serialization_1_1_serializable}{Serialization::Serializable}}}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(std::is\_same\_v<FLOATTYPE,\ float32>\ ||\ std::is\_same\_v<FLOATTYPE,\ float64>,\ \textcolor{stringliteral}{"{}Float\ peut\ seulement\ être\ utilisé avec\ float32\ ou\ float64"{}});}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(NBDECIMALS\ >\ 0,\ \textcolor{stringliteral}{"{}Au\ moins\ 1\ décimale\ est\ nécessaire"{}});}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(NBDECIMALS\ <\ 10,\ \textcolor{stringliteral}{"{}Maximum\ de\ 10\ décimales"{}});}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(STEP\ !=\ 0,\ \textcolor{stringliteral}{"{}Le\ pas\ ne\ peut\ être\ nul"{}});}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(STEP\ \%\ 10\ !=\ 0,\ \textcolor{stringliteral}{"{}Le\ pas\ ne\ peut\ être\ un\ multiple\ de\ 10.\ Retirez\ une\ décimale"{}});}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }FloatType\ =\ FLOATTYPE;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ int32\ Min\ =\ MIN;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ int32\ Max\ =\ MAX;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint32\ Diff\ =\ Max\ -\/\ Min;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint8\ NbDecimals\ =\ NBDECIMALS;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint32\ Multiple\ =\ \mbox{\hyperlink{struct_bousk_1_1_pow}{Pow<10,\ NbDecimals>::Value}};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint8\ Step\ =\ STEP;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint32\ Domain\ =\ (MAX\ -\/\ MIN)\ *\ Multiple\ /\ STEP;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_float}{Float}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_float}{Float}}(FloatType\ value)}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ mQuantizedValue\ =\ Quantize(value);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ uint32\ Quantize(FloatType\ value)}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ assert(value\ >=\ Min\ \&\&\ value\ <=\ Max);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}uint32\textcolor{keyword}{>}(((value\ -\/\ Min)\ *\ Multiple)\ /\ Step);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ FloatType\ get()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}FloatType\textcolor{keyword}{>}((mQuantizedValue.get()\ *\ Step\ *\ 1.)\ /\ Multiple\ +\ Min);\ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{operator}\ FloatType()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ get();\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ write(\mbox{\hyperlink{class_bousk_1_1_serialization_1_1_serializer}{Serialization::Serializer}}\&\ serializer)\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ mQuantizedValue.write(serializer);\ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ read(\mbox{\hyperlink{class_bousk_1_1_serialization_1_1_deserializer}{Serialization::Deserializer}}\&\ deserializer)\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ mQuantizedValue.read(deserializer);\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<0,\ Domain>}}\ mQuantizedValue;}
+\DoxyCodeLine{00046\ \ \ \ \ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{int}32\ MIN,\ \textcolor{keywordtype}{int}32\ MAX,\ u\textcolor{keywordtype}{int}8\ NBDECIMALS,\ u\textcolor{keywordtype}{int}8\ STEP\ =\ 1>}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_bousk_1_1_float}{Float32}}\ =\ \mbox{\hyperlink{class_bousk_1_1_float}{Float<float32,\ MIN,\ MAX,\ NBDECIMALS,\ STEP>}};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{int}32\ MIN,\ \textcolor{keywordtype}{int}32\ MAX,\ u\textcolor{keywordtype}{int}8\ NBDECIMALS,\ u\textcolor{keywordtype}{int}8\ STEP\ =\ 1>}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_bousk_1_1_float}{Float64}}\ =\ \mbox{\hyperlink{class_bousk_1_1_float}{Float<float64,\ MIN,\ MAX,\ NBDECIMALS,\ STEP>}};}
+\DoxyCodeLine{00052\ \}}
+
+\end{DoxyCode}

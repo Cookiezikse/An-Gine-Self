@@ -1,0 +1,82 @@
+\doxysection{Server.\+h}
+\hypertarget{_server_8h_source}{}\label{_server_8h_source}\index{includes/TCP/Server/Server.h@{includes/TCP/Server/Server.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TCP/Sockets.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TCP/Client/Client.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}TCP/Messages.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }Network}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{namespace\ }Messages\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }Base;}
+\DoxyCodeLine{00016\ \ \ \ \ \}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{namespace\ }TCP}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }ServerImpl;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server}{Server}}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_a7f8a321ebc3a99959eef876e652efcfe}{Server}}()\ \{\}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_a1f739954830843ba193781f846736209}{Server}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server}{Server}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server}{Server}}\&\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_a72d89f79a2f3b29940af39932dde8176}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server}{Server}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_a7f8a321ebc3a99959eef876e652efcfe}{Server}}(\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server}{Server}}\&\&);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server}{Server}}\&\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_a72d89f79a2f3b29940af39932dde8176}{operator=}}(\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server}{Server}}\&\&);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_a09366c69fe651156d9a4131175e4a217}{\string~Server}}()\ \{\}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_a229a8fb6cd5cf4278f5a578661dc094d}{start}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \_port);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_a01fae34f54a929d8aa03cbc3c2cb1e1d}{stop}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_a6a8fdc8571bbbd999c7c2767fc5b34bf}{update}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_af7896a328c27db52fd99e0c5888754f1}{sendTo}}(uint64\_t\ clientid,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}*\ data,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ len);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_af017b5f9caa9147cf4502750ccc3639a}{sendToAll}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}*\ data,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ len);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<Messages::Base>\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_ac4cc0dc0661e293f522a0bb7089bbfbe}{poll}}();}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<ServerImpl>\ mImpl;\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_impl}{ServerImpl}}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_impl}{ServerImpl}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_impl}{\string~ServerImpl}}();}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_impl_af5bb3160db4da70211389a63294432da}{start}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ \_port);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_impl_ae8f77df483436b7ff6eef716e90ac3ee}{stop}}();}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_impl_a7396997a25ce53506c8f8a69cec72774}{update}}();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_impl_a0517ef8600539522385b82cf0460cbd3}{sendTo}}(uint64\_t\ clientid,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}*\ data,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ len);}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_impl_aebf3e7ba43f65222e14142f3bdaf10f0}{sendToAll}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}*\ data,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ len);}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<Messages::Base>\ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_impl_acd01852df26c13a59887a9043e339ca1}{poll}}();}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ std::map<uint64\_t,\ Client>\ mClients;\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ std::list<std::unique\_ptr<Messages::Base>>\ mMessages;\ }
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ SOCKET\ mSocket\{\ INVALID\_SOCKET\ \};\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00155\ \ \ \ \ \}}
+\DoxyCodeLine{00156\ \}}
+
+\end{DoxyCode}

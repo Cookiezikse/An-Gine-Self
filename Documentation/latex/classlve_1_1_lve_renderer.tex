@@ -1,0 +1,257 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Lve\+Renderer}
+\hypertarget{classlve_1_1_lve_renderer}{}\label{classlve_1_1_lve_renderer}\index{lve::LveRenderer@{lve::LveRenderer}}
+
+
+Classe représentant un renderer Vulkan.  
+
+
+
+
+{\ttfamily \#include $<$lve\+\_\+renderer.\+h$>$}
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_renderer_a2ce761a8137a6116d6f399cb52706dc7}{Lve\+Renderer}} (\mbox{\hyperlink{class_window_module}{Window\+Module}} \texorpdfstring{$\ast$}{*}\+\_\+window\+Module, \mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&\+\_\+device)
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_renderer_a03406ee68a4ab1d92f5603890b7cc2a3}{\texorpdfstring{$\sim$}{\string~}\+Lve\+Renderer}} ()
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_renderer_a4a40f6f226cd4e941004c559a26f4924}{Lve\+Renderer}} (const \mbox{\hyperlink{classlve_1_1_lve_renderer}{Lve\+Renderer}} \&)=delete
+\item 
+\mbox{\hyperlink{classlve_1_1_lve_renderer}{Lve\+Renderer}} \& \mbox{\hyperlink{classlve_1_1_lve_renderer_a527f7982ffd643b6b835eca0822a95a4}{operator=}} (const \mbox{\hyperlink{classlve_1_1_lve_renderer}{Lve\+Renderer}} \&)=delete
+\item 
+vk\+::\+Render\+Pass \mbox{\hyperlink{classlve_1_1_lve_renderer_aab41312c75fffa6db139badab1e26b64}{Get\+Swap\+Chain\+Render\+Pass}} () const
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}objet de rendu associé à la chaîne de swap. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classlve_1_1_lve_renderer_a229889ea61e3cb489aab9e0cac743322}{Get\+Aspect\+Ratio}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le ratio de l\textquotesingle{}aspect de la fenêtre associée à la chaîne de swap. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classlve_1_1_lve_renderer_a34582e340a8f38f7995ab3d734c22995}{Is\+Frame\+In\+Progress}} () const
+\begin{DoxyCompactList}\small\item\em Vérifie si un cadre est en cours. \end{DoxyCompactList}\item 
+vk\+::\+Command\+Buffer \mbox{\hyperlink{classlve_1_1_lve_renderer_a5e411afe2f7ebae4f27fa5206f57112c}{Get\+Current\+Command\+Buffer}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le tampon de commandes actuel. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classlve_1_1_lve_renderer_af95057a276837ad1adfe2e9d8407982c}{Get\+Frame\+Index}} () const
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}index du cadre en cours. \end{DoxyCompactList}\item 
+vk\+::\+Command\+Buffer \mbox{\hyperlink{classlve_1_1_lve_renderer_abae742fba75a75b4d7647b09445ed365}{Begin\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Démarre un nouveau cadre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_renderer_af9e79706c43bba815588ebeae37570d0}{End\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Termine le cadre en cours. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_lve_renderer_a5234295d3ef1ab0d655d5822a4249e60}\label{classlve_1_1_lve_renderer_a5234295d3ef1ab0d655d5822a4249e60} 
+void {\bfseries End\+Frame} (const vk\+::\+Command\+Buffer \texorpdfstring{$\ast$}{*}\+\_\+command\+Buffer)
+\item 
+void \mbox{\hyperlink{classlve_1_1_lve_renderer_afc7bc79d9da28ea54249c8fe443a7eef}{Begin\+Swap\+Chain\+Render\+Pass}} (vk\+::\+Command\+Buffer \+\_\+command\+Buffer) const
+\begin{DoxyCompactList}\small\item\em Démarre la passe de rendu de la chaîne de swaps. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlve_1_1_lve_renderer_ac22e39c541f15eb11e7c0918068ed057}{End\+Swap\+Chain\+Render\+Pass}} (vk\+::\+Command\+Buffer \+\_\+command\+Buffer) const
+\begin{DoxyCompactList}\small\item\em Termine la passe de rendu de la chaîne de swaps. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Classe représentant un renderer Vulkan. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{classlve_1_1_lve_renderer_a2ce761a8137a6116d6f399cb52706dc7}\label{classlve_1_1_lve_renderer_a2ce761a8137a6116d6f399cb52706dc7} 
+\index{lve::LveRenderer@{lve::LveRenderer}!LveRenderer@{LveRenderer}}
+\index{LveRenderer@{LveRenderer}!lve::LveRenderer@{lve::LveRenderer}}
+\doxysubsubsection{\texorpdfstring{LveRenderer()}{LveRenderer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Renderer\+::\+Lve\+Renderer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_window_module}{Window\+Module}} \texorpdfstring{$\ast$}{*}}]{\+\_\+window\+Module,  }\item[{\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&}]{\+\_\+device }\end{DoxyParamCaption})}
+
+Constructeur de \doxylink{classlve_1_1_lve_renderer}{Lve\+Renderer}. 
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+window} & Référence à l\textquotesingle{}objet \doxylink{classlve_1_1_lve_window}{Lve\+Window} associé au renderer. \\
+\hline
+{\em \+\_\+device} & Référence à l\textquotesingle{}objet \doxylink{classlve_1_1_lve_device}{Lve\+Device} associé au renderer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_renderer_a03406ee68a4ab1d92f5603890b7cc2a3}\label{classlve_1_1_lve_renderer_a03406ee68a4ab1d92f5603890b7cc2a3} 
+\index{lve::LveRenderer@{lve::LveRenderer}!````~LveRenderer@{\texorpdfstring{$\sim$}{\string~}LveRenderer}}
+\index{````~LveRenderer@{\texorpdfstring{$\sim$}{\string~}LveRenderer}!lve::LveRenderer@{lve::LveRenderer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LveRenderer()}{\string~LveRenderer()}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Renderer\+::\texorpdfstring{$\sim$}{\string~}\+Lve\+Renderer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructeur de \doxylink{classlve_1_1_lve_renderer}{Lve\+Renderer}. \Hypertarget{classlve_1_1_lve_renderer_a4a40f6f226cd4e941004c559a26f4924}\label{classlve_1_1_lve_renderer_a4a40f6f226cd4e941004c559a26f4924} 
+\index{lve::LveRenderer@{lve::LveRenderer}!LveRenderer@{LveRenderer}}
+\index{LveRenderer@{LveRenderer}!lve::LveRenderer@{lve::LveRenderer}}
+\doxysubsubsection{\texorpdfstring{LveRenderer()}{LveRenderer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lve\+::\+Lve\+Renderer\+::\+Lve\+Renderer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlve_1_1_lve_renderer}{Lve\+Renderer}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Opérateur de copie supprimé pour \doxylink{classlve_1_1_lve_renderer}{Lve\+Renderer}. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_lve_renderer_abae742fba75a75b4d7647b09445ed365}\label{classlve_1_1_lve_renderer_abae742fba75a75b4d7647b09445ed365} 
+\index{lve::LveRenderer@{lve::LveRenderer}!BeginFrame@{BeginFrame}}
+\index{BeginFrame@{BeginFrame}!lve::LveRenderer@{lve::LveRenderer}}
+\doxysubsubsection{\texorpdfstring{BeginFrame()}{BeginFrame()}}
+{\footnotesize\ttfamily vk\+::\+Command\+Buffer lve\+::\+Lve\+Renderer\+::\+Begin\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Démarre un nouveau cadre. 
+
+Cette fonction démarre un nouveau cadre en acquérant l\textquotesingle{}image suivante de la chaîne de swaps.
+
+\begin{DoxyReturn}{Renvoie}
+Vk\+Command\+Buffer Le tampon de commandes actuel. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & si l\textquotesingle{}acquisition de l\textquotesingle{}image échoue ou si le tampon de commandes ne peut pas être commencé. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classlve_1_1_lve_renderer_afc7bc79d9da28ea54249c8fe443a7eef}\label{classlve_1_1_lve_renderer_afc7bc79d9da28ea54249c8fe443a7eef} 
+\index{lve::LveRenderer@{lve::LveRenderer}!BeginSwapChainRenderPass@{BeginSwapChainRenderPass}}
+\index{BeginSwapChainRenderPass@{BeginSwapChainRenderPass}!lve::LveRenderer@{lve::LveRenderer}}
+\doxysubsubsection{\texorpdfstring{BeginSwapChainRenderPass()}{BeginSwapChainRenderPass()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Renderer\+::\+Begin\+Swap\+Chain\+Render\+Pass (\begin{DoxyParamCaption}\item[{vk\+::\+Command\+Buffer}]{\+\_\+command\+Buffer }\end{DoxyParamCaption}) const}
+
+
+
+Démarre la passe de rendu de la chaîne de swaps. 
+
+Cette fonction démarre la passe de rendu de la chaîne de swaps en commençant par initialiser les informations sur le rendu, en définissant la zone de rendu et en définissant les valeurs de nettoyage.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+command\+Buffer} & \\
+\hline
+{\em command\+Buffer} & Le tampon de commandes sur lequel commencer la passe de rendu.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & si la commande de début de la passe de rendu échoue. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classlve_1_1_lve_renderer_af9e79706c43bba815588ebeae37570d0}\label{classlve_1_1_lve_renderer_af9e79706c43bba815588ebeae37570d0} 
+\index{lve::LveRenderer@{lve::LveRenderer}!EndFrame@{EndFrame}}
+\index{EndFrame@{EndFrame}!lve::LveRenderer@{lve::LveRenderer}}
+\doxysubsubsection{\texorpdfstring{EndFrame()}{EndFrame()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Renderer\+::\+End\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Termine le cadre en cours. 
+
+Cette fonction termine le cadre en cours en arrêtant l\textquotesingle{}enregistrement du tampon de commandes, en soumettant le tampon de commandes à la chaîne de swaps pour présentation et en gérant les événements de redimensionnement de la fenêtre.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & si l\textquotesingle{}arrêt de l\textquotesingle{}enregistrement du tampon de commandes échoue, si la présentation de l\textquotesingle{}image de la chaîne de swaps échoue ou si une redimensionnement de la fenêtre est nécessaire. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classlve_1_1_lve_renderer_ac22e39c541f15eb11e7c0918068ed057}\label{classlve_1_1_lve_renderer_ac22e39c541f15eb11e7c0918068ed057} 
+\index{lve::LveRenderer@{lve::LveRenderer}!EndSwapChainRenderPass@{EndSwapChainRenderPass}}
+\index{EndSwapChainRenderPass@{EndSwapChainRenderPass}!lve::LveRenderer@{lve::LveRenderer}}
+\doxysubsubsection{\texorpdfstring{EndSwapChainRenderPass()}{EndSwapChainRenderPass()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Renderer\+::\+End\+Swap\+Chain\+Render\+Pass (\begin{DoxyParamCaption}\item[{vk\+::\+Command\+Buffer}]{\+\_\+command\+Buffer }\end{DoxyParamCaption}) const}
+
+
+
+Termine la passe de rendu de la chaîne de swaps. 
+
+Cette fonction termine la passe de rendu de la chaîne de swaps en appelant la commande de fin de la passe de rendu sur le tampon de commandes spécifié.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+command\+Buffer} & \\
+\hline
+{\em command\+Buffer} & Le tampon de commandes sur lequel terminer la passe de rendu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classlve_1_1_lve_renderer_a229889ea61e3cb489aab9e0cac743322}\label{classlve_1_1_lve_renderer_a229889ea61e3cb489aab9e0cac743322} 
+\index{lve::LveRenderer@{lve::LveRenderer}!GetAspectRatio@{GetAspectRatio}}
+\index{GetAspectRatio@{GetAspectRatio}!lve::LveRenderer@{lve::LveRenderer}}
+\doxysubsubsection{\texorpdfstring{GetAspectRatio()}{GetAspectRatio()}}
+{\footnotesize\ttfamily float lve\+::\+Lve\+Renderer\+::\+Get\+Aspect\+Ratio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le ratio de l\textquotesingle{}aspect de la fenêtre associée à la chaîne de swap. 
+
+Cette fonction retourne le ratio de l\textquotesingle{}aspect de la fenêtre associée à la chaîne de swap.
+
+\begin{DoxyReturn}{Renvoie}
+float Le ratio de l\textquotesingle{}aspect de la fenêtre. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_renderer_a5e411afe2f7ebae4f27fa5206f57112c}\label{classlve_1_1_lve_renderer_a5e411afe2f7ebae4f27fa5206f57112c} 
+\index{lve::LveRenderer@{lve::LveRenderer}!GetCurrentCommandBuffer@{GetCurrentCommandBuffer}}
+\index{GetCurrentCommandBuffer@{GetCurrentCommandBuffer}!lve::LveRenderer@{lve::LveRenderer}}
+\doxysubsubsection{\texorpdfstring{GetCurrentCommandBuffer()}{GetCurrentCommandBuffer()}}
+{\footnotesize\ttfamily vk\+::\+Command\+Buffer lve\+::\+Lve\+Renderer\+::\+Get\+Current\+Command\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le tampon de commandes actuel. 
+
+Cette fonction retourne le tampon de commandes actuel. Elle suppose qu\textquotesingle{}un cadre est en cours.
+
+\begin{DoxyReturn}{Renvoie}
+Vk\+Command\+Buffer Le tampon de commandes actuel. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & si aucun cadre n\textquotesingle{}est en cours. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classlve_1_1_lve_renderer_af95057a276837ad1adfe2e9d8407982c}\label{classlve_1_1_lve_renderer_af95057a276837ad1adfe2e9d8407982c} 
+\index{lve::LveRenderer@{lve::LveRenderer}!GetFrameIndex@{GetFrameIndex}}
+\index{GetFrameIndex@{GetFrameIndex}!lve::LveRenderer@{lve::LveRenderer}}
+\doxysubsubsection{\texorpdfstring{GetFrameIndex()}{GetFrameIndex()}}
+{\footnotesize\ttfamily int lve\+::\+Lve\+Renderer\+::\+Get\+Frame\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient l\textquotesingle{}index du cadre en cours. 
+
+Cette fonction retourne l\textquotesingle{}index du cadre en cours. Elle suppose qu\textquotesingle{}un cadre est en cours.
+
+\begin{DoxyReturn}{Renvoie}
+int L\textquotesingle{}index du cadre en cours. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & si aucun cadre n\textquotesingle{}est en cours. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classlve_1_1_lve_renderer_aab41312c75fffa6db139badab1e26b64}\label{classlve_1_1_lve_renderer_aab41312c75fffa6db139badab1e26b64} 
+\index{lve::LveRenderer@{lve::LveRenderer}!GetSwapChainRenderPass@{GetSwapChainRenderPass}}
+\index{GetSwapChainRenderPass@{GetSwapChainRenderPass}!lve::LveRenderer@{lve::LveRenderer}}
+\doxysubsubsection{\texorpdfstring{GetSwapChainRenderPass()}{GetSwapChainRenderPass()}}
+{\footnotesize\ttfamily vk\+::\+Render\+Pass lve\+::\+Lve\+Renderer\+::\+Get\+Swap\+Chain\+Render\+Pass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient l\textquotesingle{}objet de rendu associé à la chaîne de swap. 
+
+Cette fonction retourne l\textquotesingle{}objet de rendu associé à la chaîne de swap.
+
+\begin{DoxyReturn}{Renvoie}
+vk\+::\+Render\+Pass L\textquotesingle{}objet de rendu associé à la chaîne de swap. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_renderer_a34582e340a8f38f7995ab3d734c22995}\label{classlve_1_1_lve_renderer_a34582e340a8f38f7995ab3d734c22995} 
+\index{lve::LveRenderer@{lve::LveRenderer}!IsFrameInProgress@{IsFrameInProgress}}
+\index{IsFrameInProgress@{IsFrameInProgress}!lve::LveRenderer@{lve::LveRenderer}}
+\doxysubsubsection{\texorpdfstring{IsFrameInProgress()}{IsFrameInProgress()}}
+{\footnotesize\ttfamily bool lve\+::\+Lve\+Renderer\+::\+Is\+Frame\+In\+Progress (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vérifie si un cadre est en cours. 
+
+Cette fonction retourne vrai si un cadre est actuellement en cours, sinon elle retourne faux.
+
+\begin{DoxyReturn}{Renvoie}
+bool Vrai si un cadre est en cours, sinon faux. 
+\end{DoxyReturn}
+\Hypertarget{classlve_1_1_lve_renderer_a527f7982ffd643b6b835eca0822a95a4}\label{classlve_1_1_lve_renderer_a527f7982ffd643b6b835eca0822a95a4} 
+\index{lve::LveRenderer@{lve::LveRenderer}!operator=@{operator=}}
+\index{operator=@{operator=}!lve::LveRenderer@{lve::LveRenderer}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlve_1_1_lve_renderer}{Lve\+Renderer}} \& lve\+::\+Lve\+Renderer\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlve_1_1_lve_renderer}{Lve\+Renderer}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Opérateur d\textquotesingle{}assignation supprimé pour \doxylink{classlve_1_1_lve_renderer}{Lve\+Renderer}. \begin{DoxyReturn}{Renvoie}
+Référence à l\textquotesingle{}objet \doxylink{classlve_1_1_lve_renderer}{Lve\+Renderer}. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Lve\+Engine/lve\+\_\+renderer.\+h\item 
+sources/\+Lve\+Engine/lve\+\_\+renderer.\+cpp\end{DoxyCompactItemize}

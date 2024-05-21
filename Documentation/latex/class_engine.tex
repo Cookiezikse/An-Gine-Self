@@ -1,0 +1,97 @@
+\doxysection{R√©f√©rence de la classe Engine}
+\hypertarget{class_engine}{}\label{class_engine}\index{Engine@{Engine}}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_engine_a3ebf53c55fbec626830b6edc1811a5a6}\label{class_engine_a3ebf53c55fbec626830b6edc1811a5a6} 
+void {\bfseries Init} () const
+\begin{DoxyCompactList}\small\item\em Initialise le moteur. \end{DoxyCompactList}\item 
+\Hypertarget{class_engine_aa56c7f208b8a998049a3b3465c88ef35}\label{class_engine_aa56c7f208b8a998049a3b3465c88ef35} 
+void {\bfseries Run} () const
+\begin{DoxyCompactList}\small\item\em Lance le moteur. \end{DoxyCompactList}\item 
+\Hypertarget{class_engine_ac703279e3531bc1e668115affceb8c37}\label{class_engine_ac703279e3531bc1e668115affceb8c37} 
+void {\bfseries Quit} ()
+\begin{DoxyCompactList}\small\item\em Quitte le moteur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_module_manager}{Module\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine_ab5387d007ef3edba4db6bd6e60ff54fc}{Get\+Module\+Manager}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le gestionnaire de modules du moteur. \end{DoxyCompactList}\item 
+Engine\+Mode \mbox{\hyperlink{class_engine_a7859a600c9e5dea6c93357c66c22e98d}{Get\+Engine\+Mode}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le mode du moteur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_a3cf2dd32de98d0f3435844e927b70843}{Set\+Engine\+Mode}} (const Engine\+Mode \+\_\+engine\+Mode)
+\begin{DoxyCompactList}\small\item\em DÈfinit le mode du moteur. \end{DoxyCompactList}\item 
+\Hypertarget{class_engine_a9f26bc64debd7c6336330cd00e6b030f}\label{class_engine_a9f26bc64debd7c6336330cd00e6b030f} 
+void {\bfseries Play\+Engine\+Mode} ()
+\begin{DoxyCompactList}\small\item\em DÈfinit le mode du moteur comme "{}\+Play"{}. \end{DoxyCompactList}\item 
+\Hypertarget{class_engine_a94d49ffab5a324093a1bf7737cbc8508}\label{class_engine_a94d49ffab5a324093a1bf7737cbc8508} 
+void {\bfseries Pause\+Engine\+Mode} ()
+\begin{DoxyCompactList}\small\item\em DÈfinit le mode du moteur comme "{}\+Pause"{}. \end{DoxyCompactList}\item 
+\Hypertarget{class_engine_a04585b20ff6bd1cc1429f967b765b58c}\label{class_engine_a04585b20ff6bd1cc1429f967b765b58c} 
+void {\bfseries Editor\+Engine\+Mode} ()
+\begin{DoxyCompactList}\small\item\em DÈfinit le mode du moteur comme "{}\+Editor"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_engine}{Engine}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine_aab953f155f37bc03fe78de7cb4dbf721}{Get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Obtient une instance unique du moteur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_engine_a7859a600c9e5dea6c93357c66c22e98d}\label{class_engine_a7859a600c9e5dea6c93357c66c22e98d} 
+\index{Engine@{Engine}!GetEngineMode@{GetEngineMode}}
+\index{GetEngineMode@{GetEngineMode}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{GetEngineMode()}{GetEngineMode()}}
+{\footnotesize\ttfamily Engine\+Mode Engine\+::\+Get\+Engine\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le mode du moteur. 
+
+\begin{DoxyReturn}{Renvoie}
+Le mode actuel du moteur. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_aab953f155f37bc03fe78de7cb4dbf721}\label{class_engine_aab953f155f37bc03fe78de7cb4dbf721} 
+\index{Engine@{Engine}!GetInstance@{GetInstance}}
+\index{GetInstance@{GetInstance}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{GetInstance()}{GetInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_engine}{Engine}} \texorpdfstring{$\ast$}{*} Engine\+::\+Get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obtient une instance unique du moteur. 
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers l\textquotesingle{}instance du moteur. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_ab5387d007ef3edba4db6bd6e60ff54fc}\label{class_engine_ab5387d007ef3edba4db6bd6e60ff54fc} 
+\index{Engine@{Engine}!GetModuleManager@{GetModuleManager}}
+\index{GetModuleManager@{GetModuleManager}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{GetModuleManager()}{GetModuleManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_module_manager}{Module\+Manager}} \texorpdfstring{$\ast$}{*} Engine\+::\+Get\+Module\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le gestionnaire de modules du moteur. 
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le gestionnaire de modules. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_a3cf2dd32de98d0f3435844e927b70843}\label{class_engine_a3cf2dd32de98d0f3435844e927b70843} 
+\index{Engine@{Engine}!SetEngineMode@{SetEngineMode}}
+\index{SetEngineMode@{SetEngineMode}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{SetEngineMode()}{SetEngineMode()}}
+{\footnotesize\ttfamily void Engine\+::\+Set\+Engine\+Mode (\begin{DoxyParamCaption}\item[{const Engine\+Mode}]{\+\_\+engine\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+DÈfinit le mode du moteur. 
+
+
+\begin{DoxyParams}{Param√®tres}
+{\em \+\_\+engine\+Mode} & Le nouveau mode du moteur. \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a √©t√© g√©n√©r√©e √† partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Engine/Core\+Engine.\+h\item 
+sources/\+Engine/Core\+Engine.\+cpp\end{DoxyCompactItemize}

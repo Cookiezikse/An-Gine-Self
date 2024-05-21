@@ -1,0 +1,48 @@
+\doxysection{lve\+\_\+texture.\+h}
+\hypertarget{lve__texture_8h_source}{}\label{lve__texture_8h_source}\index{includes/LveEngine/lve\_texture.h@{includes/LveEngine/lve\_texture.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_device.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }lve\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlve_1_1_lve_texture}{LveTexture}}}
+\DoxyCodeLine{00007\ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ vk::DescriptorSet\ descriptorSet;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ vk::DescriptorSet\ GetDescriptorSet()\ \{\ \textcolor{keywordflow}{return}\ descriptorSet;\ \}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_texture}{LveTexture}}(\mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ \_device,\ \textcolor{keyword}{const}\ std::string\&\ filepath);}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_texture}{\string~LveTexture}}();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_texture}{LveTexture}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_texture}{LveTexture}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_texture}{LveTexture}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_texture}{LveTexture}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_texture}{LveTexture}}(\mbox{\hyperlink{classlve_1_1_lve_texture}{LveTexture}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_texture}{LveTexture}}\&\ operator=(\mbox{\hyperlink{classlve_1_1_lve_texture}{LveTexture}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ vk::Sampler\ getSampler()\ \{\ \textcolor{keywordflow}{return}\ sampler;\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ vk::ImageView\ getImageView()\ \{\ \textcolor{keywordflow}{return}\ imageView;\ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ vk::ImageLayout\ getImageLayout()\ \{\ \textcolor{keywordflow}{return}\ imageLayout;\ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//void\ createTextureDescriptorSet(vk::DescriptorPool\ descriptorPool,\ vk::DescriptorSetLayout\ textureDescriptorSetLayout);}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ transitionImageLayout(vk::ImageLayout\ oldLayout,\ vk::ImageLayout\ newLayout);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ generateMipmaps();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ width,\ height,\ mipLevels;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ lveDevice;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ vk::Image\ image;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ vk::DeviceMemory\ imageMemory;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ vk::ImageView\ imageView;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ vk::Sampler\ sampler;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ vk::Format\ imageFormat;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ vk::ImageLayout\ imageLayout;}
+\DoxyCodeLine{00040\ \ \ \ \ \};}
+\DoxyCodeLine{00041\ \}}
+\DoxyCodeLine{00042\ }
+
+\end{DoxyCode}

@@ -1,0 +1,170 @@
+\doxysection{RÃ©fÃ©rence de la structure lve\+::Pipeline\+Config\+Info}
+\hypertarget{structlve_1_1_pipeline_config_info}{}\label{structlve_1_1_pipeline_config_info}\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+
+
+Structure contenant les informations de configuration pour la création d\textquotesingle{}un pipeline.  
+
+
+
+
+{\ttfamily \#include $<$lve\+\_\+pipeline.\+h$>$}
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlve_1_1_pipeline_config_info_ae1f9b727fa4b672eb2fa43e76574d123}{Pipeline\+Config\+Info}} ()=default
+\item 
+\mbox{\hyperlink{structlve_1_1_pipeline_config_info_a7d67d337a64b3b5be6f1167bf9c52eb9}{Pipeline\+Config\+Info}} (const \mbox{\hyperlink{structlve_1_1_pipeline_config_info}{Pipeline\+Config\+Info}} \&)=delete
+\item 
+\mbox{\hyperlink{structlve_1_1_pipeline_config_info}{Pipeline\+Config\+Info}} \& \mbox{\hyperlink{structlve_1_1_pipeline_config_info_aaad9655178cd8e806c2f319d437fc65f}{operator=}} (const \mbox{\hyperlink{structlve_1_1_pipeline_config_info}{Pipeline\+Config\+Info}} \&)=delete
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ vk\+::\+Vertex\+Input\+Attribute\+Description $>$ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_a7481d780692c39134ffb4a1e0596e3cd}{attribute\+Descriptions}} \{\}
+\item 
+std\+::vector$<$ vk\+::\+Vertex\+Input\+Binding\+Description $>$ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_aded1676226606e68e189db7ed44a11f3}{binding\+Descriptions}} \{\}
+\item 
+vk\+::\+Pipeline\+Viewport\+State\+Create\+Info \mbox{\hyperlink{structlve_1_1_pipeline_config_info_a22c7a38ed1b1392d4441d06e6d734d31}{viewport\+Info}}
+\item 
+vk\+::\+Pipeline\+Input\+Assembly\+State\+Create\+Info \mbox{\hyperlink{structlve_1_1_pipeline_config_info_ad01ce5921f883eeaac7d39711bda9270}{input\+Assembly\+Info}}
+\item 
+vk\+::\+Pipeline\+Rasterization\+State\+Create\+Info \mbox{\hyperlink{structlve_1_1_pipeline_config_info_a66e27d9096cb66723aca6bc379848e3f}{rasterization\+Info}}
+\item 
+vk\+::\+Pipeline\+Multisample\+State\+Create\+Info \mbox{\hyperlink{structlve_1_1_pipeline_config_info_ad3b3266178e6c9841950f988135bd88e}{multisample\+Info}}
+\item 
+vk\+::\+Pipeline\+Color\+Blend\+Attachment\+State \mbox{\hyperlink{structlve_1_1_pipeline_config_info_ae082230ad8893c2bf5ef2272f7a0c704}{color\+Blend\+Attachment}}
+\item 
+vk\+::\+Pipeline\+Color\+Blend\+State\+Create\+Info \mbox{\hyperlink{structlve_1_1_pipeline_config_info_a2490d9f71c93a654d778151235c8d358}{color\+Blend\+Info}}
+\item 
+vk\+::\+Pipeline\+Depth\+Stencil\+State\+Create\+Info \mbox{\hyperlink{structlve_1_1_pipeline_config_info_aab5f07a499efb89eff5e6ddb1907daed}{depth\+Stencil\+Info}}
+\item 
+std\+::vector$<$ vk\+::\+Dynamic\+State $>$ \mbox{\hyperlink{structlve_1_1_pipeline_config_info_a0ac7d9a26c0c8e15578564e4f0f9d1d8}{dynamic\+State\+Enables}}
+\item 
+vk\+::\+Pipeline\+Dynamic\+State\+Create\+Info \mbox{\hyperlink{structlve_1_1_pipeline_config_info_add2163ac59974d31b9d828566114db3a}{dynamic\+State\+Info}}
+\item 
+vk\+::\+Pipeline\+Layout \mbox{\hyperlink{structlve_1_1_pipeline_config_info_a7d223d02ba9f2b0211575e70d7900d4b}{pipeline\+Layout}} = nullptr
+\item 
+vk\+::\+Render\+Pass \mbox{\hyperlink{structlve_1_1_pipeline_config_info_a681dc36dfb945d2f9a7f4ec4c3c4c955}{render\+Pass}} = nullptr
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structlve_1_1_pipeline_config_info_a5f3504cbefbaafa6fab603bb2001025b}{subpass}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Structure contenant les informations de configuration pour la création d\textquotesingle{}un pipeline. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\Hypertarget{structlve_1_1_pipeline_config_info_ae1f9b727fa4b672eb2fa43e76574d123}\label{structlve_1_1_pipeline_config_info_ae1f9b727fa4b672eb2fa43e76574d123} 
+\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}!PipelineConfigInfo@{PipelineConfigInfo}}
+\index{PipelineConfigInfo@{PipelineConfigInfo}!lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+\doxysubsubsection{\texorpdfstring{PipelineConfigInfo()}{PipelineConfigInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily lve\+::\+Pipeline\+Config\+Info\+::\+Pipeline\+Config\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Constructeur par défaut. \Hypertarget{structlve_1_1_pipeline_config_info_a7d67d337a64b3b5be6f1167bf9c52eb9}\label{structlve_1_1_pipeline_config_info_a7d67d337a64b3b5be6f1167bf9c52eb9} 
+\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}!PipelineConfigInfo@{PipelineConfigInfo}}
+\index{PipelineConfigInfo@{PipelineConfigInfo}!lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+\doxysubsubsection{\texorpdfstring{PipelineConfigInfo()}{PipelineConfigInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily lve\+::\+Pipeline\+Config\+Info\+::\+Pipeline\+Config\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlve_1_1_pipeline_config_info}{Pipeline\+Config\+Info}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Constructeur de copie supprimé. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{structlve_1_1_pipeline_config_info_aaad9655178cd8e806c2f319d437fc65f}\label{structlve_1_1_pipeline_config_info_aaad9655178cd8e806c2f319d437fc65f} 
+\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}!operator=@{operator=}}
+\index{operator=@{operator=}!lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlve_1_1_pipeline_config_info}{Pipeline\+Config\+Info}} \& lve\+::\+Pipeline\+Config\+Info\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlve_1_1_pipeline_config_info}{Pipeline\+Config\+Info}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Opérateur d\textquotesingle{}affectation supprimé. 
+
+\doxysubsection{Documentation des donnÃ©es membres}
+\Hypertarget{structlve_1_1_pipeline_config_info_a7481d780692c39134ffb4a1e0596e3cd}\label{structlve_1_1_pipeline_config_info_a7481d780692c39134ffb4a1e0596e3cd} 
+\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}!attributeDescriptions@{attributeDescriptions}}
+\index{attributeDescriptions@{attributeDescriptions}!lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+\doxysubsubsection{\texorpdfstring{attributeDescriptions}{attributeDescriptions}}
+{\footnotesize\ttfamily std\+::vector$<$vk\+::\+Vertex\+Input\+Attribute\+Description$>$ lve\+::\+Pipeline\+Config\+Info\+::attribute\+Descriptions \{\}}
+
+Descriptions des attributs de vertex. \Hypertarget{structlve_1_1_pipeline_config_info_aded1676226606e68e189db7ed44a11f3}\label{structlve_1_1_pipeline_config_info_aded1676226606e68e189db7ed44a11f3} 
+\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}!bindingDescriptions@{bindingDescriptions}}
+\index{bindingDescriptions@{bindingDescriptions}!lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+\doxysubsubsection{\texorpdfstring{bindingDescriptions}{bindingDescriptions}}
+{\footnotesize\ttfamily std\+::vector$<$vk\+::\+Vertex\+Input\+Binding\+Description$>$ lve\+::\+Pipeline\+Config\+Info\+::binding\+Descriptions \{\}}
+
+Descriptions des liaisons d\textquotesingle{}entrée de vertex. \Hypertarget{structlve_1_1_pipeline_config_info_ae082230ad8893c2bf5ef2272f7a0c704}\label{structlve_1_1_pipeline_config_info_ae082230ad8893c2bf5ef2272f7a0c704} 
+\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}!colorBlendAttachment@{colorBlendAttachment}}
+\index{colorBlendAttachment@{colorBlendAttachment}!lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+\doxysubsubsection{\texorpdfstring{colorBlendAttachment}{colorBlendAttachment}}
+{\footnotesize\ttfamily vk\+::\+Pipeline\+Color\+Blend\+Attachment\+State lve\+::\+Pipeline\+Config\+Info\+::color\+Blend\+Attachment}
+
+Attachement de mélange de couleur du pipeline. \Hypertarget{structlve_1_1_pipeline_config_info_a2490d9f71c93a654d778151235c8d358}\label{structlve_1_1_pipeline_config_info_a2490d9f71c93a654d778151235c8d358} 
+\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}!colorBlendInfo@{colorBlendInfo}}
+\index{colorBlendInfo@{colorBlendInfo}!lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+\doxysubsubsection{\texorpdfstring{colorBlendInfo}{colorBlendInfo}}
+{\footnotesize\ttfamily vk\+::\+Pipeline\+Color\+Blend\+State\+Create\+Info lve\+::\+Pipeline\+Config\+Info\+::color\+Blend\+Info}
+
+Informations sur le mélange de couleur du pipeline. \Hypertarget{structlve_1_1_pipeline_config_info_aab5f07a499efb89eff5e6ddb1907daed}\label{structlve_1_1_pipeline_config_info_aab5f07a499efb89eff5e6ddb1907daed} 
+\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}!depthStencilInfo@{depthStencilInfo}}
+\index{depthStencilInfo@{depthStencilInfo}!lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+\doxysubsubsection{\texorpdfstring{depthStencilInfo}{depthStencilInfo}}
+{\footnotesize\ttfamily vk\+::\+Pipeline\+Depth\+Stencil\+State\+Create\+Info lve\+::\+Pipeline\+Config\+Info\+::depth\+Stencil\+Info}
+
+Informations sur la profondeur et le stencil du pipeline. \Hypertarget{structlve_1_1_pipeline_config_info_a0ac7d9a26c0c8e15578564e4f0f9d1d8}\label{structlve_1_1_pipeline_config_info_a0ac7d9a26c0c8e15578564e4f0f9d1d8} 
+\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}!dynamicStateEnables@{dynamicStateEnables}}
+\index{dynamicStateEnables@{dynamicStateEnables}!lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+\doxysubsubsection{\texorpdfstring{dynamicStateEnables}{dynamicStateEnables}}
+{\footnotesize\ttfamily std\+::vector$<$vk\+::\+Dynamic\+State$>$ lve\+::\+Pipeline\+Config\+Info\+::dynamic\+State\+Enables}
+
+États dynamiques activés du pipeline. \Hypertarget{structlve_1_1_pipeline_config_info_add2163ac59974d31b9d828566114db3a}\label{structlve_1_1_pipeline_config_info_add2163ac59974d31b9d828566114db3a} 
+\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}!dynamicStateInfo@{dynamicStateInfo}}
+\index{dynamicStateInfo@{dynamicStateInfo}!lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+\doxysubsubsection{\texorpdfstring{dynamicStateInfo}{dynamicStateInfo}}
+{\footnotesize\ttfamily vk\+::\+Pipeline\+Dynamic\+State\+Create\+Info lve\+::\+Pipeline\+Config\+Info\+::dynamic\+State\+Info}
+
+Informations sur l\textquotesingle{}état dynamique du pipeline. \Hypertarget{structlve_1_1_pipeline_config_info_ad01ce5921f883eeaac7d39711bda9270}\label{structlve_1_1_pipeline_config_info_ad01ce5921f883eeaac7d39711bda9270} 
+\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}!inputAssemblyInfo@{inputAssemblyInfo}}
+\index{inputAssemblyInfo@{inputAssemblyInfo}!lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+\doxysubsubsection{\texorpdfstring{inputAssemblyInfo}{inputAssemblyInfo}}
+{\footnotesize\ttfamily vk\+::\+Pipeline\+Input\+Assembly\+State\+Create\+Info lve\+::\+Pipeline\+Config\+Info\+::input\+Assembly\+Info}
+
+Informations sur l\textquotesingle{}assemblage d\textquotesingle{}entrée du pipeline. \Hypertarget{structlve_1_1_pipeline_config_info_ad3b3266178e6c9841950f988135bd88e}\label{structlve_1_1_pipeline_config_info_ad3b3266178e6c9841950f988135bd88e} 
+\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}!multisampleInfo@{multisampleInfo}}
+\index{multisampleInfo@{multisampleInfo}!lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+\doxysubsubsection{\texorpdfstring{multisampleInfo}{multisampleInfo}}
+{\footnotesize\ttfamily vk\+::\+Pipeline\+Multisample\+State\+Create\+Info lve\+::\+Pipeline\+Config\+Info\+::multisample\+Info}
+
+Informations sur le multi-\/échantillonnage du pipeline. \Hypertarget{structlve_1_1_pipeline_config_info_a7d223d02ba9f2b0211575e70d7900d4b}\label{structlve_1_1_pipeline_config_info_a7d223d02ba9f2b0211575e70d7900d4b} 
+\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}!pipelineLayout@{pipelineLayout}}
+\index{pipelineLayout@{pipelineLayout}!lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+\doxysubsubsection{\texorpdfstring{pipelineLayout}{pipelineLayout}}
+{\footnotesize\ttfamily vk\+::\+Pipeline\+Layout lve\+::\+Pipeline\+Config\+Info\+::pipeline\+Layout = nullptr}
+
+Layout du pipeline. \Hypertarget{structlve_1_1_pipeline_config_info_a66e27d9096cb66723aca6bc379848e3f}\label{structlve_1_1_pipeline_config_info_a66e27d9096cb66723aca6bc379848e3f} 
+\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}!rasterizationInfo@{rasterizationInfo}}
+\index{rasterizationInfo@{rasterizationInfo}!lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+\doxysubsubsection{\texorpdfstring{rasterizationInfo}{rasterizationInfo}}
+{\footnotesize\ttfamily vk\+::\+Pipeline\+Rasterization\+State\+Create\+Info lve\+::\+Pipeline\+Config\+Info\+::rasterization\+Info}
+
+Informations sur la rasterisation du pipeline. \Hypertarget{structlve_1_1_pipeline_config_info_a681dc36dfb945d2f9a7f4ec4c3c4c955}\label{structlve_1_1_pipeline_config_info_a681dc36dfb945d2f9a7f4ec4c3c4c955} 
+\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}!renderPass@{renderPass}}
+\index{renderPass@{renderPass}!lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+\doxysubsubsection{\texorpdfstring{renderPass}{renderPass}}
+{\footnotesize\ttfamily vk\+::\+Render\+Pass lve\+::\+Pipeline\+Config\+Info\+::render\+Pass = nullptr}
+
+Passe de rendu associée au pipeline. \Hypertarget{structlve_1_1_pipeline_config_info_a5f3504cbefbaafa6fab603bb2001025b}\label{structlve_1_1_pipeline_config_info_a5f3504cbefbaafa6fab603bb2001025b} 
+\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}!subpass@{subpass}}
+\index{subpass@{subpass}!lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+\doxysubsubsection{\texorpdfstring{subpass}{subpass}}
+{\footnotesize\ttfamily uint32\+\_\+t lve\+::\+Pipeline\+Config\+Info\+::subpass = 0}
+
+Index de la sous-\/passe du pipeline. \Hypertarget{structlve_1_1_pipeline_config_info_a22c7a38ed1b1392d4441d06e6d734d31}\label{structlve_1_1_pipeline_config_info_a22c7a38ed1b1392d4441d06e6d734d31} 
+\index{lve::PipelineConfigInfo@{lve::PipelineConfigInfo}!viewportInfo@{viewportInfo}}
+\index{viewportInfo@{viewportInfo}!lve::PipelineConfigInfo@{lve::PipelineConfigInfo}}
+\doxysubsubsection{\texorpdfstring{viewportInfo}{viewportInfo}}
+{\footnotesize\ttfamily vk\+::\+Pipeline\+Viewport\+State\+Create\+Info lve\+::\+Pipeline\+Config\+Info\+::viewport\+Info}
+
+Informations sur le viewport du pipeline. 
+
+La documentation de cette structure a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Lve\+Engine/lve\+\_\+pipeline.\+h\end{DoxyCompactItemize}

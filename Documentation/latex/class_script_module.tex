@@ -1,0 +1,152 @@
+\doxysection{R√©f√©rence de la classe Script\+Module}
+\hypertarget{class_script_module}{}\label{class_script_module}\index{ScriptModule@{ScriptModule}}
+
+
+Classe \doxylink{class_script_module}{Script\+Module}.  
+
+
+
+
+{\ttfamily \#include $<$Script\+Module.\+h$>$}
+
+Graphe d\textquotesingle{}h√©ritage de Script\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_script_module}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_script_module_a9095faa300d28d811b5fa472db47b442}\label{class_script_module_a9095faa300d28d811b5fa472db47b442} 
+{\bfseries Script\+Module} ()=default
+\begin{DoxyCompactList}\small\item\em Constructeur par dÈfaut. \end{DoxyCompactList}\item 
+\Hypertarget{class_script_module_a3ed6883a8992c8e10a1b04b1ec60f1f1}\label{class_script_module_a3ed6883a8992c8e10a1b04b1ec60f1f1} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Script\+Module} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur par dÈfaut. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , class U $>$ }\\bool \mbox{\hyperlink{class_script_module_a4c386f4e25f28a6d1cb6c332961ba4cb}{Add\+Script}} ()
+\begin{DoxyCompactList}\small\item\em Ajoute un script au module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_script_module_a3d323ed01e33f3fe93dfeaa4b12137a2}{Update}} () override
+\begin{DoxyCompactList}\small\item\em Met ‡ jour le module. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_script_module_a8f6dc9891fb765c5def4ef8fb3eac411}{Start\+Scripts}} ()
+\begin{DoxyCompactList}\small\item\em DÈmarre tous les scripts en attente. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_script}{IScript}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_script_module_afa2905f3d16b2435f35d32b51637f3a9}{Get\+IScript\+By\+Name}} (const std\+::string \&\+\_\+name) const
+\begin{DoxyCompactList}\small\item\em Obtient un script par son nom. \end{DoxyCompactList}\item 
+\Hypertarget{class_script_module_a4af39590c8da663dd0763eef50c20648}\label{class_script_module_a4af39590c8da663dd0763eef50c20648} 
+void {\bfseries Update\+Scripts} ()
+\begin{DoxyCompactList}\small\item\em Met ‡ jour tous les scripts. \end{DoxyCompactList}\item 
+\Hypertarget{class_script_module_a7a9c2991aca47d845263ed67d3471a59}\label{class_script_module_a7a9c2991aca47d845263ed67d3471a59} 
+void {\bfseries Stop} ()
+\begin{DoxyCompactList}\small\item\em ArrÍte tous les scripts et libËre les ressources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques h√©rit√©s de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_module_a0151ba4ab62f6e91251b0a20b168985e}{Init}} ()
+\begin{DoxyCompactList}\small\item\em Initialise le module. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_module_aed9229993dada6ed800f73036aade722}{Start}} ()
+\begin{DoxyCompactList}\small\item\em DÈmarre le module. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_module_a4bbf5f6e563f86794d7ae718371f1ca4}{Fixed\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Effectue une mise ‡ jour fixe du module. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_module_a7a88e7aaddd55bf9f15beb8d297afd1e}{Pre\+Render}} ()
+\begin{DoxyCompactList}\small\item\em Fonction prÈ-\/rendu du module. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_module_ab6ec60e3eced3faa0217348cfca2785f}{Render}} ()
+\begin{DoxyCompactList}\small\item\em Rendu du module. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_module_aadc90c55712eba976e6bf87318713d11}{Render\+Gui}} ()
+\begin{DoxyCompactList}\small\item\em Rendu de l\textquotesingle{}interface graphique du module. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_module_a0bb23668b2717e4bb3b4e1f6350a7e87}{Post\+Render}} ()
+\begin{DoxyCompactList}\small\item\em Fonction post-\/rendu du module. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_module_a7e2e4615b80a57040eccf9794bee1007}{Release}} ()
+\begin{DoxyCompactList}\small\item\em LibËre les ressources utilisÈes par le module. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_module_a4ed07ee636825b626c8f5021c34e408c}{Finalize}} ()
+\begin{DoxyCompactList}\small\item\em Finalise le module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membres h√©rit√©s additionnels}
+\doxysubsection*{Fonctions membres prot√©g√©es h√©rit√©s de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_af09dc286b704160d8f0f273e1fe8576b}{\texorpdfstring{$\sim$}{\string~}\+Module}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur protÈgÈ. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs prot√©g√©s h√©rit√©s de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_manager}{Module\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_module_a8d9f92fc1216d933c961bfa685b0ad6f}{module\+Manager}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description d√©taill√©e}
+Classe \doxylink{class_script_module}{Script\+Module}. 
+
+Cette classe gËre l\textquotesingle{}ajout, le dÈmarrage et la mise ‡ jour des scripts dans le moteur de jeu. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_script_module_a4c386f4e25f28a6d1cb6c332961ba4cb}\label{class_script_module_a4c386f4e25f28a6d1cb6c332961ba4cb} 
+\index{ScriptModule@{ScriptModule}!AddScript@{AddScript}}
+\index{AddScript@{AddScript}!ScriptModule@{ScriptModule}}
+\doxysubsubsection{\texorpdfstring{AddScript()}{AddScript()}}
+{\footnotesize\ttfamily template$<$typename T , class U $>$ \\
+bool Script\+Module\+::\+Add\+Script (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ajoute un script au module. 
+
+
+\begin{DoxyTemplParams}{Param√®tres du template}
+{\em T} & Le type de script ‡ ajouter. \\
+\hline
+{\em U} & La classe du script ‡ ajouter. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Renvoie}
+True si le script a ÈtÈ ajoutÈ avec succËs, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_script_module_afa2905f3d16b2435f35d32b51637f3a9}\label{class_script_module_afa2905f3d16b2435f35d32b51637f3a9} 
+\index{ScriptModule@{ScriptModule}!GetIScriptByName@{GetIScriptByName}}
+\index{GetIScriptByName@{GetIScriptByName}!ScriptModule@{ScriptModule}}
+\doxysubsubsection{\texorpdfstring{GetIScriptByName()}{GetIScriptByName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_i_script}{IScript}} \texorpdfstring{$\ast$}{*} Script\+Module\+::\+Get\+IScript\+By\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+name }\end{DoxyParamCaption}) const}
+
+
+
+Obtient un script par son nom. 
+
+
+\begin{DoxyParams}{Param√®tres}
+{\em \+\_\+name} & Le nom du script ‡ obtenir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le script s\textquotesingle{}il est trouvÈ, sinon nullptr. 
+\end{DoxyReturn}
+\Hypertarget{class_script_module_a8f6dc9891fb765c5def4ef8fb3eac411}\label{class_script_module_a8f6dc9891fb765c5def4ef8fb3eac411} 
+\index{ScriptModule@{ScriptModule}!StartScripts@{StartScripts}}
+\index{StartScripts@{StartScripts}!ScriptModule@{ScriptModule}}
+\doxysubsubsection{\texorpdfstring{StartScripts()}{StartScripts()}}
+{\footnotesize\ttfamily bool Script\+Module\+::\+Start\+Scripts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+DÈmarre tous les scripts en attente. 
+
+\begin{DoxyReturn}{Renvoie}
+True si tous les scripts ont ÈtÈ dÈmarrÈs avec succËs, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_script_module_a3d323ed01e33f3fe93dfeaa4b12137a2}\label{class_script_module_a3d323ed01e33f3fe93dfeaa4b12137a2} 
+\index{ScriptModule@{ScriptModule}!Update@{Update}}
+\index{Update@{Update}!ScriptModule@{ScriptModule}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Script\+Module\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Met ‡ jour le module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_module_abf63d5bb322a751fbf95f2da0978817b}{Module}}.
+
+
+
+La documentation de cette classe a √©t√© g√©n√©r√©e √† partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Modules/Script\+Module.\+h\item 
+sources/\+Modules/Script\+Module.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,91 @@
+\doxysection{Référence de la classe Bousk\+::Network\+::UDP\+::Protocols\+::Unreliable\+Ordered}
+\hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered}{}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered}\index{Bousk::Network::UDP::Protocols::UnreliableOrdered@{Bousk::Network::UDP::Protocols::UnreliableOrdered}}
+Graphe d\textquotesingle{}héritage de Bousk\+::Network\+::UDP\+::Protocols\+::Unreliable\+Ordered\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_ac2c4ff68fbfd9de5d870b2422ae675b2}{queue}} (std\+::vector$<$ uint8 $>$ \&\&msg\+Data) override
+\item 
+uint16 \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_acec53cab5ddcf2632d66184ca98ddbfc}{serialize}} (uint8 \texorpdfstring{$\ast$}{*}buffer, uint16 buffersize, Datagram\+::\+ID datagram\+Id, bool) override
+\item 
+void \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_a1a12798b150cffbce6c86ce0e7afd24c}{on\+Data\+Received}} (const uint8 \texorpdfstring{$\ast$}{*}data, uint16 datasize) override
+\item 
+std\+::vector$<$ std\+::vector$<$ uint8 $>$ $>$ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_ab5da85c66b4cfb3d0cc9ba47579102d3}{process}} () override
+\item 
+virtual bool \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_abace7266f920d5cef64d684a36b634d9}{is\+Reliable}} () const
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_aa7ee87ae9f648f9fb7c95c4678f6a021}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_aa7ee87ae9f648f9fb7c95c4678f6a021} 
+{\bfseries IProtocol} (uint8\+\_\+t channel\+Id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_afa2da97835d63d19880adb46928a6552}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_afa2da97835d63d19880adb46928a6552} 
+class {\bfseries Multiplexer\+\_\+\+Test}
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_a48d18b667972d5fc90864ee868cf423a}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_a48d18b667972d5fc90864ee868cf423a} 
+class {\bfseries Demultiplexer\+\_\+\+Test}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_abace7266f920d5cef64d684a36b634d9}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_abace7266f920d5cef64d684a36b634d9} 
+\index{Bousk::Network::UDP::Protocols::UnreliableOrdered@{Bousk::Network::UDP::Protocols::UnreliableOrdered}!isReliable@{isReliable}}
+\index{isReliable@{isReliable}!Bousk::Network::UDP::Protocols::UnreliableOrdered@{Bousk::Network::UDP::Protocols::UnreliableOrdered}}
+\doxysubsubsection{\texorpdfstring{isReliable()}{isReliable()}}
+{\footnotesize\ttfamily virtual bool Bousk\+::\+Network\+::\+UDP\+::\+Protocols\+::\+Unreliable\+Ordered\+::is\+Reliable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implémente \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol}{Bousk\+::\+Network\+::\+UDP\+::\+Protocols\+::\+IProtocol}}.
+
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_a1a12798b150cffbce6c86ce0e7afd24c}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_a1a12798b150cffbce6c86ce0e7afd24c} 
+\index{Bousk::Network::UDP::Protocols::UnreliableOrdered@{Bousk::Network::UDP::Protocols::UnreliableOrdered}!onDataReceived@{onDataReceived}}
+\index{onDataReceived@{onDataReceived}!Bousk::Network::UDP::Protocols::UnreliableOrdered@{Bousk::Network::UDP::Protocols::UnreliableOrdered}}
+\doxysubsubsection{\texorpdfstring{onDataReceived()}{onDataReceived()}}
+{\footnotesize\ttfamily void Bousk\+::\+Network\+::\+UDP\+::\+Protocols\+::\+Unreliable\+Ordered\+::on\+Data\+Received (\begin{DoxyParamCaption}\item[{const uint8 \texorpdfstring{$\ast$}{*}}]{data,  }\item[{uint16}]{datasize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implémente \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol}{Bousk\+::\+Network\+::\+UDP\+::\+Protocols\+::\+IProtocol}}.
+
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_ab5da85c66b4cfb3d0cc9ba47579102d3}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_ab5da85c66b4cfb3d0cc9ba47579102d3} 
+\index{Bousk::Network::UDP::Protocols::UnreliableOrdered@{Bousk::Network::UDP::Protocols::UnreliableOrdered}!process@{process}}
+\index{process@{process}!Bousk::Network::UDP::Protocols::UnreliableOrdered@{Bousk::Network::UDP::Protocols::UnreliableOrdered}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ uint8 $>$ $>$ Bousk\+::\+Network\+::\+UDP\+::\+Protocols\+::\+Unreliable\+Ordered\+::process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implémente \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol}{Bousk\+::\+Network\+::\+UDP\+::\+Protocols\+::\+IProtocol}}.
+
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_ac2c4ff68fbfd9de5d870b2422ae675b2}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_ac2c4ff68fbfd9de5d870b2422ae675b2} 
+\index{Bousk::Network::UDP::Protocols::UnreliableOrdered@{Bousk::Network::UDP::Protocols::UnreliableOrdered}!queue@{queue}}
+\index{queue@{queue}!Bousk::Network::UDP::Protocols::UnreliableOrdered@{Bousk::Network::UDP::Protocols::UnreliableOrdered}}
+\doxysubsubsection{\texorpdfstring{queue()}{queue()}}
+{\footnotesize\ttfamily void Bousk\+::\+Network\+::\+UDP\+::\+Protocols\+::\+Unreliable\+Ordered\+::queue (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8 $>$ \&\&}]{msg\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implémente \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol}{Bousk\+::\+Network\+::\+UDP\+::\+Protocols\+::\+IProtocol}}.
+
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_acec53cab5ddcf2632d66184ca98ddbfc}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_unreliable_ordered_acec53cab5ddcf2632d66184ca98ddbfc} 
+\index{Bousk::Network::UDP::Protocols::UnreliableOrdered@{Bousk::Network::UDP::Protocols::UnreliableOrdered}!serialize@{serialize}}
+\index{serialize@{serialize}!Bousk::Network::UDP::Protocols::UnreliableOrdered@{Bousk::Network::UDP::Protocols::UnreliableOrdered}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily uint16 Bousk\+::\+Network\+::\+UDP\+::\+Protocols\+::\+Unreliable\+Ordered\+::serialize (\begin{DoxyParamCaption}\item[{uint8 \texorpdfstring{$\ast$}{*}}]{buffer,  }\item[{uint16}]{buffersize,  }\item[{Datagram\+::\+ID}]{datagram\+Id,  }\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implémente \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol}{Bousk\+::\+Network\+::\+UDP\+::\+Protocols\+::\+IProtocol}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+UDP/\+Protocol/Unreliable\+Ordered.\+h\end{DoxyCompactItemize}

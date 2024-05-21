@@ -1,0 +1,85 @@
+\doxysection{lve\+\_\+model.\+h}
+\hypertarget{lve__model_8h_source}{}\label{lve__model_8h_source}\index{includes/LveEngine/lve\_model.h@{includes/LveEngine/lve\_model.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_buffer.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_device.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//libs}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ GLM\_FORCE\_RADIANS}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ GLM\_FORCE\_DEPTH\_ZERO\_TO\_ONE}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <glm.hpp>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//std}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }lve}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlve_1_1_lve_model}{LveModel}}}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex}{Vertex}}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ glm::vec3\ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a33a8126b05b90330db3d8c72fb77881d}{position}}\{\};\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ glm::vec3\ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a84d72954fc8a587a987fecf3e9072929}{color}}\{\};\ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ glm::vec3\ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_aafaaa8427b700590fa4a7bbbfb1a1202}{normal}}\{\};\ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ glm::vec2\ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a38ad66bd6a187703c1590dd6d3465664}{uv}}\{\};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ texMultiplier\ =\ 1;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<vk::VertexInputBindingDescription>\ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a4d82dfd81c2710e7b388ec8e245dcd06}{GetBindingDescriptions}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<vk::VertexInputAttributeDescription>\ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a36bf601a47123b950dac5b3adb7ea98e}{GetAttributeDescriptions}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a9a9ec41d8d9383074092d3336edeaff7}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex}{Vertex}}\&\ \_other)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00058\ \textcolor{keyword}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a33a8126b05b90330db3d8c72fb77881d}{position}}\ ==\ \_other.\mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a33a8126b05b90330db3d8c72fb77881d}{position}}\ \&\&\ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a84d72954fc8a587a987fecf3e9072929}{color}}\ ==\ \_other.\mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a84d72954fc8a587a987fecf3e9072929}{color}}\ \&\&\ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_aafaaa8427b700590fa4a7bbbfb1a1202}{normal}}\ ==\ \_other.\mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_aafaaa8427b700590fa4a7bbbfb1a1202}{normal}}\ \&\&\ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a38ad66bd6a187703c1590dd6d3465664}{uv}}\ ==}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_other.\mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex_a38ad66bd6a187703c1590dd6d3465664}{uv}};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlve_1_1_lve_model_1_1_builder}{Builder}}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Vertex>\ \ \ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_builder_af72b4b9d5bfaaf3563ebc7a6500736c2}{vertices}}\{\};\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<uint32\_t>\ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_builder_a989a68f0ba54b256046b838dc0f22c44}{indices}}\{\};\ \ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_builder_ac000c41acbf7d74eaeb882281e9dac36}{LoadModel}}(\textcolor{keyword}{const}\ std::string\&\ \_filepath,\ \textcolor{keywordtype}{float}\ \_texMultiplier);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_model_ad9283bbc18ab72000c95d207354ecf11}{LveModel}}(\mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ \_lveDevice,\ \textcolor{keyword}{const}\ Builder\&\ \_builder);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_model_a852343b2ca38189c22fbfa6cf5211469}{\string~LveModel}}();}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_model_a0834e5e372c0b0913ab20340dfaa4ca3}{LveModel}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_model}{LveModel}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_model}{LveModel}}\ \mbox{\hyperlink{classlve_1_1_lve_model_a13aa08d1d1d30fe823cb213375a49805}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_model}{LveModel}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::unique\_ptr<LveModel>\ \mbox{\hyperlink{classlve_1_1_lve_model_a5c40908ba797a01e5d1062c979cd2d02}{CreateModelFromFile}}(\mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ \_device,\ \textcolor{keyword}{const}\ std::string\&\ \_filepath,\ \textcolor{keywordtype}{float}\ \_texMultiplier\ =\ 1);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_model_a5deb00a44944083e51b89208d5d5b9ec}{Bind}}(vk::CommandBuffer\ \_commandBuffer)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_model_aff2d97c4db13944d0318ca161ed5539f}{Draw}}(vk::CommandBuffer\ \_commandBuffer)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateVertexBuffer(\textcolor{keyword}{const}\ std::vector<Vertex>\&\ \_vertices);}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CreateIndexBuffer(\textcolor{keyword}{const}\ std::vector<uint32\_t>\&\ \_indices);}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ lveDevice;\ }
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<LveBuffer>\ vertexBuffer;\ }
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vertexCount;\ \ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hasIndexBuffer\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<LveBuffer>\ indexBuffer;\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ indexCount;\ }
+\DoxyCodeLine{00184\ \ \ \ \ \};}
+\DoxyCodeLine{00185\ \}\ \textcolor{comment}{//lve}}
+
+\end{DoxyCode}

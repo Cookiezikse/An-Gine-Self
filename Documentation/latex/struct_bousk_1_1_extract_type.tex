@@ -1,0 +1,43 @@
+\doxysection{Référence du modèle de la structure Bousk\+::Extract\+Type\texorpdfstring{$<$}{<} V, Force\+Unsigned \texorpdfstring{$>$}{>}}
+\hypertarget{struct_bousk_1_1_extract_type}{}\label{struct_bousk_1_1_extract_type}\index{Bousk::ExtractType$<$ V, ForceUnsigned $>$@{Bousk::ExtractType$<$ V, ForceUnsigned $>$}}
+\doxysubsubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{struct_bousk_1_1_extract_type_a6a6320c6c32ede65d26adb1f0b90cf92}{Type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des définitions de type membres}
+\Hypertarget{struct_bousk_1_1_extract_type_a6a6320c6c32ede65d26adb1f0b90cf92}\label{struct_bousk_1_1_extract_type_a6a6320c6c32ede65d26adb1f0b90cf92} 
+\index{Bousk::ExtractType$<$ V, ForceUnsigned $>$@{Bousk::ExtractType$<$ V, ForceUnsigned $>$}!Type@{Type}}
+\index{Type@{Type}!Bousk::ExtractType$<$ V, ForceUnsigned $>$@{Bousk::ExtractType$<$ V, ForceUnsigned $>$}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily template$<$auto V, bool Force\+Unsigned$>$ \\
+using \mbox{\hyperlink{struct_bousk_1_1_extract_type}{Bousk\+::\+Extract\+Type}}$<$ V, Force\+Unsigned $>$\+::\+Type}
+
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ std::conditional\_t\ <\ V\ <\ 0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t\ <\ V\ <\ std::numeric\_limits<int32>::min(),\ int64}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ V\ <\ std::numeric\_limits<int16>::min(),\ int32}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ V\ <\ std::numeric\_limits<int8>::min(),\ int16}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ,\ int8}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ >>>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ (V\ >\ std::numeric\_limits<int64>::max()),\ uint64}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ (V\ >\ std::numeric\_limits<uint32>::max()),\ std::conditional\_t<ForceUnsigned,\ uint64,\ int64>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ (V\ >\ std::numeric\_limits<int32>::max()),\ std::conditional\_t<ForceUnsigned,\ uint32,\ int64>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ (V\ >\ std::numeric\_limits<uint16>::max()),\ std::conditional\_t<ForceUnsigned,\ uint32,\ int32>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ (V\ >\ std::numeric\_limits<int16>::max()),\ std::conditional\_t<ForceUnsigned,\ uint16,\ int32>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ (V\ >\ std::numeric\_limits<uint8>::max()),\ std::conditional\_t<ForceUnsigned,\ uint16,\ int16>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<\ (V\ >\ std::numeric\_limits<int8>::max()),\ std::conditional\_t<ForceUnsigned,\ uint8,\ int16>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ,\ std::conditional\_t<ForceUnsigned,\ uint8,\ int8>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ >>>>>>>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ >}
+
+\end{DoxyCode}
+
+
+La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+UDP/Ranged\+Integer.\+h\end{DoxyCompactItemize}

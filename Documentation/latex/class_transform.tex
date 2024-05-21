@@ -1,0 +1,118 @@
+\doxysection{R√©f√©rence de la classe Transform}
+\hypertarget{class_transform}{}\label{class_transform}\index{Transform@{Transform}}
+Graphe d\textquotesingle{}h√©ritage de Transform\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_transform}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_transform_ae46249ff0f7b20f0dae24b8c8d4822d0}\label{class_transform_ae46249ff0f7b20f0dae24b8c8d4822d0} 
+glm\+::vec3 {\bfseries Get\+Position} () const
+\item 
+\Hypertarget{class_transform_a2c4aeb4cf2a8b8b3316443f2b6990096}\label{class_transform_a2c4aeb4cf2a8b8b3316443f2b6990096} 
+void {\bfseries Set\+Position} (const float \&\+\_\+x, const float \&\+\_\+y, const float \&\+\_\+z)
+\item 
+\Hypertarget{class_transform_a23bb7c7c05ed09484049cf63c13186ef}\label{class_transform_a23bb7c7c05ed09484049cf63c13186ef} 
+void {\bfseries Set\+Position} (const glm\+::vec3 \&\+\_\+position)
+\item 
+\Hypertarget{class_transform_a0c63d001a65feba31eb5a6f66af5f292}\label{class_transform_a0c63d001a65feba31eb5a6f66af5f292} 
+glm\+::vec3 {\bfseries Get\+Rotation} () const
+\item 
+\Hypertarget{class_transform_a1816b589f3c031da5920fee6ca493e0e}\label{class_transform_a1816b589f3c031da5920fee6ca493e0e} 
+void {\bfseries Set\+Rotation} (const float \+\_\+angle)
+\item 
+\Hypertarget{class_transform_a752753ca74ff3d7315125005251b206e}\label{class_transform_a752753ca74ff3d7315125005251b206e} 
+void {\bfseries Set\+Rotation} (const glm\+::vec3 \&\+\_\+rotation)
+\item 
+\Hypertarget{class_transform_ad13e53e7dc7d8877367ff3bf006fde99}\label{class_transform_ad13e53e7dc7d8877367ff3bf006fde99} 
+glm\+::vec3 {\bfseries Get\+Rotation\+Degrees} () const
+\item 
+\Hypertarget{class_transform_a35dbcf7ddb316e1e9c6bd7d3426404fc}\label{class_transform_a35dbcf7ddb316e1e9c6bd7d3426404fc} 
+void {\bfseries Set\+Rotation\+Degrees} (const glm\+::vec3 \&degrees)
+\item 
+\Hypertarget{class_transform_ad873823d71c528643ba85557ea50c326}\label{class_transform_ad873823d71c528643ba85557ea50c326} 
+glm\+::vec3 {\bfseries Get\+Scale} () const
+\item 
+\Hypertarget{class_transform_a72f5b269854d14834c72660e82974c49}\label{class_transform_a72f5b269854d14834c72660e82974c49} 
+void {\bfseries Set\+Scale} (const float \&\+\_\+scaleX, const float \&\+\_\+scaleY, const float \&\+\_\+scaleZ)
+\item 
+\Hypertarget{class_transform_a7574559f23644fa111ecd62c49dd168a}\label{class_transform_a7574559f23644fa111ecd62c49dd168a} 
+void {\bfseries Set\+Scale} (const glm\+::vec3 \&\+\_\+scale)
+\item 
+\Hypertarget{class_transform_a940bb014aff2f1810990848d687432f4}\label{class_transform_a940bb014aff2f1810990848d687432f4} 
+glm\+::mat4 {\bfseries Mat4} ()
+\item 
+\Hypertarget{class_transform_ab5b3be92b02b49a7c440b28b09c23981}\label{class_transform_ab5b3be92b02b49a7c440b28b09c23981} 
+glm\+::mat3 {\bfseries Normal\+Matrix} () const
+\item 
+\Hypertarget{class_transform_a932ac0c6a265dbe884757e0ad7b2b20d}\label{class_transform_a932ac0c6a265dbe884757e0ad7b2b20d} 
+void {\bfseries Display} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques h√©rit√©s de \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Component} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+owner)
+\item 
+virtual void \mbox{\hyperlink{class_component_ad3141017e589ef48d436bc743e15d122}{Init}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_ad13ee8ec7dd72811a24d52b4844ab014}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_af2d0cb42dd585c9dce62c4d65a526f15}{Fixed\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_a53ec66587fb3229c44cadac8a555001d}{Update}} ()
+\item 
+virtual void {\bfseries Update\+Editor} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_afa4859960777d2f201f68dbfe2356f6e}{Pre\+Render}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_a22275746474021b2e1e36d4a58d48cfd}{Render}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_ab12f6004c86299c6cc09bd8e9c2eeca6}{Render\+Gui}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_a5189b7ff485943331b45cf5e7fbe0aff}{Post\+Render}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_ae88047dc538e6e2cd8e45d65dbfa5dc6}{Release}} ()
+\item 
+virtual void \mbox{\hyperlink{class_component_a07f2da2b1ac67e79c74ae28b8fac88aa}{Finalize}} ()
+\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_component_a92f94b02f4591895bb96392581c9ccd9}{Get\+Owner}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le \doxylink{class_game_object}{Game\+Object} propriÈtaire de ce composant. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_component_a9af52e1878212622948ab2189f4f29dd}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le nom de ce composant. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_component_a9ad91aa536dc0b237bac510ef2981ff1}{Get\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}Ètat d\textquotesingle{}activitÈ de ce composant. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_component_ae26f71032d146b80daeadb3eb9c9f772}{Get\+Visible}} () const
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}Ètat de visibilitÈ de ce composant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_a404b9d2dd75d68fc0b3f4d83b096b083}{Set\+Owner}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*}\+\_\+owner)
+\begin{DoxyCompactList}\small\item\em DÈfinit le \doxylink{class_game_object}{Game\+Object} propriÈtaire de ce composant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_a95c88d74e0604f8d883fb722eda085db}{Set\+Name}} (const std\+::string \&\+\_\+name)
+\begin{DoxyCompactList}\small\item\em DÈfinit le nom de ce composant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_a0a38ce3912f2363e7ea6aff6276c07a7}{Set\+Name}} (const char \texorpdfstring{$\ast$}{*}\+\_\+name)
+\begin{DoxyCompactList}\small\item\em DÈfinit le nom de ce composant ‡ partir d\textquotesingle{}une chaÓne de caractËres. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_a9be7df4eee8904fa8c7e5ef6f72064f4}{Set\+Active}} (const bool \&\+\_\+state)
+\begin{DoxyCompactList}\small\item\em DÈfinit l\textquotesingle{}Ètat d\textquotesingle{}activitÈ de ce composant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_abc5545dc4ccecfe31a6fb551b4c4f514}{Set\+Visible}} (const bool \&\+\_\+state)
+\begin{DoxyCompactList}\small\item\em DÈfinit l\textquotesingle{}Ètat de visibilitÈ de ce composant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_a10db7b8781e80b3f502463868345dac7}{Set\+Active\+And\+Visible}} (const bool \&\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Active ou dÈsactive ce composant et le rend visible ou invisible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membres h√©rit√©s additionnels}
+\doxysubsection*{Attributs prot√©g√©s h√©rit√©s de \mbox{\hyperlink{class_component}{Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_component_a715fc40771d21d6d43d8209dd5c9810a}{owner}} = nullptr
+\item 
+std\+::string \mbox{\hyperlink{class_component_a46343549452bda5ee9752f7a9bc15efb}{name}} = "{}Component"{}
+\item 
+bool \mbox{\hyperlink{class_component_a6dad4f819c0814eee8219e9b391cf583}{is\+Active}} = true
+\item 
+bool \mbox{\hyperlink{class_component_a49f5a53967d8fa26917ccbb03312233b}{is\+Visible}} = true
+\end{DoxyCompactItemize}
+
+
+La documentation de cette classe a √©t√© g√©n√©r√©e √† partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Game\+Object/\+Components/Transform.\+h\item 
+sources/\+Game\+Object/\+Components/Transform.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,48 @@
+\doxysection{rhi.\+h}
+\hypertarget{rhi_8h_source}{}\label{rhi_8h_source}\index{includes/Modules/rhi.h@{includes/Modules/rhi.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_renderer.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Modules/Module.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_r_h_i_module}{RHIModule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_module}{Module}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_r_h_i_module}{\string~RHIModule}}()}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_r_h_i_module_a9a54d711c0680a7b24f8f07b2cdf9359}{Init}}()\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_r_h_i_module_a07601a54856c616d07e2de82b8331b86}{Start}}()\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_r_h_i_module_add6e00d97d65ff756e41ac7bd3caf5a4}{FixedUpdate}}()\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_r_h_i_module_a4de93bc8b34fd9208760e2a1c8af3e7d}{Update}}()\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_r_h_i_module_a114bbce2f9a86930ea863e3ec88a6c3c}{PreRender}}()\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_r_h_i_module_a850e870b90ead2a75b96b3469e7c26f7}{Render}}()\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_r_h_i_module_a6e39546aceb3b7aa0ea49e99a254e58e}{RenderGui}}()\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_r_h_i_module_aecf0e65f319e2dbe9e7f68307d7a8201}{PostRender}}()\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_r_h_i_module_a1fb43694d5fa08e1afb50aa5218e2462}{Release}}()\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_r_h_i_module_ae1be00337339504244884f90bb56635e}{Finalize}}()\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device}{lve::LveDevice}}*\ \ \ GetDevice()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ p\_lveDevice;\ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_renderer}{lve::LveRenderer}}*\ GetRenderer()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ p\_lveRenderer;\ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetDevice(\mbox{\hyperlink{classlve_1_1_lve_device}{lve::LveDevice}}*\ \_pDevice)\ \{\ p\_lveDevice\ =\ \_pDevice;\ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ SetRenderer(\mbox{\hyperlink{classlve_1_1_lve_renderer}{lve::LveRenderer}}*\ \_pRenderer)\ \{\ p\_lveRenderer\ =\ \_pRenderer;\ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device}{lve::LveDevice}}*\ p\_lveDevice;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_renderer}{lve::LveRenderer}}*\ p\_lveRenderer;}
+\DoxyCodeLine{00072\ \};}
+
+\end{DoxyCode}

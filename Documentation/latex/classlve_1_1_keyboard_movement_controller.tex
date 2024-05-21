@@ -1,0 +1,59 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Keyboard\+Movement\+Controller}
+\hypertarget{classlve_1_1_keyboard_movement_controller}{}\label{classlve_1_1_keyboard_movement_controller}\index{lve::KeyboardMovementController@{lve::KeyboardMovementController}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlve_1_1_keyboard_movement_controller_1_1_key_mappings}{Key\+Mappings}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classlve_1_1_keyboard_movement_controller_a00c91791e9d241d5ad762f1743e2743c}{Move\+In\+Plane\+XZ}} (GLFWwindow \texorpdfstring{$\ast$}{*}\+\_\+window, float \+\_\+delta\+Time, \mbox{\hyperlink{class_game_object}{Game\+Object}} \&\+\_\+game\+Object) const
+\begin{DoxyCompactList}\small\item\em Déplace l\textquotesingle{}objet dans le plan XZ en réponse aux entrées clavier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classlve_1_1_keyboard_movement_controller_a33980d7820a3cdd5f51987fe4b27fac6}\label{classlve_1_1_keyboard_movement_controller_a33980d7820a3cdd5f51987fe4b27fac6} 
+\mbox{\hyperlink{structlve_1_1_keyboard_movement_controller_1_1_key_mappings}{Key\+Mappings}} {\bfseries keys} \{\}
+\item 
+\Hypertarget{classlve_1_1_keyboard_movement_controller_a13a9cb31d7343fd04a799368907e4864}\label{classlve_1_1_keyboard_movement_controller_a13a9cb31d7343fd04a799368907e4864} 
+float {\bfseries move\+Speed} \{3.f\}
+\item 
+\Hypertarget{classlve_1_1_keyboard_movement_controller_a804091bd7e9c5f49e00e1d7e3e3308f1}\label{classlve_1_1_keyboard_movement_controller_a804091bd7e9c5f49e00e1d7e3e3308f1} 
+float {\bfseries look\+Speed} \{1.\+5f\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_keyboard_movement_controller_a00c91791e9d241d5ad762f1743e2743c}\label{classlve_1_1_keyboard_movement_controller_a00c91791e9d241d5ad762f1743e2743c} 
+\index{lve::KeyboardMovementController@{lve::KeyboardMovementController}!MoveInPlaneXZ@{MoveInPlaneXZ}}
+\index{MoveInPlaneXZ@{MoveInPlaneXZ}!lve::KeyboardMovementController@{lve::KeyboardMovementController}}
+\doxysubsubsection{\texorpdfstring{MoveInPlaneXZ()}{MoveInPlaneXZ()}}
+{\footnotesize\ttfamily void lve\+::\+Keyboard\+Movement\+Controller\+::\+Move\+In\+Plane\+XZ (\begin{DoxyParamCaption}\item[{GLFWwindow \texorpdfstring{$\ast$}{*}}]{\+\_\+window,  }\item[{float}]{\+\_\+delta\+Time,  }\item[{\mbox{\hyperlink{class_game_object}{Game\+Object}} \&}]{\+\_\+game\+Object }\end{DoxyParamCaption}) const}
+
+
+
+Déplace l\textquotesingle{}objet dans le plan XZ en réponse aux entrées clavier. 
+
+Cette fonction ajuste la rotation et la translation d\textquotesingle{}un objet en fonction des entrées clavier, pour lui permettre de se déplacer dans le plan XZ.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+window} & La fenêtre GLFW où les entrées clavier sont détectées. \\
+\hline
+{\em \+\_\+delta\+Time} & Le temps écoulé depuis la dernière mise à jour. \\
+\hline
+{\em \+\_\+game\+Object} & L\textquotesingle{}objet à déplacer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Les touches du clavier utilisées pour contrôler le mouvement et la rotation sont configurées dans l\textquotesingle{}attribut "{}keys"{} de cet objet. 
+
+L\textquotesingle{}objet est déplacé vers l\textquotesingle{}avant et vers l\textquotesingle{}arrière le long de l\textquotesingle{}axe Z, et vers la gauche et vers la droite le long de l\textquotesingle{}axe X. Il peut également monter et descendre le long de l\textquotesingle{}axe Y. 
+\end{DoxyNote}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Inputs/keyboard\+\_\+movement\+\_\+controller.\+h\item 
+sources/\+Inputs/keyboard\+\_\+movement\+\_\+controller.\+cpp\end{DoxyCompactItemize}

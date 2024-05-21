@@ -1,0 +1,76 @@
+\doxysection{Address.\+h}
+\hypertarget{_address_8h_source}{}\label{_address_8h_source}\index{includes/UDP/Address.h@{includes/UDP/Address.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}UDP/Types.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <winSock2.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }Bousk}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{namespace\ }Network}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ Type\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ None,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IPv4,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IPv6,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}(\mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\&)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ operator=(\mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\&)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{\string~Address}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}(\textcolor{keyword}{const}\ std::string\&\ ip,\ uint16\ port)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}(\textcolor{keyword}{const}\ sockaddr\_storage\&\ addr)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\ Any(Type\ type,\ uint16\ port);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\ Loopback(Type\ type,\ uint16\ port);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ isValid()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mType\ !=\ Type::None;\ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ Type\ type()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mType;\ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ address()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ uint16\ port()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mPort;\ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ toString()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator!=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ other)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ !(*\textcolor{keyword}{this}\ ==\ other);\ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ operator<(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Connect\ the\ given\ socket\ to\ the\ internal\ address}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ true\ on\ success,\ false\ otherwise}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ connect(SOCKET\ sckt)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Accept\ an\ incoming\ connection\ on\ the\ given\ socket\ then\ update\ the\ internal\ address\ with\ the\ sender\ one}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ true\ if\ a\ new\ client\ has\ been\ accepted\ and\ set\ its\ socket\ value\ to\ newClient.\ False\ otherwise}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ accept(SOCKET\ sckt,\ SOCKET\&\ newClient);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bind\ the\ given\ socket\ to\ the\ internal\ address}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bind(SOCKET\ sckt)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Send\ data\ from\ the\ given\ socket\ to\ the\ internal\ address}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ sendTo(SOCKET\ sckt,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ data,\ \textcolor{keywordtype}{size\_t}\ datalen)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Receive\ data\ from\ the\ given\ socket\ then\ update\ the\ internal\ address\ with\ the\ sender\ one}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ recvFrom(SOCKET\ sckt,\ uint8*\ buffer,\ \textcolor{keywordtype}{size\_t}\ bufferSize);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ set(\textcolor{keyword}{const}\ sockaddr\_storage\&\ src);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ sockaddr\_storage\ mStorage\{\ 0\ \};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ uint16\ mPort\{\ 0\ \};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ Type\ mType\{\ Type::None\ \};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00066\ \ \ \ \ \}}
+\DoxyCodeLine{00067\ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ }
+
+\end{DoxyCode}

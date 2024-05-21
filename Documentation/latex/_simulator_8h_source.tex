@@ -1,0 +1,65 @@
+\doxysection{Simulator.\+h}
+\hypertarget{_simulator_8h_source}{}\label{_simulator_8h_source}\index{includes/UDP/Protocol/Simulator.h@{includes/UDP/Protocol/Simulator.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../Address.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../Datagram.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../RangedInteger.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../Settings.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#if\ BOUSKNET\_ALLOW\_NETWORK\_SIMULATOR\ ==\ BOUSKNET\_SETTINGS\_ENABLED}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }Bousk}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{namespace\ }Network}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }UDP}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator}{Simulator}}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator}{Simulator}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ enable()\ \{\ mEnabled\ =\ \textcolor{keyword}{true};\ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ disable()\ \{\ mEnabled\ =\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isEnabled()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mEnabled;\ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ seed(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setDuplicate(\mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<1,\ 10>}}\ duplicate)\ \{\ mDuplicate\ =\ duplicate;\ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setLossRate(\mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<0,\ 100>}}\ loss)\ \{\ mLoss\ =\ loss;\ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setDelay(\mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<0,\ 250>}}\ fixed,\ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<0,\ 100>}}\ random)\ \{\ mFixedDelay\ =\ fixed;\ mRandomDelay\ =\ random;\ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ push(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram}{Datagram}}\&\ datagram,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ from);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::pair<Datagram,\ Address>>\ poll();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }PendingDatagram}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_bousk_1_1_network_1_1_u_d_p_1_1_datagram}{Datagram}}\ datagram;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\ from;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::chrono::milliseconds\ receivedTime;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::chrono::milliseconds\ processTime;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<PendingDatagram>\ mPendingDatagrams;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<1,\ 10>}}\ mDuplicate\{\ 3\ \};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<0,\ 1000>}}\ mDuplicateRate\{\ 1\ \};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::default\_random\_engine\ mDuplicateGenerator;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<0,\ 100>}}\ mLoss\{\ 5\ \};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::default\_random\_engine\ mLossGenerator;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<0,\ 250>}}\ mFixedDelay\{\ 0\ \};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_ranged_integer}{RangedInteger<0,\ 100>}}\ mRandomDelay\{\ 50\ \};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::default\_random\_engine\ mRandomDelayGenerator;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mEnabled\{\ \textcolor{keyword}{false}\ \};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BOUSKNET\_ALLOW\_NETWORK\_SIMULATOR\ ==\ BOUSKNET\_SETTINGS\_ENABLED}}
+
+\end{DoxyCode}

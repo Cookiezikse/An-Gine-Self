@@ -1,0 +1,218 @@
+\doxysection{Référence de la classe HUDModule}
+\hypertarget{class_h_u_d_module}{}\label{class_h_u_d_module}\index{HUDModule@{HUDModule}}
+Graphe d\textquotesingle{}héritage de HUDModule\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_h_u_d_module}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_h_u_d_module_af8f4bea6de98ae4ba29942e9564c7e64}\label{class_h_u_d_module_af8f4bea6de98ae4ba29942e9564c7e64} 
+{\bfseries HUDModule} (Vk\+Device \+\_\+device, Vk\+Render\+Pass \+\_\+render\+Pass, Vk\+Queue \+\_\+graphics\+Queue, Vk\+Command\+Pool \+\_\+command\+Pool)
+\item 
+\Hypertarget{class_h_u_d_module_aa0af0742ada13e97543f6552afd3b956}\label{class_h_u_d_module_aa0af0742ada13e97543f6552afd3b956} 
+void {\bfseries Add\+Component} (float \+\_\+x, float \+\_\+y, float \+\_\+width, float \+\_\+height, const std\+::string \&\+\_\+texture\+Path)
+\item 
+\Hypertarget{class_h_u_d_module_a87cd330d5fe4d556bc2df165493216d9}\label{class_h_u_d_module_a87cd330d5fe4d556bc2df165493216d9} 
+void {\bfseries Cleanup\+Components} ()
+\item 
+\Hypertarget{class_h_u_d_module_ab3b1921d4e389af0c4c820ba0a7d40d8}\label{class_h_u_d_module_ab3b1921d4e389af0c4c820ba0a7d40d8} 
+void {\bfseries Render} (Vk\+Command\+Buffer \+\_\+command\+Buffer)
+\item 
+void \mbox{\hyperlink{class_h_u_d_module_a73da317df970d3235d36ef26a3e307e7}{Init}} () override
+\begin{DoxyCompactList}\small\item\em Initialise le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_h_u_d_module_a7ee2836aa24659854edc1ba677f4b609}{Start}} () override
+\begin{DoxyCompactList}\small\item\em D�marre le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_h_u_d_module_ac45f954940b62fdea3f18aa13002bd05}{Fixed\+Update}} () override
+\begin{DoxyCompactList}\small\item\em Effectue une mise � jour fixe du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_h_u_d_module_a205e4135c7dae8ee289b20af66c2eb85}{Update}} () override
+\begin{DoxyCompactList}\small\item\em Met � jour le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_h_u_d_module_a1e2ea09ef7c83bfd1f78cba518f97bff}{Pre\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction pr�-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_h_u_d_module_a40d383abb7cc742eadffadb84fddd822}{Render}} () override
+\begin{DoxyCompactList}\small\item\em Rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_h_u_d_module_af46395911516a0fedc6e683135d8c9ea}{Render\+Gui}} () override
+\begin{DoxyCompactList}\small\item\em Rendu de l\textquotesingle{}interface graphique du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_h_u_d_module_a2066c395246c1a679c99ca8bf93233b6}{Post\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction post-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_h_u_d_module_a70ff001d7b0ebd6b6d179b5ea28101b5}{Release}} () override
+\begin{DoxyCompactList}\small\item\em Lib�re les ressources utilis�es par le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_h_u_d_module_a3713f85d4b721969735fd829d6a8b3c3}{Finalize}} () override
+\begin{DoxyCompactList}\small\item\em Finalise le module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_h_u_d_module_acbea04a3e1b2b910f9d7a9deda36eff1}\label{class_h_u_d_module_acbea04a3e1b2b910f9d7a9deda36eff1} 
+static void {\bfseries Remove\+Component} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_h_u_d_module_ade109a5e83b615d20072124375f0cf8f}\label{class_h_u_d_module_ade109a5e83b615d20072124375f0cf8f} 
+static constexpr int {\bfseries HEIGHT} = 600
+\item 
+\Hypertarget{class_h_u_d_module_a85db8f3aff94fc8a112224c3cc644e7c}\label{class_h_u_d_module_a85db8f3aff94fc8a112224c3cc644e7c} 
+static constexpr int {\bfseries WIDTH} = 800
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Membres hérités additionnels}
+\doxysubsection*{Fonctions membres protégées hérités de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_af09dc286b704160d8f0f273e1fe8576b}{\texorpdfstring{$\sim$}{\string~}\+Module}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur prot�g�. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protégés hérités de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_manager}{Module\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_module_a8d9f92fc1216d933c961bfa685b0ad6f}{module\+Manager}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_h_u_d_module_a3713f85d4b721969735fd829d6a8b3c3}\label{class_h_u_d_module_a3713f85d4b721969735fd829d6a8b3c3} 
+\index{HUDModule@{HUDModule}!Finalize@{Finalize}}
+\index{Finalize@{Finalize}!HUDModule@{HUDModule}}
+\doxysubsubsection{\texorpdfstring{Finalize()}{Finalize()}}
+{\footnotesize\ttfamily void HUDModule\+::\+Finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finalise le module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_a4ed07ee636825b626c8f5021c34e408c}{Module}}.
+
+\Hypertarget{class_h_u_d_module_ac45f954940b62fdea3f18aa13002bd05}\label{class_h_u_d_module_ac45f954940b62fdea3f18aa13002bd05} 
+\index{HUDModule@{HUDModule}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!HUDModule@{HUDModule}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void HUDModule\+::\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Effectue une mise � jour fixe du module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_a4bbf5f6e563f86794d7ae718371f1ca4}{Module}}.
+
+\Hypertarget{class_h_u_d_module_a73da317df970d3235d36ef26a3e307e7}\label{class_h_u_d_module_a73da317df970d3235d36ef26a3e307e7} 
+\index{HUDModule@{HUDModule}!Init@{Init}}
+\index{Init@{Init}!HUDModule@{HUDModule}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void HUDModule\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialise le module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_a0151ba4ab62f6e91251b0a20b168985e}{Module}}.
+
+\Hypertarget{class_h_u_d_module_a2066c395246c1a679c99ca8bf93233b6}\label{class_h_u_d_module_a2066c395246c1a679c99ca8bf93233b6} 
+\index{HUDModule@{HUDModule}!PostRender@{PostRender}}
+\index{PostRender@{PostRender}!HUDModule@{HUDModule}}
+\doxysubsubsection{\texorpdfstring{PostRender()}{PostRender()}}
+{\footnotesize\ttfamily void HUDModule\+::\+Post\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction post-\/rendu du module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_a0bb23668b2717e4bb3b4e1f6350a7e87}{Module}}.
+
+\Hypertarget{class_h_u_d_module_a1e2ea09ef7c83bfd1f78cba518f97bff}\label{class_h_u_d_module_a1e2ea09ef7c83bfd1f78cba518f97bff} 
+\index{HUDModule@{HUDModule}!PreRender@{PreRender}}
+\index{PreRender@{PreRender}!HUDModule@{HUDModule}}
+\doxysubsubsection{\texorpdfstring{PreRender()}{PreRender()}}
+{\footnotesize\ttfamily void HUDModule\+::\+Pre\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction pr�-\/rendu du module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_a7a88e7aaddd55bf9f15beb8d297afd1e}{Module}}.
+
+\Hypertarget{class_h_u_d_module_a70ff001d7b0ebd6b6d179b5ea28101b5}\label{class_h_u_d_module_a70ff001d7b0ebd6b6d179b5ea28101b5} 
+\index{HUDModule@{HUDModule}!Release@{Release}}
+\index{Release@{Release}!HUDModule@{HUDModule}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void HUDModule\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Lib�re les ressources utilis�es par le module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_a7e2e4615b80a57040eccf9794bee1007}{Module}}.
+
+\Hypertarget{class_h_u_d_module_a40d383abb7cc742eadffadb84fddd822}\label{class_h_u_d_module_a40d383abb7cc742eadffadb84fddd822} 
+\index{HUDModule@{HUDModule}!Render@{Render}}
+\index{Render@{Render}!HUDModule@{HUDModule}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void HUDModule\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu du module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_ab6ec60e3eced3faa0217348cfca2785f}{Module}}.
+
+\Hypertarget{class_h_u_d_module_af46395911516a0fedc6e683135d8c9ea}\label{class_h_u_d_module_af46395911516a0fedc6e683135d8c9ea} 
+\index{HUDModule@{HUDModule}!RenderGui@{RenderGui}}
+\index{RenderGui@{RenderGui}!HUDModule@{HUDModule}}
+\doxysubsubsection{\texorpdfstring{RenderGui()}{RenderGui()}}
+{\footnotesize\ttfamily void HUDModule\+::\+Render\+Gui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu de l\textquotesingle{}interface graphique du module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_aadc90c55712eba976e6bf87318713d11}{Module}}.
+
+\Hypertarget{class_h_u_d_module_a7ee2836aa24659854edc1ba677f4b609}\label{class_h_u_d_module_a7ee2836aa24659854edc1ba677f4b609} 
+\index{HUDModule@{HUDModule}!Start@{Start}}
+\index{Start@{Start}!HUDModule@{HUDModule}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void HUDModule\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+D�marre le module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_aed9229993dada6ed800f73036aade722}{Module}}.
+
+\Hypertarget{class_h_u_d_module_a205e4135c7dae8ee289b20af66c2eb85}\label{class_h_u_d_module_a205e4135c7dae8ee289b20af66c2eb85} 
+\index{HUDModule@{HUDModule}!Update@{Update}}
+\index{Update@{Update}!HUDModule@{HUDModule}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void HUDModule\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Met � jour le module. 
+
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_module_abf63d5bb322a751fbf95f2da0978817b}{Module}}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Modules/HUDModule.\+h\item 
+sources/\+Modules/HUDModule.\+cpp\end{DoxyCompactItemize}

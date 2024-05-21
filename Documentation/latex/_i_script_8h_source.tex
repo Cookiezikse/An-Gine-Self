@@ -1,0 +1,45 @@
+\doxysection{IScript.\+h}
+\hypertarget{_i_script_8h_source}{}\label{_i_script_8h_source}\index{includes/Script/IScript.h@{includes/Script/IScript.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ DECLARE\_SCRIPT(name,\ subtype)\ \(\backslash\)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ void\ SetDefaultScriptName()\ override\ \{\ scriptName\ =\ name;\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ void\ SetDefaultScriptType()\ override\ \{\ id\ =\ subtype;\ \}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#ifdef\ ENGINECORE\_EXPORTS}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ ENGINEDLL\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ ENGINEDLL\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{//class\ ENGINEDLL\_API\ IScript}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ \ }\mbox{\hyperlink{class_i_script}{IScript}}}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_i_script_a1671c19148f1c054bcce6e5235d1cdde}{\string~IScript}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_script_acfb73ccefc0766fe7acb341a1f4e37c7}{Initialize}}()\ \{\}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_script_a1f3b753400fc682b4d89c78a3e3ffe80}{Start}}()\ \{\}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_script_a2ca7ab65a9dbcdcc09aab5ca2342aa84}{Update}}()\ \{\}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_script_a1122f44c81a4de2394dc43a046ebba61}{Update}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \_delta)\ \{\}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_script_afd57c2171cdb796f118859e6188be56d}{Destruct}}()\ \{\}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_i_script_a2ef909243065cd57abb397271ed89493}{SetScriptName}}(\textcolor{keyword}{const}\ std::string\&\ \_newName\ =\ \textcolor{stringliteral}{"{}Unnamed\ script"{}})\ \{\ scriptName\ =\ \_newName;\ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \ \ std::string\ \mbox{\hyperlink{class_i_script_a5731d6bb19f20d64e910f7f8e43c8674}{GetScriptName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ scriptName;\ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00078\ \ \ \ \ std::string\ scriptName\ =\ \textcolor{stringliteral}{"{}Unnamed\ Script"{}};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+
+\end{DoxyCode}

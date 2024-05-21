@@ -1,0 +1,77 @@
+\doxysection{Debug\+Module.\+h}
+\hypertarget{_debug_module_8h_source}{}\label{_debug_module_8h_source}\index{includes/Modules/DebugModule.h@{includes/Modules/DebugModule.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Modules/Module.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_debug_module}{DebugModule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_module}{Module}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_debug_module_acf16f4056fe32e343545ad853ed8d66c}{\string~DebugModule}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{class_debug_module_ad82f52d250b1227fdcc4022a08e26bb5}{TypeLog}}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ INFO,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ WARNING,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ ERROR,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ SUCCESS}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#pragma\ region\ Logs}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_debug_module_aef1c5eed746a4a9b5fc3a496d8efd82d}{Log}}(\textcolor{keyword}{const}\ std::string\&\ \_message,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_debug_module_ad82f52d250b1227fdcc4022a08e26bb5}{TypeLog}}\ \_level\ =\ TypeLog::INFO);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_debug_module_a86ff1d5c1cd13138c81e6f15b1f98c6c}{LogError}}(\textcolor{keyword}{const}\ std::string\&\ \_message)}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_debug_module_aef1c5eed746a4a9b5fc3a496d8efd82d}{Log}}(\_message,\ TypeLog::ERROR);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_debug_module_a58489da45c8192ed37aff3e5f81355b0}{LogWarning}}(\textcolor{keyword}{const}\ std::string\&\ \_message)}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_debug_module_aef1c5eed746a4a9b5fc3a496d8efd82d}{Log}}(\_message,\ TypeLog::WARNING);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_debug_module_ae79635d4795b3e5326f8b8e1209520aa}{LogInfo}}(\textcolor{keyword}{const}\ std::string\&\ \_message)}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_debug_module_aef1c5eed746a4a9b5fc3a496d8efd82d}{Log}}(\_message,\ TypeLog::INFO);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_debug_module_a35f8b2b6e384ee48a9d61b2767cbc8fb}{LogSuccess}}(\textcolor{keyword}{const}\ std::string\&\ \_message)}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_debug_module_aef1c5eed746a4a9b5fc3a496d8efd82d}{Log}}(\_message,\ TypeLog::SUCCESS);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#pragma\ region\ Event}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_debug_module_a819596af9d8525044fccd9118a83af35}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_debug_module_af31af5dda56fdb3e5eed28f945f8c628}{Start}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_debug_module_ac4025384311e8733b8ba5c94a8b0252f}{FixedUpdate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_debug_module_aff4802838a0ff36b58084fedb231dfca}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_debug_module_a229c9533acfa2fc45786c2875c6d3a54}{PreRender}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_debug_module_add6febbd15384f7046715a0d992414c1}{Render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_debug_module_a79049be3e811dc839746c0e7e1ebe562}{RenderGui}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_debug_module_a3e24cc06e108cca745cc8652c6ab881d}{PostRender}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_debug_module_a8026c62cc075f9eacd3f6c8dabc4672e}{Release}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_debug_module_ac6c67867804ab058f0a99bbafb06c12d}{Finalize}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \};}
+
+\end{DoxyCode}

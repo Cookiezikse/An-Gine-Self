@@ -1,0 +1,110 @@
+\doxysection{Référence de la classe Network\+::TCP\+::Server\+Impl}
+\hypertarget{class_network_1_1_t_c_p_1_1_server_impl}{}\label{class_network_1_1_t_c_p_1_1_server_impl}\index{Network::TCP::ServerImpl@{Network::TCP::ServerImpl}}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_impl_af5bb3160db4da70211389a63294432da}{start}} (unsigned short \+\_\+port)
+\begin{DoxyCompactList}\small\item\em D{\ucr}marre le serveur sur le port sp{\ucr}cifi{\ucr}. \end{DoxyCompactList}\item 
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_impl_ae8f77df483436b7ff6eef716e90ac3ee}\label{class_network_1_1_t_c_p_1_1_server_impl_ae8f77df483436b7ff6eef716e90ac3ee} 
+void {\bfseries stop} ()
+\begin{DoxyCompactList}\small\item\em Arr{\ucr}te le serveur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_impl_a7396997a25ce53506c8f8a69cec72774}{update}} ()
+\begin{DoxyCompactList}\small\item\em Met {\ucr} jour le serveur. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_impl_a0517ef8600539522385b82cf0460cbd3}{send\+To}} (uint64\+\_\+t clientid, const unsigned char \texorpdfstring{$\ast$}{*}data, unsigned int len)
+\begin{DoxyCompactList}\small\item\em Envoie des donn{\ucr}es {\ucr} un client sp{\ucr}cifique. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_impl_aebf3e7ba43f65222e14142f3bdaf10f0}{send\+To\+All}} (const unsigned char \texorpdfstring{$\ast$}{*}data, unsigned int len)
+\begin{DoxyCompactList}\small\item\em Envoie des donn{\ucr}es {\ucr} tous les clients connect{\ucr}s. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Messages\+::\+Base}} $>$ \mbox{\hyperlink{class_network_1_1_t_c_p_1_1_server_impl_acd01852df26c13a59887a9043e339ca1}{poll}} ()
+\begin{DoxyCompactList}\small\item\em R{\ucr}cup{\ucr}re les messages entrants. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_impl_acd01852df26c13a59887a9043e339ca1}\label{class_network_1_1_t_c_p_1_1_server_impl_acd01852df26c13a59887a9043e339ca1} 
+\index{Network::TCP::ServerImpl@{Network::TCP::ServerImpl}!poll@{poll}}
+\index{poll@{poll}!Network::TCP::ServerImpl@{Network::TCP::ServerImpl}}
+\doxysubsubsection{\texorpdfstring{poll()}{poll()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_network_1_1_messages_1_1_base}{Messages\+::\+Base}} $>$ Network\+::\+TCP\+::\+Server\+Impl\+::poll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+R{\ucr}cup{\ucr}re les messages entrants. 
+
+\begin{DoxyReturn}{Renvoie}
+Un pointeur unique vers le message re{\ucr}u. 
+\end{DoxyReturn}
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_impl_a0517ef8600539522385b82cf0460cbd3}\label{class_network_1_1_t_c_p_1_1_server_impl_a0517ef8600539522385b82cf0460cbd3} 
+\index{Network::TCP::ServerImpl@{Network::TCP::ServerImpl}!sendTo@{sendTo}}
+\index{sendTo@{sendTo}!Network::TCP::ServerImpl@{Network::TCP::ServerImpl}}
+\doxysubsubsection{\texorpdfstring{sendTo()}{sendTo()}}
+{\footnotesize\ttfamily bool Network\+::\+TCP\+::\+Server\+Impl\+::send\+To (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{clientid,  }\item[{const unsigned char \texorpdfstring{$\ast$}{*}}]{data,  }\item[{unsigned int}]{len }\end{DoxyParamCaption})}
+
+
+
+Envoie des donn{\ucr}es {\ucr} un client sp{\ucr}cifique. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em clientid} & Identifiant du client. \\
+\hline
+{\em data} & Pointeur vers les donn{\ucr}es {\ucr} envoyer. \\
+\hline
+{\em len} & Longueur des donn{\ucr}es {\ucr} envoyer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si l\textquotesingle{}envoi r{\ucr}ussit, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_impl_aebf3e7ba43f65222e14142f3bdaf10f0}\label{class_network_1_1_t_c_p_1_1_server_impl_aebf3e7ba43f65222e14142f3bdaf10f0} 
+\index{Network::TCP::ServerImpl@{Network::TCP::ServerImpl}!sendToAll@{sendToAll}}
+\index{sendToAll@{sendToAll}!Network::TCP::ServerImpl@{Network::TCP::ServerImpl}}
+\doxysubsubsection{\texorpdfstring{sendToAll()}{sendToAll()}}
+{\footnotesize\ttfamily bool Network\+::\+TCP\+::\+Server\+Impl\+::send\+To\+All (\begin{DoxyParamCaption}\item[{const unsigned char \texorpdfstring{$\ast$}{*}}]{data,  }\item[{unsigned int}]{len }\end{DoxyParamCaption})}
+
+
+
+Envoie des donn{\ucr}es {\ucr} tous les clients connect{\ucr}s. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em data} & Pointeur vers les donn{\ucr}es {\ucr} envoyer. \\
+\hline
+{\em len} & Longueur des donn{\ucr}es {\ucr} envoyer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si l\textquotesingle{}envoi r{\ucr}ussit, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_impl_af5bb3160db4da70211389a63294432da}\label{class_network_1_1_t_c_p_1_1_server_impl_af5bb3160db4da70211389a63294432da} 
+\index{Network::TCP::ServerImpl@{Network::TCP::ServerImpl}!start@{start}}
+\index{start@{start}!Network::TCP::ServerImpl@{Network::TCP::ServerImpl}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily bool Network\+::\+TCP\+::\+Server\+Impl\+::start (\begin{DoxyParamCaption}\item[{unsigned short}]{\+\_\+port }\end{DoxyParamCaption})}
+
+
+
+D{\ucr}marre le serveur sur le port sp{\ucr}cifi{\ucr}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+port} & Port sur lequel d{\ucr}marrer le serveur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si le d{\ucr}marrage r{\ucr}ussit, sinon false. 
+\end{DoxyReturn}
+\Hypertarget{class_network_1_1_t_c_p_1_1_server_impl_a7396997a25ce53506c8f8a69cec72774}\label{class_network_1_1_t_c_p_1_1_server_impl_a7396997a25ce53506c8f8a69cec72774} 
+\index{Network::TCP::ServerImpl@{Network::TCP::ServerImpl}!update@{update}}
+\index{update@{update}!Network::TCP::ServerImpl@{Network::TCP::ServerImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Network\+::\+TCP\+::\+Server\+Impl\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Met {\ucr} jour le serveur. 
+
+\texorpdfstring{$<$}{<} accept jusqu\textquotesingle{}{\ucr} 10 nouveaux clients
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+TCP/\+Server/Server.\+h\item 
+sources/\+TCP/\+Server/Server.\+cpp\end{DoxyCompactItemize}

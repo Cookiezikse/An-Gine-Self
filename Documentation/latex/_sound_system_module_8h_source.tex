@@ -1,0 +1,81 @@
+\doxysection{Sound\+System\+Module.\+h}
+\hypertarget{_sound_system_module_8h_source}{}\label{_sound_system_module_8h_source}\index{includes/Modules/SoundSystemModule.h@{includes/Modules/SoundSystemModule.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <fmod.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Modules/Module.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ }SoundClass\ =\ FMOD::Sound*;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ }SoundGroup\ =\ FMOD::SoundGroup*;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{using\ }Channel\ =\ FMOD::Channel*;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sound_system_module}{SoundSystemModule}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_module}{Module}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sound_system_module_a55a8440318be202d10abc6015d5ecee7}{SoundSystemModule}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_system_module_a904b747c624df6b145bd906068215696}{CreateSound}}(SoundClass*\ p\_sound,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ p\_pathAudio)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_system_module_a487ddddc0e1150c7d1d5c1f8bd95ad90}{CreateSoundGroup}}(SoundGroup*\ p\_soundGroup,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ p\_pathAudio)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_system_module_ae433e992f56b8f0394014ab61e245699}{GetMasterSoundGroup}}(SoundGroup*\ p\_Sound)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_system_module_acc0aa6ddcc6963ca5ea8e8a1dc8a4c14}{PlaySound}}(SoundClass\ p\_sound,\ \textcolor{keywordtype}{bool}\ \_isPlay,\ \textcolor{keywordtype}{int}\ \_loopCount,\ \textcolor{keywordtype}{float}\ \_volume,\ Channel*\ p\_channelPtr)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_system_module_a3077795c8b9a04e2a6683b71e4b66d8d}{ReleaseSound}}(SoundClass\ p\_sound);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ReSharper\ disable\ once\ CppInconsistentNaming}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_system_module_a4bcf8f3298f0d451bee38845b83e00d6}{CreateChannelGroup}}(FMOD::ChannelGroup**\ pp\_channelGroup)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_system_module_a8d10f4af7fd38965c9f5a8608028c2bf}{AddSoundToGroup}}(SoundClass\ \_pSound,\ FMOD::ChannelGroup*\ p\_channelGroup)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_sound_system_module_a57278fcd05aaf69a73b316b6c183bfc0}{GetLoopCount}}(SoundClass\ \_pSound,\ \textcolor{keywordtype}{int}*\ p\_loopCount);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ FMOD\_RESULT\ \mbox{\hyperlink{class_sound_system_module_a569ede074cd8034277a821792f3965ee}{AttachChannelGroupToPort}}(FMOD\_PORT\_TYPE\ \ \ \ \ \ \_portType,\ FMOD\_PORT\_INDEX\ \_portIndex,}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FMOD::ChannelGroup*\ p\_channelGroup,\ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \_passThru\ =\ \textcolor{keyword}{false})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ FMOD\_RESULT\ \mbox{\hyperlink{class_sound_system_module_a4af511c6363598c55cd6dcf248afe426}{DetachChannelGroupFromPort}}(FMOD::ChannelGroup*\ p\_channelGroup)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ FMOD\_RESULT\ \mbox{\hyperlink{class_sound_system_module_aaca22a353745fbd77edbac1df2275a2d}{SetReverbProperties}}(\textcolor{keywordtype}{int}\ \_instance,\ \textcolor{keyword}{const}\ FMOD\_REVERB\_PROPERTIES*\ p\_prop)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ FMOD\_RESULT\ \mbox{\hyperlink{class_sound_system_module_ac7cda94248a25b7db83c7d7f812c553c}{GetReverbProperties}}(\textcolor{keywordtype}{int}\ \_instance,\ FMOD\_REVERB\_PROPERTIES*\ p\_prop)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#pragma\ region\ Event}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_system_module_ae10cac5749ca80edff05dc83f26911b3}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_system_module_a92e573244f8ecac20a6c024ed5a1713a}{Start}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_system_module_a19650098e71e69d320221fc0be940b31}{FixedUpdate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_system_module_a90fb7f2ecf7b7bb32ee2bf45534ea328}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_system_module_aafb4c4fd98c7047e567ce8da45ca24cd}{PreRender}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_system_module_a1a431eed55857eef3ec3bf3b32b83c94}{Render}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_system_module_adedbb8a55e7f4de13699b6ef5dcc78b0}{RenderGui}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_system_module_a1babae9d378ecb15d404bcd344b3ee2a}{PostRender}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_system_module_a8d00ae6a262f803991fc928e9cb69d7e}{Release}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sound_system_module_ae3f2bd04d953a7a1b871d036ffb69507}{Finalize}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ FMOD::System*\ system;}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ FMOD::ChannelGroup*\ channelGroup;}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ min;}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ max;}
+\DoxyCodeLine{00190\ \};}
+
+\end{DoxyCode}

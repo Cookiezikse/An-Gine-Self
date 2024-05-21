@@ -1,0 +1,106 @@
+\doxysection{RÃ©fÃ©rence de la classe IScript}
+\hypertarget{class_i_script}{}\label{class_i_script}\index{IScript@{IScript}}
+
+
+Interface de base pour les scripts.  
+
+
+
+
+{\ttfamily \#include $<$IScript.\+h$>$}
+
+Graphe d\textquotesingle{}hÃ©ritage de IScript\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_i_script}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_i_script_a1671c19148f1c054bcce6e5235d1cdde}\label{class_i_script_a1671c19148f1c054bcce6e5235d1cdde} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+IScript} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel par défaut. \end{DoxyCompactList}\item 
+\Hypertarget{class_i_script_acfb73ccefc0766fe7acb341a1f4e37c7}\label{class_i_script_acfb73ccefc0766fe7acb341a1f4e37c7} 
+virtual void {\bfseries Initialize} ()
+\begin{DoxyCompactList}\small\item\em Initialise le script. \end{DoxyCompactList}\item 
+\Hypertarget{class_i_script_a1f3b753400fc682b4d89c78a3e3ffe80}\label{class_i_script_a1f3b753400fc682b4d89c78a3e3ffe80} 
+virtual void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Démarre le script. \end{DoxyCompactList}\item 
+\Hypertarget{class_i_script_a2ca7ab65a9dbcdcc09aab5ca2342aa84}\label{class_i_script_a2ca7ab65a9dbcdcc09aab5ca2342aa84} 
+virtual void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Met à jour le script. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_script_a1122f44c81a4de2394dc43a046ebba61}{Update}} (const float \+\_\+delta)
+\begin{DoxyCompactList}\small\item\em Met à jour le script avec un delta de temps spécifié. \end{DoxyCompactList}\item 
+\Hypertarget{class_i_script_afd57c2171cdb796f118859e6188be56d}\label{class_i_script_afd57c2171cdb796f118859e6188be56d} 
+virtual void {\bfseries Destruct} ()
+\begin{DoxyCompactList}\small\item\em Destructeur le script. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_script_a2ef909243065cd57abb397271ed89493}{Set\+Script\+Name}} (const std\+::string \&\+\_\+new\+Name="{}Unnamed script"{})
+\begin{DoxyCompactList}\small\item\em Définit le nom par défaut du script. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_i_script_a5731d6bb19f20d64e910f7f8e43c8674}{Get\+Script\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Obtient le nom du script. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs protÃ©gÃ©s}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_i_script_a5af079e655a491d6a1dcef2e774389b3}\label{class_i_script_a5af079e655a491d6a1dcef2e774389b3} 
+std\+::string {\bfseries script\+Name} = "{}Unnamed Script"{}
+\item 
+\Hypertarget{class_i_script_add84fc07fa06888d07b4b7c7ab5c06db}\label{class_i_script_add84fc07fa06888d07b4b7c7ab5c06db} 
+int {\bfseries id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Interface de base pour les scripts. 
+
+Cette classe définit une interface de base pour tous les scripts utilisés dans le moteur de jeu. Les scripts peuvent être initialisés, démarrés, mis à jour et détruits. Ils peuvent également avoir un nom et un type par défaut. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_i_script_a5731d6bb19f20d64e910f7f8e43c8674}\label{class_i_script_a5731d6bb19f20d64e910f7f8e43c8674} 
+\index{IScript@{IScript}!GetScriptName@{GetScriptName}}
+\index{GetScriptName@{GetScriptName}!IScript@{IScript}}
+\doxysubsubsection{\texorpdfstring{GetScriptName()}{GetScriptName()}}
+{\footnotesize\ttfamily std\+::string IScript\+::\+Get\+Script\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtient le nom du script. 
+
+\begin{DoxyReturn}{Renvoie}
+Le nom du script. 
+\end{DoxyReturn}
+\Hypertarget{class_i_script_a2ef909243065cd57abb397271ed89493}\label{class_i_script_a2ef909243065cd57abb397271ed89493} 
+\index{IScript@{IScript}!SetScriptName@{SetScriptName}}
+\index{SetScriptName@{SetScriptName}!IScript@{IScript}}
+\doxysubsubsection{\texorpdfstring{SetScriptName()}{SetScriptName()}}
+{\footnotesize\ttfamily void IScript\+::\+Set\+Script\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+new\+Name = {\ttfamily "{}Unnamed~script"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Définit le nom par défaut du script. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+new\+Name} & Le nouveau nom du script. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_i_script_a1122f44c81a4de2394dc43a046ebba61}\label{class_i_script_a1122f44c81a4de2394dc43a046ebba61} 
+\index{IScript@{IScript}!Update@{Update}}
+\index{Update@{Update}!IScript@{IScript}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily virtual void IScript\+::\+Update (\begin{DoxyParamCaption}\item[{const float}]{\+\_\+delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Met à jour le script avec un delta de temps spécifié. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+delta} & Le delta de temps depuis la dernière mise à jour. \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Script/IScript.\+h\end{DoxyCompactItemize}

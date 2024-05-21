@@ -1,0 +1,72 @@
+\doxysection{RÃ©fÃ©rence de la structure lve\+::Lve\+Model\+::Builder}
+\hypertarget{structlve_1_1_lve_model_1_1_builder}{}\label{structlve_1_1_lve_model_1_1_builder}\index{lve::LveModel::Builder@{lve::LveModel::Builder}}
+
+
+Structure responsable de la construction d\textquotesingle{}un modèle 3D.  
+
+
+
+
+{\ttfamily \#include $<$lve\+\_\+model.\+h$>$}
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structlve_1_1_lve_model_1_1_builder_ac000c41acbf7d74eaeb882281e9dac36}{Load\+Model}} (const std\+::string \&\+\_\+filepath, float \+\_\+tex\+Multiplier)
+\begin{DoxyCompactList}\small\item\em Charge un modèle à partir d\textquotesingle{}un fichier au format OBJ. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex}{Vertex}} $>$ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_builder_af72b4b9d5bfaaf3563ebc7a6500736c2}{vertices}} \{\}
+\item 
+std\+::vector$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{structlve_1_1_lve_model_1_1_builder_a989a68f0ba54b256046b838dc0f22c44}{indices}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Structure responsable de la construction d\textquotesingle{}un modèle 3D. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{structlve_1_1_lve_model_1_1_builder_ac000c41acbf7d74eaeb882281e9dac36}\label{structlve_1_1_lve_model_1_1_builder_ac000c41acbf7d74eaeb882281e9dac36} 
+\index{lve::LveModel::Builder@{lve::LveModel::Builder}!LoadModel@{LoadModel}}
+\index{LoadModel@{LoadModel}!lve::LveModel::Builder@{lve::LveModel::Builder}}
+\doxysubsubsection{\texorpdfstring{LoadModel()}{LoadModel()}}
+{\footnotesize\ttfamily void lve\+::\+Lve\+Model\+::\+Builder\+::\+Load\+Model (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+filepath,  }\item[{float}]{\+\_\+tex\+Multiplier = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Charge un modèle à partir d\textquotesingle{}un fichier au format OBJ. 
+
+Cette fonction charge un modèle à partir d\textquotesingle{}un fichier au format OBJ. Elle utilise la bibliothèque tinyobjloader pour lire le fichier et extraire les attributs des vertices tels que la position, la couleur, la normale et les coordonnées de texture. Les vertices sont stockés dans le vecteur \textquotesingle{}vertices\textquotesingle{} de l\textquotesingle{}objet \doxylink{structlve_1_1_lve_model_1_1_builder}{Lve\+Model\+::\+Builder}, tandis que les indices des vertices sont stockés dans le vecteur \textquotesingle{}indices\textquotesingle{}. Les vertices sont comparés pour détecter les doublons et les indices sont ajustés en conséquence pour assurer l\textquotesingle{}unicité des vertices.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+filepath} & Le chemin du fichier du modèle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & Si une erreur survient lors du chargement du modèle. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Documentation des donnÃ©es membres}
+\Hypertarget{structlve_1_1_lve_model_1_1_builder_a989a68f0ba54b256046b838dc0f22c44}\label{structlve_1_1_lve_model_1_1_builder_a989a68f0ba54b256046b838dc0f22c44} 
+\index{lve::LveModel::Builder@{lve::LveModel::Builder}!indices@{indices}}
+\index{indices@{indices}!lve::LveModel::Builder@{lve::LveModel::Builder}}
+\doxysubsubsection{\texorpdfstring{indices}{indices}}
+{\footnotesize\ttfamily std\+::vector$<$uint32\+\_\+t$>$ lve\+::\+Lve\+Model\+::\+Builder\+::indices \{\}}
+
+Vecteur contenant les indices des vertices. \Hypertarget{structlve_1_1_lve_model_1_1_builder_af72b4b9d5bfaaf3563ebc7a6500736c2}\label{structlve_1_1_lve_model_1_1_builder_af72b4b9d5bfaaf3563ebc7a6500736c2} 
+\index{lve::LveModel::Builder@{lve::LveModel::Builder}!vertices@{vertices}}
+\index{vertices@{vertices}!lve::LveModel::Builder@{lve::LveModel::Builder}}
+\doxysubsubsection{\texorpdfstring{vertices}{vertices}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structlve_1_1_lve_model_1_1_vertex}{Vertex}}$>$ lve\+::\+Lve\+Model\+::\+Builder\+::vertices \{\}}
+
+Vecteur contenant les vertices du modèle. 
+
+La documentation de cette structure a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Lve\+Engine/lve\+\_\+model.\+h\item 
+sources/\+Lve\+Engine/lve\+\_\+model.\+cpp\end{DoxyCompactItemize}

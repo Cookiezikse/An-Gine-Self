@@ -1,0 +1,43 @@
+\doxysection{Référence de la classe Bousk\+::Network\+::UDP\+::Protocols\+::IProtocol}
+\hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol}{}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol}\index{Bousk::Network::UDP::Protocols::IProtocol@{Bousk::Network::UDP::Protocols::IProtocol}}
+Graphe d\textquotesingle{}héritage de Bousk\+::Network\+::UDP\+::Protocols\+::IProtocol\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.824104cm]{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_aa7ee87ae9f648f9fb7c95c4678f6a021}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_aa7ee87ae9f648f9fb7c95c4678f6a021} 
+{\bfseries IProtocol} (uint8\+\_\+t channel\+Id)
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_ae0cbf6e99e779536c83e408151ea6608}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_ae0cbf6e99e779536c83e408151ea6608} 
+uint8\+\_\+t {\bfseries channel\+Id} () const
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_aa8da03a9b22a197d07906aa8fa8b943f}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_aa8da03a9b22a197d07906aa8fa8b943f} 
+virtual void {\bfseries queue} (std\+::vector$<$ uint8\+\_\+t $>$ \&\&msg\+Data)=0
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_a9b1a9ac556b48b030e3c9e8649176899}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_a9b1a9ac556b48b030e3c9e8649176899} 
+virtual uint16\+\_\+t {\bfseries serialize} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}buffer, uint16\+\_\+t buffersize, Datagram\+::\+ID datagram\+Id, bool connection\+Interrupted)=0
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_a7762ce55288342ec88571e18e9843e61}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_a7762ce55288342ec88571e18e9843e61} 
+virtual void {\bfseries on\+Datagram\+Acked} (Datagram\+::\+ID)
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_aab5dba52d120f584adcc8a6ffb19d357}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_aab5dba52d120f584adcc8a6ffb19d357} 
+virtual void {\bfseries on\+Datagram\+Lost} (Datagram\+::\+ID)
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_aa5a5f30c577bfc015775e4a976bdcc60}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_aa5a5f30c577bfc015775e4a976bdcc60} 
+virtual void {\bfseries on\+Data\+Received} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, uint16\+\_\+t datasize)=0
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_abe29522978ef2ffcb5d9cb039c0403fe}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_abe29522978ef2ffcb5d9cb039c0403fe} 
+virtual std\+::vector$<$ std\+::vector$<$ uint8\+\_\+t $>$ $>$ {\bfseries process} ()=0
+\item 
+\Hypertarget{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_a4fbab31c4ca7f57bc8b35e4246122c04}\label{class_bousk_1_1_network_1_1_u_d_p_1_1_protocols_1_1_i_protocol_a4fbab31c4ca7f57bc8b35e4246122c04} 
+virtual bool {\bfseries is\+Reliable} () const =0
+\end{DoxyCompactItemize}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+UDP/\+Protocol/Protocol\+Interface.\+h\end{DoxyCompactItemize}

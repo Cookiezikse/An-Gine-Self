@@ -1,0 +1,131 @@
+\doxysection{lve\+\_\+descriptors.\+h}
+\hypertarget{lve__descriptors_8h_source}{}\label{lve__descriptors_8h_source}\index{includes/LveEngine/lve\_descriptors.h@{includes/LveEngine/lve\_descriptors.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}LveEngine/lve\_device.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan.hpp>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ std}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }lve}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout}{LveDescriptorSetLayout}}}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_1_1_builder}{Builder}}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_1_1_builder_a21c312aca9c1a221c09fd3738cacf6fc}{Builder}}(\mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ \_lveDevice)\ :\ lveDevice\{\_lveDevice\}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_1_1_builder}{Builder}}\&\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_1_1_builder_a3484a7a2994c351709284c56eaf3c830}{AddBinding}}(uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \_binding,\ vk::DescriptorType\ \_descriptorType,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::ShaderStageFlags\ \_stageFlags,\ uint32\_t\ \ \ \ \ \ \ \ \_count\ =\ 1);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unique\_ptr<LveDescriptorSetLayout>\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_1_1_builder_a10d3811bb46f1a7e3833a579a654281a}{Build}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ lveDevice;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unordered\_map<uint32\_t,\ vk::DescriptorSetLayoutBinding>\ bindings\{\};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_a35feeecc25a760260c10809002454128}{LveDescriptorSetLayout}}(LveDevice\&\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_lveDevice,}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unordered\_map<uint32\_t,\ vk::DescriptorSetLayoutBinding>\ \_bindings);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_a04241fd21414683fa27a478580b567c1}{\string~LveDescriptorSetLayout}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_a2f5e3b96120e8b04a4b092db5f297ed7}{LveDescriptorSetLayout}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout}{LveDescriptorSetLayout}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout}{LveDescriptorSetLayout}}\&\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_a43fde8b41fdee7da7c75712fdbc65049}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout}{LveDescriptorSetLayout}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ vk::DescriptorSetLayout\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout_a9feee64b71e9fe5310ac50fc8923b1af}{GetDescriptorSetLayout}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ descriptorSetLayout;\ \}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ lveDevice;\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ vk::DescriptorSetLayout\ descriptorSetLayout;\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ std::unordered\_map<uint32\_t,\ vk::DescriptorSetLayoutBinding>\ bindings;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlve_1_1_lve_descriptor_writer}{LveDescriptorWriter}};\ }
+\DoxyCodeLine{00098\ \ \ \ \ \};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlve_1_1_lve_descriptor_pool}{LveDescriptorPool}}}
+\DoxyCodeLine{00101\ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder}{Builder}}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder_a1e387fb18d76be21989d4d4d11c27fb1}{Builder}}(\mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ \_lveDevice)\ :\ lveDevice\{\_lveDevice\}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder}{Builder}}\&\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder_ab0b7634459ce414dcd86d1a6c3927d9f}{AddPoolSize}}(vk::DescriptorType\ \_descriptorType,\ uint32\_t\ \_count);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder}{Builder}}\&\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder_a383c79857f57f53f811851983986adb6}{SetPoolFlags}}(vk::DescriptorPoolCreateFlags\ \_flags);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder}{Builder}}\&\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder_a690d6728d7bd24960884bcdf10e095b8}{SetMaxSets}}(uint32\_t\ \_count);}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [[nodiscard]]\ std::unique\_ptr<LveDescriptorPool>\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_1_1_builder_a4b2eef819c6bb219f9979b9b7def832b}{Build}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ lveDevice;\ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \ \ maxSets;}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::DescriptorPoolCreateFlags\ poolFlags;\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<vk::DescriptorPoolSize>\ poolSizes;}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_a5b859fe2bbd70716d7733c5e9c34e2d2}{LveDescriptorPool}}(}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_lveDevice,}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_maxSets,}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::DescriptorPoolCreateFlags\ \ \ \ \ \ \ \ \ \ \ \ \ \ \_poolFlags,}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<vk::DescriptorPoolSize>\&\ \_poolSizes);}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_ab254708b56169668c336729b1d55f483}{\string~LveDescriptorPool}}();}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_aa2201681fe652dcf5f6790f34109ff5e}{LveDescriptorPool}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool}{LveDescriptorPool}}\&)\ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{delete};\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool}{LveDescriptorPool}}\&\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_ac50a6003da364bf1f853fcea6e8247df}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool}{LveDescriptorPool}}\&)\ =\ \textcolor{keyword}{delete};\ }
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_a11aa941d871760d9f8bba5a6e58842ea}{AllocateDescriptor}}(}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vk::DescriptorSetLayout\ \_descriptorSetLayout,\ vk::DescriptorSet\&\ \_descriptor)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_a545e2f9224baa0e1e25fb9a98d09902c}{FreeDescriptors}}(\textcolor{keyword}{const}\ std::vector<vk::DescriptorSet>\&\ \_descriptors)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool_ab5c8d23fa37c074a0b83ea8af9e9fda8}{ResetPool}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ vk::DescriptorPool\ GetDescriptorPool()\ \{\ \textcolor{keywordflow}{return}\ descriptorPool;\ \}}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_device}{LveDevice}}\&\ \ \ \ \ \ \ \ \ lveDevice;\ \ \ \ \ \ }
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ vk::DescriptorPool\ descriptorPool;\ }
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlve_1_1_lve_descriptor_writer}{LveDescriptorWriter}};}
+\DoxyCodeLine{00221\ \ \ \ \ \};}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlve_1_1_lve_descriptor_writer}{LveDescriptorWriter}}}
+\DoxyCodeLine{00224\ \ \ \ \ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_descriptor_writer_aab1933f682c63e51046bafdc32b887c2}{LveDescriptorWriter}}(\mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout}{LveDescriptorSetLayout}}\&\ \_setLayout,\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool}{LveDescriptorPool}}\&\ \_pool);}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_descriptor_writer}{LveDescriptorWriter}}\&\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_writer_a8c45a7412db7306369ef1f86bcd84a1b}{WriteBuffer}}(uint32\_t\ \_binding,\ \textcolor{keyword}{const}\ vk::DescriptorBufferInfo*\ \_bufferInfo);}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_descriptor_writer}{LveDescriptorWriter}}\&\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_writer_a4b38b9ad83581458c9284985ed24e594}{WriteImage}}(uint32\_t\ \_binding,\ \textcolor{keyword}{const}\ vk::DescriptorImageInfo*\ \_imageInfo);}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_writer_a413e8222d4749423fd1f4245d9782da8}{Build}}(vk::DescriptorSet\&\ \_set);}
+\DoxyCodeLine{00256\ }
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlve_1_1_lve_descriptor_writer_a2ce798ce441fcddc466b20cbdccc5768}{Overwrite}}(\textcolor{keyword}{const}\ vk::DescriptorSet\&\ \_set);}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_descriptor_set_layout}{LveDescriptorSetLayout}}\&\ setLayout;}
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlve_1_1_lve_descriptor_pool}{LveDescriptorPool}}\&\ pool;}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<vk::WriteDescriptorSet>\ writes;}
+\DoxyCodeLine{00278\ \ \ \ \ \};}
+\DoxyCodeLine{00279\ \}\ \textcolor{comment}{//\ namespace\ lve}}
+
+\end{DoxyCode}

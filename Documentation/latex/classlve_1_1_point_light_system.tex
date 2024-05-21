@@ -1,0 +1,61 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Point\+Light\+System}
+\hypertarget{classlve_1_1_point_light_system}{}\label{classlve_1_1_point_light_system}\index{lve::PointLightSystem@{lve::PointLightSystem}}
+
+
+Classe représentant la première application utilisant Vulkan.  
+
+
+
+
+{\ttfamily \#include $<$point\+\_\+light\+\_\+system.\+h$>$}
+
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classlve_1_1_point_light_system_aae9d65862f015a6780913f6eb47c2c00}\label{classlve_1_1_point_light_system_aae9d65862f015a6780913f6eb47c2c00} 
+{\bfseries Point\+Light\+System} (\mbox{\hyperlink{classlve_1_1_lve_device}{Lve\+Device}} \&\+\_\+device, vk\+::\+Render\+Pass \+\_\+render\+Pass, vk\+::\+Descriptor\+Set\+Layout \+\_\+global\+Set\+Layout)
+\item 
+\Hypertarget{classlve_1_1_point_light_system_a5f07ad3d54953a154634935e8bc75d4c}\label{classlve_1_1_point_light_system_a5f07ad3d54953a154634935e8bc75d4c} 
+{\bfseries Point\+Light\+System} (const \mbox{\hyperlink{classlve_1_1_point_light_system}{Point\+Light\+System}} \&)=delete
+\item 
+\Hypertarget{classlve_1_1_point_light_system_a50462b32d442df1d07252c1525dce818}\label{classlve_1_1_point_light_system_a50462b32d442df1d07252c1525dce818} 
+\mbox{\hyperlink{classlve_1_1_point_light_system}{Point\+Light\+System}} {\bfseries operator=} (const \mbox{\hyperlink{classlve_1_1_point_light_system}{Point\+Light\+System}} \&)=delete
+\item 
+void \mbox{\hyperlink{classlve_1_1_point_light_system_a9a09d5b098102a1621482bd617e2d86b}{Update}} (const std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&\+\_\+game\+Objects, \mbox{\hyperlink{structlve_1_1_global_ubo}{Global\+Ubo}} \&\+\_\+ubo)
+\begin{DoxyCompactList}\small\item\em Rendu du système de lumières ponctuelles. \end{DoxyCompactList}\item 
+\Hypertarget{classlve_1_1_point_light_system_ab2b5d9cf0677dc432422e9379914eebf}\label{classlve_1_1_point_light_system_ab2b5d9cf0677dc432422e9379914eebf} 
+void {\bfseries Render} (const std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&\+\_\+game\+Objects, const \mbox{\hyperlink{classlve_1_1_lve_camera}{Lve\+Camera}} \&\+\_\+camera, const vk\+::\+Command\+Buffer \+\_\+command\+Buffer, const vk\+::\+Descriptor\+Set \+\_\+global\+Descriptor\+Set) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Classe représentant la première application utilisant Vulkan. 
+
+Cette classe gère l\textquotesingle{}exécution de la première application Vulkan, incluant la création de la fenêtre. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_point_light_system_a9a09d5b098102a1621482bd617e2d86b}\label{classlve_1_1_point_light_system_a9a09d5b098102a1621482bd617e2d86b} 
+\index{lve::PointLightSystem@{lve::PointLightSystem}!Update@{Update}}
+\index{Update@{Update}!lve::PointLightSystem@{lve::PointLightSystem}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void lve\+::\+Point\+Light\+System\+::\+Update (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} $>$ \&}]{\+\_\+game\+Objects,  }\item[{\mbox{\hyperlink{structlve_1_1_global_ubo}{Global\+Ubo}} \&}]{\+\_\+ubo }\end{DoxyParamCaption})}
+
+
+
+Rendu du système de lumières ponctuelles. 
+
+Cette méthode effectue le rendu du système de lumières ponctuelles en utilisant le pipeline de rendu spécifié. Elle lie également les ensembles de descripteurs globaux nécessaires pour le rendu. Enfin, elle utilise une commande de dessin pour rendre les lumières ponctuelles.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+game\+Objects} & \\
+\hline
+{\em \+\_\+ubo} & \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Systems/point\+\_\+light\+\_\+system.\+h\item 
+sources/\+Systems/point\+\_\+light\+\_\+system.\+cpp\end{DoxyCompactItemize}

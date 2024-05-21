@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/LveEngine/lve_descriptors.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_d17dbbfb40e9127a51f93ba39cbbb546.html">LveEngine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">lve_descriptors.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;LveEngine/lve_device.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vulkan/vulkan.hpp&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// std</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span>lve</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_descriptor_set_layout.html">   17</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classlve_1_1_lve_descriptor_set_layout.html">LveDescriptorSetLayout</a></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_descriptor_set_layout_1_1_builder.html">   20</a></span>            <span class="keyword">class </span><a class="code hl_class" href="classlve_1_1_lve_descriptor_set_layout_1_1_builder.html">Builder</a></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_descriptor_set_layout_1_1_builder.html#a21c312aca9c1a221c09fd3738cacf6fc">   28</a></span>                    <span class="keyword">explicit</span> <a class="code hl_function" href="classlve_1_1_lve_descriptor_set_layout_1_1_builder.html#a21c312aca9c1a221c09fd3738cacf6fc">Builder</a>(<a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp; _lveDevice) : lveDevice{_lveDevice}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                    {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                    }</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                    <a class="code hl_class" href="classlve_1_1_lve_descriptor_set_layout_1_1_builder.html">Builder</a>&amp; <a class="code hl_function" href="classlve_1_1_lve_descriptor_set_layout_1_1_builder.html#a3484a7a2994c351709284c56eaf3c830">AddBinding</a>(uint32_t             _binding, vk::DescriptorType _descriptorType,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                                        vk::ShaderStageFlags _stageFlags, uint32_t        _count = 1);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                    std::unique_ptr&lt;LveDescriptorSetLayout&gt; <a class="code hl_function" href="classlve_1_1_lve_descriptor_set_layout_1_1_builder.html#a10d3811bb46f1a7e3833a579a654281a">Build</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                    <a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp; lveDevice;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                    std::unordered_map&lt;uint32_t, vk::DescriptorSetLayoutBinding&gt; bindings{};</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            };</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <a class="code hl_function" href="classlve_1_1_lve_descriptor_set_layout.html#a35feeecc25a760260c10809002454128">LveDescriptorSetLayout</a>(LveDevice&amp;                                                   _lveDevice,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                                   std::unordered_map&lt;uint32_t, vk::DescriptorSetLayoutBinding&gt; _bindings);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <a class="code hl_function" href="classlve_1_1_lve_descriptor_set_layout.html#a04241fd21414683fa27a478580b567c1">~LveDescriptorSetLayout</a>();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_descriptor_set_layout.html#a2f5e3b96120e8b04a4b092db5f297ed7">   76</a></span>            <a class="code hl_function" href="classlve_1_1_lve_descriptor_set_layout.html#a2f5e3b96120e8b04a4b092db5f297ed7">LveDescriptorSetLayout</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlve_1_1_lve_descriptor_set_layout.html">LveDescriptorSetLayout</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_descriptor_set_layout.html#a43fde8b41fdee7da7c75712fdbc65049">   81</a></span>            <a class="code hl_class" href="classlve_1_1_lve_descriptor_set_layout.html">LveDescriptorSetLayout</a>&amp; <a class="code hl_function" href="classlve_1_1_lve_descriptor_set_layout.html#a43fde8b41fdee7da7c75712fdbc65049">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlve_1_1_lve_descriptor_set_layout.html">LveDescriptorSetLayout</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_descriptor_set_layout.html#a9feee64b71e9fe5310ac50fc8923b1af">   89</a></span>            vk::DescriptorSetLayout <a class="code hl_function" href="classlve_1_1_lve_descriptor_set_layout.html#a9feee64b71e9fe5310ac50fc8923b1af">GetDescriptorSetLayout</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> descriptorSetLayout; }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp; lveDevice; </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            vk::DescriptorSetLayout descriptorSetLayout; </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            std::unordered_map&lt;uint32_t, vk::DescriptorSetLayoutBinding&gt; bindings;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_descriptor_set_layout.html#a2851feef02cfcddf960ef4052101ee6e">   97</a></span>            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classlve_1_1_lve_descriptor_writer.html">LveDescriptorWriter</a>; </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    };</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="};">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_descriptor_pool.html">  100</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classlve_1_1_lve_descriptor_pool.html">LveDescriptorPool</a></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="};">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_descriptor_pool_1_1_builder.html">  103</a></span>            <span class="keyword">class </span><a class="code hl_class" href="classlve_1_1_lve_descriptor_pool_1_1_builder.html">Builder</a></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00113" data-start="{" data-end="}">
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_descriptor_pool_1_1_builder.html#a1e387fb18d76be21989d4d4d11c27fb1">  113</a></span>                    <span class="keyword">explicit</span> <a class="code hl_function" href="classlve_1_1_lve_descriptor_pool_1_1_builder.html#a1e387fb18d76be21989d4d4d11c27fb1">Builder</a>(<a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp; _lveDevice) : lveDevice{_lveDevice}</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                    {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                    }</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                    <a class="code hl_class" href="classlve_1_1_lve_descriptor_pool_1_1_builder.html">Builder</a>&amp; <a class="code hl_function" href="classlve_1_1_lve_descriptor_pool_1_1_builder.html#ab0b7634459ce414dcd86d1a6c3927d9f">AddPoolSize</a>(vk::DescriptorType _descriptorType, uint32_t _count);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                    <a class="code hl_class" href="classlve_1_1_lve_descriptor_pool_1_1_builder.html">Builder</a>&amp; <a class="code hl_function" href="classlve_1_1_lve_descriptor_pool_1_1_builder.html#a383c79857f57f53f811851983986adb6">SetPoolFlags</a>(vk::DescriptorPoolCreateFlags _flags);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                    <a class="code hl_class" href="classlve_1_1_lve_descriptor_pool_1_1_builder.html">Builder</a>&amp; <a class="code hl_function" href="classlve_1_1_lve_descriptor_pool_1_1_builder.html#a690d6728d7bd24960884bcdf10e095b8">SetMaxSets</a>(uint32_t _count);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                    [[nodiscard]] std::unique_ptr&lt;LveDescriptorPool&gt; <a class="code hl_function" href="classlve_1_1_lve_descriptor_pool_1_1_builder.html#a4b2eef819c6bb219f9979b9b7def832b">Build</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                    <a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp; lveDevice; </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                    uint32_t   maxSets;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                    vk::DescriptorPoolCreateFlags poolFlags; </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                    std::vector&lt;vk::DescriptorPoolSize&gt; poolSizes;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            };</div>
+</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            <a class="code hl_function" href="classlve_1_1_lve_descriptor_pool.html#a5b859fe2bbd70716d7733c5e9c34e2d2">LveDescriptorPool</a>(</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                <a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp;                                 _lveDevice,</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                uint32_t                                   _maxSets,</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                vk::DescriptorPoolCreateFlags              _poolFlags,</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                <span class="keyword">const</span> std::vector&lt;vk::DescriptorPoolSize&gt;&amp; _poolSizes);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            <a class="code hl_function" href="classlve_1_1_lve_descriptor_pool.html#ab254708b56169668c336729b1d55f483">~LveDescriptorPool</a>();</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_descriptor_pool.html#aa2201681fe652dcf5f6790f34109ff5e">  188</a></span>            <a class="code hl_function" href="classlve_1_1_lve_descriptor_pool.html#aa2201681fe652dcf5f6790f34109ff5e">LveDescriptorPool</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlve_1_1_lve_descriptor_pool.html">LveDescriptorPool</a>&amp;)            = <span class="keyword">delete</span>; </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_descriptor_pool.html#ac50a6003da364bf1f853fcea6e8247df">  189</a></span>            <a class="code hl_class" href="classlve_1_1_lve_descriptor_pool.html">LveDescriptorPool</a>&amp; <a class="code hl_function" href="classlve_1_1_lve_descriptor_pool.html#ac50a6003da364bf1f853fcea6e8247df">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classlve_1_1_lve_descriptor_pool.html">LveDescriptorPool</a>&amp;) = <span class="keyword">delete</span>; </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="classlve_1_1_lve_descriptor_pool.html#a11aa941d871760d9f8bba5a6e58842ea">AllocateDescriptor</a>(</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                vk::DescriptorSetLayout _descriptorSetLayout, vk::DescriptorSet&amp; _descriptor) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_lve_descriptor_pool.html#a545e2f9224baa0e1e25fb9a98d09902c">FreeDescriptors</a>(<span class="keyword">const</span> std::vector&lt;vk::DescriptorSet&gt;&amp; _descriptors) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_lve_descriptor_pool.html#ab5c8d23fa37c074a0b83ea8af9e9fda8">ResetPool</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            vk::DescriptorPool GetDescriptorPool() { <span class="keywordflow">return</span> descriptorPool; }</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            <a class="code hl_class" href="classlve_1_1_lve_device.html">LveDevice</a>&amp;         lveDevice;      </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            vk::DescriptorPool descriptorPool; </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_descriptor_pool.html#a2851feef02cfcddf960ef4052101ee6e">  219</a></span>            <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classlve_1_1_lve_descriptor_writer.html">LveDescriptorWriter</a>;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    };</div>
+</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="foldopen" id="foldopen00223" data-start="{" data-end="};">
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="classlve_1_1_lve_descriptor_writer.html">  223</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classlve_1_1_lve_descriptor_writer.html">LveDescriptorWriter</a></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            <a class="code hl_function" href="classlve_1_1_lve_descriptor_writer.html#aab1933f682c63e51046bafdc32b887c2">LveDescriptorWriter</a>(<a class="code hl_class" href="classlve_1_1_lve_descriptor_set_layout.html">LveDescriptorSetLayout</a>&amp; _setLayout, <a class="code hl_class" href="classlve_1_1_lve_descriptor_pool.html">LveDescriptorPool</a>&amp; _pool);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>            <a class="code hl_class" href="classlve_1_1_lve_descriptor_writer.html">LveDescriptorWriter</a>&amp; <a class="code hl_function" href="classlve_1_1_lve_descriptor_writer.html#a8c45a7412db7306369ef1f86bcd84a1b">WriteBuffer</a>(uint32_t _binding, <span class="keyword">const</span> vk::DescriptorBufferInfo* _bufferInfo);</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            <a class="code hl_class" href="classlve_1_1_lve_descriptor_writer.html">LveDescriptorWriter</a>&amp; <a class="code hl_function" href="classlve_1_1_lve_descriptor_writer.html#a4b38b9ad83581458c9284985ed24e594">WriteImage</a>(uint32_t _binding, <span class="keyword">const</span> vk::DescriptorImageInfo* _imageInfo);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            <span class="keywordtype">bool</span> <a class="code hl_function" href="classlve_1_1_lve_descriptor_writer.html#a413e8222d4749423fd1f4245d9782da8">Build</a>(vk::DescriptorSet&amp; _set);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            <span class="keywordtype">void</span> <a class="code hl_function" href="classlve_1_1_lve_descriptor_writer.html#a2ce798ce441fcddc466b20cbdccc5768">Overwrite</a>(<span class="keyword">const</span> vk::DescriptorSet&amp; _set);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            <a class="code hl_class" href="classlve_1_1_lve_descriptor_set_layout.html">LveDescriptorSetLayout</a>&amp; setLayout;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            <a class="code hl_class" href="classlve_1_1_lve_descriptor_pool.html">LveDescriptorPool</a>&amp; pool;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>            std::vector&lt;vk::WriteDescriptorSet&gt; writes;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    };</div>
+</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>} <span class="comment">// namespace lve</span></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_pool_1_1_builder_html"><div class="ttname"><a href="classlve_1_1_lve_descriptor_pool_1_1_builder.html">lve::LveDescriptorPool::Builder</a></div><div class="ttdef"><b>Definition</b> lve_descriptors.h:104</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_pool_1_1_builder_html_a1e387fb18d76be21989d4d4d11c27fb1"><div class="ttname"><a href="classlve_1_1_lve_descriptor_pool_1_1_builder.html#a1e387fb18d76be21989d4d4d11c27fb1">lve::LveDescriptorPool::Builder::Builder</a></div><div class="ttdeci">Builder(LveDevice &amp;_lveDevice)</div><div class="ttdoc">Constructeur de la classe Builder.</div><div class="ttdef"><b>Definition</b> lve_descriptors.h:113</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_pool_1_1_builder_html_a383c79857f57f53f811851983986adb6"><div class="ttname"><a href="classlve_1_1_lve_descriptor_pool_1_1_builder.html#a383c79857f57f53f811851983986adb6">lve::LveDescriptorPool::Builder::SetPoolFlags</a></div><div class="ttdeci">Builder &amp; SetPoolFlags(vk::DescriptorPoolCreateFlags _flags)</div><div class="ttdoc">Définit les indicateurs de création du pool de descripteurs.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:92</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_pool_1_1_builder_html_a4b2eef819c6bb219f9979b9b7def832b"><div class="ttname"><a href="classlve_1_1_lve_descriptor_pool_1_1_builder.html#a4b2eef819c6bb219f9979b9b7def832b">lve::LveDescriptorPool::Builder::Build</a></div><div class="ttdeci">std::unique_ptr&lt; LveDescriptorPool &gt; Build() const</div><div class="ttdoc">Construit et retourne un objet LveDescriptorPool.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:105</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_pool_1_1_builder_html_a690d6728d7bd24960884bcdf10e095b8"><div class="ttname"><a href="classlve_1_1_lve_descriptor_pool_1_1_builder.html#a690d6728d7bd24960884bcdf10e095b8">lve::LveDescriptorPool::Builder::SetMaxSets</a></div><div class="ttdeci">Builder &amp; SetMaxSets(uint32_t _count)</div><div class="ttdoc">Définit le nombre maximal d'ensembles de descripteurs pouvant être alloués à partir du pool.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:99</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_pool_1_1_builder_html_ab0b7634459ce414dcd86d1a6c3927d9f"><div class="ttname"><a href="classlve_1_1_lve_descriptor_pool_1_1_builder.html#ab0b7634459ce414dcd86d1a6c3927d9f">lve::LveDescriptorPool::Builder::AddPoolSize</a></div><div class="ttdeci">Builder &amp; AddPoolSize(vk::DescriptorType _descriptorType, uint32_t _count)</div><div class="ttdoc">Ajoute une taille de pool de descripteurs au builder.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:85</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_pool_html"><div class="ttname"><a href="classlve_1_1_lve_descriptor_pool.html">lve::LveDescriptorPool</a></div><div class="ttdef"><b>Definition</b> lve_descriptors.h:101</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_pool_html_a11aa941d871760d9f8bba5a6e58842ea"><div class="ttname"><a href="classlve_1_1_lve_descriptor_pool.html#a11aa941d871760d9f8bba5a6e58842ea">lve::LveDescriptorPool::AllocateDescriptor</a></div><div class="ttdeci">bool AllocateDescriptor(vk::DescriptorSetLayout _descriptorSetLayout, vk::DescriptorSet &amp;_descriptor) const</div><div class="ttdoc">Alloue un ensemble de descripteurs à partir du pool.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:140</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_pool_html_a545e2f9224baa0e1e25fb9a98d09902c"><div class="ttname"><a href="classlve_1_1_lve_descriptor_pool.html#a545e2f9224baa0e1e25fb9a98d09902c">lve::LveDescriptorPool::FreeDescriptors</a></div><div class="ttdeci">void FreeDescriptors(const std::vector&lt; vk::DescriptorSet &gt; &amp;_descriptors) const</div><div class="ttdoc">Libère un ensemble de descripteurs.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:161</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_pool_html_a5b859fe2bbd70716d7733c5e9c34e2d2"><div class="ttname"><a href="classlve_1_1_lve_descriptor_pool.html#a5b859fe2bbd70716d7733c5e9c34e2d2">lve::LveDescriptorPool::LveDescriptorPool</a></div><div class="ttdeci">LveDescriptorPool(LveDevice &amp;_lveDevice, uint32_t _maxSets, vk::DescriptorPoolCreateFlags _poolFlags, const std::vector&lt; vk::DescriptorPoolSize &gt; &amp;_poolSizes)</div><div class="ttdoc">Constructeur de LveDescriptorPool.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:112</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_pool_html_aa2201681fe652dcf5f6790f34109ff5e"><div class="ttname"><a href="classlve_1_1_lve_descriptor_pool.html#aa2201681fe652dcf5f6790f34109ff5e">lve::LveDescriptorPool::LveDescriptorPool</a></div><div class="ttdeci">LveDescriptorPool(const LveDescriptorPool &amp;)=delete</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_pool_html_ab254708b56169668c336729b1d55f483"><div class="ttname"><a href="classlve_1_1_lve_descriptor_pool.html#ab254708b56169668c336729b1d55f483">lve::LveDescriptorPool::~LveDescriptorPool</a></div><div class="ttdeci">~LveDescriptorPool()</div><div class="ttdoc">Destructeur de LveDescriptorPool.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:135</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_pool_html_ab5c8d23fa37c074a0b83ea8af9e9fda8"><div class="ttname"><a href="classlve_1_1_lve_descriptor_pool.html#ab5c8d23fa37c074a0b83ea8af9e9fda8">lve::LveDescriptorPool::ResetPool</a></div><div class="ttdeci">void ResetPool() const</div><div class="ttdoc">Réinitialise le pool de descripteurs.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:169</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_pool_html_ac50a6003da364bf1f853fcea6e8247df"><div class="ttname"><a href="classlve_1_1_lve_descriptor_pool.html#ac50a6003da364bf1f853fcea6e8247df">lve::LveDescriptorPool::operator=</a></div><div class="ttdeci">LveDescriptorPool &amp; operator=(const LveDescriptorPool &amp;)=delete</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_set_layout_1_1_builder_html"><div class="ttname"><a href="classlve_1_1_lve_descriptor_set_layout_1_1_builder.html">lve::LveDescriptorSetLayout::Builder</a></div><div class="ttdef"><b>Definition</b> lve_descriptors.h:21</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_set_layout_1_1_builder_html_a10d3811bb46f1a7e3833a579a654281a"><div class="ttname"><a href="classlve_1_1_lve_descriptor_set_layout_1_1_builder.html#a10d3811bb46f1a7e3833a579a654281a">lve::LveDescriptorSetLayout::Builder::Build</a></div><div class="ttdeci">std::unique_ptr&lt; LveDescriptorSetLayout &gt; Build() const</div><div class="ttdoc">Construit et retourne un ensemble de descripteurs avec la mise en page spécifiée.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:36</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_set_layout_1_1_builder_html_a21c312aca9c1a221c09fd3738cacf6fc"><div class="ttname"><a href="classlve_1_1_lve_descriptor_set_layout_1_1_builder.html#a21c312aca9c1a221c09fd3738cacf6fc">lve::LveDescriptorSetLayout::Builder::Builder</a></div><div class="ttdeci">Builder(LveDevice &amp;_lveDevice)</div><div class="ttdoc">Constructeur de la classe Builder.</div><div class="ttdef"><b>Definition</b> lve_descriptors.h:28</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_set_layout_1_1_builder_html_a3484a7a2994c351709284c56eaf3c830"><div class="ttname"><a href="classlve_1_1_lve_descriptor_set_layout_1_1_builder.html#a3484a7a2994c351709284c56eaf3c830">lve::LveDescriptorSetLayout::Builder::AddBinding</a></div><div class="ttdeci">Builder &amp; AddBinding(uint32_t _binding, vk::DescriptorType _descriptorType, vk::ShaderStageFlags _stageFlags, uint32_t _count=1)</div><div class="ttdoc">Ajoute un binding à la mise en page de l'ensemble de descripteurs.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:12</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_set_layout_html"><div class="ttname"><a href="classlve_1_1_lve_descriptor_set_layout.html">lve::LveDescriptorSetLayout</a></div><div class="ttdoc">Classe représentant un agencement de jeu de descripteurs Vulkan.</div><div class="ttdef"><b>Definition</b> lve_descriptors.h:18</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_set_layout_html_a04241fd21414683fa27a478580b567c1"><div class="ttname"><a href="classlve_1_1_lve_descriptor_set_layout.html#a04241fd21414683fa27a478580b567c1">lve::LveDescriptorSetLayout::~LveDescriptorSetLayout</a></div><div class="ttdeci">~LveDescriptorSetLayout()</div><div class="ttdoc">Destructeur de la classe LveDescriptorSetLayout.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:78</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_set_layout_html_a2f5e3b96120e8b04a4b092db5f297ed7"><div class="ttname"><a href="classlve_1_1_lve_descriptor_set_layout.html#a2f5e3b96120e8b04a4b092db5f297ed7">lve::LveDescriptorSetLayout::LveDescriptorSetLayout</a></div><div class="ttdeci">LveDescriptorSetLayout(const LveDescriptorSetLayout &amp;)=delete</div><div class="ttdoc">Constructeur de copie supprimé.</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_set_layout_html_a35feeecc25a760260c10809002454128"><div class="ttname"><a href="classlve_1_1_lve_descriptor_set_layout.html#a35feeecc25a760260c10809002454128">lve::LveDescriptorSetLayout::LveDescriptorSetLayout</a></div><div class="ttdeci">LveDescriptorSetLayout(LveDevice &amp;_lveDevice, std::unordered_map&lt; uint32_t, vk::DescriptorSetLayoutBinding &gt; _bindings)</div><div class="ttdoc">Constructeur de la classe LveDescriptorSetLayout.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:43</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_set_layout_html_a43fde8b41fdee7da7c75712fdbc65049"><div class="ttname"><a href="classlve_1_1_lve_descriptor_set_layout.html#a43fde8b41fdee7da7c75712fdbc65049">lve::LveDescriptorSetLayout::operator=</a></div><div class="ttdeci">LveDescriptorSetLayout &amp; operator=(const LveDescriptorSetLayout &amp;)=delete</div><div class="ttdoc">Opérateur d'affectation supprimé.</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_set_layout_html_a9feee64b71e9fe5310ac50fc8923b1af"><div class="ttname"><a href="classlve_1_1_lve_descriptor_set_layout.html#a9feee64b71e9fe5310ac50fc8923b1af">lve::LveDescriptorSetLayout::GetDescriptorSetLayout</a></div><div class="ttdeci">vk::DescriptorSetLayout GetDescriptorSetLayout() const</div><div class="ttdoc">Obtient la mise en page de l'ensemble de descripteurs.</div><div class="ttdef"><b>Definition</b> lve_descriptors.h:89</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_writer_html"><div class="ttname"><a href="classlve_1_1_lve_descriptor_writer.html">lve::LveDescriptorWriter</a></div><div class="ttdef"><b>Definition</b> lve_descriptors.h:224</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_writer_html_a2ce798ce441fcddc466b20cbdccc5768"><div class="ttname"><a href="classlve_1_1_lve_descriptor_writer.html#a2ce798ce441fcddc466b20cbdccc5768">lve::LveDescriptorWriter::Overwrite</a></div><div class="ttdeci">void Overwrite(const vk::DescriptorSet &amp;_set)</div><div class="ttdoc">Écrit à nouveau les informations de descripteur dans un ensemble de descripteurs existant.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:236</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_writer_html_a413e8222d4749423fd1f4245d9782da8"><div class="ttname"><a href="classlve_1_1_lve_descriptor_writer.html#a413e8222d4749423fd1f4245d9782da8">lve::LveDescriptorWriter::Build</a></div><div class="ttdeci">bool Build(vk::DescriptorSet &amp;_set)</div><div class="ttdoc">Construit un ensemble de descripteurs à partir des écritures précédentes.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:228</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_writer_html_a4b38b9ad83581458c9284985ed24e594"><div class="ttname"><a href="classlve_1_1_lve_descriptor_writer.html#a4b38b9ad83581458c9284985ed24e594">lve::LveDescriptorWriter::WriteImage</a></div><div class="ttdeci">LveDescriptorWriter &amp; WriteImage(uint32_t _binding, const vk::DescriptorImageInfo *_imageInfo)</div><div class="ttdoc">Écriture d'informations d'image dans le descripteur.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:205</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_writer_html_a8c45a7412db7306369ef1f86bcd84a1b"><div class="ttname"><a href="classlve_1_1_lve_descriptor_writer.html#a8c45a7412db7306369ef1f86bcd84a1b">lve::LveDescriptorWriter::WriteBuffer</a></div><div class="ttdeci">LveDescriptorWriter &amp; WriteBuffer(uint32_t _binding, const vk::DescriptorBufferInfo *_bufferInfo)</div><div class="ttdoc">Écriture d'informations de tampon dans le descripteur.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:183</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_descriptor_writer_html_aab1933f682c63e51046bafdc32b887c2"><div class="ttname"><a href="classlve_1_1_lve_descriptor_writer.html#aab1933f682c63e51046bafdc32b887c2">lve::LveDescriptorWriter::LveDescriptorWriter</a></div><div class="ttdeci">LveDescriptorWriter(LveDescriptorSetLayout &amp;_setLayout, LveDescriptorPool &amp;_pool)</div><div class="ttdoc">Constructeur de LveDescriptorWriter.</div><div class="ttdef"><b>Definition</b> lve_descriptors.cpp:177</div></div>
+<div class="ttc" id="aclasslve_1_1_lve_device_html"><div class="ttname"><a href="classlve_1_1_lve_device.html">lve::LveDevice</a></div><div class="ttdoc">Classe représentant un périphérique Vulkan.</div><div class="ttdef"><b>Definition</b> lve_device.h:41</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+GÃ©nÃ©rÃ© par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

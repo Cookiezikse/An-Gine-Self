@@ -1,0 +1,308 @@
+\doxysection{R√©f√©rence de la classe Time\+Module}
+\hypertarget{class_time_module}{}\label{class_time_module}\index{TimeModule@{TimeModule}}
+
+
+\doxylink{class_module}{Module} de gestion du temps pour le moteur de jeu.  
+
+
+
+
+{\ttfamily \#include $<$Time\+Module.\+h$>$}
+
+Graphe d\textquotesingle{}h√©ritage de Time\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_time_module}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_time_module_a6993b5d4f7722fbbcb4bc7024016e198}\label{class_time_module_a6993b5d4f7722fbbcb4bc7024016e198} 
+{\bfseries Time\+Module} ()=default
+\begin{DoxyCompactList}\small\item\em Constructeur par dÈfaut de la classe \doxylink{class_time_module}{Time\+Module}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_time_module_a01cf79097a8152c883e24adef5191584}{Get\+Elapsed\+Time}} () const
+\begin{DoxyCompactList}\small\item\em RÈcupËre le temps ÈcoulÈ depuis la derniËre frame en secondes. \end{DoxyCompactList}\item 
+\Hypertarget{class_time_module_acc23355369a316893d25082c80c34c57}\label{class_time_module_acc23355369a316893d25082c80c34c57} 
+void {\bfseries Reset} ()
+\begin{DoxyCompactList}\small\item\em RÈinitialise le temps. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_module_a7c899a7587a3e21e509f4c1634ca927d}{Init}} () override
+\begin{DoxyCompactList}\small\item\em Initialise le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_module_a74f9d64849e112aeddc97551ed5a048f}{Start}} () override
+\begin{DoxyCompactList}\small\item\em DÈmarre le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_module_ae87a5a47b9b219ecdb9a887cf5d92bae}{Fixed\+Update}} () override
+\begin{DoxyCompactList}\small\item\em Effectue une mise ‡ jour fixe du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_module_a7e9d8ea203c2476ba0669c6fb4dee9d5}{Update}} () override
+\begin{DoxyCompactList}\small\item\em Met ‡ jour le temps ÈcoulÈ depuis la derniËre frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_module_a20b4981ab2cdd594b50d3e5434d54135}{Pre\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction prÈ-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_module_acab405e93416340762114ae8bba5c957}{Render}} () override
+\begin{DoxyCompactList}\small\item\em Rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_module_afc5afd0dd2d955e6f93f008de1f0d9eb}{Render\+Gui}} () override
+\begin{DoxyCompactList}\small\item\em Rendu de l\textquotesingle{}interface graphique du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_module_a70449925f5ea4db4e44abe77988a0018}{Post\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction post-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_module_a05198d257438a41a2125811fb86880a6}{Release}} () override
+\begin{DoxyCompactList}\small\item\em LibËre les ressources utilisÈes par le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_module_ae726537b2b50d9ad443be1586b883de6}{Finalize}} () override
+\begin{DoxyCompactList}\small\item\em Finalise le module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static float \mbox{\hyperlink{class_time_module_adc5340bbb04dd931c6a69130e5d5429c}{Get\+Delta\+Time}} ()
+\begin{DoxyCompactList}\small\item\em RÈcupËre le delta time en secondes. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_time_module_a047203509e03c85a4bfaba186625f317}{Get\+Delta\+Time\+Milliseconds}} ()
+\begin{DoxyCompactList}\small\item\em RÈcupËre le delta time en millisecondes. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_time_module_a2410bbc0ea2d5ec90d7823a4b5ab040d}{Get\+Delta\+Time\+Seconds}} ()
+\begin{DoxyCompactList}\small\item\em RÈcupËre le delta time en secondes. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_time_module_a837007db2eddf0a55044d80b251df857}{Get\+Delta\+Time\+Minutes}} ()
+\begin{DoxyCompactList}\small\item\em RÈcupËre le delta time en minutes. \end{DoxyCompactList}\item 
+static float \mbox{\hyperlink{class_time_module_a24435d6caddad5a0c82c9803c51d4bf6}{Get\+Delta\+Time\+Hours}} ()
+\begin{DoxyCompactList}\small\item\em RÈcupËre le delta time en heures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_time_module_a332e8b9d41695da2adbd1c8fd439fca8}\label{class_time_module_a332e8b9d41695da2adbd1c8fd439fca8} 
+static float {\bfseries delta\+Time} = 0.\+0f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Membres h√©rit√©s additionnels}
+\doxysubsection*{Fonctions membres prot√©g√©es h√©rit√©s de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_af09dc286b704160d8f0f273e1fe8576b}{\texorpdfstring{$\sim$}{\string~}\+Module}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur protÈgÈ. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs prot√©g√©s h√©rit√©s de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_manager}{Module\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_module_a8d9f92fc1216d933c961bfa685b0ad6f}{module\+Manager}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description d√©taill√©e}
+\doxylink{class_module}{Module} de gestion du temps pour le moteur de jeu. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_time_module_ae726537b2b50d9ad443be1586b883de6}\label{class_time_module_ae726537b2b50d9ad443be1586b883de6} 
+\index{TimeModule@{TimeModule}!Finalize@{Finalize}}
+\index{Finalize@{Finalize}!TimeModule@{TimeModule}}
+\doxysubsubsection{\texorpdfstring{Finalize()}{Finalize()}}
+{\footnotesize\ttfamily void Time\+Module\+::\+Finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finalise le module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_module_a4ed07ee636825b626c8f5021c34e408c}{Module}}.
+
+\Hypertarget{class_time_module_ae87a5a47b9b219ecdb9a887cf5d92bae}\label{class_time_module_ae87a5a47b9b219ecdb9a887cf5d92bae} 
+\index{TimeModule@{TimeModule}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!TimeModule@{TimeModule}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Time\+Module\+::\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Effectue une mise ‡ jour fixe du module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_module_a4bbf5f6e563f86794d7ae718371f1ca4}{Module}}.
+
+\Hypertarget{class_time_module_adc5340bbb04dd931c6a69130e5d5429c}\label{class_time_module_adc5340bbb04dd931c6a69130e5d5429c} 
+\index{TimeModule@{TimeModule}!GetDeltaTime@{GetDeltaTime}}
+\index{GetDeltaTime@{GetDeltaTime}!TimeModule@{TimeModule}}
+\doxysubsubsection{\texorpdfstring{GetDeltaTime()}{GetDeltaTime()}}
+{\footnotesize\ttfamily static float Time\+Module\+::\+Get\+Delta\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+RÈcupËre le delta time en secondes. 
+
+\begin{DoxyReturn}{Renvoie}
+Le delta time en secondes. 
+\end{DoxyReturn}
+\Hypertarget{class_time_module_a24435d6caddad5a0c82c9803c51d4bf6}\label{class_time_module_a24435d6caddad5a0c82c9803c51d4bf6} 
+\index{TimeModule@{TimeModule}!GetDeltaTimeHours@{GetDeltaTimeHours}}
+\index{GetDeltaTimeHours@{GetDeltaTimeHours}!TimeModule@{TimeModule}}
+\doxysubsubsection{\texorpdfstring{GetDeltaTimeHours()}{GetDeltaTimeHours()}}
+{\footnotesize\ttfamily static float Time\+Module\+::\+Get\+Delta\+Time\+Hours (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+RÈcupËre le delta time en heures. 
+
+\begin{DoxyReturn}{Renvoie}
+Le delta time en heures. 
+\end{DoxyReturn}
+\Hypertarget{class_time_module_a047203509e03c85a4bfaba186625f317}\label{class_time_module_a047203509e03c85a4bfaba186625f317} 
+\index{TimeModule@{TimeModule}!GetDeltaTimeMilliseconds@{GetDeltaTimeMilliseconds}}
+\index{GetDeltaTimeMilliseconds@{GetDeltaTimeMilliseconds}!TimeModule@{TimeModule}}
+\doxysubsubsection{\texorpdfstring{GetDeltaTimeMilliseconds()}{GetDeltaTimeMilliseconds()}}
+{\footnotesize\ttfamily static float Time\+Module\+::\+Get\+Delta\+Time\+Milliseconds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+RÈcupËre le delta time en millisecondes. 
+
+\begin{DoxyReturn}{Renvoie}
+Le delta time en millisecondes. 
+\end{DoxyReturn}
+\Hypertarget{class_time_module_a837007db2eddf0a55044d80b251df857}\label{class_time_module_a837007db2eddf0a55044d80b251df857} 
+\index{TimeModule@{TimeModule}!GetDeltaTimeMinutes@{GetDeltaTimeMinutes}}
+\index{GetDeltaTimeMinutes@{GetDeltaTimeMinutes}!TimeModule@{TimeModule}}
+\doxysubsubsection{\texorpdfstring{GetDeltaTimeMinutes()}{GetDeltaTimeMinutes()}}
+{\footnotesize\ttfamily static float Time\+Module\+::\+Get\+Delta\+Time\+Minutes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+RÈcupËre le delta time en minutes. 
+
+\begin{DoxyReturn}{Renvoie}
+Le delta time en minutes. 
+\end{DoxyReturn}
+\Hypertarget{class_time_module_a2410bbc0ea2d5ec90d7823a4b5ab040d}\label{class_time_module_a2410bbc0ea2d5ec90d7823a4b5ab040d} 
+\index{TimeModule@{TimeModule}!GetDeltaTimeSeconds@{GetDeltaTimeSeconds}}
+\index{GetDeltaTimeSeconds@{GetDeltaTimeSeconds}!TimeModule@{TimeModule}}
+\doxysubsubsection{\texorpdfstring{GetDeltaTimeSeconds()}{GetDeltaTimeSeconds()}}
+{\footnotesize\ttfamily static float Time\+Module\+::\+Get\+Delta\+Time\+Seconds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+RÈcupËre le delta time en secondes. 
+
+\begin{DoxyReturn}{Renvoie}
+Le delta time en secondes. 
+\end{DoxyReturn}
+\Hypertarget{class_time_module_a01cf79097a8152c883e24adef5191584}\label{class_time_module_a01cf79097a8152c883e24adef5191584} 
+\index{TimeModule@{TimeModule}!GetElapsedTime@{GetElapsedTime}}
+\index{GetElapsedTime@{GetElapsedTime}!TimeModule@{TimeModule}}
+\doxysubsubsection{\texorpdfstring{GetElapsedTime()}{GetElapsedTime()}}
+{\footnotesize\ttfamily float Time\+Module\+::\+Get\+Elapsed\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+RÈcupËre le temps ÈcoulÈ depuis la derniËre frame en secondes. 
+
+\begin{DoxyReturn}{Renvoie}
+Le temps ÈcoulÈ depuis la derniËre frame en secondes. 
+\end{DoxyReturn}
+\Hypertarget{class_time_module_a7c899a7587a3e21e509f4c1634ca927d}\label{class_time_module_a7c899a7587a3e21e509f4c1634ca927d} 
+\index{TimeModule@{TimeModule}!Init@{Init}}
+\index{Init@{Init}!TimeModule@{TimeModule}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Time\+Module\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialise le module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_module_a0151ba4ab62f6e91251b0a20b168985e}{Module}}.
+
+\Hypertarget{class_time_module_a70449925f5ea4db4e44abe77988a0018}\label{class_time_module_a70449925f5ea4db4e44abe77988a0018} 
+\index{TimeModule@{TimeModule}!PostRender@{PostRender}}
+\index{PostRender@{PostRender}!TimeModule@{TimeModule}}
+\doxysubsubsection{\texorpdfstring{PostRender()}{PostRender()}}
+{\footnotesize\ttfamily void Time\+Module\+::\+Post\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction post-\/rendu du module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_module_a0bb23668b2717e4bb3b4e1f6350a7e87}{Module}}.
+
+\Hypertarget{class_time_module_a20b4981ab2cdd594b50d3e5434d54135}\label{class_time_module_a20b4981ab2cdd594b50d3e5434d54135} 
+\index{TimeModule@{TimeModule}!PreRender@{PreRender}}
+\index{PreRender@{PreRender}!TimeModule@{TimeModule}}
+\doxysubsubsection{\texorpdfstring{PreRender()}{PreRender()}}
+{\footnotesize\ttfamily void Time\+Module\+::\+Pre\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction prÈ-\/rendu du module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_module_a7a88e7aaddd55bf9f15beb8d297afd1e}{Module}}.
+
+\Hypertarget{class_time_module_a05198d257438a41a2125811fb86880a6}\label{class_time_module_a05198d257438a41a2125811fb86880a6} 
+\index{TimeModule@{TimeModule}!Release@{Release}}
+\index{Release@{Release}!TimeModule@{TimeModule}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Time\+Module\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+LibËre les ressources utilisÈes par le module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_module_a7e2e4615b80a57040eccf9794bee1007}{Module}}.
+
+\Hypertarget{class_time_module_acab405e93416340762114ae8bba5c957}\label{class_time_module_acab405e93416340762114ae8bba5c957} 
+\index{TimeModule@{TimeModule}!Render@{Render}}
+\index{Render@{Render}!TimeModule@{TimeModule}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Time\+Module\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu du module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_module_ab6ec60e3eced3faa0217348cfca2785f}{Module}}.
+
+\Hypertarget{class_time_module_afc5afd0dd2d955e6f93f008de1f0d9eb}\label{class_time_module_afc5afd0dd2d955e6f93f008de1f0d9eb} 
+\index{TimeModule@{TimeModule}!RenderGui@{RenderGui}}
+\index{RenderGui@{RenderGui}!TimeModule@{TimeModule}}
+\doxysubsubsection{\texorpdfstring{RenderGui()}{RenderGui()}}
+{\footnotesize\ttfamily void Time\+Module\+::\+Render\+Gui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu de l\textquotesingle{}interface graphique du module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_module_aadc90c55712eba976e6bf87318713d11}{Module}}.
+
+\Hypertarget{class_time_module_a74f9d64849e112aeddc97551ed5a048f}\label{class_time_module_a74f9d64849e112aeddc97551ed5a048f} 
+\index{TimeModule@{TimeModule}!Start@{Start}}
+\index{Start@{Start}!TimeModule@{TimeModule}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Time\+Module\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+DÈmarre le module. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_module_aed9229993dada6ed800f73036aade722}{Module}}.
+
+\Hypertarget{class_time_module_a7e9d8ea203c2476ba0669c6fb4dee9d5}\label{class_time_module_a7e9d8ea203c2476ba0669c6fb4dee9d5} 
+\index{TimeModule@{TimeModule}!Update@{Update}}
+\index{Update@{Update}!TimeModule@{TimeModule}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Time\+Module\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Met ‡ jour le temps ÈcoulÈ depuis la derniËre frame. 
+
+
+
+R√©impl√©ment√©e √† partir de \mbox{\hyperlink{class_module_abf63d5bb322a751fbf95f2da0978817b}{Module}}.
+
+
+
+La documentation de cette classe a √©t√© g√©n√©r√©e √† partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Modules/Time\+Module.\+h\item 
+sources/\+Modules/Time\+Module.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,58 @@
+\doxysection{RÃ©fÃ©rence de la classe lve\+::Light\+Game\+Object}
+\hypertarget{classlve_1_1_light_game_object}{}\label{classlve_1_1_light_game_object}\index{lve::LightGameObject@{lve::LightGameObject}}
+
+
+Représente un objet lumière dans le jeu.  
+
+
+
+
+{\ttfamily \#include $<$Light\+Game\+Object.\+h$>$}
+
+\doxysubsubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classlve_1_1_light_game_object_a7606761a10f9b755e8d3952f5642bc64}{Create}} (float \+\_\+intensity=10.f, float \+\_\+radius=1.f, glm\+::vec3 \+\_\+position=VEC3\+\_\+\+ZERO, glm\+::vec3 \+\_\+rotate=VEC3\+\_\+\+ZERO, glm\+::vec3 \+\_\+color=VEC3\+\_\+\+ONE)
+\begin{DoxyCompactList}\small\item\em Crée un nouvel objet lumière. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Représente un objet lumière dans le jeu. 
+
+Cette classe représente un objet lumière dans le jeu. Un objet lumière est un élément utilisé pour simuler l\textquotesingle{}éclairage dans une scène tridimensionnelle. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{classlve_1_1_light_game_object_a7606761a10f9b755e8d3952f5642bc64}\label{classlve_1_1_light_game_object_a7606761a10f9b755e8d3952f5642bc64} 
+\index{lve::LightGameObject@{lve::LightGameObject}!Create@{Create}}
+\index{Create@{Create}!lve::LightGameObject@{lve::LightGameObject}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_object}{Game\+Object}} \texorpdfstring{$\ast$}{*} lve\+::\+Light\+Game\+Object\+::\+Create (\begin{DoxyParamCaption}\item[{float}]{\+\_\+intensity = {\ttfamily 10.f},  }\item[{float}]{\+\_\+radius = {\ttfamily 1.f},  }\item[{glm\+::vec3}]{\+\_\+position = {\ttfamily VEC3\+\_\+ZERO},  }\item[{glm\+::vec3}]{\+\_\+rotate = {\ttfamily VEC3\+\_\+ZERO},  }\item[{glm\+::vec3}]{\+\_\+color = {\ttfamily VEC3\+\_\+ONE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Crée un nouvel objet lumière. 
+
+Cette méthode statique crée un nouvel objet lumière avec les paramètres spécifiés.
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+intensity} & L\textquotesingle{}intensité de la lumière (par défaut \+: 10.\+0). \\
+\hline
+{\em \+\_\+radius} & Le rayon d\textquotesingle{}illumination de la lumière (par défaut \+: 1.\+0). \\
+\hline
+{\em \+\_\+position} & La position initiale de l\textquotesingle{}objet lumière dans l\textquotesingle{}espace tridimensionnel (par défaut \+: glm\+::vec3(0, 0, 0)). \\
+\hline
+{\em \+\_\+rotate} & La rotation initiale de l\textquotesingle{}objet lumière (par défaut \+: glm\+::vec3(0, 0, 0)). \\
+\hline
+{\em \+\_\+color} & La couleur de la lumière (par défaut \+: glm\+::vec3(1, 1, 1)). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un pointeur vers le nouvel objet lumière créé. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Game\+Object/\+Pre\+Game\+Object/Light\+Game\+Object.\+h\item 
+sources/\+Game\+Object/\+Pre\+Game\+Object/Light\+Game\+Object.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,142 @@
+\doxysection{Client\+UDP.\+h}
+\hypertarget{_client_u_d_p_8h_source}{}\label{_client_u_d_p_8h_source}\index{includes/UDP/ClientUDP.h@{includes/UDP/ClientUDP.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Address.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}DistantClient.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}SocketsUDP.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Protocol/Simulator.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Types.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <winSock2.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <mutex>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }Bousk}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{namespace\ }Network}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }Messages}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }Base;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{namespace\ }UDP}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_client_u_d_p}{ClientUDP}}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_distant_client}{DistantClient}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_client_u_d_p}{ClientUDP}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_client_u_d_p}{ClientUDP}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_client_u_d_p}{ClientUDP}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_client_u_d_p}{ClientUDP}}(\mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_client_u_d_p}{ClientUDP}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_client_u_d_p}{ClientUDP}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_client_u_d_p}{ClientUDP}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_client_u_d_p}{ClientUDP}}\&\ operator=(\mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_client_u_d_p}{ClientUDP}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_client_u_d_p}{\string~ClientUDP}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ registerChannel(uint8\ channelId\ =\ 0);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#if\ BOUSKNET\_ALLOW\_NETWORK\_SIMULATOR\ ==\ BOUSKNET\_SETTINGS\_ENABLED}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator}{Simulator}}\&\ simulator()\ \{\ \textcolor{keywordflow}{return}\ mSimulator;\ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator}{Simulator}}\&\ simulator()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mSimulator;\ \}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#endif\ }\textcolor{comment}{//\ BOUSKNET\_ALLOW\_NETWORK\_SIMULATOR\ ==\ BOUSKNET\_SETTINGS\_ENABLED}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ init(uint16\_t\ port);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ release();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetTimeout(std::chrono::milliseconds\ timeout);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::chrono::milliseconds\ GetTimeout();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ connect(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ addr);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ disconnect(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ addr);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ sendTo(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ target,\ std::vector<uint8>\&\&\ data,\ uint32\ channelIndex);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ sendTo(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ target,\ \textcolor{keyword}{const}\ uint8*\ data,\ \textcolor{keywordtype}{size\_t}\ dataSize,\ uint32\ channelIndex)\ \{\ sendTo(target,\ std::vector<uint8>(data,\ data\ +\ dataSize),\ channelIndex);\ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ processSend();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_client_u_d_p_ac25e7f9f90af1a5bbb0116fef285d1a0}{receive}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<Messages::Base>>\ poll();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ onMessageReady(std::unique\_ptr<Messages::Base>\&\&\ msg);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_distant_client}{DistantClient}}*\ getClient(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ clientAddr,\ \textcolor{keywordtype}{bool}\ create\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setupChannels(\mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_distant_client}{DistantClient}}\&\ client);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#if\ BOUSKNET\_ALLOW\_NETWORK\_INTERRUPTION\ ==\ BOUSKNET\_SETTINGS\_ENABLED}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ enableNetworkInterruption()\ \{\ setNetworkInterruptionEnabled(\textcolor{keyword}{true});\ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ disableNetworkInterruption()\ \{\ setNetworkInterruptionEnabled(\textcolor{keyword}{false});\ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ setNetworkInterruptionEnabled(\textcolor{keywordtype}{bool}\ enabled)\ \{\ mNetworkInterruptionAllowed\ =\ enabled;\ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ isNetworkInterruptionAllowed()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ mNetworkInterruptionAllowed;\ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ isNetworkInterrupted()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ !mInterruptedClients.empty();\ \}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#endif\ }\textcolor{comment}{//\ BOUSKNET\_ALLOW\_NETWORK\_INTERRUPTION\ ==\ BOUSKNET\_SETTINGS\_ENABLED}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SOCKET\ mSocket\{\ INVALID\_SOCKET\ \};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<DistantClient>>\ mClients;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<Messages::Base>>\ mMessages;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint64\ mClientIdsGenerator\{\ 0\ \};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::mutex\ mMessagesLock;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }MessagesLock\ =\ std::lock\_guard<\textcolor{keyword}{decltype}(mMessagesLock)>;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }ChannelRegistration}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::function<void(\mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_distant_client}{DistantClient}}\&)>\ creator;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint8\ channelId;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<ChannelRegistration>\ mRegisteredChannels;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }Operation}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum\ class}\ Type}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Connect,}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SendTo,}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Disconnect,}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ Operation\ Connect(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ target)\ \{\ \textcolor{keywordflow}{return}\ Operation(Type::Connect,\ target);\ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ Operation\ SendTo(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ target,\ std::vector<uint8>\&\&\ data,\ uint32\ channel)\ \{\ \textcolor{keywordflow}{return}\ Operation(Type::SendTo,\ target,\ std::move(data),\ channel);\ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ Operation\ Disconnect(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ target)\ \{\ \textcolor{keywordflow}{return}\ Operation(Type::Disconnect,\ target);\ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Operation(Type\ type,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ target)\ :\ mType(type),\ mTarget(target)\ \{\}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Operation(Type\ type,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\&\ target,\ std::vector<uint8>\&\&\ data,\ uint32\ channel)\ :\ mType(type),\ mTarget(target),\ mData(std::move(data)),\ mChannel(channel)\ \{\}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Type\ mType;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_address}{Address}}\ mTarget;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<uint8>\ mData;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint32\ mChannel\{\ 0\ \};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::mutex\ mOperationsLock;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }OperationsLock\ =\ std::lock\_guard<\textcolor{keyword}{decltype}(mOperationsLock)>;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Operation>\ mPendingOperations;}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#if\ BOUSKNET\_ALLOW\_NETWORK\_SIMULATOR\ ==\ BOUSKNET\_SETTINGS\_ENABLED}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_simulator}{Simulator}}\ mSimulator;}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#endif\ }\textcolor{comment}{//\ BOUSKNET\_ALLOW\_NETWORK\_SIMULATOR\ ==\ BOUSKNET\_SETTINGS\_ENABLED}}
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#if\ BOUSKNET\_ALLOW\_NETWORK\_INTERRUPTION\ ==\ BOUSKNET\_SETTINGS\_ENABLED}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ mNetworkInterruptionAllowed\{\ \textcolor{keyword}{true}\ \};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ onClientInterrupted(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_distant_client}{DistantClient}}*\ client);}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ onClientResumed(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_distant_client}{DistantClient}}*\ client);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returns\ whether\ this\ client\ is\ the\ sole\ responsible\ for\ the\ network\ interruption}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isInterruptionCulprit(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_distant_client}{DistantClient}}*\ client)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::unordered\_set<const\ DistantClient*>\ mInterruptedClients;}
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#endif\ }\textcolor{comment}{//\ BOUSKNET\_ALLOW\_NETWORK\_INTERRUPTION\ ==\ BOUSKNET\_SETTINGS\_ENABLED}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ClientUDP::registerChannel(uint8\ channelId\ \textcolor{comment}{/*=\ 0*/})}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ assert(mSocket\ ==\ INVALID\_SOCKET);\ \textcolor{comment}{//\ Don't\ add\ channels\ after\ being\ initialized\ !!!}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ assert(std::find\_if(mRegisteredChannels.begin(),\ mRegisteredChannels.end(),\ [\&](\textcolor{keyword}{const}\ ChannelRegistration\&\ registration)\ \{\ return\ registration.channelId\ ==\ channelId;\ \})\ ==\ mRegisteredChannels.end());}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mRegisteredChannels.push\_back(\{\ [channelId](\mbox{\hyperlink{class_bousk_1_1_network_1_1_u_d_p_1_1_distant_client}{DistantClient}}\&\ distantClient)\ \{\ distantClient.registerChannel<T>(channelId);\ \},\ channelId\ \});}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \}}
+\DoxyCodeLine{00136\ }
+
+\end{DoxyCode}

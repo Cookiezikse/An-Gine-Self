@@ -1,0 +1,54 @@
+\doxysection{Core\+Engine.\+h}
+\hypertarget{_core_engine_8h_source}{}\label{_core_engine_8h_source}\index{includes/Engine/CoreEngine.h@{includes/Engine/CoreEngine.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Modules/ModuleManager.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifdef\ ENGINECORE\_EXPORTS}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ ENGINEDLL\_API\ \_\_declspec(dllexport)}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ ENGINEDLL\_API\ \_\_declspec(dllimport)}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{enum}\ EngineMode}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ Editor,}
+\DoxyCodeLine{00014\ \ \ \ \ Play,}
+\DoxyCodeLine{00015\ \ \ \ \ Pause}
+\DoxyCodeLine{00016\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }ENGINEDLL\_API\ \mbox{\hyperlink{class_engine}{Engine}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_engine}{Engine}}*\ GetInstance();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Init()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Run()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_ac703279e3531bc1e668115affceb8c37}{Quit}}()\ \{\ shouldQuit\ =\ \textcolor{keyword}{true};\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{class_module_manager}{ModuleManager}}*\ \mbox{\hyperlink{class_engine_ab5387d007ef3edba4db6bd6e60ff54fc}{GetModuleManager}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ moduleManager;\ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ [[nodiscard]]\ EngineMode\ \mbox{\hyperlink{class_engine_a7859a600c9e5dea6c93357c66c22e98d}{GetEngineMode}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ engineMode;\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_a3cf2dd32de98d0f3435844e927b70843}{SetEngineMode}}(\textcolor{keyword}{const}\ EngineMode\ \_engineMode)\ \{\ engineMode\ =\ \_engineMode;\ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_a9f26bc64debd7c6336330cd00e6b030f}{PlayEngineMode}}()\ \{\ engineMode\ =\ Play;\ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_a94d49ffab5a324093a1bf7737cbc8508}{PauseEngineMode}}()\ \{\ engineMode\ =\ Pause;\ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_a04585b20ff6bd1cc1429f967b765b58c}{EditorEngineMode}}()\ \{\ engineMode\ =\ Editor;\ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_engine}{Engine}}*\ instance;\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_module_manager}{ModuleManager}}*\ moduleManager\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_module_manager}{ModuleManager}};\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ shouldQuit\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ EngineMode\ engineMode\ =\ Editor;\ }
+\DoxyCodeLine{00082\ \};}
+
+\end{DoxyCode}

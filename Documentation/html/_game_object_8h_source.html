@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>An-Gine:  Fichier source de includes/GameObject/GameObject.h</title>
+<link rel="icon" href="An-Gine.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="An-Gine.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">An-Gine<span id="projectnumber">&#160;0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li><li class="navelem"><a class="el" href="dir_b5568337a7efd7b38bac1af67081c77f.html">GameObject</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">GameObject.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifdef ENGINECORE_EXPORTS</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define ENGINEDLL_API __declspec(dllexport)</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#define ENGINEDLL_API __declspec(dllimport)</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;glm.hpp&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;Components/Component.h&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;LveEngine/lve_model.h&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">enum class</span> GameObjectType {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    Cube,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="class_light.html">Light</a>,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    Plane,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    Vase</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">// TODO: Ajouter plus de types d&#39;objets</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">enum class</span> LayerType</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    Normal,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    HUD,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    Background</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">class </span><a class="code hl_class" href="class_component.html">Component</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">class </span><a class="code hl_class" href="class_transform.html">Transform</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">struct </span>PointLightComponent;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">//class ENGINEDLL_API GameObject</span></div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_game_object.html">   44</a></span><span class="keyword">class  </span><a class="code hl_class" href="class_game_object.html">GameObject</a></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">using </span>id_t = <span class="keywordtype">unsigned</span> int;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_function" href="class_game_object.html#a0348e3ee2e83d56eafca7a3547f432c4">GameObject</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_function" href="class_game_object.html#ab82dfdb656f9051c0587e6593b2dda97">~GameObject</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="class_game_object.html#a0348e3ee2e83d56eafca7a3547f432c4">GameObject</a>(id_t _id);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">        #pragma region Getter</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">        #pragma region Information</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_game_object.html#a99799782d6841cc6ea9a9fc2c70970b1">   84</a></span>        [[nodiscard]] id_t <a class="code hl_function" href="class_game_object.html#a99799782d6841cc6ea9a9fc2c70970b1">GetId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_game_object.html#af1f2aaf9c054e60e83f2c8e482bc1819">id</a>; }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_game_object.html#a986731c4dfb08336dbf0731e6514bad9">   93</a></span>        [[nodiscard]] std::string <a class="code hl_function" href="class_game_object.html#a986731c4dfb08336dbf0731e6514bad9">GetName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_game_object.html#af542b33c8de269343e22c5629e6b66c0">name</a>; }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">        #pragma region Transform</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        [[nodiscard]] <a class="code hl_class" href="class_transform.html">Transform</a>* <a class="code hl_function" href="class_game_object.html#a775791ff7e70d9ab35802f82fab26718">GetTransform</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        [[nodiscard]] glm::vec3 <a class="code hl_function" href="class_game_object.html#a977d4bbb9ebe2266bae702b59508303b">GetPosition</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        [[nodiscard]] glm::vec3 <a class="code hl_function" href="class_game_object.html#a73e30effed19f0fd52d10e24867d300b">GetScale</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        [[nodiscard]] glm::vec3 <a class="code hl_function" href="class_game_object.html#afe52aedcc4f6e746f3ccd18d413f88fb">GetRotation</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="preprocessor">        #pragma region State</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="class_game_object.html#aeacebf64d0153edf9e02a43defc0d26f">  146</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_game_object.html#aeacebf64d0153edf9e02a43defc0d26f">GetActive</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_game_object.html#a7535ae769c1f801baf9469105ed7d38f">isActive</a>; }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="class_game_object.html#a821630aa6f0c19413a22475cac54c7b4">  155</a></span>        [[nodiscard]] <span class="keywordtype">bool</span> <a class="code hl_function" href="class_game_object.html#a821630aa6f0c19413a22475cac54c7b4">GetVisible</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_game_object.html#a3bb2d61e98450c1252f41220e809a25a">isVisible</a>; }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="preprocessor">        #pragma region Layer</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="class_game_object.html#a49eeb421bc3fbbc4ae487998282c8c5c">  168</a></span>        [[nodiscard]] LayerType <a class="code hl_function" href="class_game_object.html#a49eeb421bc3fbbc4ae487998282c8c5c">GetLayer</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_game_object.html#af673409499aaed493584462b8efa4baf">layerType</a>; }</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">        #pragma region Components</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="class_game_object.html#af525d7b7d88a1359a865e96ced9665ef">  181</a></span>        std::shared_ptr&lt;lve::LveModel&gt; <a class="code hl_function" href="class_game_object.html#af525d7b7d88a1359a865e96ced9665ef">GetModel</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_game_object.html#ac12a2cfd246ffddbffde8716d3e2785f">model</a>; }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="class_game_object.html#a30fa6e5a4b339c7fbfb53ce2c42d6c49">  190</a></span>        [[nodiscard]] glm::vec3                      <a class="code hl_function" href="class_game_object.html#a30fa6e5a4b339c7fbfb53ce2c42d6c49">GetColor</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_game_object.html#a3a3cb49f7d67386167bbe9049ce2d3fd">color</a>; }</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="class_game_object.html#a719472e50bfbe3d3efb4c73e81592113">  199</a></span>        [[nodiscard]] <span class="keywordtype">int</span>              <a class="code hl_function" href="class_game_object.html#a719472e50bfbe3d3efb4c73e81592113">GetTexture</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_game_object.html#a1d4d998891f953e4a4f15d7372a0d9e3">texture</a>; }</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="class_game_object.html#a53e71063284902e7c9bcd2cd60f47f37">  208</a></span>        std::vector&lt;Component*&gt; <a class="code hl_function" href="class_game_object.html#a53e71063284902e7c9bcd2cd60f47f37">GetComponents</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_game_object.html#aac1acad42a3837282d3abf7df8eb34a7">components</a>; }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00219" data-start="{" data-end="}">
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="class_game_object.html#a5ba3b458e6bee6ea5aedd5c8cdeabf18">  219</a></span>        T* <a class="code hl_function" href="class_game_object.html#a5ba3b458e6bee6ea5aedd5c8cdeabf18">GetComponent</a>()</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        {</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_variable" href="class_game_object.html#aac1acad42a3837282d3abf7df8eb34a7">components</a>.size(); i++)</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                <span class="comment">// Vérifie si le composant est un Component</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                <span class="keywordflow">if</span> (T* component_result = <span class="keyword">dynamic_cast&lt;</span>T*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="class_game_object.html#aac1acad42a3837282d3abf7df8eb34a7">components</a>[i])) <span class="keywordflow">return</span> component_result;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                <span class="comment">// Renvoie le Component trouvé</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            }</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>; <span class="comment">// Renvoie nullptr si aucun Component n&#39;est trouvé</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        }</div>
+</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00239" data-start="{" data-end="}">
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">  239</a></span>        std::vector&lt;T*&gt; <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">GetComponentsByType</a>()</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        {</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            std::vector&lt;T*&gt; components_by_type;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_variable" href="class_game_object.html#aac1acad42a3837282d3abf7df8eb34a7">components</a>.size(); i++)</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            {</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                <span class="comment">// Vérifie si le composant est un Component</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                <span class="keywordflow">if</span> (T* component_result = <span class="keyword">dynamic_cast&lt;</span>T*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="class_game_object.html#aac1acad42a3837282d3abf7df8eb34a7">components</a>[i]))</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                    components_by_type.</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                        push_back(component_result); <span class="comment">// Ajout le Component trouvé</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            }</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            <span class="keywordflow">return</span> components_by_type;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        }</div>
+</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00263" data-start="{" data-end="}">
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno"><a class="line" href="class_game_object.html#a40a0ea82a4a821ae3b7520bfd3e5b70e">  263</a></span>        T* <a class="code hl_function" href="class_game_object.html#a40a0ea82a4a821ae3b7520bfd3e5b70e">GetComponentByName</a>(<span class="keyword">const</span> std::string&amp; _name)</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        {</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>            std::vector&lt;T*&gt; components_by_type = <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">GetComponentsByType&lt;T&gt;</a>();</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">i</a> = 0; <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">i</a> &lt; <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">components_by_type</a>.size(); <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">i</a>++)</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            {</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                <span class="comment">// Vérifie si le composant est un Component</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">T</a>* <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">component_result</a> = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">T</a>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">components_by_type</a>[<a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">i</a>]);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">component_result</a> &amp;&amp; <span class="keyword">static_cast&lt;</span><a class="code hl_class" href="class_component.html">Component</a>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">component_result</a>)-&gt;<a class="code hl_function" href="class_component.html#a9af52e1878212622948ab2189f4f29dd">GetName</a>() == <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_name</a>)</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                    <span class="keywordflow">return</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                        <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">component_result</a>; <span class="comment">// Renvoie le Component trouvé</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            }</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>; <span class="comment">// Renvoie nullptr si aucun Component n&#39;est trouvé</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        }</div>
+</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <a class="code hl_class" href="class_component.html">Component</a>* <a class="code hl_function" href="class_game_object.html#af09284eb1172cd31f5a332fb0c385abf">GetComponentRecursive</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_componentName</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="preprocessor">        #pragma region GameObjects</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        [[<a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">nodiscard</a>]] std::vector&lt;GameObject*&gt; <a class="code hl_function" href="class_game_object.html#a0f068b3de8ad469afebf024eda43fb53">FindChildrenByName</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_name</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="foldopen" id="foldopen00311" data-start="{" data-end="}">
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno"><a class="line" href="class_game_object.html#acc9c5c271db831c5b713c5b104f270d9">  311</a></span>        [[<a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">nodiscard</a>]] <span class="keyword">const</span> std::vector&lt;GameObject*&gt;&amp; <a class="code hl_function" href="class_game_object.html#acc9c5c271db831c5b713c5b104f270d9">GetChildren</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_game_object.html#a5eba794ac3ef3b94bd9a43494c842ade">children</a>;</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        }</div>
+</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="preprocessor">        #pragma region Setter</span></div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="preprocessor">        #pragma region Information</span></div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno"><a class="line" href="class_game_object.html#a6ebd7e126f166fb69bea1af26c7fde60">  331</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a6ebd7e126f166fb69bea1af26c7fde60">SetName</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_newName</a>) { <a class="code hl_variable" href="class_game_object.html#af542b33c8de269343e22c5629e6b66c0">name</a> = <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_newName</a>; }</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    std::string GetFileModel() { <span class="keywordflow">return</span> fileModel; }</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    <span class="keywordtype">float</span> GetTexMultiplier() { <span class="keywordflow">return</span> texMultiplier; }</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    <span class="keywordtype">void</span> SetTexMultiplier(<span class="keywordtype">float</span> <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_newTexMultiplier</a>) { texMultiplier = <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_newTexMultiplier</a>; }</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="keywordtype">void</span> SetFileModel(std::string <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_newFileModel</a>) { fileModel = <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_newFileModel</a>; }</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="preprocessor">        #pragma region Transform</span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a57d38c977e7b4c4858760674643af712">SetPosition</a>(glm::vec3 <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_newPosition</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#aa2bde5996fc67e746c6e4f14ef24f1ec">SetScale</a>(glm::vec3 <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_newScale</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span> </div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a3f85c85ffc0370de80d44952df381de0">SetRotation</a>(<span class="keywordtype">float</span> <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_newRotation</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span> </div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span><span class="preprocessor">        #pragma region State</span></div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span> </div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno"><a class="line" href="class_game_object.html#ac0e2d29626f3b8a88d969dff8bc02f39">  380</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#ac0e2d29626f3b8a88d969dff8bc02f39">SetActive</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span>&amp; <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_state</a>) { <a class="code hl_variable" href="class_game_object.html#a7535ae769c1f801baf9469105ed7d38f">isActive</a> = <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_state</a>; }</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span> </div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno"><a class="line" href="class_game_object.html#a34e7664032bb67c53ce9d878ad99816f">  389</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a34e7664032bb67c53ce9d878ad99816f">SetVisible</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span>&amp; <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_state</a>) { <a class="code hl_variable" href="class_game_object.html#a3bb2d61e98450c1252f41220e809a25a">isVisible</a> = <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_state</a>; }</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span> </div>
+<div class="foldopen" id="foldopen00398" data-start="{" data-end="}">
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno"><a class="line" href="class_game_object.html#aeb451f629da26ba79cc67cd2e3ab9253">  398</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#aeb451f629da26ba79cc67cd2e3ab9253">SetActiveAndVisible</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span>&amp; <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_state</a>)</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>        {</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>            <a class="code hl_variable" href="class_game_object.html#a7535ae769c1f801baf9469105ed7d38f">isActive</a>  = <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_state</a>;</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>            <a class="code hl_variable" href="class_game_object.html#a3bb2d61e98450c1252f41220e809a25a">isVisible</a> = <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_state</a>;</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>        }</div>
+</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span> </div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span> </div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span><span class="preprocessor">        #pragma region Layer</span></div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span> </div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno"><a class="line" href="class_game_object.html#a7be5b2e44f87294feabc0c4a34427f48">  415</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a7be5b2e44f87294feabc0c4a34427f48">SetLayer</a>(<span class="keyword">const</span> LayerType&amp; <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_layerType</a>) { <a class="code hl_variable" href="class_game_object.html#af673409499aaed493584462b8efa4baf">layerType</a> = <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_layerType</a>; }</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span> </div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span> </div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span><span class="preprocessor">        #pragma region GameObjects</span></div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span> </div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno"><a class="line" href="class_game_object.html#accd7aa344773abacb8ce7ea6ee382408">  428</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#accd7aa344773abacb8ce7ea6ee382408">SetParent</a>(<a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_parent</a>) { <a class="code hl_variable" href="class_game_object.html#a4113a496ed45ca90756cfa0d8dfe6171">parent</a> = <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_parent</a>; }</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span> </div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span> </div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span><span class="preprocessor">        #pragma region Add</span></div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span> </div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span><span class="preprocessor">        #pragma region GameObjects</span></div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span> </div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span> </div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a4000d60162fe95afdfa2795078899700">AddChildObject</a>(<a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_child</a>);</div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span> </div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span> </div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span><span class="preprocessor">        #pragma region Components</span></div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span> </div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno"><a class="line" href="class_game_object.html#a43de4d32d96d38061bc4fc5a7659954a">  458</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a43de4d32d96d38061bc4fc5a7659954a">SetModel</a>(<span class="keyword">const</span> std::shared_ptr&lt;lve::LveModel&gt;&amp; <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_model</a>) {  <a class="code hl_variable" href="class_game_object.html#ac12a2cfd246ffddbffde8716d3e2785f">model</a> = <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_model</a>; }</div>
+<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span> </div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno"><a class="line" href="class_game_object.html#a43386c337d99366144bb2f069f9478ef">  467</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a43386c337d99366144bb2f069f9478ef">SetColor</a>(<span class="keyword">const</span> glm::vec3 <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_color</a>) {  <a class="code hl_variable" href="class_game_object.html#a3a3cb49f7d67386167bbe9049ce2d3fd">color</a> = <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_color</a>; }</div>
+<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span> </div>
+<div class="line"><a id="l00476" name="l00476"></a><span class="lineno"><a class="line" href="class_game_object.html#a7fd851e067a0728f557a9e45c046b44a">  476</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a7fd851e067a0728f557a9e45c046b44a">SetTexture</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_texture</a>) { <a class="code hl_variable" href="class_game_object.html#a1d4d998891f953e4a4f15d7372a0d9e3">texture</a> = <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_texture</a>; }</div>
+<div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span> </div>
+<div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#aa3e6f8f41791bec9a9869213de7da161">AddComponent</a>(<a class="code hl_class" href="class_component.html">Component</a>* <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_component</a>);</div>
+<div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span> </div>
+<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span> </div>
+<div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span> </div>
+<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span> </div>
+<div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span> </div>
+<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span><span class="preprocessor">        #pragma region Create</span></div>
+<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span> </div>
+<div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span><span class="preprocessor">        #pragma region GameObjects</span></div>
+<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span> </div>
+<div class="foldopen" id="foldopen00504" data-start="{" data-end="}">
+<div class="line"><a id="l00504" name="l00504"></a><span class="lineno"><a class="line" href="class_game_object.html#ae24f42d843b9d2901b1590949e9c5656">  504</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="class_game_object.html">GameObject</a> <a class="code hl_function" href="class_game_object.html#ae24f42d843b9d2901b1590949e9c5656">CreateGameObject</a>()</div>
+<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>        {</div>
+<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>            <span class="keyword">static</span> id_t <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">current_id</a> = 0;</div>
+<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="class_game_object.html">GameObject</a>{<a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">current_id</a>++};</div>
+<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>        }</div>
+</div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span> </div>
+<div class="foldopen" id="foldopen00517" data-start="{" data-end="}">
+<div class="line"><a id="l00517" name="l00517"></a><span class="lineno"><a class="line" href="class_game_object.html#a7a325ab2cd9b28c2c223131c466e042d">  517</a></span>        <span class="keyword">static</span> <a class="code hl_class" href="class_game_object.html">GameObject</a>* <a class="code hl_function" href="class_game_object.html#a7a325ab2cd9b28c2c223131c466e042d">CreatePGameObject</a>()</div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>        {</div>
+<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>            <span class="keyword">static</span> id_t <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">current_id</a> = 0;</div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="class_game_object.html">GameObject</a>{<a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">current_id</a>++};</div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>        }</div>
+</div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span> </div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span> </div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span><span class="preprocessor">        #pragma region Components</span></div>
+<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span> </div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00536" data-start="{" data-end="}">
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno"><a class="line" href="class_game_object.html#ad6ecd4f946bc85daab0a58c7981cbccc">  536</a></span>        <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">T</a>* <a class="code hl_function" href="class_game_object.html#ad6ecd4f946bc85daab0a58c7981cbccc">CreateComponent</a>()</div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>        {</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>            <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">T</a>* <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">component</a> = <span class="keyword">new</span> <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">T</a>();</div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>            <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">component</a>-&gt;SetOwner(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>            <a class="code hl_variable" href="class_game_object.html#aac1acad42a3837282d3abf7df8eb34a7">components</a>.push_back(<a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">component</a>);</div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">component</a>;</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>        }</div>
+</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span> </div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span> </div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="foldopen" id="foldopen00553" data-start="{" data-end="}">
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno"><a class="line" href="class_game_object.html#a0c32cde998e7175d1594c97a1e217996">  553</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a0c32cde998e7175d1594c97a1e217996">DestroyGameObject</a>()</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>        {</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>        }</div>
+</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span> </div>
+<div class="foldopen" id="foldopen00563" data-start="{" data-end="}">
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno"><a class="line" href="class_game_object.html#a348a03f16010f5da1e1e0bc98a434cb3">  563</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a348a03f16010f5da1e1e0bc98a434cb3">MarkForDeletion</a>()</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>        {</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>        }</div>
+</div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span> </div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a12fa2ca0ff9a2847c978f91f2b9b64a9">RemoveComponent</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_component.html">Component</a>* <a class="code hl_function" href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">_component</a>);</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span> </div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span><span class="preprocessor">        #pragma region Event</span></div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#aa70012636f8b4c1e84d8344bf5f3480a">Init</a>();</div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span> </div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#aa27714b4172ebff2f7cddcf63b325ac7">Start</a>();</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span> </div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a61e26e2087a508aa7ea0fcd540b09f28">FixedUpdate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span> </div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a81a09eb2c3de2c0a6374b8acde812c52">Update</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span> </div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> UpdateEditor() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span> </div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#ac0807fcf3eb3d02eb1f045eee87af1b5">PreRender</a>();</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span> </div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a037f81e3dbcf1716d892b7ecd1178fc2">Render</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span> </div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#abcfdfd7b4f1e25c961a04ada6af4931a">RenderGui</a>();</div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span> </div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a5b78dcbae0147bfbf550991751a02050">PostRender</a>();</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span> </div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a52f23306620f024c034a1bde6407e74a">Release</a>();</div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span> </div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_object.html#a9800a9dcc709907dd90a0204748ce513">Finalize</a>();</div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span> </div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span><span class="preprocessor">        #pragma endregion</span></div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span> </div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span> </div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>        <span class="keywordtype">float</span>                       texMultiplier = 1;</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>        std::string             fileModel;</div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span> </div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno"><a class="line" href="class_game_object.html#af542b33c8de269343e22c5629e6b66c0">  636</a></span>        std::string <a class="code hl_variable" href="class_game_object.html#af542b33c8de269343e22c5629e6b66c0">name</a> = <span class="stringliteral">&quot;GameObject&quot;</span>; </div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno"><a class="line" href="class_game_object.html#af1f2aaf9c054e60e83f2c8e482bc1819">  638</a></span>        id_t <a class="code hl_variable" href="class_game_object.html#af1f2aaf9c054e60e83f2c8e482bc1819">id</a>; </div>
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno"><a class="line" href="class_game_object.html#a4113a496ed45ca90756cfa0d8dfe6171">  640</a></span>        <a class="code hl_class" href="class_game_object.html">GameObject</a>*              <a class="code hl_variable" href="class_game_object.html#a4113a496ed45ca90756cfa0d8dfe6171">parent</a> = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno"><a class="line" href="class_game_object.html#a5eba794ac3ef3b94bd9a43494c842ade">  641</a></span>        std::vector&lt;GameObject*&gt; <a class="code hl_variable" href="class_game_object.html#a5eba794ac3ef3b94bd9a43494c842ade">children</a>;         </div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno"><a class="line" href="class_game_object.html#ac12a2cfd246ffddbffde8716d3e2785f">  643</a></span>        std::shared_ptr&lt;lve::LveModel&gt; <a class="code hl_variable" href="class_game_object.html#ac12a2cfd246ffddbffde8716d3e2785f">model</a>{};     </div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno"><a class="line" href="class_game_object.html#a1d4d998891f953e4a4f15d7372a0d9e3">  644</a></span>        <span class="keywordtype">int</span>                       <a class="code hl_variable" href="class_game_object.html#a1d4d998891f953e4a4f15d7372a0d9e3">texture</a> = 0; </div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno"><a class="line" href="class_game_object.html#a3a3cb49f7d67386167bbe9049ce2d3fd">  645</a></span>        glm::vec3                 <a class="code hl_variable" href="class_game_object.html#a3a3cb49f7d67386167bbe9049ce2d3fd">color</a>{};     </div>
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno"><a class="line" href="class_game_object.html#aac1acad42a3837282d3abf7df8eb34a7">  647</a></span>        std::vector&lt;Component*&gt; <a class="code hl_variable" href="class_game_object.html#aac1acad42a3837282d3abf7df8eb34a7">components</a>; </div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno"><a class="line" href="class_game_object.html#a9edf603be120d5a9221e5c5c962465f8">  649</a></span>        <a class="code hl_class" href="class_transform.html">Transform</a>* <a class="code hl_variable" href="class_game_object.html#a9edf603be120d5a9221e5c5c962465f8">transform</a> = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno"><a class="line" href="class_game_object.html#af673409499aaed493584462b8efa4baf">  651</a></span>        LayerType <a class="code hl_variable" href="class_game_object.html#af673409499aaed493584462b8efa4baf">layerType</a> = LayerType::Normal; </div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno"><a class="line" href="class_game_object.html#a74a0456a0a9330047cc8eea61fc79864">  653</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="class_game_object.html#a74a0456a0a9330047cc8eea61fc79864">depth</a> = 0.f;</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno"><a class="line" href="class_game_object.html#a7535ae769c1f801baf9469105ed7d38f">  656</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_game_object.html#a7535ae769c1f801baf9469105ed7d38f">isActive</a>  = <span class="keyword">true</span>; </div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno"><a class="line" href="class_game_object.html#a3bb2d61e98450c1252f41220e809a25a">  657</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_game_object.html#a3bb2d61e98450c1252f41220e809a25a">isVisible</a> = <span class="keyword">true</span>; </div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>};</div>
+</div>
+<div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdoc">Classe de base pour tous les composants attach�s � un GameObject.</div><div class="ttdef"><b>Definition</b> Component.h:21</div></div>
+<div class="ttc" id="aclass_component_html_a9af52e1878212622948ab2189f4f29dd"><div class="ttname"><a href="class_component.html#a9af52e1878212622948ab2189f4f29dd">Component::GetName</a></div><div class="ttdeci">std::string GetName() const</div><div class="ttdoc">Obtient le nom de ce composant.</div><div class="ttdef"><b>Definition</b> Component.h:56</div></div>
+<div class="ttc" id="aclass_game_object_html"><div class="ttname"><a href="class_game_object.html">GameObject</a></div><div class="ttdoc">Représente un objet générique dans le jeu.</div><div class="ttdef"><b>Definition</b> GameObject.h:45</div></div>
+<div class="ttc" id="aclass_game_object_html_a0348e3ee2e83d56eafca7a3547f432c4"><div class="ttname"><a href="class_game_object.html#a0348e3ee2e83d56eafca7a3547f432c4">GameObject::GameObject</a></div><div class="ttdeci">GameObject()</div><div class="ttdoc">Constructeur par défaut de la classe GameObject.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:5</div></div>
+<div class="ttc" id="aclass_game_object_html_a037f81e3dbcf1716d892b7ecd1178fc2"><div class="ttname"><a href="class_game_object.html#a037f81e3dbcf1716d892b7ecd1178fc2">GameObject::Render</a></div><div class="ttdeci">virtual void Render() const</div><div class="ttdoc">Rendu du module.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:95</div></div>
+<div class="ttc" id="aclass_game_object_html_a0c32cde998e7175d1594c97a1e217996"><div class="ttname"><a href="class_game_object.html#a0c32cde998e7175d1594c97a1e217996">GameObject::DestroyGameObject</a></div><div class="ttdeci">void DestroyGameObject()</div><div class="ttdoc">Supprime directement cet objet de jeu.</div><div class="ttdef"><b>Definition</b> GameObject.h:553</div></div>
+<div class="ttc" id="aclass_game_object_html_a0f068b3de8ad469afebf024eda43fb53"><div class="ttname"><a href="class_game_object.html#a0f068b3de8ad469afebf024eda43fb53">GameObject::FindChildrenByName</a></div><div class="ttdeci">std::vector&lt; GameObject * &gt; FindChildrenByName(const std::string &amp;_name) const</div><div class="ttdoc">Recherche les enfants de l'objet par leur nom.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:121</div></div>
+<div class="ttc" id="aclass_game_object_html_a12fa2ca0ff9a2847c978f91f2b9b64a9"><div class="ttname"><a href="class_game_object.html#a12fa2ca0ff9a2847c978f91f2b9b64a9">GameObject::RemoveComponent</a></div><div class="ttdeci">void RemoveComponent(const Component *_component)</div><div class="ttdoc">Supprime un composant de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:43</div></div>
+<div class="ttc" id="aclass_game_object_html_a1d4d998891f953e4a4f15d7372a0d9e3"><div class="ttname"><a href="class_game_object.html#a1d4d998891f953e4a4f15d7372a0d9e3">GameObject::texture</a></div><div class="ttdeci">int texture</div><div class="ttdef"><b>Definition</b> GameObject.h:644</div></div>
+<div class="ttc" id="aclass_game_object_html_a30fa6e5a4b339c7fbfb53ce2c42d6c49"><div class="ttname"><a href="class_game_object.html#a30fa6e5a4b339c7fbfb53ce2c42d6c49">GameObject::GetColor</a></div><div class="ttdeci">glm::vec3 GetColor() const</div><div class="ttdoc">Obtient la couleur associée au module de débogage.</div><div class="ttdef"><b>Definition</b> GameObject.h:190</div></div>
+<div class="ttc" id="aclass_game_object_html_a348a03f16010f5da1e1e0bc98a434cb3"><div class="ttname"><a href="class_game_object.html#a348a03f16010f5da1e1e0bc98a434cb3">GameObject::MarkForDeletion</a></div><div class="ttdeci">void MarkForDeletion()</div><div class="ttdoc">Marque cet objet de jeu pour suppression.</div><div class="ttdef"><b>Definition</b> GameObject.h:563</div></div>
+<div class="ttc" id="aclass_game_object_html_a34e7664032bb67c53ce9d878ad99816f"><div class="ttname"><a href="class_game_object.html#a34e7664032bb67c53ce9d878ad99816f">GameObject::SetVisible</a></div><div class="ttdeci">void SetVisible(const bool &amp;_state)</div><div class="ttdoc">Active ou désactive le rendu de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.h:389</div></div>
+<div class="ttc" id="aclass_game_object_html_a3a3cb49f7d67386167bbe9049ce2d3fd"><div class="ttname"><a href="class_game_object.html#a3a3cb49f7d67386167bbe9049ce2d3fd">GameObject::color</a></div><div class="ttdeci">glm::vec3 color</div><div class="ttdef"><b>Definition</b> GameObject.h:645</div></div>
+<div class="ttc" id="aclass_game_object_html_a3bb2d61e98450c1252f41220e809a25a"><div class="ttname"><a href="class_game_object.html#a3bb2d61e98450c1252f41220e809a25a">GameObject::isVisible</a></div><div class="ttdeci">bool isVisible</div><div class="ttdef"><b>Definition</b> GameObject.h:657</div></div>
+<div class="ttc" id="aclass_game_object_html_a3f85c85ffc0370de80d44952df381de0"><div class="ttname"><a href="class_game_object.html#a3f85c85ffc0370de80d44952df381de0">GameObject::SetRotation</a></div><div class="ttdeci">void SetRotation(float _newRotation) const</div><div class="ttdoc">Définit la rotation de l'objet autour de l'axe Y.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:35</div></div>
+<div class="ttc" id="aclass_game_object_html_a4000d60162fe95afdfa2795078899700"><div class="ttname"><a href="class_game_object.html#a4000d60162fe95afdfa2795078899700">GameObject::AddChildObject</a></div><div class="ttdeci">void AddChildObject(GameObject *_child)</div><div class="ttdoc">Ajoute un enfant à l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:142</div></div>
+<div class="ttc" id="aclass_game_object_html_a40a0ea82a4a821ae3b7520bfd3e5b70e"><div class="ttname"><a href="class_game_object.html#a40a0ea82a4a821ae3b7520bfd3e5b70e">GameObject::GetComponentByName</a></div><div class="ttdeci">T * GetComponentByName(const std::string &amp;_name)</div><div class="ttdoc">Obtient un composant d'un type spécifique par son nom.</div><div class="ttdef"><b>Definition</b> GameObject.h:263</div></div>
+<div class="ttc" id="aclass_game_object_html_a4113a496ed45ca90756cfa0d8dfe6171"><div class="ttname"><a href="class_game_object.html#a4113a496ed45ca90756cfa0d8dfe6171">GameObject::parent</a></div><div class="ttdeci">GameObject * parent</div><div class="ttdef"><b>Definition</b> GameObject.h:640</div></div>
+<div class="ttc" id="aclass_game_object_html_a43386c337d99366144bb2f069f9478ef"><div class="ttname"><a href="class_game_object.html#a43386c337d99366144bb2f069f9478ef">GameObject::SetColor</a></div><div class="ttdeci">void SetColor(const glm::vec3 _color)</div><div class="ttdoc">Définit la couleur associée au module de débogage.</div><div class="ttdef"><b>Definition</b> GameObject.h:467</div></div>
+<div class="ttc" id="aclass_game_object_html_a43de4d32d96d38061bc4fc5a7659954a"><div class="ttname"><a href="class_game_object.html#a43de4d32d96d38061bc4fc5a7659954a">GameObject::SetModel</a></div><div class="ttdeci">void SetModel(const std::shared_ptr&lt; lve::LveModel &gt; &amp;_model)</div><div class="ttdoc">Définit le modèle associé au module de débogage.</div><div class="ttdef"><b>Definition</b> GameObject.h:458</div></div>
+<div class="ttc" id="aclass_game_object_html_a49eeb421bc3fbbc4ae487998282c8c5c"><div class="ttname"><a href="class_game_object.html#a49eeb421bc3fbbc4ae487998282c8c5c">GameObject::GetLayer</a></div><div class="ttdeci">LayerType GetLayer() const</div><div class="ttdoc">Obtient le type de couche de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.h:168</div></div>
+<div class="ttc" id="aclass_game_object_html_a52f23306620f024c034a1bde6407e74a"><div class="ttname"><a href="class_game_object.html#a52f23306620f024c034a1bde6407e74a">GameObject::Release</a></div><div class="ttdeci">virtual void Release()</div><div class="ttdoc">Libère les ressources utilisées par le module.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:112</div></div>
+<div class="ttc" id="aclass_game_object_html_a53e71063284902e7c9bcd2cd60f47f37"><div class="ttname"><a href="class_game_object.html#a53e71063284902e7c9bcd2cd60f47f37">GameObject::GetComponents</a></div><div class="ttdeci">std::vector&lt; Component * &gt; GetComponents()</div><div class="ttdoc">Obtient les composants de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.h:208</div></div>
+<div class="ttc" id="aclass_game_object_html_a57d38c977e7b4c4858760674643af712"><div class="ttname"><a href="class_game_object.html#a57d38c977e7b4c4858760674643af712">GameObject::SetPosition</a></div><div class="ttdeci">void SetPosition(glm::vec3 _newPosition) const</div><div class="ttdoc">Définit la position de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:29</div></div>
+<div class="ttc" id="aclass_game_object_html_a5b78dcbae0147bfbf550991751a02050"><div class="ttname"><a href="class_game_object.html#a5b78dcbae0147bfbf550991751a02050">GameObject::PostRender</a></div><div class="ttdeci">virtual void PostRender()</div><div class="ttdoc">Fonction post-rendu du module.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:108</div></div>
+<div class="ttc" id="aclass_game_object_html_a5ba3b458e6bee6ea5aedd5c8cdeabf18"><div class="ttname"><a href="class_game_object.html#a5ba3b458e6bee6ea5aedd5c8cdeabf18">GameObject::GetComponent</a></div><div class="ttdeci">T * GetComponent()</div><div class="ttdoc">Obtient un composant de type spécifique.</div><div class="ttdef"><b>Definition</b> GameObject.h:219</div></div>
+<div class="ttc" id="aclass_game_object_html_a5eba794ac3ef3b94bd9a43494c842ade"><div class="ttname"><a href="class_game_object.html#a5eba794ac3ef3b94bd9a43494c842ade">GameObject::children</a></div><div class="ttdeci">std::vector&lt; GameObject * &gt; children</div><div class="ttdef"><b>Definition</b> GameObject.h:641</div></div>
+<div class="ttc" id="aclass_game_object_html_a61e26e2087a508aa7ea0fcd540b09f28"><div class="ttname"><a href="class_game_object.html#a61e26e2087a508aa7ea0fcd540b09f28">GameObject::FixedUpdate</a></div><div class="ttdeci">virtual void FixedUpdate() const</div><div class="ttdoc">Effectue une mise à jour fixe du module.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:64</div></div>
+<div class="ttc" id="aclass_game_object_html_a6ebd7e126f166fb69bea1af26c7fde60"><div class="ttname"><a href="class_game_object.html#a6ebd7e126f166fb69bea1af26c7fde60">GameObject::SetName</a></div><div class="ttdeci">void SetName(const std::string &amp;_newName)</div><div class="ttdoc">Définit le nom de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.h:331</div></div>
+<div class="ttc" id="aclass_game_object_html_a719472e50bfbe3d3efb4c73e81592113"><div class="ttname"><a href="class_game_object.html#a719472e50bfbe3d3efb4c73e81592113">GameObject::GetTexture</a></div><div class="ttdeci">int GetTexture() const</div><div class="ttdoc">Obtient l'identifiant de texture associé au module de débogage.</div><div class="ttdef"><b>Definition</b> GameObject.h:199</div></div>
+<div class="ttc" id="aclass_game_object_html_a73e30effed19f0fd52d10e24867d300b"><div class="ttname"><a href="class_game_object.html#a73e30effed19f0fd52d10e24867d300b">GameObject::GetScale</a></div><div class="ttdeci">glm::vec3 GetScale() const</div><div class="ttdoc">Obtient l'échelle de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:31</div></div>
+<div class="ttc" id="aclass_game_object_html_a74a0456a0a9330047cc8eea61fc79864"><div class="ttname"><a href="class_game_object.html#a74a0456a0a9330047cc8eea61fc79864">GameObject::depth</a></div><div class="ttdeci">float depth</div><div class="ttdef"><b>Definition</b> GameObject.h:653</div></div>
+<div class="ttc" id="aclass_game_object_html_a7535ae769c1f801baf9469105ed7d38f"><div class="ttname"><a href="class_game_object.html#a7535ae769c1f801baf9469105ed7d38f">GameObject::isActive</a></div><div class="ttdeci">bool isActive</div><div class="ttdef"><b>Definition</b> GameObject.h:656</div></div>
+<div class="ttc" id="aclass_game_object_html_a775791ff7e70d9ab35802f82fab26718"><div class="ttname"><a href="class_game_object.html#a775791ff7e70d9ab35802f82fab26718">GameObject::GetTransform</a></div><div class="ttdeci">Transform * GetTransform() const</div><div class="ttdoc">Obtient le transform de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:26</div></div>
+<div class="ttc" id="aclass_game_object_html_a7a325ab2cd9b28c2c223131c466e042d"><div class="ttname"><a href="class_game_object.html#a7a325ab2cd9b28c2c223131c466e042d">GameObject::CreatePGameObject</a></div><div class="ttdeci">static GameObject * CreatePGameObject()</div><div class="ttdoc">Crée un nouvel objet GameObject sur le tas.</div><div class="ttdef"><b>Definition</b> GameObject.h:517</div></div>
+<div class="ttc" id="aclass_game_object_html_a7be5b2e44f87294feabc0c4a34427f48"><div class="ttname"><a href="class_game_object.html#a7be5b2e44f87294feabc0c4a34427f48">GameObject::SetLayer</a></div><div class="ttdeci">void SetLayer(const LayerType &amp;_layerType)</div><div class="ttdoc">Définit le type de couche de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.h:415</div></div>
+<div class="ttc" id="aclass_game_object_html_a7fd851e067a0728f557a9e45c046b44a"><div class="ttname"><a href="class_game_object.html#a7fd851e067a0728f557a9e45c046b44a">GameObject::SetTexture</a></div><div class="ttdeci">void SetTexture(const int _texture)</div><div class="ttdoc">Définit l'identifiant de texture associé au module de débogage.</div><div class="ttdef"><b>Definition</b> GameObject.h:476</div></div>
+<div class="ttc" id="aclass_game_object_html_a81a09eb2c3de2c0a6374b8acde812c52"><div class="ttname"><a href="class_game_object.html#a81a09eb2c3de2c0a6374b8acde812c52">GameObject::Update</a></div><div class="ttdeci">virtual void Update() const</div><div class="ttdoc">Met à jour le module.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:73</div></div>
+<div class="ttc" id="aclass_game_object_html_a821630aa6f0c19413a22475cac54c7b4"><div class="ttname"><a href="class_game_object.html#a821630aa6f0c19413a22475cac54c7b4">GameObject::GetVisible</a></div><div class="ttdeci">bool GetVisible() const</div><div class="ttdoc">Obtient l'état d'activation de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.h:155</div></div>
+<div class="ttc" id="aclass_game_object_html_a977d4bbb9ebe2266bae702b59508303b"><div class="ttname"><a href="class_game_object.html#a977d4bbb9ebe2266bae702b59508303b">GameObject::GetPosition</a></div><div class="ttdeci">glm::vec3 GetPosition() const</div><div class="ttdoc">Obtient la position de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:28</div></div>
+<div class="ttc" id="aclass_game_object_html_a9800a9dcc709907dd90a0204748ce513"><div class="ttname"><a href="class_game_object.html#a9800a9dcc709907dd90a0204748ce513">GameObject::Finalize</a></div><div class="ttdeci">virtual void Finalize()</div><div class="ttdoc">Finalise le module.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:116</div></div>
+<div class="ttc" id="aclass_game_object_html_a986731c4dfb08336dbf0731e6514bad9"><div class="ttname"><a href="class_game_object.html#a986731c4dfb08336dbf0731e6514bad9">GameObject::GetName</a></div><div class="ttdeci">std::string GetName() const</div><div class="ttdoc">Obtient le nom de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.h:93</div></div>
+<div class="ttc" id="aclass_game_object_html_a99799782d6841cc6ea9a9fc2c70970b1"><div class="ttname"><a href="class_game_object.html#a99799782d6841cc6ea9a9fc2c70970b1">GameObject::GetId</a></div><div class="ttdeci">id_t GetId() const</div><div class="ttdoc">Obtient l'identifiant unique de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.h:84</div></div>
+<div class="ttc" id="aclass_game_object_html_a9edf603be120d5a9221e5c5c962465f8"><div class="ttname"><a href="class_game_object.html#a9edf603be120d5a9221e5c5c962465f8">GameObject::transform</a></div><div class="ttdeci">Transform * transform</div><div class="ttdef"><b>Definition</b> GameObject.h:649</div></div>
+<div class="ttc" id="aclass_game_object_html_aa27714b4172ebff2f7cddcf63b325ac7"><div class="ttname"><a href="class_game_object.html#aa27714b4172ebff2f7cddcf63b325ac7">GameObject::Start</a></div><div class="ttdeci">virtual void Start()</div><div class="ttdoc">Démarre le module.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:56</div></div>
+<div class="ttc" id="aclass_game_object_html_aa2bde5996fc67e746c6e4f14ef24f1ec"><div class="ttname"><a href="class_game_object.html#aa2bde5996fc67e746c6e4f14ef24f1ec">GameObject::SetScale</a></div><div class="ttdeci">void SetScale(glm::vec3 _newScale) const</div><div class="ttdoc">Définit l'échelle de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:32</div></div>
+<div class="ttc" id="aclass_game_object_html_aa3e6f8f41791bec9a9869213de7da161"><div class="ttname"><a href="class_game_object.html#aa3e6f8f41791bec9a9869213de7da161">GameObject::AddComponent</a></div><div class="ttdeci">void AddComponent(Component *_component)</div><div class="ttdoc">Ajoute un composant à l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:37</div></div>
+<div class="ttc" id="aclass_game_object_html_aa70012636f8b4c1e84d8344bf5f3480a"><div class="ttname"><a href="class_game_object.html#aa70012636f8b4c1e84d8344bf5f3480a">GameObject::Init</a></div><div class="ttdeci">virtual void Init()</div><div class="ttdoc">Initialise le module.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:52</div></div>
+<div class="ttc" id="aclass_game_object_html_aac1acad42a3837282d3abf7df8eb34a7"><div class="ttname"><a href="class_game_object.html#aac1acad42a3837282d3abf7df8eb34a7">GameObject::components</a></div><div class="ttdeci">std::vector&lt; Component * &gt; components</div><div class="ttdef"><b>Definition</b> GameObject.h:647</div></div>
+<div class="ttc" id="aclass_game_object_html_ab82dfdb656f9051c0587e6593b2dda97"><div class="ttname"><a href="class_game_object.html#ab82dfdb656f9051c0587e6593b2dda97">GameObject::~GameObject</a></div><div class="ttdeci">~GameObject()</div><div class="ttdoc">Destructeur de la classe GameObject.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:17</div></div>
+<div class="ttc" id="aclass_game_object_html_abcfdfd7b4f1e25c961a04ada6af4931a"><div class="ttname"><a href="class_game_object.html#abcfdfd7b4f1e25c961a04ada6af4931a">GameObject::RenderGui</a></div><div class="ttdeci">virtual void RenderGui()</div><div class="ttdoc">Rendu de l'interface graphique du module.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:104</div></div>
+<div class="ttc" id="aclass_game_object_html_ac0807fcf3eb3d02eb1f045eee87af1b5"><div class="ttname"><a href="class_game_object.html#ac0807fcf3eb3d02eb1f045eee87af1b5">GameObject::PreRender</a></div><div class="ttdeci">virtual void PreRender()</div><div class="ttdoc">Fonction pré-rendu du module.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:91</div></div>
+<div class="ttc" id="aclass_game_object_html_ac0e2d29626f3b8a88d969dff8bc02f39"><div class="ttname"><a href="class_game_object.html#ac0e2d29626f3b8a88d969dff8bc02f39">GameObject::SetActive</a></div><div class="ttdeci">void SetActive(const bool &amp;_state)</div><div class="ttdoc">Active ou désactive l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.h:380</div></div>
+<div class="ttc" id="aclass_game_object_html_ac12a2cfd246ffddbffde8716d3e2785f"><div class="ttname"><a href="class_game_object.html#ac12a2cfd246ffddbffde8716d3e2785f">GameObject::model</a></div><div class="ttdeci">std::shared_ptr&lt; lve::LveModel &gt; model</div><div class="ttdef"><b>Definition</b> GameObject.h:643</div></div>
+<div class="ttc" id="aclass_game_object_html_acc9c5c271db831c5b713c5b104f270d9"><div class="ttname"><a href="class_game_object.html#acc9c5c271db831c5b713c5b104f270d9">GameObject::GetChildren</a></div><div class="ttdeci">const std::vector&lt; GameObject * &gt; &amp; GetChildren() const</div><div class="ttdoc">Obtient les enfants de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.h:311</div></div>
+<div class="ttc" id="aclass_game_object_html_accd7aa344773abacb8ce7ea6ee382408"><div class="ttname"><a href="class_game_object.html#accd7aa344773abacb8ce7ea6ee382408">GameObject::SetParent</a></div><div class="ttdeci">void SetParent(GameObject *_parent)</div><div class="ttdoc">Définit le parent de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.h:428</div></div>
+<div class="ttc" id="aclass_game_object_html_ad6ecd4f946bc85daab0a58c7981cbccc"><div class="ttname"><a href="class_game_object.html#ad6ecd4f946bc85daab0a58c7981cbccc">GameObject::CreateComponent</a></div><div class="ttdeci">T * CreateComponent()</div><div class="ttdoc">Crée un nouveau composant de type spécifique et l'attache à l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.h:536</div></div>
+<div class="ttc" id="aclass_game_object_html_ae1f87b3e412542296c4f59b4f804c0f4"><div class="ttname"><a href="class_game_object.html#ae1f87b3e412542296c4f59b4f804c0f4">GameObject::GetComponentsByType</a></div><div class="ttdeci">std::vector&lt; T * &gt; GetComponentsByType()</div><div class="ttdoc">Obtient tous les composants d'un type spécifique attachés à l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.h:239</div></div>
+<div class="ttc" id="aclass_game_object_html_ae24f42d843b9d2901b1590949e9c5656"><div class="ttname"><a href="class_game_object.html#ae24f42d843b9d2901b1590949e9c5656">GameObject::CreateGameObject</a></div><div class="ttdeci">static GameObject CreateGameObject()</div><div class="ttdoc">Crée un nouvel objet GameObject.</div><div class="ttdef"><b>Definition</b> GameObject.h:504</div></div>
+<div class="ttc" id="aclass_game_object_html_aeacebf64d0153edf9e02a43defc0d26f"><div class="ttname"><a href="class_game_object.html#aeacebf64d0153edf9e02a43defc0d26f">GameObject::GetActive</a></div><div class="ttdeci">bool GetActive() const</div><div class="ttdoc">Obtient l'état d'activation de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.h:146</div></div>
+<div class="ttc" id="aclass_game_object_html_aeb451f629da26ba79cc67cd2e3ab9253"><div class="ttname"><a href="class_game_object.html#aeb451f629da26ba79cc67cd2e3ab9253">GameObject::SetActiveAndVisible</a></div><div class="ttdeci">void SetActiveAndVisible(const bool &amp;_state)</div><div class="ttdoc">Active ou désactive l'objet et son rendu simultanément.</div><div class="ttdef"><b>Definition</b> GameObject.h:398</div></div>
+<div class="ttc" id="aclass_game_object_html_af09284eb1172cd31f5a332fb0c385abf"><div class="ttname"><a href="class_game_object.html#af09284eb1172cd31f5a332fb0c385abf">GameObject::GetComponentRecursive</a></div><div class="ttdeci">Component * GetComponentRecursive(const std::string &amp;_componentName) const</div><div class="ttdoc">Obtient un composant récursivement par son nom.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:154</div></div>
+<div class="ttc" id="aclass_game_object_html_af1f2aaf9c054e60e83f2c8e482bc1819"><div class="ttname"><a href="class_game_object.html#af1f2aaf9c054e60e83f2c8e482bc1819">GameObject::id</a></div><div class="ttdeci">id_t id</div><div class="ttdef"><b>Definition</b> GameObject.h:638</div></div>
+<div class="ttc" id="aclass_game_object_html_af525d7b7d88a1359a865e96ced9665ef"><div class="ttname"><a href="class_game_object.html#af525d7b7d88a1359a865e96ced9665ef">GameObject::GetModel</a></div><div class="ttdeci">std::shared_ptr&lt; lve::LveModel &gt; GetModel()</div><div class="ttdoc">Obtient le modèle associé au module de débogage.</div><div class="ttdef"><b>Definition</b> GameObject.h:181</div></div>
+<div class="ttc" id="aclass_game_object_html_af542b33c8de269343e22c5629e6b66c0"><div class="ttname"><a href="class_game_object.html#af542b33c8de269343e22c5629e6b66c0">GameObject::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition</b> GameObject.h:636</div></div>
+<div class="ttc" id="aclass_game_object_html_af673409499aaed493584462b8efa4baf"><div class="ttname"><a href="class_game_object.html#af673409499aaed493584462b8efa4baf">GameObject::layerType</a></div><div class="ttdeci">LayerType layerType</div><div class="ttdef"><b>Definition</b> GameObject.h:651</div></div>
+<div class="ttc" id="aclass_game_object_html_afe52aedcc4f6e746f3ccd18d413f88fb"><div class="ttname"><a href="class_game_object.html#afe52aedcc4f6e746f3ccd18d413f88fb">GameObject::GetRotation</a></div><div class="ttdeci">glm::vec3 GetRotation() const</div><div class="ttdoc">Obtient la rotation de l'objet.</div><div class="ttdef"><b>Definition</b> GameObject.cpp:34</div></div>
+<div class="ttc" id="aclass_light_html"><div class="ttname"><a href="class_light.html">Light</a></div><div class="ttdoc">Classe repr�sentant une lumi�re.</div><div class="ttdef"><b>Definition</b> Light.h:8</div></div>
+<div class="ttc" id="aclass_transform_html"><div class="ttname"><a href="class_transform.html">Transform</a></div><div class="ttdef"><b>Definition</b> Transform.h:12</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

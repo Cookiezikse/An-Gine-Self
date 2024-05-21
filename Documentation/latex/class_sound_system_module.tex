@@ -1,0 +1,454 @@
+\doxysection{RÃ©fÃ©rence de la classe Sound\+System\+Module}
+\hypertarget{class_sound_system_module}{}\label{class_sound_system_module}\index{SoundSystemModule@{SoundSystemModule}}
+
+
+Classe \doxylink{class_sound_system_module}{Sound\+System\+Module} \+: Gère le système audio utilisant la bibliothèque FMOD.  
+
+
+
+
+{\ttfamily \#include $<$Sound\+System\+Module.\+h$>$}
+
+Graphe d\textquotesingle{}hÃ©ritage de Sound\+System\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sound_system_module}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_sound_system_module_a55a8440318be202d10abc6015d5ecee7}\label{class_sound_system_module_a55a8440318be202d10abc6015d5ecee7} 
+{\bfseries Sound\+System\+Module} ()
+\begin{DoxyCompactList}\small\item\em Constructeur par défaut de la classe \doxylink{class_sound_system_module}{Sound\+System\+Module}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_system_module_a904b747c624df6b145bd906068215696}{Create\+Sound}} (Sound\+Class \texorpdfstring{$\ast$}{*}p\+\_\+sound, const char \texorpdfstring{$\ast$}{*}p\+\_\+path\+Audio) const
+\begin{DoxyCompactList}\small\item\em Crée un objet Sound à partir d\textquotesingle{}un fichier audio spécifié. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_system_module_a487ddddc0e1150c7d1d5c1f8bd95ad90}{Create\+Sound\+Group}} (Sound\+Group \texorpdfstring{$\ast$}{*}p\+\_\+sound\+Group, const char \texorpdfstring{$\ast$}{*}p\+\_\+path\+Audio) const
+\begin{DoxyCompactList}\small\item\em Crée un objet Sound\+Group à partir d\textquotesingle{}un fichier audio spécifié. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_system_module_ae433e992f56b8f0394014ab61e245699}{Get\+Master\+Sound\+Group}} (Sound\+Group \texorpdfstring{$\ast$}{*}p\+\_\+\+Sound) const
+\begin{DoxyCompactList}\small\item\em Obtient le groupe de sons principal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_system_module_acc0aa6ddcc6963ca5ea8e8a1dc8a4c14}{Play\+Sound}} (Sound\+Class p\+\_\+sound, bool \+\_\+is\+Play, int \+\_\+loop\+Count, float \+\_\+volume, Channel \texorpdfstring{$\ast$}{*}p\+\_\+channel\+Ptr) const
+\begin{DoxyCompactList}\small\item\em Joue un son spécifié. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_system_module_a3077795c8b9a04e2a6683b71e4b66d8d}{Release\+Sound}} (Sound\+Class p\+\_\+sound)
+\begin{DoxyCompactList}\small\item\em Libère les ressources utilisées par un son spécifié. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_system_module_a4bcf8f3298f0d451bee38845b83e00d6}{Create\+Channel\+Group}} (FMOD\+::\+Channel\+Group \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}pp\+\_\+channel\+Group) const
+\begin{DoxyCompactList}\small\item\em Crée un groupe de canaux pour le système audio. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_system_module_a8d10f4af7fd38965c9f5a8608028c2bf}{Add\+Sound\+To\+Group}} (Sound\+Class \+\_\+p\+Sound, FMOD\+::\+Channel\+Group \texorpdfstring{$\ast$}{*}p\+\_\+channel\+Group) const
+\begin{DoxyCompactList}\small\item\em Ajoute un son à un groupe de canaux spécifié. \end{DoxyCompactList}\item 
+FMOD\+\_\+\+RESULT \mbox{\hyperlink{class_sound_system_module_a569ede074cd8034277a821792f3965ee}{Attach\+Channel\+Group\+To\+Port}} (FMOD\+\_\+\+PORT\+\_\+\+TYPE \+\_\+port\+Type, FMOD\+\_\+\+PORT\+\_\+\+INDEX \+\_\+port\+Index, FMOD\+::\+Channel\+Group \texorpdfstring{$\ast$}{*}p\+\_\+channel\+Group, bool \+\_\+pass\+Thru=false) const
+\begin{DoxyCompactList}\small\item\em Attache un groupe de canaux à un port spécifié pour le rendu audio. \end{DoxyCompactList}\item 
+FMOD\+\_\+\+RESULT \mbox{\hyperlink{class_sound_system_module_a4af511c6363598c55cd6dcf248afe426}{Detach\+Channel\+Group\+From\+Port}} (FMOD\+::\+Channel\+Group \texorpdfstring{$\ast$}{*}p\+\_\+channel\+Group) const
+\begin{DoxyCompactList}\small\item\em Détache un groupe de canaux d\textquotesingle{}un port auquel il était précédemment attaché. \end{DoxyCompactList}\item 
+FMOD\+\_\+\+RESULT \mbox{\hyperlink{class_sound_system_module_aaca22a353745fbd77edbac1df2275a2d}{Set\+Reverb\+Properties}} (int \+\_\+instance, const FMOD\+\_\+\+REVERB\+\_\+\+PROPERTIES \texorpdfstring{$\ast$}{*}p\+\_\+prop) const
+\begin{DoxyCompactList}\small\item\em Définit les propriétés de réverbération pour une instance de réverbération spécifiée. \end{DoxyCompactList}\item 
+FMOD\+\_\+\+RESULT \mbox{\hyperlink{class_sound_system_module_ac7cda94248a25b7db83c7d7f812c553c}{Get\+Reverb\+Properties}} (int \+\_\+instance, FMOD\+\_\+\+REVERB\+\_\+\+PROPERTIES \texorpdfstring{$\ast$}{*}p\+\_\+prop) const
+\begin{DoxyCompactList}\small\item\em Obtient les propriétés de réverbération pour une instance de réverbération spécifiée. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_system_module_ae10cac5749ca80edff05dc83f26911b3}{Init}} () override
+\begin{DoxyCompactList}\small\item\em Initialise le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_system_module_a92e573244f8ecac20a6c024ed5a1713a}{Start}} () override
+\begin{DoxyCompactList}\small\item\em Démarre le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_system_module_a19650098e71e69d320221fc0be940b31}{Fixed\+Update}} () override
+\begin{DoxyCompactList}\small\item\em Effectue une mise à jour fixe du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_system_module_a90fb7f2ecf7b7bb32ee2bf45534ea328}{Update}} () override
+\begin{DoxyCompactList}\small\item\em Met à jour le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_system_module_aafb4c4fd98c7047e567ce8da45ca24cd}{Pre\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction pré-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_system_module_a1a431eed55857eef3ec3bf3b32b83c94}{Render}} () override
+\begin{DoxyCompactList}\small\item\em Rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_system_module_adedbb8a55e7f4de13699b6ef5dcc78b0}{Render\+Gui}} () override
+\begin{DoxyCompactList}\small\item\em Rendu de l\textquotesingle{}interface graphique du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_system_module_a1babae9d378ecb15d404bcd344b3ee2a}{Post\+Render}} () override
+\begin{DoxyCompactList}\small\item\em Fonction post-\/rendu du module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_system_module_a8d00ae6a262f803991fc928e9cb69d7e}{Release}} () override
+\begin{DoxyCompactList}\small\item\em Libère les ressources utilisées par le module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sound_system_module_ae3f2bd04d953a7a1b871d036ffb69507}{Finalize}} () override
+\begin{DoxyCompactList}\small\item\em Finalise le module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_sound_system_module_a57278fcd05aaf69a73b316b6c183bfc0}{Get\+Loop\+Count}} (Sound\+Class \+\_\+p\+Sound, int \texorpdfstring{$\ast$}{*}p\+\_\+loop\+Count)
+\begin{DoxyCompactList}\small\item\em Obtient le nombre de boucles d\textquotesingle{}un son spécifié. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membres hÃ©ritÃ©s additionnels}
+\doxysubsection*{Fonctions membres protÃ©gÃ©es hÃ©ritÃ©s de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_af09dc286b704160d8f0f273e1fe8576b}{\texorpdfstring{$\sim$}{\string~}\+Module}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur protégé. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs protÃ©gÃ©s hÃ©ritÃ©s de \mbox{\hyperlink{class_module}{Module}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_module_manager}{Module\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_module_a8d9f92fc1216d933c961bfa685b0ad6f}{module\+Manager}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Classe \doxylink{class_sound_system_module}{Sound\+System\+Module} \+: Gère le système audio utilisant la bibliothèque FMOD. 
+
+\doxysubsection{Documentation des fonctions membres}
+\Hypertarget{class_sound_system_module_a8d10f4af7fd38965c9f5a8608028c2bf}\label{class_sound_system_module_a8d10f4af7fd38965c9f5a8608028c2bf} 
+\index{SoundSystemModule@{SoundSystemModule}!AddSoundToGroup@{AddSoundToGroup}}
+\index{AddSoundToGroup@{AddSoundToGroup}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{AddSoundToGroup()}{AddSoundToGroup()}}
+{\footnotesize\ttfamily void Sound\+System\+Module\+::\+Add\+Sound\+To\+Group (\begin{DoxyParamCaption}\item[{Sound\+Class}]{\+\_\+p\+Sound,  }\item[{FMOD\+::\+Channel\+Group \texorpdfstring{$\ast$}{*}}]{p\+\_\+channel\+Group }\end{DoxyParamCaption}) const}
+
+
+
+Ajoute un son à un groupe de canaux spécifié. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+p\+Sound} & Pointeur vers l\textquotesingle{}objet Sound à ajouter au groupe de canaux \\
+\hline
+{\em p\+\_\+channel\+Group} & Pointeur vers le groupe de canaux auquel ajouter le son \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_system_module_a569ede074cd8034277a821792f3965ee}\label{class_sound_system_module_a569ede074cd8034277a821792f3965ee} 
+\index{SoundSystemModule@{SoundSystemModule}!AttachChannelGroupToPort@{AttachChannelGroupToPort}}
+\index{AttachChannelGroupToPort@{AttachChannelGroupToPort}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{AttachChannelGroupToPort()}{AttachChannelGroupToPort()}}
+{\footnotesize\ttfamily FMOD\+\_\+\+RESULT Sound\+System\+Module\+::\+Attach\+Channel\+Group\+To\+Port (\begin{DoxyParamCaption}\item[{FMOD\+\_\+\+PORT\+\_\+\+TYPE}]{\+\_\+port\+Type,  }\item[{FMOD\+\_\+\+PORT\+\_\+\+INDEX}]{\+\_\+port\+Index,  }\item[{FMOD\+::\+Channel\+Group \texorpdfstring{$\ast$}{*}}]{p\+\_\+channel\+Group,  }\item[{bool}]{\+\_\+pass\+Thru = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+
+
+Attache un groupe de canaux à un port spécifié pour le rendu audio. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+port\+Type} & Type de port auquel attacher le groupe de canaux \\
+\hline
+{\em \+\_\+port\+Index} & Index du port auquel attacher le groupe de canaux \\
+\hline
+{\em p\+\_\+channel\+Group} & Pointeur vers le groupe de canaux à attacher \\
+\hline
+{\em \+\_\+pass\+Thru} & Indique si le signal doit être acheminé directement sans traitement (par défaut, false) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Résultat de l\textquotesingle{}opération d\textquotesingle{}attache du groupe de canaux au port 
+\end{DoxyReturn}
+\Hypertarget{class_sound_system_module_a4bcf8f3298f0d451bee38845b83e00d6}\label{class_sound_system_module_a4bcf8f3298f0d451bee38845b83e00d6} 
+\index{SoundSystemModule@{SoundSystemModule}!CreateChannelGroup@{CreateChannelGroup}}
+\index{CreateChannelGroup@{CreateChannelGroup}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{CreateChannelGroup()}{CreateChannelGroup()}}
+{\footnotesize\ttfamily void Sound\+System\+Module\+::\+Create\+Channel\+Group (\begin{DoxyParamCaption}\item[{FMOD\+::\+Channel\+Group \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{pp\+\_\+channel\+Group }\end{DoxyParamCaption}) const}
+
+
+
+Crée un groupe de canaux pour le système audio. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em pp\+\_\+channel\+Group} & Pointeur vers le groupe de canaux créé \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_system_module_a904b747c624df6b145bd906068215696}\label{class_sound_system_module_a904b747c624df6b145bd906068215696} 
+\index{SoundSystemModule@{SoundSystemModule}!CreateSound@{CreateSound}}
+\index{CreateSound@{CreateSound}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{CreateSound()}{CreateSound()}}
+{\footnotesize\ttfamily void Sound\+System\+Module\+::\+Create\+Sound (\begin{DoxyParamCaption}\item[{Sound\+Class \texorpdfstring{$\ast$}{*}}]{p\+\_\+sound,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{p\+\_\+path\+Audio }\end{DoxyParamCaption}) const}
+
+
+
+Crée un objet Sound à partir d\textquotesingle{}un fichier audio spécifié. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em p\+\_\+sound} & Pointeur vers l\textquotesingle{}objet Sound créé \\
+\hline
+{\em p\+\_\+path\+Audio} & Chemin du fichier audio à charger \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_system_module_a487ddddc0e1150c7d1d5c1f8bd95ad90}\label{class_sound_system_module_a487ddddc0e1150c7d1d5c1f8bd95ad90} 
+\index{SoundSystemModule@{SoundSystemModule}!CreateSoundGroup@{CreateSoundGroup}}
+\index{CreateSoundGroup@{CreateSoundGroup}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{CreateSoundGroup()}{CreateSoundGroup()}}
+{\footnotesize\ttfamily void Sound\+System\+Module\+::\+Create\+Sound\+Group (\begin{DoxyParamCaption}\item[{Sound\+Group \texorpdfstring{$\ast$}{*}}]{p\+\_\+sound\+Group,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{p\+\_\+path\+Audio }\end{DoxyParamCaption}) const}
+
+
+
+Crée un objet Sound\+Group à partir d\textquotesingle{}un fichier audio spécifié. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em p\+\_\+sound\+Group} & Pointeur vers l\textquotesingle{}objet Sound\+Group créé \\
+\hline
+{\em p\+\_\+path\+Audio} & Chemin du fichier audio à charger \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_system_module_a4af511c6363598c55cd6dcf248afe426}\label{class_sound_system_module_a4af511c6363598c55cd6dcf248afe426} 
+\index{SoundSystemModule@{SoundSystemModule}!DetachChannelGroupFromPort@{DetachChannelGroupFromPort}}
+\index{DetachChannelGroupFromPort@{DetachChannelGroupFromPort}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{DetachChannelGroupFromPort()}{DetachChannelGroupFromPort()}}
+{\footnotesize\ttfamily FMOD\+\_\+\+RESULT Sound\+System\+Module\+::\+Detach\+Channel\+Group\+From\+Port (\begin{DoxyParamCaption}\item[{FMOD\+::\+Channel\+Group \texorpdfstring{$\ast$}{*}}]{p\+\_\+channel\+Group }\end{DoxyParamCaption}) const}
+
+
+
+Détache un groupe de canaux d\textquotesingle{}un port auquel il était précédemment attaché. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em p\+\_\+channel\+Group} & Pointeur vers le groupe de canaux à détacher du port \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Résultat de l\textquotesingle{}opération de détachement du groupe de canaux du port 
+\end{DoxyReturn}
+\Hypertarget{class_sound_system_module_ae3f2bd04d953a7a1b871d036ffb69507}\label{class_sound_system_module_ae3f2bd04d953a7a1b871d036ffb69507} 
+\index{SoundSystemModule@{SoundSystemModule}!Finalize@{Finalize}}
+\index{Finalize@{Finalize}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{Finalize()}{Finalize()}}
+{\footnotesize\ttfamily void Sound\+System\+Module\+::\+Finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finalise le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a4ed07ee636825b626c8f5021c34e408c}{Module}}.
+
+\Hypertarget{class_sound_system_module_a19650098e71e69d320221fc0be940b31}\label{class_sound_system_module_a19650098e71e69d320221fc0be940b31} 
+\index{SoundSystemModule@{SoundSystemModule}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Sound\+System\+Module\+::\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Effectue une mise à jour fixe du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a4bbf5f6e563f86794d7ae718371f1ca4}{Module}}.
+
+\Hypertarget{class_sound_system_module_a57278fcd05aaf69a73b316b6c183bfc0}\label{class_sound_system_module_a57278fcd05aaf69a73b316b6c183bfc0} 
+\index{SoundSystemModule@{SoundSystemModule}!GetLoopCount@{GetLoopCount}}
+\index{GetLoopCount@{GetLoopCount}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{GetLoopCount()}{GetLoopCount()}}
+{\footnotesize\ttfamily int Sound\+System\+Module\+::\+Get\+Loop\+Count (\begin{DoxyParamCaption}\item[{Sound\+Class}]{\+\_\+p\+Sound,  }\item[{int \texorpdfstring{$\ast$}{*}}]{p\+\_\+loop\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obtient le nombre de boucles d\textquotesingle{}un son spécifié. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+p\+Sound} & Pointeur vers l\textquotesingle{}objet Sound \\
+\hline
+{\em p\+\_\+loop\+Count} & Pointeur vers la variable pour stocker le nombre de boucles \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Le nombre de boucles du son spécifié 
+\end{DoxyReturn}
+\Hypertarget{class_sound_system_module_ae433e992f56b8f0394014ab61e245699}\label{class_sound_system_module_ae433e992f56b8f0394014ab61e245699} 
+\index{SoundSystemModule@{SoundSystemModule}!GetMasterSoundGroup@{GetMasterSoundGroup}}
+\index{GetMasterSoundGroup@{GetMasterSoundGroup}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{GetMasterSoundGroup()}{GetMasterSoundGroup()}}
+{\footnotesize\ttfamily void Sound\+System\+Module\+::\+Get\+Master\+Sound\+Group (\begin{DoxyParamCaption}\item[{Sound\+Group \texorpdfstring{$\ast$}{*}}]{p\+\_\+\+Sound }\end{DoxyParamCaption}) const}
+
+
+
+Obtient le groupe de sons principal. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em p\+\_\+\+Sound} & Pointeur vers le groupe de sons principal \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_system_module_ac7cda94248a25b7db83c7d7f812c553c}\label{class_sound_system_module_ac7cda94248a25b7db83c7d7f812c553c} 
+\index{SoundSystemModule@{SoundSystemModule}!GetReverbProperties@{GetReverbProperties}}
+\index{GetReverbProperties@{GetReverbProperties}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{GetReverbProperties()}{GetReverbProperties()}}
+{\footnotesize\ttfamily FMOD\+\_\+\+RESULT Sound\+System\+Module\+::\+Get\+Reverb\+Properties (\begin{DoxyParamCaption}\item[{int}]{\+\_\+instance,  }\item[{FMOD\+\_\+\+REVERB\+\_\+\+PROPERTIES \texorpdfstring{$\ast$}{*}}]{p\+\_\+prop }\end{DoxyParamCaption}) const}
+
+
+
+Obtient les propriétés de réverbération pour une instance de réverbération spécifiée. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+instance} & Instance de réverbération pour laquelle obtenir les propriétés \\
+\hline
+{\em p\+\_\+prop} & Pointeur vers les propriétés de réverbération à remplir avec les valeurs obtenues \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Résultat de l\textquotesingle{}opération de récupération des propriétés de réverbération 
+\end{DoxyReturn}
+\Hypertarget{class_sound_system_module_ae10cac5749ca80edff05dc83f26911b3}\label{class_sound_system_module_ae10cac5749ca80edff05dc83f26911b3} 
+\index{SoundSystemModule@{SoundSystemModule}!Init@{Init}}
+\index{Init@{Init}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Sound\+System\+Module\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialise le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a0151ba4ab62f6e91251b0a20b168985e}{Module}}.
+
+\Hypertarget{class_sound_system_module_acc0aa6ddcc6963ca5ea8e8a1dc8a4c14}\label{class_sound_system_module_acc0aa6ddcc6963ca5ea8e8a1dc8a4c14} 
+\index{SoundSystemModule@{SoundSystemModule}!PlaySound@{PlaySound}}
+\index{PlaySound@{PlaySound}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{PlaySound()}{PlaySound()}}
+{\footnotesize\ttfamily void Sound\+System\+Module\+::\+Play\+Sound (\begin{DoxyParamCaption}\item[{Sound\+Class}]{p\+\_\+sound,  }\item[{bool}]{\+\_\+is\+Play,  }\item[{int}]{\+\_\+loop\+Count,  }\item[{float}]{\+\_\+volume,  }\item[{Channel \texorpdfstring{$\ast$}{*}}]{p\+\_\+channel\+Ptr }\end{DoxyParamCaption}) const}
+
+
+
+Joue un son spécifié. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em p\+\_\+sound} & Pointeur vers l\textquotesingle{}objet Sound à jouer \\
+\hline
+{\em \+\_\+is\+Play} & Booléen indiquant si le son doit être joué immédiatement \\
+\hline
+{\em \+\_\+loop\+Count} & Nombre de fois que le son doit être joué en boucle \\
+\hline
+{\em \+\_\+volume} & Volume du son à jouer \\
+\hline
+{\em p\+\_\+channel\+Ptr} & Pointeur vers le canal sur lequel le son est joué \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_system_module_a1babae9d378ecb15d404bcd344b3ee2a}\label{class_sound_system_module_a1babae9d378ecb15d404bcd344b3ee2a} 
+\index{SoundSystemModule@{SoundSystemModule}!PostRender@{PostRender}}
+\index{PostRender@{PostRender}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{PostRender()}{PostRender()}}
+{\footnotesize\ttfamily void Sound\+System\+Module\+::\+Post\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction post-\/rendu du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a0bb23668b2717e4bb3b4e1f6350a7e87}{Module}}.
+
+\Hypertarget{class_sound_system_module_aafb4c4fd98c7047e567ce8da45ca24cd}\label{class_sound_system_module_aafb4c4fd98c7047e567ce8da45ca24cd} 
+\index{SoundSystemModule@{SoundSystemModule}!PreRender@{PreRender}}
+\index{PreRender@{PreRender}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{PreRender()}{PreRender()}}
+{\footnotesize\ttfamily void Sound\+System\+Module\+::\+Pre\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction pré-\/rendu du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a7a88e7aaddd55bf9f15beb8d297afd1e}{Module}}.
+
+\Hypertarget{class_sound_system_module_a8d00ae6a262f803991fc928e9cb69d7e}\label{class_sound_system_module_a8d00ae6a262f803991fc928e9cb69d7e} 
+\index{SoundSystemModule@{SoundSystemModule}!Release@{Release}}
+\index{Release@{Release}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Sound\+System\+Module\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Libère les ressources utilisées par le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_a7e2e4615b80a57040eccf9794bee1007}{Module}}.
+
+\Hypertarget{class_sound_system_module_a3077795c8b9a04e2a6683b71e4b66d8d}\label{class_sound_system_module_a3077795c8b9a04e2a6683b71e4b66d8d} 
+\index{SoundSystemModule@{SoundSystemModule}!ReleaseSound@{ReleaseSound}}
+\index{ReleaseSound@{ReleaseSound}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{ReleaseSound()}{ReleaseSound()}}
+{\footnotesize\ttfamily void Sound\+System\+Module\+::\+Release\+Sound (\begin{DoxyParamCaption}\item[{Sound\+Class}]{p\+\_\+sound }\end{DoxyParamCaption})}
+
+
+
+Libère les ressources utilisées par un son spécifié. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em p\+\_\+sound} & Pointeur vers l\textquotesingle{}objet Sound à libérer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sound_system_module_a1a431eed55857eef3ec3bf3b32b83c94}\label{class_sound_system_module_a1a431eed55857eef3ec3bf3b32b83c94} 
+\index{SoundSystemModule@{SoundSystemModule}!Render@{Render}}
+\index{Render@{Render}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Sound\+System\+Module\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_ab6ec60e3eced3faa0217348cfca2785f}{Module}}.
+
+\Hypertarget{class_sound_system_module_adedbb8a55e7f4de13699b6ef5dcc78b0}\label{class_sound_system_module_adedbb8a55e7f4de13699b6ef5dcc78b0} 
+\index{SoundSystemModule@{SoundSystemModule}!RenderGui@{RenderGui}}
+\index{RenderGui@{RenderGui}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{RenderGui()}{RenderGui()}}
+{\footnotesize\ttfamily void Sound\+System\+Module\+::\+Render\+Gui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rendu de l\textquotesingle{}interface graphique du module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_aadc90c55712eba976e6bf87318713d11}{Module}}.
+
+\Hypertarget{class_sound_system_module_aaca22a353745fbd77edbac1df2275a2d}\label{class_sound_system_module_aaca22a353745fbd77edbac1df2275a2d} 
+\index{SoundSystemModule@{SoundSystemModule}!SetReverbProperties@{SetReverbProperties}}
+\index{SetReverbProperties@{SetReverbProperties}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{SetReverbProperties()}{SetReverbProperties()}}
+{\footnotesize\ttfamily FMOD\+\_\+\+RESULT Sound\+System\+Module\+::\+Set\+Reverb\+Properties (\begin{DoxyParamCaption}\item[{int}]{\+\_\+instance,  }\item[{const FMOD\+\_\+\+REVERB\+\_\+\+PROPERTIES \texorpdfstring{$\ast$}{*}}]{p\+\_\+prop }\end{DoxyParamCaption}) const}
+
+
+
+Définit les propriétés de réverbération pour une instance de réverbération spécifiée. 
+
+
+\begin{DoxyParams}{ParamÃ¨tres}
+{\em \+\_\+instance} & Instance de réverbération pour laquelle définir les propriétés \\
+\hline
+{\em p\+\_\+prop} & Pointeur vers les propriétés de réverbération à définir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Résultat de l\textquotesingle{}opération de définition des propriétés de réverbération 
+\end{DoxyReturn}
+\Hypertarget{class_sound_system_module_a92e573244f8ecac20a6c024ed5a1713a}\label{class_sound_system_module_a92e573244f8ecac20a6c024ed5a1713a} 
+\index{SoundSystemModule@{SoundSystemModule}!Start@{Start}}
+\index{Start@{Start}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Sound\+System\+Module\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Démarre le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_aed9229993dada6ed800f73036aade722}{Module}}.
+
+\Hypertarget{class_sound_system_module_a90fb7f2ecf7b7bb32ee2bf45534ea328}\label{class_sound_system_module_a90fb7f2ecf7b7bb32ee2bf45534ea328} 
+\index{SoundSystemModule@{SoundSystemModule}!Update@{Update}}
+\index{Update@{Update}!SoundSystemModule@{SoundSystemModule}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Sound\+System\+Module\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Met à jour le module. 
+
+
+
+RÃ©implÃ©mentÃ©e Ã  partir de \mbox{\hyperlink{class_module_abf63d5bb322a751fbf95f2da0978817b}{Module}}.
+
+
+
+La documentation de cette classe a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Modules/Sound\+System\+Module.\+h\item 
+sources/\+Modules/Sound\+System\+Module.\+cpp\end{DoxyCompactItemize}

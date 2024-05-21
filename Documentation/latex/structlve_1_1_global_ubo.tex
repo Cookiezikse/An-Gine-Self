@@ -1,0 +1,73 @@
+\doxysection{RÃ©fÃ©rence de la structure lve\+::Global\+Ubo}
+\hypertarget{structlve_1_1_global_ubo}{}\label{structlve_1_1_global_ubo}\index{lve::GlobalUbo@{lve::GlobalUbo}}
+
+
+Représente les données uniformes globales utilisées dans le pipeline de rendu.  
+
+
+
+
+{\ttfamily \#include $<$lve\+\_\+frame\+\_\+info.\+h$>$}
+
+\doxysubsubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::mat4 \mbox{\hyperlink{structlve_1_1_global_ubo_a595834a9df1ded37f7b62b6bc9f9e966}{projection}} \{1.f\}
+\item 
+glm\+::mat4 \mbox{\hyperlink{structlve_1_1_global_ubo_ac348fd44b7d02cacefe128998e05272a}{view}} \{1.f\}
+\item 
+glm\+::mat4 \mbox{\hyperlink{structlve_1_1_global_ubo_acafb7449fc35300919757f7252e683a7}{inverse\+View}} \{1.f\}
+\item 
+glm\+::vec4 \mbox{\hyperlink{structlve_1_1_global_ubo_a372ba2b999589adb753f2c0cdc9c1232}{ambient\+Light\+Color}} \{1.f, 1.f, 1.f, .\+02f\}
+\item 
+\mbox{\hyperlink{structlve_1_1_point_light}{Point\+Light}} \mbox{\hyperlink{structlve_1_1_global_ubo_af8d207f5793c1d1de4ff418e705f218e}{point\+Lights}} \mbox{[}MAX\+\_\+\+LIGHTS\mbox{]}
+\item 
+int \mbox{\hyperlink{structlve_1_1_global_ubo_a4bd2d4d4d5cff24e720c30b575ed8f36}{num\+Lights}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description dÃ©taillÃ©e}
+Représente les données uniformes globales utilisées dans le pipeline de rendu. 
+
+\doxysubsection{Documentation des donnÃ©es membres}
+\Hypertarget{structlve_1_1_global_ubo_a372ba2b999589adb753f2c0cdc9c1232}\label{structlve_1_1_global_ubo_a372ba2b999589adb753f2c0cdc9c1232} 
+\index{lve::GlobalUbo@{lve::GlobalUbo}!ambientLightColor@{ambientLightColor}}
+\index{ambientLightColor@{ambientLightColor}!lve::GlobalUbo@{lve::GlobalUbo}}
+\doxysubsubsection{\texorpdfstring{ambientLightColor}{ambientLightColor}}
+{\footnotesize\ttfamily glm\+::vec4 lve\+::\+Global\+Ubo\+::ambient\+Light\+Color \{1.f, 1.f, 1.f, .\+02f\}}
+
+Couleur de lumière ambiante. \Hypertarget{structlve_1_1_global_ubo_acafb7449fc35300919757f7252e683a7}\label{structlve_1_1_global_ubo_acafb7449fc35300919757f7252e683a7} 
+\index{lve::GlobalUbo@{lve::GlobalUbo}!inverseView@{inverseView}}
+\index{inverseView@{inverseView}!lve::GlobalUbo@{lve::GlobalUbo}}
+\doxysubsubsection{\texorpdfstring{inverseView}{inverseView}}
+{\footnotesize\ttfamily glm\+::mat4 lve\+::\+Global\+Ubo\+::inverse\+View \{1.f\}}
+
+Matrice de vue inverse. \Hypertarget{structlve_1_1_global_ubo_a4bd2d4d4d5cff24e720c30b575ed8f36}\label{structlve_1_1_global_ubo_a4bd2d4d4d5cff24e720c30b575ed8f36} 
+\index{lve::GlobalUbo@{lve::GlobalUbo}!numLights@{numLights}}
+\index{numLights@{numLights}!lve::GlobalUbo@{lve::GlobalUbo}}
+\doxysubsubsection{\texorpdfstring{numLights}{numLights}}
+{\footnotesize\ttfamily int lve\+::\+Global\+Ubo\+::num\+Lights}
+
+Nombre de lumières ponctuelles. \Hypertarget{structlve_1_1_global_ubo_af8d207f5793c1d1de4ff418e705f218e}\label{structlve_1_1_global_ubo_af8d207f5793c1d1de4ff418e705f218e} 
+\index{lve::GlobalUbo@{lve::GlobalUbo}!pointLights@{pointLights}}
+\index{pointLights@{pointLights}!lve::GlobalUbo@{lve::GlobalUbo}}
+\doxysubsubsection{\texorpdfstring{pointLights}{pointLights}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlve_1_1_point_light}{Point\+Light}} lve\+::\+Global\+Ubo\+::point\+Lights\mbox{[}MAX\+\_\+\+LIGHTS\mbox{]}}
+
+Tableau des lumières ponctuelles. \Hypertarget{structlve_1_1_global_ubo_a595834a9df1ded37f7b62b6bc9f9e966}\label{structlve_1_1_global_ubo_a595834a9df1ded37f7b62b6bc9f9e966} 
+\index{lve::GlobalUbo@{lve::GlobalUbo}!projection@{projection}}
+\index{projection@{projection}!lve::GlobalUbo@{lve::GlobalUbo}}
+\doxysubsubsection{\texorpdfstring{projection}{projection}}
+{\footnotesize\ttfamily glm\+::mat4 lve\+::\+Global\+Ubo\+::projection \{1.f\}}
+
+Matrice de projection. \Hypertarget{structlve_1_1_global_ubo_ac348fd44b7d02cacefe128998e05272a}\label{structlve_1_1_global_ubo_ac348fd44b7d02cacefe128998e05272a} 
+\index{lve::GlobalUbo@{lve::GlobalUbo}!view@{view}}
+\index{view@{view}!lve::GlobalUbo@{lve::GlobalUbo}}
+\doxysubsubsection{\texorpdfstring{view}{view}}
+{\footnotesize\ttfamily glm\+::mat4 lve\+::\+Global\+Ubo\+::view \{1.f\}}
+
+Matrice de vue. 
+
+La documentation de cette structure a Ã©tÃ© gÃ©nÃ©rÃ©e Ã  partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+includes/\+Lve\+Engine/lve\+\_\+frame\+\_\+info.\+h\end{DoxyCompactItemize}
